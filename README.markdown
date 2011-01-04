@@ -4,7 +4,7 @@ Hosted at [userstyles.org][3]
 
 Before & After
 
-[ ![before screenshot][4] ][5] [ ![after screenshot][6] ][7]
+ [ ![before screenshot][4] ][5] [ ![after screenshot][6] ][7]
 
 **Known problems**
 
