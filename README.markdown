@@ -2,13 +2,9 @@ Github Dark theme for the Stylish Addon ([Firefox][1] and [Chrome][2]).
 
 Hosted at [userstyles.org][3]
 
-Before:
+Before & After
 
-![before screenshot](http://mottie.github.com/Github-Dark/images/before_th.jpg)
-
-After:
-
-![after screenshot](http://mottie.github.com/Github-Dark/images/after_th.jpg)
+[ ![before screenshot][4] ][5] [ ![after screenshot][6] ][7]
 
 **Known problems**
 
@@ -40,3 +36,7 @@ Version 1.0 (9/19/2010)
   [1]: https://addons.mozilla.org/en-US/firefox/addon/2108/
   [2]: https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe
   [3]: http://userstyles.org/styles/37035
+  [4]: http://mottie.github.com/Github-Dark/images/before_th.jpg
+  [5]: http://mottie.github.com/Github-Dark/images/before.jpg
+  [6]: http://mottie.github.com/Github-Dark/images/after_th.jpg
+  [7]: http://mottie.github.com/Github-Dark/images/after.jpg
