@@ -12,6 +12,10 @@ Before & After
 
 **Changelog**
 
+Version 1.2.2 (1/10/2011)
+
+* Added CSS for watched repo list.
+
 Version 1.2.1 (1/4/2011)
 
 * Added images hosted in the gh-pages.
