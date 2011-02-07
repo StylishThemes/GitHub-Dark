@@ -12,6 +12,12 @@ Before & After
 
 **Changelog**
 
+Version 1.2.3 (2/7/2011)
+
+* Fixed file listing background.
+* Added style to search autocomplete dropdown.
+* Styled wiki page code.
+
 Version 1.2.2 (1/10/2011)
 
 * Added CSS for watched repo list.
