@@ -12,7 +12,7 @@ Before & After
 
 **Changelog**
 
-Version 1.2.4 (2/8/2011)
+Version 1.2.4 (2/18/2011)
 
 * Added styling to Blame file view.
 
