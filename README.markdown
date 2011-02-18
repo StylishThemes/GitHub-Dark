@@ -12,6 +12,10 @@ Before & After
 
 **Changelog**
 
+Version 1.2.4 (2/8/2011)
+
+* Added styling to Blame file view.
+
 Version 1.2.3 (2/7/2011)
 
 * Fixed file listing background.
