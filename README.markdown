@@ -12,6 +12,12 @@ Before & After
 
 **Changelog**
 
+Version 1.2.5 (2/21/2011)
+
+* Fixed some borders - made them darker.
+* Added styling to code pages - hover code, comments.
+* Repository Network images replaced.
+
 Version 1.2.4 (2/18/2011)
 
 * Added styling to Blame file view.
