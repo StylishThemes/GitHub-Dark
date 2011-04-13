@@ -51,7 +51,19 @@
  }
 
  .manage-orgs {
-  background-position: 95% -20px !important
+  background-position: 95% -20px !important;
+ }
+
+ .context-button .icon {
+  background: url("https://github.com/images/modules/issues/context-button.png") no-repeat scroll center -19px #333 !important;
+ }
+
+ .context-button:hover .icon {
+  background: url("https://github.com/images/modules/issues/context-button.png") no-repeat scroll center -19px transparent !important;
+ }
+
+ .closed-banner {
+  background-image:url(http://mottie.github.com/Github-Dark/images/closed_pattern.gif) !important;
  }
 
  .content,.wikistyle {
@@ -64,25 +76,26 @@
 
  /* Remove text-shadow */
  h1,h2,h3,strong,.news,#footer ul.sosueme li.main,.metabox em.placeholder,.fieldgroup p.explain.planusage strong,table.notifications,
- ul.features,.highlight .nt,.highlight .nf,#download_button,.comment-count {
+ ul.features,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date {
   color:#999 !important;
   text-shadow:0 0 0 transparent !important;
  }
 
- a,button,div,span,p,ul,li,#download_button:hover a {
+ a,button,div,span,p,ul,li,#download_button:hover a,#gollum-editor-submit {
   color:#ddd !important;
   text-shadow:0 0 0 transparent !important;
  }
 
  /* Remove background gradient */
- #directory .repo,#dashboard .repo,#categories li,.icon,.sosueme li.main,#commit .separator {
+ #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator {
   background-color:transparent !important;
  }
 
  /* Darkest background color (#222), no image, with border & radius */
- #browser,.minibutton,.minibutton > span,.repo-stats,.pagehead ul.tabs li a.selected,a.button,.subnav-bar,
+ #browser,.minibutton,.minibutton > span,.repo-stats,.pagehead ul.tabs li a.selected,a.button,.subnav-bar,.repos,
  .subnav-bar > ul > li > ul,.subnav-bar > ul > li:hover > a,.comment-form ul.tabs a.selected,.issue.open.read .summary,
- .public .graph,.commits th,#MathJax_Message,.user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li {
+ .public .graph,.commits th,#MathJax_Message,.user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,
+ .gollum-minibutton,#issues_next ul.filters li {
   background:#222 url() !important;
   border-color:#444 !important;
   -moz-border-radius:5px !important;
@@ -97,8 +110,8 @@
  }
 
  /* Darkest background (#222), leave image, with border */
- ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,
- .news .alert .body,.rule,.avatared img,.main h2 {
+ ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,.item,.context-pane,
+ .news .alert .body,.rule,.avatared img,.main h2,.issue.even,#issues_next .infobar {
   background-color:#222 !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -107,7 +120,7 @@
  /* Panel background (#333), leave image, no border, with radius */
  .pagehead ul.actions a.feed,.notification-settings,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,
  .context-loader,.browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,
- .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap {
+ .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,#issues_next ul.sorts li {
   background-color:#333 !important;
   -moz-border-radius:5px !important;
   -webkit-border-radius:5px !important;
@@ -115,19 +128,19 @@
  }
 
  /* Panel background (#333), leave image, with border, no radius */
- #dashboard ul.repo_list .public,.metabox .rule,.comment-form,#issues .menu ul li.filter_selected,#issues .labels,
- #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,.commits td,
- .watcher-widget,ul.states li,.add_file,.tree-browser,.line-comments,.inset,.new-comments .body {
+ .metabox .rule,.comment-form,#issues .menu ul li.filter_selected,#issues .labels,#gollum-editor select,.gravatar,
+ #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,.commits td,ul.main_nav li.selected a,
+ .watcher-widget,ul.states li,.add_file,.tree-browser,.line-comments,.inset,.new-comments .body,li.label a {
   background-color:#333 !important;
   color:#eee !important;
   border-color:#555 !important;
  }
 
  /* Panel background (#333), no image, no border */
- .pagehead ul.tabs li a:hover,#dashboard .repos,#dashboard .repos .top-bar,#dashboard .repos .bottom-bar,
- #footer,.wikistyle,#languages .popular,.fieldgroup .fields,.issue,a.selected,table.upgrades td,.commit-preview .message,
- .commit-preview .message pre,.commit-preview p.error,#download_button,.pagehead ul.tabs li.contextswitch,
- #browser tr th,#wiki-wrapper pre,#wiki-wrapper code {
+ .pagehead ul.tabs li a:hover,.repos .top-bar,.repos .bottom-bar,#footer,.wikistyle,#languages .popular,
+ .fieldgroup .fields,.issue,a.selected,table.upgrades td,.commit-preview .message,.commit-preview .message pre,
+ .commit-preview p.error,#download_button,.pagehead ul.tabs li.contextswitch,#browser tr th,#wiki-wrapper pre,
+ #wiki-wrapper code,.new_issue {
   background:#333 url() !important;
   color:#eee !important;
   border:0 !important;
@@ -137,8 +150,8 @@
  .filter-bar,#files .file .meta,#files .file .data .line_numbers,.highlight .gc,.editbox,.editbox .body,.commentstyle,
  #issues .display,#issues .display .admin,button.classy,a.button.classy,#issues .labels .list li,.issue .summary,.plain,
  .plain pre,#ng canvas,.public .body,.public .body p,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
- #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.line-number,.flash,
- .browser .listing:hover {
+ #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
+ .line-number,.flash,.browser .listing:hover,#dashboard .repos,#issues_list .actions {
   background:#333 url() !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -150,7 +163,7 @@
  .featured-callout,.ranked-repositories .meta a,p.breadcrumb,.range-editor h3,.range-editor .chooser,
  ul.nav.logged_out,#inbox .list .unread,#preview_bucket,.browser-content .filterbar,.browser-content .footerbar,
  .filterbox,ul.smalltabs,.snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,
- .input,.ac_results,.addon:hover {
+ .input,.ac_results,.addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover {
   background:#444 url() !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -158,7 +171,7 @@
  }
 
  /* Light Panel background (#444), no image, with border, no radius */
- #browser td,.tree-browser td  {
+ #browser td,.tree-browser td,#issues_list .actions {
   background:#444 url() !important;
   border-color:#555 !important;
   color:#eee !important;
@@ -179,12 +192,13 @@
  }
 
  /* Blue text */
- .site a,.profilecols ul.stats li a:hover strong,.plans-row .plan,.filters li.selected {
+ .site a,.profilecols ul.stats li a:hover strong,.plans-row .plan,.filters li.selected,#gollum-editor-submit {
   color:#4183C4 !important;
  }
 
  /* Blue background (hover buttons) */
- .minibutton:hover,.minibutton:hover > span,.file-minibutton:hover,.add_file:hover,.gollum-minibutton a:hover,pre div:hover {
+ .minibutton:hover,.minibutton:hover > span,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,
+ .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover {
   background:#4183C4 !important;
   color:#ddd !important;
  }
@@ -217,7 +231,7 @@
  }
 
  /* Darken border */
- #browser table,#browser table th,#issues .menu ul li,.counter {
+ #browser table,#browser table th,#issues .menu ul li,.counter,.issues td,ul.main_nav li.selected,.browser_header,.issue-head {
   border-color:#555 !important;
  }
 
@@ -246,7 +260,7 @@
  }
 
  /* Yellow panel */
- .infotip,.form-actions .tip,.notification,.mini-callout,.snippet em,#network .repo span,#message .sent {
+ .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.ejector {
   background:#878750 !important;
   border-color:#878750 !important;
   color:#ddd !important;
@@ -267,6 +281,11 @@
   color:#eee !important;
  }
 
+ /* Red */
+ .highlight .m,.mi {
+  color:#f00 !important;
+ }
+
  /* Green */
  .highlight .s,.highlight .s1 {
   color:#5CE638 !important;
@@ -278,7 +297,7 @@
  }
 
  /* Yellow */
- .highlight .m,.highlight .kc {
+ .highlight .kc,.sx {
   color:#F6B26B !important;
  }
 
@@ -326,6 +345,11 @@
   background-image:url(http://mottie.github.com/Github-Dark/images/filename_placeholder.gif) !important;
  }
 
+ /* Wiki editor */
+ #gollum-editor-function-bar a span {
+  background-image:url(https://dl.dropbox.com/u/1510510/icon-sprite.png) !important;
+ }
+
  /* Repository Network Tree */
   #network .repo img[alt="T"],#network .repo img[alt="I"], #network .repo img[alt="L"] {
   width:26px !important;
@@ -343,6 +367,10 @@
 
  #network .repo img[alt="L"] {
   background:url(http://mottie.github.com/Github-Dark/images/l.png) no-repeat !important;
+ }
+ /* pull request avatar bubble */
+ .avatar-bubble {
+  background-image: url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) !important;
  }
 
 }

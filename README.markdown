@@ -12,6 +12,15 @@ Before & After
 
 **Changelog**
 
+Version 1.2.7 (4/13/2011)
+
+* Added styling to new issues layout.
+* Minor fixes to wiki, editor, repository and pull request page styling.
+
+Version 1.2.6 (2/25/2011)
+
+* Wiki Editor styling with icons 
+
 Version 1.2.5 (2/21/2011)
 
 * Fixed some borders - made them darker.
