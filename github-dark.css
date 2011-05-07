@@ -66,6 +66,10 @@
   background-image:url(http://mottie.github.com/Github-Dark/images/closed_pattern.gif) !important;
  }
 
+ .search .minibutton span {
+  background-position: center -95px !important;
+ }
+
  .content,.wikistyle {
   padding: 10px !important;
  }
@@ -92,10 +96,10 @@
  }
 
  /* Darkest background color (#222), no image, with border & radius */
- #browser,.minibutton,.minibutton > span,.repo-stats,.pagehead ul.tabs li a.selected,a.button,.subnav-bar,.repos,
- .subnav-bar > ul > li > ul,.subnav-bar > ul > li:hover > a,.comment-form ul.tabs a.selected,.issue.open.read .summary,
+ #browser,.minibutton,.repo-stats,.pagehead ul.tabs li a.selected,a.button,.subnav-bar,.repos,
+ .subnav-bar > ul > li > ul,.subnav-bar > ul > li:hover > a,.comment-form ul.tabs a.selected,.issue.open.read .summary,.unselected_month,
  .public .graph,.commits th,#MathJax_Message,.user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,
- .gollum-minibutton,#issues_next ul.filters li {
+ .gollum-minibutton,#issues_next ul.filters li,#issues_search .comment {
   background:#222 url() !important;
   border-color:#444 !important;
   -moz-border-radius:5px !important;
@@ -111,7 +115,7 @@
 
  /* Darkest background (#222), leave image, with border */
  ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,.item,.context-pane,
- .news .alert .body,.rule,.avatared img,.main h2,.issue.even,#issues_next .infobar {
+ .news .alert .body,.rule,.avatared img,.main h2,.issue.even,#issues_next .infobar,#assignee {
   background-color:#222 !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -140,7 +144,7 @@
  .pagehead ul.tabs li a:hover,.repos .top-bar,.repos .bottom-bar,#footer,.wikistyle,#languages .popular,
  .fieldgroup .fields,.issue,a.selected,table.upgrades td,.commit-preview .message,.commit-preview .message pre,
  .commit-preview p.error,#download_button,.pagehead ul.tabs li.contextswitch,#browser tr th,#wiki-wrapper pre,
- #wiki-wrapper code,.new_issue {
+ #wiki-wrapper code,.new_issue,.line_numbers,.date_selector,.date_selector table th {
   background:#333 url() !important;
   color:#eee !important;
   border:0 !important;
@@ -151,19 +155,28 @@
  #issues .display,#issues .display .admin,button.classy,a.button.classy,#issues .labels .list li,.issue .summary,.plain,
  .plain pre,#ng canvas,.public .body,.public .body p,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
  #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
- .line-number,.flash,.browser .listing:hover,#dashboard .repos,#issues_list .actions {
+ .line-number,.flash,.browser .listing:hover,#dashboard .repos,#issues_list .actions,.date_selector .button,.selectable_day {
   background:#333 url() !important;
   color:#eee !important;
   border-color:#555 !important;
  }
 
+ #issues_next > .browser_header ul.actions li.selected {
+  background:#333 !important;
+  border-color:#333 !important;
+  -moz-border-radius:5px 5px 0 0 !important;
+  -webkit-border-radius:5px 5px 0 0 !important;
+  margin-top:3px !important;
+  padding:5px 5px 2px 5px !important;
+ }
+
  /* Light Panel background (#444), no image, no border, with radius */
  #header .userbox,.tabs,a.button:hover,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,
- #issues .display .sortbar,.actor,.repo,.cmeta,#facebox,#facebox .content,#facebox .close,
+ #issues .display .sortbar,.actor,.repo,.cmeta,#facebox,#facebox .content,#facebox .close,#issues_search .wrapper,
  .featured-callout,.ranked-repositories .meta a,p.breadcrumb,.range-editor h3,.range-editor .chooser,
  ul.nav.logged_out,#inbox .list .unread,#preview_bucket,.browser-content .filterbar,.browser-content .footerbar,
  .filterbox,ul.smalltabs,.snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,
- .input,.ac_results,.addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover {
+ .input,.ac_results,.addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta {
   background:#444 url() !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -171,7 +184,7 @@
  }
 
  /* Light Panel background (#444), no image, with border, no radius */
- #browser td,.tree-browser td,#issues_list .actions {
+ #browser td,.tree-browser td,#issues_list .actions,#issues_next li.selected,.selectable_day.selected {
   background:#444 url() !important;
   border-color:#555 !important;
   color:#eee !important;
@@ -179,12 +192,13 @@
 
  /* Light Panel background (#444), leave image and border */
  ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,ul.fieldpills li,.counter,
- .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n), pre.prettyprint,#wiki-history table tr:nth-child(2n) td {
+ .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n), pre.prettyprint,#wiki-history table tr:nth-child(2n) td,
+ .issue.active {
   background-color:#444 !important;
  }
 
  /* Highlight Panel background (#555), leave image, no border, with radius */
- .paging,.button-pager,#download_button:hover,#integration-branch,.add-pill-form,#network .repo:hover  {
+ .paging,.button-pager,#download_button:hover,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover  {
   background: #555 !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -199,9 +213,11 @@
  /* Blue background (hover buttons) */
  .minibutton:hover,.minibutton:hover > span,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover {
-  background:#4183C4 !important;
+  background-color:#4183C4 !important;
   color:#ddd !important;
- }
+  -moz-border-radius:5px !important;
+  -webkit-border-radius:5px !important;
+}
 
  ul.clone-urls li:hover,ul.clone-urls li:hover > a,table.upgrades tr:hover td {
   background:#4183C4 !important;
@@ -260,14 +276,14 @@
  }
 
  /* Yellow panel */
- .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.ejector {
+ .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.ejector,#issues_search .results em {
   background:#878750 !important;
   border-color:#878750 !important;
   color:#ddd !important;
  }
 
  /* Green panel */
- .octofication .message,#revisions ul li.current,.highlight .gi,.excerpt {
+ .octofication .message,#revisions ul li.current,.highlight .gi,.excerpt,.selectable_day.today {
   background-color:#305530 !important;
   border-color:#305530 !important;
  }
@@ -370,7 +386,11 @@
  }
  /* pull request avatar bubble */
  .avatar-bubble {
-  background-image: url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) !important;
+  background-image:url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) !important;
+ }
+ /* pull request avatar bubble */
+ #issues_search .comment {
+  background:url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
  }
 
 }

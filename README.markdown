@@ -12,6 +12,13 @@ Before & After
 
 **Changelog**
 
+Version 1.2.8 (5/6/2011)
+
+* Added milstone calendar styling.
+* Issue dropdown styling.
+* Search button fix.
+* Assignee icon fix.
+
 Version 1.2.7 (4/13/2011)
 
 * Added styling to new issues layout.
