@@ -1,70 +1,78 @@
-Github Dark theme for the Stylish Addon ([Firefox][1] and [Chrome][2]).
+##Github Dark theme for the Stylish Addon ([Firefox][1] and [Chrome][2]).
 
 Hosted at [userstyles.org][3]
 
-Before & After
+###Before & After
 
  [ ![before screenshot][4] ][5] [ ![after screenshot][6] ][7]
 
-**Known problems**
+###**Known problems**
 
 * Some inputs and textareas are stubborn (in Firefox) and won't change the background image to a black background, so the text is a little light. I'll keep looking for a workaround.
 
-**Changelog**
+###**Changelog**
 
-Version 1.2.8 (5/6/2011)
+####Version 1.2.9 (6/27/2011)
+
+* Added style to Markdown Cheat Sheet popup
+* New styling for help.github.com
+* Styling for status.github.com
+* Contact troubles style
+* Octotip styling
+
+####Version 1.2.8 (5/6/2011)
 
 * Added milstone calendar styling.
 * Issue dropdown styling.
 * Search button fix.
 * Assignee icon fix.
 
-Version 1.2.7 (4/13/2011)
+####Version 1.2.7 (4/13/2011)
 
 * Added styling to new issues layout.
 * Minor fixes to wiki, editor, repository and pull request page styling.
 
-Version 1.2.6 (2/25/2011)
+####Version 1.2.6 (2/25/2011)
 
 * Wiki Editor styling with icons 
 
-Version 1.2.5 (2/21/2011)
+####Version 1.2.5 (2/21/2011)
 
 * Fixed some borders - made them darker.
 * Added styling to code pages - hover code, comments.
 * Repository Network images replaced.
 
-Version 1.2.4 (2/18/2011)
+####Version 1.2.4 (2/18/2011)
 
 * Added styling to Blame file view.
 
-Version 1.2.3 (2/7/2011)
+####Version 1.2.3 (2/7/2011)
 
 * Fixed file listing background.
 * Added style to search autocomplete dropdown.
 * Styled wiki page code.
 
-Version 1.2.2 (1/10/2011)
+####Version 1.2.2 (1/10/2011)
 
 * Added CSS for watched repo list.
 
-Version 1.2.1 (1/4/2011)
+####Version 1.2.1 (1/4/2011)
 
 * Added images hosted in the gh-pages.
 * Fixed a few other problems.
 
-Version 1.2 (1/4/2011)
+####Version 1.2 (1/4/2011)
 
 * Updated to style missed github pages.
 * Optimized using http://www.cleancss.com/
 * Added comments for each block.
 * Copied to github.
 
-Version 1.1 (11/1/2010)
+####Version 1.1 (11/1/2010)
 
 * Updated to fix overflow issue - pushed the floating panels to the bottom of the page
 
-Version 1.0 (9/19/2010)
+####Version 1.0 (9/19/2010)
 
 * Original version submitted to userstyles.org
 

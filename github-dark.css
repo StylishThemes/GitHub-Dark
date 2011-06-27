@@ -16,7 +16,7 @@
 
  /* logo */
  #header {
-  background:url(http://github.com/images/modules/header/logov3-hover.png) left center no-repeat !important;
+  background:url(http://github.com/images/modules/header/logov3-hover.png) 20px center no-repeat !important;
  }
 
  /* hide original logo */
@@ -91,15 +91,22 @@
  }
 
  /* Remove background gradient */
- #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator {
+ #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator,.big-notice,.clean td,.legend .clean {
   background-color:transparent !important;
+  background-image:url() !important;
+ }
+
+ /* Just rounded corners */
+ #wrapper {
+  -moz-border-radius:5px !important;
+  -webkit-border-radius:5px !important;
  }
 
  /* Darkest background color (#222), no image, with border & radius */
  #browser,.minibutton,.repo-stats,.pagehead ul.tabs li a.selected,a.button,.subnav-bar,.repos,
  .subnav-bar > ul > li > ul,.subnav-bar > ul > li:hover > a,.comment-form ul.tabs a.selected,.issue.open.read .summary,.unselected_month,
  .public .graph,.commits th,#MathJax_Message,.user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,
- .gollum-minibutton,#issues_next ul.filters li,#issues_search .comment {
+ .gollum-minibutton,#issues_next ul.filters li,#issues_search .comment,#header-wrapper {
   background:#222 url() !important;
   border-color:#444 !important;
   -moz-border-radius:5px !important;
@@ -107,7 +114,8 @@
  }
 
  /* Darkest background (#222), leave image, no border */
- .locales,.wikistyle pre,.wikistyle pre code,.highlight,.keyboard-shortcuts,li.contextswitch ul,.file,.add-bubble,#network .repo {
+ .locales,.wikistyle pre,.wikistyle pre code,.highlight,.keyboard-shortcuts,li.contextswitch ul,.file,.add-bubble,#network .repo,
+ #files > .description {
   background-color:#222 !important;
   color:#eee !important;
   border:0 !important;
@@ -115,14 +123,14 @@
 
  /* Darkest background (#222), leave image, with border */
  ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,.item,.context-pane,
- .news .alert .body,.rule,.avatared img,.main h2,.issue.even,#issues_next .infobar,#assignee {
+ .news .alert .body,.rule,.avatared img,.main h2,.issue.even,#issues_next .infobar,#assignee,.sidebar .module,.sidebar-module > ul {
   background-color:#222 !important;
   color:#eee !important;
   border-color:#555 !important;
  }
 
  /* Panel background (#333), leave image, no border, with radius */
- .pagehead ul.actions a.feed,.notification-settings,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,
+ .pagehead ul.actions a.feed,.notification-settings,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,#facebox pre,
  .context-loader,.browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,
  .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,#issues_next ul.sorts li {
   background-color:#333 !important;
@@ -155,7 +163,8 @@
  #issues .display,#issues .display .admin,button.classy,a.button.classy,#issues .labels .list li,.issue .summary,.plain,
  .plain pre,#ng canvas,.public .body,.public .body p,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
  #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
- .line-number,.flash,.browser .listing:hover,#dashboard .repos,#issues_list .actions,.date_selector .button,.selectable_day {
+ .line-number,.flash,.browser .listing:hover,#dashboard .repos,#issues_list .actions,.date_selector .button,.selectable_day,
+ .sidebar-module > ul li,.sidebar-module .spacer,#wrapper,.list-module .list-body,.list-module a,.bootcamp-body,.module .inner  {
   background:#333 url() !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -171,12 +180,14 @@
  }
 
  /* Light Panel background (#444), no image, no border, with radius */
- #header .userbox,.tabs,a.button:hover,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,
+ #header .userbox,.tabs,a.button:hover,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,p.breadcrumb,
  #issues .display .sortbar,.actor,.repo,.cmeta,#facebox,#facebox .content,#facebox .close,#issues_search .wrapper,
- .featured-callout,.ranked-repositories .meta a,p.breadcrumb,.range-editor h3,.range-editor .chooser,
- ul.nav.logged_out,#inbox .list .unread,#preview_bucket,.browser-content .filterbar,.browser-content .footerbar,
- .filterbox,ul.smalltabs,.snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,
- .input,.ac_results,.addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta {
+ .featured-callout,.ranked-repositories .meta a,.range-editor h3,.range-editor .chooser,ul.nav.logged_out,
+ #inbox .list .unread,#preview_bucket,.browser-content .filterbar,.browser-content .footerbar,.filterbox,ul.smalltabs,
+ .snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,.input,.ac_results,
+ .addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta,
+ .sidebar-module,.sidebar-module > ul h3,ul.js-guides,.list-module h2,.sidebar-module > p,.documentation ul.nav,
+ .bootcamp-help h1 {
   background:#444 url() !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -184,7 +195,8 @@
  }
 
  /* Light Panel background (#444), no image, with border, no radius */
- #browser td,.tree-browser td,#issues_list .actions,#issues_next li.selected,.selectable_day.selected {
+ #browser td,.tree-browser td,#issues_list .actions,#issues_next li.selected,.selectable_day.selected,.avatarname img,
+ #wiki-history .author img {
   background:#444 url() !important;
   border-color:#555 !important;
   color:#eee !important;
@@ -192,13 +204,14 @@
 
  /* Light Panel background (#444), leave image and border */
  ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,ul.fieldpills li,.counter,
- .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n), pre.prettyprint,#wiki-history table tr:nth-child(2n) td,
- .issue.active {
+ .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
+ pre.prettyprint,.issue.active, pre div[style="background-color: rgb(255, 255, 204);"],.rackspace {
   background-color:#444 !important;
  }
 
  /* Highlight Panel background (#555), leave image, no border, with radius */
- .paging,.button-pager,#download_button:hover,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover  {
+ .paging,.button-pager,#download_button:hover,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover,
+ .list-module a:hover,.js-guides a:hover {
   background: #555 !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -247,7 +260,8 @@
  }
 
  /* Darken border */
- #browser table,#browser table th,#issues .menu ul li,.counter,.issues td,ul.main_nav li.selected,.browser_header,.issue-head {
+ #browser table,#browser table th,#issues .menu ul li,.counter,.issues td,ul.main_nav li.selected,.browser_header,
+ .issue-head,.bootcamp-help .image {
   border-color:#555 !important;
  }
 
@@ -258,34 +272,54 @@
  }
 
  /* New additions */
- #forkqueue .legend .clean,.highlight .gi .x,.repo-owner-tag .tag,.gist-owner-tag .tag {
+ .highlight .gi .x,.repo-owner-tag .tag,.gist-owner-tag .tag {
   background:#027400 !important;
   color:#ddd !important;
  }
 
  /* Deletions */
- #forkqueue .legend .unclean,.highlight .gd {
+ .highlight .gd {
   background:#9d0000 !important;
   color:#ddd !important;
  }
 
+ /* Blue panel */
+ #posts #rss,.github-jobs-promotion p {
+  background:#003 !important;
+  border-color:#006 !important;
+ }
+ .octotip {
+  background-color:#003 !important;
+  border-color:#006 !important;
+ }
+
  /* Red panel */
- .unclean td,.highlight .gd .x {
+ #forkqueue .legend .unclean,.unclean td,.highlight .gd .x {
   background:#300 !important;
-  border-color: #555 !important;
+  border-color: #600 !important;
  }
 
  /* Yellow panel */
- .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.ejector,#issues_search .results em {
-  background:#878750 !important;
-  border-color:#878750 !important;
+ .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,
+ .ejector,#issues_search .results em,.bootcamp-help ul li {
+  background:#440 !important;
+  background:-webkit-gradient(linear, left top, left bottom, from(#660), to(#440));
+  background:-moz-linear-gradient(center top , #660, #440) repeat scroll 0 0 transparent !important;
+  border-color:#660 !important;
   color:#ddd !important;
  }
 
  /* Green panel */
- .octofication .message,#revisions ul li.current,.highlight .gi,.excerpt,.selectable_day.today {
+ #forkqueue .legend .clean,.octofication .message,#revisions ul li.current,.highlight .gi,.excerpt,.selectable_day.today,
+ .big-notice,#statusbar,.clean,.clean td {
   background-color:#305530 !important;
-  border-color:#305530 !important;
+  border-color:#080 !important;
+ }
+
+ /* silver button */
+ .kbd {
+  background:#404040 !important;
+  border-color:#606060 !important;
  }
 
  .textographic a.repo,#network .repo span {
@@ -365,6 +399,25 @@
  #gollum-editor-function-bar a span {
   background-image:url(https://dl.dropbox.com/u/1510510/icon-sprite.png) !important;
  }
+
+ /* status.github.com */
+ body.noproblems h2#logo,body.minorproblems h2#logo,body.majorproblems h2#logo {
+  overflow:hidden !important;
+  margin:5px 0 0 70px !important;
+ }
+ .noproblems h2#logo a,.minorproblems h2#logo a,.majorproblems h2#logo a {
+  position:relative !important;
+  top:0 !important;
+  left:-100px !important;
+ }
+ .minorproblems #statusbar {
+  background:#a45a00 !important;
+  border-color:#db7a0f !important;
+ }
+ .majorproblems #statusbar {
+  background:#600 !important;
+  border-color:#800 !important;
+ } 
 
  /* Repository Network Tree */
   #network .repo img[alt="T"],#network .repo img[alt="I"], #network .repo img[alt="L"] {
