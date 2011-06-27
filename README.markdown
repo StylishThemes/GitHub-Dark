@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.10 (6/27/2011)
+
+* Closed pull request styling
+
 ####Version 1.2.9 (6/27/2011)
 
 * Added style to Markdown Cheat Sheet popup
