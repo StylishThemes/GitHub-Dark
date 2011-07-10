@@ -8,9 +8,16 @@ Hosted at [userstyles.org][3]
 
 ###**Known problems**
 
-* Some inputs and textareas are stubborn (in Firefox) and won't change the background image to a black background, so the text is a little light. I'll keep looking for a workaround.
+* Some inputs and textareas are stubborn (in Firefox) and won't change the background image/color to a black background, so the text is a little light. I'll keep looking for a workaround.
 
 ###**Changelog**
+
+####Version 1.2.11 (7/10/2011)
+
+* Added background gradients to colored panels.
+* Green download button, just because :P
+* Fixed watched icon.
+* Updated styling changes to main pages and popups.
 
 ####Version 1.2.10 (6/27/2011)
 
