@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.12 (7/11/2011)
+
+* Fixed closed issue color - it's red again.. oops!
+
 ####Version 1.2.11 (7/10/2011)
 
 * Added background gradients to colored panels.
