@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.13 (8/9/2011)
+
+* Updated to style the new footers
+
 ####Version 1.2.12 (7/11/2011)
 
 * Fixed closed issue color - it's red again.. oops!
