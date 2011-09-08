@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.14 (9/8/2011)
+
+* Updated to include new styling
+
 ####Version 1.2.13 (8/9/2011)
 
 * Updated to style the new footers
