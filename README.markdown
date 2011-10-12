@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.15 (10/12/2011)
+
+* New pagehead styling
+
 ####Version 1.2.14 (9/8/2011)
 
 * Updated to include new styling
