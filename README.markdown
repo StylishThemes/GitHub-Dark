@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.17 (11/28/2011)
+
+* Forgot the silly Feed button styling.
+
 ####Version 1.2.16 (11/28/2011)
 
 * Firefox now has styling of the inputs and textareas - thanks to aalvarado for sharing!
