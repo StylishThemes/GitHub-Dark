@@ -12,6 +12,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.16 (11/28/2011)
+
+* Firefox now has styling of the inputs and textareas - thanks to aalvarado for sharing!
+* Added styling to the user issue section.
+* General cleanup of code section.
+
 ####Version 1.2.15 (10/12/2011)
 
 * New pagehead styling
