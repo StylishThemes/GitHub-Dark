@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.18 (11/30/2011)
+
+* Logo is clickable again - thanks Aalvarado!
+* Added [wtfpl](http://sam.zoy.org/wtfpl/) license note in the css file.
+
 ####Version 1.2.17 (11/28/2011)
 
 * Forgot the silly Feed button styling.

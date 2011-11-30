@@ -2,6 +2,12 @@
 
 @-moz-document domain("github.com") {
 
+/* Github Dark Theme v1.2.18 (11/30/2011)
+ * https://github.com/Mottie/Github-Dark
+ * http://userstyles.org/styles/37035
+ * License: http://sam.zoy.org/wtfpl/
+ */
+
  body,#main,.unread_count,.pagehead,#browser table th,.main,.news .alert .body,.profilecols ul.stats li strong,
  table.upgrades tr.current td,.definitions,#files .file .data {
   background:#222 url() !important;
@@ -16,13 +22,27 @@
 
  /* logo */
  #header {
-  background:url(http://github.com/images/modules/header/logov3-hover.png) 20px center no-repeat !important;
+  overflow:hidden !important;
  }
 
  /* hide original logo */
- #header img {
-  visibility:hidden !important;
+ #header a img {
+  display:none !important;
  }
+
+ /* Add logo to link */
+ #header a.logo{
+  display:block !important;
+  width:102px !important;
+  height:45px !important;
+  float:left !important;
+  background:url(http://github.com/images/modules/header/logov3-hover.png) 0px center no-repeat !important;
+ }
+
+/* Add visual cue */
+#header a.logo:hover {
+  border-bottom:1px solid #666 !important;
+}
 
  /* Restore user avatar */
  #header .userbox img {
