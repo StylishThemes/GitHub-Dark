@@ -15,6 +15,7 @@ Hosted at [userstyles.org][3]
 ####Version 1.2.19 (12/14/2011)
 
 * New header styling
+* New search icon
 
 ####Version 1.2.18 (11/30/2011)
 
