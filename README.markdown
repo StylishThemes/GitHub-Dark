@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.20 (12/14/2011)
+
+* Fixed background color when looking at your own page: https://github.com/Your-Name-Here
+
 ####Version 1.2.19 (12/14/2011)
 
 * New header styling
