@@ -12,6 +12,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.21 (1/8/2012)
+
+* Styled the updated readme section.
+* Updated logo styling, hid the black logo and added a hover underline.
+* Added styling to header links.
+
 ####Version 1.2.20 (12/14/2011)
 
 * Fixed background color when looking at your own page: https://github.com/Your-Name-Here
