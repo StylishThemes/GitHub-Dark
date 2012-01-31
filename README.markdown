@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.23 (1/30/2012)
+
+* Made the "Comment on this issue" button green and the "Close & comment" button red... people seem to push the wrong one all the time. 
+
 ####Version 1.2.22 (1/30/2012)
 
 * Updated styling to match changes.
