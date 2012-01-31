@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.22 (1/30/2012)
+
+* Updated styling to match changes.
+* Removed input background images in the css. HTML5 placeholder should be taking care of it now.
+
 ####Version 1.2.21 (1/8/2012)
 
 * Styled the updated readme section.
