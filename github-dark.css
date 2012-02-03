@@ -262,7 +262,8 @@
  /* Light Panel background (#444), leave image and border */
  ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,.counter,.rackspace,
  .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
- pre.prettyprint,.issue.active, pre div[style="background-color: rgb(255, 255, 204);"],pre.headers,pre.headers code {
+ pre.prettyprint,.issue.active,pre.headers,pre.headers code,pre div[style="background-color: rgb(255, 255, 204);"],
+ pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */
   background-color:#444 !important;
  }
 
@@ -553,6 +554,12 @@
  /* To replace the Github show repo issues user script - https://github.com/Mottie/Github-show-repo-issues */
  ul.repositories ul.repo-stats li.bugs a {
   background: url("https://github.com/Mottie/Github-show-repo-issues/raw/master/images/bug.png") no-repeat scroll 5px 1px transparent !important;
+ }
+
+ /* Fix chrome line numbering */
+ #files .file .data pre,#files .file .line-data,#files .file .line-number,.file-box .data pre,.file-box .line-data,
+ .file-box .line-number {
+  line-height:1.4em !important;
  }
 
 }

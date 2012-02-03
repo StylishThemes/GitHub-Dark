@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.24 (2/3/2012)
+
+* Fix for chrome line numbering
+* Fixed chrome code hightlight. Needed to add a [space after the selector](https://github.com/Mottie/Github-Dark/blob/master/github-dark.css#L265)
+
 ####Version 1.2.23 (1/30/2012)
 
 * Made the "Comment on this issue" button green and the "Close & comment" button red... people seem to push the wrong one all the time. 
