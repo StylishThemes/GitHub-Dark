@@ -1,8 +1,8 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-@-moz-document domain("github.com") {
+@-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.24 (2/3/2012)
+/* Github Dark Theme v1.2.25 (2/3/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -39,9 +39,36 @@
  #header .github-logo-4x-hover {
   opacity: 1 !important;
  }
+ /* gist.github.com */
+ body.windows div.logo a[href="https://gist.github.com"] {
+  display: block !important;
+  width: 164px !important;
+  height: 45px !important;
+  background: url(http://mottie.github.com/Github-Dark/images/logo_gist.png) no-repeat !important;
+ }
+ /* help.github.com */
+ body.documentation div#header a.logo img, body.windows div.logo a[href="https://gist.github.com"] img {
+  display: none !important;
+ }
+ body.documentation div#header a.logo {
+  display: block !important;
+  width: 179px !important;
+  height: 45px !important;
+  background: url(http://mottie.github.com/Github-Dark/images/logo.png) no-repeat !important;
+ }
+ /* status.github.com */
+ body.noproblems h2#logo a {
+  background-image: url(http://mottie.github.com/Github-Dark/images/logo_status_noproblems.png) !important;
+ }
+ body.minorproblem h2#logo a {
+  background-image: url(http://mottie.github.com/Github-Dark/images/logo_status_minorproblems.png) !important;
+ }
+ body.majorproblem h2#logo a {
+  background-image: url(http://mottie.github.com/Github-Dark/images/logo_status_majorproblems.png) !important;
+ }
 
  /* === Add/remove visual cue === */
- #header a.logo:hover {
+ #header a.logo:hover, #header div.logo a:hover {
   border-bottom:1px solid #666 !important;
   padding-bottom:1px !important;
  }
@@ -348,7 +375,8 @@
 
  /* === Yellow panel === */
  .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.plan.free,
- .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em {
+ .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em,
+ #missing-readme {
   background:#440 !important;
   background:-webkit-gradient(linear, left top, left bottom, from(#660), to(#440));
   background:-moz-linear-gradient(center top , #660, #440) repeat scroll 0 0 transparent !important;

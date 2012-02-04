@@ -12,6 +12,14 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.25 (2/3/2012)
+
+* Changed style to only target specific github subdomains
+  * Subdomains: `github.com`, `gist.github.com`, `help.github.com` and `status.github.com`.
+  * Thanks to [datamuc](https://github.com/datamuc) for the addition.
+* Added darker yellow background to missing readme file notification.
+* Added logo images for the above subdomains.
+
 ####Version 1.2.24 (2/3/2012)
 
 * Fix for chrome line numbering
