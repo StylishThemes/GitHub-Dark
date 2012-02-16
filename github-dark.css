@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.25 (2/3/2012)
+/* Github Dark Theme v1.2.26 (2/16/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -92,7 +92,8 @@
 
  /* === Remove shadow === */
  h1,h2,h3,h4,pre,code,strong,.news,#footer ul.sosueme li.main,.metabox em.placeholder,.fieldgroup p.explain.planusage strong,
- table.notifications,ul.features,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links {
+ table.notifications,ul.features,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links,
+ input.search {
   color:#999 !important;
   text-shadow:0 0 0 transparent !important;
   box-shadow:0 0 0 transparent !important;
@@ -122,7 +123,7 @@
 
  /* === Darken border === */
  #browser table,#browser table th,#issues .menu ul li,.counter,.issues td,ul.main_nav li.selected,.browser_header,.issue-head,
- .bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,#wiki-wrapper hr,.pagination a,table.branches td {
+ .bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,#wiki-wrapper hr,.pagination a,table.branches td,.list-tip li {
   border-color:#555 !important;
  }
  .listings div.listing {
@@ -138,6 +139,9 @@
  .octotip {
   background-color:#003 !important;
   border-color:#006 !important;
+ }
+ .list-tip:before {
+  color:#222 !important; /* tip pointer */
  }
 
  /* === Inputs === */
@@ -176,7 +180,7 @@
  .public .graph,.participation-graph,.commits th,#MathJax_Message,.user-commits,.user-commits th,.pagehead ul.actions,.metabox,
  .ranked-repositories > li,.gollum-minibutton,#issues_next ul.filters li,#issues_search .comment,#header-wrapper,.fieldgroup .fields,
  ul.feature-tabs li.highlight,.commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li, .starting-comment .body,
- .site, #readme article,.starting-comment .infobar,.chzn-single,.expandable h3 a:last-child,.commit_oneline {
+ .site, #readme article,.starting-comment .infobar,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip {
   background:#222 url() !important;
   border-color:#444 !important;
   -moz-border-radius:5px !important;
@@ -280,7 +284,7 @@
  /* Light Panel background (#444), no image, with border, no radius */
  #browser td,.tree-browser td,#issues_list .actions,#issues_next li.selected,.selectable_day.selected,.avatarname img,
  #wiki-history .author img,.options-content h3,.pagehead ul.tabs li a,#issues-dashboard .actions,#readme .name,.js-menu-container,
- table.branches tr:hover td {
+ table.branches tr:hover td,.list-tip a:hover {
   background:#444 url() !important;
   border-color:#555 !important;
   color:#eee !important;

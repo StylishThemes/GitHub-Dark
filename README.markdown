@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+####Version 1.2.26 (2/16/2012)
+
+* Added repo language tooltip background.
+* Removed main search box shadow.
+
 ####Version 1.2.25 (2/3/2012)
 
 * Changed style to only target specific github subdomains
