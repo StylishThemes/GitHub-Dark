@@ -12,6 +12,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.28 (2/18/2012)
+
+* Oops, fixed the watcher icon.
+
 #### Version 1.2.27 (2/18/2012)
 
 * pre and code backgrounds are now #111 with no margins
