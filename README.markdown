@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.29 (3/2/2012)
+
+* Make labels readable - added text shadow
+* Styled contributors panel
+
 #### Version 1.2.28 (2/18/2012)
 
 * Oops, fixed the watcher icon.
