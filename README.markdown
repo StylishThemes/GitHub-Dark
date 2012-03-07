@@ -12,6 +12,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.30 (3/7/2012)
+
+* Added profile page
+* Pull request comment
+* SSH key audit page
+
 #### Version 1.2.29 (3/2/2012)
 
 * Make labels readable - added text shadow
