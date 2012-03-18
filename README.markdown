@@ -12,6 +12,13 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.31 (3/18/2012)
+
+* Added user box icons in white (notifications, account settings &amp logout)
+* Replaced main search icon
+* Darkened Repository borders
+* News Feed button now highlights on hover
+
 #### Version 1.2.30 (3/7/2012)
 
 * Added profile page
@@ -181,7 +188,6 @@ Hosted at [userstyles.org][3]
 #### Version 1.0 (9/19/2010)
 
 * Original version submitted to userstyles.org
-
 
   [1]: https://addons.mozilla.org/en-US/firefox/addon/2108/
   [2]: https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe

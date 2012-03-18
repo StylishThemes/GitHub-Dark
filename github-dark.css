@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.30 (3/7/2012)
+/* Github Dark Theme v1.2.31 (3/18/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -106,12 +106,12 @@
   text-shadow:0 0 0 transparent !important;
  }
  /* add shadow to make labels readable */
- tr.issue span.label, ul.labels span.name {
-  text-shadow: 0 0 5px #000 !important; 
+ tr.issue span.label,ul.labels span.name {
+  text-shadow: 0 0 5px #000 !important;
  }
 
  /* === transparent background only === */
- .textographic a.repo,#network .repo span,.commit-group-item .browse-button {
+ .textographic a.repo,#network .repo span,.commit-group-item .browse-button,.topsearch span.search-input {
   background:transparent !important;
  }
 
@@ -136,7 +136,7 @@
  /* === Darken border === */
  pre,code,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,ul.main_nav li.selected,.browser_header,.issue-head,
  .bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,#wiki-wrapper hr,.pagination a,table.branches td,.list-tip li,
- .boxed-group-list > li,.section-nav a {
+ .boxed-group-list > li,.section-nav a,.repo_list li a {
   border-color:#555 !important;
  }
  .listings div.listing {
@@ -177,7 +177,7 @@
  #your-repos-filter {
   width:95% !important;
  }
- #your_repos #your-repos-filter {
+ #your_repos #your-repos-filter,#dashboard .filter-bar .filter_input {
   width:90% !important;
  }
  /* gist search, only one with relative position?  */
@@ -201,7 +201,7 @@
  .ranked-repositories > li,.gollum-minibutton,#issues_next ul.filters li,#issues_search .comment,#header-wrapper,.fieldgroup .fields,
  ul.feature-tabs li.highlight,.commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li, .starting-comment .body,
  .site, #readme article,.starting-comment .infobar,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.markdown-body,
- .autocomplete-results {
+ .markdown-body code,.markdown-body tt,.autocomplete-results {
   background:#222 url() !important;
   border-color:#444 !important;
   -moz-border-radius:5px !important;
@@ -219,7 +219,7 @@
  /* Darkest background (#222), leave image, with border */
  ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,.item,.context-pane,.tip-body,
  .news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#issues_next .infobar,#assignee,.sidebar .module,
- .sidebar-module > ul,.commit_oneline td {
+ .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter {
   background-color:#222 !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -247,9 +247,9 @@
 
  /* Panel background (#333), leave image, with border, no radius */
  .metabox .rule,.comment-form,#issues .labels,#gollum-editor select,.gravatar,.listings .odd,.feed,.pagination a:hover,
- #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,.commits td,ul.main_nav li.selected a,
+ #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,ul.main_nav li.selected a,
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,.new-comments .body,li.label,.filterbar,
- .user-commits td {
+ .user-commits td,tr.inline-comments {
   background-color:#333 !important;
   color:#eee !important;
   border-color:#555 !important;
@@ -314,7 +314,7 @@
  }
 
  /* Light Panel background (#444), leave image and border */
- ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,.counter,.rackspace,
+ ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,.rackspace,
  .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
  .issue.active,pre div[style="background-color: rgb(255, 255, 204);"],
  pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */
@@ -324,7 +324,7 @@
  /* === #555 === */
  /* Highlight Panel background (#555), leave image, no border, with radius */
  .paging,.button-pager,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover,
- .list-module a:hover,.js-guides a:hover,.section-nav .active a {
+ .list-module a:hover,.js-guides a:hover,.section-nav .active a,#dashboard .filter-bar li a.filter_selected:after {
   background: #555 !important;
   border:0 !important;
   -moz-border-radius:5px !important;
@@ -362,7 +362,8 @@
  }
  /* Blue background (hover buttons) */
  .minibutton:hover,.minibutton:hover > span,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,
- .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a {
+ .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
+ a.feed:hover, a.feed:hover span {
   background-color:#4183C4 !important;
   color:#ddd !important;
   -moz-border-radius:5px !important;
@@ -490,12 +491,6 @@
  #user-links .unread_count,.minorproblem .pageheader_wrap {
   background: rgba(203, 108, 0, 0.8) !important;
  }
- #user-links li a {
-  border-bottom: transparent 1px solid !important;
- }
- #user-links li a:hover {
-  border-bottom: #f80 1px solid !important;
- }
  /* orange border left */
  .pagehead ul.tabs li a.selected,.pagehead > ul.tabs li a:hover,div.listing.navigation-focus,div.issues.navigation-focus {
   -moz-border-radius:0 !important;
@@ -530,6 +525,9 @@
  /* Restore user avatar */
  #header .userbox img {
   visibility:visible !important;
+ }
+ #userbox .mini-icon {
+  background-image: url(http://mottie.github.com/Github-Dark/images/icons.png) !important;
  }
  /* Footer cat */
  #footer #blacktocat {
@@ -617,7 +615,7 @@
  /* pull request avatar bubble */
  #issues_search .comment {
   background:url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
- } 
+ }
  /* To replace the Github show repo issues user script - https://github.com/Mottie/Github-show-repo-issues */
  ul.repositories ul.repo-stats li.bugs a {
   background: url("https://github.com/Mottie/Github-show-repo-issues/raw/master/images/bug.png") no-repeat scroll 5px 1px transparent !important;
