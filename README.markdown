@@ -12,6 +12,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.32 (5/9/2012)
+
+* Removed admin icon images - replaced by font-face icons.
+* Added pull request comment background fix, for Chrome.
+
 #### Version 1.2.31 (3/18/2012)
 
 * Added user box icons in white (notifications, account settings &amp logout)
