@@ -16,6 +16,7 @@ Hosted at [userstyles.org][3]
 
 * Removed admin icon images - replaced by font-face icons.
 * Added pull request comment background fix, for Chrome.
+* Removed bug icon needed for Github-show-repo-issues.
 
 #### Version 1.2.31 (3/18/2012)
 
