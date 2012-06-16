@@ -12,6 +12,15 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.33 (6/15/2012)
+
+* Corrected footer colors
+* Minibuttons are now more buttony! (gradient background)
+* Darkened watch & fork labels.
+* Added progress bar styling.
+* Fixed diff code coloring.
+* Removed go button arrow. 
+
 #### Version 1.2.32 (5/9/2012)
 
 * Removed admin icon images - replaced by font-face icons.
