@@ -6,11 +6,13 @@ Hosted at [userstyles.org][3]
 
  [ ![before screenshot][4] ][5] [ ![after screenshot][6] ][7]
 
-###**Known problems**
-
-* Some inputs and textareas are stubborn (in Firefox) and won't change the background image/color to a black background, so the text is a little light. I'll keep looking for a workaround.
-
 ###**Changelog**
+
+#### Version 1.2.34 (8/4/2012)
+
+* Pagination fixes
+* Admin page tweaks
+* Github search table styling
 
 #### Version 1.2.33 (6/15/2012)
 
