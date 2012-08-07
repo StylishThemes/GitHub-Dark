@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.34 (8/4/2012)
+/* Github Dark Theme v1.2.35 (8/6/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -96,7 +96,8 @@
  /* === Remove shadow === */
  h1,h2,h3,h4,pre,code,strong,.news,#footer ul.sosueme li.main,.metabox em.placeholder,.fieldgroup p.explain.planusage strong,
  table.notifications,ul.features,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links,
- input.search,.section-nav a,.section a.section-head,.upper_footer,.switcher > span:after,.upgrades td,.menu a {
+ input.search,.section-nav a,.section a.section-head,.upper_footer,.switcher > span:after,.upgrades td,.menu a,
+ .notification-indicator {
   color: #999 !important;
   text-shadow: 0 0 0 transparent !important;
   box-shadow: 0 0 0 transparent !important;
@@ -219,7 +220,7 @@
  ul.repo_list li, #watchers li,.tree-browser .alt td,.line-data,.browser .listing,ul.repositories > li,.item,.context-pane,
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter,#footer,#footer .lower_footer,#footer-push,
- .notifications th {
+ .notifications th,#notification-center li.read {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -239,7 +240,7 @@
  .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,
  #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,#files .file,.listings-layout .columns.main .content,
  .filterbar li.selected,.boxed-group, .boxed-group-inner,.accordion-container,#issues_next ul.filters li,.file-box,
- table.instruction tr:nth-child(2n) {
+ table.instruction tr:nth-child(2n),.blankslate {
   background-color: #333 !important;
   -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -268,7 +269,7 @@
 
  /* Panel background (#333), no image, with border */
  .filter-bar,#files .file .meta,#files .file .data .line_numbers,.editbox,.editbox .body,.commentstyle,
- #issues .display,#issues .display .admin,#issues .labels .list li,.issue .summary,.plain,
+ #issues .display,#issues .display .admin,#issues .labels .list li,.issue .summary,.plain,#notification-center li:hover,
  #ng canvas,.public .body,.public .body p,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
  #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
  .line-number,.flash,.browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,
@@ -310,7 +311,7 @@
  table th,#browser td,.tree-browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,
  #wiki-history .author img,.options-content h3,.pagehead ul.tabs li a,#issues-dashboard .actions,#readme .name,
  .js-menu-container,table.branches tr:hover td,.list-tip a:hover,.boxed-group-list > li:hover,
- .write-selected .write-tab,.preview-selected .preview-tab {
+ .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus {
   background: #444 url() !important;
   border-color: #555 !important;
   color: #eee !important;
@@ -363,7 +364,7 @@
   color: #ccc !important;
  }
  /* darkest text; Context pane highlight item */
- .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span {
+ .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,#notification-center li.unread a {
   color: #444 !important;
  }
  .disabled {
@@ -373,14 +374,14 @@
 
  /* === gold === */
  /* Alerts and activity, remove background gradient */
- .news .alert .title span,.metabox .editable-text:hover,#inbox .list .item .title span  {
+ .news .alert .title span,.metabox .editable-text:hover,#inbox .list .item .title span {
   color: #8c8000 !important;
   background-color: transparent !important;
   border: 0 !important;
  }
 
  /* dark grey */
- .minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap {
+ .minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.notification-indicator {
   background: #222 !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#222)) !important;
   background: -moz-linear-gradient(center top, #444, #222) repeat scroll 0 0 transparent !important;
@@ -404,7 +405,7 @@
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
- a.feed:hover, a.feed:hover span {
+ a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover {
   background-color: #4183C4 !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3)) !important;
   background: -moz-linear-gradient(center top, #599BDC, #3072B3) repeat scroll 0 0 transparent !important;
@@ -412,7 +413,7 @@
   -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
 }
- ul.clone-urls li:hover,ul.clone-urls li:hover > a,table.upgrades tr:hover td {
+ ul.clone-urls li:hover,ul.clone-urls li:hover > a,table.upgrades tr:hover td,#notification-center li.unread {
   background: #4183C4 !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3)) !important;
   background: -moz-linear-gradient(center top, #599BDC, #3072B3) repeat scroll 0 0 transparent !important;
@@ -640,6 +641,11 @@
  /* darkest boder */
  .pagination a,.pagination span.current,.pagination span.gap {
   border-color: #222 !important;
+ }
+
+ /* no border */
+ .multiple-avatars,.multiple-avatars:before {
+  border: 0 !important;
  }
 
 }

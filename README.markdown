@@ -8,6 +8,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.35 (8/6/2012)
+
+* New notification styling
+
 #### Version 1.2.34 (8/4/2012)
 
 * Pagination fixes
