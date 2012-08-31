@@ -8,6 +8,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.36 (8/31/2012)
+
+* Added missing background and hover colors after the last update.
+
 #### Version 1.2.35 (8/6/2012)
 
 * New notification styling

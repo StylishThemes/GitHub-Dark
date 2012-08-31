@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.35 (8/6/2012)
+/* Github Dark Theme v1.2.36 (8/31/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -107,12 +107,13 @@
   text-shadow: 0 0 0 transparent !important;
  }
  /* add shadow to make labels readable */
- tr.issue span.label,ul.labels span.name,.listings .label {
+ tr.issue span.label,ul.labels span.name,.listings .label,.filter-item {
   text-shadow: 0 0 5px #000 !important;
  }
 
  /* === transparent background only === */
- table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.topsearch span.search-input,p.meta {
+ table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.topsearch span.search-input,p.meta,
+ .js-menu-container,.sidebar .milestone {
   background: transparent !important;
  }
 
@@ -139,7 +140,7 @@
  ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,
  #wiki-wrapper hr,table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
- ul.repo-stats li a,.footer_nav h4 {
+ ul.repo-stats li a,.footer_nav h4,.tabnav {
   border-color: #555 !important;
  }
  .listings div.listing {
@@ -239,8 +240,8 @@
  .browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,ul.fieldpills li,
  .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,
  #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,#files .file,.listings-layout .columns.main .content,
- .filterbar li.selected,.boxed-group, .boxed-group-inner,.accordion-container,#issues_next ul.filters li,.file-box,
- table.instruction tr:nth-child(2n),.blankslate {
+ .filterbar li.selected,.accordion-container,#issues_next ul.filters li,.file-box,table.instruction tr:nth-child(2n),
+ .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble {
   background-color: #333 !important;
   -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -251,7 +252,8 @@
  .metabox .rule,.comment-form,#issues .labels,#gollum-editor select,.listings .odd,.feed,.pagination a:hover,
  #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,ul.main_nav li.selected a,
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,
- #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status {
+ #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
+ #issues_next .infobar {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -272,9 +274,10 @@
  #issues .display,#issues .display .admin,#issues .labels .list li,.issue .summary,.plain,#notification-center li:hover,
  #ng canvas,.public .body,.public .body p,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
  #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
- .line-number,.flash,.browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,
- .sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,.module .inner,
- .browser .listing.closed, .starting-comment,.chzn-drop,#issues_next .labels .label a,.section-nav a:hover {
+ .line-number,.flash,.browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.milestone,
+ .browser .meta,.sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,
+ .module .inner,.browser .listing.closed, .starting-comment,.chzn-drop,#issues_next .labels .label a,
+ .section-nav a:hover {
   background: #333 url() !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -296,10 +299,10 @@
  .featured-callout,.ranked-repositories .meta a,.range-editor h3,.range-editor .chooser,ul.nav.logged_out,.tip-box a.next,
  #inbox .list .unread,#preview_bucket,.main .filterbar,.browser-content .footerbar,.filterbox,ul.smalltabs,.participation,
  .snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,.input,.ac_results,
- .addon:hover,a.function-button,.bubble,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta,
+ .addon:hover,a.function-button,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta,
  .sidebar-module,.sidebar-module > ul h3,ul.js-guides,.list-module h2,.sidebar-module > p,.documentation ul.nav,
  .bootcamp-help h1,.commit-meta,.gobutton,.browse-button,#user-links,.context-title,.boxed-group > h3,.accordion,
- .section a.section-head,.starting-comment .infobar,#issues_next .infobar,.hidden-text-expander a,.menu a.selected,
+ .section a.section-head,.hidden-text-expander a,.menu a.selected,
  .menu a:hover {
   background: #444 url() !important;
   border: 0 !important;
@@ -310,7 +313,7 @@
  /* Light Panel background (#444), no image, with border, no radius */
  table th,#browser td,.tree-browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,
  #wiki-history .author img,.options-content h3,.pagehead ul.tabs li a,#issues-dashboard .actions,#readme .name,
- .js-menu-container,table.branches tr:hover td,.list-tip a:hover,.boxed-group-list > li:hover,
+ table.branches tr:hover td,.list-tip a:hover,.boxed-group-list > li:hover,
  .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus {
   background: #444 url() !important;
   border-color: #555 !important;
@@ -318,7 +321,7 @@
  }
 
  /* Light Panel background (#444), leave image and border */
- ul.bignav li a:hover,ul.smallnav li a:hover,.browser .meta,.comments-wrapper,.repo.public h3,.rackspace,
+ ul.bignav li a:hover,ul.smallnav li a:hover,.comments-wrapper,.repo.public h3,.rackspace,.filter-item:hover,
  .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
  .issue.active,pre div[style="background-color: rgb(255, 255, 204);"],
  pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */
@@ -622,7 +625,7 @@
  }
  /* pull request avatar bubble */
  .avatar-bubble:before {
-  border-color: transparent #444 transparent transparent !important;
+  border-color: transparent #333 transparent transparent !important;
  }
  .mini-avatar-bubble {
   background-image: url(http://mottie.github.com/Github-Dark/images/bubble-arrow-up.png) !important;
