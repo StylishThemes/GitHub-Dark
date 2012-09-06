@@ -8,6 +8,10 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.37 (9/6/2012)
+
+* Updated issue comment styling
+
 #### Version 1.2.36 (8/31/2012)
 
 * Added missing background and hover colors after the last update.
