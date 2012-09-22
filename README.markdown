@@ -16,7 +16,6 @@ Hosted at [userstyles.org][3]
 * Hovered row styling updates (pull request, issues & stars pages).
 * Pushed down content that was overlapping the main nav bar.
 
-
 #### Version 1.2.37 (9/6/2012)
 
 * Updated issue comment styling
