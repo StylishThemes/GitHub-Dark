@@ -8,6 +8,14 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.38 (9/21/2012)
+
+* Style the command input and dropdown.
+* Issues styling updates.
+* Dashboard updates to news and my repo.
+* Hovered row styling updates (pull request, issues & stars pages).
+* Pushed down content that was overlapping the main nav bar.
+
 #### Version 1.2.37 (9/6/2012)
 
 * Updated issue comment styling
