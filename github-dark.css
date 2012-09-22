@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.38 (9/21/2012)
+/* Github Dark Theme v1.2.39 (9/22/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -89,25 +89,26 @@
  }
 
  /* === Remove shadow === */
- h1,h2,h3,h4,pre,code,strong,ul,li,p,input,a,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
+ h1,h2,h3,h4,pre,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
  table.notifications,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links,
- input.search,.upper_footer,.switcher > span:after,.upgrades td,.notification-indicator,.blog-feedback,.description {
+ input.search,.upper_footer,.switcher > span:after,.upgrades td,.notification-indicator,.blog-feedback,.description,
+ .pagination span,.mini-icon-advanced-search,.count {
   color: #999 !important;
   text-shadow: 0 0 0 transparent !important;
   box-shadow: 0 0 0 transparent !important;
  }
- a,button,div,span,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label {
+ a,button,div,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label,.js-context-button,.footer-text,.minibutton span,
+ span.name {
   color: #ddd !important;
   text-shadow: 0 0 0 transparent !important;
  }
- /* add shadow to make labels readable */
- tr.issue span.label,ul.labels span.name,.listings .label,.filter-item {
-  text-shadow: 0 0 5px #000 !important;
+ .mini-icon,.mini-icon:before,.list-tip:before {
+  text-shadow: 0 0 0 transparent !important;
  }
 
  /* === transparent background only === */
  table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.stars-browser .filter-bar,
- .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre {
+ .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar {
   background: transparent !important;
  }
 
@@ -250,7 +251,7 @@
  .pagehead ul.tabs li a:hover,.repos .bottom-bar,#languages .popular,.issue,a.selected,table.upgrades td,
  .commit-preview .message,.tip-box h4,.button-group,.wikistyle,.commit-preview p.error,.pagehead ul.tabs li.contextswitch,
  #browser tr th,.status-box h4,.line_numbers.comment-count,.new_issue,.line_numbers,.date_selector,.date_selector table th,
- #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer,.chromed-list-browser p {
+ #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer {
   background: #333 none !important;
   color: #eee !important;
   border: 0 !important;
@@ -341,10 +342,30 @@
   -webkit-border-radius: 5px !important;
  }
 
+ /* === gradient === */
+ /* dark grey gradient */
+ .minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.notification-indicator,
+ .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,#advanced_search,
+ .top-bar {
+  background: #222 !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#222)) !important;
+  background: -moz-linear-gradient(center top, #444, #222) repeat scroll 0 0 transparent !important;
+  border: #444 1px solid !important;
+ }
+
+ /* inverted dark grey gradient */
+ .progress-bar,.pagination .current {
+  background: #222 !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#444)) !important;
+  background: -moz-linear-gradient(center top, #222, #444) repeat scroll 0 0 transparent !important;
+  border: #666 1px solid !important;
+ }
+
  /* === Text Color === */
  /* White text */
  ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.navigation-focus .mini-icon:before,
- .selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,.btn-close-issue a.minibutton {
+ .selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,.btn-close-issue a.minibutton,
+ .commit .mini-icon:before {
   color: #fff !important;
  }
  /* News (slightly darker text) */
@@ -371,29 +392,10 @@
   border: 0 !important;
  }
 
- /* dark grey gradient */
- .minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.notification-indicator,
- .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,#advanced_search,
- .top-bar {
-  background: #222 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#222)) !important;
-  background: -moz-linear-gradient(center top, #444, #222) repeat scroll 0 0 transparent !important;
-  border: #444 1px solid !important;
- }
-
- /* inverted dark grey gradient */
- .progress-bar,.pagination .current {
-  background: #222 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#444)) !important;
-  background: -moz-linear-gradient(center top, #222, #444) repeat scroll 0 0 transparent !important;
-  border: #666 1px solid !important;
- }
-
-
  /* === blue  === */
  /* Blue text */
  .site a,.profilecols ul.stats li a:hover strong,.plans-row .plan,.filters li.selected,#gollum-editor-submit,
- .repo_list span.css-truncate-target {
+ .repo_list span.css-truncate-target,.commit .sha {
   color: #4183C4 !important;
  }
  /* Blue background (hover buttons) */
@@ -411,6 +413,12 @@
   background: #4183C4 !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3)) !important;
   background: -moz-linear-gradient(center top, #599BDC, #3072B3) repeat scroll 0 0 transparent !important;
+ }
+ .context-button:after {
+  border-color: #4183C4 transparent transparent !important;
+ }
+ .context-button:hover:after,.switcher > span:before {
+  border-color: #fff transparent transparent !important;
  }
  /* Blue panel */
  #posts #rss,.github-jobs-promotion p,.signup-button,.hero h1,.plan.personal,.caption,.centered-graphic,
@@ -462,17 +470,10 @@
   background: -moz-linear-gradient(center top , #373, #242) !important;
   border-color: #080 !important;
  }
- .highlight .gi,.highlight .gi pre {
+ .highlight .gi,.highlight .gi pre,a.new-repo {
   background: #305530 !important;
   border-color: #080 !important;
   color: #ddd !important;
- }
- .octofication { position:relative !important; }
- .octofication .message:before {
-  content: url("https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png") !important;
-  position: absolute !important;
-  top: 15% !important;
-  left: 0 !important;
  }
  /* New additions */
  .highlight .gi .x,.repo-owner-tag .tag,.gist-owner-tag .tag {
@@ -480,7 +481,7 @@
   color: #ddd !important;
  }
  /* Green hovered */
- #download_button:hover,.noproblems .pageheader_wrap {
+ #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover {
   background: #305530 !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#383), to(#242));
   background: -moz-linear-gradient(center top , #383, #242) !important;
@@ -583,6 +584,15 @@
  }
 
  /* === Images === */
+ /* broadcast icon */
+ .octofication { position:relative !important; }
+ .octofication .message:before {
+  content: url("https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png") !important;
+  position: absolute !important;
+  top: 15% !important;
+  left: 0 !important;
+ }
+ 
  /* font icons */
  #userbox a:hover, #userbox a:hover .mini-icon {
   color: #4183C4 !important;
@@ -598,7 +608,7 @@
  }
  .repositories canvas {
   background: #222 !important;
-  opacity: 1 !important;
+  opacity: 0.1 !important;
  }
  
  /* Footer cat */

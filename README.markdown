@@ -8,6 +8,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.39 (9/22/2012)
+
+* Repo commit bars were too bright!
+* Minor cleanup & tweaks to text-shadows.
+* Green new repo button.
+
 #### Version 1.2.38 (9/21/2012)
 
 * Style the command input, dropdown and help.
