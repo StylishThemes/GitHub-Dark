@@ -8,6 +8,15 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.40 (11/20/2012)
+
+* New header &amp; footer styling.
+* Fixed error in code syntax highlighting (it was red on red).
+* Fixed help.github.com styling.
+* Repo svg graphs should now have a dark background, except it's not working in Firefox?
+* Updated the gradient styling.
+
+
 #### Version 1.2.39 (9/22/2012)
 
 * Repo commit bars were too bright!

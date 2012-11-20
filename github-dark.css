@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.39 (9/22/2012)
+/* Github Dark Theme v1.2.40 (11/20/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -16,28 +16,23 @@
  }
 
  /* === Prevent overflow issues === */
- #dashboard,.highlight {
-  width: 99% !important;
+ #dashboard,.highlight,svg {
+  width: 100% !important;
  }
 
  /* === logo === */
- #header,#header .site {
+ .header,.header .site,#header {
   background: #111 !important;
   border: 0 !important;
   padding-bottom: 1px !important;
  }
- #header a:hover {
+ .header a:hover,.header a:hover .mini-icon,.header a:hover .mega-icon:before,#footer a {
   color: #4183C4 !important;
  }
- #header .site-logo:hover img {
-  border-bottom: #4183C4 1px solid !important;
+ #footer .mega-icon:hover:before {
+  color: #555 !important;
  }
- #header .github-logo-4x {
-  display: none !important;
- }
- #header .github-logo-4x-hover {
-  opacity: 1 !important;
- }
+ 
  /* gist.github.com */
  body.windows div.logo a[href="https://gist.github.com"] {
   display: block !important;
@@ -46,10 +41,10 @@
   background: url(http://mottie.github.com/Github-Dark/images/logo_gist.png) no-repeat !important;
  }
  /* help.github.com */
- body.documentation div#header a.logo img, body.windows div.logo a[href="https://gist.github.com"] img {
+ body#com div#header a.site-logo img, body.windows div.logo a[href="https://gist.github.com"] img {
   display: none !important;
  }
- body.documentation div#header a.logo {
+ body#com div#header a.site-logo {
   display: block !important;
   width: 179px !important;
   height: 45px !important;
@@ -64,15 +59,6 @@
  }
  body.majorproblem h2#logo a {
   background-image: url(http://mottie.github.com/Github-Dark/images/logo_status_majorproblems.png) !important;
- }
-
- /* === Add/remove visual cue === */
- #header a.logo:hover, #header div.logo a:hover {
-  border-bottom:1px solid #666 !important;
-  padding-bottom:1px !important;
- }
- #issues_next .sidebar .labels-editable .label-target .color a {
-  text-decoration: none !important;
  }
 
  /* === needs padding === */
@@ -121,22 +107,28 @@
 
  /* === Just rounded corners === */
  #wrapper,#your-repos-filter,.topsearch ul.nav {
-  -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* === No huge text === */
  pre {
   font-size: 14px !important;
  }
+ .topsearch form input.search {
+  font-size: 12px !important;
+ }
 
  /* === Darken border === */
  pre,code,ul li,table td,h1,h2,h3,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,
  ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,
- #wiki-wrapper hr,table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,
+ #wiki-wrapper hr,table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
- ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,
- .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas {
+ ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
+ .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
+ #commit-activity-master {
   border-color: #555 !important;
  }
  .listings div.listing {
@@ -166,15 +158,11 @@
   border-style: solid !important;
   color: #ddd !important;
  }
- .topsearch,.avatar img {
-  border-left: 1px solid #666 !important;
-  box-shadow: none !important;
- }
 
  /* === #111 === */
  pre,code,.highlight,.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,
  #wiki-wrapper pre,pre.prettyprint,pre.headers,pre.headers code,.discusion-topic-infobar,.pagination .disabled:hover,
- .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed {
+ .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site {
   background: #111 none !important;
   font-size: 13px !important;
   border-color: #555 !important;
@@ -184,16 +172,18 @@
  /* Darkest background color (#222), no image, with border & radius */
  #browser,.repo-stats,.pagehead ul.tabs li a.selected,.subnav-bar,.repos,.options-content,
  .options-group,.browsered,.browsered .inner,.subnav-bar > ul > li > ul,.comment-form ul.tabs a.selected,
- .issue.open.read .summary,.unselected_month,.commits th,#MathJax_Message,
+ .issue.open.read .summary,.unselected_month,.commits th,#MathJax_Message,#header .userbox,
  .user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,.gollum-minibutton,
  #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,
- .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,.site,#readme,
+ .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
  #readme article,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.new-comments .body,
- .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row {
+ .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg {
   background: #222 none !important;
   border-color: #444 !important;
-  -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* Darkest background (#222), leave image, no border */
@@ -205,10 +195,10 @@
  }
 
  /* Darkest background (#222), leave image, with border */
- #watchers li,.tree-browser .alt td,.line-data,.browser .listing,.item,.context-pane,
+ #watchers li,.tree-browser .alt td,.line-data,.browser .listing,.item,.context-pane, .comment-content,div#common-issues ul,
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter,#footer,#footer .lower_footer,#footer-push,
- .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.participation-graph {
+ .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.participation-graph,.tree-browser td {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -226,22 +216,25 @@
  .pagehead ul.actions a.feed,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,.context-loader,
  .browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,ul.fieldpills li,
  .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,
- #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,#files .file,.listings-layout .columns.main .content,
+ #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,.listings-layout .columns.main .content,
  .filterbar li.selected,.accordion-container,#issues_next ul.filters li,.file-box,table.instruction tr:nth-child(2n),
- .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.blog-feedback p {
+ .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.blog-feedback p,div#common-issues h3,
+ #commit-activity-master-head {
   background-color: #333 !important;
-  -moz-border-radius: 5px !important;
-  -webkit-border-radius: 5px !important;
   border: 0 !important;
+  -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* Panel background (#333), leave image, with border, no radius */
- .metabox .rule,.comment-form,#issues .labels,#gollum-editor select,.listings .odd,.feed,.pagination a:hover,
+ .metabox .rule,.comment-form,#issues .labels,#gollum-editor select,.listings .odd,.feed,#files .description,#files .file,
  #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,ul.main_nav li.selected a,
- .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,
+ .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- .filter-tab.selected {
+ .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -258,11 +251,11 @@
  }
 
  /* Panel background (#333), no image, with border */
- #files .file .meta,#files .file .data .line_numbers,.editbox,.editbox .body,.commentstyle,
- #issues .display,#issues .display .admin,#issues .labels .list li,.issue .summary,.plain,#notification-center li:hover,
- #ng canvas,.standard_form,#reply_body,#commit div,#commit td,#commit tr,
- #commit .envelope,.file-minibutton,.gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,
- .line-number,.flash,.browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.milestone,
+ #files .file .meta,#files .file .data .line_numbers,.editbox,.editbox .body,.commentstyle,#issues .display,
+ #issues .display .admin,#issues .labels .list li,.issue .summary,.plain,#notification-center li:hover,
+ #ng canvas,.standard_form,#reply_body,#commit div,#commit td,#commit tr,#commit .envelope,.file-minibutton,
+ .gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,.line-number,.flash,
+ .browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.milestone,
  .browser .meta,.sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,
  .module .inner,.browser .listing.closed, .starting-comment,.chzn-drop,#issues_next .labels .label a,
  .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus {
@@ -273,33 +266,37 @@
 
  #issues_next > .browser_header ul.actions li.selected {
   background: #333 !important;
-  border-color: #333 !important;
-  -moz-border-radius: 5px 5px 0 0 !important;
-  -webkit-border-radius: 5px 5px 0 0 !important;
   margin-top: 3px !important;
   padding: 5px 5px 2px 5px !important;
+  border-color: #333 !important;
+  -webkit-border-radius: 5px 5px 0 0 !important;
+  border-radius: 5px 5px 0 0 !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* === #444 === */
  /* Light Panel background (#444), no image, no border, with radius */
- #header .userbox,.tabs,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,p.breadcrumb,
+ .tabs,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,p.breadcrumb,
  #issues .display .sortbar,.actor,.cmeta,#facebox,#facebox .content,#facebox .close,#issues_search .wrapper,
  .featured-callout,.ranked-repositories .meta a,.range-editor h3,.range-editor .chooser,ul.nav.logged_out,.tip-box a.next,
  #inbox .list .unread,#preview_bucket,.main .filterbar,.browser-content .footerbar,.filterbox,ul.smalltabs,.participation,
  .snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,.input,.ac_results,
  .addon:hover,a.function-button,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta,
  .sidebar-module,.sidebar-module > ul h3,ul.js-guides,.list-module h2,.sidebar-module > p,.documentation ul.nav,
- .bootcamp-help h1,.commit-meta,.browse-button,#user-links,.context-title,.boxed-group > h3,.accordion,
- .section a.section-head,.hidden-text-expander a,.menu a.selected,.flash-messages,
+ .bootcamp-help h1,.commit-meta,.browse-button,.context-title,.boxed-group > h3,.accordion,#contributors-master,
+ #contributors-master svg,.section a.section-head,.hidden-text-expander a,.menu a.selected,.flash-messages,
  .menu a:hover,.list-browser-item.navigation-focus {
   background: #444 none !important;
   border: 0 !important;
-  -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* Light Panel background (#444), no image, with border, no radius */
- table th,#browser td,.tree-browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,
+ table th,#browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,div#common-issues,
  #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,table.branches tr:hover td,
  .list-tip a:hover,.boxed-group-list > li:hover,.display div.choice:nth-child(2n+1),.display tr:nth-child(2n+1),
  .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus {
@@ -338,27 +335,35 @@
  tr.inline-comments:hover td.line-comments,.menu-container,.hidden-text-expander a:hover {
   background: #555 !important;
   border: 0 !important;
-  -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
  }
 
  /* === gradient === */
  /* dark grey gradient */
- .minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.notification-indicator,
- .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,#advanced_search,
- .top-bar {
+ kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
+ .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
+ .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled {
   background: #222 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#222)) !important;
-  background: -moz-linear-gradient(center top, #444, #222) repeat scroll 0 0 transparent !important;
-  border: #444 1px solid !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222)) !important;
+  background-image: -webkit-linear-gradient(top, #333, #222) !important;
+  background-image: -moz-linear-gradient(top, #333, #222) !important;
+  background-image: -o-linear-gradient(top, #333, #222) !important;
+  background-image: linear-gradient(to bottom, #333, #222) !important;
+  border: #333 1px solid !important;
  }
 
  /* inverted dark grey gradient */
- .progress-bar,.pagination .current {
+ .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover {
   background: #222 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#444)) !important;
-  background: -moz-linear-gradient(center top, #222, #444) repeat scroll 0 0 transparent !important;
-  border: #666 1px solid !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#444)) !important;
+  background-image: -webkit-linear-gradient(top, #222, #444) !important;
+  background-image: -moz-linear-gradient(top, #222, #444) !important;
+  background-image: -o-linear-gradient(top, #222, #444) !important;
+  background-image: linear-gradient(to bottom, #222, #444) !important;
+  border: #555 1px solid !important;
  }
 
  /* === Text Color === */
@@ -401,18 +406,26 @@
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
- a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.gobutton:hover {
+ a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover {
   background-color: #4183C4 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3)) !important;
-  background: -moz-linear-gradient(center top, #599BDC, #3072B3) repeat scroll 0 0 transparent !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
+  background-image: -webkit-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: -moz-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: -o-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: linear-gradient(to bottom, #599bdc, #3072b3) !important;
   color: #ddd !important;
-  -moz-border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
 }
  ul.clone-urls li:hover,ul.clone-urls li:hover > a,table.upgrades tr:hover td,#notification-center li.unread {
   background: #4183C4 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#599BDC), to(#3072B3)) !important;
-  background: -moz-linear-gradient(center top, #599BDC, #3072B3) repeat scroll 0 0 transparent !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
+  background-image: -webkit-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: -moz-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: -o-linear-gradient(top, #599bdc, #3072b3) !important;
+  background-image: linear-gradient(to bottom, #599bdc, #3072b3) !important;
  }
  .context-button:after {
   border-color: #4183C4 transparent transparent !important;
@@ -424,18 +437,24 @@
  #posts #rss,.github-jobs-promotion p,.signup-button,.hero h1,.plan.personal,.caption,.centered-graphic,
  .login_form h1 {
   background: #003 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#005), to(#003));
-  background: -moz-linear-gradient(center top , #005, #003) repeat scroll 0 0 transparent !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#005), to(#003)) !important;
+  background-image: -webkit-linear-gradient(top, #005, #003) !important;
+  background-image: -moz-linear-gradient(top, #005, #003) !important;
+  background-image: -o-linear-gradient(top, #005, #003) !important;
+  background-image: linear-gradient(to bottom, #005, #003) !important;
   border-color: #006 !important;
  }
 
  /* === red === */
  /* Red panel */
  #forkqueue .legend .unclean,.unclean td,.state-closed,.chzn-results .no-results,.majorproblem .pageheader_wrap,
- .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error {
+ .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,.minibutton.danger:hover {
   background: #300 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#500), to(#300));
-  background: -moz-linear-gradient(center top , #500, #300) repeat scroll 0 0 transparent !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#500), to(#300)) !important;
+  background-image: -webkit-linear-gradient(top, #500, #300) !important;
+  background-image: -moz-linear-gradient(top, #500, #300) !important;
+  background-image: -o-linear-gradient(top, #500, #300) !important;
+  background-image: linear-gradient(to bottom, #500, #300) !important;
   border-color: #333 !important;
   color: #ccc !important;
  }
@@ -443,6 +462,9 @@
   background: #300 !important;
   border-color: #600 !important;
   color: #ccc !important;
+ }
+ .btn-close-issue:hover,button.classy[name="comment_and_close"]:hover {
+  background: #600 !important;
  }
  /* Deletions */
  .highlight .gd .x {
@@ -455,8 +477,11 @@
  .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em,
  #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment {
   background: #440 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#660), to(#440)) !important;
-  background: -moz-linear-gradient(center top , #660, #440) repeat scroll 0 0 transparent !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#660), to(#440)) !important;
+  background-image: -webkit-linear-gradient(top, #660, #440) !important;
+  background-image: -moz-linear-gradient(top, #660, #440) !important;
+  background-image: -o-linear-gradient(top, #660, #440) !important;
+  background-image: linear-gradient(to bottom, #660, #440) !important;
   border-color: #660 !important;
   color: #ddd !important;
  }
@@ -466,8 +491,11 @@
  #statusbar,.clean,.clean td,.mergeable.clean,.state-open,.octofication .message,#download_button,.status-box.good a,
  button.classy.primary,.progress-bar .progress {
   background: #305530 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#373), to(#242));
-  background: -moz-linear-gradient(center top , #373, #242) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#373), to(#242)) !important;
+  background-image: -webkit-linear-gradient(top, #373, #242) !important;
+  background-image: -moz-linear-gradient(top, #373, #242) !important;
+  background-image: -o-linear-gradient(top, #373, #242) !important;
+  background-image: linear-gradient(to bottom, #373, #242) !important;
   border-color: #080 !important;
  }
  .highlight .gi,.highlight .gi pre,a.new-repo {
@@ -481,18 +509,19 @@
   color: #ddd !important;
  }
  /* Green hovered */
- #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover {
-  background: #305530 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#383), to(#242));
-  background: -moz-linear-gradient(center top , #383, #242) !important;
-  border-color: #080 !important;
+ #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover,button.classy.primary:hover {
+  background: #373 !important;
+
  }
 
  /* === silver panel/button === */
  .kbd,.signup-button:hover,.hero .textographic,.hero .screenographic {
   background: #404040 !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#333));
-  background: -moz-linear-gradient(center top , #444, #333) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#333)) !important;
+  background-image: -webkit-linear-gradient(top, #444, #333) !important;
+  background-image: -moz-linear-gradient(top, #444, #333) !important;
+  background-image: -o-linear-gradient(top, #444, #333) !important;
+  background-image: linear-gradient(to bottom, #444, #333) !important;
   border-color: #606060 !important;
  }
 
@@ -541,7 +570,8 @@
  }
  /* Red - error */
  .highlight .err{
-  background-color: #A61717 !important;
+  background-color: #200 !important;
+  color: #A61717 !important;
  }
 
  /* === orange notification === */
@@ -550,8 +580,8 @@
  }
  /* orange border bottom */
  .pagehead ul.tabs li a.selected,.pagehead > ul.tabs li a:hover,div.listing.navigation-focus,div.issues.navigation-focus {
-  -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
   border-bottom: #f80 2px solid !important;
  }
  .section-nav .active a {
@@ -598,10 +628,6 @@
   color: #4183C4 !important;
  }
  
- /* Restore user avatar */
- #header .userbox img {
-  visibility: visible !important;
- }
  /* Repo canvas */
  ul.repositories > li {
   z-index: 1 !important;
