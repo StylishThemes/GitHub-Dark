@@ -68,6 +68,9 @@
  ul.actions {
   padding: 2px 10px 2px 35px !important;
  }
+ .blog {
+  margin-top: 20px !important;
+ }
 
  /* === no margin === */
  .markdown-body pre,#dashboard {
@@ -128,7 +131,7 @@
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
- #commit-activity-master {
+ #commit-activity-master,.blog-post,.top-rule {
   border-color: #555 !important;
  }
  .listings div.listing {
@@ -177,7 +180,7 @@
  #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,
  .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
  #readme article,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.new-comments .body,
- .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg {
+ .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg,.blog-post .meta {
   background: #222 none !important;
   border-color: #444 !important;
   -webkit-border-radius: 5px !important;
@@ -198,7 +201,7 @@
  #watchers li,.tree-browser .alt td,.line-data,.browser .listing,.item,.context-pane, .comment-content,div#common-issues ul,
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter,#footer,#footer .lower_footer,#footer-push,
- .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.participation-graph,.tree-browser td {
+ .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.tree-browser td {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -244,7 +247,7 @@
  .pagehead ul.tabs li a:hover,.repos .bottom-bar,#languages .popular,.issue,a.selected,table.upgrades td,
  .commit-preview .message,.tip-box h4,.button-group,.wikistyle,.commit-preview p.error,.pagehead ul.tabs li.contextswitch,
  #browser tr th,.status-box h4,.line_numbers.comment-count,.new_issue,.line_numbers,.date_selector,.date_selector table th,
- #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer {
+ #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer,#repos .public {
   background: #333 none !important;
   color: #eee !important;
   border: 0 !important;
@@ -277,7 +280,7 @@
 
  /* === #444 === */
  /* Light Panel background (#444), no image, no border, with radius */
- .tabs,ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,p.breadcrumb,
+ ul.sidetabs li a:hover,.editbox h1,#issues .labels .admin,p.breadcrumb,
  #issues .display .sortbar,.actor,.cmeta,#facebox,#facebox .content,#facebox .close,#issues_search .wrapper,
  .featured-callout,.ranked-repositories .meta a,.range-editor h3,.range-editor .chooser,ul.nav.logged_out,.tip-box a.next,
  #inbox .list .unread,#preview_bucket,.main .filterbar,.browser-content .footerbar,.filterbox,ul.smalltabs,.participation,
@@ -296,7 +299,7 @@
  }
 
  /* Light Panel background (#444), no image, with border, no radius */
- table th,#browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,div#common-issues,
+ .tabs,table th,#browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,div#common-issues,
  #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,table.branches tr:hover td,
  .list-tip a:hover,.boxed-group-list > li:hover,.display div.choice:nth-child(2n+1),.display tr:nth-child(2n+1),
  .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus {
@@ -345,7 +348,7 @@
  /* dark grey gradient */
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
- .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled {
+ .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info {
   background: #222 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222)) !important;
   background-image: -webkit-linear-gradient(top, #333, #222) !important;
@@ -629,10 +632,14 @@
  }
  
  /* Repo canvas */
- ul.repositories > li {
+ .participation-graph {
+  z-index: 0 !important;
+ }
+ ul.repolist h3,ul.repolist .description,ul.repolist .updated-at {
+  position: relative;
   z-index: 1 !important;
  }
- .repositories canvas {
+ .participation-graph canvas {
   background: #222 !important;
   opacity: 0.1 !important;
  }

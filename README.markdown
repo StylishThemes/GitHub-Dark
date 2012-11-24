@@ -8,6 +8,15 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.41 (11/24/2012)
+
+* Added some missing styling
+  * Blog posts
+  * Participation graphs (still not working in Firefox)
+  * Pull info sha box
+* Activity graph background is visible again in the repo list.
+* Restored the [userstyles.org page](http://userstyles.org/styles/37035/github-dark). It was deleted by the admin for missing images?
+
 #### Version 1.2.40 (11/20/2012)
 
 * New header &amp; footer styling.
@@ -15,7 +24,6 @@ Hosted at [userstyles.org][3]
 * Fixed help.github.com styling.
 * Repo svg graphs should now have a dark background, except it's not working in Firefox?
 * Updated the gradient styling.
-
 
 #### Version 1.2.39 (9/22/2012)
 
