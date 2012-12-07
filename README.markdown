@@ -8,6 +8,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.42 (12/7/2012)
+
+* Styled new drag-n-drop bar.
+* Updated github status styling; removed status images.
+* Fixed notification indicator style.
+
 #### Version 1.2.41 (11/24/2012)
 
 * Added some missing styling

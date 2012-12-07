@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.41 (11/24/2012)
+/* Github Dark Theme v1.2.42 (12/7/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -21,7 +21,7 @@
  }
 
  /* === logo === */
- .header,.header .site,#header {
+ .header,.header .site {
   background: #111 !important;
   border: 0 !important;
   padding-bottom: 1px !important;
@@ -131,7 +131,7 @@
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
- #commit-activity-master,.blog-post,.top-rule {
+ #commit-activity-master,.blog-post,.top-rule,#services,#services .service {
   border-color: #555 !important;
  }
  .listings div.listing {
@@ -348,25 +348,26 @@
  /* dark grey gradient */
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
- .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info {
-  background: #222 !important;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222)) !important;
-  background-image: -webkit-linear-gradient(top, #333, #222) !important;
-  background-image: -moz-linear-gradient(top, #333, #222) !important;
-  background-image: -o-linear-gradient(top, #333, #222) !important;
-  background-image: linear-gradient(to bottom, #333, #222) !important;
-  border: #333 1px solid !important;
+ .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
+ .drag-and-drop,#graph_data .tab.selected {
+  background: #181818 !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
+  background-image: -webkit-linear-gradient(top, #333, #181818) !important;
+  background-image: -moz-linear-gradient(top, #333, #181818) !important;
+  background-image: -o-linear-gradient(top, #333, #181818) !important;
+  background-image: linear-gradient(to bottom, #333, #181818) !important;
+  border-color: #333 !important;
  }
 
  /* inverted dark grey gradient */
  .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover {
-  background: #222 !important;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#444)) !important;
-  background-image: -webkit-linear-gradient(top, #222, #444) !important;
-  background-image: -moz-linear-gradient(top, #222, #444) !important;
-  background-image: -o-linear-gradient(top, #222, #444) !important;
-  background-image: linear-gradient(to bottom, #222, #444) !important;
-  border: #555 1px solid !important;
+  background: #181818 !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#444)) !important;
+  background-image: -webkit-linear-gradient(top, #181818, #444) !important;
+  background-image: -moz-linear-gradient(top, #181818, #444) !important;
+  background-image: -o-linear-gradient(top, #181818, #444) !important;
+  background-image: linear-gradient(to bottom, #181818, #444) !important;
+  border-color: #555 !important;
  }
 
  /* === Text Color === */
@@ -451,7 +452,8 @@
  /* === red === */
  /* Red panel */
  #forkqueue .legend .unclean,.unclean td,.state-closed,.chzn-results .no-results,.majorproblem .pageheader_wrap,
- .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,.minibutton.danger:hover {
+ .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,.minibutton.danger:hover,
+ #message.major {
   background: #300 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#500), to(#300)) !important;
   background-image: -webkit-linear-gradient(top, #500, #300) !important;
@@ -478,7 +480,7 @@
  /* === Yellow panel === */
  .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.plan.free,
  .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em,
- #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment {
+ #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment,#message.minor {
   background: #440 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#660), to(#440)) !important;
   background-image: -webkit-linear-gradient(top, #660, #440) !important;
@@ -492,7 +494,7 @@
  /* === Green panel === */
  #forkqueue .legend .clean,#revisions ul li.current,.excerpt,.selectable_day.today,.big-notice,.plan.business,.popout,
  #statusbar,.clean,.clean td,.mergeable.clean,.state-open,.octofication .message,#download_button,.status-box.good a,
- button.classy.primary,.progress-bar .progress {
+ button.classy.primary,.progress-bar .progress,#message.good {
   background: #305530 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#373), to(#242)) !important;
   background-image: -webkit-linear-gradient(top, #373, #242) !important;
