@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.42 (12/7/2012)
+/* Github Dark Theme v1.2.43 (12/7/2012)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -68,7 +68,7 @@
  ul.actions {
   padding: 2px 10px 2px 35px !important;
  }
- .blog {
+ div.blog {
   margin-top: 20px !important;
  }
 
@@ -97,7 +97,8 @@
 
  /* === transparent background only === */
  table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.stars-browser .filter-bar,
- .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar {
+ .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar,
+ .gist .button-group {
   background: transparent !important;
  }
 
@@ -165,7 +166,8 @@
  /* === #111 === */
  pre,code,.highlight,.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,
  #wiki-wrapper pre,pre.prettyprint,pre.headers,pre.headers code,.discusion-topic-infobar,.pagination .disabled:hover,
- .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site {
+ .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site,
+ .ace_gutter {
   background: #111 none !important;
   font-size: 13px !important;
   border-color: #555 !important;
@@ -173,9 +175,9 @@
 
  /* === #222 === */
  /* Darkest background color (#222), no image, with border & radius */
- #browser,.repo-stats,.pagehead ul.tabs li a.selected,.subnav-bar,.repos,.options-content,
+ #browser,.repo-stats,.pagehead ul.tabs li a.selected,.subnav-bar,.repos,.options-content,.gist .meta,
  .options-group,.browsered,.browsered .inner,.subnav-bar > ul > li > ul,.comment-form ul.tabs a.selected,
- .issue.open.read .summary,.unselected_month,.commits th,#MathJax_Message,#header .userbox,
+ .issue.open.read .summary,.unselected_month,.commits th,#MathJax_Message,#header .userbox,.title-actions-bar .meta,
  .user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,.gollum-minibutton,
  #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,
  .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
@@ -191,7 +193,7 @@
 
  /* Darkest background (#222), leave image, no border */
  .locales,.keyboard-shortcuts,li.contextswitch ul,.file,.add-bubble,#network .repo,.notification-settings,#wrapper,
- #files > .description,.commit-group-item:nth-child(2n) .authorship {
+ #files > .description,.commit-group-item:nth-child(2n) .authorship,.recent-gists .meta {
   background-color: #222 !important;
   color: #eee !important;
   border: 0 !important;
@@ -201,7 +203,7 @@
  #watchers li,.tree-browser .alt td,.line-data,.browser .listing,.item,.context-pane, .comment-content,div#common-issues ul,
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter,#footer,#footer .lower_footer,#footer-push,
- .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.tree-browser td {
+ .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.tree-browser td,.ace_scroller {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -219,10 +221,10 @@
  .pagehead ul.actions a.feed,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,.context-loader,
  .browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,ul.fieldpills li,
  .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,
- #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,.listings-layout .columns.main .content,
+ #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,.listings-layout .columns.main .content,#gist-form .name,
  .filterbar li.selected,.accordion-container,#issues_next ul.filters li,.file-box,table.instruction tr:nth-child(2n),
  .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.blog-feedback p,div#common-issues h3,
- #commit-activity-master-head {
+ #commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar {
   background-color: #333 !important;
   border: 0 !important;
   -webkit-border-radius: 5px !important;
@@ -237,7 +239,7 @@
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta {
+ .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.issues .none p {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -258,7 +260,7 @@
  #issues .display .admin,#issues .labels .list li,.issue .summary,.plain,#notification-center li:hover,
  #ng canvas,.standard_form,#reply_body,#commit div,#commit td,#commit tr,#commit .envelope,.file-minibutton,
  .gollum-minibutton a,#wiki-history table td,.tree-browser th,.context-pane .title,.line-number,.flash,
- .browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.milestone,
+ .browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.milestone,.file-box .icon,
  .browser .meta,.sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,
  .module .inner,.browser .listing.closed, .starting-comment,.chzn-drop,#issues_next .labels .label a,
  .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus {
@@ -288,8 +290,8 @@
  .addon:hover,a.function-button,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,.meta,
  .sidebar-module,.sidebar-module > ul h3,ul.js-guides,.list-module h2,.sidebar-module > p,.documentation ul.nav,
  .bootcamp-help h1,.commit-meta,.browse-button,.context-title,.boxed-group > h3,.accordion,#contributors-master,
- #contributors-master svg,.section a.section-head,.hidden-text-expander a,.menu a.selected,.flash-messages,
- .menu a:hover,.list-browser-item.navigation-focus {
+ #contributors-master svg,.section a.section-head,.hidden-text-expander a,.flash-messages,
+ .list-browser-item.navigation-focus {
   background: #444 none !important;
   border: 0 !important;
   -webkit-border-radius: 5px !important;
@@ -302,7 +304,8 @@
  .tabs,table th,#browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,div#common-issues,
  #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,table.branches tr:hover td,
  .list-tip a:hover,.boxed-group-list > li:hover,.display div.choice:nth-child(2n+1),.display tr:nth-child(2n+1),
- .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus {
+ .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus,.menu a:hover,
+ .menu-container {
   background: #444 none !important;
   border-color: #555 !important;
   color: #eee !important;
@@ -335,7 +338,7 @@
  /* Highlight Panel background (#555), leave image, no border, with radius */
  .paging,.button-pager,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover,
  .list-module a:hover,.js-guides a:hover,.section-nav .active a,#dashboard .filter-bar li a.filter_selected:after,
- tr.inline-comments:hover td.line-comments,.menu-container,.hidden-text-expander a:hover {
+ tr.inline-comments:hover td.line-comments,.hidden-text-expander a:hover {
   background: #555 !important;
   border: 0 !important;
   -webkit-border-radius: 5px !important;
@@ -349,7 +352,7 @@
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
- .drag-and-drop,#graph_data .tab.selected {
+ .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -452,8 +455,8 @@
  /* === red === */
  /* Red panel */
  #forkqueue .legend .unclean,.unclean td,.state-closed,.chzn-results .no-results,.majorproblem .pageheader_wrap,
- .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,.minibutton.danger:hover,
- #message.major {
+ .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,#message.major,
+ .minibutton.danger:hover,.minibutton.danger:hover span {
   background: #300 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#500), to(#300)) !important;
   background-image: -webkit-linear-gradient(top, #500, #300) !important;
@@ -471,6 +474,10 @@
  .btn-close-issue:hover,button.classy[name="comment_and_close"]:hover {
   background: #600 !important;
  }
+ .minibutton.danger,.minibutton.danger span {
+  color: #900 !important;
+ }
+ 
  /* Deletions */
  .highlight .gd .x {
   background: #700 !important;
@@ -574,7 +581,7 @@
   color: #cc4 !important;
  }
  /* Red - error */
- .highlight .err{
+ .highlight .err {
   background-color: #200 !important;
   color: #A61717 !important;
  }
@@ -589,9 +596,10 @@
   border-radius: 0 !important;
   border-bottom: #f80 2px solid !important;
  }
- .section-nav .active a {
+ .section-nav .active a,.menu a.selected {
   border-left: #f80 2px solid !important;
  }
+ 
  /* ajax loading */
  .pjax-loading {
   background: rgba(64, 64, 64, 0.8) !important;

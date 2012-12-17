@@ -8,6 +8,12 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.43 (12/17/2012)
+
+* Cleaned up gist styling.
+* Added header (future implementation), footer and sidebar styling - fixes [issue #8](https://github.com/Mottie/Github-Dark/issues/8).
+* Added empty issue list styling - fixes [issue #9](https://github.com/Mottie/Github-Dark/issues/9).
+
 #### Version 1.2.42 (12/7/2012)
 
 * Styled new drag-n-drop bar.
