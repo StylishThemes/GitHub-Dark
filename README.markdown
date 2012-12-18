@@ -8,6 +8,11 @@ Hosted at [userstyles.org][3]
 
 ###**Changelog**
 
+#### Version 1.2.44 (12/18/2012)
+
+* Style for empty pull request added. See [issue #9](https://github.com/Mottie/Github-Dark/issues/9).
+* Fixed styling for hovering over inline commnets, hopefully for good! See [issue #10](https://github.com/Mottie/Github-Dark/issues/10).
+
 #### Version 1.2.43 (12/17/2012)
 
 * Cleaned up gist styling.
