@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.44 (12/18/2012)
+/* Github Dark Theme v1.2.45 (1/3/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -32,7 +32,7 @@
  #footer .mega-icon:hover:before {
   color: #555 !important;
  }
- 
+
  /* gist.github.com */
  body.windows div.logo a[href="https://gist.github.com"] {
   display: block !important;
@@ -111,8 +111,8 @@
 
  /* === Just rounded corners === */
  #wrapper,#your-repos-filter,.topsearch ul.nav {
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -139,7 +139,7 @@
   border-left: #333 2px solid !important;
   border-right: #333 2px solid !important;
  }
- 
+
  /* code */
  .linkable-line-number {
   border-right: #555 1px solid !important;
@@ -185,8 +185,8 @@
  .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg,.blog-post .meta {
   background: #222 none !important;
   border-color: #444 !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -227,8 +227,8 @@
  #commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar {
   background-color: #333 !important;
   border: 0 !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -274,8 +274,8 @@
   margin-top: 3px !important;
   padding: 5px 5px 2px 5px !important;
   border-color: #333 !important;
-  -webkit-border-radius: 5px 5px 0 0 !important;
-  border-radius: 5px 5px 0 0 !important;
+  -webkit-border-radius: 3px 3px 0 0 !important;
+  border-radius: 3px 3px 0 0 !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -294,8 +294,8 @@
  .list-browser-item.navigation-focus {
   background: #444 none !important;
   border: 0 !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -343,8 +343,8 @@
  .hidden-text-expander a:hover {
   background: #555 !important;
   border: 0 !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
@@ -354,7 +354,8 @@
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
- .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container {
+ .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,
+ .recently-touched-branches {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -423,8 +424,6 @@
   background-image: -o-linear-gradient(top, #599bdc, #3072b3) !important;
   background-image: linear-gradient(to bottom, #599bdc, #3072b3) !important;
   color: #ddd !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
 }
@@ -479,7 +478,7 @@
  .minibutton.danger,.minibutton.danger span {
   color: #900 !important;
  }
- 
+
  /* Deletions */
  .highlight .gd .x {
   background: #700 !important;
@@ -601,15 +600,10 @@
  .section-nav .active a,.menu a.selected {
   border-left: #f80 2px solid !important;
  }
- 
+
  /* ajax loading */
  .pjax-loading {
   background: rgba(64, 64, 64, 0.8) !important;
- }
- 
- /* === Wiki editor === */
- #gollum-editor-function-bar a span {
-  background-image: url(http://mottie.github.com/Github-Dark/images/icon-sprite.png) !important;
  }
 
  /* === Repository Network Tree === */
@@ -637,17 +631,21 @@
   top: 15% !important;
   left: 0 !important;
  }
- 
+
+ .mini-icon-windows:before {
+  background-position: -18px 0;
+ }
+
  /* font icons */
  #userbox a:hover, #userbox a:hover .mini-icon {
   color: #4183C4 !important;
  }
- 
+
  /* Repo canvas */
  .participation-graph {
   z-index: 0 !important;
  }
- ul.repolist h3,ul.repolist .description,ul.repolist .updated-at {
+ ul.repolist h3,ul.repolist .description,ul.repolist .updated-at,ul.repolist .fork-flag {
   position: relative;
   z-index: 1 !important;
  }
@@ -655,7 +653,7 @@
   background: #222 !important;
   opacity: 0.1 !important;
  }
- 
+
  /* Footer cat */
  #footer #blacktocat {
   background: url("http://mottie.github.com/Github-Dark/images/blacktocat.svg") no-repeat scroll 0 0 transparent !important;
@@ -668,7 +666,7 @@
  .search .minibutton span {
   background-position: center -95px !important;
  }
- 
+
  /* SSH HTTP Git Read-Only button background */
  ul.clone-urls li,ul.clone-urls li > a {
   background: url(http://github.com/images/modules/buttons/black.gif) -23px 0 !important;
