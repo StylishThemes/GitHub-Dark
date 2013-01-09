@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.46 (1/8/2013)
+/* Github Dark Theme v1.2.47 (1/9/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -81,18 +81,18 @@
  h1,h2,h3,h4,pre,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
  table.notifications,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links,
  input.search,.upper_footer,.switcher > span:after,.upgrades td,.notification-indicator,.blog-feedback,.description,
- .pagination span,.mini-icon-advanced-search,.count {
+ .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after {
   color: #999 !important;
-  text-shadow: 0 0 0 transparent !important;
-  box-shadow: 0 0 0 transparent !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
  }
  a,button,div,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label,.js-context-button,.footer-text,.minibutton span,
  span.name {
   color: #ddd !important;
-  text-shadow: 0 0 0 transparent !important;
+  text-shadow: none !important;
  }
  .mini-icon,.mini-icon:before,.list-tip:before {
-  text-shadow: 0 0 0 transparent !important;
+  text-shadow: none !important;
  }
 
  /* === transparent background only === */
@@ -133,12 +133,17 @@
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.grid .col,.lbl,.details,
- ul.stats {
+ ul.stats,.select-menu-filters,.select-menu-item,.select-menu-tabs,.release-list > li,.url-box,.select-menu-button:after,
+ .context-body,.range-editor-head {
   border-color: #555 !important;
  }
  .listings div.listing {
   border-left: #333 2px solid !important;
   border-right: #333 2px solid !important;
+ }
+ /* branch selector button - uses borders to make select button */
+ .select-menu-button::before {
+  border-top-color: #eee !important;
  }
 
  /* code */
@@ -151,7 +156,7 @@
   background-color: #003 !important;
   border-color: #006 !important;
  }
- .list-tip:before,.selector-item .mini-icon:before,.browser .mini-icon-arr-right,.filter-tab {
+ .list-tip:before,.selector-item .mini-icon:before,.browser .mini-icon-arr-right,.filter-tab,.selected .select-menu-checkmark {
   color: #222 !important; /* tip pointer */
  }
 
@@ -223,11 +228,12 @@
  /* Panel background (#333), leave image, no border, with radius */
  .pagehead ul.actions a.feed,.explore h2 .feed,#code_search_instructions h2,td.inst,.metabox-loader,.context-loader,
  .browser-content,.comment,.wikistyle p,.filterbar ul.filters li,.pagehead ul.tabs li.contextswitch,ul.fieldpills li,
- .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,
+ .pagehead ul.tabs li.contextswitch:hover,#new_message,.header,.bigbutton a,.fieldswrap,#gollum-editor,.menu,.pull-flag,
  #issues_next ul.sorts li,ul.sorts li.asc,ul.sorts li.desc,.listings-layout .columns.main .content,#gist-form .name,
  .filterbar li.selected,.accordion-container,#issues_next ul.filters li,.file-box,table.instruction tr:nth-child(2n),
  .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.blog-feedback p,div#common-issues h3,
- #commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar,.capped-box h3 {
+ #commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar,.capped-box h3,.auth-form-body,
+ .range-editor-form,.action-indicator {
   background-color: #333 !important;
   border: 0 !important;
   -webkit-border-radius: 3px !important;
@@ -242,7 +248,8 @@
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p {
+ .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,
+ .select-menu-modal > div {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -314,7 +321,7 @@
  #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,table.branches tr:hover td,
  .list-tip a:hover,.boxed-group-list > li:hover,.display div.choice:nth-child(2n+1),.display tr:nth-child(2n+1),
  .write-selected .write-tab,.preview-selected .preview-tab,#notification-center li.navigation-focus,.menu a:hover,
- .menu-container {
+ .menu-container,.select-menu-tabs a.selected {
   background: #444 none !important;
   border-color: #555 !important;
   color: #eee !important;
@@ -349,7 +356,7 @@
  /* Highlight Panel background (#555), leave image, no border, with radius */
  .paging,.button-pager,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover,
  .list-module a:hover,.js-guides a:hover,.section-nav .active a,#dashboard .filter-bar li a.filter_selected:after,
- .hidden-text-expander a:hover {
+ .hidden-text-expander a:hover,.switcher > span:after {
   background: #555 !important;
   border: 0 !important;
   -webkit-border-radius: 3px !important;
@@ -364,7 +371,7 @@
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
  .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,
- .recently-touched-branches,body#com #header,.search-form button,.white-nav .selected span {
+ .recently-touched-branches,body#com #header,.search-form button,.white-nav .selected span,.select-menu-header {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -422,6 +429,10 @@
  .repo_list span.css-truncate-target,.commit .sha {
   color: #4183C4 !important;
  }
+ /* blue links need to be white when background is blue */
+ .navigation-focus a {
+  color: #ddd !important;
+ }
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
@@ -452,7 +463,7 @@
  }
  /* Blue panel */
  #posts #rss,.github-jobs-promotion p,.signup-button,.hero h1,.plan.personal,.caption,.centered-graphic,
- .login_form h1 {
+ .login_form h1,.auth-form-header {
   background: #003 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#005), to(#003)) !important;
   background-image: -webkit-linear-gradient(top, #005, #003) !important;

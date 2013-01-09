@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.47 (1/9/2013)
+
+* Styled the updated branch modal window, which now includes tags.
+* Styled invalid pull request page.
+* Log in popup styling.
+
 #### Version 1.2.46 (1/8/2013)
 
 * Added styling to new contributions tab; Firefox doesn't seem to want to select the white rects in the graph =(
