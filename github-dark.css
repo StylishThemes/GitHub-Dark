@@ -87,7 +87,7 @@
   box-shadow: none !important;
  }
  a,button,div,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label,.js-context-button,.footer-text,.minibutton span,
- span.name {
+ span.name{
   color: #ddd !important;
   text-shadow: none !important;
  }
@@ -98,7 +98,7 @@
  /* === transparent background only === */
  table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.stars-browser .filter-bar,
  .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar,
- .gist .button-group,div.content-header .search-form {
+ .gist .button-group,div.content-header .search-form,#wrapper {
   background: transparent !important;
  }
 
@@ -134,18 +134,21 @@
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.grid .col,.lbl,.details,
  ul.stats,.select-menu-filters,.select-menu-item,.select-menu-tabs,.release-list > li,.url-box,.select-menu-button:after,
- .context-body,.range-editor-head {
+ .context-body,.range-editor-head,.filter-tab,.cheatsheet,.gist-file {
   border-color: #555 !important;
  }
  .listings div.listing {
   border-left: #333 2px solid !important;
   border-right: #333 2px solid !important;
  }
+ .filter-tab.selected {
+  border: #444 1px solid !important;
+  border-bottom: #333 1px solid !important;
+ }
  /* branch selector button - uses borders to make select button */
  .select-menu-button::before {
   border-top-color: #eee !important;
  }
-
  /* code */
  .linkable-line-number {
   border-right: #555 1px solid !important;
@@ -156,7 +159,7 @@
   background-color: #003 !important;
   border-color: #006 !important;
  }
- .list-tip:before,.selector-item .mini-icon:before,.browser .mini-icon-arr-right,.filter-tab,.selected .select-menu-checkmark {
+ .list-tip:before,.selector-item .mini-icon:before,.browser .mini-icon-arr-right,.selected .select-menu-checkmark {
   color: #222 !important; /* tip pointer */
  }
 
@@ -185,7 +188,7 @@
  .options-group,.browsered,.browsered .inner,.subnav-bar > ul > li > ul,.comment-form ul.tabs a.selected,
  .issue.open.read .summary,.unselected_month,.commits th,#MathJax_Message,#header .userbox,.title-actions-bar .meta,
  .user-commits,.user-commits th,.pagehead ul.actions,.metabox,.ranked-repositories > li,.gollum-minibutton,
- #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,
+ #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,.gist-meta,
  .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
  #readme article,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.new-comments .body,
  .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg,.blog-post .meta {
@@ -248,8 +251,7 @@
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- .filter-tab.selected,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,
- .select-menu-modal > div {
+ div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -370,8 +372,9 @@
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
- .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,
- .recently-touched-branches,body#com #header,.search-form button,.white-nav .selected span,.select-menu-header {
+ .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
+ .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,ul.clone-urls li,
+ ul.clone-urls li > a,.filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2 {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -382,14 +385,15 @@
  }
 
  /* inverted dark grey gradient */
- .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover {
+ .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover,
+ .clone-urls li.selected > a,.asc .sort-type,.desc .sort-type {
   background: #181818 !important;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#444)) !important;
-  background-image: -webkit-linear-gradient(top, #181818, #444) !important;
-  background-image: -moz-linear-gradient(top, #181818, #444) !important;
-  background-image: -o-linear-gradient(top, #181818, #444) !important;
-  background-image: linear-gradient(to bottom, #181818, #444) !important;
-  border-color: #555 !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#333)) !important;
+  background-image: -webkit-linear-gradient(top, #181818, #333) !important;
+  background-image: -moz-linear-gradient(top, #181818, #333) !important;
+  background-image: -o-linear-gradient(top, #181818, #333) !important;
+  background-image: linear-gradient(to bottom, #181818, #333) !important;
+  border-color: #333 !important;
  }
 
  /* === Text Color === */
@@ -426,7 +430,7 @@
  /* === blue  === */
  /* Blue text */
  .site a,.profilecols ul.stats li a:hover strong,.plans-row .plan,.filters li.selected,#gollum-editor-submit,
- .repo_list span.css-truncate-target,.commit .sha {
+ .repo_list span.css-truncate-target,.commit .sha,.zeroclipboard-button {
   color: #4183C4 !important;
  }
  /* blue links need to be white when background is blue */
@@ -436,7 +440,7 @@
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
- a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover {
+ a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.url-box .zeroclipboard-is-hover {
   background-color: #4183C4 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
   background-image: -webkit-linear-gradient(top, #599bdc, #3072b3) !important;
@@ -454,6 +458,7 @@
   background-image: -moz-linear-gradient(top, #599bdc, #3072b3) !important;
   background-image: -o-linear-gradient(top, #599bdc, #3072b3) !important;
   background-image: linear-gradient(to bottom, #599bdc, #3072b3) !important;
+  color: #ddd !important;
  }
  .context-button:after {
   border-color: #4183C4 transparent transparent !important;
@@ -598,7 +603,7 @@
   color: #aaa !important;
  }
  /* Cyan */
- .highlight .nn,.highlight .nb {
+ .highlight .nn,.highlight .nb,.highlight .k {
   color: #cc4 !important;
  }
  /* Red - error */
@@ -687,11 +692,6 @@
   background-position: center -95px !important;
  }
 
- /* SSH HTTP Git Read-Only button background */
- ul.clone-urls li,ul.clone-urls li > a {
-  background: url(http://github.com/images/modules/buttons/black.gif) -23px 0 !important;
-  color: #ddd !important;
- }
  /* issue labels manager */
  #issues_next .sidebar .labels-editable .label-target .delete a {
   background-image: url(http://mottie.github.com/Github-Dark/images/delete.png) !important;

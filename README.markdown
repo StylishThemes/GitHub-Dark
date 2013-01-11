@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.48 (1/10/2013)
+
+* Fixed selected/non-selected tab styling - fixes [issue #14](https://github.com/Mottie/Github-Dark/issues/14).
+* Added styling for http://github.github.com/github-flavored-markdown/ (including embedded gist).
+* Fixed clone urls &amp; clipboard button styling.
+
 #### Version 1.2.47 (1/9/2013)
 
 * Styled the updated branch modal window, which now includes tags.
@@ -35,24 +41,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * Style for empty pull request added. See [issue #9](https://github.com/Mottie/Github-Dark/issues/9).
 * Fixed styling for hovering over inline commnets, hopefully for good! See [issue #10](https://github.com/Mottie/Github-Dark/issues/10).
-
-#### Version 1.2.43 (12/17/2012)
-
-* Cleaned up gist styling.
-* Added header (future implementation), footer and sidebar styling - fixes [issue #8](https://github.com/Mottie/Github-Dark/issues/8).
-* Added empty issue list styling - fixes [issue #9](https://github.com/Mottie/Github-Dark/issues/9).
-
-#### Version 1.2.42 (12/7/2012)
-
-* Styled new drag-n-drop bar.
-* Updated github status styling; removed status images.
-* Fixed notification indicator style.
-
-#### Version 1.2.41 (11/24/2012)
-
-* Added some missing styling
-  * Blog posts
-  * Participation graphs (still not working in Firefox)
-  * Pull info sha box
-* Activity graph background is visible again in the repo list.
-* Restored the [userstyles.org page](http://userstyles.org/styles/37035/github-dark). It was deleted by the admin for missing images?
