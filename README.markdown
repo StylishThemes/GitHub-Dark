@@ -20,7 +20,7 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Updated diff file view colors:
  * Lines that have additions or deletions are now darker.
  * In line changes stand out more.
- * See this diff page, with github dark installed of course, to see the code highlighting.
+ * See [this diff page](https://github.com/Mottie/Github-Dark/commit/8da32cae90102d22c3a3df54dc50ccaca8aba2a4), with github dark installed of course, to see the code highlighting.
 * Fixed code line hovering to not be bright blue and make it impossible to read since I originally had comments the same color blue.
 
 #### Version 1.2.48 (1/10/2013)
