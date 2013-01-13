@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.48 (1/10/2013)
+/* Github Dark Theme v1.2.49 (1/12/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -78,8 +78,8 @@
  }
 
  /* === Remove shadow === */
- h1,h2,h3,h4,pre,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
- table.notifications,.highlight .nt,.highlight .nf,#download_button,.comment-count,em.date,#header,#user-links,
+ h1,h2,h3,h4,pre,pre *,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
+ table.notifications,#download_button,.comment-count,em.date,#header,#user-links,
  input.search,.upper_footer,.switcher > span:after,.upgrades td,.notification-indicator,.blog-feedback,.description,
  .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after {
   color: #999 !important;
@@ -173,7 +173,7 @@
  }
 
  /* === #111 === */
- pre,code,.highlight,.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,
+ pre,code,.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,
  #wiki-wrapper pre,pre.prettyprint,pre.headers,pre.headers code,.discusion-topic-infobar,.pagination .disabled:hover,
  .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site,
  .ace_gutter {
@@ -251,7 +251,8 @@
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div {
+ div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div,
+ pre div[style="background-color: rgb(255, 255, 204);"], pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */ 
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -334,8 +335,7 @@
  .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
  #files.commentable tr:hover td.line-comments,#files.commentable tr:hover td .gd.line-comments,
  #files.commentable tr:hover td .gi.line-comments, #files.commentable tr:hover td .gc.line-comments,
- .issue.active,pre div[style="background-color: rgb(255, 255, 204);"],
- pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */
+ .issue.active {
   background-color: #444 !important;
  }
 
@@ -374,7 +374,8 @@
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
  .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
  .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,ul.clone-urls li,
- ul.clone-urls li > a,.filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2 {
+ ul.clone-urls li > a,.filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,
+ .diff-table tr:hover pre {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -439,7 +440,7 @@
  }
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
- .gollum-minibutton a:hover,#gollum-editor-submit:hover,pre div:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
+ .gollum-minibutton a:hover,#gollum-editor-submit:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
  a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.url-box .zeroclipboard-is-hover {
   background-color: #4183C4 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
@@ -492,22 +493,12 @@
   border-color: #333 !important;
   color: #ccc !important;
  }
- .highlight .gd,.highlight .gd pre {
-  background: #300 !important;
-  border-color: #600 !important;
-  color: #ccc !important;
- }
+
  .btn-close-issue:hover,button.classy[name="comment_and_close"]:hover {
   background: #600 !important;
  }
  .minibutton.danger,.minibutton.danger span {
   color: #900 !important;
- }
-
- /* Deletions */
- .highlight .gd .x {
-  background: #700 !important;
-  color: #ddd !important;
  }
 
  /* === Yellow panel === */
@@ -536,20 +527,19 @@
   background-image: linear-gradient(to bottom, #373, #242) !important;
   border-color: #080 !important;
  }
- .highlight .gi,.highlight .gi pre,a.new-repo {
+ a.new-repo {
   background: #305530 !important;
   border-color: #080 !important;
   color: #ddd !important;
  }
  /* New additions */
- .highlight .gi .x,.repo-owner-tag .tag,.gist-owner-tag .tag {
+ .repo-owner-tag .tag,.gist-owner-tag .tag {
   background: #070 !important;
   color: #ddd !important;
  }
  /* Green hovered */
  #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover,button.classy.primary:hover {
   background: #373 !important;
-
  }
 
  /* === silver panel/button === */
@@ -563,53 +553,14 @@
   border-color: #606060 !important;
  }
 
- /* light grey */
- .highlight .gc pre {
-  background: #333 !important;
-  border-color: #333 !important;
-  color: #888 !important;
- }
-
- /* === Syntax Highlighting (SH) - probably missing a lot === */
- .highlight .na {
-  color: #ccc !important;
- }
- /* White */
- .highlight .o,.highlight .p {
-  color: #888 !important;
- }
- .highlight .nx,.highlight .kd {
-  color: #ddd !important;
- }
  /* Red */
- .highlight .m,.mi,.dangerzone-module h4 {
+ .dangerzone-module h4 {
   color: #c00 !important;
  }
- /* Green */
- .highlight .s,.highlight .s1,.highlight .s2 {
-  color: #5CE638 !important;
- }
  /* Blue */
- .highlight .c,.highlight .c1,.highlight .cm,#forkqueue .instructions,.addon h4,#wiki-wrapper h1,#wiki-wrapper h2,
+ #forkqueue .instructions,.addon h4,#wiki-wrapper h1,#wiki-wrapper h2,
  #wiki-wrapper h3,#wiki-wrapper h2 strong,#wiki-wrapper h3 strong,.wikistyle h1,.wikistyle h2 {
   color: #5BA1CF !important;
- }
- /* Yellow */
- .highlight .kc,.sx {
-  color: #F6B26B !important;
- }
- /* light grey (darker than default) */
- .highlight .nc {
-  color: #aaa !important;
- }
- /* Cyan */
- .highlight .nn,.highlight .nb,.highlight .k {
-  color: #cc4 !important;
- }
- /* Red - error */
- .highlight .err {
-  background-color: #200 !important;
-  color: #A61717 !important;
  }
 
  /* === orange notification === */
@@ -730,5 +681,72 @@
  .multiple-avatars,.multiple-avatars:before {
   border: 0 !important;
  }
+
+ /* removed custom syntax highlighting
+  * Red #c00
+  * Blue #5BA1CF
+  * Green #5CE638
+  * Yellow #F6B26B
+  * light grey (#aaa; darker than default)
+  * dark grey (.gd) bkgd: #300; border: #600; color: #ccc
+  * Cyan #cc4
+  * Red (error) bkgd: #200; color: #A61717
+ */
+
+/* github specific - code diff with inline changes (.x) */
+/* light grey - breaks in diff (with line numbers) */
+ .highlight .gc pre {
+  background: #333 !important;
+  border-color: #333 !important;
+  color: #888 !important;
+ }
+ /* git diff line additions (dark green) */
+ .highlight .gi,.highlight .gi pre {
+  background: #020 !important;
+  border-color: #080 !important;
+  color: #ddd !important;
+ }
+ /* git diff inline additions (green) */
+ .highlight .gi .x {
+  background: #060 !important;
+  color: #ddd !important;
+ }
+ /* git diff line deletions (dark red) */
+ .highlight .gd,.highlight .gd pre {
+  background: #200 !important;
+  border-color: #600 !important;
+  color: #ccc !important;
+ }
+ /* git diff inline deletions (red) */
+ .highlight .gd .x {
+  background: #700 !important;
+  color: #ddd !important;
+ }
+
+ /* Added compressed version (http://www.cleancss.com/) of pygments-native.css for syntax highlighting */
+ .highlight  { background: #202020 !important; color: #d0d0d0 !important; }
+ .highlight .cp { color: #cd2828 !important; }
+ .highlight .cs { color: #e50808 !important; background-color: #520000 !important; }
+ .highlight .err { color: #a61717 !important; background-color: #e3d2d2 !important; }
+ .highlight .gi { color: #589819 !important; }
+ .highlight .go { color: #ccc !important; }
+ .highlight .gp { color: #aaa !important; }
+ .highlight .hll { background-color: #404040 !important; }
+ .highlight .w { color: #666 !important; }
+ .highlight .bp,.highlight .nb { color: #24909d !important; }
+ .highlight .c,.highlight .c1,.highlight .cm  { color: #999 !important; }
+ .highlight .g,.highlight .ge,.highlight .gs,.highlight .l,.highlight .ld,.highlight .n,.highlight .ni,
+ .highlight .nl,.highlight .nx,.highlight .o,.highlight .p,.highlight .py { color: #d0d0d0 !important; }
+ .highlight .gd,.highlight .gr,.highlight .gt { color: #d22323 !important; }
+ .highlight .gh,.highlight .gu { color: #fff !important; }
+ .highlight .il,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo { color: #3677a9 !important; }
+ .highlight .k,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .nt,
+ .highlight .ow { color: #6ab825 !important; }
+ .highlight .na,.highlight .ne { color: #bbb !important; }
+ .highlight .nc,.highlight .nf,.highlight .nn { color: #447fcf !important; }
+ .highlight .nd,.highlight .sx { color: orange !important; }
+ .highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi { color: #40ffff !important; }
+ .highlight .s,.highlight .s1,.highlight .s2,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .se,.highlight .sh,
+ .highlight .si,.highlight .sr,.highlight .ss { color: #ed9d13 !important; }
 
 }

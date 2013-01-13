@@ -11,6 +11,18 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.49 (1/12/2013)
+
+* Added pygments "native" theme for syntax highlighting:
+ * It is now compressed at the end of the github-dark.css file.
+ * I've included raw native and monokai pygments css files.
+ * I may eventually make a custom version that isn't so bright LOL.
+* Updated diff file view colors:
+ * Lines that have additions or deletions are now darker.
+ * In line changes stand out more.
+ * See this diff page, with github dark installed of course, to see the code highlighting.
+* Fixed code line hovering to not be bright blue and make it impossible to read since I originally had comments the same color blue.
+
 #### Version 1.2.48 (1/10/2013)
 
 * Fixed selected/non-selected tab styling - fixes [issue #14](https://github.com/Mottie/Github-Dark/issues/14).
