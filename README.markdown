@@ -11,6 +11,15 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.50 (1/25/2013)
+
+* Styled branch label in rss feed.
+* Darkened the star, fork, pull requests, issue, branch and tag counts.
+* Some contributor calendar tweaks - it's still not working in Firefox =(
+* Pygments themes:
+  * Moved pugments themes into a new directory
+  * Modified the pygments "native" theme, renamed it as "pygments-native-mod.css" and merged it into the main css. 
+
 #### Version 1.2.49 (1/12/2013)
 
 * Added pygments "native" theme for syntax highlighting:

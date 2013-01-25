@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.49 (1/12/2013)
+/* Github Dark Theme v1.2.50 (1/25/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -29,7 +29,7 @@
  .header a:hover,.header a:hover .mini-icon,.header a:hover .mega-icon:before,#footer a {
   color: #4183C4 !important;
  }
- #footer .mega-icon:hover:before {
+ #footer .mega-icon:hover:before,#last-edit {
   color: #555 !important;
  }
 
@@ -62,7 +62,7 @@
  }
 
  /* === needs padding === */
- .content,.wikistyle,#header {
+ .content,.wikistyle,#header,#gollum-footer .gollum-minibutton a {
   padding: 10px !important;
  }
  ul.actions {
@@ -72,6 +72,11 @@
   margin-top: 20px !important;
  }
 
+ /* === show === */
+ .color-label.selected .color {
+  display:block !important;
+ }
+
  /* === no margin === */
  .markdown-body pre,#dashboard {
   margin: 0 !important;
@@ -79,8 +84,8 @@
 
  /* === Remove shadow === */
  h1,h2,h3,h4,pre,pre *,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
- table.notifications,#download_button,.comment-count,em.date,#header,#user-links,
- input.search,.upper_footer,.switcher > span:after,.upgrades td,.notification-indicator,.blog-feedback,.description,
+ table.notifications,#download_button,.comment-count,em.date,#header,#user-links,.button,.minibutton,
+ input.search,.upper_footer,.switcher > span:after,.upgrades td,.blog-feedback,.description,
  .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after {
   color: #999 !important;
   text-shadow: none !important;
@@ -182,6 +187,22 @@
   border-color: #555 !important;
  }
 
+ /* === #181818 === */
+ /* needed background inbetween #111 and #222 :P */
+ .counter,.social-count {
+  background-color: #181818 !important;
+  border-color: #333 !important;
+  border-width: 1px !important;
+ }
+ .social-count:before {
+  border-right-color: #333 !important;
+  border-width: 5px !important;
+  margin-top: -4px !important;
+ }
+ .social-count:after {
+  border-width: 0 !important;
+ }
+
  /* === #222 === */
  /* Darkest background color (#222), no image, with border & radius */
  #browser,.repo-stats,.pagehead ul.tabs li a.selected,.subnav-bar,.repos,.options-content,.gist .meta,
@@ -212,7 +233,7 @@
  /* Darkest background (#222), leave image, with border */
  #watchers li,.tree-browser .alt td,.line-data,.browser .listing,.item,.context-pane, .comment-content,div#common-issues ul,
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
- .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,.counter,#footer,#footer .lower_footer,#footer-push,
+ .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,#footer,#footer .lower_footer,#footer-push,
  .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.tree-browser td,.ace_scroller,.capped-box,
  #contributions-calendar {
   background-color: #222 !important;
@@ -236,7 +257,7 @@
  .filterbar li.selected,.accordion-container,#issues_next ul.filters li,.file-box,table.instruction tr:nth-child(2n),
  .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.blog-feedback p,div#common-issues h3,
  #commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar,.capped-box h3,.auth-form-body,
- .range-editor-form,.action-indicator {
+ .range-editor-form,.action-indicator,.branch-link {
   background-color: #333 !important;
   border: 0 !important;
   -webkit-border-radius: 3px !important;
@@ -259,10 +280,10 @@
  }
 
  /* Panel background (#333), no image, no border */
- .pagehead ul.tabs li a:hover,.repos .bottom-bar,#languages .popular,.issue,a.selected,table.upgrades td,
+ .pagehead ul.tabs li a:hover,.repos .bottom-bar,#languages .popular,.issue,.color-label-list a.selected,table.upgrades td,
  .commit-preview .message,.tip-box h4,.button-group,.wikistyle,.commit-preview p.error,.pagehead ul.tabs li.contextswitch,
  #browser tr th,.status-box h4,.line_numbers.comment-count,.new_issue,.line_numbers,.date_selector,.date_selector table th,
- #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer,#repos .public,
+ #files span.icon,#issues_list .actions,.issues-list-actions,.list-browser-footer,#repos .public,a.selected,
  .conversation-list-heading .inner {
   background: #333 none !important;
   color: #eee !important;
@@ -295,8 +316,9 @@
  }
 
  /* Doesn't seem to work in Firefox */
- #contributions-calendar rect[style="fill: rgb(238, 238, 238);"],#contributions-calendar rect[style="fill: #eeeeee;"] {
+ #contributions-calendar rect.day.no-activity, .contrib-legend ul.legend li[title="No contributions"] {
   fill: #333333 !important;
+  opacity: 0.1 !important;
  }
 
  /* === #444 === */
@@ -337,21 +359,6 @@
  #files.commentable tr:hover td .gi.line-comments, #files.commentable tr:hover td .gc.line-comments,
  .issue.active {
   background-color: #444 !important;
- }
-
- .social-count {
-  background-color: #444 !important;
-  border-color: #555 !important;
-  border-width: 1px !important;
- }
- .social-count:before {
-  border-right-color: #555 !important;
-  border-width: 3px !important;
-  margin-top: -2px !important;
- }
- .social-count:after {
-  border-right-color: #555 !important;
-  border-width: 1px !important;
  }
 
  /* === #555 === */
@@ -399,10 +406,14 @@
 
  /* === Text Color === */
  /* White text */
- ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.navigation-focus .mini-icon:before,
- .selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,.btn-close-issue a.minibutton,
- .commit .mini-icon:before {
+ ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,
+ .navigation-focus .mini-icon:before,.selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,
+ .btn-close-issue a.minibutton,.commit .mini-icon:before {
   color: #fff !important;
+ }
+ /* shade darker */
+ #contributions-calendar .contrib-details div .num {
+  color: #999 !important;
  }
  /* News (slightly darker text) */
  .news blockquote,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,
@@ -410,6 +421,11 @@
  .featured-callout h2,.commit-preview p.name .date,.feature-overview strong,.download-list h4 {
   color: #ccc !important;
  }
+ /* content text */
+ #contributions-calendar .contrib-details div {
+  color: #777 !important;
+ }
+ 
  /* darkest text; Context pane highlight item */
  .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,#notification-center li.unread a,
  .mini-icon-public-repo:before {
@@ -441,7 +457,8 @@
  /* Blue background (hover buttons) */
  .minibutton:hover,.file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
- a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.url-box .zeroclipboard-is-hover {
+ a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,
+ .url-box .zeroclipboard-is-hover {
   background-color: #4183C4 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
   background-image: -webkit-linear-gradient(top, #599bdc, #3072b3) !important;
@@ -695,7 +712,7 @@
 
 /* github specific - code diff with inline changes (.x) */
 /* light grey - breaks in diff (with line numbers) */
- .highlight .gc pre {
+ .highlight .gc,.highlight .gc pre {
   background: #333 !important;
   border-color: #333 !important;
   color: #888 !important;
@@ -723,30 +740,33 @@
   color: #ddd !important;
  }
 
- /* Added compressed version (http://www.cleancss.com/) of pygments-native.css for syntax highlighting */
- .highlight  { background: #202020 !important; color: #d0d0d0 !important; }
- .highlight .cp { color: #cd2828 !important; }
- .highlight .cs { color: #e50808 !important; background-color: #520000 !important; }
- .highlight .err { color: #a61717 !important; background-color: #e3d2d2 !important; }
- .highlight .gi { color: #589819 !important; }
- .highlight .go { color: #ccc !important; }
- .highlight .gp { color: #aaa !important; }
- .highlight .hll { background-color: #404040 !important; }
- .highlight .w { color: #666 !important; }
- .highlight .bp,.highlight .nb { color: #24909d !important; }
- .highlight .c,.highlight .c1,.highlight .cm  { color: #999 !important; }
- .highlight .g,.highlight .ge,.highlight .gs,.highlight .l,.highlight .ld,.highlight .n,.highlight .ni,
- .highlight .nl,.highlight .nx,.highlight .o,.highlight .p,.highlight .py { color: #d0d0d0 !important; }
- .highlight .gd,.highlight .gr,.highlight .gt { color: #d22323 !important; }
- .highlight .gh,.highlight .gu { color: #fff !important; }
- .highlight .il,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo { color: #3677a9 !important; }
- .highlight .k,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .nt,
- .highlight .ow { color: #6ab825 !important; }
- .highlight .na,.highlight .ne { color: #bbb !important; }
- .highlight .nc,.highlight .nf,.highlight .nn { color: #447fcf !important; }
- .highlight .nd,.highlight .sx { color: orange !important; }
- .highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi { color: #40ffff !important; }
- .highlight .s,.highlight .s1,.highlight .s2,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .se,.highlight .sh,
- .highlight .si,.highlight .sr,.highlight .ss { color: #ed9d13 !important; }
+ /* Added compressed version (http://www.cleancss.com/) of pygments-native-mod.css for syntax highlighting */
+ .highlight .hll { background-color:#404040 !important; }
+ .highlight { background:#202020; color:#d0d0d0 !important; }
+ .highlight .err { color:#a61717 !important; background-color:#e3d2d2 !important; }
+ .highlight .o { color:#777 !important; }
+ .highlight .p { color:#E9B96E !important; }
+ .highlight .cs { color:#e50808;background-color:#520000 !important; }
+ .highlight .gi { color:#589819 !important; }
+ .highlight .gp { color:#aaa !important; }
+ .highlight .nf { color:#098 !important; }
+ .highlight .w { color:#666 !important; }
+ .highlight .c,.highlight .cm,.highlight .c1 { color:#3677a9 !important; }
+ .highlight .g,.highlight .l,.highlight .x,.highlight .ge,.highlight .gs,.highlight .ld,.highlight .ni,.highlight .nl,
+ .highlight .nx,.highlight .py { color:#d0d0d0 !important; }
+ .highlight .k,.highlight .n,.highlight .go { color:#ccc !important; }
+ .highlight .cp,.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .se,.highlight .sh,
+ .highlight .si,.highlight .s1,.highlight .ss { color:#D2691E !important; }
+ .highlight .gd,.highlight .gr,.highlight .gt { color:#d22323 !important; }
+ .highlight .gh,.highlight .gu { color:#fff !important; }
+ .highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .nt,
+ .highlight .ow { color:#6ab825 !important; }
+ .highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .sr,
+ .highlight .il { color:#cd2828 !important; }
+ .highlight .na,.highlight .ne { color:#bbb !important; }
+ .highlight .nb,.highlight .bp { color:#24909d !important; }
+ .highlight .nc,.highlight .nn { color:#447fcf !important; }
+ .highlight .no,.highlight .nv,.highlight .vc,.highlight .vg,.highlight .vi { color:#4ca !important; }
+ .highlight .nd,.highlight .sx { color:orange !important; }
 
 }
