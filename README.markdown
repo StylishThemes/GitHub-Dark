@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.51 (1/30/2013)
+
+* Updated style for repo clone buttons.
+* Updated search result dropdown text color to make it more readable.
+* Added main page jumbotron styling.
+
 #### Version 1.2.50 (1/25/2013)
 
 * Styled branch label in rss feed.

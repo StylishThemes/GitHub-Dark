@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.50 (1/25/2013)
+/* Github Dark Theme v1.2.51 (1/30/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -132,7 +132,7 @@
 
  /* === Darken border === */
  pre,code,ul li,table td,h1,h2,h3,img,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,
- ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,ul.clone-urls li > a,#wiki-wrapper h2,
+ ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,.clone-url-button,#wiki-wrapper h2,
  #wiki-wrapper hr,table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
@@ -181,7 +181,7 @@
  pre,code,.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,
  #wiki-wrapper pre,pre.prettyprint,pre.headers,pre.headers code,.discusion-topic-infobar,.pagination .disabled:hover,
  .discusion-topic-infobar .milestone,.commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site,
- .ace_gutter {
+ .ace_gutter,.jumbotron {
   background: #111 none !important;
   font-size: 13px !important;
   border-color: #555 !important;
@@ -273,7 +273,8 @@
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
  #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
  div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div,
- pre div[style="background-color: rgb(255, 255, 204);"], pre div[style="background-color: rgb(255, 255, 204); "] { /* <- space after "; " needed for Chrome */ 
+ pre div[style="background-color: rgb(255, 255, 204);"], pre div[style="background-color: rgb(255, 255, 204); "], /* <- space after "; " needed for Chrome */ 
+ .plans-pricing-callout {
   background-color: #333 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -379,9 +380,8 @@
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
  .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
- .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,ul.clone-urls li,
- ul.clone-urls li > a,.filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,
- .diff-table tr:hover pre {
+ .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,.clone-url-button a,
+ .filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,.diff-table tr:hover pre {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -393,7 +393,7 @@
 
  /* inverted dark grey gradient */
  .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover,
- .clone-urls li.selected > a,.asc .sort-type,.desc .sort-type {
+ .clone-url-button.selected a,.asc .sort-type,.desc .sort-type {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#333)) !important;
   background-image: -webkit-linear-gradient(top, #181818, #333) !important;
@@ -405,7 +405,7 @@
 
  /* === Text Color === */
  /* White text */
- ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,
+ ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.commandbar .choice .command,
  .navigation-focus .mini-icon:before,.selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,
  .btn-close-issue a.minibutton,.commit .mini-icon:before {
   color: #fff !important;
@@ -468,7 +468,7 @@
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
 }
- ul.clone-urls li:hover,ul.clone-urls li:hover > a,table.upgrades tr:hover td,#notification-center li.unread {
+ .clone-url-button:hover a,table.upgrades tr:hover td,#notification-center li.unread {
   background: #4183C4 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#599bdc), to(#3072b3)) !important;
   background-image: -webkit-linear-gradient(top, #599bdc, #3072b3) !important;
