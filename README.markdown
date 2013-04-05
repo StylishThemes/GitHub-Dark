@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.52 (4/5/2013)
+
+* Added new issue styles - fixed [issue #17](https://github.com/Mottie/Github-Dark/issues/17).
+* Fixed advanced search styling.
+* Darkened the "Repositories you contribute to" background.
+
 #### Version 1.2.51 (1/30/2013)
 
 * Updated style for repo clone buttons.
