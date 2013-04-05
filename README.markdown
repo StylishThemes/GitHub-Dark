@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.53 (4/5/2013)
+
+* Oops, forgot to add Gist ACE editor cursor style - fixes [issue #16](https://github.com/Mottie/Github-Dark/issues/16).
+
 #### Version 1.2.52 (4/5/2013)
 
 * Added new issue styles - fixed [issue #17](https://github.com/Mottie/Github-Dark/issues/17).
