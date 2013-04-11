@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.56 (4/11/2013)
+
+* Added styling of the [file diffs](https://github.com/Mottie/Github-Dark/commit/85e3342f61e916d72dd0ef5c7642fe35b0c59749).
+
 #### Version 1.2.55 (4/11/2013)
 
 * Updated code line numbering styling
