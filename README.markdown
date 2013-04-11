@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.55 (4/11/2013)
+
+* Updated code line numbering styling
+* Changed the color of pull requests blocks. Mergeable are green, while non-mergeable pull requests are now red.
+* Updated navigation focus (hover) styling of pull requests.
+
 #### Version 1.2.54 (4/8/2013)
 
 * Fixed repo message styling - fixes [issue #18](https://github.com/Mottie/Github-Dark/issues/18).
