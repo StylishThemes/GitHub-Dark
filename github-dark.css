@@ -73,7 +73,7 @@
 
  /* === show === */
  .color-label.selected .color {
-  display:block !important;
+  display: block !important;
  }
 
  /* === no margin === */
@@ -91,7 +91,7 @@
   box-shadow: none !important;
  }
  a,button,div,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label,.js-context-button,.footer-text,.minibutton span,
- span.name,.diff-line-code {
+ span.name,.diff-line-code,.num {
   color: #ddd !important;
   text-shadow: none !important;
  }
@@ -223,7 +223,8 @@
  #issues_search .comment,#header-wrapper,.fieldgroup .fields,ul.feature-tabs li.highlight,.pagination,.gist-meta,
  .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
  #readme article,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.new-comments .body,
- .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg,.blog-post .meta {
+ .markdown-body tt,.autocomplete-results,.gravatar,.gravatar img,.subscription-row,svg,.blog-post .meta,
+ .conversation-list-heading .inner,.pulse-sections .meta {
   background: #222 none !important;
   border-color: #444 !important;
   -webkit-border-radius: 3px !important;
@@ -282,10 +283,10 @@
  #message .envelope .header .info .title.unread,.wikistyle code,li.contextswitch ul li.current,ul.main_nav li.selected a,
  .watcher-widget,ul.states li,.add_file,.commit,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
- #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.display div.choice,.display tr,
- div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div,
- pre div[style="background-color: rgb(255, 255, 204);"], pre div[style="background-color: rgb(255, 255, 204); "], /* <- space after "; " needed for Chrome */ 
- .plans-pricing-callout,.issues-list>ul>li.selectable:hover,.issues-list>ul>li.navigation-focus,.issues-list-actions,
+ #issues_next .infobar,.discussion-bubble-inner,.commit-group-item .authorship,.formbody,.commandbar .display,.display div.choice,
+ .display tr,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.none p,.select-menu-modal,.select-menu-modal > div,
+ .issues-list>ul>li.selectable:hover,pre div[style="background-color: rgb(255, 255, 204); "], /* <- space after "; " needed for Chrome */
+ pre div[style="background-color: rgb(255, 255, 204);"],.issues-list>ul>li.navigation-focus,.issues-list-actions,.plans-pricing-callout,
  .list-group-item.navigation-focus {
   background-color: #333 !important;
   color: #eee !important;
@@ -297,7 +298,7 @@
  .commit-preview .message,.tip-box h4,.button-group,.wikistyle,.commit-preview p.error,.pagehead ul.tabs li.contextswitch,
  #browser tr th,.status-box h4,.line_numbers.comment-count,.new_issue,.line_numbers,.date_selector,.date_selector table th,
  #files span.icon,#issues_list .actions,.list-browser-footer,#repos .public,a.selected,
- .conversation-list-heading .inner,.inset-callout,#repo-message {
+ .inset-callout,#repo-message,.summary-stats li a:hover {
   background: #333 none !important;
   color: #eee !important;
   border: 0 !important;
@@ -395,7 +396,7 @@
  .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
  .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,.clone-url-button a,
  .filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,.diff-table tr:hover pre,
- .blog-feedback-header,.pagination span,.file-diff-line:hover .diff-line-code {
+ .blog-feedback-header,.pagination span,.file-diff-line:hover .diff-line-code,.merged-pulls,.state-merged {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -407,7 +408,7 @@
 
  /* inverted dark grey gradient */
  .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover,
- .clone-url-button.selected a,.asc .sort-type,.desc .sort-type {
+ .clone-url-button.selected a,.asc .sort-type,.desc .sort-type,.mini-bar-graph {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#333)) !important;
   background-image: -webkit-linear-gradient(top, #181818, #333) !important;
@@ -435,13 +436,13 @@
   color: #ccc !important;
  }
  /* content text */
- #contributions-calendar .contrib-details div {
+ #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover {
   color: #777 !important;
  }
  
  /* darkest text; Context pane highlight item */
  .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,#notification-center li.unread a,
- .mini-icon-public-repo:before {
+ .mini-icon-public-repo:before,.mini-icon-pull-request,.mini-icon-remove-close,.mini-icon-link {
   color: #444 !important;
  }
  .disabled,.disabled:hover {
@@ -531,7 +532,7 @@
  /* Red panel */
  #forkqueue .legend .unclean,.unclean td,.state-closed,.chzn-results .no-results,.majorproblem .pageheader_wrap,
  .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,#message.major,
- .minibutton.danger:hover,.minibutton.danger:hover span,.comment-form-error,.mergeable.dirty {
+ .minibutton.danger:hover,.minibutton.danger:hover span,.comment-form-error,.mergeable.dirty,.closed-issues {
   background: #300 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#500), to(#300)) !important;
   background-image: -webkit-linear-gradient(top, #500, #300) !important;
@@ -566,7 +567,8 @@
  /* === Green panel === */
  #forkqueue .legend .clean,#revisions ul li.current,.excerpt,.selectable_day.today,.big-notice,.plan.business,.popout,
  #statusbar,.clean,.clean td,.mergeable.clean,.state-open,.octofication .message,#download_button,.status-box.good a,
- button.classy.primary,.progress-bar .progress,#message.good,.status-success,.mergeable {
+ button.classy.primary,.progress-bar .progress,#message.good,.status-success,.mergeable,.new-issues,.new-pulls,
+ .state-proposed {
   background: #305530 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#373), to(#242)) !important;
   background-image: -webkit-linear-gradient(top, #373, #242) !important;
@@ -774,10 +776,10 @@
  /* Added compressed version (http://www.cleancss.com/) of pygments-native-mod.css for syntax highlighting */
  .highlight .hll { background-color:#404040 !important; }
  .highlight { background:#202020; color:#d0d0d0 !important; }
- .highlight .err { color:#a61717 !important; background-color:#e3d2d2 !important; }
+ .highlight .err { color:#a61717 !important; background-color:#200 !important; }
  .highlight .o { color:#777 !important; }
  .highlight .p { color:#E9B96E !important; }
- .highlight .cs { color:#e50808;background-color:#520000 !important; }
+ .highlight .cs { color:#e50808; background-color:#520000 !important; }
  .highlight .gi { color:#589819 !important; }
  .highlight .gp { color:#aaa !important; }
  .highlight .nf { color:#098 !important; }
