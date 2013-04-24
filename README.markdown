@@ -11,6 +11,13 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.59 (4/24/2013)
+
+* Added missing styling to the closed pull request page.
+* Open &amp; closed issues and pull request icons are once again colored green and red, respectively.
+* Swapped diff line code highlighting as [suggested](https://github.com/Mottie/Github-Dark/commit/158a4104887db209a965ef379be8609acf43c705#commitcomment-3075610) by [mihawk90](https://github.com/mihawk90).
+* Added miscellaneous border darkening.
+
 #### Version 1.2.58 (4/21/2013)
 
 * Added styling to the new pulse page.
@@ -31,21 +38,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Updated code line numbering styling
 * Changed the color of pull requests blocks. Mergeable are green, while non-mergeable pull requests are now red.
 * Updated navigation focus (hover) styling of pull requests.
-
-#### Version 1.2.54 (4/8/2013)
-
-* Fixed repo message styling - fixes [issue #18](https://github.com/Mottie/Github-Dark/issues/18).
-* Fixed advanced search input border styling (again o.O).
-* Made placeholder text darker.
-* Cleaned up pagination styling.
-* Made unread issues more obvious.
-
-#### Version 1.2.53 (4/5/2013)
-
-* Oops, forgot to add Gist ACE editor cursor style - fixes [issue #16](https://github.com/Mottie/Github-Dark/issues/16).
-
-#### Version 1.2.52 (4/5/2013)
-
-* Added new issue styles - fixed [issue #17](https://github.com/Mottie/Github-Dark/issues/17).
-* Fixed advanced search styling.
-* Darkened the "Repositories you contribute to" background.
