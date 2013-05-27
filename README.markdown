@@ -11,6 +11,14 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.60 (5/27/2013)
+
+* Made some minor adjustments to the pulse page styling.
+* Gist styling cleanup.
+* Issue page tweaks; unread issues are no longer blue (it was too distracting).
+* Searchbox result hover styling is now readable; fixes [issue #20](https://github.com/Mottie/Github-Dark/issues/20), thanks [mihawk90](https://github.com/mihawk90) for the css!
+* Git diff line numbers now match the addition/removable colors.
+
 #### Version 1.2.59 (4/24/2013)
 
 * Added missing styling to the closed pull request page.
