@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.61 (5/28/2013)
+
+* Fixed annoying link highlighting of all files when hovering over a single file on the code page.
+
 #### Version 1.2.60 (5/27/2013)
 
 * Made some minor adjustments to the pulse page styling.
