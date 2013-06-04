@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.2.61 (5/28/2013)
+/* Github Dark Theme v1.2.62 (6/4/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -82,7 +82,7 @@
  }
 
  /* === Remove shadow === */
- h1,h2,h3,h4,pre,pre *,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,
+ h1,h2,h3,h4,pre,pre *,code,strong,ul,li,p,input,a,th,.news,#footer ul.sosueme li.main,.metabox em.placeholder,.more-repos,
  table.notifications,#download_button,.comment-count,em.date,#header,#user-links,.button,.minibutton,.gc .diff-line-code,
  input.search,.upper_footer,.switcher > span:after,.upgrades td,.blog-feedback,.description,.blankslate,.commit-ref,
  .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after,#repo-message,.times {
@@ -103,7 +103,7 @@
  table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.stars-browser .filter-bar,
  .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar,
  .gist .button-group,div.content-header .search-form,#wrapper,.file-code,.gist-advanced-options .select-menu-button:after,
- #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public {
+ #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble {
   background: transparent !important;
  }
 
@@ -154,6 +154,9 @@
  .filter-tab.selected {
   border: #444 1px solid !important;
   border-bottom: #333 1px solid !important;
+ }
+ .more-repos {
+  border-top: #333 1px solid !important;
  }
  /* branch selector button - uses borders to make select button */
  .select-menu-button::before {
@@ -277,7 +280,7 @@
  .blankslate,.boxed-group,.boxed-group-inner,.previewable-comment-form,.bubble,.bubble-contents,.blog-feedback p,
  div#common-issues h3,#commit-activity-master-head,#wiki-header > div,#wiki-footer > div,#wiki-rightbar,.capped-box h3,
  .auth-form-body,.range-editor-form,.action-indicator,.branch-link,ul.suggestions,.divider .blob-line-code .highlight,
- .branch-name {
+ .branch-name,.pull-head,.pull-head .diffstat {
   background-color: #333 !important;
   border: 0 !important;
   -webkit-border-radius: 3px !important;
@@ -350,7 +353,7 @@
  .featured-callout,.ranked-repositories .meta a,.range-editor h3,.range-editor .chooser,ul.nav.logged_out,.tip-box a.next,
  #inbox .list .unread,#preview_bucket,.main .filterbar,.browser-content .footerbar,ul.smalltabs,.participation,
  .snippet,.supportstaffer,.discussion-form,.chooser-box,.chooser-box h3,#forkqueue .instructions,.input,.ac_results,
- .addon:hover,a.function-button,.pull-head,.selector-item.clear:hover,#issues_search .comment-body,
+ .addon:hover,a.function-button,.selector-item.clear:hover,#issues_search .comment-body,
  .sidebar-module,.sidebar-module > ul h3,ul.js-guides,.list-module h2,.sidebar-module > p,.documentation ul.nav,
  .bootcamp-help h1,.browse-button,.context-title,.boxed-group > h3,.accordion,#contributors-master,
  #contributors-master svg,.section a.section-head,.hidden-text-expander a,.flash-messages,.inset-callout h2 {
@@ -630,7 +633,8 @@
   background: rgba(203, 108, 0, 0.8) !important;
  }
  /* orange border bottom */
- .pagehead ul.tabs li a.selected,.pagehead > ul.tabs li a:hover,div.listing.navigation-focus,div.issues.navigation-focus {
+ .pagehead ul.tabs li a.selected,.pagehead > ul.tabs li a:hover,div.listing.navigation-focus,div.issues.navigation-focus,
+ .repo-filter:hover,.filter-selected {
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
   border-bottom: #f80 2px solid !important;
