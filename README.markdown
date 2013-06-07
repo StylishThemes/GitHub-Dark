@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.63 (6/7/2013)
+
+* Fixed bright-colored commit range on merges etc.
+
 #### Version 1.2.62 (6/4/2013)
 
 * Updated to work with new github style changes
