@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.64 (6/10/2013)
+
+* Make Avatar backgrounds transparent, as they had the dark background anyway
+
 #### Version 1.2.63 (6/7/2013)
 
 * Fixed bright-colored commit range on merges etc.
