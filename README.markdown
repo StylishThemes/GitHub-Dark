@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.65 (6/12/2013)
+
+* Markdown Cheatsheet Popover Background darkened
+* Merge State is now Dark Blue, Grey should be reserved for General Purpose Buttons
+* Fixed Travis CI Branch status colored accordingly (failure/error - red, success - green)
+
 #### Version 1.2.64 (6/10/2013)
 
 * Make Avatar backgrounds transparent, as they had the dark background anyway
