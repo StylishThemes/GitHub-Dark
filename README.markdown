@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.65.2 (6/12/2013)
+
+* Merge icon panel background blue as well
+
 #### Version 1.2.65 (6/12/2013)
 
 * Markdown Cheatsheet Popover Background darkened
