@@ -11,6 +11,11 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.2.66 (6/14/2013)
+
+* closed state indicator on issue references now red as well
+* HR tags ( ```----``` in Comments) colored a little darker to be more distinguished from background
+
 #### Version 1.2.65.4 (6/13/2013)
 
 * Pending Branch Status Panel colored
