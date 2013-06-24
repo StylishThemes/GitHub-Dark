@@ -11,6 +11,19 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.3 (6/24/2013)
+
+* Dashboard Notices styled
+* Right Repo Menu styles
+
+#### Version 1.3.2 (6/21/2013)
+
+* Various Firefox specific fixes
+
+#### Version 1.3 (6/18/2013)
+
+* "Repository Next" styles
+
 #### Version 1.2.66 (6/14/2013)
 
 * closed state indicator on issue references now red as well
