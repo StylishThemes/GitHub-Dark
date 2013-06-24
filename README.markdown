@@ -11,6 +11,11 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.4 (6/24/2013)
+
+* Lightened Language Statistic (Background & Font-Color)
+* ReadMe Header styled
+
 #### Version 1.3.3 (6/24/2013)
 
 * Dashboard Notices styled
