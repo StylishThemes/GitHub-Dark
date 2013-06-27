@@ -11,6 +11,13 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.5 (6/27/2013)
+
+* Embedded Gists borders fixed
+* Code blocks in Wikis normalized to fit other parts of GitHub
+* GitHub Help Tip/Alert box background-color fixed
+* Repository Reference on Network Graph page colored (probably needs work, color is meh)
+
 #### Version 1.3.4 (6/24/2013)
 
 * Lightened Language Statistic (Background & Font-Color)
