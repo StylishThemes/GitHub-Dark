@@ -11,6 +11,13 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.9 (9/29/2013)
+
+* Added contrast to commit history "go" buttons. Fixes [issue #47](https://github.com/Mottie/Github-Dark/issues/47).
+* Added style to commit meta (pull request).
+* Removed top &amp; bottom padding in code editor ([pull #48](https://github.com/Mottie/Github-Dark/pull/48)) - thanks Silverwind!
+* More tweaks to right side nav bar, search result page, 
+
 #### Version 1.3.8 (9/28/2013)
 
 * Oops, restored github:help logo transparent background.
