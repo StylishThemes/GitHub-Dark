@@ -63,7 +63,7 @@
  table.notifications,#download_button,.comment-count,em.date,#header,#user-links,.button,.minibutton,.gc .diff-line-code,
  input.search,.upper_footer,.switcher > span:after,.upgrades td,.blog-feedback,.description,.blankslate,.commit-ref,
  .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after,#repo-message,.times,
- .repo-nav-contents,.repo-menu a .counter {
+ .repo-nav-contents,.repo-menu a .counter,.repo-menu a {
   color: #999 !important;
   text-shadow: none !important;
   box-shadow: none !important;
@@ -89,9 +89,8 @@
 
  /* === Remove background gradient === */
  #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator,.big-notice,.clean td,.legend .clean,
- .avatar .overlay.size-48,.listing .repo,.listing.closed,.gist .gist-file .gist-data,.gist-syntax,
- .gist .gist-file .gist-data .line-numbers,.repo-nav-contents:before,.repo-nav-contents,.repo-nav-contents:after,
- .repo-menu-separator,.repo-menu-separator:before {
+ .avatar .overlay.size-48,.listing .repo,.listing.closed,.gist .gist-file .gist-data,.gist-syntax,.repo-menu-separator:before,
+ .gist .gist-file .gist-data .line-numbers,.repo-nav-contents:before,.repo-nav-contents,.repo-menu-separator,.repo-nav-contents:after {
   background-color: transparent !important;
   background-image: none !important;
  }
@@ -127,11 +126,11 @@
  .release-timeline-tags .main,.explore-section,.sort-bar,.content-header {
   border-color: #555 !important;
  }
- .summary-stats {
-  border-bottom: #555 1px solid !important;
+ .summary-stats,.repo-menu-separator {
+  border-bottom: #333 1px solid !important;
  }
  .pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,
- .range-editor span.flag,.range-editor .range,.dashboard-tabs {
+ .range-editor span.flag,.range-editor .range,.dashboard-tabs,ul.repo-menu a.selected {
   border-color: #333 !important;
  }
  .listings div.listing {
@@ -145,6 +144,10 @@
  .more-repos,.simple-conversation-list>li {
   border-top: #333 1px solid !important;
  }
+ ul.repo-menu a.selected {
+  border-left: transparent 1px solid !important;
+ }
+
  /* branch selector button - uses borders to make select button */
  .select-menu-button::before {
   border-top-color: #eee !important;
@@ -263,7 +266,7 @@
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,#footer,#footer .lower_footer,#footer-push,
  .notifications th,#notification-center li.read,.markdown-body,.repo_list li,.tree-browser td,.ace_scroller,.capped-box,
- #contributions-calendar,.issues-list li.js-navigation-item,a.selected,.box-body,.repo-collection>ul {
+ #contributions-calendar,.issues-list li.js-navigation-item,a.selected,.box-body,.repo-collection>ul,.repo-menu a.selected {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -441,17 +444,29 @@
   background-image: linear-gradient(to bottom, #181818, #333) !important;
   border-color: #333 !important;
  }
+ /* inverted vertical dark grey gradient */
+ .repo-nav-contents {
+  box-shadow: inset 1px 0 0 #1d1d1d !important;
+  background: #1d1d1d !important;
+  background: -moz-linear-gradient(left, #1d1d1d 0%, #222222 8px) !important;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#181818), color-stop(8px,#222222)) !important;
+  background: -webkit-linear-gradient(left,  #1d1d1d 0%,#222222 8px) !important;
+  background: -o-linear-gradient(left, #1d1d1d 0%,#222222 8px) !important;
+  background: -ms-linear-gradient(left, #1d1d1d 0%,#222222 8px) !important;
+  background: linear-gradient(to right, #1d1d1d 0%,#222222 8px) !important;
+  border-color: #333 !important;
+ }
 
  /* === Text Color === */
  /* White text */
  ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.commandbar .choice .command,
  .navigation-focus .mini-icon:before,.selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,
  .btn-close-issue a.minibutton,.commit .mini-icon:before,.select-menu-item.selected>.mini-icon,.css-truncate-target:hover,
- .code-list em,.codesearch-cols em {
+ .code-list em,.codesearch-cols em,.repo-menu a.selected .octicon {
   color: #fff !important;
  }
  /* shade darker */
- #contributions-calendar .contrib-details div .num {
+ #contributions-calendar .contrib-details div .num,.repo-menu .octicon {
   color: #999 !important;
  }
  /* News (slightly darker text) */
@@ -666,9 +681,11 @@
  .section-nav .active a,.menu a.selected {
   border-left: #f80 2px solid !important;
  }
- .repo-menu .js-selected-navigation-item.selected span,.repo-menu .js-selected-navigation-item.selected span::before,
- #network .explain b {
-  color: #d26911;
+ repo-menu a:focus,.repo-menu a:hover {
+  border-left: #f80 1px solid !important;
+ }
+ #network .explain b,.repo-menu a.selected:after {
+  color: #ba5d0f !important;
  }
 
  /* ajax loading */
