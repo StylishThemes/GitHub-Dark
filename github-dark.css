@@ -2,7 +2,7 @@
 
 @-moz-document regexp("^http(s)?://((www|gist|help|status).)?github.*") {
 
-/* Github Dark Theme v1.3.5 (6/18/2013)
+/* Github Dark Theme v1.3.6 (9/28/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -93,7 +93,7 @@
   box-shadow: none !important;
  }
  a,button,div,p,ul,li,#gollum-editor-submit,dl.form label,.formbody label,.js-context-button,.footer-text,.minibutton span,
- span.name,.diff-line-code,.num,.site a.button {
+ span.name,.diff-line-code,.num,.site a.button,.tag-info .tag-name {
   color: #ddd !important;
   text-shadow: none !important;
  }
@@ -105,18 +105,16 @@
  table tr,.textographic a.repo,#network .repo span,.commit-group-item .browse-button,.stars-browser .filter-bar,
  .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar,
  .gist .button-group,div.content-header .search-form,#wrapper,.file-code,.gist-advanced-options .select-menu-button:after,
- #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,.gravatar img,
- .facebox-popup,
- /*new layout style*/
- table.files,.branch-infobar,.tmp-reusable-bubble .bubble-inner {
+ #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,
+ .gravatar img,.facebox-popup,table.files,.branch-infobar,.tmp-reusable-bubble .bubble-inner,li.commit {
   background: transparent !important;
  }
 
  /* === Remove background gradient === */
  #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator,.big-notice,.clean td,.legend .clean,
- .avatar .overlay.size-48,.listing .repo,.listing.closed,.gist .gist-file .gist-data,.gist-syntax,.gist .gist-file .gist-data .line-numbers,
- /*new layout style*/
- .repo-nav-contents:before,.repo-nav-contents,.repo-nav-contents:after,.repo-menu-separator,.repo-menu-separator:before {
+ .avatar .overlay.size-48,.listing .repo,.listing.closed,.gist .gist-file .gist-data,.gist-syntax,
+ .gist .gist-file .gist-data .line-numbers,.repo-nav-contents:before,.repo-nav-contents,.repo-nav-contents:after,
+ .repo-menu-separator,.repo-menu-separator:before {
   background-color: transparent !important;
   background-image: none !important;
  }
@@ -140,18 +138,20 @@
  /* === Darken border === */
  pre,code,ul li,table td,h1,h2,h3,img,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,
  ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,.clone-url-button,#wiki-wrapper h2,
- table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,
+ table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.site-footer,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.grid .col,.lbl,.details,
  ul.stats,.select-menu-filters,.select-menu-item,.select-menu-tabs,.release-list > li,.url-box,.select-menu-button:after,
- .context-body,.range-editor-head,.filter-tab,.cheatsheet,.gist-file,.pagehead,.pagehead.settings-area,
- .suggester,.pull-state,.pull-number,.merge-pr,.graphs,.graph,#footer .container,#graph-shots li,.sidebar,
- .pagehead.repohead,.explore h2,.box-header,.box-body,.repo-list-item,ul.color-label-list .color,#head {
+ .context-body,.range-editor-head,.filter-tab,.cheatsheet,.gist-file,.pagehead,.pagehead.settings-area,.release-body,
+ .suggester,.pull-state,.pull-number,.merge-pr,.graphs,.graph,#footer .container,#graph-shots li,.sidebar,.release-timeline,
+ .pagehead.repohead,.explore h2,.box-header,.box-body,.repo-list-item,ul.color-label-list .color,#head,
+ .release-timeline-tags .main {
   border-color: #555 !important;
  }
- .pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,.range-editor span.flag,.range-editor .range,.dashboard-tabs {
+ .pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,
+ .range-editor span.flag,.range-editor .range,.dashboard-tabs {
   border-color: #333 !important;
  }
  .listings div.listing {
@@ -241,7 +241,8 @@
  .commit-group-heading,.commit-group,.pagehead-actions,.filterbar .filters li,.starting-comment .body,#readme,
  #readme article,.chzn-single,.expandable h3 a:last-child,.commit_oneline,.list-tip,.new-comments .body,
  .markdown-body tt,.autocomplete-results,span.gravatar,.subscription-row,svg,.blog-post .meta,
- .conversation-list-heading .inner,.pulse-sections .meta,.list-group-item,.filterbox {
+ .conversation-list-heading .inner,.pulse-sections .meta,.list-group-item,.filterbox,
+ .section-heading-title a.js-selected-navigation-item,.release-timeline .js-details-container {
   background: #222 none !important;
   border-color: #444 !important;
   -webkit-border-radius: 3px !important;
@@ -251,9 +252,10 @@
  }
 
  /* Darkest background (#222), leave image, no border */
- .locales,.keyboard-shortcuts,li.contextswitch ul,.file,.add-bubble,#network .repo,.notification-settings,#wrapper,
+ .locales,.keyboard-shortcuts,li.contextswitch ul,.file,.add-bubble,#network .repo,.notification-settings,
  #files > .description,.commit-group-item:nth-child(2n) .authorship,.recent-gists .meta,.native-download,
- .native-download span, .fieldgroup .edit_hook .fields,.select-menu-filters,.mini-repo-list,.line-number {
+ .native-download span, .fieldgroup .edit_hook .fields,.select-menu-filters,.mini-repo-list,.line-number,
+ .dashboard-tabs,#wrapper,.section-heading-title a.js-selected-navigation-item {
   background-color: #222 !important;
   color: #eee !important;
   border: 0 !important;
@@ -405,6 +407,11 @@
   -webkit-background-clip: padding-box !important;
   background-clip: padding-box !important;
  }
+ /* timeline dots */
+ .date:after {
+  background-color: #555 !important;
+  border-color: #555 !important;
+ }
 
  /* === gradient === */
  /* dark grey gradient */
@@ -414,7 +421,8 @@
  .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
  .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,.clone-url-button a,
  .filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,.diff-table tr:hover pre,.commit-ref,
- .blog-feedback-header,.pagination span,.file-diff-line:hover .diff-line-code,.js-selected-navigation-item {
+ .blog-feedback-header,.pagination span,.file-diff-line:hover .diff-line-code,a.js-selected-navigation-item,
+ .dashboard-tabs li a.js-selected-navigation-item {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#181818)) !important;
   background-image: -webkit-linear-gradient(top, #333, #181818) !important;
@@ -427,7 +435,7 @@
  /* inverted dark grey gradient */
  .progress-bar,.pagination .current,div.news .pagination a:hover,.minibutton:hover, button:hover,.gobutton:hover,
  .clone-url-button.selected a,.asc .sort-type,.desc .sort-type,.mini-bar-graph,.minibutton.selected,
- .issues-list>ul>li.unread,.js-selected-navigation-item:hover {
+ .issues-list>ul>li.unread,.js-selected-navigation-item:hover,.dashboard-tabs a, .dashboard-tabs li a:hover {
   background: #181818 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#181818), to(#333)) !important;
   background-image: -webkit-linear-gradient(top, #181818, #333) !important;
@@ -575,7 +583,8 @@
  /* === Yellow panel === */
  .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.plan.free,
  .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em,
- #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment,#message.minor,.contributing,.discussion-topic .branch-status.status-pending {
+ #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment,#message.minor,.contributing,
+ .discussion-topic .branch-status.status-pending {
   background: #440 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#440), to(#220)) !important;
   background-image: -webkit-linear-gradient(top, #440, #220) !important;
@@ -590,7 +599,8 @@
  #forkqueue .legend .clean,#revisions ul li.current,.excerpt,.selectable_day.today,.big-notice,.plan.business,.popout,
  #statusbar,.clean,.clean td,.mergeable.clean,.octofication .message,#download_button,.status-box.good a,
  button.classy.primary,.progress-bar .progress,#message.good,.status-success,.mergeable,.new-issues,.new-pulls,.state-open,
- .state-indicator.proposed,.state-indicator.open,.state-indicator.reopened,.discussion-topic .branch-status.status-error, .discussion-topic .branch-status.status-failure {
+ .state-indicator.proposed,.state-indicator.open,.state-indicator.reopened,.discussion-topic .branch-status.status-error,
+ .discussion-topic .branch-status.status-failure,.release-downloads a.primary {
   background: #305530 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#373), to(#242)) !important;
   background-image: -webkit-linear-gradient(top, #373, #242) !important;
@@ -610,7 +620,8 @@
   color: #ddd !important;
  }
  /* Green hovered */
- #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover,button.classy.primary:hover {
+ #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover,button.classy.primary:hover,
+ .release-downloads a.primary:hover {
   background: #373 !important;
  }
  .open.mini-icon {
@@ -618,7 +629,8 @@
  }
 
  /* === silver panel/button === */
- .kbd,.signup-button:hover,.hero .textographic,.hero .screenographic,.dashboard-notice,.repository-lang-stats,#readme span.name,.markdown-format .alert {
+ .kbd,.signup-button:hover,.hero .textographic,.hero .screenographic,.dashboard-notice,.repository-lang-stats,
+ #readme span.name,.markdown-format .alert {
   background: #404040 !important;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#333)) !important;
   background-image: -webkit-linear-gradient(top, #444, #333) !important;
@@ -742,12 +754,6 @@
   background: url(http://mottie.github.com/Github-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
  }
 
- /* Fix chrome line numbering */
- #files .file .data pre,#files .file .line-data,#files .file .line-number,.file-box .data pre,.file-box .line-data,
- .file-box .line-number {
-  line-height: 1.4em !important;
- }
-
  /* darkest border */
  .pagination a,.pagination span.current,.pagination span.gap,.menu a {
   border-color: #222 !important;
@@ -858,4 +864,5 @@
  #network .explain b {
   color: #d26911;
  }
+
 }

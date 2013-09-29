@@ -11,6 +11,14 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.6 (9/28/2013)
+
+* Added dashboard navigation tab styling. Fixes [issue #44](https://github.com/Mottie/Github-Dark/issues/44).
+* Removed line-height setting. Fixes [issue #45](https://github.com/Mottie/Github-Dark/issues/45).
+* Added styling for two types (so far) of release pages ([example 1](https://github.com/lycus/exmake/releases); [example 2](https://github.com/Mottie/Github-Dark/releases)).
+  * Included green button styling.
+  * Fixes [issue #46](https://github.com/Mottie/Github-Dark/issues/46).
+
 #### Version 1.3.5 (6/27/2013)
 
 * Embedded Gists borders fixed
