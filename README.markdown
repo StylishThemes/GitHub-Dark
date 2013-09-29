@@ -15,8 +15,9 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * Added contrast to commit history "go" buttons. Fixes [issue #47](https://github.com/Mottie/Github-Dark/issues/47).
 * Added style to commit meta (pull request).
+* Fixed right side nav bar styling.
 * Removed top &amp; bottom padding in code editor ([pull #48](https://github.com/Mottie/Github-Dark/pull/48)) - thanks Silverwind!
-* More tweaks to right side nav bar, search result page, 
+* Tweaks to search result page.
 
 #### Version 1.3.8 (9/28/2013)
 
