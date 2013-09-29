@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.8 (9/28/2013)
+
+* Oops, restored github:help logo transparent background.
+
 #### Version 1.3.7 (9/28/2013)
 
 * Fixed the dashboard tabs to use the correct "selected" class.
