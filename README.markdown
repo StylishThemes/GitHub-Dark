@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.12 (10/22/2013)
+
+* Updated right navigation menu (now called sunken menu) styling.
+
 #### Version 1.3.11 (10/12/2013)
 
 * Added hidden vertical overflow for the main profile name. Fixes [issue #50](https://github.com/Mottie/Github-Dark/issues/50).
