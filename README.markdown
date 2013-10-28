@@ -11,6 +11,14 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.14 (10/28/2013)
+
+* Fix rss icon in user activity log.
+* Fix gist line numbers. Actually fix [issue #51](https://github.com/Mottie/Github-Dark/issues/51).
+* Remove white background from commit log avatars.
+* Improve "view file" button on commit pages. 
+* Thanks silverwind!
+
 #### Version 1.3.13 (10/26/2013)
 
 * Avatar &amp; line numbering fixes - thanks [silverwind](https://github.com/silverwind)!
@@ -33,11 +41,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
   * Gist search result page key word hilighting 
   * Gist user page labels (# files # forks # comments # stars) hover style.
 * Added a wiki page of [Github-Dark Tested Pages](https://github.com/Mottie/Github-Dark/wiki/Pages)
-
-#### Version 1.3.9 (9/29/2013)
-
-* Added contrast to commit history "go" buttons. Fixes [issue #47](https://github.com/Mottie/Github-Dark/issues/47).
-* Added style to commit meta (pull request).
-* Fixed right side nav bar styling.
-* Removed top &amp; bottom padding in code editor ([pull #48](https://github.com/Mottie/Github-Dark/pull/48)) - thanks Silverwind!
-* Tweaks to search result page.
