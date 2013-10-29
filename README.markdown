@@ -11,6 +11,10 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.15 (10/28/2013)
+
+* Dark inline code background color.
+
 #### Version 1.3.14 (10/28/2013)
 
 * Fix rss icon in user activity log.
