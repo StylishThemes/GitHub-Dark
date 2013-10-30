@@ -11,6 +11,18 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.16 (10/30/2013)
+
+* Fix diff hovering &amp; "view file" button on commit pages
+* Avoid unnecessary horizontal scrolling on commit diffs.
+* Improve row highlights in code editor &amp; gists.
+* Correct color for clone help icon.
+* Fix code indentation by using correct selector.
+* Commits page updates:
+  * Darken &amp; narrow go button with comments divider
+  * Fixed add comment form styling (including inline comments)
+  * Added "browse code" button styling
+
 #### Version 1.3.15 (10/28/2013)
 
 * Dark inline code background color.
