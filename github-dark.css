@@ -1,8 +1,9 @@
 @namespace url(http://www.w3.org/1999/xhtml);
+@namespace svg url(http://www.w3.org/2000/svg);
 
 @-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
 
-/* Github Dark Theme v1.3.16 (10/30/2013)
+/* Github Dark Theme v1.3.17 (10/30/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -372,8 +373,7 @@
   background-clip: padding-box !important;
  }
 
- /* Doesn't seem to work in Firefox */
- #contributions-calendar rect[style="fill: rgb(238, 238, 238);"],#contributions-calendar rect[style="fill: #eeeeee;"],
+ #contributions-calendar svg|rect[style="fill: rgb(238, 238, 238);"],#contributions-calendar svg|rect[style="fill: #eeeeee;"],
  .contrib-legend ul.legend li:first-child {
   opacity: 0.1 !important;
  }
@@ -868,7 +868,11 @@
   color: #ddd !important;
  }
 
- /* Added compressed version (http://www.cleancss.com/) of pygments-native-mod.css for syntax highlighting */
+ /*[[pygments-theme]]*/
+ /*
+  pygments-native-mod.css for syntax highlighting
+  http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator
+ */
  .highlight .hll { background-color:#404040 !important; }
  .highlight { background-color:#202020 !important; color:#d0d0d0 !important; }
  .highlight .err { color:#a61717 !important; background-color:#200 !important; }

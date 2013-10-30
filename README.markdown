@@ -11,6 +11,12 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.17 (10/30/2013)
+
+* Fixed contribution square styling for Firefox!
+* Added [Fruity syntax highlighting](http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator) theme.
+* Updated Github-Dark on [userstyles.org](http://userstyles.org/styles/37035) to now allow choosing a syntax highlighting theme.
+
 #### Version 1.3.16 (10/30/2013)
 
 * Fix diff hovering &amp; "view file" button on commit pages
