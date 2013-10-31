@@ -11,6 +11,11 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.3.18 (10/30/2013)
+
+* User page: improve coloring to more closely match GitHubs original style
+* Contributors page: SVG Graph styling
+
 #### Version 1.3.17 (10/30/2013)
 
 * Fixed contribution square styling for Firefox!
