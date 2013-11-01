@@ -11,6 +11,26 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.4.0 (11/1/2013)
+
+* Fix overly wide SVG graph (this seems to be a GitHub bug)
+* Restore header logo hover effect
+* Fix Gist logout button
+* Fix commit SHA font size and background
+* Improve SHA in commits and consolidate a few styles
+* Renamed "pygments themes" directory to just "themes".
+* Moved namespace variables inside of the wrapper as Chrome was applying the namespace to every page.
+* Added more pygment (syntax highlighting) themes:
+  * Native-mod renamed to Github-dark
+  * slate
+  * solarized-dark (unminified &amp; minified versions are slightly different)
+  * vim
+  * wombat
+  * zenburn
+* Added a [themes demo](http://mottie.github.io/Github-Dark/):
+  * Linked to the userstyles.org site to allow the user to visualize the syntax highlighting theme before choosing one.
+  * The demo and the userstyles.org themes only include the minified versions of the themes.
+
 #### Version 1.3.18 (10/30/2013)
 
 * User page: improve coloring to more closely match GitHubs original style

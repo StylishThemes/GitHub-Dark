@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Github Dark Syntax Highlighting Themes</title>
+
+	<!-- Demo styling -->
+	<style>
+		body { background: #222; color: #ddd; width: 80%; text-align: center; margin: 20px auto; }
+		h1, h2 { }
+		a { color: #4183c4; text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		.highlight { border: #555 1px solid; text-align: left; }
+		pre { padding: 10px 20px; }
+	</style>
+
+	<!-- themes -->
+	<link rel="stylesheet" title="Fruity" href="themes/pygments-fruity.min.css">
+	<link rel="stylesheet" title="Monokai" href="themes/pygments-monokai.min.css">
+	<link rel="stylesheet" title="Native" href="themes/pygments-native.min.css">
+	<link rel="stylesheet" title="Github Dark" href="themes/pygments-github-dark.min.css">
+	<link rel="stylesheet" title="Slate" href="themes/pygments-slate.min.css">
+	<link rel="stylesheet" title="Solarized Dark" href="themes/pygments-solarized-dark.min.css">
+	<link rel="stylesheet" title="Vim" href="themes/pygments-vim.min.css">
+	<link rel="stylesheet" title="Wombat" href="themes/pygments-wombat.min.css">
+	<link rel="stylesheet" title="Zenburn" href="themes/pygments-zenburn.min.css">
+
+	<!-- <link rel="stylesheet" title="x" href="themes/pygments-x.min.css"> -->
+
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+	$(function(){
+		var t,
+			$links = $('link[title]'),
+			$select = $('select'),
+			theme = "Native-Mod",
+			ls = false,
+			selectTheme = function(theme){
+				$links.prop('disabled', true);
+				$links.filter('[title="' + theme + '"]').prop('disabled', false);
+			};
+		// https://gist.github.com/paulirish/5558557
+		if ("localStorage" in window) {
+			try {
+				window.localStorage.setItem('_tmptest', 'temp');
+				ls = true;
+				window.localStorage.removeItem('_tmptest');
+			} catch(e) {}
+		}
+		if (ls) {
+			theme = localStorage['github-dark-theme'] || theme;
+		}
+
+		t = '';
+		$links.each(function(){
+			t += '<option>' + this.title + '</option>';
+		});
+		$select
+			.append(t)
+			.on('change', function(){
+				selectTheme(this.value);
+				if (ls) {
+					localStorage['github-dark-theme'] = this.value;
+				}
+			})
+			.val(theme);
+
+		$(window).load(function(){
+			$select.val(theme);
+			selectTheme(theme);
+		});
+
+	});
+	</script>
+
+</head>
+<body>
+	<h1><a href="http://userstyles.org/styles/37035">Github Dark for Stylish</a></h1>
+	<h2>Syntax Highlighting themes</h2>
+	<h3>Select a syntax highlighting theme: <select></select></h3>
+
+<h3>Php</h3>
+<div class="highlight">
+<pre><code class="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">A_Request</span> <span class="p">{</span>
+
+    <span class="k">private</span> <span class="nv">$_request</span><span class="p">;</span>
+
+    <span class="k">private</span> <span class="nv">$_fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;fullname&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;email&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;company&#39;</span><span class="p">,</span>
+      <span class="p">);</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_request</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_errors</span>  <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">$data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_fields</span> <span class="k">as</span> <span class="nv">$field</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">in_array</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_optional_fields</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">array_key_exists</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_validation_exceptions</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nv">$method</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_validation_exceptions</span><span class="p">[</span><span class="nv">$field</span><span class="p">];</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">]);</span>
+                    <span class="k">continue</span><span class="p">;</span>
+                <span class="p">}</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">])</span> <span class="k">AND</span> <span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">]))</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nb">array_key_exists</span><span class="p">(</span><span class="nv">$field</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_specific_validations</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nv">$method</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_specific_validations</span><span class="p">[</span><span class="nv">$field</span><span class="p">];</span>
+                        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$method</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">]);</span>
+                    <span class="p">}</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_request</span><span class="p">[</span><span class="nv">$field</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">];</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_errors</span><span class="p">[</span><span class="nv">$field</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;error&#39;</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">]))</span> <span class="p">{</span>
+                    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_request</span><span class="p">[</span><span class="nv">$field</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="nv">$field</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">valid_email</span><span class="p">(</span><span class="nv">$str</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$valid</span> <span class="o">=</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">preg_match</span><span class="p">(</span>
+            <span class="s2">&quot;/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix&quot;</span><span class="p">,</span> 
+            <span class="nv">$str</span>
+        <span class="p">)</span> <span class="p">)</span> <span class="o">?</span> <span class="k">FALSE</span> <span class="o">:</span> <span class="k">TRUE</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nv">$valid</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_errors</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;error&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3>Css</h3>
+
+<div class="highlight">
+<pre><code class="php">
+ <span class="c">/* === Repository Network Tree === */</span>
+  <span class="nf">#network</span> <span class="nc">.repo</span> <span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="o">],</span><span class="nf">#network</span> <span class="nc">.repo</span> <span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="s2">&quot;I&quot;</span><span class="o">],</span> <span class="nf">#network</span> <span class="nc">.repo</span> <span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="s2">&quot;L&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">26px</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">0</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">padding-top</span><span class="o">:</span> <span class="m">22px</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="nf">#network</span> <span class="nc">.repo</span> <span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(http://mottie.github.io/Github-Dark/images/t.png)</span> <span class="k">no-repeat</span> <span class="cp">!important</span><span class="p">;</span>
+ <span class="p">}</span>
+
+</code></pre>
+</div>
+
+
+</body></html>
