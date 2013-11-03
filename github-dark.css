@@ -375,6 +375,15 @@
  .contrib-legend ul.legend li:first-child {
   opacity: 0.1 !important;
  }
+ /* graphs page - GitHub uses rendered grey-on-white images for the graph previews here,
+    and the best way to handle them would probably be filter: invert, which isn't supported
+    on Firefox yet, so we just reduce the opacity (and contrast) for now.*/
+ .js-gshot > a {
+  opacity: 0.3 !important;
+ }
+ .js-gshot > p {
+  border-bottom: none !important;
+ }
 
  /* contributors page - svg styling */
  svg|svg.spark, svg|svg.viz {
@@ -391,7 +400,7 @@
  /* GitHub bugfix for their overly wide commit history graph */
  svg|svg.viz[width="970"] {
   width: 920px !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 20px !important;
  }
 
  /* === #444 === */
@@ -506,7 +515,7 @@
  }
 
  /* shade darker */
- #contributions-calendar .contrib-details div .num,.sunken-menu .octicon {
+ #contributions-calendar .contrib-details div .num,.sunken-menu .octicon, .ghead .dir {
   color: #999 !important;
  }
 
