@@ -1,4 +1,4 @@
-##Github Dark theme for the Stylish Addon ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe)).
+## Github Dark theme for the Stylish Addon ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe)).
 
 Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
@@ -13,14 +13,35 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 * Wombat
 * Zenburn
 
-###Before & After
+### Before & After
 
  [ ![before screenshot](http://mottie.github.com/Github-Dark/images/before_th.jpg) ](http://mottie.github.com/Github-Dark/images/before.jpg)
  [ ![after screenshot](http://mottie.github.com/Github-Dark/images/after_th.jpg) ](http://mottie.github.com/Github-Dark/images/after.jpg)
 
-###**Changelog**
+### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+
+#### Version 1.4.2 (11/5/2013)
+
+* Fixed gist tab color.
+* Fixed gist title color.
+* Various improvements to graphs (graphs page)
+  * Note: GitHub uses rendered grey-on-white images for the graph previews here,
+    and the best way to handle them would probably be filter: invert, which isn't supported
+    on Firefox yet, so we just reduce the opacity (and contrast) for now.
+  * See [issue #53](https://github.com/Mottie/Github-Dark/issues/53) for the discussion.
+* Update default syntax highlight, improve box headers.
+* Tweak borders, fix section link colors.
+* Commit page:
+  * Restore borders.
+  * Fix vertical scrolling.
+* Header: Restore the slight border.
+* Added more code examples to the [syntax highlighting demo page](http://mottie.github.io/Github-Dark/).
+* Removed unnecessary text truncation
+  * See [this list of long file names](https://github.com/jquery/api.jquerymobile.com/tree/master/entries) and commit descriptions.
+  * The commit descriptions are already truncated, so even after removing the max width of the content, the text is still cut off.
+  * Restored truncation in the News Feed.
 
 #### Version 1.4.1 (11/1/2013)
 
@@ -57,15 +78,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Fixed contribution square styling for Firefox!
 * Added [Fruity syntax highlighting](http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator) theme.
 * Updated Github-Dark on [userstyles.org](http://userstyles.org/styles/37035) to now allow choosing a syntax highlighting theme.
-
-#### Version 1.3.16 (10/30/2013)
-
-* Fix diff hovering &amp; "view file" button on commit pages
-* Avoid unnecessary horizontal scrolling on commit diffs.
-* Improve row highlights in code editor &amp; gists.
-* Correct color for clone help icon.
-* Fix code indentation by using correct selector.
-* Commits page updates:
-  * Darken &amp; narrow go button with comments divider
-  * Fixed add comment form styling (including inline comments)
-  * Added "browse code" button styling
