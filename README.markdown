@@ -22,6 +22,10 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.4.3 (11/5/2013)
+
+* Modified all themes to include `pre` tags within the highlight class to target gists and code in issues.
+
 #### Version 1.4.2 (11/5/2013)
 
 * Fixed gist tab color.
@@ -72,9 +76,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * User page: improve coloring to more closely match GitHubs original style
 * Contributors page: SVG Graph styling
-
-#### Version 1.3.17 (10/30/2013)
-
-* Fixed contribution square styling for Firefox!
-* Added [Fruity syntax highlighting](http://blog.favrik.com/2011/02/22/preview-all-pygments-styles-for-your-code-highlighting-needs/#stylesheetNavigator) theme.
-* Updated Github-Dark on [userstyles.org](http://userstyles.org/styles/37035) to now allow choosing a syntax highlighting theme.
