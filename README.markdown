@@ -22,6 +22,14 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.4.4 (11/11/2013)
+
+* Commit log: Various improvements
+* Commit page: Fix browse button
+* Popup: Choose fork repo destination (when part of an organization)
+* Popup: Delete repo alerts
+* Notice: flash notice (success message after deleting repo)
+
 #### Version 1.4.3 (11/5/2013)
 
 * Modified all themes to include `pre` tags within the highlight class to target gists and code in issues.
