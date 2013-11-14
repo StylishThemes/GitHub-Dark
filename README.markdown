@@ -32,6 +32,11 @@ Thanks to all that have [contributed](https://github.com/Mottie/Github-Dark/grap
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.4.7 (11/14/2013)
+
+* Contributions calendar: reverse color scheme.
+* Removed diff specific syntax highlighting from the solarized dark min theme.
+
 #### Version 1.4.6 (11/14/2013)
 
 * Add missing important flag to zenburn theme.
