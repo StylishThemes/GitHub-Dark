@@ -32,6 +32,14 @@ Thanks to all that have [contributed](https://github.com/Mottie/Github-Dark/grap
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.4.6 (11/14/2013)
+
+* Add missing important flag to zenburn theme.
+* Contributions calendar:
+  * Add missing selectors specific to Chrome (webkit?) browsers.
+  * Reverse contributions color scheme.
+* Add tables to highlight themes; See commit pages.
+
 #### Version 1.4.5 (11/14/2013)
 
 * Thanks silverwind for all these updates!
