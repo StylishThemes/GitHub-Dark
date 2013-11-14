@@ -18,9 +18,53 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
  [ ![before screenshot](http://mottie.github.com/Github-Dark/images/before_th.jpg) ](http://mottie.github.com/Github-Dark/images/before.jpg)
  [ ![after screenshot](http://mottie.github.com/Github-Dark/images/after_th.jpg) ](http://mottie.github.com/Github-Dark/images/after.jpg)
 
+### Contributions
+
+Thanks to all that have [contributed](https://github.com/Mottie/Github-Dark/graphs/contributors)!
+
+* silverwind
+* mihawk90
+* aalvarado
+* ddavison
+* and others!
+
 ### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+
+#### Version 1.4.7 (11/14/2013)
+
+* Contributions calendar: reverse color scheme.
+* Removed diff specific syntax highlighting from the solarized dark min theme.
+
+#### Version 1.4.6 (11/14/2013)
+
+* Add missing important flag to zenburn theme.
+* Contributions calendar:
+  * Add missing selectors specific to Chrome (webkit?) browsers.
+  * Reverse contributions color scheme.
+* Add tables to highlight themes; See commit pages.
+
+#### Version 1.4.5 (11/14/2013)
+
+* Thanks silverwind for all these updates!
+* Github Dark theme: Fix error background color
+* Fix padding in markdown inline code tags
+* Page header: Improve summary stats
+* Contributions calendar
+  * Improve coloring alot!
+  * Style the legend too
+  * Fix other minor issues
+  * Fix a few borders & brighten up the calendar a bit
+* Minibutton
+  * Fix minibutton text color
+  * Shade slightly darker
+* Following page: Fix overflow and borders
+* Strong text is now white
+* Timeline dots: fix border
+* Tages page: various fixes
+* Merged in styling for private repos. Thanks [ddavison]()
+* Removed `pygments-github-dark.min.css` file from themes folder as it is already contained within `github-dark.css`. No need for duplicates.
 
 #### Version 1.4.4 (11/11/2013)
 
@@ -59,28 +103,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * userstyles.org does not allow having namespace variables inside of the wrapper
 * Added permanent demo link to readme.
-
-#### Version 1.4.0 (11/1/2013)
-
-* Fix overly wide SVG graph (this seems to be a GitHub bug)
-* Restore header logo hover effect
-* Fix Gist logout button
-* Fix commit SHA font size and background
-* Improve SHA in commits and consolidate a few styles
-* Renamed "pygments themes" directory to just "themes".
-* Moved namespace variables inside of the wrapper as Chrome was applying the namespace to every page.
-* Added more pygment (syntax highlighting) themes:
-  * Native-mod renamed to Github-dark
-  * slate
-  * solarized-dark (unminified &amp; minified versions are slightly different)
-  * vim
-  * wombat
-  * zenburn
-* Added a [themes demo](http://mottie.github.io/Github-Dark/):
-  * Linked to the userstyles.org site to allow the user to visualize the syntax highlighting theme before choosing one.
-  * The demo and the userstyles.org themes only include the minified versions of the themes.
-
-#### Version 1.3.18 (10/30/2013)
-
-* User page: improve coloring to more closely match GitHubs original style
-* Contributors page: SVG Graph styling

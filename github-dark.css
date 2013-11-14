@@ -3,7 +3,7 @@
 
 @-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
 
-/* Github Dark Theme v1.4.4 (11/11/2013)
+/* Github Dark Theme v1.4.7 (11/14/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -98,7 +98,7 @@
  #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,
  .gravatar img,.facebox-popup,table.files,.branch-infobar,.tmp-reusable-bubble .bubble-inner,li.commit,#facebox,
  .commit-group-item .authorship,pre.headers code,.gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code,
- .commit-comments-header-sha,.highlight pre {
+ .commit-comments-header-sha {
   background: transparent !important;
  }
 
@@ -235,7 +235,7 @@
  pre,code:not(.commit-comments-header-sha),.wikistyle pre,.wikistyle pre code,#facebox pre,.plain pre,.commit-preview .message pre,pre.highlight,
   #wiki-wrapper pre,pre.prettyprint,.discusion-topic-infobar,.pagination .disabled:hover, .discusion-topic-infobar .milestone,
  .commit-group-heading,.list-browser-item.closed,body.windows #header,#footer .site, .ace_gutter,.jumbotron,#adv_code_search .search-page-label,
- .highlight table, .file-data .line-numbers {
+ .file-data .line-numbers {
   background: #111 none !important;
   font-size: 12px !important;
   border-color: #555 !important;
@@ -392,11 +392,16 @@
  }
 
  /* contributions-calendar coloring */
- #contributions-calendar svg|rect[style="fill: rgb(238, 238, 238);"] { fill: #282828 !important }
- #contributions-calendar svg|rect[style="fill: rgb(214, 230, 133);"] { fill: #246 !important }
- #contributions-calendar svg|rect[style="fill: rgb(140, 198, 101);"] { fill: #369 !important }
- #contributions-calendar svg|rect[style="fill: rgb(68, 163, 64);"]   { fill: #48c !important }
- #contributions-calendar svg|rect[style="fill: rgb(30, 104, 35);"]   { fill: #5af !important }
+ #contributions-calendar svg|rect[style="fill: rgb(238, 238, 238);"],
+ #contributions-calendar svg|rect[style="fill: #eeeeee;"] { fill: #282828 !important }
+ #contributions-calendar svg|rect[style="fill: rgb(214, 230, 133);"],
+ #contributions-calendar svg|rect[style="fill: #d6e685;"] { fill: #246 !important }
+ #contributions-calendar svg|rect[style="fill: rgb(140, 198, 101);"],
+ #contributions-calendar svg|rect[style="fill: #8cc665;"] { fill: #369 !important }
+ #contributions-calendar svg|rect[style="fill: rgb(68, 163, 64);"],
+ #contributions-calendar svg|rect[style="fill: #44a340;"] { fill: #48c !important }
+ #contributions-calendar svg|rect[style="fill: rgb(30, 104, 35);"],
+ #contributions-calendar svg|rect[style="fill: #1e6823;"] { fill: #5af !important }
  .contrib-legend li[style="background-color: #eee"]    { background-color: #282828 !important }
  .contrib-legend li[style="background-color: #d6e685"] { background-color: #246 !important }
  .contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
@@ -931,7 +936,7 @@
  /*[[pygments-theme]]*/
 
  /* Github-Dark syntax highlighting */
- .highlight,.highlight pre { background-color:#111 !important; color:#d0d0d0 !important; }
+ .highlight,.highlight pre, .highlight table { background-color:#111 !important; color:#d0d0d0 !important; }
  .highlight .hll { background-color:#404040 !important; }
  .highlight .err { color:#a61717 !important; background-color:#311 !important; }
  .highlight .o { color:#777 !important; }
