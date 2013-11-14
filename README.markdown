@@ -22,10 +22,10 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 
 Thanks to all that have [contributed](https://github.com/Mottie/Github-Dark/graphs/contributors)!
 
-* silverwind
-* mihawk90
-* aalvarado
-* ddavison
+* [silverwind](http://github.com/silverwind)
+* [mihawk90](http://github.com/mihawk90)
+* [aalvarado](http://github.com/aalvarado)
+* [ddavison](http://github.com/ddavison)
 * and others!
 
 ### **Changelog**
