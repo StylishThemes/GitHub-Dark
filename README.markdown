@@ -32,6 +32,17 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.1 (11/17/2013)
+
+* Added base color to all octicon &amp; links - still need to revert some special styles
+  * Buttons, in general, have white octicons & base color background while hovering
+  * New repo octicon returned to white (green buttons)
+  * Select menu (e.g. switching time span on https://github.com/explore) check mark octicons styled appropriately.
+  * Select menu close icon now white (needs hover color)
+  * Feature tag on the above explore page now has greyed octicon
+  * Header links/icons now white, base color on hover
+* Notification indication now matches base-color
+
 #### Version 1.5 (11/15/2013)
 
 * Add style to proposed tags

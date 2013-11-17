@@ -3,7 +3,7 @@
 
 @-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
 
-/* Github Dark Theme v1.5 (11/15/2013)
+/* Github Dark Theme v1.5.1 (11/17/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -21,7 +21,7 @@
  .repo_list span.css-truncate-target, strong.css-truncate-target, .zeroclipboard-button, .header .mega-octicon:hover:before,
  .creator a, button#logout:hover, .numbers-summary a:hover, .numbers-summary a:hover span,.octicon-file-directory,
  .tag-info a:hover, .tag-info .tag-name:hover, #forkqueue .instructions,.addon h4,#wiki-wrapper h1,#wiki-wrapper h2,
- #wiki-wrapper h3,#wiki-wrapper h2 strong,#wiki-wrapper h3 strong,.wikistyle h1,.wikistyle h2,
+ #wiki-wrapper h3,#wiki-wrapper h2 strong,#wiki-wrapper h3 strong,.wikistyle h1,.wikistyle h2,.octicon,
  .header a:hover,.header a:hover .mini-icon,.header a:hover .mega-icon:before,#footer a,#userbox a:hover,
  #userbox a:hover .mini-icon,a code,.gist-item ul.meta>li>a:hover, #userbox a:hover, #userbox a:hover .mini-icon {
   color: /*[[base-color]]*/ #4183C4 !important;
@@ -33,7 +33,7 @@
  a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.state-merged,.merge-status-icon,
  .url-box .zeroclipboard-is-hover,.select-menu-item.navigation-focus,.select-menu-item.navigation-focus.selected,
  ul.filter-list .filter-item.selected,#fork-select .target:not(.disabled):hover,.flash-notice,.clone-url-button:hover a,
- table.upgrades tr:hover td,#notification-center li.unread {
+ table.upgrades tr:hover td,#notification-center li.unread,.notification-indicator .unread {
   background: /*[[base-color]]*/ #4183C4 !important;
   color: #ddd !important;
  }
@@ -124,6 +124,9 @@
  .commit-comments-header-sha {
   background: transparent !important;
  }
+ .select-menu-item .octicon {
+  color: transparent !important;
+ }
 
  /* === Remove background gradient === */
  #directory .repo,#dashboard .repo,#categories li,.sosueme li.main,#commit .separator,.big-notice,.clean td,.legend .clean,
@@ -155,7 +158,7 @@
  pre,code,ul li,table,table tr,table td,h1,h2,h3,hr,img,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,
  ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,.clone-url-button,#wiki-wrapper h2,blockquote,
  table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.code-list-item,
- .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,
+ .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,.box-action,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.grid .col,.lbl,.details,
@@ -573,21 +576,41 @@
  /* White text */
  strong,ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.commandbar .choice .command,
  .navigation-focus .mini-icon:before,.selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,
- .commit .mini-icon:before,.select-menu-item.selected>.mini-icon,.css-truncate-target:hover,.search-term,
+ .commit .mini-icon:before,.select-menu-item.selected>.mini-icon,.css-truncate-target:hover,.search-term,.header a,
  .code-list em,.codesearch-cols em,.sunken-menu a.selected .octicon,.sidebar-milestone-widget .title, .feed-icon a .octicon,
- .numbers-summary .num, a.minibutton,.select-menu-item.selected>.octicon {
+ .numbers-summary .num, a.minibutton,.select-menu-item.selected>.octicon,.new-repo .octicon,.minibutton:hover .octicon,
+ .navigation-focus .octicon {
   color: #fff !important;
+ }
+
+ /* slightly darker text */
+ .news blockquote,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,
+ .fieldgroup p.explain.planusage,table.notifications th,.explore h2,.usagestats dl dt.numbers,
+ .featured-callout h2,.commit-preview p.name .date,.feature-overview strong,.download-list h4,
+ ol.repository-lang-stats-numbers li .lang, .clone-options .octicon, .navigation-focus a, .commit .sha,
+ a.tabnav-tab.selected, .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link,
+ .commit-group-item.navigation-focus .gobutton .octicon, .tag-info .tag-name,.language,.header a,.header .octicon,
+ .select-menu-header .octicon {
+  color: #ccc !important;
  }
 
  /* shade darker */
  #contributions-calendar .contrib-details div .num,.sunken-menu .octicon, .ghead .dir, #contributions-calendar .contrib-details div .lbl,
- a.js-details-target:hover, .tag-info a {
+ a.js-details-target:hover, .tag-info a,.news .alert .title span.octicon,.tabnav .octicon,.collection-stat,
+ .collection-stat .octicon {
   color: #999 !important;
  }
 
+ /* content text */
+ #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .numbers-summary a,
+ .numbers-summary .octicon,.pagination .disabled,.tabnav .octicon {
+  color: #777 !important;
+ }
+
  /* darkest text; Context pane highlight item */
- .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,#notification-center li.unread a,
- .mini-icon-public-repo:before,.mini-icon-pull-request,.mini-icon-remove-close,.mini-icon-link,.mega-octicon:before {
+ .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,#notification-center li.unread a,.news .alert .octicon,
+ .mini-icon-public-repo:before,.mini-icon-pull-request,.mini-icon-remove-close,.mini-icon-link,.mega-octicon:before,
+ .featured-label .octicon {
   color: #444 !important;
  }
  .disabled,.disabled:hover {
@@ -619,22 +642,6 @@
   color: #8c8000 !important;
   background-color: transparent !important;
   border: 0 !important;
- }
-
- /* slightly darker text */
- .news blockquote,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,
- .fieldgroup p.explain.planusage,table.notifications th,.explore h2,.usagestats dl dt.numbers,
- .featured-callout h2,.commit-preview p.name .date,.feature-overview strong,.download-list h4,
- ol.repository-lang-stats-numbers li .lang, .clone-options .octicon, .navigation-focus a, .commit .sha,
- a.tabnav-tab.selected, .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link,
- .commit-group-item.navigation-focus .gobutton .octicon, .tag-info .tag-name,.language {
-  color: #ccc !important;
- }
-
- /* content text */
- #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .numbers-summary a,
- .numbers-summary .octicon,.pagination .disabled {
-  color: #777 !important;
  }
 
  /* Dark blue panel */
