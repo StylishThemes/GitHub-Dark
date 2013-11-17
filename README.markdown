@@ -32,6 +32,29 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.1 (11/17/2013)
+
+* Added base color to all octicon &amp; links - still need to revert some special styles
+  * Buttons, in general, have white octicons & base color background while hovering
+  * New repo octicon returned to white (green buttons)
+  * Select menu (e.g. switching time span on https://github.com/explore) check mark octicons styled appropriately.
+  * Select menu close icon now white (needs hover color)
+  * Feature tag on the above explore page now has greyed octicon
+  * Header links/icons now white, base color on hover
+* Notification indication now matches base-color
+
+#### Version 1.5 (11/15/2013)
+
+* Add style to proposed tags
+* Add links to contributor names
+* Added a new base-color variable
+  * This allows setting a base-link color to change the overall look of this style
+  * The color also applies to some selector backgrounds.
+  * Sadly, userstyles does not yet allow use of LESS or SCSS, so instead of adding a bunch of offset colors, I just left it as one color setting.
+* Removed gradient styling from red, green, yellow and blue panels/tags.
+* Light blue panels/buttons are now incorporated into the base-color variable.
+* A bunch of other tweaks to the style that I didn't keep track of, sorry.
+
 #### Version 1.4.7 (11/14/2013)
 
 * Contributions calendar: reverse color scheme.
@@ -73,33 +96,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Popup: Choose fork repo destination (when part of an organization)
 * Popup: Delete repo alerts
 * Notice: flash notice (success message after deleting repo)
-
-#### Version 1.4.3 (11/5/2013)
-
-* Modified all themes to include `pre` tags within the highlight class to target gists and code in issues.
-
-#### Version 1.4.2 (11/5/2013)
-
-* Fixed gist tab color.
-* Fixed gist title color.
-* Various improvements to graphs (graphs page)
-  * Note: GitHub uses rendered grey-on-white images for the graph previews here,
-    and the best way to handle them would probably be filter: invert, which isn't supported
-    on Firefox yet, so we just reduce the opacity (and contrast) for now.
-  * See [issue #53](https://github.com/Mottie/Github-Dark/issues/53) for the discussion.
-* Update default syntax highlight, improve box headers.
-* Tweak borders, fix section link colors.
-* Commit page:
-  * Restore borders.
-  * Fix vertical scrolling.
-* Header: Restore the slight border.
-* Added more code examples to the [syntax highlighting demo page](http://mottie.github.io/Github-Dark/).
-* Removed unnecessary text truncation
-  * See [this list of long file names](https://github.com/jquery/api.jquerymobile.com/tree/master/entries) and commit descriptions.
-  * The commit descriptions are already truncated, so even after removing the max width of the content, the text is still cut off.
-  * Restored truncation in the News Feed.
-
-#### Version 1.4.1 (11/1/2013)
-
-* userstyles.org does not allow having namespace variables inside of the wrapper
-* Added permanent demo link to readme.
