@@ -32,6 +32,16 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.2 (11/17/2013)
+
+* Lots of updates, summarizing it as:
+  * Fix button hover states
+  * Octicon color corrections
+  * Gist page updates
+  * Darken text &amp; some gradients, including alerts &amp; activity
+  * Notification indicator changes
+  * Remove 100% max-width from truncated text. Fixes #63.
+
 #### Version 1.5.1 (11/17/2013)
 
 * Added base color to all octicon &amp; links - still need to revert some special styles
