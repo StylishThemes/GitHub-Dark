@@ -33,6 +33,11 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.4 (11/18/2013)
+
+* Added solarized dark screen shot.
+* Fix selection menu highlighted text.
+
 #### Version 1.5.3 (11/17/2013)
 
 * Removed default truncate styling
