@@ -33,6 +33,12 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.3 (11/17/2013)
+
+* Removed default truncate styling
+* Added new screenshots!
+* More panels now match the color scheme
+
 #### Version 1.5.2 (11/17/2013)
 
 * Lots of updates, summarizing it as:
@@ -70,40 +76,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * Contributions calendar: reverse color scheme.
 * Removed diff specific syntax highlighting from the solarized dark min theme.
-
-#### Version 1.4.6 (11/14/2013)
-
-* Add missing important flag to zenburn theme.
-* Contributions calendar:
-  * Add missing selectors specific to Chrome (webkit?) browsers.
-  * Reverse contributions color scheme.
-* Add tables to highlight themes; See commit pages.
-
-#### Version 1.4.5 (11/14/2013)
-
-* Thanks silverwind for all these updates!
-* Github Dark theme: Fix error background color
-* Fix padding in markdown inline code tags
-* Page header: Improve summary stats
-* Contributions calendar
-  * Improve coloring alot!
-  * Style the legend too
-  * Fix other minor issues
-  * Fix a few borders & brighten up the calendar a bit
-* Minibutton
-  * Fix minibutton text color
-  * Shade slightly darker
-* Following page: Fix overflow and borders
-* Strong text is now white
-* Timeline dots: fix border
-* Tages page: various fixes
-* Merged in styling for private repos. Thanks [ddavison]()
-* Removed `pygments-github-dark.min.css` file from themes folder as it is already contained within `github-dark.css`. No need for duplicates.
-
-#### Version 1.4.4 (11/11/2013)
-
-* Commit log: Various improvements
-* Commit page: Fix browse button
-* Popup: Choose fork repo destination (when part of an organization)
-* Popup: Delete repo alerts
-* Notice: flash notice (success message after deleting repo)
