@@ -15,9 +15,10 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 
 ### Before & After
 
- [ ![before screenshot](http://mottie.github.com/Github-Dark/images/before_th.jpg) ](http://mottie.github.com/Github-Dark/images/before.jpg)
- [ ![after screenshot](http://mottie.github.com/Github-Dark/images/after_th.jpg) ](http://mottie.github.com/Github-Dark/images/after.jpg)
-
+ [ ![before screenshot](https://raw.github.com/Mottie/Github-Dark/master/images/before_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/before.png)
+ [ ![red theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_red_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_red.png)
+ [ ![blue theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue.png)
+ 
 ### Contributions
 
 Thanks to all that have contributed!
