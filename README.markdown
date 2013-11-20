@@ -33,6 +33,10 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.6 (11/20/2013)
+
+* Search issues: Add missing `:before` selector for octicons.
+
 #### Version 1.5.5 (11/20/2013)
 
 * Fix readme width, match repo summary color to other headers
