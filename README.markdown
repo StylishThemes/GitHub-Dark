@@ -33,6 +33,13 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.5.5 (11/20/2013)
+
+* Fix readme width, match repo summary color to other headers
+* Wiki: fix clone URL button (hover doesn't work since it's flash)
+* Add better solarized dark code screenshot.
+* Search issues: Restore open/close octicon color
+
 #### Version 1.5.4 (11/18/2013)
 
 * Added solarized dark screen shot.
@@ -76,8 +83,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Removed gradient styling from red, green, yellow and blue panels/tags.
 * Light blue panels/buttons are now incorporated into the base-color variable.
 * A bunch of other tweaks to the style that I didn't keep track of, sorry.
-
-#### Version 1.4.7 (11/14/2013)
-
-* Contributions calendar: reverse color scheme.
-* Removed diff specific syntax highlighting from the solarized dark min theme.
