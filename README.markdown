@@ -33,6 +33,43 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.6.0 (11/20/2013)
+* Tag page: Fix hover to include the icon
+* Settings menu
+  * Various improvements
+  * Fix delete button for emails
+* Slightly brighten markdown &amp; file backgrounds &amp; fix borders
+* Code
+  * Slightly darken the inline code borders
+  * Improve line number borders
+* Issues
+  * Various improvements to issue discussions
+  * Creation box - fix white border
+  * Header - Tighten the bottom border to 1px
+  * Fix merge pull request button. Fixes [issue #69](https://github.com/Mottie/Github-Dark/issues/69) dude!
+* Fix milestone background
+* User page:
+  * Darken a few borders on the user-page &amp; remove empty lines
+  * Set all borders darker &amp; made boxes slightly darker
+* Commits
+  * Main page - add border to header; fix browser button
+  * Header - allow border radius
+  * Log - fix browse button
+  * Log - fix border-radii &amp; borders
+* Gist
+  * Style the secret gist label
+  * Fix gist diff padding &amp; revision heading
+  * Fix gist boxes background, makde bold text slightly darker
+* Add more themes &amp; updated demo
+  * Desert
+  * Freya
+  * Inkpot
+  * Mustang
+  * No Quarter
+  * Peaksea
+  * Railscasts
+  * Rdark
+
 #### Version 1.5.6 (11/20/2013)
 
 * Search issues: Add missing `:before` selector for octicons.

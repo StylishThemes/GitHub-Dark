@@ -1,7 +1,9 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
+
 @-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
-/* Github Dark Theme v1.5.6 (11/20/2013)
+
+/* Github Dark Theme v1.6.0 (11/20/2013)
  * https://github.com/Mottie/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -26,7 +28,7 @@
  /* base color panel */
  .minibutton:hover, .minibutton:hover code, .file-minibutton:hover,.add_file:hover,.gollum-minibutton:hover,.pagination a:hover,
  .gollum-minibutton a:hover,#gollum-editor-submit:hover,.tip-box a.next:hover,.sidebar-module h3:hover a,
- a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.state-merged,.merge-status-icon,
+ a.feed:hover, a.feed:hover span,.listings-layout .nav li a:hover,.search-form button:hover,.state-merged,
  .url-box .zeroclipboard-is-hover,.select-menu-item.navigation-focus,.select-menu-item.navigation-focus.selected,
  ul.filter-list .filter-item.selected,#fork-select .target:not(.disabled):hover,.flash-notice,.clone-url-button:hover a,
  table.upgrades tr:hover td,#notification-center li.unread,.notification-indicator .unread {
@@ -529,7 +531,7 @@
  .numbers-summary .num, a.minibutton,.select-menu-item.selected>.octicon,.new-repo .octicon,.minibutton:hover .octicon,
  .navigation-focus .octicon, .tabnav-tab.selected .octicon, .minibutton i, .notifications .pull-request-notification .type-icon,
  .notifications-list a, div.select-menu-modal a.select-menu-item-text, span.minibutton, .pagehead.repohead h1.private .repo-label span,
- .full-commit .browse-button {
+ .full-commit .browse-button,.merge-status-icon .mega-octicon:before {
   color: #eee !important;
  }
  /* slightly darker text */
@@ -596,7 +598,7 @@
  #forkqueue .legend .unclean,.unclean td,.chzn-results .no-results,.majorproblem .pageheader_wrap,
  .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,#message.major,
  .minibutton.danger:hover,.minibutton.danger:hover span,.comment-form-error,.mergeable.dirty,.closed-issues,.state-indicator.closed,
- .branch-status.status-error,.branch-status.status-failure,.state-closed {
+ .branch-status.status-error,.branch-status.status-failure,.state-closed,.mergeable-dirty .merge-status-icon {
   background: #a31e16 !important;
   border-color: #333 !important;
   color: #ccc !important;
@@ -604,7 +606,8 @@
  .btn-close-issue:hover,button.classy[name="comment_and_close"]:hover {
   background: #a31e16 !important;
  }
- .minibutton.danger, .button.danger, .minibutton.danger span,.closed.mini-icon,.closed.mega-octicon,.closed.mega-octicon:before {
+ .minibutton.danger, .button.danger, .minibutton.danger span,.closed.mini-icon,.closed.mega-octicon,.closed.mega-octicon:before,
+ .closed.octicon {
   color: #a31e16 !important;
  }
  /* === Yellow panel === */
@@ -620,10 +623,10 @@
  /* labels */
  #forkqueue .legend .clean,#revisions ul li.current,.excerpt,.selectable_day.today,.plan.business,.popout,
  #statusbar,.clean,.clean td,.mergeable.clean,#download_button,.status-box.good a,
- button.classy.primary,.progress-bar .progress,.new-issues,.new-pulls,
+ button.classy.primary,.progress-bar .progress,.new-issues,.new-pulls,.mergeable-clean .merge-status-icon,
  .repo-owner-comment .comment-header-tag {
   background: #305530 !important;
-  border-color: #080 !important;
+  border-color: #060 !important;
  }
  /* interactive button - bright border */
  a.new-repo,.state-open,.state-proposed,.status-success,.state-indicator.proposed,.state-indicator.open,
@@ -643,7 +646,7 @@
  .release-downloads a.primary:hover, .button.primary:not(:disabled):hover, .minibutton.primary:not(:disabled):hover {
   background: #373 !important;
  }
- .open.mini-icon, .open.mega-octicon,.open.mega-octicon:before {
+ .open.mini-icon,.open.mega-octicon,.open.mega-octicon:before,.open.octicon {
   color: #6cc644 !important;
  }
  /* === silver panel/button === */
