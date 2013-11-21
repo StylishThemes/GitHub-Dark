@@ -33,6 +33,11 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.6.1 (11/20/2013)
+
+* Fix Github Dark theme file location
+* Forgot to mention in the last update, all un-minified css files moved to the src folder within the themes folder.
+
 #### Version 1.6.0 (11/20/2013)
 * Tag page: Fix hover to include the icon
 * Settings menu
