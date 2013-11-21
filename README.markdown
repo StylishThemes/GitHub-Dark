@@ -3,10 +3,18 @@
 Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different syntax highlighting themes
-* Github-Dark (modified native theme)
+* Desert
+* Freya
 * Fruity
+* Github-Dark (modified native theme)
+* Inkpot
 * Monokai
+* Mustang
 * Native
+* No Quarter
+* Peaksea
+* Railscasts
+* Rdark
 * Slate
 * Solarized Dark
 * Vim
@@ -16,6 +24,7 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 ### Before & After
 
  [ ![before screenshot](https://raw.github.com/Mottie/Github-Dark/master/images/before_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/before.png)
+
  [ ![red theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_red_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_red.png)
  [ ![blue theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue.png)
  
@@ -32,6 +41,13 @@ Thanks to all that have contributed!
 ### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+
+#### Version 1.6.2 (11/20/2013)
+
+* Themes
+  * Add new themes to readme
+  * Fix inkpot theme - it had two #'s together causing css validation errors
+* Buttons - add style to close &amp; cancel buttons (including hover states)
 
 #### Version 1.6.1 (11/20/2013)
 
