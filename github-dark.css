@@ -108,7 +108,7 @@
  #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,
  .gravatar img,.facebox-popup,.branch-infobar,.tmp-reusable-bubble .bubble-inner,li.commit,#facebox,
  .commit-group-item .authorship,pre.headers code,.gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code,
- .commit-comments-header-sha, .menu-container, .milestone {
+ .commit-comments-header-sha, .menu-container, .milestone,.more-repos {
   background: transparent !important;
  }
  .select-menu-item .octicon {
@@ -140,7 +140,7 @@
  table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.code-list-item,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,.box-action,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
- .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
+ .chromed-list-browser div,.filter-bar,.columns.sidebar,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.lbl,.details,
  ul.stats,.select-menu-filters,.select-menu-item,.select-menu-tabs,.release-list > li,.url-box,.select-menu-button:after,
  .context-body,.range-editor-head,.filter-tab,.cheatsheet,.gist-file,.pagehead.settings-area,.release-body,
@@ -158,7 +158,7 @@
  }
  .pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,
  .range-editor span.flag,.range-editor .range,.dashboard-tabs,ul.sunken-menu-group a.selected, table.files td,
- .vcard-details, .vcard-stats, .repo-list-item, .box-body, .grid .col, .composer-infobar {
+ .vcard-details, .vcard-stats, .repo-list-item, .box-body, .grid .col, .composer-infobar,.news .alert {
   border-color: #333 !important;
  }
  /* darkest border */
@@ -393,7 +393,7 @@
  .browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.file-box .icon,
  .browser .meta,.sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,
  .module .inner,.browser .listing.closed,.starting-comment,.chzn-drop,#issues_next .labels .label a,
- .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus,.more-repos,.full-width-divider {
+ .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus,.full-width-divider {
   background: #333 none !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -534,28 +534,27 @@
   color: #eee !important;
  }
  /* slightly darker text */
- strong, .news blockquote,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,
- .fieldgroup p.explain.planusage,table.notifications th,.explore h2,.usagestats dl dt.numbers,
- .featured-callout h2,.commit-preview p.name .date,.feature-overview strong,.download-list h4,
- ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
- .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,
- .header a, .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong {
+ strong,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,.fieldgroup p.explain.planusage,
+ table.notifications th,.explore h2,.usagestats dl dt.numbers,.featured-callout h2,.commit-preview p.name .date,
+ .feature-overview strong,.download-list h4,ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
+ .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,.header a,
+ .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong {
   color: #ccc !important;
  }
  /* shade darker */
- .octicon, #contributions-calendar .contrib-details div .num, .ghead .dir, #contributions-calendar .contrib-details div .lbl,
- a.js-details-target:hover, .tag-info a,.collection-stat, .authorship, a.browse-button {
+ .news blockquote,.news blockquote p, .octicon, #contributions-calendar .contrib-details div .num, .ghead .dir,
+ #contributions-calendar .contrib-details div .lbl, a.js-details-target:hover, .tag-info a,.collection-stat, .authorship,
+ a.browse-button {
   color: #999 !important;
  }
  /* content text */
  #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .pagination .disabled,
- .diffstat-bar, .mega-octicon:before {
+ .diffstat-bar, .mega-octicon:before, .news .alert .octicon, .time {
   color: #777 !important;
  }
  /* darkest text; Context pane highlight item */
- .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,.news .alert .octicon,
- .mini-icon-public-repo:before,.mini-icon-pull-request,.mini-icon-remove-close,.mini-icon-link,
- .featured-label .octicon {
+ .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span, .mini-icon-public-repo:before,.mini-icon-pull-request,
+ .mini-icon-remove-close,.mini-icon-link, .featured-label .octicon {
   color: #444 !important;
  }
  .disabled,.disabled:hover {
@@ -580,10 +579,9 @@
  :-ms-input-placeholder {
   color: #444 !important;
  }
- /* === dark-grey === */
  /* Alerts and activity, remove background gradient */
  .news .alert .title span,.metabox .editable-text:hover,#inbox .list .item .title span {
-  color: #525252 !important;
+  color: #eee !important;
   background-color: transparent !important;
   border: 0 !important;
  }
@@ -669,6 +667,9 @@
  .secret .repo-label span {
   background: #c72 !important;
   color: #eee !important;
+ }
+ .pagehead-actions .octicon-rss {
+  color: #f93 !important;
  }
  /* orange border bottom */
  .pagehead ul.tabs li a.selected,.pagehead > ul.tabs li a:hover,div.listing.navigation-focus,div.issues.navigation-focus,
