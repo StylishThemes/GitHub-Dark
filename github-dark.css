@@ -7,9 +7,18 @@
  * License: http://sam.zoy.org/wtfpl/
  */
  body,#main,.unread_count,.pagehead,#browser table th,.main,.news .alert .body,.profilecols ul.stats li strong,
- table.upgrades tr.current td,.definitions,#files .file .data {
+ table.upgrades tr.current td,.definitions,#files .file .data, .session-device {
   background: #222 !important;
   color: #ddd !important;
+ }
+
+ /* input focus hightlight */
+ input.focus[type="text"], #adv_code_search .focus.search-page-label, input[type="text"]:focus, .focused .drag-and-drop,
+ #adv_code_search .search-page-label:focus, input.focus[type="password"], input[type="password"]:focus, input.focus[type="email"],
+ input[type="email"]:focus, input.focus[type="number"], input[type="number"]:focus, input.focus[type="tel"], input[type="tel"]:focus,
+ input.focus[type="url"], input[type="url"]:focus, textarea.focus, textarea:focus {
+     border-color: #999 !important;
+     box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.075) inset, 0px 0px 5px rgba(255, 255, 255, .075) !important;
  }
  /* Base link/panel colors */
  /* text */
@@ -20,7 +29,7 @@
  #wiki-wrapper h3,#wiki-wrapper h2 strong,#wiki-wrapper h3 strong,.wikistyle h1,.wikistyle h2, .downwards:hover .octicon,
  .header a:hover,.header a:hover .mini-icon,.header a:hover .mega-icon:before,#footer a,#userbox a:hover, .header-logo-wordmark:hover span,
  #userbox a:hover .mini-icon,a:not(.minibutton) code,.gist-item ul.meta>li>a:hover, #userbox a:hover, #userbox a:hover .mini-icon,
- a.browse-button:hover, a.browse-button:hover span {
+ a.browse-button:hover, a.browse-button:hover span,.full-word {
   color: /*[[base-color]]*/ #4183C4 !important;
  }
  /* base color panel */
@@ -89,7 +98,7 @@
  table.notifications,#download_button,.comment-count,em.date,#header,#user-links,.button,.gc .diff-line-code,
  input.search,.upper_footer,.switcher > span:after,.upgrades td,.blog-feedback,.description,.blankslate,.commit-ref,
  .pagination span,.mini-icon-advanced-search,.count,.select-menu-title,.select-menu-button:after,#repo-message,.times,
- .sunken-menu-contents,.sunken-menu a .counter,.sunken-menu a, #user-links .name img, .usage-bar dt {
+ .sunken-menu-contents,.sunken-menu a .counter,.sunken-menu a, #user-links .name img, .usage-bar dt, #common-issues {
   color: #ccc !important;
   text-shadow: none !important;
   box-shadow: none !important;
@@ -109,7 +118,7 @@
  #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,
  .gravatar img,.facebox-popup,.branch-infobar,.tmp-reusable-bubble .bubble-inner,li.commit,#facebox,
  .commit-group-item .authorship,pre.headers code,.gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code,
- .commit-comments-header-sha, .menu-container, .milestone {
+ .commit-comments-header-sha, .menu-container, .milestone,.more-repos {
   background: transparent !important;
  }
  .select-menu-item .octicon {
@@ -158,14 +167,14 @@
  table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.code-list-item,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,.box-action,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
- .chromed-list-browser div,.filter-bar,.columns.sidebar,.news .alert,.participation-graph canvas,#contributors .person,
+ .chromed-list-browser div,.filter-bar,.columns.sidebar,.participation-graph canvas,#contributors .person,
  #commit-activity-master,.blog-post,.top-rule,#services,#services .service,.mini-repo-list a,.lbl,.details,
  ul.stats,.select-menu-filters,.select-menu-item,.select-menu-tabs,.release-list > li,.url-box,.select-menu-button:after,
  .context-body,.range-editor-head,.filter-tab,.cheatsheet,.gist-file,.pagehead.settings-area,.release-body,
  .suggester,.pull-state,.pull-number,.merge-pr,.graphs,.graph,#footer .container,#graph-shots li,.sidebar,.release-timeline,
  .explore h2,ul.color-label-list .color,#head,.leaderboard-list-item,.search-menu-container,
  .release-timeline-tags .main,.explore-section,.sort-bar,.content-header,.search-result-item,.user-list-item,
- .commit-group-item .gobutton .comment-count,.gobutton.with-comments .sha, .markdown-body {
+ .commit-group-item .gobutton .comment-count,.gobutton.with-comments .sha, .markdown-body, ul#categories li h5 {
   border-color: #555 !important;
  }
  .summary-stats,.sunken-menu-separator, .pagehead, .follow-list .follow-list-item {
@@ -176,7 +185,7 @@
  }
  blockquote,.pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,
  .range-editor span.flag,.range-editor .range,.dashboard-tabs,ul.sunken-menu-group a.selected, table.files td,
- .vcard-details, .vcard-stats, .repo-list-item, .box-body, .grid .col, .composer-infobar,.email-signature-reply,
+ .vcard-details, .vcard-stats, .repo-list-item, .box-body, .grid .col, .composer-infobar,.news .alert,.email-signature-reply,
  .email-quoted-reply {
   border-color: #333 !important;
  }
@@ -271,7 +280,7 @@
  /* === Inputs === */
  input,textarea,.commandbar .choice:hover,.commandbar .loading:hover {
   -moz-appearance: none !important;
-  background: #111 !important;
+  background: #181818 !important;
   border-color: #444 !important;
   border-style: solid !important;
   color: #ddd !important;
@@ -314,7 +323,8 @@
  /* === #222 === */
  /* Darkest background color (#222), no image, no border */
  .marketing-nav li a.js-selected-navigation-item,.section-heading-title a.js-selected-navigation-item,
- .search-results-listing em,.tag-info.commit, .commit-tease .commit-meta,.discussion-topic-header  {
+ .search-results-listing em,.tag-info.commit, .commit-tease .commit-meta,.discussion-topic-header,
+ .comment-form-head.tabnav  {
   background: #222 none !important;
   border: 0 !important;
  }
@@ -384,7 +394,7 @@
  #message .envelope .header .info .title.unread,li.contextswitch ul li.current,ul.main_nav li.selected a,
  .watcher-widget,ul.states li,.add_file,.tree-browser,.line-comments,.inset,li.label,.filterbar,.divider-vertical,
  #footer .upper_footer,.user-commits td,tr.inline-comments,.thread-subscription-status,.starting-comment .infobar,
- #issues_next .infobar,.discussion-bubble-inner,.formbody,.commandbar .display,.none p,.comment-form-head.tabnav,
+ #issues_next .infobar,.discussion-bubble-inner,.formbody,.commandbar .display,.none p,
  .display div.choice,.display tr,div#common-issues ul li a:hover,#contributors h3,#contributors .cmeta,.select-menu-modal,
  .select-menu-modal > div,.issues-list>ul>li.selectable:hover,.issues-list>ul>li.navigation-focus,.issues-list-actions,
  pre div[style="background-color: rgb(255, 255, 204); "], /* <- space after "; " needed for Chrome */
@@ -412,7 +422,7 @@
  .browser .listing:hover,#dashboard .repos,.date_selector .button,.selectable_day,.file-box .icon,
  .browser .meta,.sidebar-module > ul li,.sidebar-module .spacer,.list-module .list-body,.list-module a,.bootcamp-body,
  .module .inner,.browser .listing.closed,.starting-comment,.chzn-drop,#issues_next .labels .label a,
- .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus,.more-repos,.full-width-divider {
+ .section-nav a:hover,.filter-bar,.starred-repo.navigation-focus,.full-width-divider {
   background: #333 none !important;
   color: #eee !important;
   border-color: #555 !important;
@@ -519,7 +529,7 @@
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
  .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
- .drag-and-drop,#graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
+ #graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
  .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,.clone-url-button a,
  .filter-tab,#header-wrapper,#header-wrapper .nav,.cheatsheet h2,pre div:hover,.diff-table tr:hover pre,.commit-ref,
  .blog-feedback-header,.pagination span,.file-diff-line:hover .diff-line-code,.file-diff-line:hover .diff-line-pre,
@@ -542,7 +552,7 @@
  }
  /* === Text Color === */
  /* Brightest text */
- ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.commandbar .choice .command,
+ h2 span, ul.repo-stats li a:hover,.subnav li a:hover,.filters li.selected a,.filters li a:hover,.commandbar .choice .command,
  .navigation-focus .mini-icon:before,.selector-item:hover .mini-icon:before,.selector-item.selected .mini-icon:before,
  .commit .mini-icon:before,.select-menu-item.selected>.mini-icon,.search-term,.header a,
  .code-list em,.codesearch-cols em,.sunken-menu a.selected .octicon,.sidebar-milestone-widget .title, .feed-icon a .octicon,
@@ -553,27 +563,27 @@
   color: #eee !important;
  }
  /* slightly darker text */
- strong, .news blockquote,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,
- .fieldgroup p.explain.planusage,table.notifications th,.explore h2,.usagestats dl dt.numbers,
- .featured-callout h2,.commit-preview p.name .date,.feature-overview strong,.download-list h4,
- ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
- .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,
- .header a, .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong {
+ strong,.url-box p strong,#languages a.bar,dl.form dt,.avatarexplain p strong,.lineoption p,.fieldgroup p.explain.planusage,
+ table.notifications th,.explore h2,.usagestats dl dt.numbers,.featured-callout h2,.commit-preview p.name .date,
+ .feature-overview strong,.download-list h4,ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
+ .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,.header a,
+ .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong {
   color: #ccc !important;
  }
  /* shade darker */
- .octicon, #contributions-calendar .contrib-details div .num, .ghead .dir, #contributions-calendar .contrib-details div .lbl,
- a.js-details-target:hover, .tag-info a,.collection-stat, .authorship, a.browse-button,.flash-global a {
+ .news blockquote,.news blockquote p, .octicon, #contributions-calendar .contrib-details div .num, .ghead .dir,
+ #contributions-calendar .contrib-details div .lbl, a.js-details-target:hover,.tag-info a,.collection-stat,.authorship,
+ a.browse-button,.flash-global a {
   color: #999 !important;
  }
  /* content text */
- #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .pagination .disabled, .diffstat-bar {
+ #contributions-calendar .contrib-details div,.mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .pagination .disabled,
+ .diffstat-bar, .mega-octicon:before, .news .alert .octicon, .time {
   color: #777 !important;
  }
  /* darkest text; Context pane highlight item */
- .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span,.news .alert .octicon,
- .mini-icon-public-repo:before,.mini-icon-pull-request,.mini-icon-remove-close,.mini-icon-link,.mega-octicon:before,
- .featured-label .octicon {
+ .context-pane .selector-item:hover a,.mega-icon:before,.repo-label span, .mini-icon-public-repo:before,.mini-icon-pull-request,
+ .mini-icon-remove-close,.mini-icon-link, .featured-label .octicon {
   color: #444 !important;
  }
  .disabled,.disabled:hover {
@@ -598,10 +608,9 @@
  :-ms-input-placeholder {
   color: #444 !important;
  }
- /* === dark-grey === */
  /* Alerts and activity, remove background gradient */
  .news .alert .title span,.metabox .editable-text:hover,#inbox .list .item .title span {
-  color: #525252 !important;
+  color: #eee !important;
   background-color: transparent !important;
   border: 0 !important;
  }
@@ -709,7 +718,7 @@
  .octofication .message:before {
   content: url(https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/octofication.png) !important;
   position: absolute !important;
-  top: 15% !important;
+  top: 5% !important;
   left: 0 !important;
  }
  .mini-icon-windows:before {
@@ -732,6 +741,15 @@
  }
  .search .minibutton span {
   background-position: center -95px !important;
+ }
+ .js-comment-field {
+  border: 1px solid #555 !important;
+  border-bottom: none !important;
+ }
+ .drag-and-drop {
+  background: #222 !important;
+  border-color: #555 !important;
+  border-top: 1px dashed #444 !important;
  }
  /* issue labels manager */
  #issues_next .sidebar .labels-editable .label-target .delete a {
