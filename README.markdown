@@ -32,6 +32,11 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.6.4 (11/25/2013)
+
+* Add brighter, more readable language colors.
+* Edit box highlight color &amp; Team mention styles now match the base color theme
+
 #### Version 1.6.3 (11/24/2013)
 
 * Add twilight syntax hilighting theme.
