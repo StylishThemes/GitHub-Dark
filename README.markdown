@@ -3,23 +3,13 @@
 Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
 Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different syntax highlighting themes
-* Desert
-* Freya
-* Fruity
-* Github-Dark (modified native theme)
-* Inkpot
-* Monokai
-* Mustang
-* Native
-* No Quarter
-* Peaksea
-* Railscasts
-* Rdark
-* Slate
-* Solarized Dark
-* Vim
-* Wombat
-* Zenburn
+
+<table>
+  <tr><td>Desert</td>     <td>Freya</td>   <td>Fruity</td>  <td>Github-Dark</td>    <td>Inkpot</td></tr>
+  <tr><td>Monokai</td>    <td>Mustang</td> <td>Native</td>  <td>No Quarter</td>     <td>Peaksea</td></tr>
+  <tr><td>Railscasts</td> <td>Rdark</td>   <td>Slate</td>   <td>Solarized Dark</td> <td>Twilight</td></tr>
+  <tr><td>Vim</td>        <td>Wombat</td>  <td>Zenburn</td> <td></td>               <td></td></tr>
+</table>
 
 ### Before & After
 
@@ -41,6 +31,19 @@ Thanks to all that have contributed!
 ### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+
+#### Version 1.6.3 (11/../2013)
+
+* Add twilight syntax hilighting theme.
+* Global Warning: darker style (seen after activating two factor authentication)
+* Issues: email quote reply left border styling (same as blockquote styling)
+* Change all orange indicators to white (#eee). Fixes [issue #70](https://github.com/Mottie/Github-Dark/issues/70).
+* Restore project page link colors
+* Re-center octocat, brighten activity feed icons
+* Lots of tweaks to news page
+* Fix input focus &amp; lots of improvments to the comment box
+* Session history: Fix white background
+* Help page: fix border issues and such
 
 #### Version 1.6.2 (11/20/2013)
 
@@ -95,54 +98,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * Search issues: Add missing `:before` selector for octicons.
 * Fix Private repo label
-
-#### Version 1.5.5 (11/20/2013)
-
-* Fix readme width, match repo summary color to other headers
-* Wiki: fix clone URL button (hover doesn't work since it's flash)
-* Add better solarized dark code screenshot.
-* Search issues: Restore open/close octicon color
-
-#### Version 1.5.4 (11/18/2013)
-
-* Added solarized dark screen shot.
-* Fix selection menu highlighted text.
-
-#### Version 1.5.3 (11/17/2013)
-
-* Removed default truncate styling
-* Added new screenshots!
-* More panels now match the color scheme
-
-#### Version 1.5.2 (11/17/2013)
-
-* Lots of updates, summarizing it as:
-  * Fix button hover states
-  * Octicon color corrections
-  * Gist page updates
-  * Darken text &amp; some gradients, including alerts &amp; activity
-  * Notification indicator changes
-  * Remove 100% max-width from truncated text. Fixes #63.
-
-#### Version 1.5.1 (11/17/2013)
-
-* Added base color to all octicon &amp; links - still need to revert some special styles
-  * Buttons, in general, have white octicons & base color background while hovering
-  * New repo octicon returned to white (green buttons)
-  * Select menu (e.g. switching time span on https://github.com/explore) check mark octicons styled appropriately.
-  * Select menu close icon now white (needs hover color)
-  * Feature tag on the above explore page now has greyed octicon
-  * Header links/icons now white, base color on hover
-* Notification indication now matches base-color
-
-#### Version 1.5 (11/15/2013)
-
-* Add style to proposed tags
-* Add links to contributor names
-* Added a new base-color variable
-  * This allows setting a base-link color to change the overall look of this style
-  * The color also applies to some selector backgrounds.
-  * Sadly, userstyles does not yet allow use of LESS or SCSS, so instead of adding a bunch of offset colors, I just left it as one color setting.
-* Removed gradient styling from red, green, yellow and blue panels/tags.
-* Light blue panels/buttons are now incorporated into the base-color variable.
-* A bunch of other tweaks to the style that I didn't keep track of, sorry.
