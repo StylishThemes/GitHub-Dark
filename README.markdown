@@ -32,7 +32,7 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
-#### Version 1.6.3 (11/../2013)
+#### Version 1.6.3 (11/24/2013)
 
 * Add twilight syntax hilighting theme.
 * Global Warning: darker style (seen after activating two factor authentication)
