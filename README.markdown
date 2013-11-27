@@ -32,6 +32,25 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.6.5 (11/27/2013)
+
+* Fix colors of the language summary bar
+* Fix RSS icons on news &amp; activity pages
+* Help page:
+  * Improve contrast on the search icon
+  * Fix header link colors
+* Fix line numbering - missing !important flag
+* Commit page: Fix diff stats button
+* Comments:
+  * Fix inline comment width
+  * Improve comment box coloring
+  * Fix inline comment hilight
+* Pull request preview: fix background
+* New wiki page: various improvements
+* Fix select element styling
+* Fix pulse page svg lines &amp; merges background.
+* Continue to be in awe of silverwind ;P
+
 #### Version 1.6.4 (11/25/2013)
 
 * Add brighter, more readable language colors.
@@ -98,8 +117,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
   * Peaksea
   * Railscasts
   * Rdark
-
-#### Version 1.5.6 (11/20/2013)
-
-* Search issues: Add missing `:before` selector for octicons.
-* Fix Private repo label
