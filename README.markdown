@@ -31,6 +31,10 @@ Thanks to all that have contributed!
 ### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+#### Version 1.6.6 (11/27/2013)
+
+* Fix `svg|.link` format - userstyles.org prevented saving the style.
+* Help page: Adjusted formatted code line numbering. Fixes #71.
 
 #### Version 1.6.5 (11/27/2013)
 
