@@ -31,6 +31,13 @@ Thanks to all that have contributed!
 ### **Changelog**
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+
+#### Version 1.6.7 (11/29/2013)
+
+* Graph previews in Firefox:
+  * Darken & desaturate.
+  * Hovering over graphs now properly highlights (not working by default).
+
 #### Version 1.6.6 (11/27/2013)
 
 * Fix `svg|.link` format - userstyles.org prevented saving the style.
@@ -72,52 +79,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 * Fix input focus &amp; lots of improvments to the comment box
 * Session history: Fix white background
 * Help page: fix border issues and such
-
-#### Version 1.6.2 (11/20/2013)
-
-* Themes
-  * Add new themes to readme
-  * Fix inkpot theme - it had two #'s together causing css validation errors
-* Buttons - add style to close &amp; cancel buttons (including hover states)
-
-#### Version 1.6.1 (11/20/2013)
-
-* Fix Github Dark theme file location
-* Forgot to mention in the last update, all un-minified css files moved to the src folder within the themes folder.
-
-#### Version 1.6.0 (11/20/2013)
-* Tag page: Fix hover to include the icon
-* Settings menu
-  * Various improvements
-  * Fix delete button for emails
-* Slightly brighten markdown &amp; file backgrounds &amp; fix borders
-* Code
-  * Slightly darken the inline code borders
-  * Improve line number borders
-* Issues
-  * Various improvements to issue discussions
-  * Creation box - fix white border
-  * Header - Tighten the bottom border to 1px
-  * Fix merge pull request button. Fixes [issue #69](https://github.com/Mottie/Github-Dark/issues/69) dude!
-* Fix milestone background
-* User page:
-  * Darken a few borders on the user-page &amp; remove empty lines
-  * Set all borders darker &amp; made boxes slightly darker
-* Commits
-  * Main page - add border to header; fix browser button
-  * Header - allow border radius
-  * Log - fix browse button
-  * Log - fix border-radii &amp; borders
-* Gist
-  * Style the secret gist label
-  * Fix gist diff padding &amp; revision heading
-  * Fix gist boxes background, makde bold text slightly darker
-* Add more themes &amp; updated demo
-  * Desert
-  * Freya
-  * Inkpot
-  * Mustang
-  * No Quarter
-  * Peaksea
-  * Railscasts
-  * Rdark
