@@ -463,11 +463,11 @@
  .contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
  .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
  .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
- /* graphs page - GitHub uses rendered grey-on-white images for the graph previews here,
-    and the best way to handle them would probably be filter: invert, which isn't supported
-    on Firefox yet, so we just reduce the opacity (and contrast) for now.*/
+ /* graph previews - invert images */
+ /* Chrome doesn't seem to support these filters yet, so we go with a invert on Chrome*/
  .js-gshot > a {
-  opacity: 0.3 !important;
+  filter: url(data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22invert%22%3E%3CfeColorMatrix%20values%3D%22-1%200%200%200%201%200%20-1%200%200%201%200%200%20-1%200%201%200%200%200%20.4%200%22%2F%3E%3C%2Ffilter%3E%3C%2Fsvg%3E#invert);
+  -webkit-filter: invert(100%);
  }
  .js-gshot > p {
   border-bottom: none !important;
