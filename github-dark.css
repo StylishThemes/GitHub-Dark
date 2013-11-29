@@ -464,13 +464,31 @@
  .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
  .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
  /* graph previews - invert images */
- /* Chrome doesn't seem to support these filters yet, so we go with a invert on Chrome*/
- .js-gshot > a {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 .4 0\'/></filter></svg>#i");
+ #graph-shots li>a {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
   -webkit-filter: invert(100%);
  }
- .js-gshot > p {
+ #graph-shots li>a:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/><feColorMatrix type=\'hueRotate\' values=\'200\'/></filter></svg>#i") !important;
+  -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+ }
+ #graph-shots li:nth-child(1)>a:hover {
+  background-position: -448px 0 !important;
+ }
+ #graph-shots li:nth-child(2)>a:hover {
+  background-position: -448px -120px !important;
+ }
+ #graph-shots li:nth-child(3)>a:hover {
+  background-position: -448px -240px !important;
+ }
+ #graph-shots li:nth-child(4)>a:hover {
+  background-position: -448px -480px !important;
+ }
+ #graph-shots li>p {
   border-bottom: none !important;
+ }
+ .js-gshot {
+  background: #000 !important;
  }
  /* contributors page - svg styling */
  svg|svg.spark, svg|svg.viz {
