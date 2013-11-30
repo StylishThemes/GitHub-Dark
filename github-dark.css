@@ -112,13 +112,13 @@
   text-shadow: none !important;
  }
  /* === transparent background only === */
- table tr,.textographic a.repo,#network .repo span,.stars-browser .filter-bar,
+ table tr,.textographic a.repo,.stars-browser .filter-bar,
  .topsearch span.search-input,p.meta,.js-menu-container,.sidebar .milestone,.commit-desc pre,.profilecols .filter-bar,
  .gist .button-group,div.content-header .search-form,#wrapper,.file-code,.gist-advanced-options .select-menu-button:after,
  #com .wikistyle, #com .wikistyle p,.css-truncate:hover .css-truncate-target,li.public,.action-bubble .bubble,.gravatar,
  .gravatar img,.facebox-popup,.branch-infobar,.tmp-reusable-bubble .bubble-inner,li.commit,#facebox,
  .commit-group-item .authorship,pre.headers code,.gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code,
- .commit-comments-header-sha, .menu-container, .milestone,.more-repos {
+ .commit-comments-header-sha, .menu-container, .milestone,.more-repos, #network .repo span {
   background: transparent !important;
  }
  .select-menu-item .octicon {
@@ -463,8 +463,8 @@
  .contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
  .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
  .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
- /* graph previews - invert images */
- #graph-shots li>a {
+ /*  invert images */
+ #graph-shots li>a, #network .repo img:not(.gravatar) {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
   -webkit-filter: invert(100%);
  }
@@ -539,12 +539,12 @@
  .subnav-bar > ul > li > ul > li > a:hover,ol.download-list li:nth-child(2n),#wiki-history table tr:nth-child(2n) td,
  #files.commentable tr:hover td.line-comments,#files.commentable tr:hover td .gd.line-comments,
  #files.commentable tr:hover td .gi.line-comments, #files.commentable tr:hover td .gc.line-comments,
- .issue.active,.select-menu-button:after,.range-editor span.flag,.range-editor .range {
+ .issue.active,.select-menu-button:after,.range-editor span.flag,.range-editor .range{
   background-color: #444 !important;
  }
  /* === #555 === */
  /* Highlight Panel background (#555), leave image, no border, with radius */
- .paging,.button-pager,#integration-branch,.add-pill-form,#network .repo:hover,.selectable_day.hover,
+ .paging,.button-pager,#integration-branch,.add-pill-form,.selectable_day.hover,
  .list-module a:hover,.js-guides a:hover,.section-nav .active a,#dashboard .filter-bar li a.filter_selected:after,
  .hidden-text-expander a:hover,.switcher > span:after {
   background: #555 !important;
@@ -678,7 +678,7 @@
   color: #a31e16 !important;
  }
  /* === Yellow panel === */
- .infotip,.form-actions .tip,.mini-callout,.snippet em,#network .repo span,#message .sent,.notification,.plan.free,
+ .infotip,.form-actions .tip,.mini-callout,.snippet em,#message .sent,.notification,.plan.free,
  .ejector,#issues_search .results em,.bootcamp-help ul li,.page-notice,.feature-tabs .tab-button,.chzn-results li em,
  #missing-readme,.callout,.btn-download,a.button.classy,.warning,.signed-out-comment,#message.minor,.contributing,
  .discussion-topic .branch-status.status-pending,.facebox-alert {
