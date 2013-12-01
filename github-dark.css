@@ -552,6 +552,9 @@
   border-radius: 3px !important;
   background-clip: padding-box !important;
  }
+ .settings-email .label:not(.default) {
+  background: #555 !important;
+ }
  a.merged-pulls {
   background: #aaa !important;
  }
@@ -605,13 +608,13 @@
  .feature-overview strong,.download-list h4,ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
  .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,.header a,
  .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong, .mini-icon.search-input,
- #header ul.top-nav li a {
+ #header ul.top-nav li a, .lines-changed, .lines-changed:hover {
   color: #ccc !important;
  }
  /* shade darker */
  option, .news blockquote,.news blockquote p, .octicon, #contributions-calendar .contrib-details div .num, .ghead .dir,
  #contributions-calendar .contrib-details div .lbl,.tag-info a,.collection-stat,.authorship,
- a.browse-button,.flash-global a, .repository-lang-stats .percent {
+ a.browse-button,.flash-global a, .repository-lang-stats .percent,.diffstat-summary {
   color: #999 !important;
  }
  /* content text */
@@ -664,7 +667,7 @@
  .btn-close-issue,button.classy[name="comment_and_close"],.error_box,.flash-error,#message.major,
  .minibutton.danger:hover,.minibutton.danger:hover span,.comment-form-error,.mergeable.dirty,.closed-issues,.state-indicator.closed,
  .branch-status.status-error,.branch-status.status-failure,.state-closed,.mergeable-dirty .merge-status-icon {
-  background: #a31e16 !important;
+  background: #c31e16 !important;
   border-color: #333 !important;
   color: #ccc !important;
  }
@@ -674,8 +677,8 @@
   border: #b00 1px solid !important;
  }
  .minibutton.danger,.button.danger,.minibutton.danger span,.closed.mini-icon,.closed.mega-octicon,.closed.mega-octicon:before,
- .closed.octicon {
-  color: #a31e16 !important;
+ .closed.octicon, .deletions {
+  color: #c31e16 !important;
  }
  /* === Yellow panel === */
  .infotip,.form-actions .tip,.mini-callout,.snippet em,#message .sent,.notification,.plan.free,
@@ -691,9 +694,13 @@
  #forkqueue .legend .clean,#revisions ul li.current,.excerpt,.selectable_day.today,.plan.business,.popout,
  #statusbar,.clean,.clean td,.mergeable.clean,#download_button,.status-box.good a,
  button.classy.primary,.progress-bar .progress,.new-issues,.new-pulls,.mergeable-clean .merge-status-icon,
- .repo-owner-comment .comment-header-tag {
+ .repo-owner-comment .comment-header-tag, .settings-email .default {
   background: #305530 !important;
   border-color: #060 !important;
+ }
+ /* Green text */
+ .insertions {
+  color: #0a3 !important;
  }
  /* interactive button - bright border */
  a.new-repo,.state-open,.state-proposed,.status-success,.state-indicator.proposed,.state-indicator.open,
