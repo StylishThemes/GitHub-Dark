@@ -307,13 +307,16 @@
  /* === #181818 === */
  /* needed background inbetween #111 and #222 :P */
  code:not(.commit-comments-header-sha),.counter,.social-count,.gc .diff-line-code,.commitinfo,.list-group-item.navigation-focus,
- .featured-commit-activity-graph, .featured-repo-logo,.gobutton>.sha .octicon,.js-details-container.navigation-focus,
- .js-details-container.navigation-focus:nth-child(2n),.full-commit .commit-meta,.participation,.filter-list li span.bar,
+ .featured-commit-activity-graph, .featured-repo-logo,.gobutton>.sha .octicon,.navigation-focus .gobutton>.sha .octicon,.full-commit .commit-meta,.participation,.filter-list li span.bar,
  .codesearch-cols em,.search-result-header,.branch-infobar, .highlight pre, .file-data .line-numbers,
  .blob-line-nums, .file-data {
   background-color: #181818 !important;
   border-color: #333 !important;
   border-width: 1px !important;
+ }
+ .commit-group-item:nth-child(2n) {
+  background: #181818 !important;
+  border: 0 !important;
  }
  /* slightly darker background than #222 */
  .box-body, .markdown-body, table.files {
@@ -348,7 +351,7 @@
  .pagehead-actions,.filterbar .filters li,.starting-comment .body,.chzn-single,.expandable h3 a:last-child,
  .commit_oneline,.list-tip,.new-comments .body,.markdown-body tt,.autocomplete-results,span.gravatar,
  .subscription-row,svg,.blog-post .meta,.conversation-list-heading .inner,.pulse-sections .meta,.list-group-item,
- .filterbox, .release-timeline .js-details-container {
+ .filterbox, .release-timeline .js-details-container,.commit-group {
   background: #222 none !important;
   border-color: #444 !important;
   border-radius: 3px !important;
@@ -368,14 +371,14 @@
  .tip-body,.news .alert .body,.rule,.avatared img,.main h2,.issue.even,.listing.even,#assignee,.sidebar .module,
  .sidebar-module > ul,.commit_oneline td,.commits td,.commits code,#footer,#footer .lower_footer,#footer-push,
  .notifications th,#notification-center li.read,.repo_list li,.tree-browser td,.ace_scroller,.capped-box,
- .issues-list li.js-navigation-item,a.selected,.repo-collection>ul, .file,.commit-group,.comment-count,
+ .issues-list li.js-navigation-item,a.selected,.repo-collection>ul, .file,.comment-count,
  .comparison-list, .comparison-list .title {
   background-color: #222 !important;
   color: #eee !important;
   border-color: #555 !important;
  }
  /* Darkest background (#222), leave image, add border */
- .image,.fieldgroup .fields,.commit-group-item:nth-child(2n) {
+ .image,.fieldgroup .fields {
   background-color: #222 !important;
   color: #eee !important;
   border: #555 1px solid !important;
@@ -421,7 +424,7 @@
  .commit-preview .message,.tip-box h4,.button-group,.wikistyle,.commit-preview p.error,.pagehead ul.tabs li.contextswitch,
  #browser tr th,.status-box h4,.line_numbers,.date_selector,.date_selector table th,
  #files span.icon,#issues_list .actions,.list-browser-footer,#repos .public,.inset-callout,#repo-message,
- .summary-stats li a:hover, .commit, .commit-group-item:nth-child(2n) {
+ .summary-stats li a:hover, .commit {
   background: #333 none !important;
   color: #eee !important;
   border: 0 !important;
@@ -566,7 +569,7 @@
  /* === gradient === */
  /* dark grey gradient */
  kbd,.minibutton,a.feed,.button:not(img),button.classy,a.button.classy,.pagination a,.pagination .gap,.header,
- .comment-header,.pagehead ul.tabs li a,.gobutton,.login_form input[type="submit"],.list-browser-filterbar,
+ .comment-header,.pagehead ul.tabs li a,.login_form input[type="submit"],.list-browser-filterbar, .gobutton,
  .top-bar,div.news .pagination a,ul#bootcamp li a h4,.minibutton:disabled,.pull-info,.notification-indicator,
  #graph_data .tab.selected,#gists .context-menu-container,.zeroclipboard-button,.search-form button,
  .recently-touched-branches,body#com #header,.white-nav .selected span,.select-menu-header,.clone-url-button a,
@@ -578,7 +581,7 @@
   border-color: #333 !important;
  }
  /* inverted dark grey gradient */
- .progress-bar,.pagination .current,div.news .pagination a:hover, .gobutton:hover,
+ .progress-bar,.pagination .current,div.news .pagination a:hover,
  .clone-url-button.selected a,.asc .sort-type,.desc .sort-type,.mini-bar-graph,.minibutton.selected,
  .issues-list>ul>li.unread,.dashboard-tabs a.selected,.dashboard-tabs li a:hover {
   background: linear-gradient(to bottom, #181818, #282828) !important;
@@ -725,7 +728,7 @@
  }
  /* === silver panel/button === */
  .kbd,.signup-button:hover,.hero .textographic,.hero .screenographic,.dashboard-notice,
- #readme span.name,.markdown-format .alert, .js-details-container.navigation-focus .gobutton,.commit-group-heading {
+ #readme span.name,.markdown-format .alert,.commit-group-heading {
   background: linear-gradient(to bottom, #444, #333) !important;
   border-color: #555 !important;
  }
@@ -829,6 +832,13 @@
  .multiple-avatars,.multiple-avatars:before,table.files, table.files tr,.simple-conversation-list>li:first-child,
  .gobutton.with-comments .sha, .commit-group-item, .diff-line-num, .blob-line-nums {
   border: 0 !important;
+ }
+ /* commit List focus */
+ .js-details-container.navigation-focus,.js-details-container.navigation-focus:nth-child(2n) {
+  background: #333 !important;
+ }
+ .js-details-container.navigation-focus .gobutton {
+  background: linear-gradient(#444, #222) !important;
  }
  /* no top border radius */
  table.files {
