@@ -32,6 +32,24 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
+#### Version 1.6.8 (12/5/2013)
+
+* Various improvements:
+  * Network page
+  * Commit list & fix browser arrow hover
+  * Signup page
+* Issues
+  * Fix issue action background
+  * Fix label hover for new issues
+* Milestone selector: fix border
+* Restore footer logo hover effect
+* Slightly brighten red tone; fix pulse page
+* Match the Compare & review button to the branch button.
+* Enforce geometric precision on all SVGs
+* Pulse page: Fix header background & borders
+* Simplify & fix repo labels
+* Diff page: New styling for code expanders
+
 #### Version 1.6.7 (11/29/2013)
 
 * Graph previews in Firefox:
@@ -66,16 +84,3 @@ See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
 
 * Add brighter, more readable language colors.
 * Edit box highlight color &amp; Team mention styles now match the base color theme
-
-#### Version 1.6.3 (11/24/2013)
-
-* Add twilight syntax hilighting theme.
-* Global Warning: darker style (seen after activating two factor authentication)
-* Issues: email quote reply left border styling (same as blockquote styling)
-* Change all orange indicators to white (#eee). Fixes [issue #70](https://github.com/Mottie/Github-Dark/issues/70).
-* Restore project page link colors
-* Re-center octocat, brighten activity feed icons
-* Lots of tweaks to news page
-* Fix input focus &amp; lots of improvments to the comment box
-* Session history: Fix white background
-* Help page: fix border issues and such
