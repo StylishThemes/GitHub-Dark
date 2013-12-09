@@ -2,7 +2,7 @@
 
 Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 
-Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different syntax highlighting themes
+Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes
 
 <table>
   <tr><td>Desert</td>     <td>Freya</td>   <td>Fruity</td>  <td>Github-Dark</td>    <td>Inkpot</td></tr>
@@ -13,10 +13,10 @@ Use [this demo](http://mottie.github.io/Github-Dark/) to visualize the different
 
 ### Before & After
 
- [ ![before screenshot](https://raw.github.com/Mottie/Github-Dark/master/images/before_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/before.png)
+ [ ![before screenshot](https://raw.github.com/StylishThemes/Github-Dark/master/images/before_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/before.png)
 
- [ ![red theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_red_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_red.png)
- [ ![blue theme](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue_th.png) ](https://raw.github.com/Mottie/Github-Dark/master/images/after_blue.png)
+ [ ![red theme](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_red_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_red.png)
+ [ ![blue theme](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_blue_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_blue.png)
  
 ### Contributions
 
@@ -26,11 +26,15 @@ Thanks to all that have contributed!
 * [mihawk90](http://github.com/mihawk90)
 * [aalvarado](http://github.com/aalvarado)
 * [ddavison](http://github.com/ddavison)
-* and [others](https://github.com/Mottie/Github-Dark/graphs/contributors)!
+* and [others](https://github.com/StylishThemes/Github-Dark/graphs/contributors)!
 
 ### **Changelog**
 
-See the [full change log here](https://github.com/Mottie/Github-Dark/wiki)
+See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
+
+#### Version 1.6.9 (12/9/2013)
+
+* moved repo to https://github.com/StylishThemes/Github-Dark
 
 #### Version 1.6.8 (12/5/2013)
 
