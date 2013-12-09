@@ -90,7 +90,7 @@
   display: block !important;
  }
  /* === no margin === */
- #dashboard {
+ #dashboard, table.branches {
   margin: 0 !important;
  }
  /* === Remove shadow === */
@@ -159,7 +159,7 @@
  /* === Darken border === */
  pre,ul li,table,table tr,table td,h1,h2,h3,hr,img,#browser table,#browser table th,#issues .menu ul li,.counter,.issues td,
  ul.main_nav li.selected,.browser_header,.issue-head,.bootcamp-help .image,.clone-url-button,#wiki-wrapper h2,
- table.branches td,.list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.code-list-item,
+ .list-tip li,.boxed-group-list > li,.section-nav a,.repo_list li a,.graphs .axis,.code-list-item,
  .switcher > span:after,a.assignee-bit,.menu li,.notifications td,ul.hook-list,ul.hook-list li,.repo .border,.box-action,
  ul.repo-stats li a,.footer_nav h4,.tabnav,.blog-feedback,.chromed-list-browser,.js-activate-link,.footer-divider,
  .chromed-list-browser div,.filter-bar,.columns.sidebar,.participation-graph canvas,#contributors .person,
@@ -182,7 +182,7 @@
  blockquote,.pagination a:first-child,.pagination a:last-child,.pagination span:first-child,.pagination span:last-child,
  .range-editor span.flag,.range-editor .range,.dashboard-tabs,ul.sunken-menu-group a.selected, table.files td,
  .vcard-details, .vcard-stats, .repo-list-item, .box-body, .grid .col, .composer-infobar,.news .alert,.email-signature-reply,
- .email-quoted-reply,.graphs,.graph, .summary-stats li, .columns.equacols.bordered {
+ .email-quoted-reply,.graphs,.graph, .summary-stats li, .columns.equacols.bordered, table.branches td {
   border-color: #333 !important;
  }
  /* darkest border */
@@ -377,7 +377,7 @@
  }
  /* === #333 === */
  /* Panel background (#333) only */
- .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, ul.filter-list .filter-item:hover {
+ .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, ul.filter-list .filter-item:hover, table.branches tr:hover td {
   background: #333 !important;
  }
  /* Panel background (#333), leave image, no border, with radius */
@@ -523,7 +523,7 @@
  }
  /* Light Panel background (#444), no image, with border, no radius */
  .tabs,table th,#browser td,#issues_next li.selected,.selectable_day.selected,.avatarname img,.diffstat,div#common-issues,
- #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,table.branches tr:hover td,
+ #wiki-history .author img,.options-content h3,#issues-dashboard .actions,#readme .name,
  .list-tip a:hover,.boxed-group-list > li:hover,.display div.choice:nth-child(2n+1),.display tr:nth-child(2n+1),
  .write-selected .write-tab,.preview-selected .preview-tab,.menu a:hover,.select-menu-tabs a.selected,.meta,
  .list-browser-item.navigation-focus {
@@ -554,6 +554,15 @@
  }
  a.merged-pulls {
   background: #aaa !important;
+ }
+ .diverge-widget .separator {
+  background: #ccc !important;
+ }
+ .state-widget .behind .bar {
+  background: #555 !important;
+ }
+ .state-widget .ahead .bar {
+  background: #999 !important;
  }
  /* actions in issues - this style needs to be after .bubble */
  .action-bubble .bubble {
@@ -700,11 +709,11 @@
   border-color: #060 !important;
  }
  /* Green text */
- .insertions {
-  color: #0a3 !important;
+ .insertions,.open.mini-icon,.open.mega-octicon,.open.mega-octicon:before,.open.octicon,.octicon-check {
+  color: #6cc644 !important;
  }
  /* interactive button - bright border */
- a.new-repo,.state-open,.state-proposed,.status-success,.state-indicator.proposed,.state-indicator.open,
+ a.new-repo,.state-open,.state-proposed,.status-success:not(.octicon-check),.state-indicator.proposed,.state-indicator.open,
  .state-indicator.reopened,.branch-status,.mergeable,#message.good,.big-notice,.octofication .message,
  .release-downloads a.primary,.button.primary {
   background: #305530 !important;
@@ -720,9 +729,6 @@
  #download_button:hover,.noproblems .pageheader_wrap,a.new-repo:hover,button.classy.primary:hover,
  .release-downloads a.primary:hover, .button.primary:not(:disabled):hover {
   background: #373 !important;
- }
- .open.mini-icon,.open.mega-octicon,.open.mega-octicon:before,.open.octicon {
-  color: #6cc644 !important;
  }
  /* === silver panel/button === */
  .kbd,.signup-button:hover,.hero .textographic,.hero .screenographic,.dashboard-notice,
