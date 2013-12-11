@@ -22,6 +22,7 @@ Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the di
 
 Thanks to all that have contributed!
 
+* [mottie](http://github.com/mottie)
 * [silverwind](http://github.com/silverwind)
 * [mihawk90](http://github.com/mihawk90)
 * [aalvarado](http://github.com/aalvarado)
