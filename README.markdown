@@ -33,6 +33,30 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.6.10 (12/12/2013)
+
+* Graphs
+  * Slightly darken network canvas graph. See [issue #73](https://github.com/StylishThemes/Github-Dark/issues/73)
+  * Color graph labels for additions/deletions
+  * More SVG styling, improved punchcard
+* Text selection styling
+  * Now matches the base color (bad idea?)
+  * Gist ace editor selection color now matches the base color
+* Code
+  * Add padding to inline code
+  * pre & code base background colors now match (non-syntax highlighted code)
+* Issue list
+  * Fix icon hover color
+  * Fix border-radii
+* Fix loading spinner on settings page (it uses an img & not a background spinner)
+* Gist
+  * Add slow loading search overlay styling
+  * Select item coloring (Gist advanced options)
+* Fix new release page & edit boxes
+* Darken comment content
+* Fix repo sidebar selection
+* Restore whitespace
+
 #### Version 1.6.9 (12/9/2013)
 
 * moved repo to https://github.com/StylishThemes/Github-Dark
