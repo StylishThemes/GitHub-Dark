@@ -660,7 +660,7 @@
  .feature-overview strong,.download-list h4,ol.repository-lang-stats-numbers li .lang, .commit .sha, a.tabnav-tab.selected,
  .tabnav .active a, .vcard-stat-count, .vcard-username, #readme .octicon-link, .tag-info .tag-name,.language,.header a,
  .commit-title .message, .files .message, .numbers-summary a, .revision .creator, .revision .creator strong, .mini-icon.search-input,
- #header ul.top-nav li a, .lines-changed, .lines-changed:hover {
+ #header ul.top-nav li a, .lines-changed, .lines-changed:hover, .highlight .file-diff-line:hover * {
   color: #ccc !important;
  }
  /* shade darker */
@@ -726,7 +726,7 @@
  }
  /* bright red text */
  .minibutton.danger,.button.danger,.minibutton.danger span,.closed.mini-icon,.closed.mega-octicon,.closed.mega-octicon:before,
- .closed.octicon, .deletions, .cdel {
+ .closed.octicon, .deletions, .cdel, .gd .diff-line-num {
   color: #c31e16 !important;
  }
  /* === Yellow panel === */
@@ -748,7 +748,7 @@
   border-color: #060 !important;
  }
  /* Green text */
- .insertions,.open.mini-icon,.open.mega-octicon,.open.mega-octicon:before,.open.octicon,.octicon-check, .cadd {
+ .insertions,.open.mini-icon,.open.mega-octicon,.open.mega-octicon:before,.open.octicon,.octicon-check, .cadd, .gi .diff-line-num {
   color: #6cc644 !important;
  }
  /* interactive button - bright border */
@@ -783,7 +783,6 @@
  #user-links .unread_count,.minorproblem .pageheader_wrap, .flash-warn {
   background: rgba(203, 108, 0, 0.8) !important;
  }
-
  /* ajax loading */
  .pjax-loading {
   background: rgba(64, 64, 64, 0.8) !important;
@@ -953,47 +952,50 @@
  .blog-aside .octicon-rss, .dashboard-feed-icon.octicon-rss {
   color: #f93 !important;
  }
-
  /* diff highlighting (no syntax highlight) */
+
+ /* main diff text color */
+ .diff-line-pre {
+  color: #ccc !important;
+ }
+ .highlight .gc td {
+  border-top: 1px solid #333 !important;
+  border-bottom: 1px solid #333 !important;
+ }
  /* light grey - breaks in diff (with line numbers) */
  .highlight .gc td,.highlight .gc pre,.highlight .gu {
-  background: #333 !important;
-  border-color: #333 !important;
+  background: #222 !important;
   color: #888 !important;
  }
  /* git diff line additions (dark green) */
  .highlight .gi,.highlight .gi pre,.gi .diff-line-code,.gi .diff-line-code pre {
-  background: #040 !important;
-  border-color: #080 !important;
-  color: #ddd !important;
- }
- /* git diff line numbers (med green) */
- .gi .diff-line-num {
   background: #030 !important;
-  border-color: #040 !important;
-  color: #ddd !important;
- }
- /* git diff inline additions (green) */
- .highlight .gi .x {
-  background: #408040 !important;
-  color: #ddd !important;
+  border-color: #080 !important;
  }
  /* git diff line deletions (dark red) */
  .highlight .gd,.gd .diff-line-code,.gd .diff-line-code pre {
   background: #400 !important;
-  border-color: #600 !important;
-  color: #ccc !important;
+  border-color: #800 !important;
+ }
+ /* git diff inline additions (green) */
+ .highlight .gi .x {
+  background: #252 !important;
+  color: #eee !important;
+ }
+ /* git diff inline deletions (red) */
+ .highlight .gd .x {
+  background: #622 !important;
+  color: #eee !important;
+ }
+ /* git diff line numbers (med green) */
+ .gi .diff-line-num {
+  background: #020 !important;
+  border-color: #040 !important;
  }
  /* git diff line deletions (med red) */
  .gd .diff-line-num {
   background: #300 !important;
   border-color: #500 !important;
-  color: #ccc !important;
- }
- /* git diff inline deletions (red) */
- .highlight .gd .x {
-  background: #804040 !important;
-  color: #ddd !important;
  }
  /* custom language colors */
  .language-color[style$="#9DC3FF;"] {background-color: #ae8e00 !important}
