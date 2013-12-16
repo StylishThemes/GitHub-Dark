@@ -33,6 +33,27 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.6.11 (12/15/2013)
+
+* Improved loading images. See [issue #79](https://github.com/StylishThemes/Github-Dark/issues/79)
+* Diff page
+  * Update/fix dif page styling
+  * Inline comment editor styling
+  * Diff color tweaks
+* Blame page: Styling for heat map
+* Issues: Darken in-issue commit comments
+* Fix keyboard mappings popup
+* Remove `pre` padding
+* Release page - fix uploaded file background
+* Clean up of css file to make it more readable (minimal horizontal scrolling when viewing the file)
+* Fix steps in sign-in page
+* Contributor graph page styling (new classes introduced)
+* Fix bright blue merge/merged status icons
+* Restore pull request header border
+* Fix repo menu hover color
+* Fix featured label
+* Removed Opera specific selectors (userstyles throws an error)
+
 #### Version 1.6.10 (12/12/2013)
 
 * Graphs
@@ -84,32 +105,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 * Graph previews in Firefox:
   * Darken & desaturate.
   * Hovering over graphs now properly highlights (not working by default).
-
-#### Version 1.6.6 (11/27/2013)
-
-* Fix `svg|.link` format - userstyles.org prevented saving the style.
-* Help page: Adjusted formatted code line numbering. Fixes #71.
-
-#### Version 1.6.5 (11/27/2013)
-
-* Fix colors of the language summary bar
-* Fix RSS icons on news &amp; activity pages
-* Help page:
-  * Improve contrast on the search icon
-  * Fix header link colors
-* Fix line numbering - missing !important flag
-* Commit page: Fix diff stats button
-* Comments:
-  * Fix inline comment width
-  * Improve comment box coloring
-  * Fix inline comment hilight
-* Pull request preview: fix background
-* New wiki page: various improvements
-* Fix select element styling
-* Fix pulse page svg lines &amp; merges background.
-* Continue to be in awe of silverwind ;P
-
-#### Version 1.6.4 (11/25/2013)
-
-* Add brighter, more readable language colors.
-* Edit box highlight color &amp; Team mention styles now match the base color theme
