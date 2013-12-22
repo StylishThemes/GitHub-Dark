@@ -14,10 +14,10 @@ Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the di
 
 ### Before & After
 
- [ ![before screenshot](http://stylishthemes.github.io/Github-Dark/images/before_th.png) ](http://stylishthemes.github.io/Github-Dark/images/before.png)
+ [ ![before screenshot](http://stylishthemes.github.io/Github-Dark/images/screenshots/before_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/before.png)
 
- [ ![red theme](http://stylishthemes.github.io/Github-Dark/images/after_red_th.png) ](http://stylishthemes.github.io/Github-Dark/images/after_red.png)
- [ ![blue theme](http://stylishthemes.github.io/Github-Dark/images/after_blue_th.png) ](http://stylishthemes.github.io/Github-Dark/images/after_blue.png)
+ [ ![red theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red.png)
+ [ ![blue theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue.png)
  
 ### Contributions
 
@@ -39,7 +39,14 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 * Added new syntax highlighting themes:
   * 3024 Dark theme by [idleberg](http://github.com/idleberg)
   * Tomorrow Night, Tomorrow Night Blue, Tomorrow Night Bright &amp; Tomorrow Night Eighties theme by [chriskempson](https://github.com/chriskempson/tomorrow-theme); converted to Pygments by [MozMorris](https://github.com/MozMorris/tomorrow-pygments).
-* Added the ability to add a background image to the body via userstyles.org only.
+* Added the ability to add a background image to the body via userstyles.org only. Fixes issue [#84](https://github.com/StylishThemes/Github-Dark/issues/84] &amp; [#85](https://github.com/StylishThemes/Github-Dark/issues/85).
+* Fix development page styling.
+* Add SVG spinner image (not yet implemented)
+* Tweak comment header colors. Fixes [issue #83](https://github.com/StylishThemes/Github-Dark/issues/83).
+* Set up organization page styling.
+* Set selection text color. Fixes [issue #82](https://github.com/StylishThemes/Github-Dark/issues/82).
+* Fixed plain text readmes.
+* Added new screenshot images.
 
 #### Version 1.6.11 (12/15/2013)
 
