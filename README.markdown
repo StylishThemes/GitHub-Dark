@@ -5,18 +5,19 @@ Hosted at [userstyles.org](http://userstyles.org/styles/37035)
 Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes
 
 <table>
-  <tr><td>Desert</td>     <td>Freya</td>   <td>Fruity</td>  <td>Github-Dark</td>    <td>Inkpot</td></tr>
-  <tr><td>Monokai</td>    <td>Mustang</td> <td>Native</td>  <td>No Quarter</td>     <td>Peaksea</td></tr>
-  <tr><td>Railscasts</td> <td>Rdark</td>   <td>Slate</td>   <td>Solarized Dark</td> <td>Twilight</td></tr>
-  <tr><td>Vim</td>        <td>Wombat</td>  <td>Zenburn</td> <td></td>               <td></td></tr>
+  <tr><td>3024 Dark</td>      <td>Desert</td>                <td>Freya</td>                 <td>Fruity</td>                  <td>Github-Dark</td></tr>
+  <tr><td>Inkpot</td>         <td>Monokai</td>               <td>Mustang</td>               <td>Native</td>                  <td>No Quarter</td></tr>
+  <tr><td>Peaksea</td>        <td>Railscasts</td>            <td>Rdark</td>                 <td>Slate</td>                   <td>Solarized Dark</td></tr>
+  <tr><td>Tomorrow Night</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Eighties</td> <td>Twilight</td></tr>
+  <tr><td>Vim</td>            <td>Wombat</td>                <td>Zenburn</td>               <td></td>                        <td></td></tr>
 </table>
 
 ### Before & After
 
- [ ![before screenshot](https://raw.github.com/StylishThemes/Github-Dark/master/images/before_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/before.png)
+ [ ![before screenshot](http://stylishthemes.github.io/Github-Dark/images/before_th.png) ](http://stylishthemes.github.io/Github-Dark/images/before.png)
 
- [ ![red theme](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_red_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_red.png)
- [ ![blue theme](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_blue_th.png) ](https://raw.github.com/StylishThemes/Github-Dark/master/images/after_blue.png)
+ [ ![red theme](http://stylishthemes.github.io/Github-Dark/images/after_red_th.png) ](http://stylishthemes.github.io/Github-Dark/images/after_red.png)
+ [ ![blue theme](http://stylishthemes.github.io/Github-Dark/images/after_blue_th.png) ](http://stylishthemes.github.io/Github-Dark/images/after_blue.png)
  
 ### Contributions
 
@@ -32,6 +33,13 @@ Thanks to all that have contributed!
 ### **Changelog**
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
+
+#### Version 1.7 (12/21/2013)
+
+* Added new syntax highlighting themes:
+  * 3024 Dark theme by [idleberg](http://github.com/idleberg)
+  * Tomorrow Night, Tomorrow Night Blue, Tomorrow Night Bright &amp; Tomorrow Night Eighties theme by [chriskempson](https://github.com/chriskempson/tomorrow-theme); converted to Pygments by [MozMorris](https://github.com/MozMorris/tomorrow-pygments).
+* Added the ability to add a background image to the body via userstyles.org only.
 
 #### Version 1.6.11 (12/15/2013)
 
@@ -99,9 +107,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 * Pulse page: Fix header background & borders
 * Simplify & fix repo labels
 * Diff page: New styling for code expanders
-
-#### Version 1.6.7 (11/29/2013)
-
-* Graph previews in Firefox:
-  * Darken & desaturate.
-  * Hovering over graphs now properly highlights (not working by default).
