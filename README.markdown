@@ -34,6 +34,12 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.1 (12/21/2013)
+
+* Body background tweaks to get it working again.
+* Give page head some transparency, allowing background image to show through.
+* Removed dev page image - repeated definition.
+
 #### Version 1.7 (12/21/2013)
 
 * Added new syntax highlighting themes:
@@ -96,21 +102,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 #### Version 1.6.9 (12/9/2013)
 
 * moved repo to https://github.com/StylishThemes/Github-Dark
-
-#### Version 1.6.8 (12/5/2013)
-
-* Various improvements:
-  * Network page
-  * Commit list & fix browser arrow hover
-  * Signup page
-* Issues
-  * Fix issue action background
-  * Fix label hover for new issues
-* Milestone selector: fix border
-* Restore footer logo hover effect
-* Slightly brighten red tone; fix pulse page
-* Match the Compare & review button to the branch button.
-* Enforce geometric precision on all SVGs
-* Pulse page: Fix header background & borders
-* Simplify & fix repo labels
-* Diff page: New styling for code expanders
