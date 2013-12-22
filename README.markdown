@@ -34,6 +34,11 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.2 (12/22/2013)
+
+* More cleanup to allow some of the body background image to show through
+* Darkened some borders to make them more subtle.
+
 #### Version 1.7.1 (12/21/2013)
 
 * Body background tweaks to get it working again.
