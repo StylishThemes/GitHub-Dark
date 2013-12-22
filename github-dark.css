@@ -52,8 +52,9 @@
   .listings-layout .nav li a:hover, .search-form button:hover, .state-merged, .url-box .zeroclipboard-is-hover,
   .select-menu-item.navigation-focus, .select-menu-item.navigation-focus.selected, .notification-indicator .unread,
   ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
-  table.upgrades tr:hover td, #notification-center li.unread, .email-format .email-hidden-toggle:hover a {
-    background: /*[[base-color]]*/ #4183C4 !important;
+  table.upgrades tr:hover td, #notification-center li.unread, .email-format .email-hidden-toggle:hover a,
+  .js-topic a:hover {
+    background-color: /*[[base-color]]*/ #4183C4 !important;
     color: #eee !important;
   }
   .context-button:after {
@@ -135,8 +136,11 @@
   .css-truncate:hover .css-truncate-target, li.public, .gravatar img, .facebox-popup, .commit-comments-header-sha,
   .tmp-reusable-bubble .bubble-inner, .commit-group-item .authorship, pre.headers code, .columns.equacols.bordered,
   .gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code, .menu-container, .milestone, .more-repos,
-  #network .repo span, .previewable-comment-form, .keyboard-mappings th {
+  #network .repo span, .previewable-comment-form, .keyboard-mappings th, .api #header-wrapper .nav {
     background: transparent !important;
+  }
+  .js-topic .arrow-btn {
+    background-color: transparent !important;
   }
   .select-menu-item .octicon {
     color: transparent !important;
@@ -162,9 +166,9 @@
     font-size: 12px !important;
   }
   /* repo labels, private repo lists */
-  .repo-label span, .private .repo-list-item, .sunken-menu .sunken-menu-item.selected:after {
-    background: #444 !important;
-    color: #eee !important;
+  .repo-label span, .private .repo-list-item {
+    background: #222 !important;
+    color: #777 !important;
   }
   /* previously orange border bottom */
   .pagehead ul.tabs li a.selected, .pagehead > ul.tabs li a:hover, .filter-selected, div.listing.navigation-focus,
@@ -393,7 +397,7 @@
   .sidebar-module > ul, .commit_oneline td, #footer .lower_footer, #footer-push, div#common-issues ul, #footer,
   .notifications th, #notification-center li.read, .repo_list li, .tree-browser td, .ace_scroller, a.selected, .file,
   .issues-list li.js-navigation-item, .comment-count, .list-group-item, .inline-comments .tabnav, .comparison-list,
-  .comparison-list .title, .repo-collection>ul {
+  .comparison-list .title, .repo-collection>ul, .expandable .js-topic h3:hover a {
     background-color: #222 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -402,7 +406,7 @@
     background: #222 !important;
   }
   /* Darkest background (#222), leave image, add border */
-  .image, .fieldgroup .fields {
+  .image, .fieldgroup .fields, .expandable .js-topic h3 {
     background-color: #222 !important;
     color: #eee !important;
     border: #555 1px solid !important;
@@ -449,7 +453,7 @@
   .display tr, div#common-issues ul li a:hover, #contributors h3, #contributors .cmeta, .select-menu-modal,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .issues-list > ul > li.navigation-focus,
   .issues-list-actions, pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
-  .explore-section:nth-child(even), button.button:hover, #wiki-rightbar, #files .file .meta {
+  .explore-section:nth-child(even), button.button:hover, #wiki-rightbar, #files .file .meta, .sidebar-module {
     background-color: #333 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -468,9 +472,9 @@
   #files .file .data .line_numbers, .editbox, .editbox .body, .commentstyle, #issues .display, .inline-comment-form,
   #issues .display .admin, #issues .labels .list li, .issue .summary, .plain, #notification-center li:hover, .issue,
   #ng canvas, .standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,
-  .gollum-minibutton a, .gollum-minibutton span, #wiki-history table td, .tree-browser th, .sidebar-module > ul li,
+  .gollum-minibutton a, .gollum-minibutton span, #wiki-history table td, .tree-browser th, .js-toggle-list li,
   .context-pane .title, .flash, .browser .listing:hover, #dashboard .repos, .date_selector .button, .selectable_day,
-  .file-box .icon, .browser .meta, .sidebar-module .spacer, .list-module .list-body, .list-module a, .bootcamp-body,
+  .file-box .icon, .browser .meta, .list-module .list-body, .list-module a, .bootcamp-body,
   .filter-bar, .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop, .full-width-divider,
   .starred-repo.navigation-focus, #issues_next .labels .label a, .module .inner, .inline-comment-form a.selected,
   .pull-head {
@@ -581,10 +585,10 @@
   #facebox .close, #issues_search .wrapper, .featured-callout, .ranked-repositories .meta a, .range-editor h3, .actor,
   .range-editor .chooser, ul.nav.logged_out, .tip-box a.next, #inbox .list .unread, #preview_bucket, .main .filterbar,
   .browser-content .footerbar, ul.smalltabs, .snippet, .supportstaffer, .discussion-form, ul.js-guides, .chooser-box,
-  .chooser-box h3, #forkqueue .instructions, .input, .ac_results, .selector-item.clear:hover, .sidebar-module > ul h3,
-  .sidebar-module, #issues_search .comment-body, #contributors-master svg, .boxed-group > h3, .sidebar-module > p,
+  .chooser-box h3, #forkqueue .instructions, .input, .ac_results, .selector-item.clear:hover,
+  .menu .selected, #issues_search .comment-body, #contributors-master svg, .boxed-group > h3,
   .inset-callout h2, .documentation ul.nav, #contributors-master, .flash-messages, .context-title, .list-module h2,
-  .bootcamp-help h1, .menu .selected {
+  .bootcamp-help h1 {
     background: #444 none !important;
     border: 0 !important;
     border-radius: 3px !important;
@@ -595,7 +599,7 @@
   div#common-issues, .diffstat, #wiki-history .author img, .options-content h3, .display div.choice:nth-child(2n+1),
   #issues-dashboard .actions,.list-tip a:hover, .boxed-group-list > li:hover, .display tr:nth-child(2n+1), .meta,
   .preview-selected .preview-tab, .menu a:hover, .select-menu-tabs a.selected, .list-browser-item.navigation-focus,
-  .hidden-text-expander a {
+  .hidden-text-expander a, .sunken-menu .sunken-menu-item.selected:after {
     background: #444 none !important;
     border-color: #555 !important;
     color: #eee !important;
@@ -651,7 +655,7 @@
   .recently-touched-branches, body#com #header, .white-nav .selected span, .select-menu-header, .clone-url-button a,
   .filter-tab, #header-wrapper, #header-wrapper .nav, pre div:hover, .diff-table tr:hover pre, .pagination span,
   .commit-ref, .cheatsheet h2, .blog-feedback-header, .highlight .file-diff-line:hover td, .section a.section-head,
-  .dashboard-tabs li a, .js-expand-btn, .box-header, .full-commit .browse-button, a.function-button, .capped-box h3,
+  .dashboard-tabs li a, .box-header, .full-commit .browse-button, a.function-button, .capped-box h3,
   .expandable-line-num .diff-expander:hover {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
@@ -904,11 +908,8 @@
     background: url(http://StylishThemes.github.io/Github-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
   }
   /* developer pages */
-  div.expandable > ul h3 > a.collapsed, div.expandable > ul h3 > a.expanded {
-    background-image: url(http://StylishThemes.github.io/Github-Dark/images/expand-arrows.png) !important;
-  }
-  body.api .content h2 {
-    background-image: url(http://StylishThemes.github.io/Github-Dark/images/crud-sprite.png) !important;
+  .sidebar-module .arrow-btn {
+    background-image: url(/shared/images/expand-arrows.png) !important;
   }
 
   /* octocat loading spinner */
