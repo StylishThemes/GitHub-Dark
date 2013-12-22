@@ -34,6 +34,11 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.3 (12/22/2013)
+
+* File tree header styling
+* Added screenshot with background image
+
 #### Version 1.7.2 (12/22/2013)
 
 * More cleanup to allow some of the body background image to show through
