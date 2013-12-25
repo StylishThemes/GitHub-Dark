@@ -62,7 +62,7 @@
   .select-menu-item.navigation-focus, .select-menu-item.navigation-focus.selected, .notification-indicator .unread,
   ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
   table.upgrades tr:hover td, #notification-center li.unread, .email-format .email-hidden-toggle:hover a,
-  .js-topic a:hover, .gist-item .bubble:hover {
+  .js-topic a:hover, .gist-item .bubble:hover, .dashboard-tabs a:hover {
     background: /*[[base-color]]*/ #4183C4 !important;
     color: #eee !important;
   }
@@ -179,6 +179,10 @@
     border-radius: 3px !important;
     background-clip: padding-box !important;
   }
+  /* remove border-radius */
+  .dashboard-tabs a {
+    border-radius: 0 !important;
+  }
   /* === No huge text === */
   .topsearch form input.search {
     font-size: 12px !important;
@@ -190,11 +194,11 @@
   }
   /* previously orange border bottom */
   .pagehead ul.tabs li a.selected, .pagehead > ul.tabs li a:hover, .filter-selected, div.listing.navigation-focus,
-  div.issues.navigation-focus, .repo-filter:hover {
+  div.issues.navigation-focus, .repo-filter:hover, .dashboard-tabs a.selected {
     border-radius: 0 !important;
     border-bottom: #eee 2px solid !important;
   }
-  .section-nav .active a, .menu a.selected, .sunken-menu a:focus, .sunken-menu a:hover, .dashboard-tabs li a {
+  .section-nav .active a, .menu a.selected, .sunken-menu a:focus, .sunken-menu a:hover {
     border-radius: 0 !important;
     border-left: #eee 1px solid !important;
   }
@@ -220,7 +224,7 @@
   .discusion-topic-infobar {
     border-color: #444 !important;
   }
-  .file-diffstat, ul.filter-list {
+  .file-diffstat, ul.filter-list, .news .alert {
     border-color: #333 !important;
   }
   .filter-tab.selected {
@@ -245,8 +249,7 @@
   blockquote, .pagination a:first-child, .pagination a:last-child, .pagination span:first-child, table.files td,
   .pagination span:last-child, .range-editor span.flag, .range-editor .range, .dashboard-tabs, .graphs, .graph,
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .box-body, .email-signature-reply,
-  .news .alert, .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,
-  table.branches td {
+  .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td {
     border-color: #181818 !important;
   }
   .issue-head {
@@ -689,7 +692,7 @@
   /* inverted dark grey gradient */
   .progress-bar, .pagination .current, div.news .pagination a:hover,
   .clone-url-button.selected a, .asc .sort-type, .desc .sort-type, .mini-bar-graph, .minibutton.selected,
-  .issues-list>ul>li.unread, .dashboard-tabs a.selected, .dashboard-tabs li a:hover {
+  .issues-list>ul>li.unread {
     background: linear-gradient(to bottom, #181818, #282828) !important;
     border-color: #333 !important;
   }
@@ -710,7 +713,8 @@
   .notifications-list a, div.select-menu-modal a.select-menu-item-text, span.minibutton, .full-commit .browse-button,
   .numbers-summary .num, .select-menu-item.selected > .octicon, #network .explain b, .repo-menu a.selected:after,
   .navigation-focus .octicon:not(.octicon-arrow-right):not(.type-icon), .sunken-menu-group li:hover .octicon,
-  .select-menu-item.select-menu-action > .octicon,.select-menu-item.selected > .octicon,.select-menu-item-text {
+  .select-menu-item.select-menu-action > .octicon,.select-menu-item.selected > .octicon,.select-menu-item-text,
+  .dashboard-tabs a.selected {
     color: #eee !important;
   }
   /* slightly darker text */
@@ -728,7 +732,7 @@
   option, .news blockquote, .news blockquote p, #contributions-calendar .contrib-details div .num, .collection-stat,
   .flash-global a, #contributions-calendar .contrib-details div .lbl, .tag-info a, .authorship, a.browse-button,
   .ghead .dir, .octicon, .repository-lang-stats .percent, .diffstat-summary, .diff-expander .octicon-unfold,
-  .comment-header-action-text a, .comment-header-right a, .gist-item .creator {
+  .comment-header-action-text a, .comment-header-right a, .gist-item .creator, .dashboard-tabs a {
     color: #999 !important;
   }
   /* content text */
@@ -974,6 +978,10 @@
   .gobutton.with-comments .sha, .commit-group-item, .blob-line-nums, .commit,
   .setup-form-container .fieldgroup .fields {
     border: 0 !important;
+  }
+  .dashboard-tabs a {
+    border-left: 0 !important;
+    border-right: 0 !important;
   }
   /* commit List focus */
   .js-details-container.navigation-focus, .js-details-container.navigation-focus:nth-child(2n) {
