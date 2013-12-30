@@ -1194,6 +1194,16 @@
   .language-color[style$="#7582D1;"] {background-color: #70e9a0 !important}
   .language-color[style$="#3a4040;"] {background-color: #44a42f !important}
 
+  /* OS X font rendering tweak, only active on sub-retina pixel ratios, might affect
+   * Chrome on other OSs too, see https://github.com/StylishThemes/Github-Dark/issues/86
+   */
+  @media screen and (max-resolution: 1.99dppx) {
+    html {
+      -moz-osx-font-smoothing: grayscale !important;
+      -webkit-font-smoothing: antialiased !important;
+    }
+  }
+
   /*[[pygments-theme]]*/
   /* Github-Dark syntax highlighting */
   .highlight, .highlight pre:not(.diff-line-pre),
