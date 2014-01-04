@@ -34,6 +34,22 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.4 (1/4/2014)
+
+* Fix date truncation
+* Fix gist styles:
+  * Secret gist coloring
+  * Hover effect &amp; white border
+  * Creator line color
+  * Font size fix for gist diff stats
+* Fix button &amp; header hovers
+* Fix popup menu colors
+* Various front page tweaks
+* Added OSX font rendering tweaks. Fixes [issue #86](https://github.com/StylishThemes/Github-Dark/issues/86)
+* Darken borders to #333333
+* Add more contrast to readme headings &amp; bold text
+* Tweak to option pages
+
 #### Version 1.7.3 (12/22/2013)
 
 * File tree header styling
@@ -63,52 +79,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 * Set selection text color. Fixes [issue #82](https://github.com/StylishThemes/Github-Dark/issues/82).
 * Fixed plain text readmes.
 * Added new screenshot images.
-
-#### Version 1.6.11 (12/15/2013)
-
-* Improved loading images. See [issue #79](https://github.com/StylishThemes/Github-Dark/issues/79)
-* Diff page
-  * Update/fix dif page styling
-  * Inline comment editor styling
-  * Diff color tweaks
-* Blame page: Styling for heat map
-* Issues: Darken in-issue commit comments
-* Fix keyboard mappings popup
-* Remove `pre` padding
-* Release page - fix uploaded file background
-* Clean up of css file to make it more readable (minimal horizontal scrolling when viewing the file)
-* Fix steps in sign-in page
-* Contributor graph page styling (new classes introduced)
-* Fix bright blue merge/merged status icons
-* Restore pull request header border
-* Fix repo menu hover color
-* Fix featured label
-* Removed Opera specific selectors (userstyles throws an error)
-
-#### Version 1.6.10 (12/12/2013)
-
-* Graphs
-  * Slightly darken network canvas graph. See [issue #73](https://github.com/StylishThemes/Github-Dark/issues/73)
-  * Color graph labels for additions/deletions
-  * More SVG styling, improved punchcard
-* Text selection styling
-  * Now matches the base color (bad idea?)
-  * Gist ace editor selection color now matches the base color
-* Code
-  * Add padding to inline code
-  * pre & code base background colors now match (non-syntax highlighted code)
-* Issue list
-  * Fix icon hover color
-  * Fix border-radii
-* Fix loading spinner on settings page (it uses an img & not a background spinner)
-* Gist
-  * Add slow loading search overlay styling
-  * Select item coloring (Gist advanced options)
-* Fix new release page & edit boxes
-* Darken comment content
-* Fix repo sidebar selection
-* Restore whitespace
-
-#### Version 1.6.9 (12/9/2013)
-
-* moved repo to https://github.com/StylishThemes/Github-Dark
