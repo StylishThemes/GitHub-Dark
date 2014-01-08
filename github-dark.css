@@ -201,6 +201,14 @@
     border-radius: 0 !important;
     border-left: #eee 1px solid !important;
   }
+  /* dropdown arrows are css triangles, so we can't just apply color to all four borders */
+  .dropdown-arrow {
+    border-top-color: #eee !important;
+    transition: none !important;
+  }
+  .js-menu-target:hover .dropdown-arrow {
+    border-top-color: /*[[base-color]]*/ #4183C4 !important;
+  }
 
   /* === Darken border === */
   pre, ul li, table, table tr, table td, h1, h2, h3, hr, img, #browser table, #browser table th, #issues .menu ul li,
@@ -707,7 +715,7 @@
   strong, .url-box p strong, .avatarexplain p strong, .feature-overview strong, .revision .creator strong,
   h2 span, ul.repo-stats li a:hover, .subnav li a:hover, .filters li.selected a, .filters li a:hover, .code-list em,
   .commandbar .choice .command, a.minibutton, .navigation-focus .mini-icon:before, .search-term, .codesearch-cols em,
-  .selector-item:hover .mini-icon:before, .selector-item.selected .mini-icon:before, .new-repo .octicon, .header a,
+  .selector-item:hover .mini-icon:before, .selector-item.selected .mini-icon:before, .new-repo .octicon, .header a, .header span,
   .select-menu-item.selected>.mini-icon, .sunken-menu a.selected .octicon, .feed-icon a .octicon, .release-label a,
   .minibutton i, .minibutton:hover .octicon, .tabnav-tab.selected .octicon, .merge-status-icon .mega-octicon:before,
   .commit .mini-icon:before, .sidebar-milestone-widget .title, .notifications .pull-request-notification .type-icon,
