@@ -153,7 +153,7 @@
   .tmp-reusable-bubble .bubble-inner, .commit-group-item .authorship, pre.headers code, .columns.equacols.bordered,
   .gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code, .menu-container, .milestone, .more-repos,
   #network .repo span, .previewable-comment-form, .keyboard-mappings th, .api #header-wrapper .nav,
-  .marketing-nav a.selected {
+  .marketing-nav a.selected, #graph_data .tabs {
     background: transparent !important;
   }
   .js-topic .arrow-btn {
@@ -984,9 +984,16 @@
       background-image:url(http://StylishThemes.github.io/Github-Dark/images/octocat-spinner-64-dark.gif) !important;
     }
   }
-  .slow-loading-overlay {
+  .slow-loading-overlay, #graphs .loader {
     background-image:url(http://StylishThemes.github.io/Github-Dark/images/octocat-spinner-64-dark.gif) !important;
+    background-position: center 50px !important;
+    background-repeat: no-repeat !important;
   }
+  /* hide original loader */
+  #graphs .loader img {
+    display: none !important;
+  }
+
   /* no border */
   .multiple-avatars, .multiple-avatars:before, table.files, table.files tr, .simple-conversation-list>li:first-child,
   .gobutton.with-comments .sha, .commit-group-item, .blob-line-nums, .commit,
