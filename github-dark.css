@@ -376,7 +376,7 @@
     border: 0 !important;
   }
   /* slightly darker background than #222 */
-  .box-body, #readme .markdown-body, table.files {
+  .box-body, #readme .markdown-body, table.files, .mergeable {
     background: #1b1b1b !important;
   }
   .markdown-body {
@@ -799,8 +799,8 @@
   /* Red panel */
   #forkqueue .legend .unclean, .unclean td, .chzn-results .no-results, .majorproblem .pageheader_wrap, .error_box,
   .btn-close-issue, button.classy[name="comment_and_close"], .flash-error, #message.major, .minibutton.danger:hover,
-  .minibutton.danger:hover span, .comment-form-error, .mergeable.dirty, .closed-issues, .state-indicator.closed,
-  .branch-status.status-error, .branch-status.status-failure, .state-closed, .mergeable-dirty .merge-status-icon {
+  .minibutton.danger:hover span, .comment-form-error, .closed-issues, .state-indicator.closed,
+  .branch-status.status-error, .branch-status.status-failure, .state-closed {
     background: #c31e16 !important;
     border-color: #333 !important;
     color: #ccc !important;
@@ -809,6 +809,13 @@
     background: #a31e16 !important;
     color: #ccc !important;
     border: #b00 1px solid !important;
+  }
+  .mergeable-dirty .bubble, .mergeable-dirty .merge-status-icon {
+    background: #a31e16 !important;
+  }
+  /* red border */
+  .mergeable-dirty .bubble .mergeable {
+    border-color: #c31e16 !important;
   }
   /* red gradient */
   .dangerzone > h3 {
@@ -832,11 +839,15 @@
   /* === Green panel === */
   /* labels */
   #forkqueue .legend .clean, #revisions ul li.current, .excerpt, .selectable_day.today, .plan.business, .popout,
-  #statusbar, .clean, .clean td, .mergeable.clean, #download_button, .status-box.good a, button.classy.primary,
+  #statusbar, .clean td, #download_button, .status-box.good a, button.classy.primary,
   .progress-bar .progress, .new-issues, .new-pulls, .mergeable-clean .merge-status-icon, .settings-email .default,
-  .repo-owner-comment .comment-header-tag {
+  .repo-owner-comment .comment-header-tag, .mergeable-clean .bubble {
     background: #305530 !important;
     border-color: #060 !important;
+  }
+  /* Green border*/
+  .mergeable-clean .bubble .mergeable {
+    border-color: #6cc644 !important;
   }
   /* Green text */
   .insertions, .open.mini-icon, .open.mega-octicon, .open.mega-octicon:before, .open.octicon, .octicon-check, .cadd,
@@ -846,7 +857,7 @@
   /* interactive button - bright border */
   a.new-repo, .state-open, .state-proposed, .big-notice, .branch-status, .button.primary, .state-indicator.open,
   .state-indicator.proposed, .status-success:not(.octicon-check), .state-indicator.reopened, .octofication .message,
-  .mergeable, #message.good, .release-downloads a.primary {
+  #message.good, .release-downloads a.primary {
     background: #305530 !important;
     border-color: #080 !important;
     color: #ddd !important;
