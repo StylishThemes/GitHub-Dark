@@ -229,7 +229,7 @@
   .leaderboard-list-item, .release-timeline-tags .main, .explore-section, .search-result-item, .sort-bar, .details,
   .content-header, .user-list-item, .commit-group-item .gobutton .comment-count, .markdown-body, ul#categories li h5,
   .gobutton.with-comments .sha, #gollum-editor-function-bar, #gollum-editor-title-field, .capped-box, .steps li,
-  .steps, .setup-info-module {
+  .steps, .setup-info-module, #graphs {
     border-color: #555 !important;
   }
   .discusion-topic-infobar {
@@ -328,10 +328,6 @@
   /* ace (gist editor) */
   .ace_cursor {
     border-left-color: #ddd !important;
-  }
-  /* pulse commit graph */
-  line {
-    stroke: #555 !important;
   }
   /* language statistics */
   .repository-lang-stats-graph {
@@ -435,7 +431,7 @@
   .sidebar-module > ul, .commit_oneline td, #footer .lower_footer, #footer-push, div#common-issues ul, #footer,
   .notifications th, #notification-center li.read, .repo_list li, .tree-browser td, .ace_scroller, a.selected, .file,
   .issues-list li.js-navigation-item, .comment-count, .list-group-item, .inline-comments .tabnav, .comparison-list,
-  .comparison-list .title, .repo-collection>ul, .expandable .js-topic h3:hover a {
+  .comparison-list .title, .repo-collection>ul, .expandable .js-topic h3:hover a, #graph_data .tab.selected {
     background-color: #222 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -582,38 +578,35 @@
   svg|line, svg|rect, svg|path {
     shape-rendering: geometricPrecision !important;
   }
-  svg|svg.spark, svg|svg.viz, svg|svg.capped-card-content {
+  #contributors-master svg|svg.viz, svg|svg.spark, svg|svg.capped-card-content {
     background: #181818 !important;
+  }
+  #contributors-master svg|svg.viz {
+    border: 1px solid #555 !important;
   }
   .js-graph-punchcard svg|svg.viz {
     background: transparent !important;
     border: none !important;
   }
-  svg|text {
-    fill: #777 !important;
-  }
-  svg|circle.day {
-    fill: #aaa !important;
+  svg|text, svg|circle.day {
+    fill: #ccc !important;
   }
   svg|circle.day:hover {
     fill: #fff !important;
   }
-  svg|svg.viz {
-    border: 1px solid #555 !important;
+  #contributors-master svg|svg.viz {
     display: block !important;
   }
-  svg|line {
+  svg|g.axis svg|line, svg|g.axis svg|path, svg|line.axis {
     stroke: #444 !important;
+  }
+  svg|path.path {
+    stroke: #ccc !important;
   }
   svg|svg.tick {
     fill: #444 !important;
   }
-  /* GitHub bugfix for their overly wide commit history graph */
-  svg|svg.viz[width="970"] {
-    width: 920px !important;
-    margin-bottom: 20px !important;
-  }
-  /* and overly wide inline comment form */
+  /* Fix for overly wide inline comment form */
   .js-inline-comment-form {
     width: 96% !important;
   }
@@ -688,7 +681,7 @@
   kbd, .minibutton, a.feed, .button:not(img), button.classy, a.button.classy, .pagination a, .list-browser-filterbar,
   .gobutton, .header, .pagination .gap, .comment-header, .pagehead ul.tabs li a, .login_form input[type="submit"],
   .top-bar, div.news .pagination a, ul#bootcamp li a h4, .minibutton:disabled, .pull-info, .notification-indicator,
-  #graph_data .tab.selected, #gists .context-menu-container, .zeroclipboard-button, .search-form button, pre.headers,
+  #gists .context-menu-container, .zeroclipboard-button, .search-form button, pre.headers,
   .recently-touched-branches, body#com #header, .white-nav .selected span, .select-menu-header, .clone-url-button a,
   .filter-tab, #header-wrapper, #header-wrapper .nav, pre div:hover, .diff-table tr:hover pre, .pagination span,
   .commit-ref, .cheatsheet h2, .blog-feedback-header, .highlight .file-diff-line:hover td, .section a.section-head,
@@ -728,7 +721,7 @@
   .navigation-focus .octicon:not(.octicon-arrow-right):not(.type-icon), .sunken-menu-group li:hover .octicon,
   .select-menu-item.select-menu-action > .octicon,.select-menu-item.selected > .octicon,.select-menu-item-text,
   .dashboard-tabs a.selected,.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4,
-  .dropdown-menu > li > a:hover >.octicon {
+  .dropdown-menu > li > a:hover >.octicon, .message .time, #graph_data .tab.selected a {
     color: #eee !important;
   }
   /* slightly darker text */
@@ -738,7 +731,7 @@
   .tag-info .tag-name, .language, .featured-callout h2, .header a, .commit-title .message, .files .message, .numbers-summary a,
   .revision .creator,  .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
   .highlight .file-diff-line:hover *, .keyboard-mappings, .comment-header-author, .comment-header-author a, .discussion-topic-author a,
-  .boxed-group-table td {
+  .boxed-group-table td, .graph .data .number {
     color: #ccc !important;
   }
 
@@ -749,7 +742,7 @@
   option, .news blockquote, .news blockquote p, #contributions-calendar .contrib-details div .num, .collection-stat,
   .flash-global a, #contributions-calendar .contrib-details div .lbl, .tag-info a, .authorship, a.browse-button,
   .ghead .dir, .octicon, .repository-lang-stats .percent, .diffstat-summary, .diff-expander .octicon-unfold,
-  .comment-header-action-text a, .comment-header-right a, .gist-item .creator, .dashboard-tabs a {
+  .comment-header-action-text a, .comment-header-right a, .gist-item .creator, .dashboard-tabs a, #graph_data .tab a {
     color: #999 !important;
   }
   /* content text */
