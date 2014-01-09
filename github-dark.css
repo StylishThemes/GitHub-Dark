@@ -129,7 +129,7 @@
   #header.gc .diff-line-code, .upper_footer, .switcher > span:after, .upgrades td, .blog-feedback, .description,
   .blankslate, .commit-ref, .pagination span, .mini-icon-advanced-search, .count, .select-menu-title, .sunken-menu a,
   .select-menu-button:after, #repo-message, .times, .sunken-menu-contents, .sunken-menu a .counter, .usage-bar dt,
-  #user-links .name img, #common-issues, .upload-progress {
+  #user-links .name img, #common-issues, .upload-progress, .svg-tip {
     color: #ccc !important;
     text-shadow: none !important;
     box-shadow: none !important;
@@ -215,7 +215,7 @@
   }
 
   /* === Darken border === */
-  pre, ul li, table, table tr, table td, h1, h2, h3, hr, img, #browser table, #browser table th, #issues .menu ul li,
+  pre, table, table tr, table td, h1, h2, h3, hr, img, #browser table, #browser table th, #issues .menu ul li,
   .counter, .issues td, ul.main_nav li.selected, .browser_header, .issue-head, .bootcamp-help .image, ul.hook-list,
   .clone-url-button, #wiki-wrapper h2, .list-tip li, .boxed-group-list > li, .section-nav a, .search-menu-container,
   .repo_list li a, .graphs .axis, .switcher > span:after, a.assignee-bit, .menu li, .notifications td, .filter-tab,
@@ -487,7 +487,7 @@
   .display tr, div#common-issues ul li a:hover, #contributors h3, #contributors .cmeta, .select-menu-modal,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .issues-list > ul > li.navigation-focus,
   .issues-list-actions, pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
-  .explore-section:nth-child(even), button.button:hover, #wiki-rightbar, .sidebar-module {
+  .explore-section:nth-child(even), button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip {
     background-color: #333 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -601,7 +601,7 @@
     stroke: #222 !important;
   }
   .traffic-graph svg|g.axis:not(.views):not(.unique) svg|g.tick:not(:nth-child(14)):not(:first-child) svg|line,
-  svg|g.axis svg|path, svg|line.axis, svg|g.axis svg|line {
+  svg|g.axis svg|path, svg|line.axis, svg|svg:not(.vis) svg|g.axis svg|line {
     stroke: #444 !important;
   }
   svg|path.path:not(.total):not(.unique):not(.views) {
@@ -759,6 +759,10 @@
   .mini-icon-remove-close, .mini-icon-link {
     color: #444 !important;
   }
+  .svg-tip:after {
+    color: #333 !important;
+  }
+
   /*just needs to be somewhere after mega-octicon:before*/
   .octicon-person-team::before {
     color: #222 !important;
