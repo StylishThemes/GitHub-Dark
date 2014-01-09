@@ -597,11 +597,15 @@
   #contributors-master svg|svg.viz {
     display: block !important;
   }
-  svg|g.axis svg|line, svg|g.axis svg|path, svg|line.axis {
+  svg|g.dots svg|circle {
+    stroke: #222 !important;
+  }
+  .traffic-graph svg|g.axis:not(.views):not(.unique) svg|g.tick:not(:nth-child(14)):not(:first-child) svg|line,
+  svg|g.axis svg|path, svg|line.axis, svg|g.axis svg|line {
     stroke: #444 !important;
   }
-  svg|path.path {
-    stroke: #ccc !important;
+  svg|path.path:not(.total):not(.unique):not(.views) {
+    stroke: #aaa !important;
   }
   svg|svg.tick {
     fill: #444 !important;
