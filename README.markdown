@@ -34,6 +34,14 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.6 (1/9/2014)
+
+* Added background image properties
+  * Fixes [issue #88]() to now allow using a tiled background image versus a full background image
+  * Background-repeat: repeat or no-repeat
+  * Background-size: cover, container, auto or 50% 50%
+  * Background-attachment: fixed or scroll
+
 #### Version 1.7.5 (1/9/2014)
 
 * "New" dropdown styling
