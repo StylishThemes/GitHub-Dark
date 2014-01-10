@@ -34,6 +34,39 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.5 (1/9/2014)
+
+* "New" dropdown styling
+  * fix dropdown arrows
+  * remove underline from `+` in header
+* Status page
+  * Hide loading icon image, add dark background image
+  * Fix tab loading style. See [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
+  * Graph tweaks. Fixes [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
+  * Style svg tooltips
+  * Fix graph preview hover offsets
+  * Restore status history colors & repo list border
+  * Remove diff text-shadow
+  * Tweaks to traffic stats
+* Tweaks to inline comments
+* Repo sidebar tweaks
+* Center octocat on frontpage message boxes
+* Fix repo-editing text color
+* Fix commit activity graph line color
+* Fix markdown base text color
+* Fix ellipsis color on truncated text
+* Remove text shadow on flash boxes
+* Improve merge messages in issues
+* Add more background properties.
+  * Please note that this doesn't work properly for tiled background images
+  * Thanks [Pmmlabs](https://github.com/Pmmlabs)!
+* Fix text colors in file boxes & user page
+* SSH keys text colors
+* Removed background color from
+  * Issue milestone meta data
+  * status page footer background
+  * These changes allow background image to show through
+
 #### Version 1.7.4 (1/4/2014)
 
 * Fix date truncation
@@ -65,17 +98,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 * Body background tweaks to get it working again.
 * Give page head some transparency, allowing background image to show through.
 * Removed dev page image - repeated definition.
-
-#### Version 1.7 (12/21/2013)
-
-* Added new syntax highlighting themes:
-  * 3024 Dark theme by [idleberg](http://github.com/idleberg)
-  * Tomorrow Night, Tomorrow Night Blue, Tomorrow Night Bright &amp; Tomorrow Night Eighties theme by [chriskempson](https://github.com/chriskempson/tomorrow-theme); converted to Pygments by [MozMorris](https://github.com/MozMorris/tomorrow-pygments).
-* Added the ability to add a background image to the body via userstyles.org only. Fixes issue [#84](https://github.com/StylishThemes/Github-Dark/issues/84] &amp; [#85](https://github.com/StylishThemes/Github-Dark/issues/85).
-* Fix development page styling.
-* Add SVG spinner image (not yet implemented)
-* Tweak comment header colors. Fixes [issue #83](https://github.com/StylishThemes/Github-Dark/issues/83).
-* Set up organization page styling.
-* Set selection text color. Fixes [issue #82](https://github.com/StylishThemes/Github-Dark/issues/82).
-* Fixed plain text readmes.
-* Added new screenshot images.
