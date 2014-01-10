@@ -34,6 +34,15 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.7 (1/10/2014)
+
+* Remove side menu backgroud to allow image to show through
+* Another fix to graph colors
+* Pull request: fix dirty merge arrow color
+* Clean up background image options; reduced to two options:
+  * Image type: Fit window size versus Tiled
+  * Image attachment: scroll versus fixed
+
 #### Version 1.7.6 (1/9/2014)
 
 * Added background image properties
