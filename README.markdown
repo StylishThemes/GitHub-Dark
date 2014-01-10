@@ -37,7 +37,7 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 #### Version 1.7.6 (1/9/2014)
 
 * Added background image properties
-  * Fixes [issue #88]() to now allow using a tiled background image versus a full background image
+  * Fixes [issue #88](https://github.com/StylishThemes/Github-Dark/issues/88) to now allow using a tiled background image versus a full background image
   * Background-repeat: repeat or no-repeat
   * Background-size: cover, container, auto or 50% 50%
   * Background-attachment: fixed or scroll
