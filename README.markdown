@@ -34,6 +34,13 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.8 (1/13/2014)
+
+* Remove avatar background; to see background image
+* Pull request (issues) - fix clean merge arrow color.
+* Add padding instead of margin to code view. Fixes [issue #89](https://github.com/StylishThemes/Github-Dark/issues/89)
+* Fix minibutton text color
+
 #### Version 1.7.7 (1/10/2014)
 
 * Remove side menu backgroud to allow image to show through
@@ -104,14 +111,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
 
 * File tree header styling
 * Added screenshot with background image
-
-#### Version 1.7.2 (12/22/2013)
-
-* More cleanup to allow some of the body background image to show through
-* Darkened some borders to make them more subtle.
-
-#### Version 1.7.1 (12/21/2013)
-
-* Body background tweaks to get it working again.
-* Give page head some transparency, allowing background image to show through.
-* Removed dev page image - repeated definition.
