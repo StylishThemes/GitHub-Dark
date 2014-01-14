@@ -25,26 +25,6 @@
     /*[[bg-options]]*/
     /*[[bg-options2]]*/
   }
-
-  /* text selection */
-  ::selection {
-    background: /*[[base-color]]*/ #4183C4 !important;
-    color: #fff !important;
-  }
-  ::-moz-selection {
-    background: /*[[base-color]]*/ #4183C4 !important;
-    color: #fff !important;
-  }
-
-  /* input focus hightlight */
-  input.focus[type="text"], #adv_code_search .focus.search-page-label, input[type="text"]:focus,
-  .focused .drag-and-drop, #adv_code_search .search-page-label:focus, input.focus[type="password"],
-  input[type="password"]:focus, input.focus[type="email"], input[type="email"]:focus, input.focus[type="number"],
-  input[type="number"]:focus, input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
-  input[type="url"]:focus, textarea.focus, textarea:focus {
-    border-color: /*[[base-color]]*/ #4183C4 !important;
-    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.075) inset, 0px 0px 5px rgba(255, 255, 255, .075) !important;
-  }
   /* Base link/panel colors - text */
   body a, a:hover, .profilecols ul.stats li a:hover strong, .plans-row .plan, .filters li.selected,
   #gollum-editor-submit, .repo_list span.css-truncate-target, strong.css-truncate-target, .zeroclipboard-button,
@@ -79,6 +59,55 @@
   .notification-indicator .unread {
     background: /*[[base-color]]*/ #4183C4 !important;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 10px /*[[base-color]]*/ #4183C4 !important;
+  }
+  /* text selection */
+  ::selection {
+    background: /*[[base-color]]*/ #4183C4 !important;
+    color: #fff !important;
+  }
+  ::-moz-selection {
+    background: /*[[base-color]]*/ #4183C4 !important;
+    color: #fff !important;
+  }
+  /* input focus hightlight */
+  input.focus[type="text"], #adv_code_search .focus.search-page-label, input[type="text"]:focus,
+  .focused .drag-and-drop, #adv_code_search .search-page-label:focus, input.focus[type="password"],
+  input[type="password"]:focus, input.focus[type="email"], input[type="email"]:focus, input.focus[type="number"],
+  input[type="number"]:focus, input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
+  input[type="url"]:focus, textarea.focus, textarea:focus {
+    border-color: /*[[base-color]]*/ #4183C4 !important;
+    box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.075) inset, 0px 0px 5px rgba(255, 255, 255, .075) !important;
+  }
+  /* === Inputs === */
+  select, input, textarea, .commandbar .choice:hover, .commandbar .loading:hover {
+    -moz-appearance: none !important;
+    background: #181818 !important;
+    border-color: #666 !important;
+    border-style: solid !important;
+    color: #ddd !important;
+  }
+  /* custom checkbox and radio styles. We need a full set of styles here as WebKit removes all of them when
+   -webkit-appearance: none is set. */
+  input[type="checkbox"], input[type="checkbox"]:focus, input[type="radio"], input[type="radio"]:focus {
+    -webkit-appearance: none !important;
+    background-color: #181818 !important;
+    border: 1px solid #666 !important;
+    color: #ddd !important;
+    display: inline-block !important;
+    height: 1em !important;
+    width: 1em !important;
+    vertical-align: text-top !important;
+  }
+  input[type="checkbox"]:checked {
+   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im05OC43OTk5ODggMjEzbC0wLjc5OTk4OCA4OWMwIDAgMTAzIDEwMiAxMDQgMTAyYzEgMCAyMDUgLTIwMSAyMDUgLTIwMWMwIDAgMCAtOTAgMCAtOTFjLTAuNzk5OTg4IDAgLTIwNCAyMDMgLTIwNCAyMDNsLTEwNCAtMTAyeiIgZmlsbD0iI2RkZGRkZCIvPjwvZz48L3N2Zz4KCg==) !important;
+   background-size: cover !important;
+  }
+  input[type="checkbox"]:indeterminate {
+   background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxyZWN0IGhlaWdodD0iMTI4IiB3aWR0aD0iMzg0IiB5PSIxOTIiIHg9IjY0IiBmaWxsPSIjZGRkZGRkIi8+PC9nPjwvc3ZnPg==) !important;
+   background-size: cover !important;
+  }
+  input[type=radio] {
+    border-radius: 2em;
   }
   /* === Prevent overflow issues === */
   #dashboard, div.highlight, svg {
@@ -342,14 +371,6 @@
   .list-tip:before, .selector-item .mini-icon:before, .browser .mini-icon-arr-right, .selected .select-menu-checkmark,
   .issue-list em {
     color: #222 !important; /* tip pointer */
-  }
-  /* === Inputs === */
-  select, input, textarea, .commandbar .choice:hover, .commandbar .loading:hover {
-    -moz-appearance: none !important;
-    background: #181818 !important;
-    border-color: #444 !important;
-    border-style: solid !important;
-    color: #ddd !important;
   }
   /* === #111 === */
   .wikistyle pre, .wikistyle pre code, #facebox pre, .commit-preview .message pre,
