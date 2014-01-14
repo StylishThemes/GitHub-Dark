@@ -1,8 +1,7 @@
-## Github Dark theme for the Stylish Addon ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe)).
-
-Hosted at [userstyles.org](http://userstyles.org/styles/37035)
-
-Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes
+## Github Dark theme for Stylish
+- Install from [userstyles.org](http://userstyles.org/styles/37035) or [manually](https://github.com/StylishThemes/Github-Dark/blob/master/github-dark.css)
+- Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe).
+- Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes
 
 <table>
   <tr><td>3024 Dark</td>      <td>Desert</td>                <td>Freya</td>                 <td>Fruity</td>                  <td>Github-Dark</td></tr>
@@ -15,7 +14,6 @@ Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the di
 ### Before & After
 
  [ ![before screenshot](http://stylishthemes.github.io/Github-Dark/images/screenshots/before_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/before.png)
-
  [ ![red theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red.png)
  [ ![blue theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue.png)
  
