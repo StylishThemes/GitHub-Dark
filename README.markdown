@@ -3,6 +3,10 @@
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe).
 - Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes
 
+### Preview
+![Github Dark](http://i.imgur.com/Tdk2UCM.png)
+
+### Available color schemes
 <table>
   <tr><td>3024 Dark</td>      <td>Desert</td>                <td>Freya</td>                 <td>Fruity</td>                  <td>Github-Dark</td></tr>
   <tr><td>Inkpot</td>         <td>Monokai</td>               <td>Mustang</td>               <td>Native</td>                  <td>No Quarter</td></tr>
@@ -11,12 +15,6 @@
   <tr><td>Vim</td>            <td>Wombat</td>                <td>Zenburn</td>               <td></td>                        <td></td></tr>
 </table>
 
-### Before & After
-
- [ ![before screenshot](http://stylishthemes.github.io/Github-Dark/images/screenshots/before_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/before.png)
- [ ![red theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_red.png)
- [ ![blue theme](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue_th.png) ](http://stylishthemes.github.io/Github-Dark/images/screenshots/after_blue.png)
- 
 ### Contributions
 
 Thanks to all that have contributed!
