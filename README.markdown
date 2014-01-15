@@ -30,6 +30,26 @@ Thanks to all that have contributed!
 
 See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki)
 
+#### Version 1.7.9 (1/15/2014)
+
+* Checkboxes &amp; radios
+  * Style checkboxes and radios, and add the applied svg's to the project
+  * Add radio button checked background
+  * Include indeterminate checkbox and radio states in styling
+* Readme tweaks - now using a single preview image
+* Fix gist footer
+* Removed
+  * Remove unneeded whitespace
+  * Remove graph hover hack as Github fixed it on their side
+  * Remove header text-shadow
+  * Remove box shadow on vertical separators in the file headers
+  * Remove a few unneeded form styles
+  * Remove bottom border from modal menus
+* Slightly darken the command-bar border
+* Improve contributor boxes on the contributor graph page
+* Narrow down the selector for contributor boxes
+* Aligned code blockes. Fixes [issue #90](https://github.com/StylishThemes/Github-Dark/issues/90)
+
 #### Version 1.7.8 (1/13/2014)
 
 * Remove avatar background; to see background image
@@ -86,24 +106,3 @@ See the [full change log here](https://github.com/StylishThemes/Github-Dark/wiki
   * Issue milestone meta data
   * status page footer background
   * These changes allow background image to show through
-
-#### Version 1.7.4 (1/4/2014)
-
-* Fix date truncation
-* Fix gist styles:
-  * Secret gist coloring
-  * Hover effect &amp; white border
-  * Creator line color
-  * Font size fix for gist diff stats
-* Fix button &amp; header hovers
-* Fix popup menu colors
-* Various front page tweaks
-* Added OSX font rendering tweaks. Fixes [issue #86](https://github.com/StylishThemes/Github-Dark/issues/86)
-* Darken borders to #333333
-* Add more contrast to readme headings &amp; bold text
-* Tweak to option pages
-
-#### Version 1.7.3 (12/22/2013)
-
-* File tree header styling
-* Added screenshot with background image
