@@ -1,7 +1,7 @@
 ## Github Dark theme for Stylish
 - Install from [userstyles.org](http://userstyles.org/styles/37035) or [manually](https://github.com/StylishThemes/Github-Dark/blob/master/github-dark.css). Manual installation won't offer options.
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/) and [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe).
-- Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different syntax highlighting themes.
+- Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different code color schemes.
 
 ### Preview
 ![Github Dark preview](http://i.imgur.com/Tdk2UCM.png)
