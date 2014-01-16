@@ -229,7 +229,7 @@
   }
   /* previously orange border bottom */
   .pagehead ul.tabs li a.selected, .pagehead > ul.tabs li a:hover, .filter-selected, div.listing.navigation-focus,
-  div.issues.navigation-focus, .repo-filter:hover, .dashboard-tabs a.selected {
+  div.issues.navigation-focus, .repo-filter:hover, .dashboard-tabs a.selected, .marketing-nav a.selected {
     border-radius: 0 !important;
     border-bottom: #eee 2px solid !important;
   }
@@ -262,7 +262,7 @@
   .release-list > li, .url-box, .select-menu-button:after, .context-body, .range-editor-head, .code-list-item,
   .cheatsheet, .pagehead.settings-area, .release-body, .suggester, .pull-state, .pull-number, .merge-pr, .gist-file,
   #footer .container, #graph-shots li, .sidebar, .release-timeline, .explore h2, ul.color-label-list .color, #head,
-  .leaderboard-list-item, .release-timeline-tags .main, .explore-section, .search-result-item, .sort-bar, .details,
+  .leaderboard-list-item, .release-timeline-tags .main, .search-result-item, .sort-bar, .details,
   .content-header, .user-list-item, .commit-group-item .gobutton .comment-count, .markdown-body, ul#categories li h5,
   .gobutton.with-comments .sha, #gollum-editor-function-bar, #gollum-editor-title-field, .capped-box, .steps li,
   .steps, .setup-info-module, #graphs, .repolist > li {
@@ -275,7 +275,7 @@
   .pagination span:last-child, .range-editor span.flag, .range-editor .range, .dashboard-tabs, .graphs, .graph,
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .box-body, .email-signature-reply,
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
-  .file-diffstat, ul.filter-list, .news .alert, table.files td {
+  .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.current, .pagination span.gap, .menu a {
@@ -401,7 +401,7 @@
     background: #181818 !important;
     border: 0 !important;
   }
-  .capped-box, .markdown-body table tr:nth-child(2n) {
+  .capped-box, .markdown-body table tr:nth-child(2n), .explore-section:nth-child(2n) {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -519,7 +519,7 @@
   .display tr, div#common-issues ul li a:hover, #contributors h3, .select-menu-modal,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .issues-list > ul > li.navigation-focus,
   .issues-list-actions, pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
-  .explore-section:nth-child(even), button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip, .comment {
+  button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip, .comment {
     background-color: #333 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -745,7 +745,8 @@
   .navigation-focus .octicon:not(.octicon-arrow-right):not(.type-icon), .sunken-menu-group li:hover .octicon,
   .select-menu-item.select-menu-action > .octicon,.select-menu-item.selected > .octicon,.select-menu-item-text,
   .dashboard-tabs a.selected,.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4,
-  .dropdown-menu > li > a:hover >.octicon, .message .time, #graph_data .tab.selected a {
+  .dropdown-menu > li > a:hover >.octicon, .message .time, #graph_data .tab.selected a, .mega-octicon:before,
+  .explore-collection .see-more-link {
     color: #eee !important;
   }
   /* slightly darker text */
@@ -755,7 +756,7 @@
   .tag-info .tag-name, .language, .featured-callout h2, .header a, .commit-title .message, .files .message, .numbers-summary a,
   .revision .creator,  .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
   .highlight .file-diff-line:hover *, .keyboard-mappings, .comment-header-author, .comment-header-author a,
-  .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble {
+  .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .social-count {
     color: #ccc !important;
   }
   table th, .markdown-body, .markdown-body li, .markdown-body p, .edit-repository-meta, .field label,
@@ -772,7 +773,7 @@
   }
   /* content text */
   #contributions-calendar .contrib-details div, .mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .time,
-  .pagination .disabled, .diffstat-bar, .mega-octicon:before, .news .alert .octicon {
+  .pagination .disabled, .diffstat-bar, , .news .alert .octicon {
     color: #777 !important;
   }
   .vcard-detail .octicon {
@@ -1089,9 +1090,13 @@
     color: #f93 !important;
   }
   .featured-label {
-    background: #c61 !important;
+    background: #F5B987 !important;
     border: none !important;
     padding: 6px !important;
+    color: #D26911 !important;
+  }
+  .featured-label .octicon {
+    color: #D26911 !important;
   }
   /* secret gists */
   .gist-item.vis-secret .bubble {
