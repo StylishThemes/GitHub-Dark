@@ -30,6 +30,37 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Version 1.7.10 (1/19/2014)
+
+* Fix comment text being wrongly colored in some cases
+* Darker:
+  * Gist search box
+  * Added subtle color variation in markdown tables
+  * vcard icons
+  * Common issues border
+* Brighter
+  * markdown text
+  * PR/issue counter
+* Tweaks
+  * Few text colors (including issues page)
+  * Better frontpage "more" and tweaked inline info boxes
+  * Explore page
+  * Repo octicon
+  * Box borders
+  * Header logo color & blog link colors
+* Update README - replaced screenshot thumbnails with one image
+* Fix commit list comment hover
+* Fix diff stats alignment
+* Fix up blog feedback box
+* Fix gist description colors
+* Fix commit title color text
+* Fix color input field
+* Restore syntax highlighting on help pages, clean up text color selectors
+* Restore original language stats height, fix commit comment count color
+* Fix issue list colors
+* Fix repo search button hover
+* Improve issues/milestone pages
+
 #### Version 1.7.9 (1/15/2014)
 
 * Checkboxes &amp; radios
@@ -73,36 +104,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
   * Background-repeat: repeat or no-repeat
   * Background-size: cover, container, auto or 50% 50%
   * Background-attachment: fixed or scroll
-
-#### Version 1.7.5 (1/9/2014)
-
-* "New" dropdown styling
-  * fix dropdown arrows
-  * remove underline from `+` in header
-* Status page
-  * Hide loading icon image, add dark background image
-  * Fix tab loading style. See [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
-  * Graph tweaks. Fixes [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
-  * Style svg tooltips
-  * Fix graph preview hover offsets
-  * Restore status history colors & repo list border
-  * Remove diff text-shadow
-  * Tweaks to traffic stats
-* Tweaks to inline comments
-* Repo sidebar tweaks
-* Center octocat on frontpage message boxes
-* Fix repo-editing text color
-* Fix commit activity graph line color
-* Fix markdown base text color
-* Fix ellipsis color on truncated text
-* Remove text shadow on flash boxes
-* Improve merge messages in issues
-* Add more background properties.
-  * Please note that this doesn't work properly for tiled background images
-  * Thanks [Pmmlabs](https://github.com/Pmmlabs)!
-* Fix text colors in file boxes & user page
-* SSH keys text colors
-* Removed background color from
-  * Issue milestone meta data
-  * status page footer background
-  * These changes allow background image to show through
