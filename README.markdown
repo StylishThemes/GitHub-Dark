@@ -30,6 +30,22 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Verison 1.7.11 (1/22/2014)
+
+* Commit title &amp; branches/tags colors
+* Fix plaintext readme text color
+* Fix button text color
+* Fix comment preview border
+* Merge/brighten a lot of text color styles
+* Fix dropdown background &amp; tweak a few more text colors
+* Issue list tweaks, includes front page tab
+* Fix red links
+* Issue labels: remove modifications to text color &amp; hover. Fixes [issue #93](https://github.com/StylishThemes/Github-Dark/issues/93).
+* Side menu: added semi-transparent background. See [issue #95](https://github.com/StylishThemes/Github-Dark/issues/95).
+* Style new PR tab counters &amp; also fix a GH bug on them
+* Remove unused sunken menu (side menu) styling
+* Organization pages: add style to organization page, members &amp; teams
+
 #### Version 1.7.10 (1/19/2014)
 
 * Fix comment text being wrongly colored in some cases
@@ -96,11 +112,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 * Clean up background image options; reduced to two options:
   * Image type: Fit window size versus Tiled
   * Image attachment: scroll versus fixed
-
-#### Version 1.7.6 (1/9/2014)
-
-* Added background image properties
-  * Fixes [issue #88](https://github.com/StylishThemes/Github-Dark/issues/88) to now allow using a tiled background image versus a full background image
-  * Background-repeat: repeat or no-repeat
-  * Background-size: cover, container, auto or 50% 50%
-  * Background-attachment: fixed or scroll
