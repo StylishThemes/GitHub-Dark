@@ -31,9 +31,9 @@
   #forkqueue .instructions, .addon h4, #wiki-wrapper h1, #wiki-wrapper h2, #wiki-wrapper h3, #wiki-wrapper h2 strong,
   #wiki-wrapper h3 strong, .wikistyle h1, .wikistyle h2, .header a:hover, .header a:hover .mini-icon,
   .header a:hover .mega-icon:before, #footer a, #userbox a:hover, .header-logo-wordmark:hover span,
-  #userbox a:hover .mini-icon, .gist-item ul.meta>li>a:hover, #userbox a:hover, .org-repo-name a:hover .repo-prefix,
+  #userbox a:hover .mini-icon, .gist-item ul.meta>li>a:hover, #userbox a:hover, .org-repo-name a:hover,
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .full-word, .team-mention,
-  .add-line-comment:before, .octicon-mark-github:hover:before, .header a:hover .octicon,
+  .add-line-comment:before, .octicon-mark-github:hover:before, .header a:not(.choice):hover .octicon,
   .comment-header-actions li:hover .octicon, .zeroclipboard-link .octicon {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
@@ -78,7 +78,7 @@
     box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.075) inset, 0px 0px 5px rgba(255, 255, 255, .075) !important;
   }
   /* === Inputs === */
-  select, input:not(.js-color-editor-input), textarea, .commandbar .choice:hover, .commandbar .loading:hover {
+  select, input:not(.js-color-editor-input), textarea {
     -moz-appearance: none !important;
     background: #181818 !important;
     border-color: #666 !important;
@@ -164,7 +164,7 @@
   .blankslate, .commit-ref, .pagination span, .mini-icon-advanced-search, .count, .select-menu-title, .sunken-menu a,
   .select-menu-button:after, #repo-message, .times, .sunken-menu-contents, .sunken-menu a .counter, .usage-bar dt,
   #user-links .name img, #common-issues, .upload-progress, .svg-tip, .meta, .flash, .flash-global,
-  #files .file .meta .info span, .file-box .meta .info span, body#com #header {
+  #files .file .meta .info span, .file-box .meta .info span, body#com #header, .search-filters {
     text-shadow: none !important;
     box-shadow: none !important;
   }
@@ -209,7 +209,7 @@
     background-clip: padding-box !important;
   }
   /* remove border-radius */
-  .dashboard-tabs a {
+  .dashboard-tabs a, .search-filters {
     border-radius: 0 !important;
   }
   /* === No huge text === */
@@ -266,7 +266,7 @@
   .content-header, .user-list-item, .commit-group-item .gobutton .comment-count, .markdown-body, ul#categories li h5,
   .gobutton.with-comments .sha, #gollum-editor-function-bar, #gollum-editor-title-field, .capped-box, .steps li,
   .steps, .setup-info-module, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
-  .table-list-cell, .team, .org-add-footer {
+  .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -403,7 +403,8 @@
   }
   .capped-box, .markdown-body table tr:nth-child(2n), .explore-section:nth-child(2n), .blog-feedback,
   .list-group-item, .chromed-list-browser .none p, .chromed-list-browser .error p, .list-browser-footer,
-  .diff-line-num, .file-data .line-numbers span, #readme .plain {
+  .diff-line-num, .file-data .line-numbers span, #readme .plain, .commandbar .choice:hover, .commandbar .loading:hover,
+  .search-filter:hover {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -514,7 +515,7 @@
   .display tr, div#common-issues ul li a:hover, #contributors h3, .select-menu-modal,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .issues-list > ul > li.navigation-focus,
   pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
-  button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip {
+  button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip, .auto-search-group .search-filters {
     background-color: #333 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -746,7 +747,7 @@
   .dropdown-menu > li > a:hover >.octicon, .message .time, #graph_data .tab.selected a, .explore-section .mega-octicon:before,
   .explore-collection .see-more-link, ul.color-label-list .count, a.filter-tab.selected, .pagination a,
   .commit .commit-title, .commit .commit-title a, .counter, .orgs-nav .count, .member-list-item:hover .member-username,
-  .org-module-link, .org-repo-name a, .org-header-info .name-link {
+  .org-module-link, .org-repo-name a, .org-header-info .name-link, #contributions-calendar .contrib-details div .num {
     color: #eee !important;
   }
   body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
@@ -758,14 +759,15 @@
   .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .social-count,
   #blog-main .pagehead h1 a.title, .octofication .message p, .repolist .description, .addon p, .commit-group-item .gobutton,
   .list-group-item .list-group-item-name a, .list-group-item .list-group-item-meta a, .list-browser-sorts .sort-type,
-  .select-menu-header .select-menu-title, #commits_tab_counter {
+  .select-menu-header .select-menu-title, #commits_tab_counter, .auto-search-group .search-filter,
+  .auto-search-group .search-filter .octicon:before {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
   .header .octicon-mark-github:before, .repository-meta .repository-description, .gist-item .description, p.explain,
   .news .alert .simple .title, #network .graph-date, .tabnav-widget.text, .site-footer,
   span.diffstat a, .commit .commit-branches a, .markdown-body, .markdown-body li, .markdown-body p, #readme .plain,
-  option, .news blockquote, .news blockquote p, #contributions-calendar .contrib-details div .num, .collection-stat,
+  option, .news blockquote, .news blockquote p, .collection-stat,
   .flash-global a, #contributions-calendar .contrib-details div .lbl, .tag-info a, .authorship, a.browse-button,
   .ghead .dir, .octicon, .repository-lang-stats .percent, .diffstat-summary, .diff-expander .octicon-unfold,
   .comment-header-action-text a, .comment-header-right a, .gist-item .creator, .dashboard-tabs a, #graph_data .tab a,
@@ -779,10 +781,10 @@
   #contributions-calendar .contrib-details div, .mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .time,
   .pagination .disabled, .diffstat-bar, .news .alert .octicon, .gist-item .metadata .datetime, .list-group-item-meta,
   .keyboard-shortcuts, .simple-conversation-list, .simple-conversation-list > li .title .num, .drag-and-drop,
-  .starred-repo .sort-info, .org-stats {
+  .starred-repo .sort-info, .org-stats, .commandbar .choice, .commandbar .loading, .commandbar .description {
     color: #888 !important;
   }
-  .vcard-detail .octicon, .mega-octicon:before {
+  .vcard-detail .octicon, .mega-octicon:before, .command-bar .octicon-question:before, .auto-search-group .octicon:before {
     color: #666 !important;
   }
   /* darkest text; Context pane highlight item */
