@@ -30,6 +30,31 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Version 1.7.12 (1/25/2014)
+
+* Darken multiple pull request border. Fixes [issue #92](https://github.com/StylishThemes/Github-Dark/issues/92).
+* Organization page:
+  * Fix participation graph z-index to make links clickable
+  * Adjust style of organization name hover color
+  * Color tweaks
+  * Other page fixes
+* Team page
+  * background &amp; hover fixes
+  * Limit team-members background class to team page, or it covers the background image
+* Commits:
+  * Fix multi-line text color
+  * Title: fix issue links
+* Search result page: fix code divider style
+* Tweak search popups
+* Move main background image position to userstyle options
+* Issue creation: fix label hover
+* Repo head: replace loading spinner
+* Side (sunken) menu: restore left border (oops!)
+* Fix command bar help; tweak wiki table
+* Frontpage:
+  * Update news box styling
+  * Fix broadcast icon animation
+
 #### Verison 1.7.11 (1/22/2014)
 
 * Commit title &amp; branches/tags colors
@@ -103,12 +128,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 * Pull request (issues) - fix clean merge arrow color.
 * Add padding instead of margin to code view. Fixes [issue #89](https://github.com/StylishThemes/Github-Dark/issues/89)
 * Fix minibutton text color
-
-#### Version 1.7.7 (1/10/2014)
-
-* Remove side menu backgroud to allow image to show through
-* Another fix to graph colors
-* Pull request: fix dirty merge arrow color
-* Clean up background image options; reduced to two options:
-  * Image type: Fit window size versus Tiled
-  * Image attachment: scroll versus fixed
