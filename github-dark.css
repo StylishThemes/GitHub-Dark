@@ -44,9 +44,8 @@
   .gollum-minibutton:hover, .pagination a:hover, .gollum-minibutton a:hover, #gollum-editor-submit:hover,
   .tip-box a.next:hover, .sidebar-module h3:hover a, a.feed:hover, a.feed:hover span, .clone-url-button:hover a,
   .listings-layout .nav li a:hover, .search-form button:hover, .state-merged, .url-box .zeroclipboard-is-hover,
-  .select-menu-item.navigation-focus, .select-menu-item.navigation-focus.selected, .notification-indicator .unread,
-  ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
-  table.upgrades tr:hover td, .email-format .email-hidden-toggle:hover a,
+    ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
+  table.upgrades tr:hover td, .email-format .email-hidden-toggle:hover a, .notification-indicator .unread,
   .js-topic a:hover, .gist-item .bubble:hover, .dashboard-tabs a:hover, .dropdown-menu > li > a:hover,
   div.news .pagination a:hover, input[type=submit]:hover {
     background: /*[[base-color]]*/ #4183C4 !important;
@@ -481,20 +480,23 @@
   .select-menu-loading-overlay, .slow-loading-overlay {
     background-color: rgba(34, 34, 34, 0.8) !important;
   }
-
   /* === Join page === */
   ol.steps li {
     background: #222 !important;
   }
-
+  /* Navigation focus - #282828 */
+  #notification-center .list-group-item.navigation-focus, .list-browser-item.navigation-focus,
+  .list-group-item.navigation-focus, .starred-repo.navigation-focus, .js-details-container.navigation-focus,
+  .js-details-container.navigation-focus:nth-child(2n), .select-menu-item.navigation-focus,
+  .select-menu-item.navigation-focus.selected {
+    background: #282828 !important;
+  }
   /* === #333 === */
   /* Panel background (#333) only */
   .commit, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, table.branches tr:hover td,
-  ol.steps li.current, div.setup-info-module, .dropdown-menu, #notification-center .list-group-item.navigation-focus,
-  .list-browser-item.navigation-focus {
+  ol.steps li.current, div.setup-info-module, .dropdown-menu {
     background: #333 !important;
   }
-
   /* Panel background (#333), leave image, no border, with radius */
   .pagehead ul.actions a.feed, .explore h2 .feed, #code_search_instructions h2, td.inst, .metabox-loader, .pull-flag,
   .browser-content, .wikistyle p, .filterbar ul.filters li, .pagehead ul.tabs li.contextswitch, ul.fieldpills li,
@@ -518,7 +520,7 @@
   .divider-vertical, #footer .upper_footer, .user-commits td, tr.inline-comments, .thread-subscription-status,
   .starting-comment .infobar, #issues_next .infobar, .formbody, .commandbar .display, .none p, .display div.choice,
   div#common-issues ul li a:hover, #contributors h3, .select-menu-modal,
-  .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .issues-list > ul > li.navigation-focus,
+  .select-menu-modal > div, .issues-list > ul > li.selectable:hover,
   pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
   button.button:hover, #wiki-rightbar, .sidebar-module, .svg-tip, .auto-search-group .search-filters {
     background-color: #333 !important;
@@ -543,7 +545,7 @@
   .context-pane .title, .flash, .browser .listing:hover, #dashboard .repos, .date_selector .button, .selectable_day,
   .file-box .icon, .list-module .list-body, .list-module a, .bootcamp-body,
   .filter-bar, .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop, .full-width-divider,
-  .starred-repo.navigation-focus, #issues_next .labels .label a, .module .inner, .inline-comment-form a.selected,
+  #issues_next .labels .label a, .module .inner, .inline-comment-form a.selected,
   .pull-head {
     background: #333 none !important;
     color: #eee !important;
@@ -753,7 +755,7 @@
   .explore-collection .see-more-link, ul.color-label-list .count, a.filter-tab.selected, .pagination a,
   .commit .commit-title, .commit .commit-title a, .counter, .orgs-nav .count, .member-list-item:hover .member-username,
   .org-module-link, .org-repo-name a, .org-header-info .name-link, #contributions-calendar .contrib-details div .num,
-  .commandbar .display table td:first-child {
+  .commandbar .display table td:first-child, .select-menu-item h4 {
     color: #eee !important;
   }
   body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
@@ -766,7 +768,8 @@
   #blog-main .pagehead h1 a.title, .octofication .message p, .repolist .description, .addon p, .commit-group-item .gobutton,
   .list-group-item .list-group-item-name a, .list-group-item .list-group-item-meta a, .list-browser-sorts .sort-type,
   .select-menu-header .select-menu-title, #commits_tab_counter, .auto-search-group .search-filter,
-  .auto-search-group .search-filter .octicon:before, .github-jobs-promotion p a, .notification-actions .age {
+  .auto-search-group .search-filter .octicon:before, .github-jobs-promotion p a, .notification-actions .age,
+  .select-menu-item .description {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
@@ -1062,10 +1065,6 @@
   .dashboard-tabs a {
     border-left: 0 !important;
     border-right: 0 !important;
-  }
-  /* commit List focus */
-  .js-details-container.navigation-focus, .js-details-container.navigation-focus:nth-child(2n) {
-    background: #333 !important;
   }
   .js-details-container.navigation-focus .gobutton {
     background: linear-gradient(#444, #222) !important;
