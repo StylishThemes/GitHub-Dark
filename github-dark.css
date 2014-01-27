@@ -51,7 +51,7 @@
     background: /*[[base-color]]*/ #4183C4 !important;
     color: #eee !important;
   }
-  .context-button:after, .bubble:hover .file-box {
+  .context-button:after {
     border-color: /*[[base-color]]*/ #4183C4 transparent transparent !important;
   }
   .octofication .message {
@@ -267,7 +267,7 @@
   .gobutton.with-comments .sha, #gollum-editor-function-bar, #gollum-editor-title-field, .capped-box, .steps li,
   .steps, .setup-info-module, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
-  .commit-tease .commit-meta {
+  .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -428,19 +428,19 @@
   /* Darkest background color (#222), no image, leave border */
   option, .commit-tease .commit-meta, .discussion-topic-header, .discussion-topic .branch-status.status-error,
   .discussion-topic .branch-status.status-failure, .section-heading-title a.js-selected-navigation-item, .facebox-content,
-  .upload-progress, .tag-info.commit, .search-results-listing em {
+  .upload-progress, .tag-info.commit, .search-results-listing em, .discussion-bubble-inner {
     background: #222 none !important;
   }
   /* Darkest background color (#222), no image, with border & radius */
   svg, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content,
   span.gravatar, .browsered, .browsered .inner, .subnav-bar > ul > li > ul, .comment-form ul.tabs a.selected,
   .issue.open.read .summary, .unselected_month, .commits th, #MathJax_Message, #header .userbox, .chzn-single,
-  .user-commits, .user-commits th, .metabox, .gollum-minibutton, .ranked-repositories > li, .file-box .meta,
+  .user-commits, .user-commits th, .metabox, .gollum-minibutton, .ranked-repositories > li,
   .pagehead ul.actions, #issues_search .comment, #header-wrapper, .fieldgroup .fields, ul.feature-tabs li.highlight,
   .pagination, .gist-meta, .commit-group, .filterbar .filters li, .starting-comment .body, .list-tip,
   .expandable h3 a:last-child, .commit_oneline, .markdown-body tt, .filterbox, .conversation-list-heading .inner,
   .autocomplete-results, .new-comments .body, .subscription-row, .release-timeline .js-details-container,
-  .pulse-sections .meta, .blog-post .meta, .discussion-bubble-inner, .display tr {
+  .pulse-sections .meta, .blog-post .meta, .display tr {
     background: #222 none !important;
     border-color: #444 !important;
     border-radius: 3px !important;
@@ -720,7 +720,7 @@
   .box-header {
     background: linear-gradient(to bottom, #282828, #181818) !important;
   }
-  .boxed-group > h3, .search-form button {
+  .boxed-group > h3, .search-form button, .file-box .meta {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #555 !important;
   }
@@ -755,7 +755,8 @@
   .commandbar .display table td:first-child, .select-menu-item h4, .discussion-topic .branch-status.status-error,
   .discussion-topic .branch-status.status-failure, .discussion-sidebar p strong, .repository-sidebar h3 > strong,
   .overall-summary .graphs .num, ul.summary-stats li .num, .diffstat-summary strong, .markdown-body strong,
-  .breadcrumb strong.final-path, .commit.file-history-tease .participation p.quickstat strong {
+  .breadcrumb strong.final-path, .commit.file-history-tease .participation p.quickstat strong, .pull-head-meta .pull-number a,
+  .mini-discussion-bubble .mini-discussion-bubble-action {
     color: #eee !important;
   }
   body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
@@ -769,7 +770,7 @@
   .list-group-item .list-group-item-name a, .list-group-item .list-group-item-meta a, .list-browser-sorts .sort-type,
   .select-menu-header .select-menu-title, #commits_tab_counter, .auto-search-group .search-filter,
   .auto-search-group .search-filter .octicon:before, .github-jobs-promotion p a, .notification-actions .age,
-  .select-menu-item .description, .issue-head .number strong, .file-info .file-name, .explain strong {
+  .select-menu-item .description, .issue-head .number strong, .file-info .file-name, .explain strong, #files .file .meta, .file-box .meta {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
@@ -875,10 +876,15 @@
   .infotip, .form-actions .tip, .mini-callout, .snippet em, #message .sent, .notification, .callout, .contributing,
   .ejector, #issues_search .results em, .bootcamp-help ul li, .btn-download, .feature-tabs .tab-button, .plan.free,
   #message.minor, .chzn-results li em, #missing-readme, .warning, .page-notice, a.button.classy, .signed-out-comment,
-  .discussion-topic .branch-status.status-pending, .facebox-alert {
-    background: #362607 !important;
+  .facebox-alert {
+    background: #441 !important;
     border-color: #440 !important;
     color: #ddd !important;
+  }
+  .status-pending, .discussion-topic .branch-status.status-pending, .status-pending .octicon {
+    background: #541 !important;
+    color: #a82 !important;
+    border-color: #555 !important;
   }
   /* === Green panel === */
   /* labels */
@@ -1062,7 +1068,7 @@
   /* no border */
   .multiple-avatars, .multiple-avatars:before, table.files, table.files tr, .simple-conversation-list>li:first-child,
   .gobutton.with-comments .sha, .commit-group-item, .blob-line-nums, .commit,
-  .setup-form-container .fieldgroup .fields {
+  .setup-form-container .fieldgroup .fields, .inline-comments .line-comments {
     border: 0 !important;
   }
   .dashboard-tabs a {
@@ -1084,7 +1090,7 @@
     border: 1px solid #555 !important;
   }
   /* commit header - add border */
-  .full-commit, .repository-content > .commit, .capped-card, .inline-comment {
+  .full-commit, .repository-content > .commit, .capped-card, .inline-comment, .file-box, .file-box:hover {
     border: 1px solid #555 !important;
   }
   .pull-info, .branch-link {
