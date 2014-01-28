@@ -253,6 +253,10 @@
     vertical-align: middle !important;
     border-radius: 2px !important;
   }
+  /* invisible border */
+  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper, .discussion-timeline-actions {
+    border-color: transparent !important;
+  }
 
   /* === Darken border === */
   pre, table, table th, h1, h2, h3, hr, img, #browser table, #browser table th, #issues .menu ul li,
@@ -271,7 +275,8 @@
   .gobutton.with-comments .sha, #gollum-editor-function-bar, #gollum-editor-title-field, .capped-box, .steps li,
   .steps, .setup-info-module, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
-  .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row {
+  .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row, .gh-header-meta,
+  .timeline-comment {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -282,7 +287,8 @@
   .pagination span:last-child, .range-editor span.flag, .range-editor .range, .dashboard-tabs, .graphs, .graph,
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .email-signature-reply,
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
-  .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item {
+  .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item,
+  .timeline-comment-header {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .menu a {
@@ -309,9 +315,6 @@
   }
   ul.sunken-menu-group a.selected {
     border-left: transparent 1px solid !important;
-  }
-  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover {
-    border-color: transparent !important;
   }
   .context-button:hover:after, .switcher > span:before {
     border-color: #eee transparent transparent !important;
@@ -419,7 +422,7 @@
   .commit-group {
     background: #141414 !important;
   }
-  .markdown-body {
+  .markdown-body, .discussion-timeline-actions {
     background: transparent !important;
   }
   .social-count:before {
@@ -497,7 +500,7 @@
   /* === #333 === */
   /* Panel background (#333) only */
   .commit, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, table.branches tr:hover td,
-  ol.steps li.current, div.setup-info-module, .dropdown-menu {
+  ol.steps li.current, div.setup-info-module, .dropdown-menu, .timeline-comment {
     background: #333 !important;
   }
   /* Panel background (#333), leave image, no border, with radius */
@@ -719,7 +722,7 @@
   .commit-ref, .cheatsheet h2, .highlight .file-diff-line:hover td, .section a.section-head,
   .dashboard-tabs li a, .full-commit .browse-button, a.function-button, .capped-box h3,
   .expandable-line-num .diff-expander:hover, .boxed-group .heading, #contributors .capped-card h3,
-  .issues-list-actions {
+  .issues-list-actions, .timeline-comment-header, .comment-form-head.tabnav {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
   }
