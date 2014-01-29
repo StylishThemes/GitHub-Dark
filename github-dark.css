@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
-/* Github Dark Theme v1.7.12 (1/25/2014)
+/* Github Dark Theme v1.7.13 (1/28/2014)
  * https://github.com/StylishThemes/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -49,7 +49,7 @@
     ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
   table.upgrades tr:hover td, .email-format .email-hidden-toggle:hover a, .notification-indicator .unread,
   .js-topic a:hover, .gist-item .bubble:hover, .dashboard-tabs a:hover, .dropdown-menu > li > a:hover,
-  div.news .pagination a:hover, input[type=submit]:hover {
+  div.news .pagination a:hover, input[type=submit]:hover, .hidden-text-expander a:hover {
     background: /*[[base-color]]*/ #4183C4 !important;
     color: #eee !important;
   }
@@ -186,7 +186,8 @@
   .tmp-reusable-bubble .bubble-inner, .commit-group-item .authorship, pre.headers code, .columns.equacols.bordered,
   .gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code, .menu-container, .milestone, .more-repos,
   #network .repo span, .previewable-comment-form, .keyboard-mappings th, .api #header-wrapper .nav,
-  .marketing-nav a.selected, #graph_data .tabs, .org-nav-item.selected, .edit-team-member:hover {
+  .marketing-nav a.selected, #graph_data .tabs, .org-nav-item.selected, .edit-team-member:hover, tr.commit,
+  .discussion-timeline-actions, .discussion-timeline:before, .timeline-commits-minimal .commit-icon .octicon {
     background: transparent !important;
   }
   .js-topic .arrow-btn {
@@ -276,7 +277,7 @@
   .steps, .setup-info-module, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row, .gh-header-meta,
-  .timeline-comment {
+  .timeline-comment, .new-discussion-timeline .sidebar-item+.sidebar-item, .discussion-timeline-actions {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -309,6 +310,10 @@
   .listings div.listing {
     border-left: #333 2px solid !important;
     border-right: #333 2px solid !important;
+  }
+  .timeline-comment:before {
+    border-right-color: #333 !important;
+    z-index: 1 !important;
   }
   .issue-head {
     border-bottom-width: 1px !important;
@@ -422,7 +427,7 @@
   .commit-group {
     background: #141414 !important;
   }
-  .markdown-body, .discussion-timeline-actions {
+  .markdown-body {
     background: transparent !important;
   }
   .social-count:before {
@@ -545,13 +550,13 @@
   }
   /* Panel background (#333), no image, with border */
   #files .file .data .line_numbers, .editbox, .editbox .body, .commentstyle, #issues .display, .inline-comment-form,
-  #issues .display .admin, #issues .labels .list li, .issue .summary, .plain,
+  #issues .display .admin, #issues .labels .list li, .issue .summary, .plain, .hidden-text-expander a,
   #ng canvas, .standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,
   .gollum-minibutton a, .gollum-minibutton span, .tree-browser th, .js-toggle-list li,
   .context-pane .title, .flash, .browser .listing:hover, #dashboard .repos, .date_selector .button, .selectable_day,
   .file-box .icon, .list-module .list-body, .list-module a, .bootcamp-body,
   .filter-bar, .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop, .full-width-divider,
-  #issues_next .labels .label a, .module .inner, .inline-comment-form a.selected,
+  #issues_next .labels .label a, .module .inner, .inline-comment-form a.selected, .discussion-item-icon,
   .pull-head {
     background: #333 none !important;
     color: #eee !important;
@@ -665,7 +670,7 @@
   div#common-issues, #wiki-history .author img, .options-content h3, .display div.choice:nth-child(2n+1),
   #issues-dashboard .actions,.list-tip a:hover, .boxed-group-list > li:hover,
   .preview-selected .preview-tab, .menu a:hover, .select-menu-tabs a.selected,
-  .hidden-text-expander a, .sunken-menu .sunken-menu-item.selected:after, #files .file .meta .info span.diffstat {
+  .sunken-menu .sunken-menu-item.selected:after, #files .file .meta .info span.diffstat {
     background: #444 none !important;
     border-color: #555 !important;
     color: #eee !important;
@@ -680,8 +685,7 @@
   /* === #555 === */
   /* Highlight Panel background (#555), leave image, no border, with radius */
   .paging, .button-pager, #integration-branch, .selectable_day.hover, .switcher > span:after, .list-module a:hover,
-  .js-guides a:hover, .section-nav .active a, .add-pill-form, #dashboard .filter-bar li a.filter_selected:after,
-  .hidden-text-expander a:hover {
+  .js-guides a:hover, .section-nav .active a, .add-pill-form, #dashboard .filter-bar li a.filter_selected:after {
     background-color: #555 !important;
     border: 0 !important;
     border-radius: 3px !important;
@@ -855,7 +859,8 @@
   /* Red panel */
   #forkqueue .legend .unclean, .unclean td, .chzn-results .no-results, .majorproblem .pageheader_wrap, .error_box,
   .btn-close-issue, button.classy[name="comment_and_close"], .flash-error, #message.major, .minibutton.danger:hover,
-  .minibutton.danger:hover span, .comment-form-error, .closed-issues, .state-indicator.closed, .state-closed {
+  .minibutton.danger:hover span, .comment-form-error, .closed-issues, .state-indicator.closed, .state-closed,
+  .discussion-event-status-closed .discussion-item-icon {
     background: #c31e16 !important;
     border-color: #333 !important;
     color: #ccc !important;
@@ -904,7 +909,7 @@
   #forkqueue .legend .clean, #revisions ul li.current, .excerpt, .selectable_day.today, .plan.business, .popout,
   #statusbar, .clean td, #download_button, .status-box.good a, button.classy.primary,
   .progress-bar .progress, .new-issues, .new-pulls, .mergeable-clean .merge-status-icon, .settings-email .default,
-  .repo-owner-comment .comment-header-tag, .mergeable-clean .bubble {
+  .repo-owner-comment .comment-header-tag, .mergeable-clean .bubble, .gh-header-status.open {
     background: #305530 !important;
     border-color: #060 !important;
   }
@@ -1074,7 +1079,7 @@
     height: 16px;
   }
   /* hide original loader */
-  #graphs .loader img, .repohead .page-context-loader img {
+  #graphs .loader img, .repohead .page-context-loader img, .closed-banner {
     display: none !important;
   }
 
