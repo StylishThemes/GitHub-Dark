@@ -36,11 +36,11 @@
   .add-line-comment:before, .octicon-mark-github:hover:before, .header a:not(.choice):hover .octicon,
   .comment-header-actions li:hover .octicon, .zeroclipboard-link .octicon, .commit .commit-title .issue-link,
   .octofication .mega-octicon:before, .octofication-more strong, .org-repo-stats a:hover,
-  .org-repo-stats a:hover .octicon:before,.org-module-link:hover,.org-module-link:hover .org-stats, .org-module-link:hover .octicon,
-  .org-header-info .name-link:hover, .social-count:hover, .new-file-link span, .org-repo-name a:hover .repo-prefix {
+  .org-repo-stats a:hover .octicon:before,.org-module-link:hover,.org-module-link:hover .org-stats,
+  .org-module-link:hover .octicon, .org-header-info .name-link:hover, .social-count:hover, .new-file-link span,
+  .org-repo-name a:hover .repo-prefix, .timeline-commits .commit-meta .octicon-comment-discussion:before {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
-
   /* Base color panel */
   .button:hover, .button:active, option:hover, .minibutton:not(.disabled):hover, .minibutton:active, .minibutton:hover code,
   .file-minibutton:hover, .add_file:hover, .gollum-minibutton:hover, .pagination a:hover, .gollum-minibutton a:hover,
@@ -187,7 +187,7 @@
   .gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code, .menu-container, .milestone, .more-repos,
   #network .repo span, .previewable-comment-form, .keyboard-mappings th, .api #header-wrapper .nav,
   .marketing-nav a.selected, #graph_data .tabs, .org-nav-item.selected, .edit-team-member:hover, tr.commit,
-  .discussion-timeline-actions, .release-timeline .js-details-container, .section-heading-title a.js-selected-navigation-item {
+  .release-timeline .js-details-container, .section-heading-title a.js-selected-navigation-item {
     background: transparent !important;
   }
   .js-topic .arrow-btn {
@@ -255,7 +255,7 @@
     border-radius: 2px !important;
   }
   /* invisible border */
-  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper, .discussion-timeline-actions {
+  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper {
     border-color: transparent !important;
   }
   /* === Darken border === */
@@ -288,7 +288,7 @@
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .email-signature-reply,
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
   .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item,
-  .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta {
+  .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta, .discussion-timeline-actions {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .menu a, .discussion-item-icon {
@@ -305,6 +305,14 @@
   .more-repos, .simple-conversation-list>li, #contributions-calendar .contrib-details div .lbl, .site-footer,
   .blame .section-first td {
     border-top: #333 1px solid !important;
+  }
+  .closed-banner {
+    border-top: 2px solid #333 !important;
+    border-bottom-color: transparent !important;
+    height: 2px !important;
+  }
+  .discussion-timeline-actions, .closed-banner {
+    background: #222 !important; /* TODO: Fix for backgrounds */
   }
   .listings div.listing {
     border-left: #333 2px solid !important;
@@ -1031,9 +1039,10 @@
     background: #fff !important;
     opacity: .75 !important;
   }
-  .closed-banner {
+  /* striped banner background - still used? */
+  /* .closed-banner {
     background-image: url(http://StylishThemes.github.io/Github-Dark/images/closed_pattern.gif) !important;
-  }
+  }*/
   .search .minibutton span {
     background-position: center -95px !important;
   }
@@ -1103,7 +1112,7 @@
     height: 16px;
   }
   /* hide original loader */
-  #graphs .loader img, .repohead .page-context-loader img, .closed-banner {
+  #graphs .loader img, .repohead .page-context-loader img {
     display: none !important;
   }
 
@@ -1132,10 +1141,10 @@
     border: 1px solid #555 !important;
   }
   /* commit header - add border */
-  .full-commit, .repository-content > .commit, .capped-card, .inline-comment, .file-box, .file-box:hover, .commit-ref {
+  .full-commit, .repository-content > .commit, .capped-card, .inline-comment, .file-box, .file-box:hover {
     border: 1px solid #555 !important;
   }
-  .pull-info, .branch-link {
+  .pull-info, .branch-link, .milestone-list .progress-bar, .commit-ref {
     border: 1px solid #444 !important;
   }
   /* prefs menu - add border */
