@@ -30,6 +30,33 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Version 1.7.13 (1/28/2014)
+
+* Notification center: style notification list like similar lists
+* Unify nagivation focus backgrounds
+* Removed universal `<strong>` color and began fixing issues resulting from it
+* Various tweaks to in-issue code boxes
+* Commit list tweaks, remove shadow from unread notification icon
+* Issue list:
+  * Filter text color
+  * Match filter text colors more closely to GH's style
+* Options: lots of text color fixes
+* Fix plaintext readme &amp; a few text color tweaks
+* Add a lot of link hover colors
+* Files box header: font color tweaks
+* Organization page:
+  * Fix organization name in repo list hover
+  * Darken member row border
+  * Fix button hover &amp; icon color on org pages &amp; probably elsewhere
+  * Chevron hover color, organization text color
+  * Various fixes to member/teams pages
+* Also apply button icon color to minibuttons
+* Fix the icon color on watch buttons
+* Issue page:
+  * Basic styling for new comments
+  * A bunch of tweaks to timeline & round icons
+  * Fixes [issue #97](https://github.com/StylishThemes/Github-Dark/issues/97)
+
 #### Version 1.7.12 (1/25/2014)
 
 * Darken multiple pull request border. Fixes [issue #92](https://github.com/StylishThemes/Github-Dark/issues/92).
@@ -121,10 +148,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 * Improve contributor boxes on the contributor graph page
 * Narrow down the selector for contributor boxes
 * Aligned code blockes. Fixes [issue #90](https://github.com/StylishThemes/Github-Dark/issues/90)
-
-#### Version 1.7.8 (1/13/2014)
-
-* Remove avatar background; to see background image
-* Pull request (issues) - fix clean merge arrow color.
-* Add padding instead of margin to code view. Fixes [issue #89](https://github.com/StylishThemes/Github-Dark/issues/89)
-* Fix minibutton text color
