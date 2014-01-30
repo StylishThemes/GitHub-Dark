@@ -290,12 +290,12 @@
   .box-header, .box-body {
     border-color: #444 !important;
   }
-  #footer, table tr, table td, blockquote, .pagination a:first-child, .pagination a:last-child, .pagination span:first-child
+  #footer, .pagehead, table tr, table td, blockquote, .pagination a:first-child, .pagination a:last-child, .pagination span:first-child
   .pagination span:last-child, .dashboard-tabs, .graphs, .graph,
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .email-signature-reply,
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
   .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item,
-  .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta, .discussion-timeline-actions {
+  .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .menu a, .discussion-item-icon {
@@ -307,20 +307,28 @@
   }
   .summary-stats, .sunken-menu-separator, .pagehead, .follow-list .follow-list-item, .facebox-header, #common-issues li,
   .org-header {
-    border-bottom: #333 1px solid !important;
+    border-bottom: #333 1px51,51,5 solid !important;
   }
   .more-repos, .simple-conversation-list>li, #contributions-calendar .contrib-details div .lbl, .site-footer,
   .blame .section-first td {
     border-top: #333 1px solid !important;
   }
+  /* discussion timeline tweaks */
   .closed-banner {
-    border-top: 2px solid #333 !important;
+    border-top: 2px solid #444 !important;
     border-bottom-color: transparent !important;
     height: 2px !important;
   }
   .discussion-timeline-actions, .closed-banner {
-    background: #222 !important; /* TODO: Fix for backgrounds */
+    background: transparent !important;
+    border-top: 2px solid #444 !important;
   }
+  .discussion-timeline:before {
+    margin-top: 2px !important;
+    background: #444 !important;
+    height: calc(100% - 324px) !important;
+  }
+
   .listings div.listing {
     border-left: #333 2px solid !important;
     border-right: #333 2px solid !important;
@@ -521,7 +529,7 @@
   /* === #333 === */
   /* Panel background (#333) only */
   .commit, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, table.branches tr:hover td,
-  ol.steps li.current, div.setup-info-module, .dropdown-menu, .discussion-timeline:before,
+  ol.steps li.current, div.setup-info-module, .dropdown-menu,
   .discussion-item-ref .discussion-item-icon, .range-editor .range, .range-editor span.flag {
     background: #333 !important;
   }
@@ -1053,10 +1061,6 @@
     background: #fff !important;
     opacity: .75 !important;
   }
-  /* striped banner background - still used? */
-  /* .closed-banner {
-    background-image: url(http://StylishThemes.github.io/Github-Dark/images/closed_pattern.gif) !important;
-  }*/
   .search .minibutton span {
     background-position: center -95px !important;
   }
