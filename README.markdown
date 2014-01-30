@@ -79,7 +79,7 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 * "New" dropdown styling
   * fix dropdown arrows
   * remove underline from `+` in header
-* Status page
+* Status pageasdf
   * Hide loading icon image, add dark background image
   * Fix tab loading style. See [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
   * Graph tweaks. Fixes [issue #87](https://github.com/StylishThemes/Github-Dark/issues/87)
