@@ -30,6 +30,20 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Version 1.7.15 (1/31/2014)
+
+* Network-Members page:
+  * Encode network connection images
+  * remove css invert on an already modified image
+* Commit diff: image comparison footer styling
+* Reorganize css to put body background at the top
+* Apply background to raw URLs too
+* Lots of tweaks/fixes on the logged out frontpage
+* Network members: transparent background &amp; brighter guidelines
+* Various tweaks to repo options
+* Brighten markdown text
+* Add a default background image - updated at userstyles as well. Fixes [issue #105](https://github.com/StylishThemes/Github-Dark/issues/105)
+
 #### Version 1.7.14 (1/30/2014)
 
 * Issue page:
@@ -82,28 +96,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
   * Basic styling for new comments
   * A bunch of tweaks to timeline & round icons
   * Fixes [issue #97](https://github.com/StylishThemes/Github-Dark/issues/97)
-
-#### Version 1.7.12 (1/25/2014)
-
-* Darken multiple pull request border. Fixes [issue #92](https://github.com/StylishThemes/Github-Dark/issues/92).
-* Organization page:
-  * Fix participation graph z-index to make links clickable
-  * Adjust style of organization name hover color
-  * Color tweaks
-  * Other page fixes
-* Team page
-  * background &amp; hover fixes
-  * Limit team-members background class to team page, or it covers the background image
-* Commits:
-  * Fix multi-line text color
-  * Title: fix issue links
-* Search result page: fix code divider style
-* Tweak search popups
-* Move main background image position to userstyle options
-* Issue creation: fix label hover
-* Repo head: replace loading spinner
-* Side (sunken) menu: restore left border (oops!)
-* Fix command bar help; tweak wiki table
-* Frontpage:
-  * Update news box styling
-  * Fix broadcast icon animation
