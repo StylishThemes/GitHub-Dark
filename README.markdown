@@ -8,11 +8,13 @@
 
 ### Available color schemes
 <table>
-  <tr><td>3024 Dark</td>      <td>Desert</td>                <td>Freya</td>                 <td>Fruity</td>                  <td>Github-Dark</td></tr>
-  <tr><td>Inkpot</td>         <td>Monokai</td>               <td>Mustang</td>               <td>Native</td>                  <td>No Quarter</td></tr>
-  <tr><td>Peaksea</td>        <td>Railscasts</td>            <td>Rdark</td>                 <td>Slate</td>                   <td>Solarized Dark</td></tr>
-  <tr><td>Tomorrow Night</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Eighties</td> <td>Twilight</td></tr>
-  <tr><td>Vim</td>            <td>Wombat</td>                <td>Zenburn</td>               <td></td>                        <td></td></tr>
+  <tr><td>3024 Dark</td>      <td>Birds of Paradise</td>   <td>Desert</td>                <td>Digerati</td>                <td>Freya</td></tr>
+  <tr><td>Fruity</td>         <td>Idle Fingers</td>        <td>Github-Dark</td>           <td>Inkpot</td>                  <td>Monokai</td></tr>
+  <tr><td>Mustang</td>        <td>Native</td>              <td>Neverland</td>             <td>No Quarter</td>              <td>Pastels on Dark</td></tr>
+  <tr><td>Peaksea</td>        <td>Railscasts</td>          <td>Rdark</td>                 <td>Slate</td>                   <td>Solarized Dark</td></tr>
+  <tr><td>Tomorrow Night</td> <td>Tomorrow Night Blue</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Eighties</td> <td>Twilight</td></tr>
+  <tr><td>Up</td>             <td>Vim</td>                 <td>Vitamins</td>              <td>Wombat</td>                  <td>Zenburn</td></tr>
+  <tr><td>Zenesque</td>       <td></td>                    <td></td>                      <td></td>                        <td></td></tr>
 </table>
 
 ### Contributions
@@ -29,6 +31,27 @@ Thanks to all that have contributed!
 ### Changelog
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
+
+#### Version 1.7.16 (1/31/2014)
+
+* Fix diff statistics colors
+* Add text-box shadow, fix zen mode, comment box tweaks
+* Exclude compare button from green coloring
+* Fix some timeline item colors &amp; diff text color
+* Some fixes to pull request code discussion
+* Timeline: darken a few more round icons
+* Fix branch switching tab color
+* Fix repo edit link, issue asingee color
+* Fix dropdown hover icon color
+* Add new syntax highlighting styles:
+  * Birds of Paradise
+  * Digerati
+  * Idle Fingers
+  * Neverland
+  * Pastels on Dark
+  * Up
+  * Vitamins
+  * Zenesque
 
 #### Version 1.7.15 (1/31/2014)
 
