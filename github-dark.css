@@ -1,11 +1,11 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
-@-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
 /* Github Dark Theme v1.7.14 (1/30/2014)
  * https://github.com/StylishThemes/Github-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
  */
+@-moz-document regexp("^https?://((raw[2-9]*|gist|help|status|developer)\.)?github\.com.*") {
   body {
     background-color: #222 !important;
     background-image: url(/*[[bg-url]]*/), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==') !important;
@@ -14,6 +14,16 @@
     /*[[bg-options]]*/
     /*[[bg-options2]]*/
   }
+}
+@-moz-document regexp("^https?://raw[2-9]*\.github\.com.*") {
+  body {
+    color: #aaa !important;
+  }
+  a {
+    color: #fff !important;
+  }
+}
+@-moz-document regexp("^https?://((gist|help|status|developer)\.)?github\.com.*") {
   /* Base link/panel colors - text */
   body a, .profilecols ul.stats li a:hover strong, .plans-row .plan, .filters li.selected,
   #gollum-editor-submit, .repo_list span.css-truncate-target, strong.css-truncate-target, .zeroclipboard-button,
