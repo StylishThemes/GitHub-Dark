@@ -270,7 +270,7 @@
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row,
   .timeline-comment, .timeline-comment-header, .timeline-commits .timeline-commits-header, .range-editor span.flag,
-  .range-editor .range, ul.comparison-list > li {
+  .range-editor .range, ul.comparison-list > li, .marketing-section {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -538,7 +538,7 @@
   .filterbar li.selected, #issues_next ul.filters li, table.instruction tr:nth-child(2n), .email-hidden-toggle a,
   .blankslate, .bubble:not(.files-bubble), .bubble-contents, #wiki-header > div,
   div#common-issues h3, #commit-activity-master-head, .file-box, #wiki-footer > div, #gist-form .name,
-  .auth-form-body, .range-editor-form, .action-indicator, .repository-lang-stats,
+  .range-editor-form, .action-indicator, .repository-lang-stats,
   .branch-name, .pull-head .diffstat, ul.suggestions, .accordion, .numbers-summary, .accordion-container {
     background-color: #333 !important;
     border: 0 !important;
@@ -555,7 +555,7 @@
   div#common-issues ul li a:hover, #contributors h3, .select-menu-modal,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover,
   pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
-  #wiki-rightbar, .sidebar-module, .svg-tip, .auto-search-group .search-filters {
+  #wiki-rightbar, .sidebar-module, .svg-tip, .auto-search-group .search-filters, .auth-form-body {
     background-color: #333 !important;
     color: #eee !important;
     border-color: #555 !important;
@@ -627,7 +627,7 @@
     filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix type=\'saturate\' values=\'0\'/><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i") !important;
     -webkit-filter: invert(100%) grayscale(100%) !important;
   }
-  #graph-shots li>p, .select-menu-item {
+  #graph-shots li>p, .select-menu-item, .auth-form-header {
     border-bottom: none !important;
   }
   .js-gshot {
@@ -767,7 +767,7 @@
   .box-header {
     background: linear-gradient(to bottom, #282828, #181818) !important;
   }
-  .boxed-group > h3, .search-form button, .file-box .meta {
+  .boxed-group > h3, .search-form button, .file-box .meta, .auth-form-header {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #555 !important;
   }
@@ -816,14 +816,15 @@
   .mini-discussion-bubble .mini-discussion-bubble-action, .boxed-group .boxed-group-inner strong,
   .accordion .section a.section-head, .commit-tease .authorship a, .orgs-nav .org-nav-item.selected,
   .pagehead .org-title .org-link, .gh-header-status .octicon:before, a.tabnav-tab.selected, .view-modes-menu li.active,
-  .discussion-event-status-reopened .discussion-item-icon {
+  .discussion-event-status-reopened .discussion-item-icon, a.signin:hover, .marketing-benefits .mega-octicon:before,
+  .header-logo-wordmark .octicon-logo-github:before {
     color: #eee !important;
   }
   body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
   .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4, ol.repository-lang-stats-numbers li .lang,
   .commit .sha, .explore h2, .tabnav .active a, .vcard-username, #readme .octicon-link,
   .tag-info .tag-name, .language, .featured-callout h2, .header a, .commit-title .message, .files .message, .numbers-summary a,
-  .revision .creator,  .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
+  .revision .creator, .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
   .highlight .file-diff-line:hover *, .keyboard-mappings, .comment-header-author, .comment-header-author a,
   .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .social-count,
   #blog-main .pagehead h1 a.title, .octofication .message p, .repolist .description, .addon p, .commit-group-item .gobutton,
@@ -854,7 +855,7 @@
   .timeline-comment-header .timestamp, .new-discussion-timeline .discussion-item, .new-discussion-timeline .form-actions-protip .protip,
   .new-discussion-timeline .discussion-item .author, .new-discussion-timeline .discussion-item .timestamp,
   .inline-comments .comment-count, .new-discussion-timeline .sidebar-heading, .clear-issue-filters a,
-  ul.comparison-list > li em {
+  ul.comparison-list > li em, .marketing-benefits .column p {
     color: #aaa !important;
   }
   /* content text */
@@ -903,7 +904,7 @@
   }
   /* Panel's */
   #posts #rss, .signup-button, .hero h1, .plan.personal, .caption, .centered-graphic,
-  .login_form h1, .auth-form-header {
+  .login_form h1 {
     background: /*[[base-color]]*/ #1b1b1b !important;
     border-color: /*[[base-color]]*/ #1b1b1b !important;
   }
@@ -999,9 +1000,10 @@
   }
   a.primary:not(:disabled):hover, button.primary:not(:disabled):hover, minibutton.primary:not(:disabled):hover {
     background: linear-gradient(to bottom, #508055, #407045) !important;
+    color: #eee !important;;
   }
   /* === silver panel/button === */
-  .kbd, .signup-button:hover, .hero .textographic, .hero .screenographic, .dashboard-notice,
+  .kbd, .signup-button:hover, a.signin:hover, .hero .textographic, .hero .screenographic, .dashboard-notice,
   #readme span.name, .markdown-format .alert, .commit-group-heading, .pagination span.current {
     background: linear-gradient(to bottom, #444, #333) !important;
     border-color: #555 !important;
