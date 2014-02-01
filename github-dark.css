@@ -28,7 +28,7 @@
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .full-word, .team-mention,
   .add-line-comment:before, .octicon-mark-github:hover:before, .header a:not(.choice):hover .octicon,
   .comment-header-actions li:hover .octicon, .zeroclipboard-link .octicon, .commit .commit-title .issue-link,
-  .octofication .mega-octicon:before, .octofication-more strong, .org-repo-stats a:hover,
+  .octofication .mega-octicon:before, .octofication-more strong, .org-repo-stats a:hover, #header .nav a:hover,
   .org-repo-stats a:hover .octicon:before,.org-module-link:hover,.org-module-link:hover .org-stats,
   .org-module-link:hover .octicon, .org-header-info .name-link:hover, .social-count:hover, .new-file-link span,
   .org-repo-name a:hover .repo-prefix, .timeline-commits .commit-meta .octicon-comment-discussion:before {
@@ -184,7 +184,8 @@
   .gist-item ul.meta>li>a:hover, .commits li img, a.minibutton code, .menu-container, .milestone, .more-repos,
   #network .repo span, .previewable-comment-form, .keyboard-mappings th, .api #header-wrapper .nav,
   .marketing-nav a.selected, #graph_data .tabs, .org-nav-item.selected, .edit-team-member:hover, tr.commit,
-  .release-timeline .js-details-container, .section-heading-title a.js-selected-navigation-item, .featured-callout .screenshot {
+  .release-timeline .js-details-container, .section-heading-title a.js-selected-navigation-item, .featured-callout .screenshot,
+  .ace-github {
     background: transparent !important;
   }
   .js-topic .arrow-btn {
@@ -274,7 +275,7 @@
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row,
   .timeline-comment, .timeline-comment-header, .timeline-commits .timeline-commits-header, .range-editor span.flag,
-  .range-editor .range, ul.comparison-list > li, .marketing-section, .featured-callout .screenshot {
+  .range-editor .range, ul.comparison-list > li, .marketing-section, .featured-callout .screenshot, .ace_gutter {
     border-color: #555 !important;
   }
   .command-bar:not(.command-bar-focus) input[type="text"], #top_search_form input[type="text"], .discusion-topic-infobar,
@@ -282,7 +283,7 @@
     border-color: #444 !important;
   }
   #footer, .pagehead, table tr, table td, blockquote, .pagination a:first-child, .pagination a:last-child, .pagination span:first-child
-  .pagination span:last-child, .dashboard-tabs, .graphs, .graph, .featured-callout .rule,
+  .pagination span:last-child, .dashboard-tabs, .graphs, .graph, .featured-callout .rule, .sub-nav,
   ul.sunken-menu-group a.selected, .vcard-details, .vcard-stats, .repo-list-item, .email-signature-reply,
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
   .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item,
@@ -405,7 +406,9 @@
   /* === #111 === */
   pre, .wikistyle pre, .wikistyle pre code, #facebox pre, .commit-preview .message pre,
   #wiki-wrapper pre, pre.prettyprint, .list-browser-item.closed, body.windows #header,
-  #footer .site, .ace_gutter, .jumbotron, #adv_code_search .search-page-label, .markdown-body code {
+  #footer .site, .ace_gutter, .jumbotron, #adv_code_search .search-page-label, .markdown-body code,
+  .content .verseblock-content, .content .sectionbody .dlist dt, .content p > tt, .content dl code,
+  .content ul code, p code {
     background: #111 none !important;
     border-color: #333 !important;
   }
@@ -624,7 +627,7 @@
   .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
   .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
   /* invert images */
-  #graph-shots li>a, #network .repo img:not(.gravatar) {
+  #graph-shots li>a, #network .repo img:not(.gravatar), #header .logo {
     filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
     -webkit-filter: invert(100%);
   }
@@ -818,22 +821,22 @@
   .discussion-topic .branch-status.status-failure, .discussion-sidebar p strong, .repository-sidebar h3 > strong,
   .overall-summary .graphs .num, ul.summary-stats li .num, .diffstat-summary strong, .markdown-body strong,
   .breadcrumb strong.final-path, .commit.file-history-tease .participation p.quickstat strong, .pull-head-meta .pull-number a,
-  .mini-discussion-bubble .mini-discussion-bubble-action, .boxed-group .boxed-group-inner strong,
-  .accordion .section a.section-head, .commit-tease .authorship a, .orgs-nav .org-nav-item.selected,
+  .mini-discussion-bubble .mini-discussion-bubble-action, .boxed-group .boxed-group-inner strong, .sub-nav h2, .sub-nav h2 a,
+  .accordion .section a.section-head, .commit-tease .authorship a, .orgs-nav .org-nav-item.selected, .sub-nav li a.active,
   .pagehead .org-title .org-link, .gh-header-status .octicon:before, a.tabnav-tab.selected, .view-modes-menu li.active,
   .discussion-event-status-reopened .discussion-item-icon, a.signin:hover, .marketing-benefits .mega-octicon:before,
   .header-logo-wordmark .octicon-logo-github:before, .featured-callout, .featured-callout .mega-octicon:before,
   .thread-subscription-status .mega-octicon:before, .infobar-widget .text a, .dropdown-menu > li > a:hover > .octicon:before,
-  .dropdown-menu > li > a.zeroclipboard-is-hover > .octicon:before  {
+  .dropdown-menu > li > a.zeroclipboard-is-hover > .octicon:before, #header .nav a, .highlight-module .mega-icon:before {
     color: #eee !important;
   }
-  body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
+  pre, body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
   .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4, ol.repository-lang-stats-numbers li .lang,
   .commit .sha, .explore h2, .tabnav .active a, .vcard-username, #readme .octicon-link, .box-title, .box-action,
   .tag-info .tag-name, .language, .featured-callout h2, .header a, .commit-title .message, .files .message, .numbers-summary a,
   .revision .creator, .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
   .highlight .file-diff-line:hover *, .keyboard-mappings, .comment-header-author, .comment-header-author a,
-  .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .social-count,
+  .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .social-count, .content,
   #blog-main .pagehead h1 a.title, .octofication .message p, .repolist .description, .addon p, .commit-group-item .gobutton,
   .list-group-item .list-group-item-name a, .list-group-item .list-group-item-meta a, .list-browser-sorts .sort-type,
   .select-menu-header .select-menu-title, #commits_tab_counter, .auto-search-group .search-filter, .usage-bar dt,
@@ -846,7 +849,7 @@
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
   .header .octicon-mark-github:before, .repository-meta .repository-description, .gist-item .description, p.explain,
-  .news .alert .simple .title, #network .graph-date, .tabnav-widget.text, .site-footer,
+  .news .alert .simple .title, #network .graph-date, .tabnav-widget.text, .site-footer, .feature .intro,
   span.diffstat, span.diffstat a, .commit .commit-branches a, #readme .plain, .select-menu-tabs a,
   option, .news blockquote, .news blockquote p, .collection-stat, .overall-summary .graphs .desc,
   .flash-global a, #contributions-calendar .contrib-details div .lbl, .tag-info a, a.browse-button,
@@ -862,7 +865,7 @@
   .timeline-comment-header .timestamp, .new-discussion-timeline .discussion-item, .new-discussion-timeline .form-actions-protip .protip,
   .new-discussion-timeline .discussion-item .author, .new-discussion-timeline .discussion-item .timestamp,
   .inline-comments .comment-count, .new-discussion-timeline .sidebar-heading, .clear-issue-filters a,
-  ul.comparison-list > li em, .marketing-benefits .column p {
+  ul.comparison-list > li em, .marketing-benefits .column p, .sub-nav li a {
     color: #aaa !important;
   }
   /* content text */
@@ -871,7 +874,7 @@
   .keyboard-shortcuts, .simple-conversation-list, .simple-conversation-list > li .title .num, .drag-and-drop,
   .starred-repo .sort-info, .org-stats, .commandbar .choice, .commandbar .loading, .commandbar .description,
   ul.summary-stats li a, .authorship, .sha-block, .org-repo-name .repo-prefix, .gh-header-meta, #last-edit,
-  .repository-meta .edit-link a {
+  .repository-meta .edit-link a, .api-status a {
     color: #888 !important;
   }
   .vcard-detail .octicon, .mega-octicon:before, .command-bar .octicon-question:before, .auto-search-group .octicon:before,
