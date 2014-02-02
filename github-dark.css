@@ -36,7 +36,7 @@
   }
   /* Base color panel */
   .button:hover, .button:active, option:hover, .minibutton:not(.disabled):hover, .minibutton:active, .minibutton:hover code,
-  .file-minibutton:hover, .add_file:hover, .gollum-minibutton:hover, .pagination a:hover, .gollum-minibutton a:hover,
+  .file-minibutton:hover, .add_file:hover, .pagination a:hover,
   #gollum-editor-submit:hover, .tip-box a.next:hover, a.feed:hover, a.feed:hover span,
   .clone-url-button:hover a, .listings-layout .nav li a:hover, .state-merged, .url-box .zeroclipboard-is-hover,
     ul.filter-list .filter-item.selected, #fork-select .target:not(.disabled):hover, .flash-notice, .ace_selection,
@@ -290,7 +290,7 @@
   .sidebar-module ul h3, .headlines li, .discussion-sidebar-item + .discussion-sidebar-item {
     border-color: #333 !important;
   }
-  .pagination a, .pagination span.gap, .menu a, .discussion-item-icon {
+  .pagination a, .pagination span.gap, .menu a, .discussion-item-icon, .date:after {
     border-color: #222 !important;
   }
   .filter-tab.selected {
@@ -433,7 +433,8 @@
   .diff-line-num, .file-data .line-numbers span, #readme .plain, #readme .plain pre, .commandbar .choice:hover,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
   #notification-center .list-group-item, .commandbar .loading:hover, .comment-content,
-  #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module {
+  #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
+  svg|svg.spark, svg|svg.capped-card-content {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -465,14 +466,15 @@
   /* Darkest background color (#222), no image, leave border */
   option, .commit-tease .commit-meta, .discussion-topic-header, .discussion-topic .branch-status.status-error,
   .discussion-topic .branch-status.status-failure, .facebox-content, .timeline-commits-minimal .commit-icon .octicon,
-  .upload-progress, .search-results-listing em, .discussion-bubble-inner, .tabnav-tab.selected, .inline-comments {
+  .upload-progress, .search-results-listing em, .discussion-bubble-inner, .tabnav-tab.selected, .inline-comments,
+  ol.steps li, table th, .repository-sidebar a.js-selected-navigation-item.selected, #wiki-history table td {
     background: #222 none !important;
   }
   /* Darkest background color (#222), no image, with border & radius */
   svg, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content,
   span.gravatar, .browsered, .browsered .inner, .subnav-bar > ul > li > ul, .comment-form ul.tabs a.selected,
   .issue.open.read .summary, .unselected_month, .commits th, #MathJax_Message, #header .userbox, .chzn-single,
-  .user-commits, .user-commits th, .metabox, .gollum-minibutton, .ranked-repositories > li,
+  .user-commits, .user-commits th, .metabox, .ranked-repositories > li,
   .pagehead ul.actions, #issues_search .comment, #header-wrapper,  ul.feature-tabs li.highlight,
   .pagination, .gist-meta, .filterbar .filters li, .starting-comment .body, .list-tip,
   .commit_oneline, .filterbox, .conversation-list-heading .inner,
@@ -501,9 +503,6 @@
     color: #eee !important;
     border-color: #555 !important;
   }
-  table th, .repository-sidebar a.js-selected-navigation-item.selected, #wiki-history table td {
-    background: #222 !important;
-  }
   /* Darkest background (#222), leave image, add border */
   .image {
     background-color: #222 !important;
@@ -518,10 +517,6 @@
   /* page overlay */
   .select-menu-loading-overlay, .slow-loading-overlay {
     background-color: rgba(34, 34, 34, 0.8) !important;
-  }
-  /* === Join page === */
-  ol.steps li {
-    background: #222 !important;
   }
   /* Navigation focus - #282828 */
   #notification-center .list-group-item.navigation-focus, .list-browser-item.navigation-focus, .headlines li:hover,
@@ -585,7 +580,7 @@
   #files .file .data .line_numbers, .editbox, .editbox .body, .commentstyle, #issues .display, .inline-comment-form,
   #issues .display .admin, #issues .labels .list li, .issue .summary, .plain, .hidden-text-expander a, .view-modes,
   #ng canvas, .standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,
-  .gollum-minibutton a, .gollum-minibutton span, .tree-browser th,
+  .tree-browser th,
   .context-pane .title, .flash, .browser .listing:hover, #dashboard .repos, .date_selector .button, .selectable_day,
   .file-box .icon, .list-module .list-body, .list-module a, .bootcamp-body, .label-permissions,
   .filter-bar, .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop, .full-width-divider,
@@ -624,7 +619,7 @@
   #contributions-calendar svg|rect[style="fill: #44a340;"] { fill: #48c !important }
   #contributions-calendar svg|rect[style="fill: rgb(30, 104, 35);"],
   #contributions-calendar svg|rect[style="fill: #1e6823;"] { fill: #5af !important }
-  .contrib-legend li[style="background-color: #eee"]  { background-color: #282828 !important }
+  .contrib-legend li[style="background-color: #eee"]    { background-color: #282828 !important }
   .contrib-legend li[style="background-color: #d6e685"] { background-color: #246 !important }
   .contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
   .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
@@ -647,9 +642,6 @@
   /* svg styling */
   svg|line, svg|rect, svg|path {
     shape-rendering: geometricPrecision !important;
-  }
-  #contributors-master svg|svg.viz, svg|svg.spark, svg|svg.capped-card-content {
-    background: #181818 !important;
   }
   #contributors-master svg|svg.viz {
     border: 1px solid #555 !important;
@@ -726,7 +718,7 @@
     border-radius: 3px !important;
     background-clip: padding-box !important;
   }
-  .settings-email .label:not(.default), .key {
+  .state-widget .behind .bar, .settings-email .label:not(.default), .key, .date:after {
     background: #555 !important;
   }
   a.merged-pulls {
@@ -735,20 +727,12 @@
   .diverge-widget .separator {
     background: #ccc !important;
   }
-  .state-widget .behind .bar {
-    background: #555 !important;
-  }
   .state-widget .ahead .bar {
     background: #999 !important;
   }
   /* actions in issues - this style needs to be after .bubble */
   .action-bubble .bubble {
     background: transparent !important;
-  }
-  /* timeline dots */
-  .date:after {
-    background: #555 !important;
-    border-color: #222 !important;
   }
   /* own comments - blue highlight */
   .timeline-comment-current-user .timeline-comment-header, .github-jobs-promotion p {
@@ -1126,7 +1110,6 @@
   #issues_search .comment {
     background: url(http://StylishThemes.github.io/Github-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
   }
-
   /* octocat loading spinner */
   .commandbar .loading .description, .context-loader, .pagination.ajax_paginate.loading a,
   .more-repos-link.is-loading, .repohead .page-context-loader {
