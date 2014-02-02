@@ -4,7 +4,7 @@
 - Use [this demo](http://StylishThemes.github.io/Github-Dark/) to visualize the different code color schemes.
 
 ### Preview
-![Github Dark preview](http://i.imgur.com/Tdk2UCM.png)
+![Github Dark preview](http://i.imgur.com/MsrHuFh.png)
 
 ### Available color schemes
 <table>
