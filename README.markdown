@@ -32,10 +32,50 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 
+#### Version 1.7.17 (2/5/2014)
+
+* Add style
+  * Default background image
+  * Own &amp; commiter page labels, and message box
+  * Add guide subdomain styling: guides.github.com
+  * Match `tt` blocks to `code` blocks
+  * Blue styling to Octotips
+  * Contact page "Subject" input autocomplete
+* Update
+  * Developer page styling & remove footer background
+  * Projects page
+  * Search page: github main &amp; blog results highlighting
+  * Wiki sidebar, buttons &amp; merged some styles
+  * Options menu
+  * Help page logo custom image replaced by inverted original
+  * Consolidate `strong` tag styling
+  * Consolidate some `pre` and `code` tag styling
+  * Current user speed bubble color; brighter commit SHA
+  * Replaced hideous yellow panel background with more pleasant brown
+* Fix
+  * Discussion side bar borders
+  * Organization page link colors
+  * sort order of syntax highlight themes
+  * Job &amp; press info pages borders
+  * Checkbox styling in Firefox. Fixes [issue #99](https://github.com/StylishThemes/Github-Dark/issues/99)
+  * Pull request creation box & form borders/text color
+  * Issues: darken arrow border. Fixes [issue #109](https://github.com/StylishThemes/Github-Dark/issues/109)
+  * Own comment styling updated (it was removed, then replaced with different classes by Github)
+  * Code backgrounds (from consolidating `pre` and `code` styling)
+  * Gist editor header text, stats
+  * Graph loading text color
+* Removed
+  * Obsolete wiki page styling including specific Wiki save button styling
+  * Repo list participation graph background color
+* Made default base color more consistent.
+* Add userstyles installation instructions
+* New screenshot
+
 #### Version 1.7.16 (1/31/2014)
 
 * Fix diff statistics colors
 * Add text-box shadow, fix zen mode, comment box tweaks
+* Add basic styling to developer.github.com. Fixes [issue #107](https://github.com/StylishThemes/Github-Dark/issues/107).
 * Exclude compare button from green coloring
 * Fix some timeline item colors &amp; diff text color
 * Some fixes to pull request code discussion
@@ -66,56 +106,3 @@ See the [full changelog](https://github.com/StylishThemes/Github-Dark/wiki).
 * Various tweaks to repo options
 * Brighten markdown text
 * Add a default background image - updated at userstyles as well. Fixes [issue #105](https://github.com/StylishThemes/Github-Dark/issues/105)
-
-#### Version 1.7.14 (1/30/2014)
-
-* Issue page:
-  * Fix timeline round icon background colors
-  * Matched background of pre & code (no syntax highlighting)
-  * More timeline tweaks to fix [issue #100](https://github.com/StylishThemes/Github-Dark/issues/100).
-  * Add style to reopened issue icon.
-* Fix green button & button hovering in general
-* Release page: remove solid background
-* Discussion
-  * Lots of tweaks
-  * Highlight own comments
-  * Sidebar color tweaks
-  * Green buttons from labels change of gradient colors
-* Conversations: lots of tweaks &amp; fixes
-* Inline comments tweaks
-* Activity tab: fix `<code>` background
-* Language stats: reduced height
-* Range editor fixes
-* Merge label styles, tweak border color
-* Fix active labels everywhere!
-* Use sexy blue box for frontpage job promotion
-* Pull request block styling update. Fixes [issue #101](https://github.com/StylishThemes/Github-Dark/issues/101).
-* Change pro tip text to white
-* Add intellij specific files to gitignore
-
-#### Version 1.7.13 (1/28/2014)
-
-* Notification center: style notification list like similar lists
-* Unify nagivation focus backgrounds
-* Removed universal `<strong>` color and began fixing issues resulting from it
-* Various tweaks to in-issue code boxes
-* Commit list tweaks, remove shadow from unread notification icon
-* Issue list:
-  * Filter text color
-  * Match filter text colors more closely to GH's style
-* Options: lots of text color fixes
-* Fix plaintext readme &amp; a few text color tweaks
-* Add a lot of link hover colors
-* Files box header: font color tweaks
-* Organization page:
-  * Fix organization name in repo list hover
-  * Darken member row border
-  * Fix button hover &amp; icon color on org pages &amp; probably elsewhere
-  * Chevron hover color, organization text color
-  * Various fixes to member/teams pages
-* Also apply button icon color to minibuttons
-* Fix the icon color on watch buttons
-* Issue page:
-  * Basic styling for new comments
-  * A bunch of tweaks to timeline & round icons
-  * Fixes [issue #97](https://github.com/StylishThemes/Github-Dark/issues/97)
