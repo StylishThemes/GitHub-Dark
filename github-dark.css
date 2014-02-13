@@ -264,7 +264,7 @@
   #footer .container, #graph-shots li, .sidebar, .release-timeline, .explore h2, ul.color-label-list .color, #head,
   .leaderboard-list-item, .release-timeline-tags .main, .search-result-item, .sort-bar, .details, .jobs-list,
   .content-header, .user-list-item, .commit-group-item .gobutton .comment-count, .markdown-body, ul#categories li h5,
-  .gobutton.with-comments .sha, #gollum-editor-function-bar, .capped-box, .steps li,
+  .gobutton.with-comments .sha, #gollum-editor-function-bar, .capped-box, .steps li, #common-issues,
   .steps, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
   .table-list-cell, .team, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .commit-group, .member-row, .press-info,
@@ -284,7 +284,8 @@
   .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li, .columns.equacols.bordered,table.branches td,
   .file-diffstat, ul.filter-list, .news .alert, table.files td, .explore-section, .repolist > li, .list-group-item,
   .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta, .new-discussion-timeline .previewable-comment-form .comment-body,
-  .sidebar-module ul h3, .headlines li, .discussion-sidebar-item + .discussion-sidebar-item, .markdown-format img {
+  .sidebar-module ul h3, .headlines li, .discussion-sidebar-item + .discussion-sidebar-item, .markdown-format img,
+  div#common-issues ul li {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .discussion-item-icon, .date:after {
@@ -294,8 +295,7 @@
     border: #444 1px solid !important;
     border-bottom: #333 1px solid !important;
   }
-  .summary-stats, .sunken-menu-separator, .pagehead, .follow-list .follow-list-item, .facebox-header, #common-issues li,
-  .org-header {
+  .summary-stats, .sunken-menu-separator, .pagehead, .follow-list .follow-list-item, .facebox-header, .org-header {
     border-bottom: #333 1px solid !important;
   }
   .more-repos, .simple-conversation-list>li, #contributions-calendar .contrib-details div .lbl, .site-footer,
@@ -416,7 +416,7 @@
   .filter-list li span.bar, .search-result-header, .branch-infobar, .file-data .line-numbers,
   .blob-line-nums, .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
   .line-data, .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
-  .native-download, .setup-info-module {
+  .native-download, .setup-info-module, div#common-issues ul {
     background: #181818 !important;
     border-color: #333 !important;
     border-width: 1px !important;
@@ -431,7 +431,8 @@
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
   #notification-center .list-group-item, .commandbar .loading:hover, .comment-content, .commandbar .message,
   #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
-  svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img {
+  svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img,
+  #common-issues {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -490,7 +491,7 @@
   }
   /* Darkest background (#222), leave image, with border */
   #watchers li, .tree-browser .alt td, .browser .listing, .item, .context-pane, .context-loader, .sidebar .module,
-  .tip-body, #assignee, .rule, .sidebar-module > ul, .commit_oneline td, #footer-push, div#common-issues ul,
+  .tip-body, #assignee, .rule, .sidebar-module > ul, .commit_oneline td, #footer-push,
   .notifications th, .repo_list li, .tree-browser td, .ace_scroller, a.selected, .file,
   .inline-comments .tabnav, .comparison-list, .comparison-list .title, .repo-collection>ul,
    #graph_data .tab.selected, .line-comments, .team-grid .team-members, h3.conversation-list-heading strong {
@@ -519,7 +520,7 @@
   .select-menu-item.navigation-focus.selected, .team-grid .team-members, .new-discussion-timeline .branch-action-body {
     background: #282828 !important;
   }
-  .rss-subscribe:hover {
+  .rss-subscribe:hover, div#common-issues ul li a:hover {
     background-color: #282828 !important;
   }
   /* === #333 === */
@@ -537,7 +538,7 @@
   .pagehead ul.tabs li.contextswitch:hover, .bigbutton a, #new_message, #gollum-editor,
   #issues_next ul.sorts li, ul.sorts li.asc, ul.sorts li.desc, .listings-layout .columns.main .content, .fieldswrap,
   .filterbar li.selected, #issues_next ul.filters li, table.instruction tr:nth-child(2n), .email-hidden-toggle a,
-  div#common-issues h3, #commit-activity-master-head, .file-box, #wiki-footer > div, #gist-form .name,
+  #commit-activity-master-head, .file-box, #wiki-footer > div, #gist-form .name,
   .range-editor-form, .action-indicator, .repository-lang-stats,
   .branch-name, .pull-head .diffstat, ul.suggestions, .accordion, .numbers-summary, .accordion-container {
     background-color: #333 !important;
@@ -552,12 +553,11 @@
   ul.main_nav li.selected a, ul.states li, .add_file, .tree-browser, .inset, li.label, .filterbar,
   .divider-vertical, #footer .upper_footer, .user-commits td, .thread-subscription-status,
   .starting-comment .infobar, #issues_next .infobar, .formbody, .commandbar .display, .none p, .display div.choice,
-  div#common-issues ul li a:hover, #contributors h3, .select-menu-modal, ul.fieldpills li,
+ #contributors h3, .select-menu-modal, ul.fieldpills li,
   .select-menu-modal > div, .issues-list > ul > li.selectable:hover, .documentation-results a,
   pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
   .svg-tip, .auto-search-group .search-filters, .auth-form-body {
     background-color: #333 !important;
-    color: #eee !important;
     border-color: #555 !important;
   }
   /* Panel background (#333), no image, no border */
@@ -689,7 +689,7 @@
   }
   /* Light Panel background (#444), no image, with border, no radius */
   .tabs, #browser td, #issues_next li.selected, .selectable_day.selected, .avatarname img, #readme .name,
-  div#common-issues, #wiki-history .author img, .options-content h3, .display div.choice:nth-child(2n+1),
+  #wiki-history .author img, .options-content h3, .display div.choice:nth-child(2n+1),
   #issues-dashboard .actions,.list-tip a:hover, .boxed-group-list > li:hover,
   .preview-selected .preview-tab, .select-menu-tabs a.selected,
   .sunken-menu .sunken-menu-item.selected:after, #files .file .meta .info span.diffstat {
