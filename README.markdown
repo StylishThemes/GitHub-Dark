@@ -32,6 +32,36 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.1 (2/14/2014)
+
+* Happy VD!
+* Added url protocols back (userstyles does not allow protocolo relative urls)
+* Fix blog rss color
+* Remove deprecated and unsupported placeholder definitions
+* Fix command bar background when searching
+* Fix help search border pushing the icon down
+* Add highlight to help page search button
+* Fix all hover links in markdown
+* Email settings: fix usage bar
+* Pulse page: add padding to headers; remove background from comments
+* Readme
+  * Note that Stylish for Opera is available.
+  * Update titles
+* Fix [issue #113](https://github.com/StylishThemes/GitHub-Dark/issues/113) - Email options border
+* Fix file header dividers
+* Fix issue comment tab background
+* Limit `<strong>` style to fix gist filenames
+* Fix gist logo hover
+* Fix status.github.com text color
+* Organization creation page: various tweaks/fixes
+* Repo creation page: various fixes; remove broadcast icon code
+* Help page: Restyle common issue list
+* Fix frontpage news feed button
+* Conversation list: fix number color
+* Reduce notification inbox octocat image brightness
+* Notification icon: remove box shadow
+* Fix new code overflow issue (obvious in Chrome)
+
 #### Version 1.8 (2/9/2014)
 
 * Renamed Repo from "Github-Dark" to "GitHub-Dark".
