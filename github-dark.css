@@ -942,7 +942,8 @@
   /* bright red text */
   a.danger, .minibutton.danger, .button.danger, .minibutton.danger span, .closed.mini-icon, .closed.mega-octicon, .deletions,
   .closed.mega-octicon:before, .closed.octicon, .cdel, .gd .diff-line-num, .status-failure, .authors-and-code .deletions,
-  .range-editor .range .range-action.octicon:hover, span.diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus {
+  .range-editor .range .range-action.octicon:hover, span.diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
+  .markdown-body del *, .markdown-body .removed * {
     color: #c31e16 !important;
   }
   /* === Brown panel === */
@@ -1236,14 +1237,22 @@
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .highlight .gi, .highlight .gi pre, .gi .diff-line-code, .gi .diff-line-code pre {
+  .highlight .gi, .highlight .gi pre, .gi .diff-line-code, .gi .diff-line-code pre, .markdown-body ins,
+  .markdown-body ins > *, .markdown-body .added {
     background: #030 !important;
     border-color: #080 !important;
   }
+  .markdown-body > ins, .markdown-body .added {
+    box-shadow:inset 4px 0 0 #080 !important;
+  }
   /* git diff line deletions (dark red) */
-  .highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre {
+  .highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre, .markdown-body del, .markdown-body del > *,
+  .markdown-body .removed {
     background: #400 !important;
     border-color: #800 !important;
+  }
+  .markdown-body > del, .markdown-body .removed {
+    box-shadow:inset 4px 0 0 #800 !important;
   }
   /* git diff inline additions (green) */
   .highlight .gi .x {
