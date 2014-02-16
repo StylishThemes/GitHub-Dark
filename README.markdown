@@ -32,6 +32,29 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.2 (2/15/2014)
+
+* Strong tag styling
+  * Repo page: SSH clone url style
+  * Pulse page: fix bold text
+* Tweak merable pull request box
+* File commit form: many improvements
+* Fix webhooks text colors
+* Fix team description colors
+* Made commit status icon background transparent, again
+* Tweak notifaction avatars
+* Fix breadcrumb final path
+* Fix a few text color issues in option boxes
+* Remove content padding. Fixes [issue #116]()
+* Fix timeline ending once more
+* Fix line number shadow when clicking "add comment"
+* Add rendered diff styling. Fixes [issue #117]()
+* Fix issue label hover
+* Fix thread subscription color
+* Fix merge tag, label and pulse bar color
+* Use single 64x64 spinner image &amp; inline it.
+* Fix selected filter label color
+
 #### Version 1.8.1 (2/14/2014)
 
 * Happy VD!
@@ -84,64 +107,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Remove a few color declarations & fixed issues that came up
 * Fix readme title color
 * Fix dropdown menu hover
-
-#### Version 1.7.17 (2/5/2014)
-
-* Add style
-  * Default background image
-  * Own &amp; commiter page labels, and message box
-  * Add guide subdomain styling: guides.github.com
-  * Match `tt` blocks to `code` blocks
-  * Blue styling to Octotips
-  * Contact page "Subject" input autocomplete
-* Update
-  * Developer page styling & remove footer background
-  * Projects page
-  * Search page: github main &amp; blog results highlighting
-  * Wiki sidebar, buttons &amp; merged some styles
-  * Options menu
-  * Help page logo custom image replaced by inverted original
-  * Consolidate `strong` tag styling
-  * Consolidate some `pre` and `code` tag styling
-  * Current user speed bubble color; brighter commit SHA
-  * Replaced hideous yellow panel background with more pleasant brown
-* Fix
-  * Discussion side bar borders
-  * Organization page link colors
-  * sort order of syntax highlight themes
-  * Job &amp; press info pages borders
-  * Checkbox styling in Firefox. Fixes [issue #99](https://github.com/StylishThemes/GitHub-Dark/issues/99)
-  * Pull request creation box & form borders/text color
-  * Issues: darken arrow border. Fixes [issue #109](https://github.com/StylishThemes/GitHub-Dark/issues/109)
-  * Own comment styling updated (it was removed, then replaced with different classes by Github)
-  * Code backgrounds (from consolidating `pre` and `code` styling)
-  * Gist editor header text, stats
-  * Graph loading text color
-* Removed
-  * Obsolete wiki page styling including specific Wiki save button styling
-  * Repo list participation graph background color
-* Made default base color more consistent.
-* Add userstyles installation instructions
-* New screenshot
-
-#### Version 1.7.16 (1/31/2014)
-
-* Fix diff statistics colors
-* Add text-box shadow, fix zen mode, comment box tweaks
-* Add basic styling to developer.github.com. Fixes [issue #107](https://github.com/StylishThemes/GitHub-Dark/issues/107).
-* Exclude compare button from green coloring
-* Fix some timeline item colors &amp; diff text color
-* Some fixes to pull request code discussion
-* Timeline: darken a few more round icons
-* Fix branch switching tab color
-* Fix repo edit link, issue asingee color
-* Fix dropdown hover icon color
-* Add new syntax highlighting styles:
-  * Birds of Paradise
-  * Digerati
-  * Idle Fingers
-  * Neverland
-  * Pastels on Dark
-  * Up
-  * Vitamins
-  * Zenesque
