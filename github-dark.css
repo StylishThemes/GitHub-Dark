@@ -247,7 +247,8 @@
     border-radius: 2px !important;
   }
   /* invisible border */
-  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper {
+  .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper,
+  .full-commit .commit-desc + .commit-branches, .full-commit .commit-meta {
     border-color: transparent !important;
   }
   /* === Darken border === */
@@ -412,7 +413,7 @@
   /* === #181818 === */
   /* needed background inbetween #111 and #222 :P */
   #wiki-rightbar, .commitinfo, .gc .diff-line-code, .social-count, .featured-commit-activity-graph, .featured-repo-logo,
-  .gobutton>.sha .octicon, .navigation-focus .gobutton>.sha .octicon, .full-commit .commit-meta, .participation,
+  .gobutton>.sha .octicon, .navigation-focus .gobutton>.sha .octicon, .participation,
   .filter-list li span.bar, .search-result-header, .branch-infobar, .file-data .line-numbers,
   .blob-line-nums, .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
   .line-data, .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
@@ -432,7 +433,7 @@
   #notification-center .list-group-item, .commandbar .loading:hover, .comment-content, .commandbar .message,
   #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
   svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img,
-  #common-issues {
+  #common-issues, .full-commit .commit-meta {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -511,7 +512,7 @@
   }
   /* === #333 === */
   /* Panel background (#333) only */
-  .commit, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, table.branches tr:hover td,
+  .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, table.branches tr:hover td,
   ol.steps li.current, .dropdown-menu, .outdated-diff-comment-container .discussion-item-icon,
   .discussion-item-ref .discussion-item-icon, .range-editor .range, .range-editor span.flag,
   .octicon-repo-push.discussion-item-icon, .octicon-code.discussion-item-icon, .new-discussion-timeline .discussion-item-icon,
@@ -711,12 +712,12 @@
   }
   /* own comments - blue highlight */
   .timeline-comment-current-user .timeline-comment-header, .github-jobs-promotion p, .octotip,
-  .markdown-format .alert:not(.warning) {
+  .markdown-format .alert:not(.warning), .full-commit.commit {
     background: linear-gradient(to bottom, #182030, #183040) !important;
   }
   .timeline-comment-current-user, .timeline-comment-current-user .timeline-comment-header, .github-jobs-promotion p, .octotip,
-  .markdown-format .alert:not(.warning) {
-    border-color: #246 !important;
+  .markdown-format .alert:not(.warning), .full-commit.commit {
+    border: 1px solid #246 !important;
   }
   .timeline-comment-current-user:after, .timeline-comment-current-user:before {
     border-right-color: #246 !important;
@@ -1144,8 +1145,8 @@
     padding: 0 !important;
     border: 1px solid #555 !important;
   }
-  /* commit header - add border */
-  .full-commit, .repository-content > .commit, .capped-card, .inline-comment, .image {
+  /* add border */
+  .capped-card, .inline-comment, .image {
     border: 1px solid #555 !important;
   }
   .pull-info, .branch-link, .milestone-list .progress-bar, .commit-ref {
