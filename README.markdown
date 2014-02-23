@@ -7,15 +7,21 @@
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
 
 ### Available color schemes
-<table>
-  <tr><td>3024 Dark</td>      <td>Birds of Paradise</td>   <td>Desert</td>                <td>Digerati</td>                <td>Freya</td></tr>
-  <tr><td>Fruity</td>         <td>Idle Fingers</td>        <td>GitHub-Dark</td>           <td>Inkpot</td>                  <td>Monokai</td></tr>
-  <tr><td>Mustang</td>        <td>Native</td>              <td>Neverland</td>             <td>No Quarter</td>              <td>Pastels on Dark</td></tr>
-  <tr><td>Peaksea</td>        <td>Railscasts</td>          <td>Rdark</td>                 <td>Slate</td>                   <td>Solarized Dark</td></tr>
-  <tr><td>Tomorrow Night</td> <td>Tomorrow Night Blue</td> <td>Tomorrow Night Bright</td> <td>Tomorrow Night Eighties</td> <td>Twilight</td></tr>
-  <tr><td>Up</td>             <td>Vim</td>                 <td>Vitamins</td>              <td>Wombat</td>                  <td>Zenburn</td></tr>
-  <tr><td>Zenesque</td>       <td></td>                    <td></td>                      <td></td>                        <td></td></tr>
-</table>
+
+|   |   |   |   |   |
+| --- | --- | --- | --- | --- |
+| 256 Jungle | 3024 Night | Anotherdark | Asmanian-blood | Birds of Paradise |
+| Blacksea | Brookstream | BusyBee | Candycode | Dark |
+| Dark2 | DarkBlue2 | DarkBone | DarkBurn | DarkDevel |
+| DarkOcean | DarkRobot | DarkSpectrum | DarkZ | DarkerDesert |
+| Desert | Deveiate | Digerati | Dim | Dim2 |
+| Freya | Fruity | GitHub-Dark | Herald | Idle Fingers |
+| Inkpot | JellyBeans | Monokai | Mustang | Native |
+| Neverland | No Quarter | Pastels on Dark | Peaksea | Railscasts |
+| Rdark | Refactor | Sahara | Slate | Solarized Dark |
+| Synic | Tomorrow Night | Tomorrow Night Blue | Tomorrow Night Bright | Tomorrow Night Eighties |
+| Twilight | Up | Vim | Vitamins | Wombat |
+| Zenburn | Zenesque |  |  |  |
 
 ### Contributions
 
@@ -31,6 +37,60 @@ Thanks to all that have contributed!
 ### Changelog
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.8.3 (2/22/2014)
+
+* Commits:
+  * Commit page: Use a blue box for the header box
+  * Fix file view commit box
+  * Commit log: fix anonymous author color
+* Tweak box colors on project pages slightly
+* Fix frontpage job ad text color and logo
+* OAuth
+  * OAuth panel fixes
+  * lots of tweaks/fixes on the OAuth page
+* Merge style colors, brighten some boxes slightly
+* Tweak menu backgrounds
+* Gist
+  * Fix hover backgrounds on truncated text
+  * Fix box borders
+  * Inline gists: tweak footer
+* Blame page: fix date color
+* Pricing page: fix big notice color
+* Issue list: border tweaks
+* Fix issue list double background on hover
+* Embed 128x128 spinner, language stats background
+* Fix double border on own comments
+* Slightly darken markdown tables
+* About page: icon color & border
+* Updated syntax highlighting visualization demo
+* Added 26 new syntax highlighting themes
+  * 256 Jungle
+  * Anotherdark
+  * Asmanian-Blood
+  * BlackSea
+  * Brookstream
+  * BusyBee
+  * Candycode
+  * Dark
+  * Dark2
+  * DarkBlue2
+  * DarkBone
+  * DarkBurn
+  * DarkDevel
+  * DarkOcean
+  * DarkRobot
+  * DarkSpectrum
+  * DarkZ
+  * DarkerDesert
+  * Deveiate
+  * Dim
+  * Dim2
+  * Herald
+  * Jellybeans
+  * Refactor
+  * Sahara
+  * Synic
 
 #### Version 1.8.2 (2/15/2014)
 
@@ -84,26 +144,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Reduce notification inbox octocat image brightness
 * Notification icon: remove box shadow
 * Fix new code overflow issue (obvious in Chrome)
-
-#### Version 1.8 (2/9/2014)
-
-* Renamed Repo from "Github-Dark" to "GitHub-Dark".
-  * Adjusted links in the style, demo page, readme files and Userstyles.org site.
-  * Removed `http:` from urls to prevent insecure content warnings
-* Fix article `<code>` tags
-* Make commit status icons background transparent. Thanks [@Thann](https://github.com/Thann)!
-* Change manual installation link to raw url.
-* Remove notification avatar shadows
-* Wiki diff
-  * brighten text color
-  * tweaks, and editor tweaks
-* Help page
-  * fix headings color
-  * various tweaks. Restyle warnings
-* Fix pulse page comment links
-* Option menu: tweak border; minor fixes
-* Fix `<select>` styles in Firefox
-* Fix commit log author color
-* Remove a few color declarations & fixed issues that came up
-* Fix readme title color
-* Fix dropdown menu hover
