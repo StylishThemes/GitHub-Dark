@@ -38,6 +38,27 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.4 (3/1/2014)
+
+* Starred repos: Improve background &amp; focus highlight
+* Milestones: Add background
+* Issue list header: Fix double border
+* Add new yellow panel for recently pushed branches
+* Rearranged some demo markup
+* Saved index.html as utf-8 no BOM
+* Fix contributions-calendar border colors
+* Issues: Fix label hover once more
+* Fixing profile name
+* Styling coupon page
+* Discussions: Fix auto merge box
+* Ok, no more bubbles
+* Discussions:
+  * Fix PR footer text color
+  * Fix merged PR icon
+* Add border to list of PR
+* Fix new commit-sha
+* Restore search bar focus highlight. Fixes [issue #120](https://github.com/StylishThemes/GitHub-Dark/issues/120)
+
 #### Version 1.8.3 (2/22/2014)
 
 * Commits:
