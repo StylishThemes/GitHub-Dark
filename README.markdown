@@ -38,6 +38,21 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.5 (3/7/2014)
+
+* Discussions:
+  * Fix mentions text color
+  * Fix tag border
+* Commit page:
+  * Fix author text color
+  * Fix anonymous author name color
+* Timeline: fix timeline merge PR border (green) &amp; merged (purple) styling
+* Fork selection popup: Fix hover text color
+* Member list: Fix hover
+* Made green text more vibrant (using GitHub color)
+* Code: set font size on pre instead of span
+* Add integrations page styling
+
 #### Version 1.8.4 (3/1/2014)
 
 * Starred repos: Improve background &amp; focus highlight
