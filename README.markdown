@@ -38,6 +38,13 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.6 (3/15/2014)
+
+* Flash (blue notices) use better contrast colors
+* Discussions: FIx header tag border, again
+* status.github.com: More color tweaks
+* Code tag now wraps. Fixes [issue #122](https://github.com/StylishThemes/GitHub-Dark/issues/122)
+
 #### Version 1.8.5 (3/7/2014)
 
 * Discussions:
@@ -127,56 +134,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Refactor
   * Sahara
   * Synic
-
-#### Version 1.8.2 (2/15/2014)
-
-* Strong tag styling
-  * Repo page: SSH clone url style
-  * Pulse page: fix bold text
-* Tweak merable pull request box
-* File commit form: many improvements
-* Fix webhooks text colors
-* Fix team description colors
-* Made commit status icon background transparent, again
-* Tweak notifaction avatars
-* Fix breadcrumb final path
-* Fix a few text color issues in option boxes
-* Remove content padding. Fixes [issue #116]()
-* Fix timeline ending once more
-* Fix line number shadow when clicking "add comment"
-* Add rendered diff styling. Fixes [issue #117]()
-* Fix issue label hover
-* Fix thread subscription color
-* Fix merge tag, label and pulse bar color
-* Use single 64x64 spinner image &amp; inline it.
-* Fix selected filter label color
-
-#### Version 1.8.1 (2/14/2014)
-
-* Happy VD!
-* Added url protocols back (userstyles does not allow protocolo relative urls)
-* Fix blog rss color
-* Remove deprecated and unsupported placeholder definitions
-* Fix command bar background when searching
-* Fix help search border pushing the icon down
-* Add highlight to help page search button
-* Fix all hover links in markdown
-* Email settings: fix usage bar
-* Pulse page: add padding to headers; remove background from comments
-* Readme
-  * Note that Stylish for Opera is available.
-  * Update titles
-* Fix [issue #113](https://github.com/StylishThemes/GitHub-Dark/issues/113) - Email options border
-* Fix file header dividers
-* Fix issue comment tab background
-* Limit `<strong>` style to fix gist filenames
-* Fix gist logo hover
-* Fix status.github.com text color
-* Organization creation page: various tweaks/fixes
-* Repo creation page: various fixes; remove broadcast icon code
-* Help page: Restyle common issue list
-* Fix frontpage news feed button
-* Conversation list: fix number color
-* Reduce notification inbox octocat image brightness
-* Notification icon: remove box shadow
-* Fix new code overflow issue (obvious in Chrome)
