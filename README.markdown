@@ -23,6 +23,10 @@
 | Twilight | Up | Vim | Vitamins | Wombat |
 | Zenburn | Zenesque |  |  |  |
 
+### Notes
+
+* If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
+
 ### Contributions
 
 Thanks to all that have contributed!
