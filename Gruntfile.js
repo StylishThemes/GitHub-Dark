@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    "build/github-dark.css": "github-dark.sass"
+                    "build/github-dark.css": "github-dark.scss"
                 }
             }
         },
