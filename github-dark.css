@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((raw[2-9]*|gist|guides|help|status|developer)\.)?github\.com.*") {
-/* Github Dark Theme v1.8.6 (3/15/2014)
+/* Github Dark Theme v1.8.7 (3/22/2014)
  * https://github.com/StylishThemes/GitHub-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -31,7 +31,8 @@
   .org-module-link:hover .octicon, .org-header-info .name-link:hover, .social-count:hover, .new-file-link span,
   .org-repo-name a:hover .repo-prefix, .timeline-commits .commit-meta .octicon-comment-discussion:before,
   .numbers-summary a:hover .octicon:before, .history-link .octicon:before, .steps li.current .mega-octicon:before,
-  .oauth-permissions-details .permission-title, .permission-help .octicon:before, .setup-info-module .octicon:before {
+  .oauth-permissions-details .permission-title, .permission-help .octicon:before, .setup-info-module .octicon:before,
+  .owner-name {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -124,6 +125,9 @@
   .markdown-body code {
     white-space: pre-wrap;
   }
+  pre {
+    /*[[tab-size]]*/
+  }
   /* === logo === */
   .header .site, #adv_code_search .search-page-input {
     background: #111 !important;
@@ -187,7 +191,7 @@
   .release-timeline .js-details-container, .section-heading-title a.js-selected-navigation-item, .featured-callout .screenshot,
   .ace-github, .sidebar-module ul ul li a:hover, .sidebar-module h3 a:hover, .timeline-commits .commit-meta .status,
   .timeline-commits .commit-meta .octicon, .file .meta-divider, .markdown-body, .avatar-stack.multiple-avatars:before,
-  .css-truncate:hover .css-truncate-target:not(.label) {
+  .css-truncate:hover .css-truncate-target:not(.label), #feedHandler {
     background: transparent !important;
   }
   .select-menu-item .octicon {
@@ -290,7 +294,7 @@
   div.article div.helper div.content, .boxed-group-inner .help, dl.new-email-form, .file .meta-divider,
   .avatar-stack.multiple-avatars:before, .file-box, .file-actions .button-group li, .gist .gist-file .gist-data,
   #contributions-calendar .contrib-details div, .branch-action-body, .setup-form .tos-info, .setup-form .setup-organization-next,
-  .setup-info-module .features-list .list-divider {
+  .setup-info-module .features-list .list-divider, .collection-page .other-content, .bubble-wrap {
     border-color: #555 !important;
   }
   .discusion-topic-infobar, .box-header, .box-body {
@@ -421,14 +425,15 @@
   pre, pre code, .diff-line-code, .list-browser-item.closed, body.windows #header, .markdown-body code, .content code,
   #footer .site, .ace_gutter, .jumbotron, #adv_code_search .search-page-label, .content .verseblock-content,
   .content .sectionbody .dlist dt, #facebox pre, .commit-preview .message pre, .content p > tt, .markdown-body tt,
-  .markdown-format code, .commit-sha, .integrations-quality {
+  .markdown-format code, .commit-sha, .integrations-quality, .showcase-featured .mo-info .featured-grid-outer,
+  .collection-card {
     background: #111 none !important;
     border-color: #333 !important;
   }
   /* === #181818 === */
   /* needed background inbetween #111 and #222 :P */
   #wiki-rightbar, .commitinfo, .gc .diff-line-code, .social-count, .featured-commit-activity-graph, .featured-repo-logo,
-  .gobutton>.sha .octicon, .navigation-focus .gobutton>.sha .octicon, .participation,
+  .gobutton>.sha .octicon, .navigation-focus .gobutton>.sha .octicon, .participation, #feedBody,
   .filter-list li span.bar, .search-result-header, .branch-infobar, .file-data .line-numbers,
   .blob-line-nums, .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
   .line-data, .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
@@ -437,7 +442,7 @@
     border-color: #333 !important;
     border-width: 1px !important;
   }
-  .divider .blob-line-code div.highlight, .octofication .broadcast-icon-mask {
+  .divider .blob-line-code div.highlight, .octofication .broadcast-icon-mask, .file-box .file .image {
     background: #181818 !important;
     border: 0 !important;
   }
@@ -494,7 +499,7 @@
   }
   /* Darkest background (#222), leave image, no border */
   .locales, .add-bubble, .select-menu-filters, .notification-settings, #files > .description, li.contextswitch ul,
-  .search-results, .fieldgroup .edit_hook .fields, .mini-repo-list, .dashboard-tabs {
+  .search-results, .fieldgroup .edit_hook .fields, .mini-repo-list, .dashboard-tabs, .access-avatar {
     background-color: #222 !important;
     border: 0 !important;
   }
@@ -559,7 +564,7 @@
   ul.main_nav li.selected a, ul.states li, .add_file, .tree-browser, .inset, li.label, .filterbar,
   .divider-vertical, #footer .upper_footer, .user-commits td, .thread-subscription-status,
   .starting-comment .infobar, #issues_next .infobar, .formbody, .commandbar .display, .none p, .display div.choice,
- #contributors h3, .select-menu-modal, ul.fieldpills li, .select-menu-modal > div,
+ #contributors h3, .select-menu-modal, ul.fieldpills li, .select-menu-modal > div, .access-form-wrapper,
  .documentation-results a, pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
   .svg-tip, .auto-search-group .search-filters, .auth-form-body {
     background-color: #333 !important;
@@ -829,7 +834,8 @@
   .commit.file-history-tease .participation p.quickstat strong, .branch-action-state-dirty .branch-action-icon:before,
   .branch-action-state-closed-dirty.branch-action-icon:before, .branch-action-state-merged .branch-action-icon:before,
   .user-mention, .team-mention, .full-commit .authorship a, #fork-select .target:hover:not(.disabled),
-  .full-commit .authorship .author-name {
+  .full-commit .authorship .author-name, .showcase-featured .featured-grid-link, .collection-card-title,
+  .collection-card-image:hover, .explore-page .see-more-link {
     color: #eee !important;
   }
   pre, body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
@@ -980,6 +986,11 @@
     background: #402c17 !important;
     color: #9C6A38 !important;
     border-color: #5e4022 !important;
+  }
+  #feedHeaderContainer, .feedBackground {
+    background-color: #402c17 !important;
+    border-color: #5e4022 !important;
+    color: #ddd !important;
   }
   /* === Yellow panel=== */
   .recently-touched-branches {

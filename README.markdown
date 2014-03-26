@@ -36,11 +36,25 @@ Thanks to all that have contributed!
 * [mihawk90](http://github.com/mihawk90)
 * [aalvarado](http://github.com/aalvarado)
 * [ddavison](http://github.com/ddavison)
+* [EnzoMartin78](https://github.com/EnzoMartin78)
 * and [others](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors)!
 
 ### Changelog
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.8.7 (3/22/2014)
+
+* GitHub bootcamp images are visible again. Fixes [issue #124](https://github.com/StylishThemes/GitHub-Dark/issues/124).
+* GitHub Enterprise support
+  * Add readme note about adding a domain for GitHub Enterprise.
+  * Fix sidebar styles & other visual tweaks.
+  * See [issue #123](https://github.com/StylishThemes/GitHub-Dark/issues/123).
+* Switch pages to use https urls. Fixes [issue #114](https://github.com/StylishThemes/GitHub-Dark/issues/114)
+* Add 128x128 loading spinner via URL.
+* Diff view: Fix file box background
+* Explore Showcase page. Fixes [issue #128](https://github.com/StylishThemes/GitHub-Dark/issues/128)
+* Incorporate ["better-sized tabs in code"](http://userstyles.org/styles/70979/github-better-sized-tabs-in-code) into our styles.
 
 #### Version 1.8.6 (3/15/2014)
 
