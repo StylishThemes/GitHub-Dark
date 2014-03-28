@@ -43,6 +43,24 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.8 (3/28/2014)
+
+* Showcases: Fix sidebar border
+* Trending Repos:
+  * Fix owner name color
+  * Fix "built by" text color
+* Pull Request creation page: Fix border
+* Collaboration settings page styling
+* RSS Feed: Add styling. Fixes [issue #130](https://github.com/StylishThemes/GitHub-Dark/issues/130)
+* Issues: Remove participation background
+* Commit view: Fix participation background
+* Options:
+  * Some tweaks to SSH keys
+  * Fix colors for the security menu
+* Darker boxed groups, mainly for option boxes
+* Branch PR link: Fix hover color
+* Branches: More text color fixes
+
 #### Version 1.8.7 (3/22/2014)
 
 * GitHub bootcamp images are visible again. Fixes [issue #124](https://github.com/StylishThemes/GitHub-Dark/issues/124).
@@ -62,93 +80,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Discussions: FIx header tag border, again
 * status.github.com: More color tweaks
 * Code tag now wraps. Fixes [issue #122](https://github.com/StylishThemes/GitHub-Dark/issues/122)
-
-#### Version 1.8.5 (3/7/2014)
-
-* Discussions:
-  * Fix mentions text color
-  * Fix tag border
-* Commit page:
-  * Fix author text color
-  * Fix anonymous author name color
-* Timeline: fix timeline merge PR border (green) &amp; merged (purple) styling
-* Fork selection popup: Fix hover text color
-* Member list: Fix hover
-* Made green text more vibrant (using GitHub color)
-* Code: set font size on pre instead of span
-* Add integrations page styling
-
-#### Version 1.8.4 (3/1/2014)
-
-* Starred repos: Improve background &amp; focus highlight
-* Milestones: Add background
-* Issue list header: Fix double border
-* Add new yellow panel for recently pushed branches
-* Rearranged some demo markup
-* Saved index.html as utf-8 no BOM
-* Fix contributions-calendar border colors
-* Issues: Fix label hover once more
-* Fixing profile name
-* Styling coupon page
-* Discussions: Fix auto merge box
-* Ok, no more bubbles
-* Discussions:
-  * Fix PR footer text color
-  * Fix merged PR icon
-* Add border to list of PR
-* Fix new commit-sha
-* Restore search bar focus highlight. Fixes [issue #120](https://github.com/StylishThemes/GitHub-Dark/issues/120)
-
-#### Version 1.8.3 (2/22/2014)
-
-* Commits:
-  * Commit page: Use a blue box for the header box
-  * Fix file view commit box
-  * Commit log: fix anonymous author color
-* Tweak box colors on project pages slightly
-* Fix frontpage job ad text color and logo
-* OAuth
-  * OAuth panel fixes
-  * lots of tweaks/fixes on the OAuth page
-* Merge style colors, brighten some boxes slightly
-* Tweak menu backgrounds
-* Gist
-  * Fix hover backgrounds on truncated text
-  * Fix box borders
-  * Inline gists: tweak footer
-* Blame page: fix date color
-* Pricing page: fix big notice color
-* Issue list: border tweaks
-* Fix issue list double background on hover
-* Embed 128x128 spinner, language stats background
-* Fix double border on own comments
-* Slightly darken markdown tables
-* About page: icon color & border
-* Updated syntax highlighting visualization demo
-* Added 26 new syntax highlighting themes
-  * 256 Jungle
-  * Anotherdark
-  * Asmanian-Blood
-  * BlackSea
-  * Brookstream
-  * BusyBee
-  * Candycode
-  * Dark
-  * Dark2
-  * DarkBlue2
-  * DarkBone
-  * DarkBurn
-  * DarkDevel
-  * DarkOcean
-  * DarkRobot
-  * DarkSpectrum
-  * DarkZ
-  * DarkerDesert
-  * Deveiate
-  * Dim
-  * Dim2
-  * Herald
-  * Jellybeans
-  * Refactor
-  * Sahara
-  * Synic
