@@ -32,7 +32,7 @@
   .org-repo-name a:hover .repo-prefix, .timeline-commits .commit-meta .octicon-comment-discussion:before,
   .numbers-summary a:hover .octicon:before, .history-link .octicon:before, .steps li.current .mega-octicon:before,
   .oauth-permissions-details .permission-title, .permission-help .octicon:before, .setup-info-module .octicon:before,
-  .owner-name, .timeline-comment-actions .octicon:hover {
+  .owner-name, .timeline-comment-actions .octicon:hover, {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -461,7 +461,7 @@
   #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
   svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img,
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
-  .setup-form .setup-plans {
+  .setup-form .setup-plans, .prose-diff > .markdown-body {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -582,7 +582,7 @@
   table.upgrades td, .commit-preview .message, .commit-preview p.error, .date_selector,
   .pagehead ul.tabs li.contextswitch, #browser tr th, .status-box h4, .line_numbers, .date_selector table th,
   #files span.icon, #issues_list .actions, #repos .public, .inset-callout, #repo-message,
-  .summary-stats li a:hover, #files .file .meta, .boxed-group {
+  .summary-stats li a:hover, .boxed-group {
     background: #333 none !important;
     border: 0 !important;
   }
@@ -706,7 +706,7 @@
   .tabs, #browser td, #issues_next li.selected, .selectable_day.selected, .avatarname img, #readme .name,
   #wiki-history .author img, .options-content h3, .display div.choice:nth-child(2n+1),
   #issues-dashboard .actions,.list-tip a:hover, .preview-selected .preview-tab, .select-menu-tabs a.selected,
-  .sunken-menu .sunken-menu-item.selected:after, #files .file .meta .info span.diffstat {
+  .sunken-menu .sunken-menu-item.selected:after {
     background: #333 none !important;
     border-color: #555 !important;
   }
@@ -770,7 +770,7 @@
   .commit-ref, .cheatsheet h2, .highlight .file-diff-line:hover td, .section a.section-head,
   .dashboard-tabs li a, .full-commit .browse-button, a.function-button, .capped-box h3,
   .expandable-line-num .diff-expander:hover, .boxed-group .heading, #contributors .capped-card h3,
-  .comment-form-head.tabnav, .add-pill-form, .gist .gist-file .gist-meta {
+  .comment-form-head.tabnav, .add-pill-form, .gist .gist-file .gist-meta, .file .meta {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
   }
@@ -841,7 +841,7 @@
   .branch-action-state-closed-dirty.branch-action-icon:before, .branch-action-state-merged .branch-action-icon:before,
   .user-mention, .team-mention, .full-commit .authorship a, #fork-select .target:hover:not(.disabled),
   .full-commit .authorship .author-name, .showcase-featured .featured-grid-link, .collection-card-title,
-  .collection-card-image:hover, .explore-page .see-more-link, .mute, .pull-request-link:hover {
+  .collection-card-image:hover, .explore-page .see-more-link, .mute, .pull-request-link:hover, .expandable:hover:before {
     color: #eee !important;
   }
   pre, body, h3, h4, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage, table.notifications th,
@@ -903,7 +903,7 @@
   .repository-meta .edit-link a, .api-status a, .meta li, .who_when a,.numbers-summary a, .numbers-summary .octicon:before,
   .section-heading-title .separator, .blog-aside .rss, .hook-list a, .github-jobs-promotion a.jobs-logo,
   .org-teams-list .team-meta, .repo-list-item .repo-description, .branch-infobar .lightweight-actions > li a,
-  .repo-leaderboard-list .repo-leaderboard-meta-item a {
+  .repo-leaderboard-list .repo-leaderboard-meta-item a, .changed .moved-up:before, .changed .moved-down:before {
     color: #888 !important;
   }
   .vcard-detail .octicon, .mega-octicon:before, .command-bar .octicon-question:before, .auto-search-group .octicon:before,
@@ -1282,17 +1282,16 @@
     background: #030 !important;
     border-color: #080 !important;
   }
-  .markdown-body > ins, .markdown-body .added {
-    box-shadow:inset 4px 0 0 #080 !important;
-  }
   /* git diff line deletions (dark red) */
   .highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre, .markdown-body del, .markdown-body del > *,
   .markdown-body .removed {
     background: #400 !important;
     border-color: #800 !important;
   }
-  .markdown-body > del, .markdown-body .removed {
-    box-shadow:inset 4px 0 0 #800 !important;
+  /* moved diff - yellow */
+  .markdown-body li.added.moved {
+    background: #440 !important;
+    border-color: #880 !important;
   }
   /* git diff inline additions (green) */
   .highlight .gi .x {
