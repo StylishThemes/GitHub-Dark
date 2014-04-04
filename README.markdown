@@ -43,6 +43,28 @@ Thanks to all that have contributed!
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.9 (4/4/2014)
+
+* Discussion:
+  * Fix icons: closed, reopened & merged
+  * Fix current user highlight, once more...
+  * Fix comment action icon hover
+  * Slightly brighter comment label border
+* Traffic stats: fix border
+* Commit: fix modified icon
+* Add Emoji alignment
+* Fix dashboard notice color
+* Prose diffs: update styling. Fixes [issue #132]()
+* Issues:
+  * Color picker & filter tweaks
+  * Tweak travis icon
+  * Fix label hover
+  * Fix sidebar hovers
+  * Restore navigation focus background
+* Repo sidebar: fix selected item color
+* Notifications: fix header color
+* Followers: fix name color
+
 #### Version 1.8.8 (3/28/2014)
 
 * Showcases: Fix sidebar border
