@@ -1,12 +1,12 @@
-## GitHub Dark theme for Stylish
+# GitHub Dark theme for Stylish
 - Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.github.com/StylishThemes/GitHub-Dark/master/github-dark.css).
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe) and [Opera](https://addons.opera.com/en/extensions/details/stylish-for-opera/).
 - Use [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the different code color schemes.
 
-### Preview
+## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
 
-### Available color schemes
+## Available color schemes
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
@@ -23,23 +23,21 @@
 | Twilight | Up | Vim | Vitamins | Wombat |
 | Zenburn | Zenesque |  |  |  |
 
-### Notes
+## Notes
 
 * If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
 
-### Contributions
+## Contributions
 
-Thanks to all that have contributed!
+If you would like to contribute to this repository, please...
 
-* [mottie](http://github.com/mottie)
-* [silverwind](http://github.com/silverwind)
-* [mihawk90](http://github.com/mihawk90)
-* [aalvarado](http://github.com/aalvarado)
-* [ddavison](http://github.com/ddavison)
-* [EnzoMartin78](https://github.com/EnzoMartin78)
-* and [others](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors)!
+1. Fork
+2. Make changes (please read the [contribution guidelines](https://github.com/StylishThemes/GitHub-Dark/blob/master/CONTRIBUTING.md) and abide by them)
+3. Create a pull request!
 
-### Changelog
+Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors) so far!
+
+## Changelog
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
