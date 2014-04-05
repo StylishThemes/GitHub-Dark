@@ -30,7 +30,7 @@ If you don't know CSS very well and have found a missing style, please include a
   * K&R Example:
     ```css
     element[attr='value'] {
-    贩property: value;
+    路路property: value;
     }
     ```
 
@@ -38,8 +38,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ```css
     element[property='value']
     {
-    贩贩property: value;
-    ?property: value;
+    路路property: value;
     }
     ```
 
@@ -50,6 +49,17 @@ If you don't know CSS very well and have found a missing style, please include a
 
     /* bad */
     element[attr='value']{ }
+    ```
+  
+  * 2 Space indentation
+    ```css
+    /* good */
+    路路property: value;
+
+    /* bad */
+    路路路路property: value;
+    ----property: value;
+    路property: value;
     ```
 
 * This is not strictly enforced, but try to wrap lines at around 120 characters.
