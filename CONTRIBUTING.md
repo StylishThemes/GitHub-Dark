@@ -1,8 +1,8 @@
 # Contributing to GitHub-Dark
 
-1. [Getting Involved](#-getting-involved)
-2. [How To Report style issues](#-how-to-report-style-issues)
-3. [Core Style Guide](#-github-dark-style-guide)
+1. [Getting Involved](#getting-involved)
+2. [How To Report style issues](#how-to-report-style-issues)
+3. [Core Style Guide](#github-dark-style-guide)
 
 ## Getting Involved
 
