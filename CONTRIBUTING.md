@@ -62,7 +62,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ·property: value;
     ```
 
-* This is not strictly enforced, but try to wrap lines at around 120 characters.
+* Try to wrap lines at around 120 characters.
 * This style has a size limit:
   * I'm not sure if it is [64kb](https://github.com/JasonBarnabe/stylish/wiki/Embedding-images-in-styles) (which I think we've already passed), or [100,000 bytes](http://userstyles.org/help/coding).
   * So don't add any image URI's to the css; instead add the image into the `/images` directory; then point to using the following url: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
