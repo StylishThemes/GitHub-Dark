@@ -41,6 +41,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.11 (4/12/2014)
+
+* Discussion: Fix commit ref title
+* Label colors
+  * Fix attribute link selector
+  * Fix #139, and the issues that arose.
+* Issues: Fix filter list color
+* Repo view: Fix SHA text
+* Gist: Fix delete button
+
 #### Version 1.8.10 (4/11/2014)
 
 * PR status: Add background to hide timeline. Fixes [issue #136](https://github.com/StylishThemes/GitHub-Dark/issues/136).
@@ -76,21 +86,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Repo sidebar: fix selected item color
 * Notifications: fix header color
 * Followers: fix name color
-
-#### Version 1.8.8 (3/28/2014)
-
-* Showcases: Fix sidebar border
-* Trending Repos:
-  * Fix owner name color
-  * Fix "built by" text color
-* Pull Request creation page: Fix border
-* Collaboration settings page styling
-* RSS Feed: Add styling. Fixes [issue #130](https://github.com/StylishThemes/GitHub-Dark/issues/130)
-* Issues: Remove participation background
-* Commit view: Fix participation background
-* Options:
-  * Some tweaks to SSH keys
-  * Fix colors for the security menu
-* Darker boxed groups, mainly for option boxes
-* Branch PR link: Fix hover color
-* Branches: More text color fixes
