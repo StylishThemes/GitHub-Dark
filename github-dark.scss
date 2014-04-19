@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((raw[2-9]*|gist|guides|help|status|developer)\.)?github\.com.*") {
-/* Github Dark Theme v1.8.11 (4/12/2014)
+/* Github Dark Theme v1.8.12 (4/18/2014)
  * https://github.com/StylishThemes/GitHub-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -23,7 +23,7 @@
   #forkqueue .instructions, .addon h4, .header a:hover, .header a:hover .mini-icon,
   .header a:hover .mega-icon:before, #footer a, #userbox a:hover, .header-logo-wordmark:hover span,
   #userbox a:hover .mini-icon, .gist-item ul.meta>li>a:hover, #userbox a:hover,
-  #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .full-word, .team-mention,
+  #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .team-mention,
   .add-line-comment:before, .octicon-mark-github:hover:before, .header a:not(.choice):hover .octicon,
   .comment-header-actions li:hover .octicon, .zeroclipboard-link .octicon, .commit .commit-title .issue-link,
   .octofication .mega-octicon:before, .octofication-more strong, .org-repo-stats a:hover, #header .nav a:hover,
@@ -33,7 +33,8 @@
   .numbers-summary a:hover .octicon:before, .history-link .octicon:before, .steps li.current .mega-octicon:before,
   .oauth-permissions-details .permission-title, .permission-help .octicon:before, .setup-info-module .octicon:before,
   .owner-name, .timeline-comment-actions .octicon:hover, .markdown-body a code, .discussion-sidebar-toggle:hover,
-  .discussion-sidebar-toggle:hover .octicon, .sidebar-assignee .assignee:hover {
+  .discussion-sidebar-toggle:hover .octicon, .sidebar-assignee .assignee:hover, .timeline-commits .commit-message a:hover,
+  .timeline-commits .commit-id:hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -462,7 +463,7 @@
   #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
   svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img,
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
-  .setup-form .setup-plans, .prose-diff > .markdown-body {
+  .setup-form .setup-plans, .prose-diff > .markdown-body, .file-box {
     background: #181818 !important;
   }
   /* slightly darker background than #222 */
@@ -847,15 +848,15 @@
   .full-commit .authorship .author-name, .showcase-featured .featured-grid-link, .collection-card-title,
   .collection-card-image:hover, .explore-page .see-more-link, .mute, .pull-request-link:hover, .expandable:hover:before,
   .sunken-menu .sunken-menu-item.selected, .follow-list .follow-list-name a, .member-list-item .member-info a,
-  .discussion-item-ref-title .title-link {
+  a.comment-header-author {
     color: #eee !important;
   }
-  pre, body, h3, h4, a.social-count, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count, .fieldgroup p.explain.planusage,
-  table.notifications th, .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4,
+  pre, body, h3, h4, a.social-count, span.social-count, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count,
+  table.notifications th, .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4, .fieldgroup p.explain.planusage,
   ol.repository-lang-stats-numbers li .lang,.commit .sha, .explore h2, .tabnav .active a, .vcard-username,
   .tag-info .tag-name, .language, .featured-callout h2, .header a, .commit-title .message, .files .message,
   .revision .creator, .mini-icon.search-input, #header ul.top-nav li a, .lines-changed, .lines-changed:hover,
-  .highlight .file-diff-line:hover *, .keyboard-mappings, .comment-header-author, .comment-header-author a,
+  .highlight .file-diff-line:hover *, .keyboard-mappings,
   .discussion-topic-author a, .boxed-group-table td, .graph .data .number, .files-bubble, .content, .box-title, .box-action, .lead,
   #blog-main .pagehead h1 a.title, .octofication .message p, .repolist .description, .addon p, .commit-group-item .gobutton,
   .list-group-item .list-group-item-name a, .list-group-item .list-group-item-meta a, .list-browser-sorts .sort-type,
@@ -870,7 +871,7 @@
   #readme span.name, .markdown-format .octicon-link, .markdown-format .mini-icon-link, .steps li.current,
   h3.conversation-list-heading strong, .context-loader, ul.color-label-list .color-label.selected .name, .box-title a,
   .merge-pr-more-commits a, .branch-infobar .lightweight-actions > li a:hover, .dashboard-notice, ul.color-label-list .name a,
-  .minibutton.danger:hover .octicon:before {
+  .minibutton.danger:hover .octicon:before, .discussion-item-ref-title .title-link {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
@@ -898,20 +899,22 @@
   .team-header .team-description, .hfields dl.form > dt label, .boxed-group > h3 a.boxed-group-breadcrumb,
   .boxed-group .heading a.boxed-group-breadcrumb, .subscriptions-sidebar .note, .thread-subscription-status,
   .commit-group-item .authorship .author-name, .ellipsis-button, .follow-list .follow-list-info, ul.filter-list .filter-item,
-  .blame .commitinfo .date, .gist .gist-file .gist-meta a, .merge-pr-more-commits, .hidden-text-expander a {
+  .blame .commitinfo .date, .gist .gist-file .gist-meta a, .merge-pr-more-commits, .hidden-text-expander a,
+  .news div.message, .news li blockquote, .timeline-comment-header .comment-type-icon,
+  .news .alert .pull-info, .news .alert .branch-link {
     color: #aaa !important;
   }
   /* content text */
   #contributions-calendar .contrib-details div, .mini-icon-remove-close:hover, .tabnav-tabs a, a.vcard-stat, .time,
   .pagination .disabled, .diffstat-bar, .news .alert .octicon, .gist-item .metadata .datetime, .list-group-item-meta,
-  .keyboard-shortcuts, .simple-conversation-list, .simple-conversation-list > li .title .num, .drag-and-drop,
+  a.keyboard-shortcuts, .simple-conversation-list, .simple-conversation-list > li .title .num, .drag-and-drop,
   .starred-repo .sort-info, .org-stats, .commandbar .choice, .commandbar .loading, .commandbar .description,
   ul.summary-stats li a, .authorship, .sha-block, .gh-header-meta, #last-edit, .setup-header .lead a,
   .repository-meta .edit-link a, .api-status a, .meta li, .who_when a,.numbers-summary a, .numbers-summary .octicon:before,
   .section-heading-title .separator, .blog-aside .rss, .hook-list a, .github-jobs-promotion a.jobs-logo,
   .org-teams-list .team-meta, .repo-list-item .repo-description, .branch-infobar .lightweight-actions > li a,
   .repo-leaderboard-list .repo-leaderboard-meta-item a, .changed .moved-up:before, .changed .moved-down:before,
-  .commit-tease .sha-block {
+  .commit-tease .sha-block, .comment-header .octicon {
     color: #888 !important;
   }
   .vcard-detail .octicon, .mega-octicon:before, .command-bar .octicon-question:before, .auto-search-group .octicon:before,
@@ -1280,7 +1283,7 @@
     border-top: none !important;
   }
   /* light grey - breaks in diff (with line numbers) */
-  .highlight .gc td, .highlight .gc pre, .highlight .gu {
+  .highlight .gc td, .highlight .gc pre {
     background: #222 !important;
     color: #888 !important;
   }
@@ -1550,7 +1553,8 @@
   .highlight .cp, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se,
   .highlight .sh, .highlight .si, .highlight .s1, .highlight .ss { color:#D2691E !important; }
   .highlight .gd, .highlight .gr, .highlight .gt { color:#d22323 !important; }
-  .highlight .gh, .highlight .gu { color:#fff !important; }
+  .highlight .gh { color:#666 !important; }
+  .highlight .gu { color:#f81 !important; font-weight: normal !important }
   .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .nt,
   .highlight .ow { color:#6ab825 !important; }
   .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .sr,

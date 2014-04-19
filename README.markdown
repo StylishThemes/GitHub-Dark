@@ -41,6 +41,23 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.12 (4/18/2014)
+
+* Discussions
+  * Slightly darker issue refs
+  * Fix a few hover colors
+  * Fix comment type icon
+* Gists
+  * Fix social counters
+  * Fix comment header colors
+  * Fix markdown background
+* Repo sidebars: fix currently selected item color
+* News
+  * Fix color of certain messages
+  * Fix branch link color
+* Issues: fix keyboard shortcuts link
+* Improve diff file highlighting in the native color scheme.
+
 #### Version 1.8.11 (4/12/2014)
 
 * Discussion: Fix commit ref title
@@ -64,25 +81,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Readme: fix contributing links & remove list of contributors
   * Fixes [issue #135](https://github.com/StylishThemes/GitHub-Dark/issues/135).
 * Icons: Add red color to octicon-x
-
-#### Version 1.8.9 (4/4/2014)
-
-* Discussion:
-  * Fix icons: closed, reopened & merged
-  * Fix current user highlight, once more...
-  * Fix comment action icon hover
-  * Slightly brighter comment label border
-* Traffic stats: fix border
-* Commit: fix modified icon
-* Add Emoji alignment
-* Fix dashboard notice color
-* Prose diffs: update styling. Fixes [issue #132](https://github.com/StylishThemes/GitHub-Dark/issues/132)
-* Issues:
-  * Color picker & filter tweaks
-  * Tweak travis icon
-  * Fix label hover
-  * Fix sidebar hovers
-  * Restore navigation focus background
-* Repo sidebar: fix selected item color
-* Notifications: fix header color
-* Followers: fix name color
