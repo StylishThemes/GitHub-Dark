@@ -41,6 +41,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.13 (4/25/2014)
+
+* Releases: color fixes
+* Issues:
+  * Slightly darker clock icon in the issue list
+  * Fix icon color in milestone selector popup
+* Explore page:
+  * Fix icons in language selection popup
+  * Fix numbering labels
+* Options: Fox OAuth logo box
+* Developer pages: Various fixes
+* Pulse page:
+  * Fix summary color
+  * Restore icon colors
+* Gists: fix revision numbers
+
 #### Version 1.8.12 (4/18/2014)
 
 * Discussions
@@ -67,17 +83,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Issues: Fix filter list color
 * Repo view: Fix SHA text
 * Gist: Fix delete button
-
-#### Version 1.8.10 (4/11/2014)
-
-* PR status: Add background to hide timeline. Fixes [issue #136](https://github.com/StylishThemes/GitHub-Dark/issues/136).
-* Discussions:
-  * Fix white border between items
-  * Remove notification box background
-  * Fix info boxes below comment box
-  * Fix linkified code tag color
-* Releases: Fix top border
-* Add [CONTRIBUTING.md](https://github.com/StylishThemes/GitHub-Dark/blob/master/CONTRIBUTING.md) file.
-  * Readme: fix contributing links & remove list of contributors
-  * Fixes [issue #135](https://github.com/StylishThemes/GitHub-Dark/issues/135).
-* Icons: Add red color to octicon-x
