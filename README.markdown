@@ -41,6 +41,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.14 (4/25/2014)
+
+* Update language color selectors for CSS and JS. Fixes [issue #68](https://github.com/StylishThemes/GitHub-Dark/issues/68).
+
 #### Version 1.8.13 (4/25/2014)
 
 * Releases: color fixes
