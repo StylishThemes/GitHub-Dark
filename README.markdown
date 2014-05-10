@@ -41,6 +41,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.16 (5/10/2014)
+
+* Remove outdated raw subdomain from site regex. Fixes [issue #143](https://github.com/StylishThemes/GitHub-Dark/issues/143).
+* Wiki: Edit link tweaks
+* Global: Darker heading borders
+
 #### Version 1.8.15 (5/3/2014)
 
 * Main repo page:
