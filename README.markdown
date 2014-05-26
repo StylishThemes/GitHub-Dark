@@ -41,6 +41,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+
+#### Version 1.8.17 (5/26/2014)
+
+* Ace editor: Fix text color &amp; styled the selection background
+* Use page: remove useless border on contribution stats
+* Badges: fix contrasty number of repos badge
+* Info tip: use bright text color
+
 #### Version 1.8.16 (5/10/2014)
 
 * Remove outdated raw subdomain from site regex. Fixes [issue #143](https://github.com/StylishThemes/GitHub-Dark/issues/143).
@@ -75,23 +83,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * General
   * Style accessibility aid box
   * Fix red button hover, remove another color def
-
-#### Version 1.8.14 (4/25/2014)
-
-* Update language color selectors for CSS and JS. Fixes [issue #68](https://github.com/StylishThemes/GitHub-Dark/issues/68).
-
-#### Version 1.8.13 (4/25/2014)
-
-* Releases: color fixes
-* Issues:
-  * Slightly darker clock icon in the issue list
-  * Fix icon color in milestone selector popup
-* Explore page:
-  * Fix icons in language selection popup
-  * Fix numbering labels
-* Options: Fox OAuth logo box
-* Developer pages: Various fixes
-* Pulse page:
-  * Fix summary color
-  * Restore icon colors
-* Gists: fix revision numbers
