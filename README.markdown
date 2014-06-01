@@ -41,6 +41,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.18 (6/1/2014)
+
+* Frontpage:
+  * Fix selected tab
+  * Fix tab colors
+* Gist: Fix file name box
+* Search: Brigther language stat bars
+* Network graph: Fix background
 
 #### Version 1.8.17 (5/26/2014)
 
@@ -54,32 +62,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Remove outdated raw subdomain from site regex. Fixes [issue #143](https://github.com/StylishThemes/GitHub-Dark/issues/143).
 * Wiki: Edit link tweaks
 * Global: Darker heading borders
-
-#### Version 1.8.15 (5/3/2014)
-
-* Main repo page:
-  * Darken file box borders
-  * Branch info bar fixes
-* New repo page: Fix a few text colors
-* Gists: style gist not found page text
-* Organization page:
-  * Fix link colors & dropdown menu
-  * More dropdown fixes
-* New issue:
-  * Darken border
-  * Fix text color of info box
-* Trending repos: fix language color
-* Discussions
-  * Various fixes; remove 2 color definitions
-  * Update line length hack. See [issue #136](https://github.com/StylishThemes/GitHub-Dark/issues/136).
-* Ace (file) editor:
-  * Darken active line style. Fixes [issue #140](https://github.com/StylishThemes/GitHub-Dark/issues/140).
-  * Remove arrow hover shadow
-* Wiki pages:
-  * Remove sidebar, footer & editor background color. Fixes [issue #141](https://github.com/StylishThemes/GitHub-Dark/issues/141).
-  * Fix sidebar link colors
-  * Add hover to title back arrow
-  * Brighten wiki edit link
-* General
-  * Style accessibility aid box
-  * Fix red button hover, remove another color def
