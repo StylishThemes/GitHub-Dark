@@ -41,6 +41,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.19 (6/5/2014)
+
+* Tooltip: use bright text
+* PSD view: darken background of iframe
+
 #### Version 1.8.18 (6/1/2014)
 
 * Frontpage:
@@ -56,9 +61,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Use page: remove useless border on contribution stats
 * Badges: fix contrasty number of repos badge
 * Info tip: use bright text color
-
-#### Version 1.8.16 (5/10/2014)
-
-* Remove outdated raw subdomain from site regex. Fixes [issue #143](https://github.com/StylishThemes/GitHub-Dark/issues/143).
-* Wiki: Edit link tweaks
-* Global: Darker heading borders
