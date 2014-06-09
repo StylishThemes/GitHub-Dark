@@ -1,0 +1,1225 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@namespace svg url(http://www.w3.org/2000/svg);
+@-moz-document regexp("^https?://((gist|guides|help|status|developer)\.)?github\.com.*"), domain("render.githubusercontent.com") {
+	/* Github Dark Theme v2.0-alpha (6/8/2014)
+	* https://github.com/StylishThemes/GitHub-Dark
+	* http://userstyles.org/styles/37035
+	* License: http://sam.zoy.org/wtfpl/
+	*/
+	/* AGENT_SHEET */
+	body {
+		background-color: #222 !important;
+		background-image: /*[[bg-choice]]*/ url(https://stylishthemes.github.io/GitHub-Dark/images/backgrounds/bg-tile1.png) !important;
+		background-clip: border-box !important;
+		background-origin: padding-box !important;
+		/*[[bg-options]]*/
+		/*[[bg-options2]]*/
+	}
+
+	* {
+		border-color: #444 !important;
+		text-shadow: none !important;
+		box-shadow: none !important;
+	}
+
+	/* === transparent background only === */
+	body > pre, #footer, table tr, img, div, table, article
+	, span:not(.mail-status):not([class*="color"]) /* all spans except issue label colors & top bar notification indicator & summary language color */
+	, .color-label span.name /* label @ https://github.com/StylishThemes/GitHub-Dark/issues */
+	, .drag-and-drop /* comment block (attach images by dragging & dropping) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		background: transparent !important;
+	}
+	/* === Remove background gradient === */
+	.sunken-menu-separator:before, .sunken-menu-contents:before
+	, .sunken-menu-separator, .sunken-menu-contents:after /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		background-image: none !important;
+	}
+
+	/*** Base link/panel colors - text ***/
+	a:not([class*="linked-labelstyle"]), a span:after /* overall link styling */
+	, .header a:hover, .header a:hover span:before, .header button:hover span:before /* top navigation bar - links & octicons (all pages) */
+	, .mega-octicon:hover /* footer octicon */
+	, .new-file-link span /* add new file (plus sign) @ https://github.com/StylishThemes/GitHub-Dark */
+	, .numbers-summary li:hover * /* summary @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		color: /*[[base-color]]*/ #b50 !important;
+	}
+
+	a:hover .dropdown-arrow /* top navigation bar - new repo (all pages) */
+	{
+		border-top-color: /*[[base-color]]*/ #4183C4 !important;
+	}
+
+	/* Base color panel */
+	.button:hover, .button:active, option:hover /* overall button & option styling */
+	, .minibutton:not(.disabled):hover, .minibutton:active, .minibutton:hover code /* mini buttons */
+	, .pagination a:hover /* load "More" button @ https://github.com/ */
+	, .navigation-focus, .select-menu-item:hover, .select-menu-item.selected /* select dropdown @ https://github.com/ */
+	, .filter-item.selected, .filter-item:hover /* left sidebar repo list @ https://github.com/dashboard/pulls */
+	, input[type=submit]:hover /* */
+	{
+		background: /*[[base-color]]*/ #b50 !important;
+	}
+
+	.octofication .message /* broadcast notification @ https://github.com/ */
+	{
+		border-color: /*[[base-color]]*/ #b50 !important;
+	}
+
+	/* === Notification icon === */
+	.notification-indicator .unread
+	{
+		background: /*[[base-color]]*/ #b50 !important;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 10px /*[[base-color]]*/ #b50 !important;
+	}
+
+	::selection /* text selection */
+	{
+		background: /*[[base-color]]*/ #b50 !important;
+		color: #fff !important;
+	}
+	::-moz-selection /* text selection */
+	{
+		background: /*[[base-color]]*/ #b50 !important;
+		color: #fff !important;
+	}
+
+	/* FIXME: text color doesn't seem to apply */
+	.ace_selection {
+		background: /*[[base-color]]*/ #b50 !important;
+		color: #fff !important;
+	}
+
+	/* input focus hightlight */
+	input.focus, textarea.focus, textarea:focus /* focus borders */
+	{
+		border-color: /*[[base-color]]*/ #b50 !important;
+		box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.075) inset, 0px 0px 5px rgba(255, 255, 255, .075) !important;
+	}
+
+	input, textarea /* non-focus borders */
+	{
+		box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.1) inset !important;
+	}
+
+	/* === Inputs === */
+	select, input:not(.js-color-editor-input), textarea
+	{
+		-moz-appearance: none !important;
+		background: #181818 !important;
+		border-color: #555 !important;
+		color: #eee !important;
+	}
+
+	/* custom checkbox and radio styles. We need a full set of styles here as WebKit removes all of them when
+	-webkit-appearance: none is set. */
+	input[type="checkbox"], input[type="radio"]
+	{
+		-webkit-appearance: none !important;
+		background-color: #181818 !important;
+		border: 1px solid #555 !important;
+		color: #eee !important;
+		height: 1em !important;
+		width: 1em !important;
+	}
+
+	input[type=radio]
+	{
+		border-radius: 100% !important;
+	}
+	input[type="checkbox"]:checked
+	{
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Im05OC43OTk5ODggMjEzbC0wLjc5OTk4OCA4OWMwIDAgMTAzIDEwMiAxMDQgMTAyYzEgMCAyMDUgLTIwMSAyMDUgLTIwMWMwIDAgMCAtOTAgMCAtOTFjLTAuNzk5OTg4IDAgLTIwNCAyMDMgLTIwNCAyMDNsLTEwNCAtMTAyeiIgZmlsbD0iI2RkZGRkZCIvPjwvZz48L3N2Zz4KCg==) !important;
+		background-size: cover !important;
+	}
+	input[type="checkbox"]:indeterminate
+	{
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxyZWN0IGhlaWdodD0iMTI4IiB3aWR0aD0iMzg0IiB5PSIxOTIiIHg9IjY0IiBmaWxsPSIjZGRkZGRkIi8+PC9nPjwvc3ZnPg==) !important;
+		background-size: cover !important;
+	}
+	input[type=radio]:checked
+	{
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjQiIGZpbGw9IiNkZGRkZGQiLz48L2c+PC9zdmc+) !important;
+		background-size: cover !important;
+	}
+
+	/* === Prevent overflow issues === */
+	#dashboard, div.highlight, svg
+	{
+		width: 100% !important;
+	}
+	.vcard-fullname, .vcard-username
+	{
+		overflow-y: hidden !important;
+	}
+	code
+	{
+		overflow: visible !important;
+	}
+	.markdown-body code
+	{
+		white-space: pre-wrap;
+	}
+	pre
+	{
+		/*[[tab-size]]*/
+	}
+
+	/* HACK: Center emoji vertically on the line */
+	.emoji {
+		position: relative;
+		top: -1.5px;
+	}
+
+	/* gist diff stats - fix alignment */
+	.diffstat {
+		font-size: 14px !important;
+	}
+
+	/* previously orange border bottom */
+	.pagehead-nav-item.selected /* area under top nav (news feed/pull requests/issues) @ https://github.com/ */
+	{
+		border-bottom: #eee 1px solid !important;
+	}
+
+	.sunken-menu a:not(.selected):focus, .sunken-menu a:not(.selected):hover /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		border-left: #eee 1px solid !important;
+	}
+
+	.sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		border-left: 0 !important;
+	}
+
+	.dropdown-arrow /* top navigation bar - new repo (all pages) */
+	{
+		border-top-color: #eee !important;
+		transition: none !important;
+	}
+
+	/* === Darken border === */
+	.wiki-empty-box /* add custom footer @ https://github.com/StylishThemes/GitHub-Dark/wiki/Pages */
+	{
+		border-color: #777 !important;
+	}
+
+	pre, table, hr, img, ul, li
+	{
+		border-color: #555 !important;
+	}
+
+	table th
+	{
+		border-color: #444 !important;
+	}
+
+	a, h1, h2, h3, table tr, table td, blockquote, ul, li, img
+	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		border-color: #333 !important;
+	}
+
+	.sunken-menu-separator /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		border-bottom: #333 1px solid !important;
+	}
+
+	.zzz
+	{
+		border-color: #222 !important;
+	}
+
+	.timeline-comment-wrapper /* comment wrapper @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		border-color: transparent !important;
+	}
+
+	.discussion-timeline:before /* vertical line @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		margin-top: 2px !important;
+		background: #444 !important;
+		height: calc(100% - 260px) !important;
+	}
+
+	/* code */
+
+	/* ace (gist editor) */
+	.ace_cursor {
+		border-left-color: #ddd !important;
+	}
+
+	/* === #111 === */
+	pre, code, tt, dt
+	{
+		background: #111 none !important;
+		border-color: #333 !important;
+	}
+
+	/* === between #111 & #222 === */
+	.box-body /* repo lists @ https://github.com/ */
+	, .tabnav-tab.selected /* contributions/Repositories/Public activity tabs @ https://github.com/:user */
+	, .comment-body, .timeline-comment /* https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		background: #1b1b1b !important;
+	}
+
+	table
+	, article /* Readme content box @ https://github.com/StylishThemes/GitHub-Dark */
+	, div.message /* octofication @ https://github.com/ */
+	, .list-group-item /* https://github.com/dashboard/pulls */
+	, .pagehead-actions a:not(.minibutton) /* watch/star/fork counts */
+	, .chromed-list-browser div /* milestones @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	{
+		background: #181818 !important;
+	}
+
+	table tr:nth-child(2n)
+	{
+		background: #141414 !important;
+	}
+
+	/* === #222 === */
+	/* Darkest background color (#222), no image, leave border */
+	svg
+	, .overall-summary /* summary commits/branches/releases/contributors @ https://github.com/StylishThemes/GitHub-Dark */
+	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		background: #222 !important;
+	}
+
+	/* Darkest background (#222), leave image */
+	.select-menu-modal /* select dropdown (click on your name @ https://github.com/ */
+	{
+		background-color: #222 !important;
+	}
+
+	/*** semi-transparent #222 ***/
+	/* let some background image show through */
+	.pagehead /* area under top nav (news feed/pull requests/issues) @ https://github.com/ */
+	, div.sunken-menu-contents /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		background: rgba(34,34,34,0.4) !important;
+	}
+
+	.zzz
+	{
+		background-color: rgba(34, 34, 34, 0.8) !important;
+	}
+
+	/*** semi-transparent #323232 ***/
+	.zzz
+	{
+		background: rgba(50,50,50,.5) !important;
+	}
+
+	/* Navigation focus */
+	.list-group-item.navigation-focus, .list-browser-item.navigation-focus /* https://github.com/dashboard/pulls */
+	{
+		background: #282828 !important;
+	}
+
+	/* === #333 === */
+	/* Panel background (#333), no image */
+	.filter-bar /* Your repos filter @ https://github.com/ */
+	, .branch-name /* branch label @ https://github.com/dashboard/pulls */
+	, .none p /* with issues content @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	{
+		background: #333 !important;
+	}
+
+	/* Panel background (#333), leave image */
+	.zzz
+	{
+		background-color: #333 !important;
+	}
+
+	/* blame heats */
+	.heat1, .heat2 { background-color: #5af !important }
+	.heat3, .heat4 { background-color: #48c !important }
+	.heat5, .heat6 { background-color: #369 !important }
+	.heat7, .heat8 { background-color: #246 !important }
+	.heat9, .heat10 { background-color: #282828 !important }
+
+	/* contributions-calendar coloring */
+	#contributions-calendar svg|rect[style="fill: rgb(238, 238, 238);"],
+	#contributions-calendar svg|rect[style="fill: #eeeeee;"] { fill: #282828 !important }
+	#contributions-calendar svg|rect[style="fill: rgb(214, 230, 133);"],
+	#contributions-calendar svg|rect[style="fill: #d6e685;"] { fill: #246 !important }
+	#contributions-calendar svg|rect[style="fill: rgb(140, 198, 101);"],
+	#contributions-calendar svg|rect[style="fill: #8cc665;"] { fill: #369 !important }
+	#contributions-calendar svg|rect[style="fill: rgb(68, 163, 64);"],
+	#contributions-calendar svg|rect[style="fill: #44a340;"] { fill: #48c !important }
+	#contributions-calendar svg|rect[style="fill: rgb(30, 104, 35);"],
+	#contributions-calendar svg|rect[style="fill: #1e6823;"] { fill: #5af !important }
+	.contrib-legend li[style="background-color: #eee"]    { background-color: #282828 !important }
+	.contrib-legend li[style="background-color: #d6e685"] { background-color: #246 !important }
+	.contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
+	.contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
+	.contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
+
+	/* invert images */
+	#graph-shots li>a, #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a
+	, .github-jobs-promotion a.jobs-logo strong
+	{
+		filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
+		-webkit-filter: invert(100%) !important;
+	}
+	#graph-shots li>a:hover
+	{
+		filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix type=\'saturate\' values=\'0\'/><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i") !important;
+		-webkit-filter: invert(100%) grayscale(100%) !important;
+	}
+
+	/* soft badges */
+	.box-title-count
+	{
+		background-color: #555 !important;
+		color: #ccc !important;
+	}
+	/* svg styling */
+	svg|line, svg|rect, svg|path
+	{
+		shape-rendering: geometricPrecision !important;
+	}
+	#contributors-master svg|svg.viz
+	{
+		border: 1px solid #555 !important;
+	}
+	.js-graph-punchcard svg|svg.viz
+	{
+		background: transparent !important;
+		border: none !important;
+	}
+	svg|text, svg|circle.day
+	{
+		fill: #ccc !important;
+	}
+	svg|circle.day:hover
+	{
+		fill: #fff !important;
+	}
+	#contributors-master svg|svg.viz
+	{
+		display: block !important;
+	}
+	svg|g.dots svg|circle
+	{
+		stroke: #222 !important;
+	}
+	.traffic-graph svg|g.axis:not(.views):not(.unique) svg|g.tick:not(:nth-child(14)):not(:first-child) svg|line
+	, svg|g.axis svg|path, svg|line.axis, svg|svg:not(.vis) svg|g.axis svg|line
+	{
+		stroke: #444 !important;
+	}
+	svg|path.path:not(.total):not(.unique):not(.views)
+	{
+		stroke: #aaa !important;
+	}
+	#commit-activity-detail svg|path.path
+	{
+		stroke: #1DB34F !important;
+	}
+	svg|svg.tick
+	{
+		fill: #444 !important;
+	}
+	/* Fix for overly wide inline comment form */
+	.js-inline-comment-form
+	{
+		width: 96% !important;
+	}
+
+	/* === #444 === */
+	/* Light Panel background (#444) no image */
+	.zzz
+	{
+		background: #444 !important;
+	}
+
+	/* Light Panel background (#444), leave image */
+	.zzz
+	{
+		background-color: #444 !important;
+	}
+
+	/* === #555 === */
+	/* Highlight Panel background (#555), leave image, no border, with radius */
+	.zzz
+	{
+		background-color: #555 !important;
+	}
+	.zzz
+	{
+		background: #555 !important;
+	}
+
+	/* === lighter backgrounds === */
+	.sunken-menu-item.selected:after /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		background: #999 !important;
+	}
+
+	.zzz
+	{
+		background: #ccc !important;
+	}
+
+	.zzz
+	{
+		background: #fff !important;
+	}
+
+	/* === gradients === */
+	/* blue highlight gradient */
+	.timeline-comment.current-user .timeline-comment-header
+	, .github-jobs-promotion p
+	, .octotip
+	, .markdown-format .alert:not(.warning)
+	, .full-commit.commit
+	, .flash
+	, .bootcamp h1
+	, .bootcamp-body
+	{
+		background: linear-gradient(to bottom, #182030, #183040) !important;
+	}
+
+	.timeline-comment.current-user
+	, .github-jobs-promotion p
+	, .octotip
+	, .markdown-format .alert:not(.warning)
+	, .full-commit.commit
+	, .bootcamp .bootcamp-body, .bootcamp h1
+	{
+		border: 1px solid #246 !important;
+	}
+
+	.timeline-comment.current-user .timeline-comment-header
+	{
+		border-bottom-color: #246 !important;
+	}
+	.timeline-comment.current-user:after, .timeline-comment.current-user:before
+	{
+		border-right-color: #246 !important;
+	}
+
+	/* dark grey gradient */
+	kbd, .minibutton, a.feed, .button:not(img), button
+	, div.header /* page header */
+	, .pagination > * /* load "More" button @ https://github.com/ */
+	, .box-header /* Repos you contribute to header */
+	, .pull-info /* commit with x additions and x deletion in feed @ https://github.com/ */
+	, .select-menu-header /* select dropdown (click on your name @ https://github.com/ */
+	, .commit /**/
+	, .markdown span.name /* readme title @ https://github.com/StylishThemes/GitHub-Dark */
+	, div.list-browser-filterbar, .filter-tab /* milestones header @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	, .timeline-comment-header /* comment header @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		background: linear-gradient(to bottom, #282828, #181818) !important;
+	}
+
+	/* inverted dark grey gradient */
+	.minibutton.selected
+	, .asc .sort-type, .desc .sort-type /* sort due date/completeness @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	, .filter-tab.selected /* milestones header @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	, .progress-bar /* progress bar background @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
+	{
+		background: linear-gradient(to bottom, #181818, #282828) !important;
+	}
+
+	/* === Text Color === */
+	/* brightest */
+	.numbers-summary a /* summary @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		color: #fff !important;
+	}
+
+	/* Bright text */
+	h1, h2, strong, label, h2 span
+	, a.button, span.button, button.button, a.minibutton, span.minibutton, button.minibutton, .button.primary, .minibutton.primary
+	, .pagination a:hover /* load "More" button @ https://github.com/ */
+	, .select-menu-header span, .navigation-focus, .select-menu-item:hover, .select-menu-item.selected /* select dropdown @ https://github.com/ */
+	, .columns .filter-item.selected, .columns .filter-item:hover /* left sidebar repo list @ https://github.com/dashboard/pulls */
+	, .num /* contributions @ https://github.com/:user & summary @ https://github.com/StylishThemes/GitHub-Dark */
+	, .sunken-menu-item.selected .octicon, .sunken-menu-group li:hover .octicon /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		color: #eee !important;
+	}
+
+	pre, body, h3, h4
+	, .header a, .header span:before /* top navigation bar - links & octicons (all pages) */
+	, .message span /* commit message in feed @ https://github.com/ */
+	, .lang /* overall summary language colors @ https://github.com/StylishThemes/GitHub-Dark */
+	, .markdown span.name /* readme title @ https://github.com/StylishThemes/GitHub-Dark */
+	, .pagehead-actions a /* watch/star/fork counts */
+	{
+		color: #ccc !important;
+	}
+
+	h5, h6, table th, em, blockquote
+	, table.files .octicon /* folder icons @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		color: #aaa !important;
+	}
+
+	/* content text */
+	.zzz
+	{
+		color: #888 !important;
+	}
+
+	.zzz
+	{
+		color: #666 !important;
+	}
+
+	/* darkest text; Context pane highlight item */
+	.zzz
+	{
+		color: #444 !important;
+	}
+
+	.zzz
+	{
+		color: #333 !important;
+	}
+
+	.zzz
+	{
+		color: #222 !important;
+	}
+
+	/* placeholder */
+	::-webkit-input-placeholder
+	{
+		color: #444 !important;
+	}
+
+	::-moz-placeholder
+	{
+		color: #444 !important;
+		opacity: 1 !important;
+	}
+
+	/* Panel's */
+	.zzz
+	{
+		background: /*[[base-color]]*/ #b50 !important;
+		border-color: /*[[base-color]]*/ #b50 !important;
+	}
+
+	/* === red === */
+	/* Red panel */
+	.zzz
+	{
+		background: #c31e16 !important;
+		border-color: #333 !important;
+	}
+
+	.zzz:hover
+	{
+		background: #a31e16 !important;
+		border: #b00 1px solid !important;
+	}
+
+	.zzz
+	{
+		background: #a31e16 !important;
+	}
+
+	/* red border */
+	.zzz
+	{
+		border-color: #c31e16 !important;
+	}
+
+	.zzz
+	{
+		border-right-color: #a31e16 !important;
+	}
+
+	/* red gradient */
+	.dangerzone > h3 {
+		background: linear-gradient(#a33,#722) !important;
+		border-radius: 0 !important;
+	}
+
+	/* bright red text */
+	.zzz
+	{
+		color: #c31e16 !important;
+	}
+
+	/* === Brown panel === */
+	.zzz
+	{
+		background: linear-gradient(#402c17,#5e4022) !important;
+		border-color: #5e4022 !important;
+	}
+
+	.zzz
+	{
+		background: #402c17 !important;
+		color: #9C6A38 !important;
+		border-color: #5e4022 !important;
+	}
+
+	.zzz
+	{
+		background-color: #402c17 !important;
+		border-color: #5e4022 !important;
+		color: #ddd !important;
+	}
+
+	/* === Yellow panel=== */
+	.zzz
+	{
+		background: linear-gradient(#220,#331) !important;
+		border-color: #773 !important;
+	}
+
+	.zzz
+	{
+		color: #884 !important;
+	}
+
+	.zzz
+	{
+		color: #cc5 !important;
+	}
+
+	/* === Green panel === */
+	/* labels */
+	.state-open, .state-proposed, .state-reopened /* contribution activity @ https://github.com/:user */
+	{
+		background: #305530 !important;
+		border-color: #062 !important;
+	}
+
+	/* Green border */
+	.zzz
+	{
+		border-color: #305530 !important;
+	}
+
+	.zzz
+	{
+		border-right-color: #305530 !important;
+	}
+
+	/* Green text */
+	.zzz
+	{
+		color: #6CC644 !important;
+	}
+
+	/* interactive button - bright border */
+	button.primary, a.primary /* new repo, accept buttons */
+	, .progress-bar .progress /* progress bar @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
+	{
+		background: linear-gradient(to bottom, #407045, #305530) !important;
+		border-color: #083 !important;
+	}
+
+	/* New additions */
+	.zzz
+	{
+		background: #070 !important;
+		color: #ddd !important;
+	}
+
+	/* Green hovered */
+	.primary:not(:disabled):hover /* new repo, accept buttons */
+	{
+		background: #373 !important;
+	}
+
+	.zzz
+	{
+		background: linear-gradient(to bottom, #508055, #407045) !important;
+	}
+
+	/* === silver panel/button === */
+	.kbd
+	, .pagination span.current /* pagination current indicator @ https://github.com/dashboard/issues/repos */
+	{
+		background: linear-gradient(to bottom, #444, #333) !important;
+		border-color: #555 !important;
+	}
+
+	/* Red */
+	.dangerzone
+	{
+		color: #a00 !important;
+	}
+
+	/* === orange notification === */
+	.zzz
+	{
+		background: rgba(203, 108, 0, 0.8) !important;
+	}
+
+	/* purple merge status icon, seen in merged issues with an existing branch */
+	.zzz
+	{
+		background: #6E5494 !important;
+	}
+
+	/* purple text */
+	.zzz
+	{
+		color: #6E5494 !important;
+	}
+
+	/* ajax loading */
+	.zzz
+	{
+		background: rgba(64, 64, 64, 0.8) !important;
+	}
+
+	/* === Repository Network Tree === */
+	#network .repo img[alt="T"], #network .repo img[alt="I"], #network .repo img[alt="L"]
+	{
+		width: 26px !important;
+		height: 0 !important;
+		padding-top: 22px !important;
+	}
+	#network .repo img[alt="T"]
+	{
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAABPT09PI3z5AAAAAnRSTlMAslP8H5gAAAATSURBVAjXYwADBwbS6NAAUvUBALZSA6Z3hy6MAAAAAElFTkSuQmCC') no-repeat !important;
+	}
+	#network .repo img[alt="I"]
+	{
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAABPT09PI3z5AAAAAnRSTlMAslP8H5gAAAAOSURBVAjXYwADBwZa0wCi6ANBB33CVwAAAABJRU5ErkJggg==') no-repeat !important;
+	}
+	#network .repo img[alt="L"]
+	{
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaAQMAAACNTe4+AAAABlBMVEUAAABPT09PI3z5AAAAAnRSTlMAslP8H5gAAAATSURBVAjXYwADBwbS6NAABhIBAJVSAiYmyPmYAAAAAElFTkSuQmCC') no-repeat !important;
+	}
+
+	ul.view-modes-menu
+	{
+		background-image: url('data:image/gif;base64,R0lGODlhBwAEAIAAACIiIv///yH5BAEAAAEALAAAAAAHAAQAAAIIhA+BGWoNWSgAOw==') !important;
+	}
+
+	/* === Images === */
+	.zzz
+	{
+		background-position: -18px 0 !important;
+	}
+
+	/* Repo canvas */
+	canvas
+	{
+		background: transparent !important;
+		z-index: 0 !important;
+	}
+
+	#network canvas {
+		background: #fff !important;
+		opacity: .85 !important;
+	}
+
+	/* issue labels manager */
+	#issues_next .sidebar .labels-editable .label-target .delete a
+	{
+		background-image: url(https://stylishthemes.github.io/GitHub-Dark/images/delete.png) !important;
+	}
+
+	/* no border */
+	.tabnav-tab:not(.selected) /* contributions/Repositories/Public activity tabs @ https://github.com/:user */
+	, .sunken-menu-item:not(.selected) /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	, ul.color-label-list .color-label /* labels @ https://github.com/StylishThemes/GitHub-Dark/issues */
+	{
+		border: transparent 1px solid !important;
+	}
+
+	/* add border */
+	.progress-bar /* progress bar background @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
+	{
+		border: 1px solid #555 !important;
+	}
+
+	.zzz
+	{
+		border: 1px solid #444 !important;
+	}
+
+	.zzz
+	{
+		border-bottom: #333 8px solid !important;
+	}
+
+	/* pseudo-left border for right side menu */
+	.sunken-menu-contents /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		box-shadow: inset 1px 0 0 #333 !important;
+	}
+
+	/** === text color === */
+	/* orange rss icon */
+	.octicon-rss
+	{
+		color: #f93 !important;
+	}
+	.featured-label
+	{
+		background: #F5B987 !important;
+		color: #D26911 !important;
+	}
+	.featured-label .octicon
+	{
+		color: #D26911 !important;
+	}
+
+	/* secret gists */
+	.gist-item.vis-secret .bubble
+	{
+		background-color: #a1882b !important;
+	}
+	.gist-item.vis-secret .file-box
+	{
+		border: 1px solid #a1882b !important;
+	}
+	.gist-item.vis-secret .line-numbers
+	{
+		background-color: #a1882b !important;
+		border-color: #a1882b !important;
+	}
+	.gist-item.vis-secret .line-numbers span, .secret .mega-octicon:before, .secret .repo-label span,
+	.page-new-repo div.form-checkbox .octicon-lock:before
+	{
+		color:#a1882b !important;
+	}
+
+	/* diff highlighting (no syntax highlight) */
+	/* main diff text color */
+	.diff-line-pre
+	{
+		color: #ccc !important;
+	}
+	.highlight .gc td
+	{
+		border-top: 1px solid #333 !important;
+		border-bottom: 1px solid #333 !important;
+	}
+	#header-wrapper, .menu li + li
+	{
+		border-bottom: 1px solid #333 !important;
+	}
+	.js-release-form .drag-and-drop
+	{
+		border-top: none !important;
+	}
+
+	/* light grey - breaks in diff (with line numbers) */
+	.highlight .gc td, .highlight .gc pre
+	{
+		background: #222 !important;
+		color: #888 !important;
+	}
+	/* git diff line additions (dark green) */
+	.highlight .gi, .highlight .gi pre, .gi .diff-line-code, .gi .diff-line-code pre, .markdown-body ins,
+	.markdown-body ins > *, .markdown-body .added
+	{
+		background: #030 !important;
+		border-color: #080 !important;
+	}
+	/* git diff line deletions (dark red) */
+	.highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre, .markdown-body del, .markdown-body del > *,
+	.markdown-body .removed
+	{
+		background: #400 !important;
+		border-color: #800 !important;
+	}
+	/* moved diff - yellow */
+	.markdown-body li.added.moved
+	{
+		background: #440 !important;
+		border-color: #880 !important;
+	}
+	/* git diff inline additions (green) */
+	.highlight .gi .x
+	{
+		background: #252 !important;
+		color: #eee !important;
+	}
+	/* git diff inline deletions (red) */
+	.highlight .gd .x
+	{
+		background: #622 !important;
+		color: #eee !important;
+	}
+	/* git diff line numbers (med green) */
+	.gi .diff-line-num
+	{
+		background: #020 !important;
+		border-color: #040 !important;
+	}
+	/* git diff line deletions (med red) */
+	.gd .diff-line-num
+	{
+		background: #300 !important;
+		border-color: #500 !important;
+	}
+
+	/* GitHub Enterprise Only
+	*                                 _____..---========+*+==========---.._____
+	*    ______________________ __,-='=====____  =================== _____=====`=
+	*   (._____________________I__) - _-=_/    `---------=+=--------'
+	*       /      /__...---===='---+---_'
+	*      '------'---.___ -  _ =   _.-'
+	*                     `--------'
+	*/
+	.enterprise #network canvas
+	{
+		background: none transparent !important;
+		opacity: 1 !important;
+	}
+
+	.enterprise.page-profile .profilecols ul.stats li strong
+	{
+		color: #CCC;
+		background: transparent !important;
+	}
+
+	.enterprise ul.selling-points li
+	{
+		color: #FFF;
+	}
+
+	.enterprise .steps
+	{
+		margin: 20px auto 0;
+		padding: 15px 10px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+		background: #222;
+		color: #FFF;
+	}
+
+	.enterprise .dashboard-notice
+	{
+		background: #222 !important;
+		color: #CCC;
+	}
+
+	.enterprise .autocomplete-item
+	{
+		color: #CCC;
+	}
+
+	.enterprise .repo-nav a:focus, .enterprise .repo-nav a:hover
+	{
+		border-radius: 0 !important;
+		border-left: #eee 1px solid !important;
+	}
+
+	.enterprise .repo-nav a, .enterprise .repo-menu, .enterprise .repo-nav a .counter
+	{
+		text-shadow: none !important;
+		box-shadow: none !important;
+	}
+
+	.enterprise .repo-nav li > .selected:after
+	{
+		background: #333 none !important;
+		border-color: #555 !important;
+	}
+
+	.enterprise .repo-nav-contents
+	{
+		box-shadow: inset 1px 0 0 #333 !important;
+	}
+
+	.enterprise div.repo-nav-contents
+	{
+		background: rgba(34,34,34,0.4) !important;
+	}
+
+	.enterprise ul.repo-menu a.selected
+	{
+		border-left: transparent 1px solid !important;
+	}
+
+	.enterprise .repo-menu-separator
+	{
+		border-bottom: #333 1px solid !important;
+	}
+
+	.enterprise .repo-nav a.selected .octicon, .enterprise .repo-menu a.selected:after, .enterprise .repo-menu li:hover .octicon
+	{
+		color: #eee !important;
+	}
+
+	.enterprise .repo-menu-separator:before,.enterprise .repo-nav-contents:before, .enterprise .repo-menu-separator, .enterprise .repo-nav-contents:after
+	{
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+
+	.enterprise .repo-nav a:focus, .enterprise .repo-nav a:hover
+	{
+		border-radius: 0 !important;
+		border-left: #eee 1px solid !important;
+	}
+
+	.enterprise ul.repo-menu a.selected
+	{
+		border-color: #333 !important;
+	}
+
+	/* custom language colors */
+	.language-color[style$="#9DC3FF;"] {background-color: #ae8e00 !important}
+	.language-color[style$="#6a40fd;"] {background-color: #00d7ae !important}
+	.language-color[style$="#e3491a;"] {background-color: #bb8091 !important}
+	.language-color[style$="#02f88c;"] {background-color: #ff6522 !important}
+	.language-color[style$="#ca2afe;"] {background-color: #00a8bb !important}
+	.language-color[style$="#bd79d1;"] {background-color: #d1d1d1 !important}
+	.language-color[style$="#a67219;"] {background-color: #92bc82 !important}
+	.language-color[style$="#6594b9;"] {background-color: #d1db00 !important}
+	.language-color[style$="#36699B;"] {background-color: #d17d00 !important}
+	.language-color[style$="#d4bec1;"] {background-color: #ffacd3 !important}
+	.language-color[style$="#555555;"] {background-color: #ffbe74 !important}
+	.language-color[style$="#5a25a2;"] {background-color: #c957ff !important}
+	.language-color[style$="#f34b7d;"] {background-color: #ff0095 !important}
+	.language-color[style$="#563d7c;"] {background-color: #7493bc !important}
+	.language-color[style$="#3a81ad;"] {background-color: #ff8b78 !important}
+	.language-color[style$="#db5855;"] {background-color: #00bdff !important}
+	.language-color[style$="#244776;"] {background-color: #00b7e7 !important}
+	.language-color[style$="#ed2cd6;"] {background-color: #869a00 !important}
+	.language-color[style$="#3fb68b;"] {background-color: #a0bb50 !important}
+	.language-color[style$="#fcd46d;"] {background-color: #ff00eb !important}
+	.language-color[style$="#075ff1;"] {background-color: #ea9e84 !important}
+	.language-color[style$="#98BAD6;"] {background-color: #ff6bb3 !important}
+	.language-color[style$="#3ebc27;"] {background-color: #ff8da7 !important}
+	.language-color[style$="#8a1267;"] {background-color: #00a4ff !important}
+	.language-color[style$="#946d57;"] {background-color: #f48ddf !important}
+	.language-color[style$="#6e4a7e;"] {background-color: #729c63 !important}
+	.language-color[style$="#c065db;"] {background-color: #f29d55 !important}
+	.language-color[style$="#0faf8d;"] {background-color: #e450ea !important}
+	.language-color[style$="#b845fc;"] {background-color: #f64abe !important}
+	.language-color[style$="#4d41b1;"] {background-color: #00b38e !important}
+	.language-color[style$="#636746;"] {background-color: #c1af83 !important}
+	.language-color[style$="#7b9db4;"] {background-color: #56a400 !important}
+	.language-color[style$="#dbded5;"] {background-color: #ff4593 !important}
+	.language-color[style$="#341708;"] {background-color: #a08f65 !important}
+	.language-color[style$="#e4cc98;"] {background-color: #ffaaa5 !important}
+	.language-color[style$="#a89b4d;"] {background-color: #9576ff !important}
+	.language-color[style$="#82937f;"] {background-color: #cd7e37 !important}
+	.language-color[style$="#e69f56;"] {background-color: #ff0041 !important}
+	.language-color[style$="#29b544;"] {background-color: #f79c0d !important}
+	.language-color[style$="#346d51;"] {background-color: #ff4169 !important}
+	.language-color[style$="#a9188d;"] {background-color: #809b31 !important}
+	.language-color[style$="#078193;"] {background-color: #00e0ff !important}
+	.language-color[style$="#b07219;"] {background-color: #ee663a !important}
+	.language-color[style$="#f7df1e;"] {background-color: #a0e700 !important}
+	.language-color[style$="#a270ba;"] {background-color: #ff006b !important}
+	.language-color[style$="#f5c800;"] {background-color: #3fbfdd !important}
+	.language-color[style$="#004200;"] {background-color: #00d400 !important}
+	.language-color[style$="#2584c3;"] {background-color: #c9a2de !important}
+	.language-color[style$="#499886;"] {background-color: #008fff !important}
+	.language-color[style$="#fa1fa1;"] {background-color: #b995ff !important}
+	.language-color[style$="#bb92ac;"] {background-color: #ff97ff !important}
+	.language-color[style$="#ce279c;"] {background-color: #00f824 !important}
+	.language-color[style$="#c7a938;"] {background-color: #ccae53 !important}
+	.language-color[style$="#0d3c6e;"] {background-color: #dd91ff !important}
+	.language-color[style$="#ff2b2b;"] {background-color: #9d60ff !important}
+	.language-color[style$="#37775b;"] {background-color: #ffa876 !important}
+	.language-color[style$="#c9df40;"] {background-color: #00d400 !important}
+	.language-color[style$="#3be133;"] {background-color: #00b5bb !important}
+	.language-color[style$="#438eff;"] {background-color: #ff8a44 !important}
+	.language-color[style$="#ff0c5a;"] {background-color: #d428ff !important}
+	.language-color[style$="#cabbff;"] {background-color: #447cff !important}
+	.language-color[style$="#5a63a3;"] {background-color: #d2ad00 !important}
+	.language-color[style$="#6e03c1;"] {background-color: #95b3de !important}
+	.language-color[style$="#f3ca0a;"] {background-color: #dda0b1 !important}
+	.language-color[style$="#b0ce4e;"] {background-color: #7a9bff !important}
+	.language-color[style$="#0298c3;"] {background-color: #00b261 !important}
+	.language-color[style$="#066ab2;"] {background-color: #71a9ff !important}
+	.language-color[style$="#d80074;"] {background-color: #ff6fe0 !important}
+	.language-color[style$="#2779ab;"] {background-color: #ff6887 !important}
+	.language-color[style$="#74283c;"] {background-color: #ffbfa4 !important}
+	.language-color[style$="#cc5555;"] {background-color: #ff8618 !important}
+	.language-color[style$="#91de79;"] {background-color: #f16600 !important}
+	.language-color[style$="#3581ba;"] {background-color: #d16dbe !important}
+	.language-color[style$="#44a51c;"] {background-color: #00b22b !important}
+	.language-color[style$="#198ce7;"] {background-color: #00d54c !important}
+	.language-color[style$="#ae17ff;"] {background-color: #ff3e00 !important}
+	.language-color[style$="#ff9c2e;"] {background-color: #a9ba00 !important}
+	.language-color[style$="#358a5b;"] {background-color: #ccc6ff !important}
+	.language-color[style$="#cc0088;"] {background-color: #ed7aff !important}
+	.language-color[style$="#701516;"] {background-color: #ff665a !important}
+	.language-color[style$="#dea584;"] {background-color: #919191 !important}
+	.language-color[style$="#7dd3b0;"] {background-color: #ff8757 !important}
+	.language-color[style$="#1e4aec;"] {background-color: #a883bd !important}
+	.language-color[style$="#0579aa;"] {background-color: #fbce00 !important}
+	.language-color[style$="#5861ce;"] {background-color: #df6a92 !important}
+	.language-color[style$="#007eff;"] {background-color: #ffb2ff !important}
+	.language-color[style$="#596706;"] {background-color: #ff00bf !important}
+	.language-color[style$="#dc566d;"] {background-color: #589d90 !important}
+	.language-color[style$="#46390b;"] {background-color: #00b1ff !important}
+	.language-color[style$="#e4cc98;"] {background-color: #68c64f !important}
+	.language-color[style$="#45f715;"] {background-color: #b0b0b0 !important}
+	.language-color[style$="#31859c;"] {background-color: #e96867 !important}
+	.language-color[style$="#755223;"] {background-color: #c67f66 !important}
+	.language-color[style$="#a54c4d;"] {background-color: #ba71ea !important}
+	.language-color[style$="#543978;"] {background-color: #8886e9 !important}
+	.language-color[style$="#ee7d06;"] {background-color: #a98e34 !important}
+	.language-color[style$="#848bf3;"] {background-color: #ff0003 !important}
+	.language-color[style$="#199c4b;"] {background-color: #a7bbff !important}
+	.language-color[style$="#945db7;"] {background-color: #78bdb0 !important}
+	.language-color[style$="#0098db;"] {background-color: #aaa5ff !important}
+	.language-color[style$="#2700e2;"] {background-color: #87d6ff !important}
+	.language-color[style$="#db5855;"] {background-color: #75c500 !important}
+	.language-color[style$="#ffce3b;"] {background-color: #ffbd3a !important}
+	.language-color[style$="#b0b77e;"] {background-color: #00d8dc !important}
+	.language-color[style$="#7582D1;"] {background-color: #70e9a0 !important}
+	.language-color[style$="#3a4040;"] {background-color: #44a42f !important}
+
+	/* OS X font rendering tweak, only active on sub-retina pixel ratios, might affect
+	* Chrome on other OSs too, see https://github.com/StylishThemes/GitHub-Dark/issues/86
+	*/
+	@media screen and (max-resolution: 1.99dppx)
+	{
+		html {
+			-moz-osx-font-smoothing: grayscale !important;
+			-webkit-font-smoothing: antialiased !important;
+		}
+	}
+
+	/*[[pygments-theme]]*/
+	/* GitHub-Dark syntax highlighting */
+	.highlight, .highlight pre:not(.diff-line-pre),
+	.highlight table { background-color:#111 !important; color:#d0d0d0 !important; }
+	.highlight .hll { background-color:#404040 !important; }
+	.highlight .err { color:#a61717 !important; background-color:#311 !important; }
+	.highlight .o { color:#777 !important; }
+	.highlight .p { color:#E9B96E !important; }
+	.highlight .cs { color:#e50808 !important; background-color:#520000 !important; }
+	.highlight .gi { color:#589819 !important; }
+	.highlight .gp { color:#aaa !important; }
+	.highlight .nf { color:#098 !important; }
+	.highlight .w { color:#666 !important; }
+	.highlight .c, .highlight .cm, .highlight .c1 { color:#3677a9 !important; }
+	.highlight .g, .highlight .l, .highlight .x, .highlight .ge, .highlight .gs, .highlight .ld, .highlight .ni,
+	.highlight .nl, .highlight .nx, .highlight .py { color:#d0d0d0 !important; }
+	.highlight .k, .highlight .n, .highlight .go { color:#ccc !important; }
+	.highlight .cp, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se,
+	.highlight .sh, .highlight .si, .highlight .s1, .highlight .ss { color:#D2691E !important; }
+	.highlight .gd, .highlight .gr, .highlight .gt { color:#d22323 !important; }
+	.highlight .gh { color:#666 !important; }
+	.highlight .gu { color:#f81 !important; font-weight: normal !important }
+	.highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .nt,
+	.highlight .ow { color:#6ab825 !important; }
+	.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .sr,
+	.highlight .il { color:#cd2828 !important; }
+	.highlight .na, .highlight .ne { color:#bbb !important; }
+	.highlight .nb, .highlight .bp { color:#24909d !important; }
+	.highlight .nc, .highlight .nn { color:#447fcf !important; }
+	.highlight .no, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color:#4ca !important; }
+	.highlight .nd, .highlight .sx { color:orange !important; }
+}
