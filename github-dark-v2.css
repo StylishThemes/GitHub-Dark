@@ -17,7 +17,6 @@
 	}
 
 	* {
-		border-color: #444 !important;
 		text-shadow: none !important;
 		box-shadow: none !important;
 	}
@@ -40,9 +39,13 @@
 	/*** Base link/panel colors - text ***/
 	a:not([class*="linked-labelstyle"]), a span:after /* overall link styling */
 	, .header a:hover, .header a:hover span:before, .header button:hover span:before /* top navigation bar - links & octicons (all pages) */
+	, .org-module-link:hover, .org-module-link:hover span /* organizational header link @ https://github.com/StylishThemes */
 	, .mega-octicon:hover /* footer octicon */
 	, .new-file-link span /* add new file (plus sign) @ https://github.com/StylishThemes/GitHub-Dark */
 	, .numbers-summary li:hover * /* summary @ https://github.com/StylishThemes/GitHub-Dark */
+	, .zeroclipboard-link /* copy SHA to clipboard link @ https://github.com/StylishThemes/GitHub-Dark */
+	, .team:hover .team-name /* organizational links @ https://github.com/StylishThemes */
+	, .button-link:hover, .box-action:hover, .box-action:active /* mute/mark as read @ https://github.com/notifications */
 	{
 		color: /*[[base-color]]*/ #b50 !important;
 	}
@@ -53,12 +56,12 @@
 	}
 
 	/* Base color panel */
-	.button:hover, .button:active, option:hover /* overall button & option styling */
-	, .minibutton:not(.disabled):hover, .minibutton:active, .minibutton:hover code /* mini buttons */
+	.button:not(:disabled):hover, .button:active, option:hover /* overall button & option styling */
+	, .minibutton:not(:disabled):hover, .minibutton:active, .minibutton:hover code /* mini buttons */
 	, .pagination a:hover /* load "More" button @ https://github.com/ */
 	, .navigation-focus, .select-menu-item:hover, .select-menu-item.selected /* select dropdown @ https://github.com/ */
 	, .filter-item.selected, .filter-item:hover /* left sidebar repo list @ https://github.com/dashboard/pulls */
-	, input[type=submit]:hover /* */
+	, .minibutton.zeroclipboard-is-hover /* copy to clipboard button */
 	{
 		background: /*[[base-color]]*/ #b50 !important;
 	}
@@ -180,16 +183,19 @@
 
 	/* previously orange border bottom */
 	.pagehead-nav-item.selected /* area under top nav (news feed/pull requests/issues) @ https://github.com/ */
+	, .repo-filter.filter-selected /* selected repos @ https://github.com/ */
 	{
 		border-bottom: #eee 1px solid !important;
 	}
 
 	.sunken-menu a:not(.selected):focus, .sunken-menu a:not(.selected):hover /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	, .menu a.selected /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	{
 		border-left: #eee 1px solid !important;
 	}
 
 	.sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	, .menu a /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	{
 		border-left: 0 !important;
 	}
@@ -206,17 +212,18 @@
 		border-color: #777 !important;
 	}
 
-	pre, table, hr, img, ul, li
-	{
-		border-color: #555 !important;
-	}
-
-	table th
+	pre, header, form, table, table th, table td, hr, img, button, ul, div, span, p, article
 	{
 		border-color: #444 !important;
 	}
 
-	a, h1, h2, h3, table tr, table td, blockquote, ul, li, img
+	.timeline-comment:before, .timeline-comment:after /* comment arrow pointing to gravatar @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		border-right-color: #444 !important;
+	}
+
+	a, h1, h2, h3, table tr, table td, blockquote, img, ul
+	, li:not(.totals):not(.uniques) /* traffic tooltips @ https://github.com/StylishThemes/GitHub-Dark/graphs/traffic */
 	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		border-color: #333 !important;
@@ -251,8 +258,15 @@
 		border-left-color: #ddd !important;
 	}
 
+	/* === #000 === */
+	.facebox-overlay-active /* facebox dialog overlay (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		background-color: #000 !important;
+	}
+
 	/* === #111 === */
-	pre, code, tt, dt
+	pre, code, tt
+	, .capped-list th /* Referring sites/popular content headers @ https://github.com/StylishThemes/GitHub-Dark/graphs/traffic */
 	{
 		background: #111 none !important;
 		border-color: #333 !important;
@@ -262,6 +276,8 @@
 	.box-body /* repo lists @ https://github.com/ */
 	, .tabnav-tab.selected /* contributions/Repositories/Public activity tabs @ https://github.com/:user */
 	, .comment-body, .timeline-comment /* https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .svg-tip /* traffic tooltip @ https://github.com/StylishThemes/GitHub-Dark/graphs/traffic */
+	, .org-add-footer /* content box footer @ https://github.com/StylishThemes */
 	{
 		background: #1b1b1b !important;
 	}
@@ -272,6 +288,10 @@
 	, .list-group-item /* https://github.com/dashboard/pulls */
 	, .pagehead-actions a:not(.minibutton) /* watch/star/fork counts */
 	, .chromed-list-browser div /* milestones @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	, #contributors-master svg|svg.viz, svg|svg.spark, svg|svg.capped-card-content /* contribution graphs @ https://github.com/StylishThemes/GitHub-Dark/graphs/contributors */
+	, .capped-box /* traffic/referring/popular containers @ https://github.com/StylishThemes/GitHub-Dark/graphs/traffic */
+	, .simple-box /* organizational box @ https://github.com/StylishThemes */
+	, .facebox-content /* facebox popup dialog (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
 	{
 		background: #181818 !important;
 	}
@@ -286,6 +306,8 @@
 	svg
 	, .overall-summary /* summary commits/branches/releases/contributors @ https://github.com/StylishThemes/GitHub-Dark */
 	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	, .menu a /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
+	, .select-menu-tabs a.selected /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: #222 !important;
 	}
@@ -299,6 +321,7 @@
 	/*** semi-transparent #222 ***/
 	/* let some background image show through */
 	.pagehead /* area under top nav (news feed/pull requests/issues) @ https://github.com/ */
+	, .org-header /* organizational background @ https://github.com/StylishThemes */
 	, div.sunken-menu-contents /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: rgba(34,34,34,0.4) !important;
@@ -317,15 +340,18 @@
 
 	/* Navigation focus */
 	.list-group-item.navigation-focus, .list-browser-item.navigation-focus /* https://github.com/dashboard/pulls */
+	, .select-menu-tabs, .select-menu-text-filter /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: #282828 !important;
 	}
 
 	/* === #333 === */
 	/* Panel background (#333), no image */
-	.filter-bar /* Your repos filter @ https://github.com/ */
+	.box .filter-bar /* Your repos filter @ https://github.com/ */
 	, .branch-name /* branch label @ https://github.com/dashboard/pulls */
 	, .none p /* with issues content @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
+	, .summary-stats a:hover /* overview @ https://github.com/StylishThemes/GitHub-Dark/pulse */
+	, .menu a:hover /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	{
 		background: #333 !important;
 	}
@@ -383,10 +409,6 @@
 	svg|line, svg|rect, svg|path
 	{
 		shape-rendering: geometricPrecision !important;
-	}
-	#contributors-master svg|svg.viz
-	{
-		border: 1px solid #555 !important;
 	}
 	.js-graph-punchcard svg|svg.viz
 	{
@@ -512,10 +534,13 @@
 	, .box-header /* Repos you contribute to header */
 	, .pull-info /* commit with x additions and x deletion in feed @ https://github.com/ */
 	, .select-menu-header /* select dropdown (click on your name @ https://github.com/ */
-	, .commit /**/
+	, .facebox-header /* facebox popup dialog (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
 	, .markdown span.name /* readme title @ https://github.com/StylishThemes/GitHub-Dark */
 	, div.list-browser-filterbar, .filter-tab /* milestones header @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
 	, .timeline-comment-header /* comment header @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .capped-card h3, .capped-box h3 /* contribution header @ https://github.com/StylishThemes/GitHub-Dark/graphs/contributors */
+	, .boxed-group h3 /* content headers @ https://github.com/StylishThemes/GitHub-Dark/settings */
+	, .org-module-title /* Organization content headers @ https://github.com/StylishThemes */
 	{
 		background: linear-gradient(to bottom, #282828, #181818) !important;
 	}
@@ -525,6 +550,7 @@
 	, .asc .sort-type, .desc .sort-type /* sort due date/completeness @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
 	, .filter-tab.selected /* milestones header @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
 	, .progress-bar /* progress bar background @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
+	, .simple-stacked-bar /* overview progress bar @ https://github.com/Mottie/tablesorter/pulse */
 	{
 		background: linear-gradient(to bottom, #181818, #282828) !important;
 	}
@@ -539,11 +565,15 @@
 	/* Bright text */
 	h1, h2, strong, label, h2 span
 	, a.button, span.button, button.button, a.minibutton, span.minibutton, button.minibutton, .button.primary, .minibutton.primary
+	, button:hover span.octicon-remove-close /* close facebox dialog (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
 	, .pagination a:hover /* load "More" button @ https://github.com/ */
 	, .select-menu-header span, .navigation-focus, .select-menu-item:hover, .select-menu-item.selected /* select dropdown @ https://github.com/ */
 	, .columns .filter-item.selected, .columns .filter-item:hover /* left sidebar repo list @ https://github.com/dashboard/pulls */
 	, .num /* contributions @ https://github.com/:user & summary @ https://github.com/StylishThemes/GitHub-Dark */
 	, .sunken-menu-item.selected .octicon, .sunken-menu-group li:hover .octicon /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
+	, .button.danger:hover, .minibutton.danger:hover /* danger button @ https://github.com/StylishThemes/GitHub-Dark/settings */
+	, .select-menu-item a /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
+	, .org-module-link /* organizational header link @ https://github.com/StylishThemes */
 	{
 		color: #eee !important;
 	}
@@ -576,7 +606,9 @@
 	}
 
 	/* darkest text; Context pane highlight item */
-	.zzz
+	.button:disabled, .minibutton:disabled
+	, .pagination .disabled /* pagination disable arrow @ https://github.com/dashboard/issues/repos */
+	, .blob-line-nums /* code line numbers @ https://github.com/StylishThemes/GitHub-Dark/blob/master/github-dark.css */
 	{
 		color: #444 !important;
 	}
@@ -612,13 +644,14 @@
 
 	/* === red === */
 	/* Red panel */
-	.zzz
+	.state-closed /* closed label @ https://github.com/Mottie/tablesorter/pulse */
 	{
 		background: #c31e16 !important;
 		border-color: #333 !important;
 	}
 
-	.zzz:hover
+	.btn-close-issue:hover, button.classy[name="comment_and_close"]:hover, .button.danger:hover
+	, .minibutton.danger:hover, .minibutton.danger:hover span /* danger buttons @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	{
 		background: #a31e16 !important;
 		border: #b00 1px solid !important;
@@ -647,7 +680,7 @@
 	}
 
 	/* bright red text */
-	.zzz
+	.button.danger, .minibutton.danger /* danger button @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	{
 		color: #c31e16 !important;
 	}
@@ -693,6 +726,7 @@
 	/* === Green panel === */
 	/* labels */
 	.state-open, .state-proposed, .state-reopened /* contribution activity @ https://github.com/:user */
+	, .bar-section-positive /* overview progress bar @ https://github.com/Mottie/tablesorter/pulse */
 	{
 		background: #305530 !important;
 		border-color: #062 !important;
@@ -817,6 +851,12 @@
 		z-index: 0 !important;
 	}
 
+	.participation-graph canvas {
+		background: transparent !important;
+		opacity: 0.1 !important;
+		z-index: 0 !important;
+	}
+
 	#network canvas {
 		background: #fff !important;
 		opacity: .85 !important;
@@ -838,6 +878,7 @@
 
 	/* add border */
 	.progress-bar /* progress bar background @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
+	, .zeroclipboard-button /* copy to clipboard button */
 	{
 		border: 1px solid #555 !important;
 	}
@@ -897,6 +938,7 @@
 	/* diff highlighting (no syntax highlight) */
 	/* main diff text color */
 	.diff-line-pre
+	, .repolist .description /* https://github.com/Mottie?tab=repositories */
 	{
 		color: #ccc !important;
 	}
