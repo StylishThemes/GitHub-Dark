@@ -23,9 +23,14 @@
 
 	/* === transparent background only === */
 	body > pre, #footer, table tr, img, div, table, article
-	, span:not(.mail-status):not([class*="color"]) /* all spans except issue label colors & top bar notification indicator & summary language color */
+	, span:not(.mail-status):not([class*="color"]):not(.octicon) /* all spans except issue label colors & top bar notification indicator & summary language color */
 	, .color-label span.name /* label @ https://github.com/StylishThemes/GitHub-Dark/issues */
 	, .drag-and-drop /* comment block (attach images by dragging & dropping) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .discussion-sidebar-toggle /* label/milestone/assignee button @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, table.timeline-commits /* commit details line under timeline reference @ https://github.com/StylishThemes/GitHub-Dark/issues/129 */
+	, .octicon-git-commit /* commit details octicon under timeline reference @ https://github.com/StylishThemes/GitHub-Dark/issues/129 */
+	, .commit-message code /* commit details octicon under timeline reference @ https://github.com/StylishThemes/GitHub-Dark/issues/129 */
+	, .highlight .file-diff-line:hover pre /* hover code lines @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
 	{
 		background: transparent !important;
 	}
@@ -46,6 +51,9 @@
 	, .zeroclipboard-link /* copy SHA to clipboard link @ https://github.com/StylishThemes/GitHub-Dark */
 	, .team:hover .team-name /* organizational links @ https://github.com/StylishThemes */
 	, .button-link:hover, .box-action:hover, .box-action:active /* mute/mark as read @ https://github.com/notifications */
+	, .discussion-sidebar-toggle:hover, .discussion-sidebar-toggle:hover .octicon /* label/milestone/assignee button @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .gh-header-back:hover span:before /* issue title back arrow @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .add-line-comment /* hover code line popup icon @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
 	{
 		color: /*[[base-color]]*/ #b50 !important;
 	}
@@ -213,13 +221,9 @@
 	}
 
 	pre, header, form, table, table th, table td, hr, img, button, ul, div, span, p, article
+	, .commit-group /* commit box @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
 	{
 		border-color: #444 !important;
-	}
-
-	.timeline-comment:before, .timeline-comment:after /* comment arrow pointing to gravatar @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
-	{
-		border-right-color: #444 !important;
 	}
 
 	a, h1, h2, h3, table tr, table td, blockquote, img, ul
@@ -227,6 +231,11 @@
 	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		border-color: #333 !important;
+	}
+
+	.timeline-comment:before, .timeline-comment:after /* comment arrow pointing to gravatar @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		border-right-color: #333 !important;
 	}
 
 	.sunken-menu-separator /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
@@ -249,6 +258,13 @@
 		margin-top: 2px !important;
 		background: #444 !important;
 		height: calc(100% - 260px) !important;
+	}
+
+	.closed-banner /* horizontal line @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	{
+		border-top: 2px solid #444 !important;
+		border-bottom-color: transparent !important;
+		height: 2px !important;
 	}
 
 	/* code */
@@ -291,7 +307,9 @@
 	, #contributors-master svg|svg.viz, svg|svg.spark, svg|svg.capped-card-content /* contribution graphs @ https://github.com/StylishThemes/GitHub-Dark/graphs/contributors */
 	, .capped-box /* traffic/referring/popular containers @ https://github.com/StylishThemes/GitHub-Dark/graphs/traffic */
 	, .simple-box /* organizational box @ https://github.com/StylishThemes */
+	, .commit-group .commit /* commit boxes @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
 	, .facebox-content /* facebox popup dialog (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .commandbar .choice:hover /* topbar search results dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: #181818 !important;
 	}
@@ -308,6 +326,8 @@
 	, .sunken-menu-item.selected /* right side menu @ https://github.com/StylishThemes/GitHub-Dark */
 	, .menu a /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	, .select-menu-tabs a.selected /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
+	, .hidden-text-expander a /* expand commit @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
+	, .commandbar .display /* topbar search results dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: #222 !important;
 	}
@@ -341,6 +361,9 @@
 	/* Navigation focus */
 	.list-group-item.navigation-focus, .list-browser-item.navigation-focus /* https://github.com/dashboard/pulls */
 	, .select-menu-tabs, .select-menu-text-filter /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
+	, .commit-group-item.navigation-focus /* hover commit box @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
+	, .octicon-bookmark /* bookmark octicon in timeline @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .display .choice:nth-child(2n+1) /* topbar search results dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		background: #282828 !important;
 	}
@@ -352,6 +375,7 @@
 	, .none p /* with issues content @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
 	, .summary-stats a:hover /* overview @ https://github.com/StylishThemes/GitHub-Dark/pulse */
 	, .menu a:hover /* left panel @ https://github.com/StylishThemes/GitHub-Dark/settings */
+	, .hidden-text-expander a:hover /* expand commit @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
 	{
 		background: #333 !important;
 	}
@@ -504,6 +528,7 @@
 	, .flash
 	, .bootcamp h1
 	, .bootcamp-body
+	, .browse-button /* browse code button @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
 	{
 		background: linear-gradient(to bottom, #182030, #183040) !important;
 	}
@@ -529,20 +554,27 @@
 
 	/* dark grey gradient */
 	kbd, .minibutton, a.feed, .button:not(img), button
-	, div.header /* page header */
+	, div.header, .notification-indicator /* page header */
 	, .pagination > * /* load "More" button @ https://github.com/ */
 	, .box-header /* Repos you contribute to header */
 	, .pull-info /* commit with x additions and x deletion in feed @ https://github.com/ */
 	, .select-menu-header /* select dropdown (click on your name @ https://github.com/ */
 	, .facebox-header /* facebox popup dialog (click on lock issue) @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
+	, .commit-group-heading /* commit box header @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
 	, .markdown span.name /* readme title @ https://github.com/StylishThemes/GitHub-Dark */
 	, div.list-browser-filterbar, .filter-tab /* milestones header @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones */
 	, .timeline-comment-header /* comment header @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
 	, .capped-card h3, .capped-box h3 /* contribution header @ https://github.com/StylishThemes/GitHub-Dark/graphs/contributors */
 	, .boxed-group h3 /* content headers @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	, .org-module-title /* Organization content headers @ https://github.com/StylishThemes */
+	, .gobutton /* link to commit @ https://github.com/StylishThemes/GitHub-Dark/commits/master */
+	, .highlight .file-diff-line:hover td /* hover code lines @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
 	{
 		background: linear-gradient(to bottom, #282828, #181818) !important;
+	}
+
+	.container .navigation-focus .gobutton {
+		background: linear-gradient(#444, #222) !important;
 	}
 
 	/* inverted dark grey gradient */
@@ -574,22 +606,26 @@
 	, .button.danger:hover, .minibutton.danger:hover /* danger button @ https://github.com/StylishThemes/GitHub-Dark/settings */
 	, .select-menu-item a /* select branch/tag dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	, .org-module-link /* organizational header link @ https://github.com/StylishThemes */
+	, .choice .command /* topbar search results dropdown @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		color: #eee !important;
 	}
 
 	pre, body, h3, h4
 	, .header a, .header span:before /* top navigation bar - links & octicons (all pages) */
+	, .select-menu-item:hover .select-menu-item-icon:before /* check mark hidden until hovered (top search select) @ https://github.com/StylishThemes/GitHub-Dark */
 	, .message span /* commit message in feed @ https://github.com/ */
 	, .lang /* overall summary language colors @ https://github.com/StylishThemes/GitHub-Dark */
 	, .markdown span.name /* readme title @ https://github.com/StylishThemes/GitHub-Dark */
 	, .pagehead-actions a /* watch/star/fork counts */
+	, .full-commit p.commit-title /* commit title @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
 	{
 		color: #ccc !important;
 	}
 
 	h5, h6, table th, em, blockquote
 	, table.files .octicon /* folder icons @ https://github.com/StylishThemes/GitHub-Dark */
+	, .gh-header-back span:before /* issue title back arrow @ https://github.com/StylishThemes/GitHub-Dark/issues/### */
 	{
 		color: #aaa !important;
 	}
@@ -609,6 +645,8 @@
 	.button:disabled, .minibutton:disabled
 	, .pagination .disabled /* pagination disable arrow @ https://github.com/dashboard/issues/repos */
 	, .blob-line-nums /* code line numbers @ https://github.com/StylishThemes/GitHub-Dark/blob/master/github-dark.css */
+	, .line-num-content /* code line numbers @ https://github.com/StylishThemes/GitHub-Dark/commit/master */
+	, .select-menu-item.selected .select-menu-item-icon:before /* check mark of selected type (top search select) @ https://github.com/StylishThemes/GitHub-Dark */
 	{
 		color: #444 !important;
 	}
@@ -618,9 +656,15 @@
 		color: #333 !important;
 	}
 
-	.zzz
+	.primary:disabled /* (green) commit comments initially disabled */
 	{
 		color: #222 !important;
+	}
+
+	/* transparent text color */
+	.select-menu-item .select-menu-item-icon:before /* check mark hidden until hovered (top search select) @ https://github.com/StylishThemes/GitHub-Dark */
+	{
+		color: transparent !important;
 	}
 
 	/* placeholder */
@@ -750,7 +794,7 @@
 	}
 
 	/* interactive button - bright border */
-	button.primary, a.primary /* new repo, accept buttons */
+	button.primary, a.primary, .primary:disabled /* new repo, accept buttons, commit comments */
 	, .progress-bar .progress /* progress bar @ https://github.com/StylishThemes/GitHub-Dark/issues/milestones?with_issues=no */
 	{
 		background: linear-gradient(to bottom, #407045, #305530) !important;
@@ -765,7 +809,7 @@
 	}
 
 	/* Green hovered */
-	.primary:not(:disabled):hover /* new repo, accept buttons */
+	.primary:not(:disabled):hover /* new repo, accept buttons, commit comments */
 	{
 		background: #373 !important;
 	}
