@@ -41,6 +41,23 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.20 (6/13/2014)
+
+* Use bright text:
+  * Dropdown warning
+  * Alerts
+  * Page notice
+* Discussions
+  * Fix lock link color
+  * Fix reply box link hover colors
+  * Improve emoji suggestion list
+* Improve table in repo finder, fix keyboard shortcut color
+* Demo
+  * load jQuery using a protocol-relative url. Fixes [issue #146](https://github.com/StylishThemes/GitHub-Dark/issues/146).
+  * Fix body &amp; code font to match GitHub
+* Explore page: Fix stats colors
+* GitHub-Dark v2 alpha experiment added
+
 #### Version 1.8.19 (6/5/2014)
 
 * Tooltip: use bright text
@@ -54,10 +71,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Fix file name box
 * Search: Brigther language stat bars
 * Network graph: Fix background
-
-#### Version 1.8.17 (5/26/2014)
-
-* Ace editor: Fix text color &amp; styled the selection background
-* Use page: remove useless border on contribution stats
-* Badges: fix contrasty number of repos badge
-* Info tip: use bright text color
