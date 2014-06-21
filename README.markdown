@@ -41,6 +41,33 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.21 (6/21/2014)
+
+* Overall
+  * Remove background &amp; border styling from dropdown arrow. Fixes [issue #148](https://github.com/StylishThemes/GitHub-Dark/issues/148)
+  * Index boxes: Remove slight inner shadow
+* Readme: update raw url.
+* Main page: Fix rss link color
+* Wiki: Style 'Add footer' button
+* Branches page:
+  * Lots of fixes for new design. Fixes [issue #149](https://github.com/StylishThemes/GitHub-Dark/issues/149)
+  * Fix loading overlay
+* Organization page: Various fixes to backgrounds &amp; borders
+* Team: Various fixes
+* Markdown/Discussions: Remove red color/background on strikethrough text
+* Markdown: Brighten hover link color
+* Discussions: Fix active tab border color
+* Repo page: Fix selected item menu border
+* Guides:
+  * Various fixes all around
+  * Added flow diagram styling. Fixes part of [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
+* Gist
+  * Fix new sidebar coloring
+  * Fix gist type label border
+  * Revision view: fix top line of code styling
+  * Revision view: restore negative left margin in code
+* GitHub-Dark v2 miscellaneous updates
+
 #### Version 1.8.20 (6/13/2014)
 
 * Use bright text:
@@ -62,12 +89,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Tooltip: use bright text
 * PSD view: darken background of iframe
-
-#### Version 1.8.18 (6/1/2014)
-
-* Frontpage:
-  * Fix selected tab
-  * Fix tab colors
-* Gist: Fix file name box
-* Search: Brigther language stat bars
-* Network graph: Fix background
