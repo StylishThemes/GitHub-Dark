@@ -41,6 +41,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.22 (6/27/2014)
+
+* Guides:
+  * Flow diagram missing style, small icons still flash. See [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
+  * Invert poll iframes. Fixes [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
+* Discussions: style new PR revert buttons
+* Branches: update to recent class swap by GitHub
+* Settings: webhook failure icon & GUID block styling
+* Gist: Temporary fix added &amp; removed to fix code line spacing
+
 #### Version 1.8.21 (6/21/2014)
 
 * Overall
@@ -84,8 +94,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix body &amp; code font to match GitHub
 * Explore page: Fix stats colors
 * GitHub-Dark v2 alpha experiment added
-
-#### Version 1.8.19 (6/5/2014)
-
-* Tooltip: use bright text
-* PSD view: darken background of iframe
