@@ -686,7 +686,8 @@
     background: transparent !important;
     border: none !important;
   }
-  svg|text, svg|circle.day {
+  /* Firefox: Exclude text inside an svg loaded through an img, as seen in svg badges */
+  *:not(img) svg|text, svg|circle.day {
     fill: #ccc !important;
   }
   svg|circle.day:hover {
