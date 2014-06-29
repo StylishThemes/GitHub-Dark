@@ -79,6 +79,8 @@
 	a:hover { text-decoration: underline; }
 	.wrapper { width: 280px; height: 400px; padding: 0 0 20px 20px; vertical-align: top; display: inline-block; }
 	.highlight { border: #555 1px solid; text-align: left; height: 350px; overflow-y: auto; font-size: 10px; }
+	.highlight table { width: 100%; }
+	.highlight table.file-code, .highlight table.file-code td { line-height: 0; border-collapse: collapse; }
 	pre { padding: 0 5px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 	.popup { display: none; }
 	.popup:checked ~ .highlight {
@@ -92,10 +94,102 @@
 		padding: 20px 40px;
 		font-size: 14px;
 	}
+
+	/*====================================================
+	 CODE COPIED FROM GITHUB-DARK.CSS for diff rendering
+	======================================================*/
+	.gist .highlight tr span.gu {
+		color:#a1882b !important;
+	}
+	/* diff highlighting (no syntax highlight) */
+	/* main diff text color */
+	.diff-line-pre {
+		color: #ccc !important;
+	}
+	.highlight .gc td {
+		border-top: 1px solid #333 !important;
+		border-bottom: 1px solid #333 !important;
+	}
+	#header-wrapper, .menu li + li {
+		border-bottom: 1px solid #333 !important;
+	}
+	.js-release-form .drag-and-drop {
+		border-top: none !important;
+	}
+	/* light grey - breaks in diff (with line numbers) */
+	.highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh {
+		background: #222 !important;
+		color: #888 !important;
+	}
+	/* git diff line additions (dark green) */
+	.highlight tr.gi, .highlight tr .gi, .highlight tr .gi pre, .gi .diff-line-code, .gi .diff-line-code pre,
+	.markdown-body ins, .markdown-body ins > *, .markdown-body .added {
+		background: #030 !important;
+		border-color: #080 !important;
+	}
+	/* git diff line deletions (dark red) */
+	.highlight tr.gd, .highlight tr .gd, .gd .diff-line-code, .gd .diff-line-code pre,
+	.markdown-body .removed {
+		background: #400 !important;
+		border-color: #800 !important;
+	}
+	/* moved diff - yellow */
+	.markdown-body li.added.moved {
+		background: #440 !important;
+		border-color: #880 !important;
+	}
+	/* git diff inline additions (green) */
+	.highlight tr.gi, .highlight tr .gi {
+		color:#589819 !important;
+	}
+	.highlight tr.gi .x, .highlight tr .gi .x {
+		background: #252 !important;
+		color: #eee !important;
+	}
+	/* git diff inline deletions (red) */
+	.highlight tr.gd, .highlight tr .gd {
+		color: #d22323 !important;
+	}
+	.highlight tr.gd .x, .highlight tr .gd .x {
+		background: #622 !important;
+		color: #eee !important;
+	}
+	/* git diff line numbers (med green) */
+	.gi .diff-line-num {
+		background: #020 !important;
+		border-color: #040 !important;
+	}
+	/* git diff line deletions (med red) */
+	.gd .diff-line-num {
+		background: #300 !important;
+		border-color: #500 !important;
+	}
+
+	/* Gist styles from github-dark.css; slightly tweaked to match GitHub */
+	.highlight .file-diff-line:hover td {
+		background: linear-gradient(to bottom, #282828, #181818) !important;
+		border-color: #333 !important;
+	}
+	.gist pre {
+		white-space: nowrap;
+	}
+	.gist .line-number, .gist .line, .gist pre {
+		padding: 0 !important;
+		margin: 0 !important;
+		line-height: 1.2em !important;
+	}
+	.gist td {
+		vertical-align: top;
+		text-indent: 12px !important;
+	}
+	.gist span.line-number, .highlight span.gh, .highlight span.gu, .highlight span.gi, .highlight span.gd {
+		display: block !important;
+		padding: 0 !important;
+	}
 	</style>
 
 	<!-- jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 	<script>
 	$(function(){
@@ -147,6 +241,650 @@
 	<h1><a href="http://userstyles.org/styles/37035">GitHub Dark for Stylish</a></h1>
 	<h2>Syntax Highlighting themes</h2>
 	<h3>Select a syntax highlighting theme: <select></select></h3>
+
+	<label class="wrapper type-diff file-data">
+		<input type="checkbox" class="popup">
+		<h3>Commit Diff</h3>
+		<div class="data highlight ">
+			<table class="file-code file-diff  tab-size-8">
+				<tbody>
+					<tr class="file-diff-line gc" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1R599" data-position="0">
+						<td class="diff-line-num expandable-line-num" colspan="2" data-line-number="599">
+							<span class="diff-expander js-expand" title="Expand" aria-label="Expand" data-remote="/StylishThemes/GitHub-Dark/blob_excerpt/50f83d6a2aead36096105543b2feab48a43d2899/github-dark.css">
+								<span class="octicon octicon-unfold"></span>
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<pre class="diff-line-pre">@@ -600,7 +600,7 @@</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P1" data-path="github-dark.css" data-position="1" data-line="600" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=1&amp;line=600">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L600" data-line-number="600" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								600
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R600" data-line-number="600" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								600
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   /* Panel background (#333), no image, with border */</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P2" data-path="github-dark.css" data-position="2" data-line="601" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=2&amp;line=601">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L601" data-line-number="601" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								601
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R601" data-line-number="601" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								601
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   #files .file .data .line_numbers, .editbox, .editbox .body, .commentstyle, #issues .display, .inline-comment-form,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P3" data-path="github-dark.css" data-position="3" data-line="602" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=3&amp;line=602">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L602" data-line-number="602" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								602
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R602" data-line-number="602" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								602
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   #issues .display .admin, #issues .labels .list li, .issue .summary, .plain, .hidden-text-expander a, .view-modes,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gd" id="github-dark-css-P4" data-path="github-dark.css" data-position="4" data-line="603" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=4&amp;line=603">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L603" data-line-number="603" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								603
+							</span>
+						</td>
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">-  <span class="x">#ng canvas, </span>.standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gi" id="github-dark-css-P5" data-path="github-dark.css" data-position="5" data-line="603" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=5&amp;line=603">
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R603" data-line-number="603" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								603
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">+  <span class="x"></span>.standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P6" data-path="github-dark.css" data-position="6" data-line="604" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=6&amp;line=604">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L604" data-line-number="604" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								604
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R604" data-line-number="604" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								604
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   .context-pane .title, .browser .listing:hover, #dashboard .repos, .date_selector .button, .selectable_day,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P7" data-path="github-dark.css" data-position="7" data-line="605" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=7&amp;line=605">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L605" data-line-number="605" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								605
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R605" data-line-number="605" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								605
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   .file-box .icon, .list-module .list-body, .list-module a, .label-permissions, .tree-browser th,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P8" data-path="github-dark.css" data-position="8" data-line="606" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=8&amp;line=606">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L606" data-line-number="606" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								606
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R606" data-line-number="606" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								606
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   .filter-bar, .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop, .full-width-divider,</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line gc" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1R1138" data-position="9">
+						<td class="diff-line-num expandable-line-num" colspan="2" data-line-number="1138">
+							<span class="diff-expander js-expand" title="Expand" aria-label="Expand" data-remote="/StylishThemes/GitHub-Dark/blob_excerpt/50f83d6a2aead36096105543b2feab48a43d2899/github-dark.css">
+								<span class="octicon octicon-unfold"></span>
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<pre class="diff-line-pre">@@ -1139,9 +1139,9 @@</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P10" data-path="github-dark.css" data-position="10" data-line="1139" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=10&amp;line=1139">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1139" data-line-number="1139" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1139
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1139" data-line-number="1139" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1139
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     opacity: 0.1 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P11" data-path="github-dark.css" data-position="11" data-line="1140" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=11&amp;line=1140">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1140" data-line-number="1140" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1140
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1140" data-line-number="1140" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1140
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     z-index: 0 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P12" data-path="github-dark.css" data-position="12" data-line="1141" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=12&amp;line=1141">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1141" data-line-number="1141" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1141
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1141" data-line-number="1141" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1141
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   }</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gd" id="github-dark-css-P13" data-path="github-dark.css" data-position="13" data-line="1142" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=13&amp;line=1142">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1142" data-line-number="1142" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1142
+							</span>
+						</td>
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">-  #n<span class="x">g</span> canvas {</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gi" id="github-dark-css-P14" data-path="github-dark.css" data-position="14" data-line="1142" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=14&amp;line=1142">
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1142" data-line-number="1142" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1142
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">+  #n<span class="x">etwork</span> canvas {</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P15" data-path="github-dark.css" data-position="15" data-line="1143" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=15&amp;line=1143">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1143" data-line-number="1143" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1143
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1143" data-line-number="1143" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1143
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     background: #fff !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gd" id="github-dark-css-P16" data-path="github-dark.css" data-position="16" data-line="1144" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=16&amp;line=1144">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1144" data-line-number="1144" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1144
+							</span>
+						</td>
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">-    opacity: .<span class="x">7</span>5 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gi" id="github-dark-css-P17" data-path="github-dark.css" data-position="17" data-line="1144" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=17&amp;line=1144">
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1144" data-line-number="1144" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1144
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">+    opacity: .<span class="x">8</span>5 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P18" data-path="github-dark.css" data-position="18" data-line="1145" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=18&amp;line=1145">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1145" data-line-number="1145" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1145
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1145" data-line-number="1145" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1145
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   }</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P19" data-path="github-dark.css" data-position="19" data-line="1146" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=19&amp;line=1146">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1146" data-line-number="1146" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1146
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1146" data-line-number="1146" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1146
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   .inbox-zero-octocat {</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P20" data-path="github-dark.css" data-position="20" data-line="1147" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=20&amp;line=1147">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1147" data-line-number="1147" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1147
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1147" data-line-number="1147" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1147
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     opacity: .6 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line gc" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1R1353" data-position="21">
+						<td class="diff-line-num expandable-line-num" colspan="2" data-line-number="1353">
+							<span class="diff-expander js-expand" title="Expand" aria-label="Expand" data-remote="/StylishThemes/GitHub-Dark/blob_excerpt/50f83d6a2aead36096105543b2feab48a43d2899/github-dark.css">
+								<span class="octicon octicon-unfold"></span>
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<pre class="diff-line-pre">@@ -1354,7 +1354,7 @@</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P22" data-path="github-dark.css" data-position="22" data-line="1354" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=22&amp;line=1354">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1354" data-line-number="1354" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1354
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1354" data-line-number="1354" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1354
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">    *      '------'---.___ -  _ =   _.-'</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P23" data-path="github-dark.css" data-position="23" data-line="1355" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=23&amp;line=1355">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1355" data-line-number="1355" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1355
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1355" data-line-number="1355" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1355
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">    *                     `--------'</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P24" data-path="github-dark.css" data-position="24" data-line="1356" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=24&amp;line=1356">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1356" data-line-number="1356" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1356
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1356" data-line-number="1356" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1356
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">    */</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gd" id="github-dark-css-P25" data-path="github-dark.css" data-position="25" data-line="1357" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=25&amp;line=1357">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1357" data-line-number="1357" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1357
+							</span>
+						</td>
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">-  .enterprise #network <span class="x">#ng </span>canvas {</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line gi" id="github-dark-css-P26" data-path="github-dark.css" data-position="26" data-line="1357" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=26&amp;line=1357">
+						<td class="diff-line-num  empty-cell">
+							<span class="line-num-content">
+								&nbsp;
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1357" data-line-number="1357" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1357
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">+  .enterprise #network <span class="x"></span>canvas {</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P27" data-path="github-dark.css" data-position="27" data-line="1358" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=27&amp;line=1358">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1358" data-line-number="1358" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1358
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1358" data-line-number="1358" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1358
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     background: none transparent !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P28" data-path="github-dark.css" data-position="28" data-line="1359" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=28&amp;line=1359">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1359" data-line-number="1359" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1359
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1359" data-line-number="1359" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1359
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">     opacity: 1 !important;</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line js-file-line " id="github-dark-css-P29" data-path="github-dark.css" data-position="29" data-line="1360" data-remote="/StylishThemes/GitHub-Dark/commit_comment/form?commit_id=af1f58d5e8e14a1b7babe0b80b147f612b1d31cf&amp;path=github-dark.css&amp;position=29&amp;line=1360">
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1L1360" data-line-number="1360" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1360
+							</span>
+						</td>
+						<td id="diff-64ae9f3acdf5e1c48548adca960457b1R1360" data-line-number="1360" class="diff-line-num  linkable-line-number">
+							<span class="line-num-content">
+								1360
+							</span>
+						</td>
+						<td class="diff-line-code">
+							<b class="add-line-comment octicon octicon-comment-discussion"></b>
+							<pre class="diff-line-pre">   }</pre>
+						</td>
+					</tr>
+					<tr class="file-diff-line gc" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1R1361">
+						<td class="diff-line-num expandable-line-num" colspan="2" data-line-number="1361">
+							<span class="diff-expander js-expand" title="Expand" aria-label="Expand" data-remote="/StylishThemes/GitHub-Dark/blob_excerpt/50f83d6a2aead36096105543b2feab48a43d2899/github-dark.css">
+								<span class="octicon octicon-unfold"></span>
+							</span>
+						</td>
+						<td class="diff-line-code"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</label>
+
+	<label class="wrapper gist">
+		<input type="checkbox" class="popup">
+		<h3>Gist Diff</h3>
+		<div class="data highlight">
+		<table cellpadding="0" cellspacing="0" class="lines">
+			<tbody>
+				<tr>
+					<td class="line-numbers">
+						<span class="line-number" id="file-cloud9-patch-L1" rel="file-cloud9-patch-L1">1</span>
+						<span class="line-number" id="file-cloud9-patch-L2" rel="file-cloud9-patch-L2">2</span>
+						<span class="line-number" id="file-cloud9-patch-L3" rel="file-cloud9-patch-L3">3</span>
+						<span class="line-number" id="file-cloud9-patch-L4" rel="file-cloud9-patch-L4">4</span>
+						<span class="line-number" id="file-cloud9-patch-L5" rel="file-cloud9-patch-L5">5</span>
+						<span class="line-number" id="file-cloud9-patch-L6" rel="file-cloud9-patch-L6">6</span>
+						<span class="line-number" id="file-cloud9-patch-L7" rel="file-cloud9-patch-L7">7</span>
+						<span class="line-number" id="file-cloud9-patch-L8" rel="file-cloud9-patch-L8">8</span>
+						<span class="line-number" id="file-cloud9-patch-L9" rel="file-cloud9-patch-L9">9</span>
+						<span class="line-number" id="file-cloud9-patch-L10" rel="file-cloud9-patch-L10">10</span>
+						<span class="line-number" id="file-cloud9-patch-L11" rel="file-cloud9-patch-L11">11</span>
+						<span class="line-number" id="file-cloud9-patch-L12" rel="file-cloud9-patch-L12">12</span>
+						<span class="line-number" id="file-cloud9-patch-L13" rel="file-cloud9-patch-L13">13</span>
+						<span class="line-number" id="file-cloud9-patch-L14" rel="file-cloud9-patch-L14">14</span>
+						<span class="line-number" id="file-cloud9-patch-L15" rel="file-cloud9-patch-L15">15</span>
+						<span class="line-number" id="file-cloud9-patch-L16" rel="file-cloud9-patch-L16">16</span>
+						<span class="line-number" id="file-cloud9-patch-L17" rel="file-cloud9-patch-L17">17</span>
+						<span class="line-number" id="file-cloud9-patch-L18" rel="file-cloud9-patch-L18">18</span>
+						<span class="line-number" id="file-cloud9-patch-L19" rel="file-cloud9-patch-L19">19</span>
+						<span class="line-number" id="file-cloud9-patch-L20" rel="file-cloud9-patch-L20">20</span>
+						<span class="line-number" id="file-cloud9-patch-L21" rel="file-cloud9-patch-L21">21</span>
+						<span class="line-number" id="file-cloud9-patch-L22" rel="file-cloud9-patch-L22">22</span>
+						<span class="line-number" id="file-cloud9-patch-L23" rel="file-cloud9-patch-L23">23</span>
+						<span class="line-number" id="file-cloud9-patch-L24" rel="file-cloud9-patch-L24">24</span>
+						<span class="line-number" id="file-cloud9-patch-L25" rel="file-cloud9-patch-L25">25</span>
+						<span class="line-number" id="file-cloud9-patch-L26" rel="file-cloud9-patch-L26">26</span>
+						<span class="line-number" id="file-cloud9-patch-L27" rel="file-cloud9-patch-L27">27</span>
+						<span class="line-number" id="file-cloud9-patch-L28" rel="file-cloud9-patch-L28">28</span>
+						<span class="line-number" id="file-cloud9-patch-L29" rel="file-cloud9-patch-L29">29</span>
+						<span class="line-number" id="file-cloud9-patch-L30" rel="file-cloud9-patch-L30">30</span>
+						<span class="line-number" id="file-cloud9-patch-L31" rel="file-cloud9-patch-L31">31</span>
+						<span class="line-number" id="file-cloud9-patch-L32" rel="file-cloud9-patch-L32">32</span>
+						<span class="line-number" id="file-cloud9-patch-L33" rel="file-cloud9-patch-L33">33</span>
+						<span class="line-number" id="file-cloud9-patch-L34" rel="file-cloud9-patch-L34">34</span>
+						<span class="line-number" id="file-cloud9-patch-L35" rel="file-cloud9-patch-L35">35</span>
+						<span class="line-number" id="file-cloud9-patch-L36" rel="file-cloud9-patch-L36">36</span>
+						<span class="line-number" id="file-cloud9-patch-L37" rel="file-cloud9-patch-L37">37</span>
+						<span class="line-number" id="file-cloud9-patch-L38" rel="file-cloud9-patch-L38">38</span>
+						<span class="line-number" id="file-cloud9-patch-L39" rel="file-cloud9-patch-L39">39</span>
+						<span class="line-number" id="file-cloud9-patch-L40" rel="file-cloud9-patch-L40">40</span>
+						<span class="line-number" id="file-cloud9-patch-L41" rel="file-cloud9-patch-L41">41</span>
+						<span class="line-number" id="file-cloud9-patch-L42" rel="file-cloud9-patch-L42">42</span>
+						<span class="line-number" id="file-cloud9-patch-L43" rel="file-cloud9-patch-L43">43</span>
+						<span class="line-number" id="file-cloud9-patch-L44" rel="file-cloud9-patch-L44">44</span>
+						<span class="line-number" id="file-cloud9-patch-L45" rel="file-cloud9-patch-L45">45</span>
+						<span class="line-number" id="file-cloud9-patch-L46" rel="file-cloud9-patch-L46">46</span>
+						<span class="line-number" id="file-cloud9-patch-L47" rel="file-cloud9-patch-L47">47</span>
+						<span class="line-number" id="file-cloud9-patch-L48" rel="file-cloud9-patch-L48">48</span>
+						<span class="line-number" id="file-cloud9-patch-L49" rel="file-cloud9-patch-L49">49</span>
+						<span class="line-number" id="file-cloud9-patch-L50" rel="file-cloud9-patch-L50">50</span>
+						<span class="line-number" id="file-cloud9-patch-L51" rel="file-cloud9-patch-L51">51</span>
+						<span class="line-number" id="file-cloud9-patch-L52" rel="file-cloud9-patch-L52">52</span>
+						<span class="line-number" id="file-cloud9-patch-L53" rel="file-cloud9-patch-L53">53</span>
+						<span class="line-number" id="file-cloud9-patch-L54" rel="file-cloud9-patch-L54">54</span>
+						<span class="line-number" id="file-cloud9-patch-L55" rel="file-cloud9-patch-L55">55</span>
+						<span class="line-number" id="file-cloud9-patch-L56" rel="file-cloud9-patch-L56">56</span>
+						<span class="line-number" id="file-cloud9-patch-L57" rel="file-cloud9-patch-L57">57</span>
+						<span class="line-number" id="file-cloud9-patch-L58" rel="file-cloud9-patch-L58">58</span>
+						<span class="line-number" id="file-cloud9-patch-L59" rel="file-cloud9-patch-L59">59</span>
+						<span class="line-number" id="file-cloud9-patch-L60" rel="file-cloud9-patch-L60">60</span>
+						<span class="line-number" id="file-cloud9-patch-L61" rel="file-cloud9-patch-L61">61</span>
+						<span class="line-number" id="file-cloud9-patch-L62" rel="file-cloud9-patch-L62">62</span>
+						<span class="line-number" id="file-cloud9-patch-L63" rel="file-cloud9-patch-L63">63</span>
+						<span class="line-number" id="file-cloud9-patch-L64" rel="file-cloud9-patch-L64">64</span>
+						<span class="line-number" id="file-cloud9-patch-L65" rel="file-cloud9-patch-L65">65</span>
+						<span class="line-number" id="file-cloud9-patch-L66" rel="file-cloud9-patch-L66">66</span>
+						<span class="line-number" id="file-cloud9-patch-L67" rel="file-cloud9-patch-L67">67</span>
+						<span class="line-number" id="file-cloud9-patch-L68" rel="file-cloud9-patch-L68">68</span>
+						<span class="line-number" id="file-cloud9-patch-L69" rel="file-cloud9-patch-L69">69</span>
+						<span class="line-number" id="file-cloud9-patch-L70" rel="file-cloud9-patch-L70">70</span>
+						<span class="line-number" id="file-cloud9-patch-L71" rel="file-cloud9-patch-L71">71</span>
+						<span class="line-number" id="file-cloud9-patch-L72" rel="file-cloud9-patch-L72">72</span>
+					</td>
+					<td class="line-data">
+						<pre class="line-pre">
+							<div class="line" id="file-cloud9-patch-LC1"><span class="gh" style="display: block;">diff --git a/config.js b/config.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC2"><span class="gh">index 5f4fc26..2564fe7 100644</span></div>
+							<div class="line" id="file-cloud9-patch-LC3"><span class="gd">--- a/config.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC4"><span class="gi">+++ b/config.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC5"><span class="gu">@@ -3,4 +3,9 @@</span></div>
+							<div class="line" id="file-cloud9-patch-LC6"> exports.Config = {</div>
+							<div class="line" id="file-cloud9-patch-LC7">     ip: "127.0.0.1",</div>
+							<div class="line" id="file-cloud9-patch-LC8">     port: 3000,</div>
+							<div class="line" id="file-cloud9-patch-LC9">     gaeLocalPath: ".",</div>
+							<div class="line" id="file-cloud9-patch-LC10"><span class="gd">-};</span></div>
+							<div class="line" id="file-cloud9-patch-LC11"><span class="gi">+    // add for secure</span></div>
+							<div class="line" id="file-cloud9-patch-LC12"><span class="gi">+    secure: {</span></div>
+							<div class="line" id="file-cloud9-patch-LC13"><span class="gi">+        user: "username",</span></div>
+							<div class="line" id="file-cloud9-patch-LC14"><span class="gi">+        password: "password"</span></div>
+							<div class="line" id="file-cloud9-patch-LC15"><span class="gi">+    }</span></div>
+							<div class="line" id="file-cloud9-patch-LC16"><span class="gi">+};</span></div>
+							<div class="line" id="file-cloud9-patch-LC17">&nbsp;</div>
+							<div class="line" id="file-cloud9-patch-LC18"><span class="gh">diff --git a/bin/cloud9.js b/bin/cloud9.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC19"><span class="gh">index a3b15c9..2debbed 100755</span></div>
+							<div class="line" id="file-cloud9-patch-LC20"><span class="gd">--- a/bin/cloud9.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC21"><span class="gi">+++ b/bin/cloud9.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC22"><span class="gu">@@ -28,6 +28,12 @@</span></div>
+							<div class="line" id="file-cloud9-patch-LC23"> var options = Parser.parse([</div>
+							<div class="line" id="file-cloud9-patch-LC24">             var pref = ( value.charAt(0) == "/" ) ? "" :  process.cwd() + "/";</div>
+							<div class="line" id="file-cloud9-patch-LC25">             return require(pref + value.replace(".js", "")).Config;</div>
+							<div class="line" id="file-cloud9-patch-LC26">         }</div>
+							<div class="line" id="file-cloud9-patch-LC27"><span class="gi">+    },</span></div>
+							<div class="line" id="file-cloud9-patch-LC28"><span class="gi">+    // add for secure</span></div>
+							<div class="line" id="file-cloud9-patch-LC29"><span class="gi">+    {short: "s", long: "secure", description: "Secure Cloud9 with user:password for HTTP basic acc</span></div>
+							<div class="line" id="file-cloud9-patch-LC30"><span class="gi">+            var posDelimeter = value.indexOf(':');</span></div>
+							<div class="line" id="file-cloud9-patch-LC31"><span class="gi">+            return {user: value.substr(0, posDelimeter), password: value.substr(posDelimeter + 1)}</span></div>
+							<div class="line" id="file-cloud9-patch-LC32"><span class="gi">+        }</span></div>
+							<div class="line" id="file-cloud9-patch-LC33">     }</div>
+							<div class="line" id="file-cloud9-patch-LC34"> ], true);</div>
+							<div class="line" id="file-cloud9-patch-LC35">&nbsp;</div>
+							<div class="line" id="file-cloud9-patch-LC36"><span class="gh">diff --git a/server/cloud9/index.js b/server/cloud9/index.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC37"><span class="gh">index 34c744a..0cef23e 100644</span></div>
+							<div class="line" id="file-cloud9-patch-LC38"><span class="gd">--- a/server/cloud9/index.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC39"><span class="gi">+++ b/server/cloud9/index.js</span></div>
+							<div class="line" id="file-cloud9-patch-LC40"><span class="gu">@@ -5,6 +5,7 @@</span></div>
+							<div class="line" id="file-cloud9-patch-LC41"> require("../../support/paths");</div>
+							<div class="line" id="file-cloud9-patch-LC42">&nbsp;</div>
+							<div class="line" id="file-cloud9-patch-LC43"> var Connect = require("connect");</div>
+							<div class="line" id="file-cloud9-patch-LC44"><span class="gi">+var ConnectAuth = require('basicAuth'); // add for secure</span></div>
+							<div class="line" id="file-cloud9-patch-LC45"> var IO = require("socket.io");</div>
+							<div class="line" id="file-cloud9-patch-LC46"> var Fs = require("fs");</div>
+							<div class="line" id="file-cloud9-patch-LC47"> var Path = require("path");</div>
+							<div class="line" id="file-cloud9-patch-LC48"><span class="gu">@@ -17,7 +18,8 @@</span></div>
+							<div class="line" id="file-cloud9-patch-LC49"> exports.main = function(options) {</div>
+							<div class="line" id="file-cloud9-patch-LC50">         port = options.port,</div>
+							<div class="line" id="file-cloud9-patch-LC51">         ip = options.ip,</div>
+							<div class="line" id="file-cloud9-patch-LC52">         user = options.user,</div>
+							<div class="line" id="file-cloud9-patch-LC53"><span class="gd">-        group = options.group;</span></div>
+							<div class="line" id="file-cloud9-patch-LC54"><span class="gi">+        group = options.group,</span></div>
+							<div class="line" id="file-cloud9-patch-LC55"><span class="gi">+        secure = options.secure; // add for secure</span></div>
+							<div class="line" id="file-cloud9-patch-LC56">&nbsp;</div>
+							<div class="line" id="file-cloud9-patch-LC57">     if (!Path.existsSync(projectDir))</div>
+							<div class="line" id="file-cloud9-patch-LC58">         throw new Error("Workspace directory does not exist: " + projectDir);</div>
+							<div class="line" id="file-cloud9-patch-LC59"><span class="gu">@@ -64,6 +66,12 @@</span></div>
+							<div class="line" id="file-cloud9-patch-LC60"> exports.main = function(options) {</div>
+							<div class="line" id="file-cloud9-patch-LC61">     };</div>
+							<div class="line" id="file-cloud9-patch-LC62">&nbsp;</div>
+							<div class="line" id="file-cloud9-patch-LC63">     var server = Connect.createServer();</div>
+							<div class="line" id="file-cloud9-patch-LC64"><span class="gi">+    // add for secure</span></div>
+							<div class="line" id="file-cloud9-patch-LC65"><span class="gi">+    if (secure) {</span></div>
+							<div class="line" id="file-cloud9-patch-LC66"><span class="gi">+        server.use(ConnectAuth(function (user, password) {</span></div>
+							<div class="line" id="file-cloud9-patch-LC67"><span class="gi">+          return user === secure.user &amp;&amp; password == secure.password;</span></div>
+							<div class="line" id="file-cloud9-patch-LC68"><span class="gi">+        }));</span></div>
+							<div class="line" id="file-cloud9-patch-LC69"><span class="gi">+    }</span></div>
+							<div class="line" id="file-cloud9-patch-LC70">     //server.use(Connect.logger());</div>
+							<div class="line" id="file-cloud9-patch-LC71">     server.use(Connect.conditionalGet());</div>
+							<div class="line" id="file-cloud9-patch-LC72">     server.use(Connect.cookieDecoder());</div>
+						</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</label>
 
 	<label class="wrapper">
 		<input type="checkbox" class="popup">

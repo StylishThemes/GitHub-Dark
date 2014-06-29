@@ -165,7 +165,7 @@
     top: -1.5px;
   }
   /* === show === */
-  .color-label.selected .color {
+  .color-label.selected .color, .highlight span.gh, .highlight span.gu {
     display: block !important;
   }
   /* === no margin === */
@@ -422,6 +422,7 @@
   .diff-line-code, .diff-line-num .expandable-line-num {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    text-indent: 12px !important;
   }
   /* Inline comments need +18px width to fit. Default value: 842px */
   .inline-comment-form {
@@ -432,15 +433,13 @@
     max-width: none !important;
   }
   /* Remove padding on the pre and add it to the spans inside the line to fix the row highlight */
-  .blob-line-code pre, .line-data pre {
-    padding-left: 0 !important;
-  }
-  .blob-line-code .line, .line-data .line {
-    padding-left: 12px !important;
-  }
+  .blob-line-code pre, .line-data pre, .blob-line-code .line, .line-data .line, .line-data .gd, .line-data .gi,
   .file-data.diff-data .line > *:first-child {
-    /* margin-left: 0 !important; */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 12px !important;
   }
+
   /* ace (gist editor) */
   .ace_cursor {
     border-left-color: #ddd !important;
@@ -1334,7 +1333,7 @@
     border-color: #a1882b !important;
   }
   .gist-item.vis-secret .line-numbers span, .secret .mega-octicon:before, .secret .repo-label span,
-  .page-new-repo div.form-checkbox .octicon-lock:before {
+  .page-new-repo div.form-checkbox .octicon-lock:before, .gist .highlight tr span.gu {
     color:#a1882b !important;
   }
   /* diff highlighting (no syntax highlight) */
@@ -1353,18 +1352,18 @@
     border-top: none !important;
   }
   /* light grey - breaks in diff (with line numbers) */
-  .highlight .gc td, .highlight .gc pre, .gist .highlight .gu {
+  .highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh {
     background: #222 !important;
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .highlight .gi, .highlight .gi pre, .gi .diff-line-code, .gi .diff-line-code pre, .markdown-body ins,
-  .markdown-body ins > *, .markdown-body .added {
+  .highlight tr.gi, .highlight tr .gi, .highlight tr .gi pre, .gi .diff-line-code, .gi .diff-line-code pre,
+  .markdown-body ins, .markdown-body ins > *, .markdown-body .added {
     background: #030 !important;
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
-  .highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre,
+  .highlight tr.gd, .highlight tr .gd, .gd .diff-line-code, .gd .diff-line-code pre,
   .markdown-body .removed {
     background: #400 !important;
     border-color: #800 !important;
@@ -1375,12 +1374,18 @@
     border-color: #880 !important;
   }
   /* git diff inline additions (green) */
-  .highlight .gi .x {
+  .highlight tr.gi, .highlight tr .gi {
+    color:#589819 !important;
+  }
+  .highlight tr.gi .x, .highlight tr .gi .x {
     background: #252 !important;
     color: #eee !important;
   }
   /* git diff inline deletions (red) */
-  .highlight .gd .x {
+  .highlight tr.gd, .highlight tr .gd {
+    color: #d22323 !important;
+  }
+  .highlight tr.gd .x, .highlight tr .gd .x {
     background: #622 !important;
     color: #eee !important;
   }
@@ -1612,17 +1617,16 @@
   .highlight .o { color:#777 !important; }
   .highlight .p { color:#E9B96E !important; }
   .highlight .cs { color:#e50808 !important; background-color:#520000 !important; }
-  .highlight .gi { color:#589819 !important; }
   .highlight .gp { color:#aaa !important; }
   .highlight .nf { color:#098 !important; }
   .highlight .w { color:#666 !important; }
   .highlight .c, .highlight .cm, .highlight .c1 { color:#3677a9 !important; }
-  .highlight .g, .highlight .l, .highlight .x, .highlight .ge, .highlight .gs, .highlight .ld, .highlight .ni,
+  .highlight .g, .highlight .l, .highlight .ge, .highlight .gs, .highlight .ld, .highlight .ni,
   .highlight .nl, .highlight .nx, .highlight .py { color:#d0d0d0 !important; }
   .highlight .k, .highlight .n, .highlight .go { color:#ccc !important; }
   .highlight .cp, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se,
   .highlight .sh, .highlight .si, .highlight .s1, .highlight .ss { color:#D2691E !important; }
-  .highlight .gd, .highlight .gr, .highlight .gt { color:#d22323 !important; }
+  .highlight .gr, .highlight .gt { color:#d22323 !important; }
   .highlight .gh { color:#666 !important; }
   .highlight .gu { color:#f81 !important; font-weight: normal !important }
   .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .nt,
