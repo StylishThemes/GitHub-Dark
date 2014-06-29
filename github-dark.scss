@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((gist|guides|help|status|developer)\.)?github\.com.*"), domain("render.githubusercontent.com") {
-/* Github Dark Theme v1.8.22 (6/27/2014)
+/* Github Dark Theme v1.8.23 (6/29/2014)
  * https://github.com/StylishThemes/GitHub-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -38,7 +38,7 @@
   .org-teams-list .team:hover .team-name, .gh-header-back:hover span:before, a.lock-toggle-link:hover,
   .tabnav a.tabnav-extras:hover, .tabnav .tabnav-extras:hover .octicon, .org-header .edit-org:hover .octicon,
   .diagram-icon-small:not(.active) .mega-octicon:before, .diagram-icon:not(.active) .mega-octicon:before,
-  .panel-nav:not(.disabled) .mega-octicon:before {
+  .panel-nav:not(.disabled) .mega-octicon:before, #header ul.top-nav li a:hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -53,7 +53,7 @@
   .example-nav li a.selected, .button-outline:hover {
     background: /*[[base-color]]*/ #4183C4 !important;
   }
-  .context-button:after, .button-outline:hover {
+  .context-button:after {
     border-color: /*[[base-color]]*/ #4183C4 transparent transparent !important;
   }
   .octofication .message, .panel-nav:not(.disabled):active, .diagram-icon:not(.active) {
@@ -165,7 +165,7 @@
     top: -1.5px;
   }
   /* === show === */
-  .color-label.selected .color {
+  .color-label.selected .color, .highlight span.gh, .highlight span.gu {
     display: block !important;
   }
   /* === no margin === */
@@ -290,7 +290,7 @@
     border-color: transparent !important;
   }
   /* === Darken border === */
-  .wiki-wrapper .wiki-empty-box:hover, .button-outline {
+  .wiki-wrapper .wiki-empty-box:hover {
     border-color: #777 !important;
   }
 
@@ -422,6 +422,7 @@
   .diff-line-code, .diff-line-num .expandable-line-num {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    text-indent: 12px !important;
   }
   /* Inline comments need +18px width to fit. Default value: 842px */
   .inline-comment-form {
@@ -432,15 +433,13 @@
     max-width: none !important;
   }
   /* Remove padding on the pre and add it to the spans inside the line to fix the row highlight */
-  .blob-line-code pre, .line-data pre {
-    padding-left: 0 !important;
-  }
-  .blob-line-code .line, .line-data .line {
-    padding-left: 12px !important;
-  }
+  .blob-line-code pre, .line-data pre, .blob-line-code .line, .line-data .line, .line-data .gd, .line-data .gi,
   .file-data.diff-data .line > *:first-child {
-    /* margin-left: 0 !important; */
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 12px !important;
   }
+
   /* ace (gist editor) */
   .ace_cursor {
     border-left-color: #ddd !important;
@@ -468,12 +467,13 @@
   .blob-line-nums, .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
   .line-data, .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
   .native-download, .setup-info-module, div#common-issues ul, .boxed-group-inner, #gist-form .name, .subnav-item,
-  .button-outline {
+  .button-outline, .render-notice {
     background: #181818 !important;
     border-color: #333 !important;
     border-width: 1px !important;
   }
-  .divider .blob-line-code div.highlight, .octofication .broadcast-icon-mask, .file-box .file .image {
+  .divider .blob-line-code div.highlight, .octofication .broadcast-icon-mask, .file-box .file .image,
+  pre div[style^="background-color: rgb(255, 255, 204);"] {
     background: #181818 !important;
     border: 0 !important;
   }
@@ -597,7 +597,7 @@
   .divider-vertical, #footer .upper_footer, .user-commits td,
   .starting-comment .infobar, #issues_next .infobar, .formbody, .commandbar .display, .none p, .display div.choice,
   #contributors h3, .select-menu-modal, ul.fieldpills li, .select-menu-modal > div, .access-form-wrapper,
-  .documentation-results a, pre div[style^="background-color: rgb(255, 255, 204);"], .plans-pricing-callout,
+  .documentation-results a, .plans-pricing-callout,
   .svg-tip, .auto-search-group .search-filters, .auth-form-body, ul.color-label-list .color-label.active {
     background-color: #333 !important;
     border-color: #555 !important;
@@ -686,7 +686,8 @@
     background: transparent !important;
     border: none !important;
   }
-  svg|text, svg|circle.day {
+  /* Firefox: Exclude text inside an svg loaded through an img, as seen in svg badges */
+  *:not(img) svg|text, svg|circle.day {
     fill: #ccc !important;
   }
   svg|circle.day:hover {
@@ -946,7 +947,7 @@
   .news div.message, .news li blockquote, .timeline-comment-header .comment-type-icon, .news .alert .pull-info,
   .news .alert .branch-link, .release .release-authorship a, .contributing, .wiki-wrapper .wiki-empty-box:hover,
   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon, .diffstat-summary a, a.subnav-item,
-  .branches .branch-group-heading .branch-group-name {
+  .branches .branch-group-heading .branch-group-name, .render-notice {
     color: #aaa !important;
   }
   /* content text */
@@ -1185,6 +1186,10 @@
   .inbox-zero-octocat {
     opacity: .6 !important;
   }
+  /* ACE Editor: Darken indent guides */
+  .ace_indent-guide {
+    opacity: .25 !important;
+  }
   .search .minibutton span {
     background-position: center -95px !important;
   }
@@ -1218,6 +1223,10 @@
   /* pull request avatar bubble */
   #issues_search .comment {
     background: url(https://stylishthemes.github.io/GitHub-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
+  }
+  /* gist logo */
+  .header-logo-wordmark {
+    background-image: url(https://stylishthemes.github.io/GitHub-Dark/images/gist-logo-white.png) !important;
   }
   /* octocat loading spinner */
   .commandbar .loading .description, .context-loader, .pagination.ajax_paginate.loading a, .more-repos-link.is-loading,
@@ -1324,7 +1333,7 @@
     border-color: #a1882b !important;
   }
   .gist-item.vis-secret .line-numbers span, .secret .mega-octicon:before, .secret .repo-label span,
-  .page-new-repo div.form-checkbox .octicon-lock:before {
+  .page-new-repo div.form-checkbox .octicon-lock:before, .gist .highlight tr span.gu {
     color:#a1882b !important;
   }
   /* diff highlighting (no syntax highlight) */
@@ -1343,18 +1352,18 @@
     border-top: none !important;
   }
   /* light grey - breaks in diff (with line numbers) */
-  .highlight .gc td, .highlight .gc pre, .gist .highlight .gu {
+  .highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh {
     background: #222 !important;
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .highlight .gi, .highlight .gi pre, .gi .diff-line-code, .gi .diff-line-code pre, .markdown-body ins,
-  .markdown-body ins > *, .markdown-body .added {
+  .highlight tr.gi, .highlight tr .gi, .highlight tr .gi pre, .gi .diff-line-code, .gi .diff-line-code pre,
+  .markdown-body ins, .markdown-body ins > *, .markdown-body .added {
     background: #030 !important;
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
-  .highlight .gd, .gd .diff-line-code, .gd .diff-line-code pre,
+  .highlight tr.gd, .highlight tr .gd, .gd .diff-line-code, .gd .diff-line-code pre,
   .markdown-body .removed {
     background: #400 !important;
     border-color: #800 !important;
@@ -1365,12 +1374,18 @@
     border-color: #880 !important;
   }
   /* git diff inline additions (green) */
-  .highlight .gi .x {
+  .highlight tr.gi, .highlight tr .gi {
+    color:#589819 !important;
+  }
+  .highlight tr.gi .x, .highlight tr .gi .x {
     background: #252 !important;
     color: #eee !important;
   }
   /* git diff inline deletions (red) */
-  .highlight .gd .x {
+  .highlight tr.gd, .highlight tr .gd {
+    color: #d22323 !important;
+  }
+  .highlight tr.gd .x, .highlight tr .gd .x {
     background: #622 !important;
     color: #eee !important;
   }
@@ -1602,17 +1617,16 @@
   .highlight .o { color:#777 !important; }
   .highlight .p { color:#E9B96E !important; }
   .highlight .cs { color:#e50808 !important; background-color:#520000 !important; }
-  .highlight .gi { color:#589819 !important; }
   .highlight .gp { color:#aaa !important; }
   .highlight .nf { color:#098 !important; }
   .highlight .w { color:#666 !important; }
   .highlight .c, .highlight .cm, .highlight .c1 { color:#3677a9 !important; }
-  .highlight .g, .highlight .l, .highlight .x, .highlight .ge, .highlight .gs, .highlight .ld, .highlight .ni,
+  .highlight .g, .highlight .l, .highlight .ge, .highlight .gs, .highlight .ld, .highlight .ni,
   .highlight .nl, .highlight .nx, .highlight .py { color:#d0d0d0 !important; }
   .highlight .k, .highlight .n, .highlight .go { color:#ccc !important; }
   .highlight .cp, .highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se,
   .highlight .sh, .highlight .si, .highlight .s1, .highlight .ss { color:#D2691E !important; }
-  .highlight .gd, .highlight .gr, .highlight .gt { color:#d22323 !important; }
+  .highlight .gr, .highlight .gt { color:#d22323 !important; }
   .highlight .gh { color:#666 !important; }
   .highlight .gu { color:#f81 !important; font-weight: normal !important }
   .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .nt,

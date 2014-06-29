@@ -41,6 +41,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.23 (6/29/2014)
+
+* Gist:
+  * Replace logo image & brighten
+  * Style header link hover color ("All Gists")
+* ACE Editor: Darken indent guides
+* File view: Style truncation info
+* Firefox: Fix SVG badges by not styling SVG text inside an `<img>`
+* Code
+  * Darken highlighted row so it doesn't match the background of any syntax theme
+  * Diff styling updated to override diff styles set by the syntax highlighting themes
+  * The biggest effect is modifing Gist diffs. Fixes [issue #151](https://github.com/StylishThemes/GitHub-Dark/issues/151).
+  * Updated the [syntax highlighting demo](http://stylishthemes.github.io/GitHub-Dark/) to include samples of commit &amp; gist diffs. 
+
 #### Version 1.8.22 (6/27/2014)
 
 * Guides:
@@ -77,20 +91,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Revision view: fix top line of code styling
   * Revision view: restore negative left margin in code
 * GitHub-Dark v2 miscellaneous updates
-
-#### Version 1.8.20 (6/13/2014)
-
-* Use bright text:
-  * Dropdown warning
-  * Alerts
-  * Page notice
-* Discussions
-  * Fix lock link color
-  * Fix reply box link hover colors
-  * Improve emoji suggestion list
-* Improve table in repo finder, fix keyboard shortcut color
-* Demo
-  * load jQuery using a protocol-relative url. Fixes [issue #146](https://github.com/StylishThemes/GitHub-Dark/issues/146).
-  * Fix body &amp; code font to match GitHub
-* Explore page: Fix stats colors
-* GitHub-Dark v2 alpha experiment added
