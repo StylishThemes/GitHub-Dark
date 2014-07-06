@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((gist|guides|help|status|developer)\.)?github\.com.*"), domain("render.githubusercontent.com") {
-/* Github Dark Theme v1.8.23 (6/29/2014)
+/* Github Dark Theme v1.8.24 (7/6/2014)
  * https://github.com/StylishThemes/GitHub-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -38,7 +38,8 @@
   .org-teams-list .team:hover .team-name, .gh-header-back:hover span:before, a.lock-toggle-link:hover,
   .tabnav a.tabnav-extras:hover, .tabnav .tabnav-extras:hover .octicon, .org-header .edit-org:hover .octicon,
   .diagram-icon-small:not(.active) .mega-octicon:before, .diagram-icon:not(.active) .mega-octicon:before,
-  .panel-nav:not(.disabled) .mega-octicon:before, #header ul.top-nav li a:hover {
+  .panel-nav:not(.disabled) .mega-octicon:before, #header ul.top-nav li a:hover, .team-info-card .stats-group .stat:hover,
+  .team-info-card .stats-group .stat:hover .stat-number {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -147,10 +148,6 @@
   }
   #footer .mega-icon:hover:before {
     color: #555 !important;
-  }
-  /* remove gist logo transition */
-  .header-logo-wordmark {
-    transition: none !important;
   }
   /* === needs padding === */
   div.blog, #page-settings {
@@ -334,7 +331,8 @@
   .new-discussion-timeline .sidebar-item+.sidebar-item,.gh-header-meta, .new-discussion-timeline .previewable-comment-form .comment-body,
   .sidebar-module ul h3, .headlines li, .discussion-sidebar-item + .discussion-sidebar-item, .markdown-format img,
   div#common-issues ul li, .setup-wrapper .oauth-permissions, .about-facts, .starred-repo, .markdown-example,
-  .traffic-graph-stats, .discussion-item + .discussion-item, .bubble, .tree-browser, .simple-box-footer, .team-grid .team-members {
+  .traffic-graph-stats, .discussion-item + .discussion-item, .bubble, .tree-browser, .simple-box-footer, .team-grid .team-members,
+  .org-list .list-item, .stats-group .stat, .team-info-card .team-stats, .table-of-contents li {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .discussion-item-icon, .date:after {
@@ -408,22 +406,15 @@
     font-size: 14px !important;
   }
   /* code editor padding */
-  .file .file-code-line .blob-line-code, .file .highlight, .file .highlight pre, .file-data .highlight pre {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-    border: none !important;
-  }
-  .file .file-code-line .blob-line-nums, .file-data .lines td, .file-data .line-data, #readme, .blob-line-code {
-    padding: 0 !important;
-  }
-  .lines .line-numbers span {
-    padding: 0 6px !important;
-  }
-  .diff-line-code, .diff-line-num .expandable-line-num {
+  td.line-data, td.line-data span {
+    margin-left: 0 !important;
     padding-left: 0 !important;
-    padding-right: 0 !important;
     text-indent: 12px !important;
   }
+  .file-data .line-numbers, .file-data .line-data, .blob-line-code .highlight {
+    padding-top: 0 !important;
+  }
+
   /* Inline comments need +18px width to fit. Default value: 842px */
   .inline-comment-form {
     max-width: 860px !important;
@@ -431,13 +422,6 @@
   /* File listings - fix date truncation */
   table.files td.age .css-truncate {
     max-width: none !important;
-  }
-  /* Remove padding on the pre and add it to the spans inside the line to fix the row highlight */
-  .blob-line-code pre, .line-data pre, .blob-line-code .line, .line-data .line, .line-data .gd, .line-data .gi,
-  .file-data.diff-data .line > *:first-child {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-indent: 12px !important;
   }
 
   /* ace (gist editor) */
@@ -465,9 +449,9 @@
   .gobutton>.sha .octicon, .navigation-focus .gobutton>.sha .octicon, #feedBody, .commit.file-history-tease .participation,
   .search-result-header, .file-data .line-numbers, .accessibility-aid:focus,
   .blob-line-nums, .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
-  .line-data, .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
+  .line-number, .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
   .native-download, .setup-info-module, div#common-issues ul, .boxed-group-inner, #gist-form .name, .subnav-item,
-  .button-outline, .render-notice {
+  .button-outline, .render-notice, .simple-box {
     background: #181818 !important;
     border-color: #333 !important;
     border-width: 1px !important;
@@ -785,12 +769,12 @@
   /* own comments - blue highlight */
   .timeline-comment.current-user .timeline-comment-header, .github-jobs-promotion p, .octotip,
   .markdown-format .alert:not(.warning), .full-commit.commit, .flash, .bootcamp h1,
-  .bootcamp-body {
+  .bootcamp-body, .owners-notice {
     background: linear-gradient(to bottom, #182030, #183040) !important;
   }
   .timeline-comment.current-user, .github-jobs-promotion p, .octotip,
   .markdown-format .alert:not(.warning), .full-commit.commit,
-  .bootcamp .bootcamp-body, .bootcamp h1 {
+  .bootcamp .bootcamp-body, .bootcamp h1, .owners-notice {
     border: 1px solid #246 !important;
   }
   .timeline-comment.current-user .timeline-comment-header {
@@ -915,7 +899,7 @@
   .discussion-item-ref-title .title-link, .org-teams-list .team, .clone-url-button.selected > a, .clone-url-button.selected > a:hover,
   .subnav-search-context .select-menu-item-icon, a.wiki-edit-link, .ace-github, a.pagehead-nav-item.selected,
   a.pagehead-nav-item:hover, a.pagehead-nav-item:hover .octicon:before, .repo-collection .collection-stat, a.subscribe-feed,
-  header ul.links a:hover {
+  header ul.links a:hover, .team-info-card .stat .stat-number, .team-info-card .stats-group .stat.no-link:hover .stat-number {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
@@ -947,7 +931,7 @@
   .news div.message, .news li blockquote, .timeline-comment-header .comment-type-icon, .news .alert .pull-info,
   .news .alert .branch-link, .release .release-authorship a, .contributing, .wiki-wrapper .wiki-empty-box:hover,
   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon, .diffstat-summary a, a.subnav-item,
-  .branches .branch-group-heading .branch-group-name, .render-notice {
+  .branches .branch-group-heading .branch-group-name, .render-notice, .discussion-sidebar-heading {
     color: #aaa !important;
   }
   /* content text */
@@ -968,7 +952,8 @@
   .vcard-detail .octicon, .mega-octicon:before, .command-bar .octicon-question:before, .auto-search-group .octicon:before,
   .breadcrumb, ul.color-label-list .color-label.zeroed, ul.color-label-list .color-label.zeroed .count, .gh-header-title .issue-number,
   a.leaderboard-list-rank, .bootcamp ul li a, .ssh-key-fingerprint, .tag-references > li a, .release .release-authorship,
-  .branches .branch-summary, .branches .no-results-message, header ul.links > li a {
+  .branches .branch-summary, .branches .no-results-message, header ul.links > li a, .team-info-card .stats-group .stat,
+  .team-info-card .stats-group .stat.no-link:hover, .discussion-sidebar-item, .text-muted {
     color: #666 !important;
   }
   /* darkest text; Context pane highlight item */
@@ -1036,7 +1021,7 @@
   .closed.mega-octicon:before, .closed.octicon, .cdel, .gd .diff-line-num, .status-failure, .authors-and-code .deletions,
   .range-editor .range .range-action.octicon:hover, span.diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
   .markdown-body .removed *, .status-failure .octicon, .minibutton.danger .octicon:before, .icon-for-failure,
-  ul.summary-stats li .octicon-issue-closed, .branches .branch-delete .octicon {
+  ul.summary-stats li .octicon-issue-closed, .branches .branch-delete .octicon, #toc .octicon-diff-removed {
     color: #c31e16 !important;
   }
 
@@ -1094,7 +1079,8 @@
   .insertions, .open.mini-icon, .open.mega-octicon, .open.mega-octicon:before, .open.octicon, .octicon-check, .cadd,
   .gi .diff-line-num, .notifications .issue-notification .type-icon, .discussion-topic .branch-status.status-success,
   .authors-and-code .insertions, span.diffstat .diffstat-bar.diff-added, span.diffstat .diffstat-bar i.plus,
-  .steps .complete .mega-octicon:before, ul.summary-stats li .octicon-git-branch-create, ul.summary-stats li .octicon-issue-opened {
+  .steps .complete .mega-octicon:before, ul.summary-stats li .octicon-git-branch-create, ul.summary-stats li .octicon-issue-opened,
+  #toc .octicon-diff-added {
     color: #6CC644 !important;
   }
   /* interactive button - bright border */
@@ -1225,7 +1211,7 @@
     background: url(https://stylishthemes.github.io/GitHub-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
   }
   /* gist logo */
-  .header-logo-wordmark {
+  .header-logo-wordmark[href*="gist.github.com"] {
     background-image: url(https://stylishthemes.github.io/GitHub-Dark/images/gist-logo-white.png) !important;
   }
   /* octocat loading spinner */

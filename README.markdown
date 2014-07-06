@@ -41,6 +41,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.24 (7/6/2014)
+
+* Teams:
+  * Update styles. Fixes [issue #152](https://github.com/StylishThemes/GitHub-Dark/issues/152).
+  * Fix number hover color.
+* Discussions: Tweak sidebar text color
+* Diffs: fix icon color & line borders in TOCs
+* Main site: Fix GitHub logo while logged out
+* Code:
+  * Adjust margin/padding to fix [issue #153](https://github.com/StylishThemes/GitHub-Dark/issues/153).
+  * Gist: allow theme background color to fill code area.
+  * Remove extra padding from top.
+
 #### Version 1.8.23 (6/29/2014)
 
 * Gist:
