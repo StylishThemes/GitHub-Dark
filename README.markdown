@@ -41,6 +41,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.25 (7/19/2014)
+
+* Code Editor: More padding tweaks
+* News feed: Add padding so top entry icons doesn't get cut off
+* Alert: fix brown panel text color
+* Text color:
+  * fix dark text against dark background
+  * fix bootcamp conflict
+* Dashboard: fix notice subtitle color
+* Version 2
+  * Fix whitespace error
+  * Convert indents to spaces per guidelines
+  * Minor whitespace/bracket cleanup
+  * Fix 500 error page text
+
 #### Version 1.8.24 (7/6/2014)
 
 * Teams:
@@ -67,40 +82,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Diff styling updated to override diff styles set by the syntax highlighting themes
   * The biggest effect is modifing Gist diffs. Fixes [issue #151](https://github.com/StylishThemes/GitHub-Dark/issues/151).
   * Updated the [syntax highlighting demo](http://stylishthemes.github.io/GitHub-Dark/) to include samples of commit &amp; gist diffs. 
-
-#### Version 1.8.22 (6/27/2014)
-
-* Guides:
-  * Flow diagram missing style, small icons still flash. See [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
-  * Invert poll iframes. Fixes [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
-* Discussions: style new PR revert buttons
-* Branches: update to recent class swap by GitHub
-* Settings: webhook failure icon & GUID block styling
-* Gist: Temporary fix added &amp; removed to fix code line spacing
-
-#### Version 1.8.21 (6/21/2014)
-
-* Overall
-  * Remove background &amp; border styling from dropdown arrow. Fixes [issue #148](https://github.com/StylishThemes/GitHub-Dark/issues/148)
-  * Index boxes: Remove slight inner shadow
-* Readme: update raw url.
-* Main page: Fix rss link color
-* Wiki: Style 'Add footer' button
-* Branches page:
-  * Lots of fixes for new design. Fixes [issue #149](https://github.com/StylishThemes/GitHub-Dark/issues/149)
-  * Fix loading overlay
-* Organization page: Various fixes to backgrounds &amp; borders
-* Team: Various fixes
-* Markdown/Discussions: Remove red color/background on strikethrough text
-* Markdown: Brighten hover link color
-* Discussions: Fix active tab border color
-* Repo page: Fix selected item menu border
-* Guides:
-  * Various fixes all around
-  * Added flow diagram styling. Fixes part of [issue #150](https://github.com/StylishThemes/GitHub-Dark/issues/150)
-* Gist
-  * Fix new sidebar coloring
-  * Fix gist type label border
-  * Revision view: fix top line of code styling
-  * Revision view: restore negative left margin in code
-* GitHub-Dark v2 miscellaneous updates

@@ -1,7 +1,7 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((gist|guides|help|status|developer)\.)?github\.com.*"), domain("render.githubusercontent.com") {
-/* Github Dark Theme v1.8.24 (7/6/2014)
+/* Github Dark Theme v1.8.25 (7/19/2014)
  * https://github.com/StylishThemes/GitHub-Dark
  * http://userstyles.org/styles/37035
  * License: http://sam.zoy.org/wtfpl/
@@ -406,13 +406,13 @@
     font-size: 14px !important;
   }
   /* code editor padding */
-  td.line-data, td.line-data span {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    text-indent: 12px !important;
-  }
-  .file-data .line-numbers, .file-data .line-data, .blob-line-code .highlight {
+  .file .file-code-line .blob-line-code, .file .file-code-line .blob-line-nums, .file .highlight, .file .highlight pre,
+  .file-data .highlight pre, .file-data .lines td, .file-data .line-data, #readme {
+    padding-bottom: 0 !important;
     padding-top: 0 !important;
+  }
+  .news .alert {
+    padding-top: 1px !important;
   }
 
   /* Inline comments need +18px width to fit. Default value: 842px */
@@ -872,7 +872,7 @@
   a.comment-header-author, .callout strong, .select-menu-item.navigation-focus .octicon:before, .wiki-edit-link:hover, .infotip p,
   .form-actions .tip, dl.form.warn dd.warning, .markdown-format p, .page-notice, .kbd, .subnav-item.selected, .subnav-item.selected:hover,
   .subnav-item.selected:focus, .article-heading .wrap .mega-octicon:before, ol.toc > li a.active, .example-nav li a.selected,
-  .guide-cover a .mega-octicon:before {
+  .guide-cover a .mega-octicon:before, .facebox-alert {
     color: #eee !important;
   }
   pre, body, h3, h4, a.social-count, span.social-count, #languages a.bar, dl.form dt, .lineoption p, .vcard-stat-count,
@@ -899,7 +899,8 @@
   .discussion-item-ref-title .title-link, .org-teams-list .team, .clone-url-button.selected > a, .clone-url-button.selected > a:hover,
   .subnav-search-context .select-menu-item-icon, a.wiki-edit-link, .ace-github, a.pagehead-nav-item.selected,
   a.pagehead-nav-item:hover, a.pagehead-nav-item:hover .octicon:before, .repo-collection .collection-stat, a.subscribe-feed,
-  header ul.links a:hover, .team-info-card .stat .stat-number, .team-info-card .stats-group .stat.no-link:hover .stat-number {
+  header ul.links a:hover, .team-info-card .stat .stat-number, .team-info-card .stats-group .stat.no-link:hover .stat-number,
+  div.container > p {
     color: #ccc !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .comment-body, .blog-post-meta a,
@@ -931,7 +932,7 @@
   .news div.message, .news li blockquote, .timeline-comment-header .comment-type-icon, .news .alert .pull-info,
   .news .alert .branch-link, .release .release-authorship a, .contributing, .wiki-wrapper .wiki-empty-box:hover,
   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon, .diffstat-summary a, a.subnav-item,
-  .branches .branch-group-heading .branch-group-name, .render-notice, .discussion-sidebar-heading {
+  .branches .branch-group-heading .branch-group-name, .render-notice, .discussion-sidebar-heading, .dashboard-notice .title p {
     color: #aaa !important;
   }
   /* content text */
