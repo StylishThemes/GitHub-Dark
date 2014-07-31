@@ -41,6 +41,38 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.26 (7/30/2014)
+
+* Commits:
+  * Vertical timeline styling
+  * Lots of tweaks for the new design
+* Tree browser: restore navigation focus higlight
+* Header: Fix signout button hover
+* File view:
+  * Fix button hover
+  * Fix code block padding and backgrounds, #154
+* Discussions: Fix mentions colors to be in line with the default theme
+* Issues:
+  * Update for new timeline entries, #155
+  * Over 9000 Changes. #155
+  * Fix label color editor
+  * Fix label icons, removed global octicon style
+  * Another attempt at label text color
+  * Fix label selector
+  * Fix travis error icons
+* Dropdown menus:
+  * Selected check mark is now visible. Fixes #156
+  * Menu action icons now always visible. Fixes #156
+* Markdown:
+  * Invert copyright emoji
+  * Fix copyright emoji background
+* Milestones: Restyle date picker
+* Blog: Minor fixes to text/icon colors
+* Traffic Stats: Fix tables
+* Notifications: Unify table lists, fix hover highlight
+* Organizatons: Fix a border
+* Tags: Fix a few link colors
+
 #### Version 1.8.25 (7/19/2014)
 
 * Code Editor: More padding tweaks
@@ -68,17 +100,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Adjust margin/padding to fix [issue #153](https://github.com/StylishThemes/GitHub-Dark/issues/153).
   * Gist: allow theme background color to fill code area.
   * Remove extra padding from top.
-
-#### Version 1.8.23 (6/29/2014)
-
-* Gist:
-  * Replace logo image & brighten
-  * Style header link hover color ("All Gists")
-* ACE Editor: Darken indent guides
-* File view: Style truncation info
-* Firefox: Fix SVG badges by not styling SVG text inside an `<img>`
-* Code
-  * Darken highlighted row so it doesn't match the background of any syntax theme
-  * Diff styling updated to override diff styles set by the syntax highlighting themes
-  * The biggest effect is modifing Gist diffs. Fixes [issue #151](https://github.com/StylishThemes/GitHub-Dark/issues/151).
-  * Updated the [syntax highlighting demo](http://stylishthemes.github.io/GitHub-Dark/) to include samples of commit &amp; gist diffs. 
