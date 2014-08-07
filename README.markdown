@@ -41,6 +41,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.27 (8/6/2014)
+
+* Markdown: Fix bold text inside links
+* Options: Fix plans table
+* Commits: Tweak shadow for committer avatars
+* Global: Fix borders of modal dialogs
+* File view: Fix header buttons
+* Issues: Fix label editor background
+* Developer pages: Various fixes
+* Code: Add new diff class names. Fixes [issue #158](https://github.com/StylishThemes/GitHub-Dark/issues/158)
+
 #### Version 1.8.26 (7/30/2014)
 
 * Commits:
@@ -87,16 +98,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Convert indents to spaces per guidelines
   * Minor whitespace/bracket cleanup
   * Fix 500 error page text
-
-#### Version 1.8.24 (7/6/2014)
-
-* Teams:
-  * Update styles. Fixes [issue #152](https://github.com/StylishThemes/GitHub-Dark/issues/152).
-  * Fix number hover color.
-* Discussions: Tweak sidebar text color
-* Diffs: fix icon color & line borders in TOCs
-* Main site: Fix GitHub logo while logged out
-* Code:
-  * Adjust margin/padding to fix [issue #153](https://github.com/StylishThemes/GitHub-Dark/issues/153).
-  * Gist: allow theme background color to fill code area.
-  * Remove extra padding from top.
