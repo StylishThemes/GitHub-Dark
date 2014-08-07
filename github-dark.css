@@ -1366,19 +1366,22 @@
     border-top: none !important;
   }
   /* light grey - breaks in diff (with line numbers) */
-  .highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh {
+  .highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh,
+  .highlight .expandable-line-num, .highlight .diff-line-num-hunk, .highlight .diff-line-code-hunk,
+  .highlight .expandable-line-code {
     background: #222 !important;
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
   .highlight tr.gi, .highlight tr .gi, .highlight tr .gi pre, .gi .diff-line-code, .gi .diff-line-code pre,
-  .markdown-body ins, .markdown-body ins > *, .markdown-body .added {
+  .markdown-body ins, .markdown-body ins > *, .markdown-body .added, .highlight .diff-line-num-addition,
+  .highlight .diff-line-code-addition {
     background: #030 !important;
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
   .highlight tr.gd, .highlight tr .gd, .gd .diff-line-code, .gd .diff-line-code pre,
-  .markdown-body .removed {
+  .markdown-body .removed, .highlight .diff-line-num-deletion, .highlight .diff-line-code-deletion {
     background: #400 !important;
     border-color: #800 !important;
   }
@@ -1391,7 +1394,7 @@
   .highlight tr.gi, .highlight tr .gi {
     color:#589819 !important;
   }
-  .highlight tr.gi .x, .highlight tr .gi .x {
+  .highlight tr.gi .x, .highlight tr .gi .x, .highlight .diff-line-code-addition .x {
     background: #252 !important;
     color: #eee !important;
   }
@@ -1399,7 +1402,7 @@
   .highlight tr.gd, .highlight tr .gd {
     color: #d22323 !important;
   }
-  .highlight tr.gd .x, .highlight tr .gd .x {
+  .highlight tr.gd .x, .highlight tr .gd .x, .highlight .diff-line-code-deletion .x {
     background: #622 !important;
     color: #eee !important;
   }
