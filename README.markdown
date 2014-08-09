@@ -41,6 +41,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.29 (8/9/2014)
+
+* Code view: Slightly brighten line numbers
+* Global: Change selection color to grey
+
 #### Version 1.8.28 (8/9/2014)
 
 * Code view:
@@ -51,7 +56,7 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Ace Editor:
   * Fix active row highlight
   * Lots of tweaks
-* Global: tweak borders on form elements
+* Global: Tweak borders on form elements
 * Header: Simplify styling rules
 
 #### Version 1.8.27 (8/6/2014)
