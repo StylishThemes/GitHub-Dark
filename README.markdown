@@ -41,6 +41,24 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.29 (8/9/2014)
+
+* Code view: Slightly brighten line numbers
+* Global: Change selection color to grey
+
+#### Version 1.8.28 (8/9/2014)
+
+* Code view:
+  * Fix plaintext color
+  * Update line number color & line number highlighting. Fixes [issue #158](https://github.com/StylishThemes/GitHub-Dark/issues/158)
+  * Change tab size to 4 when installing by hand. Fixes [issue #159](https://github.com/StylishThemes/GitHub-Dark/issues/159)
+  * Fix inline comment form
+* Ace Editor:
+  * Fix active row highlight
+  * Lots of tweaks
+* Global: Tweak borders on form elements
+* Header: Simplify styling rules
+
 #### Version 1.8.27 (8/6/2014)
 
 * Markdown: Fix bold text inside links
@@ -83,18 +101,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Notifications: Unify table lists, fix hover highlight
 * Organizatons: Fix a border
 * Tags: Fix a few link colors
-
-#### Version 1.8.25 (7/19/2014)
-
-* Code Editor: More padding tweaks
-* News feed: Add padding so top entry icons doesn't get cut off
-* Alert: fix brown panel text color
-* Text color:
-  * fix dark text against dark background
-  * fix bootcamp conflict
-* Dashboard: fix notice subtitle color
-* Version 2
-  * Fix whitespace error
-  * Convert indents to spaces per guidelines
-  * Minor whitespace/bracket cleanup
-  * Fix 500 error page text
