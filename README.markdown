@@ -41,6 +41,57 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.30 (8/16/2014)
+
+* Global:
+  * Tweak text selection for Chrome once more
+  * Slightly darker text color
+  * Make selected buttons more noticeable
+  * Merge #1b1b1b and #181818 background categories
+* Markdown:
+  * Fix horizontal rule color
+  * Simpler styling rules, fix <tt> color
+  * Fix quotes, remove unnecessary styles
+* Discussions:
+  * Fix SHAs
+  * Fix referenced issue hover
+  * Lots of minor tweaks
+  * Tweaks to header colors, color own header
+  * Fix timeline commit icons
+* Frontpage: Unify icon and time color on events
+* Branches: Fix PR button on 'Recently pushed branches'
+* Organization:
+  * invite member autocomplete results
+  * Organization: select team for invited member page
+* Issues: make new issue button green again
+* Wiki: semi-transparent body & darken sidebar
+* Blog:
+  * Fix text color
+  * Add a bit of padding to blog posts
+* Commits:
+  * fixing issue with commit-line colors
+  * Adapt to recent class renames, fix SHAs
+  * More fixes to class selectors
+  * Fix SHA colors
+  * Fix comment header SHA
+* New project page: Minor tweaks
+* Pages Themes:
+  * Exclude pages preview from being styled #161
+  * Fix preview and style the page, fix #161
+* Network tree:
+  * Remove obsolete Images, fixes #162
+  * Remove network images from directory.
+* Gist/Ace Editor
+  * Tweak row highlight and selection
+  * Lots of tweaks, including Ace. Fix #160
+  * gutter fix for #160.
+  * Fix logout button
+  * Ace: Fix word highlight
+* Gollum Editor: Style help
+* 3D renders
+  * Style bottom bar
+  * Fix border between modes
+
 #### Version 1.8.29 (8/9/2014)
 
 * Code view: Slightly brighten line numbers
@@ -58,46 +109,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Lots of tweaks
 * Global: Tweak borders on form elements
 * Header: Simplify styling rules
-
-#### Version 1.8.27 (8/6/2014)
-
-* Markdown: Fix bold text inside links
-* Options: Fix plans table
-* Commits: Tweak shadow for committer avatars
-* Global: Fix borders of modal dialogs
-* File view: Fix header buttons
-* Issues: Fix label editor background
-* Developer pages: Various fixes
-* Code: Add new diff class names. Fixes [issue #158](https://github.com/StylishThemes/GitHub-Dark/issues/158)
-
-#### Version 1.8.26 (7/30/2014)
-
-* Commits:
-  * Vertical timeline styling
-  * Lots of tweaks for the new design
-* Tree browser: restore navigation focus higlight
-* Header: Fix signout button hover
-* File view:
-  * Fix button hover
-  * Fix code block padding and backgrounds, #154
-* Discussions: Fix mentions colors to be in line with the default theme
-* Issues:
-  * Update for new timeline entries, #155
-  * Over 9000 Changes. #155
-  * Fix label color editor
-  * Fix label icons, removed global octicon style
-  * Another attempt at label text color
-  * Fix label selector
-  * Fix travis error icons
-* Dropdown menus:
-  * Selected check mark is now visible. Fixes #156
-  * Menu action icons now always visible. Fixes #156
-* Markdown:
-  * Invert copyright emoji
-  * Fix copyright emoji background
-* Milestones: Restyle date picker
-* Blog: Minor fixes to text/icon colors
-* Traffic Stats: Fix tables
-* Notifications: Unify table lists, fix hover highlight
-* Organizatons: Fix a border
-* Tags: Fix a few link colors
