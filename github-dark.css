@@ -217,7 +217,7 @@
   .timeline-commits .commit-meta .octicon, .file .meta-divider, .avatar-stack.multiple-avatars:before,
   #feedHandler, .discussion-sidebar-item .thread-subscription-status, .boxed-group.application-show-group .logo-upload,
   .diagram-icon-small, .commits-listing .commit-group-title .octicon-git-commit, #readme .highlight,
-  .emoji[title=":copyright:"], .ace-github, .add-member-team-list.table-list, .theme-picker {
+  .ace-github, .add-member-team-list.table-list, .theme-picker {
     background: transparent !important;
   }
   /* Redeem Page */
@@ -650,10 +650,18 @@
   .contrib-legend li[style="background-color: #44a340"] { background-color: #48c !important }
   .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
   /* invert (rgb) */
-  #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a,
-  .github-jobs-promotion a.jobs-logo strong, iframe[src*="polldaddy.com"], .emoji[title=":copyright:"] {
+  #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a, .github-jobs-promotion a.jobs-logo strong,
+  iframe[src*="polldaddy.com"] {
     filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
     -webkit-filter: invert(100%) !important;
+  }
+  .emoji[title=":soon:"], .emoji[title=":on:"], .emoji[title=":end:"], .emoji[title=":heavy_dollar_sign:"], .emoji[title=":registered:"],
+  .emoji[title=":tm:"], .emoji[title=":heavy_multiplication_x:"], .emoji[title=":heavy_plus_sign:"], .emoji[title=":heavy_minus_sign:"],
+  .emoji[title=":heavy_division_sign:"], .emoji[title=":heavy_check_mark:"], .emoji[title=":arrows_clockwise:"], .emoji[title=":wavy_dash:"],
+  .emoji[title=":curly_loop:"], .emoji[title=":copyright:"] {
+    filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
+    -webkit-filter: invert(100%) !important;
+    background: transparent !important;
   }
   /* soft badges */
   .box-title-count {
