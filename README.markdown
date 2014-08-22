@@ -16,13 +16,13 @@
 | Dark2 | DarkBlue2 | DarkBone | DarkBurn | DarkDevel |
 | DarkOcean | DarkRobot | DarkSpectrum | DarkZ | DarkerDesert |
 | Desert | Deveiate | Digerati | Dim | Dim2 |
-| Freya | Fruity | GitHub-Dark | Herald | Idle Fingers |
-| Inkpot | JellyBeans | Monokai | Mustang | Native |
-| Neverland | No Quarter | Pastels on Dark | Peaksea | Railscasts |
-| Rdark | Refactor | Sahara | Slate | Solarized Dark |
-| Synic | Tomorrow Night | Tomorrow Night Blue | Tomorrow Night Bright | Tomorrow Night Eighties |
-| Twilight | Up | Vim | Vitamins | Wombat |
-| Zenburn | Zenesque |  |  |  |
+| Dracula | Freya | Fruity | GitHub-Dark | Herald |
+| Idle Fingers | Inkpot | JellyBeans | Monokai | Mustang |
+| Native | Neverland | No Quarter | Pastels on Dark | Peaksea |
+| Railscasts | Rdark | Refactor | Sahara | Slate |
+| Solarized Dark | Synic | Tomorrow Night | Tomorrow Night Blue | Tomorrow Night Bright |
+| Tomorrow Night Eighties | Twilight | Up | Vim | Vitamins |
+| Wombat | Zenburn | Zenesque |  |  |
 
 ## Notes
 
