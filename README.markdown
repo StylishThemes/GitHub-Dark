@@ -12,17 +12,17 @@
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
 | 256 Jungle | 3024 Night | Anotherdark | Asmanian-blood | Birds of Paradise |
-| Blacksea | Brookstream | BusyBee | Candycode | Dark |
-| Dark2 | DarkBlue2 | DarkBone | DarkBurn | DarkDevel |
-| DarkOcean | DarkRobot | DarkSpectrum | DarkZ | DarkerDesert |
-| Desert | Deveiate | Digerati | Dim | Dim2 |
-| Dracula | Freya | Fruity | GitHub-Dark | Herald |
-| Idle Fingers | Inkpot | JellyBeans | Monokai | Mustang |
-| Native | Neverland | No Quarter | Pastels on Dark | Peaksea |
-| Railscasts | Rdark | Refactor | Sahara | Slate |
-| Solarized Dark | Synic | Tomorrow Night | Tomorrow Night Blue | Tomorrow Night Bright |
-| Tomorrow Night Eighties | Twilight | Up | Vim | Vitamins |
-| Wombat | Zenburn | Zenesque |  |  |
+| Blacksea | Brookstream | BusyBee | Candycode | Darcula |
+| Dark | Dark2 | DarkBlue2 | DarkBone | DarkBurn |
+| DarkDevel | DarkOcean | DarkRobot | DarkSpectrum | DarkZ |
+| DarkerDesert | Desert | Deveiate | Digerati | Dim |
+| Dim2 | Dracula | Freya | Fruity | GitHub-Dark |
+| Herald | Idle Fingers | Inkpot | JellyBeans | Monokai |
+| Mustang | Native | Neverland | No Quarter | Pastels on Dark |
+| Peaksea | Railscasts | Rdark | Refactor | Sahara |
+| Slate | Solarized Dark | Synic | Tomorrow Night | Tomorrow Night Blue |
+| Tomorrow Night Bright | Tomorrow Night Eighties | Twilight | Up | Vim |
+| Vitamins | Wombat | Zenburn | Zenesque |  |
 
 ## Notes
 
