@@ -42,6 +42,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.33 (8/25/2014)
+
+* Notifications: Remove background from avatar stacks
+* Code
+  * Update class for line numbers & code lines
+  * Update to latest class changes for diffs
+  * Update selector for expanded code parts
+* Wiki editor: Fix a white border
+* Graphs: Fix background behind boxes
+
 #### Version 1.8.32 (8/23/2014)
 
 * Global
@@ -105,59 +115,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Explore page: Fix grid border
 * Header: Tweaks for new notification icon
 * Code: Update line number highlighting from location hash
-
-#### Version 1.8.30 (8/16/2014)
-
-* Global:
-  * Tweak text selection for Chrome once more
-  * Slightly darker text color
-  * Make selected buttons more noticeable
-  * Merge #1b1b1b and #181818 background categories
-* Markdown:
-  * Fix horizontal rule color
-  * Simpler styling rules, fix <tt> color
-  * Fix quotes, remove unnecessary styles
-* Discussions:
-  * Fix SHAs
-  * Fix referenced issue hover
-  * Lots of minor tweaks
-  * Tweaks to header colors, color own header
-  * Fix timeline commit icons
-* Frontpage: Unify icon and time color on events
-* Branches: Fix PR button on 'Recently pushed branches'
-* Organization:
-  * invite member autocomplete results
-  * Organization: select team for invited member page
-* Issues: make new issue button green again
-* Wiki: semi-transparent body & darken sidebar
-* Blog:
-  * Fix text color
-  * Add a bit of padding to blog posts
-* Commits:
-  * fixing issue with commit-line colors
-  * Adapt to recent class renames, fix SHAs
-  * More fixes to class selectors
-  * Fix SHA colors
-  * Fix comment header SHA
-* New project page: Minor tweaks
-* Pages Themes:
-  * Exclude pages preview from being styled #161
-  * Fix preview and style the page, fix #161
-* Network tree:
-  * Remove obsolete Images, fixes #162
-  * Remove network images from directory.
-* Gist/Ace Editor
-  * Tweak row highlight and selection
-  * Lots of tweaks, including Ace. Fix #160
-  * gutter fix for #160.
-  * Fix logout button
-  * Ace: Fix word highlight
-* Gollum Editor: Style help
-* 3D renders
-  * Style bottom bar
-  * Fix border between modes
-
-#### Version 1.8.29 (8/9/2014)
-
-* Code view: Slightly brighten line numbers
-* Global: Change selection color to grey
