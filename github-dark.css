@@ -42,7 +42,7 @@
   .issues-listing .table-list-issues .issue-title-link:hover, .issues-listing .table-list-issues .issue-meta-section a:hover,
   .issues-reset-query:hover, .issues-listing .table-list-issues .milestone-link:hover .octicon, .labels-list-action:hover,
   .commits-list-item .commits-comments-link:hover, .discussion-item-ref-title .title-link:hover, .box-action:hover, .box-action:active,
-  input[type="text"]:focus+.scope-badge {
+  input[type="text"]:focus+.scope-badge, .repo-list-stats .repo-list-stat-item:hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -303,7 +303,7 @@
   .repo_list li a, .graphs .axis, .switcher > span:after, a.assignee-bit, .menu li, .notifications td, .filter-tab,
   ul.hook-list li, .repo .border, .box-action, ul.repo-stats li a, .footer_nav h4, .footer-divider, .blog-feedback,
   .chromed-list-browser, .js-activate-link, .chromed-list-browser div, .filter-bar, .columns.sidebar, .title, .lbl,
-  .participation-graph canvas, #contributors .person, .tabnav, #commit-activity-master, .mini-repo-list a, #services,
+  .participation-graph canvas, #contributors .person, .tabnav, #commit-activity-master, #services,
   .top-rule, .blog-post, #services .service, ul.stats, .select-menu-filters, .select-menu-item, .select-menu-tabs,
   .release-list > li, .url-box, .context-body, .range-editor-head, .code-list-item,
   .cheatsheet, .pagehead.settings-area, .release-body, .suggester, .pull-state, .pull-number, .merge-pr, .gist-file,
@@ -346,7 +346,7 @@
   .table-list, .table-list-header, .blankslate, .labels-list-item, .subnav-divider-right, .subnav-bordered,
   .content table th, #search-results li, .ace_gutter, .subhead, #pages-composer, .render-bar, #gollum-editor-help,
   #gollum-editor-help-parent, #gollum-editor-help-list, .markdown-format code, .auth-section, .commit-sha,
-  .comment-body {
+  .comment-body, .mini-repo-list-item {
     border-color: #333 !important;
   }
   .pagination a, .pagination span.gap, .discussion-item-icon, .date:after {
@@ -455,9 +455,9 @@
   .markdown-format table, .list-group-item, .chromed-list-browser .none p, .chromed-list-browser .error p, .list-browser-footer,
   #readme .plain, #readme .plain pre, .commandbar .choice:hover, .render-bar, #gollum-editor-help,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
-  .commandbar .loading:hover, .comment-content, .commandbar .message, .tabnav-tab.selected, .boxed-group-inner,
+  .commandbar .loading:hover, .comment-content, .commandbar .message, .boxed-group-inner,
   #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
-  svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img,
+  svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img, .mini-repo-list,
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu, .tree-browser td, .tree-browser .alt td,
   .branches .branch-summary, .branches .no-results-message, .simple-box-footer, .team-grid .team, .commit-group,
@@ -491,7 +491,7 @@
   #wiki-history table td, .commit.file-history-tease, .menu a.selected, .gist .gist-file .gist-data, .repository-lang-stats,
   #message.major, .branch-status, .logo-box, .commit-form, .markdown-example .rendered, .team-grid .team-members,
   .diagram-icon:not(.active), table.capped-list th, .ace_active-line, .ace_gutter-active-line, .overall-summary,
-  .scope-badge, .filter-bar, .audit-search-clear, .country-info {
+  .scope-badge, .filter-bar, .audit-search-clear, .country-info, .tabnav-tab.selected {
     background: #222 !important;
   }
   /* Darkest background color (#222), no image, with border & radius */
@@ -507,7 +507,7 @@
   }
   /* Darkest background (#222), leave image, no border */
   .locales, .add-bubble, .select-menu-filters, .notification-settings, #files > .description, li.contextswitch ul,
-  .search-results, .fieldgroup .edit_hook .fields, .mini-repo-list, .dashboard-tabs, .access-avatar {
+  .search-results, .fieldgroup .edit_hook .fields, .dashboard-tabs, .access-avatar {
     background-color: #222 !important;
     border: 0 !important;
   }
@@ -947,7 +947,7 @@
   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon, .diffstat-summary a, a.subnav-item,
   .branches .branch-group-heading .branch-group-name, .render-notice, .discussion-sidebar-heading, .dashboard-notice .title p,
   .table-list-milestones .stat, .date_selector td, .commits-listing .commit-group-title .octicon-git-commit,
-  .select-menu-header .octicon:hover, .markdown-format code {
+  .select-menu-header .octicon:hover, .markdown-format code, .repo-list-description {
     color: #a4a4a4 !important;
   }
   /* content text */
@@ -966,7 +966,8 @@
   .commits-list-item .commit-meta, .table-list-header-toggle .button-link, .issues-listing .table-list-issues .issue-comments-link,
   .issues-listing .table-list-issues .issue-meta-section a, a.issues-reset-query, .labels-list-action, .table.files td.icon,
   table.tag-list p a, table.tag-list td.date a, a.status-error, .file .meta .octicon-button, .markdown-body blockquote,
-  a.muted-link, .render-view-modes li, .scope-badge, .site-footer, .site-footer .octicon-mark-github:hover {
+  a.muted-link, .render-view-modes li, .scope-badge, .site-footer, .site-footer .octicon-mark-github:hover,
+  .repo-list-stats .repo-list-stat-item {
     color: #888 !important;
   }
   .vcard-detail .octicon, .command-bar .octicon-question:before, .auto-search-group .octicon:before, .news .alert .time,
@@ -977,7 +978,7 @@
   .task-progress, .table-list-milestones .stat-label, .table-list, .date_selector td.unselected_month, #blog-home,
   .blog-post-meta, .blog-post-meta a, .blog-post-meta .octicon, .diff-line-num, .blob-num, .file-data .line-numbers span,
   .discussion-item .timestamp, .branch-status a, .branch-status .divider, .news .alert .octicon, .news .alert .mega-octicon,
-  .blankslate > .mega-octicon {
+  .blankslate > .mega-octicon, .repo-list-meta {
     color: #666 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before, .mini-icon-public-repo:before, .mini-icon-pull-request, .mini-icon-remove-close,
