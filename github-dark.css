@@ -235,9 +235,6 @@
     background-color: transparent !important;
     background-image: none !important;
   }
-  .context-loader.large-format-loader {
-    background-image: none !important;
-  }
   /* === Just rounded corners === */
   #wrapper, #your-repos-filter, .topsearch ul.nav {
     border-radius: 3px !important;
@@ -1206,35 +1203,20 @@
   #issues_search .comment {
     background: url(https://stylishthemes.github.io/GitHub-Dark/images/bubble-arrow.png) 2px 21px no-repeat !important;
   }
-  /* octocat loading spinner */
-  .commandbar .loading .description, .context-loader, .pagination.ajax_paginate.loading a, .more-repos-link.is-loading,
-  .repohead .page-context-loader, .pull-heading.loading span.flag, .addon.loading .indicator, .mergeable .spinner, .slow-loading-overlay,
-  #graphs .loader {
-    background-image: url(https://stylishthemes.github.io/GitHub-Dark/images/octocat-spinner-128-bright.gif) !important;
+  /* octocat spinners */
+  img[src*="octocat-spinner"] {
+    width: 0 !important;
+    height: 0 !important;
+    background: url(https://stylishthemes.github.io/GitHub-Dark/images/octocat-spinner-smil.svg) no-repeat 50% !important;
+    background-size: contain !important;
   }
-  .commandbar .loading .description, .context-loader, .pagination.ajax_paginate.loading a,
-  .more-repos-link.is-loading, .repohead .page-context-loader {
-    background-size: 16px !important;
-    background-repeat: no-repeat !important;
-  }
-  .mergeable .spinner, .pull-heading.loading span.flag, .addon.loading .indicator {
-    background-size: 32px !important;
-  }
-  .slow-loading-overlay, #graphs .loader {
-    background-size: 64px !important;
-    background-position: center 50px !important;
-    background-repeat: no-repeat !important;
-  }
-  .repohead .page-context-loader {
-    width: 16px;
-    height: 16px;
-  }
+  img[src*="octocat-spinner"][width="128"][height="128"] { padding: 64px !important }
+  img[src*="octocat-spinner"][width="64"][height="64"]   { padding: 32px !important }
+  img[src*="octocat-spinner"][width="32"][height="32"]   { padding: 16px !important }
+  img[src*="octocat-spinner"][width="16"][height="16"]   { padding: 8px  !important }
+  /* language stats bar */
   .repository-lang-stats-graph {
     height: 9px !important;
-  }
-  /* hide original loader */
-  #graphs .loader img, .repohead .page-context-loader img {
-    display: none !important;
   }
   /* no border */
   .multiple-avatars, .multiple-avatars:before, table.files, table.files tr, .simple-conversation-list>li:first-child,
