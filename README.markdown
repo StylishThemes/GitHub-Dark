@@ -42,6 +42,26 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.34 (8/31/2014)
+
+* Wiki: Fix history table
+* Repo: Fix blank repo icon
+* User page: Fix boxes & repo list colors
+* Private repos: fixing repo item color
+* Branches: Restyle branch labels
+* Pulse: dark empty progress bar background
+* Markdown: remove background & tweak a few colors
+* Spinners
+  * Add SVG SMIL animated octocat spinners. Fixes [issue #164](https://github.com/StylishThemes/GitHub-Dark/issues/164)
+  * Graphs: fix loading spinners
+  * Add background spinners
+* Traffic
+  * Remove SVG path adjoining class. Fixes [issue #165](https://github.com/StylishThemes/GitHub-Dark/issues/165)
+  * Restore path color
+  * Add back axis coloring
+* Developer: Darken stripe so octicons are visible
+* Gist: Add dark background for readme.
+
 #### Version 1.8.33 (8/25/2014)
 
 * Notifications: Remove background from avatar stacks
@@ -72,46 +92,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style search clear. See [issue #163](https://github.com/StylishThemes/GitHub-Dark/issues/163)
   * Darken map colors & fix filter hover colors
   * Darken map tooltip
-
-#### Version 1.8.31 (8/22/2014)
-
-* Global:
-  * Unify box header border
-  * Move all #111 styles to #222
-  * Make inline code background brighter
-  * Tweak search scope field
-  * Tweak footer logo
-  * Fix tip code background
-  * Fix keyboard shortcuts
-  * Change input & button borders to #444
-  * Fix SHA borders
-  * Style disabled checkboxes too
-* Readme:
-  * Add star/fork buttons
-  * Move buttons besides name
-* Diffs
-  * Let theme background work on diffs
-  * Fix new line comment icons
-* Repo view:
-  * Fix language summary & box borders
-  * Tweak social counter border
-* Markdown:
-  * Use #282828 for all inline code blocks
-  * Slightly darker inline code blocks
-* Search box: fix scope badge color
-* Frontpage: Minor tweaks
-* Audit log:
-  * Various fixes
-  * Fix border on organization page
-* Options:
-  * Fix borders/text in billing section
-  * Fix API token scope colors
-* Help page: Fix inline code, tables, search form
-* Branches
-  * Fix compare button
-  * Remove ugly bold font on the infobar
-* User profiles: Fix stat count color and hover
-* Pulse: Update text & borders
-* Explore page: Fix grid border
-* Header: Tweaks for new notification icon
-* Code: Update line number highlighting from location hash
