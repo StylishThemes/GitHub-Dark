@@ -42,6 +42,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.35 (9/3/2014)
+
+* Global
+  * Made semi-transparent backgrounds slightly darker
+  * Remove font-size hacks
+  * Remove three url() images
+* Private repo: Alter background color
+* Branches: Fix "More branches" button
+* Markdown: Fix plaintext readmes
+* Diffs: Fix empty cells for split diffs. Fixes [issue #170](https://github.com/StylishThemes/GitHub-Dark/issues/170)
+
 #### Version 1.8.34 (8/31/2014)
 
 * Wiki: Fix history table
@@ -71,24 +82,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Update selector for expanded code parts
 * Wiki editor: Fix a white border
 * Graphs: Fix background behind boxes
-
-#### Version 1.8.32 (8/23/2014)
-
-* Global
-  * Add missing dark emoji invert
-  * Change selection back to base color
-* Themes
-  * Add selector change to all theme styles ([ref](https://github.com/StylishThemes/GitHub-Dark/commit/92ef1cda64ce9806eda6ef5ecfad4851cdffda5f))
-  * Add [Dracula](https://github.com/zenorocha/dracula-theme) syntax highlighting theme.
-  * Add [Darcula](https://github.com/alem0lars/vim-colorscheme-darcula) syntax highlighting theme.
-  * Updated [syntax highlighting demo](http://stylishthemes.github.io/GitHub-Dark/) with new themes.
-* Diffs:
-  * Fix background on expanded code
-  * Fix diff files inside issues
-* Issues:
-  * Fade out issues with no comments
-  * Kill off a white border when creating issues
-* Audit log
-  * Style search clear. See [issue #163](https://github.com/StylishThemes/GitHub-Dark/issues/163)
-  * Darken map colors & fix filter hover colors
-  * Darken map tooltip
