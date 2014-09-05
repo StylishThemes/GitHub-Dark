@@ -42,6 +42,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.36 (9/5/2014)
+
+* User page:
+  * Style new ProTip using flat blue background
+  * Update contribution calendar selectors
+* Blog: Change feedback background color
+
 #### Version 1.8.35 (9/3/2014)
 
 * Global
