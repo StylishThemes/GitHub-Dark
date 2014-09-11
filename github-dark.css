@@ -285,7 +285,7 @@
   .chromed-list-browser, .js-activate-link, .chromed-list-browser div, .filter-bar, .columns.sidebar, .title, .lbl,
   .participation-graph canvas, #contributors .person, .tabnav, #commit-activity-master, #services,
   .top-rule, .blog-post, #services .service, ul.stats, .select-menu-filters, .select-menu-item, .select-menu-tabs,
-  .release-list > li, .url-box, .context-body, .range-editor-head, .code-list-item,
+  .release-list > li, .url-box, .context-body, .code-list-item,
   .cheatsheet, .pagehead.settings-area, .release-body, .suggester, .pull-state, .pull-number, .merge-pr, .gist-file,
   #footer .container, #graph-shots li, .sidebar, .release-timeline, .explore h2, ul.color-label-list .color, #head,
   .leaderboard-list-item, .release-timeline-tags .main, .search-result-item, .sort-bar, .details, .jobs-list,
@@ -294,8 +294,8 @@
   .steps, #graphs, .previewable-comment-form .comment, .org-module, .org-repo, .table-list,
   .table-list-cell, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .member-row, .press-info,
-  .timeline-comment, .timeline-comment-header, .timeline-commits .timeline-commits-header, .range-editor span.flag,
-  .range-editor .range, ul.comparison-list > li, .marketing-section, .featured-callout .screenshot,
+  .timeline-comment, .timeline-comment-header, .timeline-commits .timeline-commits-header,
+  ul.comparison-list > li, .marketing-section, .featured-callout .screenshot,
   .sidebar-module, #footer .wrapper, .collapsed, .expanded, .discussion-topic, .bubble-inner, .team-org-group,
   div.article div.helper div.content, .boxed-group-inner .help, dl.new-email-form, .file .meta-divider,
   .avatar-stack.multiple-avatars:before, .file-box, .file-actions .button-group li, .gist .gist-file .gist-data,
@@ -416,10 +416,10 @@
   .commitinfo, .gc .diff-line-code, .featured-commit-activity-graph, .featured-repo-logo,
   .gobutton>.sha .octicon, #feedBody, .commit.file-history-tease .participation, .search-result-header, .accessibility-aid:focus,
   .file-data, .signup-plans th, .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td,
-  .commits td, .featured-callout, .compare-pr-placeholder, .sidebar-module ul ul li,
+  .commits td, .featured-callout, .sidebar-module ul ul li,
   .native-download, .setup-info-module, div#common-issues ul, #gist-form .name, .subnav-item,
   .button-outline, .render-notice, .simple-box, .table-list, .label-edit.edit-color-label-form .color-editor .color-editor-input,
-  .date_selector, .date_selector td, .new-label {
+  .date_selector, .date_selector td, .new-label, .range-editor .range, .range-editor .flag {
     background: #181818 !important;
     border-color: #333 !important;
     border-width: 1px !important;
@@ -538,7 +538,7 @@
   /* Panel background (#333) only */
   .progress-bar, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, .commits-listing:before,
   ol.steps li.current, .dropdown-menu, .outdated-diff-comment-container .discussion-item-icon,
-  .discussion-item-ref .discussion-item-icon, .range-editor .range, .range-editor span.flag,
+  .discussion-item-ref .discussion-item-icon,
   .octicon-repo-push.discussion-item-icon, .octicon-code.discussion-item-icon, .new-discussion-timeline .discussion-item-icon,
   .menu-container, .bubble, .bubble-contents, .ellipsis-button, .filter-list li span.bar, .selectable_day.today,
   .billing-plans .current, .markdown-body hr, .commits-listing:before, #network .current-repository,
@@ -551,7 +551,7 @@
   .pagehead ul.tabs li.contextswitch:hover, .bigbutton a, #new_message,
   #issues_next ul.sorts li, ul.sorts li.asc, ul.sorts li.desc, .listings-layout .columns.main .content, .fieldswrap,
   .filterbar li.selected, #issues_next ul.filters li, table.instruction tr:nth-child(2n), .email-hidden-toggle a,
-  #commit-activity-master-head, .range-editor-form, .action-indicator, .pull-head .diffstat, ul.suggestions,
+  #commit-activity-master-head, .action-indicator, .pull-head .diffstat, ul.suggestions,
   .accordion, .accordion-container {
     background-color: #333 !important;
     border: 0 !important;
@@ -703,8 +703,8 @@
   /* === #444 === */
   /* Light Panel background (#444), no image, no border, with radius */
   ul.sidetabs li a:hover, .editbox h1, #issues .labels .admin, p.breadcrumb, #issues .display .sortbar,
-  #facebox .close, #issues_search .wrapper, .ranked-repositories .meta a, .range-editor h3, .actor,
-  .range-editor .chooser, ul.nav.logged_out, .tip-box a.next, #inbox .list .unread, .main .filterbar,
+  #facebox .close, #issues_search .wrapper, .ranked-repositories .meta a, .actor,
+  ul.nav.logged_out, .tip-box a.next, #inbox .list .unread, .main .filterbar,
   .browser-content .footerbar, ul.smalltabs, .snippet, .supportstaffer, .discussion-form, .chooser-box,
   .chooser-box h3, #forkqueue .instructions, .selector-item.clear:hover,
   #contributors-master svg, .inset-callout h2, .documentation ul.nav, .date_selector td.selected,
@@ -849,7 +849,7 @@
   span.discussion-item-icon, a.signin:hover, .marketing-benefits .mega-octicon:before,
   .thread-subscription-status .mega-octicon:before, .infobar-widget .text a, .dropdown-menu > li > a:hover > .octicon:before,
   .dropdown-menu > li > a.zeroclipboard-is-hover > .octicon:before, .highlight-module .mega-icon:before,
-  .headlines li a, .repository-sidebar .clone-options .octicon:before, .team:hover .team-name, .compare-pr-placeholder p,
+  .headlines li a, .repository-sidebar .clone-options .octicon:before, .team:hover .team-name,
   #wiki-rightbar li, .i-am-error p, .select-menu-item-text, .markdown-body .octicon-link, .team-org-group strong,
   .gist-item ul.meta > li > a:hover, .native-download .mega-icon:before, #article-platform-nav ul li.selected a,
   .section-heading-title a.selected, ul.filter-list .filter-item.selected, .marketing-nav a.selected,
@@ -950,7 +950,7 @@
   .issues-listing .table-list-issues .issue-meta-section a, a.issues-reset-query, .labels-list-action, .table.files td.icon,
   table.tag-list p a, table.tag-list td.date a, a.status-error, .file .meta .octicon-button, .markdown-body blockquote,
   a.muted-link, .render-view-modes li, .scope-badge, .site-footer, .site-footer .octicon-mark-github:hover,
-  .repo-list-stats .repo-list-stat-item {
+  .repo-list-stats .repo-list-stat-item, .range-editor span.flag .octicon {
     color: #888 !important;
   }
   .vcard-detail .octicon, .command-bar .octicon-question:before, .auto-search-group .octicon:before, .news .alert .time,
@@ -1030,7 +1030,7 @@
   /* bright red text */
   a.danger, .minibutton.danger, .button.danger, .minibutton.danger span, .closed.mini-icon, .closed.mega-octicon, .deletions,
   .closed.mega-octicon:before, .closed.octicon, .cdel, .gd .diff-line-num, .status-failure, .authors-and-code .deletions,
-  .range-editor .range .range-action.octicon:hover, span.diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
+  .diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
   .markdown-body .removed *, .status-failure .octicon, .minibutton.danger .octicon:before, .icon-for-failure,
   ul.summary-stats li .octicon-issue-closed, .branches .branch-delete .octicon, #toc .octicon-diff-removed,
   .file .meta .octicon-button.danger:hover {
@@ -1043,7 +1043,7 @@
   .plan.free, #message.minor, .chzn-results li em, #missing-readme, .warning, .page-notice, a.button.classy, .signed-out-comment,
   .facebox-alert, .branch-status.status-pending .discussion-item-icon, .discussion-event-status-renamed .discussion-item-icon,
   .state-indicator.renamed, .status-pending, .discussion-topic .branch-status.status-pending, .status-pending .octicon,
-  .recently-touched-branches, .secret .repo-label span, .protip-callout {
+  .recently-touched-branches, .secret .repo-label span, .protip-callout, .compare-pr-placeholder {
     background: #383812 !important;
     border-color: #884 !important;
     color: #884;
@@ -1051,7 +1051,7 @@
   .recently-pushed-branch-details, #toc .octicon-diff-modified, .secret .repo-label span {
     color: #884 !important;
   }
-  .recently-pushed-branch-details a, .protip-callout a {
+  .recently-pushed-branch-details a, .protip-callout a, .compare-pr-placeholder p, .compare-pr-placeholder .help-link {
     color: #cc5 !important;
   }
   /* === Green panel === */
@@ -1086,6 +1086,10 @@
   button.primary, .minibutton.primary:not([href*="compare"]), a.primary.button {
     background: linear-gradient(to bottom, #407045, #305530) !important;
     border-color: #083 !important;
+  }
+  .button.primary:disabled, .minibutton.primary:disabled {
+    background: linear-gradient(to bottom, #203522, #152715) !important;
+    border-color: #041 !important;
   }
   /* New additions */
   .repo-owner-tag .tag, .gist-owner-tag .tag {
