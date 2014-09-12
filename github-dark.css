@@ -1,5 +1,3 @@
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
 @-moz-document regexp("^https?://((gist|guides|help|status|developer)\.)?github\.com((?!generated_pages\/preview).)*$"), domain("render.githubusercontent.com") {
 /* Github Dark Theme v1.8.36 (9/5/2014)
  * https://github.com/StylishThemes/GitHub-Dark
@@ -438,8 +436,8 @@
   .chromed-list-browser .error p, .list-browser-footer, .commandbar .choice:hover, .render-bar, #gollum-editor-help,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
   .commandbar .loading:hover, .comment-content, .commandbar .message, .boxed-group-inner,  #adv_code_search .search-page-label,
-  #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg|svg.viz,
-  svg|svg.spark, svg|svg.capped-card-content, body.api .content tbody, .markdown-format img, .mini-repo-list,
+  #commits_bucket .timeline-commits td, .timeline-comment, .sidebar-module, #contributors-master svg.viz,
+  svg.spark, svg.capped-card-content, body.api .content tbody, .markdown-format img, .mini-repo-list,
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu, .tree-browser td, .tree-browser .alt td,
   .branches .branch-summary, .branches .no-results-message, .simple-box-footer, .team-grid .team, .commit-group,
@@ -477,7 +475,7 @@
     background: #222 !important;
   }
   /* Darkest background color (#222), no image, with border & radius */
-  svg, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content,
+  #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content,
   span.gravatar, .browsered, .browsered .inner, .subnav-bar > ul > li > ul, .comment-form ul.tabs a.selected,
   .issue.open.read .summary, .unselected_month, .commits th, #MathJax_Message, #header .userbox, .chzn-single,
   .user-commits, .user-commits th, .metabox, .ranked-repositories > li, .pagehead ul.actions, #issues_search .comment,
@@ -610,11 +608,11 @@
   .heat9, .heat10 { background-color: #282828 !important }
 
   /* contributions-calendar coloring */
-  #contributions-calendar svg|rect[fill="#eeeeee"] { fill: #282828 !important }
-  #contributions-calendar svg|rect[fill="#d6e685"] { fill: #246 !important }
-  #contributions-calendar svg|rect[fill="#8cc665"] { fill: #369 !important }
-  #contributions-calendar svg|rect[fill="#44a340"] { fill: #48c !important }
-  #contributions-calendar svg|rect[fill="#1e6823"] { fill: #5af !important }
+  #contributions-calendar rect[fill="#eeeeee"] { fill: #282828 !important }
+  #contributions-calendar rect[fill="#d6e685"] { fill: #246 !important }
+  #contributions-calendar rect[fill="#8cc665"] { fill: #369 !important }
+  #contributions-calendar rect[fill="#44a340"] { fill: #48c !important }
+  #contributions-calendar rect[fill="#1e6823"] { fill: #5af !important }
   .contrib-legend li[style="background-color: #eee"]    { background-color: #282828 !important }
   .contrib-legend li[style="background-color: #d6e685"] { background-color: #246 !important }
   .contrib-legend li[style="background-color: #8cc665"] { background-color: #369 !important }
@@ -641,62 +639,62 @@
     color: #ccc !important;
   }
   /* svg styling */
-  svg|line, svg|rect, svg|path {
+  line, rect, path {
     shape-rendering: geometricPrecision !important;
   }
-  #contributors-master svg|svg.viz {
+  #contributors-master svg.viz {
     border: 1px solid #555 !important;
   }
-  .js-graph-punchcard svg|svg.viz {
+  .js-graph-punchcard svg.viz {
     background: transparent !important;
     border: none !important;
   }
   /* Firefox: Exclude text inside an svg loaded through an img, as seen in svg badges */
-  *:not(img) svg|text, svg|circle.day {
+  *:not(img) text, circle.day {
     fill: #ccc !important;
   }
-  svg|circle.day:hover {
+  circle.day:hover {
     fill: #fff !important;
   }
-  #contributors-master svg|svg.viz {
+  #contributors-master svg.viz {
     display: block !important;
   }
-  svg|g.dots svg|circle {
+  g.dots circle {
     stroke: #222 !important;
   }
-  .traffic-graph svg|g.axis:not(.views):not(.unique) svg|g.tick:not(:nth-child(14)):not(:first-child) svg|line,
-  svg|g.axis svg|path, svg|line.axis, svg|svg:not(.vis) svg|g.axis svg|line {
+  .traffic-graph g.axis:not(.views):not(.unique) g.tick:not(:nth-child(14)):not(:first-child) line,
+  g.axis path, line.axis, svg:not(.vis) g.axis line {
     stroke: #444 !important;
   }
-  svg|svg .path:not(.total):not(.unique):not(.views) {
+  svg .path:not(.total):not(.unique):not(.views) {
     stroke: #aaa !important;
   }
-  #commit-activity-detail svg|path.path, .traffic-graph svg|g.x.axis svg|g.tick:first-child svg|line {
+  #commit-activity-detail path.path, .traffic-graph g.x.axis g.tick:first-child line {
     stroke: #1DB34F !important;
   }
-  .traffic-graph svg|g.x.axis svg|g.tick:nth-child(14) svg|line {
+  .traffic-graph g.x.axis g.tick:nth-child(14) line {
     stroke: #1d7fb3 !important;
   }
-  svg|svg.tick {
+  svg.tick {
     fill: #444 !important;
   }
-  .features-branch-diagram svg|path[stroke="#c6d9ed"], .features-branch-diagram svg|path[stroke="#4182C4"] {
+  .features-branch-diagram path[stroke="#c6d9ed"], .features-branch-diagram path[stroke="#4182C4"] {
     stroke: /*[[base-color]]*/ #4183C4 !important;
   }
-  .features-branch-diagram svg|circle[fill="#4183c4"] {
+  .features-branch-diagram circle[fill="#4183c4"] {
     fill:  /*[[base-color]]*/ #4183C4 !important;
   }
-  .features-branch-diagram svg|circle[stroke="#ffffff"] {
+  .features-branch-diagram circle[stroke="#ffffff"] {
     stroke: #222 !important;
   }
-  svg|rect.map-background, .audit-log-map {
+  rect.map-background, .audit-log-map {
     fill: #1e4062 !important;
     background: #1e4062 !important;
   }
-  svg|path.land {
+  path.land {
     stroke: #17334f !important;
   }
-  svg|circle.audit-point {
+  circle.audit-point {
     fill: #742d14 !important;
     stroke: #57210f !important;
   }
