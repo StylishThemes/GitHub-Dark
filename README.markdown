@@ -42,6 +42,32 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.37 (9/12/2014)
+
+* Developer
+  * Inline code: fix style on developer.github.com
+  * fix header links
+  * Move table styling to header cells instead of entire table ([example](https://developer.github.com/webhooks/#ping-event-payload))
+* Wiki
+  * Update wiki documentation images
+  * Make "Add a custom..." background semi-transparent
+  * Added new [emoji reference page](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)
+* Code
+  * Fix expand button hover color
+  * Fix background for help.github.com articles
+* Advanced search: Fix search box & borders
+* Issues: Fix label text color
+* Notifications: Color pull request icon again. See [issue #175](https://github.com/StylishThemes/GitHub-Dark/issues/175)
+* Prose diffs: Fix backgrounds, diff borders
+* Settings > GitHub pages: site published at box styling
+* Diffs: FIx deletion line numbers
+* Markdown: invert a few missing emoji
+* Main page: protip panel styling
+* Discussions: Color help icon
+* Compare page: Update styles
+* User page: Tweak borders, add dev program border
+* Commit: Better matching browse button
+
 #### Version 1.8.36 (9/5/2014)
 
 * User page:
@@ -59,33 +85,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Branches: Fix "More branches" button
 * Markdown: Fix plaintext readmes
 * Diffs: Fix empty cells for split diffs. Fixes [issue #170](https://github.com/StylishThemes/GitHub-Dark/issues/170)
-
-#### Version 1.8.34 (8/31/2014)
-
-* Wiki: Fix history table
-* Repo: Fix blank repo icon
-* User page: Fix boxes & repo list colors
-* Private repos: fixing repo item color
-* Branches: Restyle branch labels
-* Pulse: dark empty progress bar background
-* Markdown: remove background & tweak a few colors
-* Spinners
-  * Add SVG SMIL animated octocat spinners. Fixes [issue #164](https://github.com/StylishThemes/GitHub-Dark/issues/164)
-  * Graphs: fix loading spinners
-  * Add background spinners
-* Traffic
-  * Remove SVG path adjoining class. Fixes [issue #165](https://github.com/StylishThemes/GitHub-Dark/issues/165)
-  * Restore path color
-  * Add back axis coloring
-* Developer: Darken stripe so octicons are visible
-* Gist: Add dark background for readme.
-
-#### Version 1.8.33 (8/25/2014)
-
-* Notifications: Remove background from avatar stacks
-* Code
-  * Update class for line numbers & code lines
-  * Update to latest class changes for diffs
-  * Update selector for expanded code parts
-* Wiki editor: Fix a white border
-* Graphs: Fix background behind boxes
