@@ -42,6 +42,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.38 (9/12/2014)
+
+* Removed svg namespace. Fixes [issue #177](https://github.com/StylishThemes/GitHub-Dark/issues/177).
+
 #### Version 1.8.37 (9/12/2014)
 
 * Developer
