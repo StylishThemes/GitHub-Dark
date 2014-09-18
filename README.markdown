@@ -42,6 +42,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.39 (9/18/2014)
+
+* API pages: fix some boxes
+* Readme: remove svg buttons until caching is resolved
+* New repo page: lots of fixes
+* Issues:
+  * Improve pagination buttons
+  * Fix pending travis icons
+* Pull requests: fix composer form
+
 #### Version 1.8.38 (9/12/2014)
 
 * Removed svg namespace. Fixes [issue #177](https://github.com/StylishThemes/GitHub-Dark/issues/177).
