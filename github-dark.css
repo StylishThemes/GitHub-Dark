@@ -40,7 +40,7 @@
   .issues-listing .table-list-issues .issue-title-link:hover, .issues-listing .table-list-issues .issue-meta-section a:hover,
   .issues-reset-query:hover, .issues-listing .table-list-issues .milestone-link:hover .octicon, .labels-list-action:hover,
   .commits-list-item .commits-comments-link:hover, .discussion-item-ref-title .title-link:hover, .box-action:hover, .box-action:active,
-  input[type="text"]:focus+.scope-badge, .repo-list-stats .repo-list-stat-item:hover {
+  input[type="text"]:focus+.scope-badge, .repo-list-stats .repo-list-stat-item:hover, .octotree_views .octotree_treeview .jstree-anchor {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -178,7 +178,7 @@
   #files .file .meta .info span, .file-box .meta .info span, body#com #header, .search-filters, .usage-bar dd,
   .avatar-stack.multiple-avatars .avatar:last-child, .avatar-stack.multiple-avatars:before,
   .box-action, .file-diff-line, .file-code-lines, #adv_code_search .search-page-input, li.ssh-key .ssh-key-state-indicator.not-recent,
-  #gist-form .gist-name-textbox, .labels .label {
+  #gist-form .gist-name-textbox, .labels .label, .octotree_views .octotree_view .octotree_view_header {
     text-shadow: none !important;
     box-shadow: none !important;
   }
@@ -417,7 +417,7 @@
   .signup-plans td, .signup-plans-orgs th, .signup-plans-orgs td, .commits td, .featured-callout, .sidebar-module ul ul li,
   .native-download, .setup-info-module, div#common-issues ul, #gist-form .name, .subnav-item, .button-outline, .render-notice,
   .simple-box, .table-list, .label-edit.edit-color-label-form .color-editor .color-editor-input, .date_selector, .date_selector td,
-  .new-label, .range-editor .range, .range-editor .flag {
+  .new-label, .range-editor .range, .range-editor .flag, .octotree_sidebar {
     background: #181818 !important;
     border-color: #444 !important;
     border-width: 1px !important;
@@ -537,7 +537,7 @@
   /* Panel background (#333) only */
   .progress-bar, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, .commits-listing:before,
   ol.steps li.current, .dropdown-menu, .outdated-diff-comment-container .discussion-item-icon,
-  .discussion-item-ref .discussion-item-icon,
+  .discussion-item-ref .discussion-item-icon, .jstree-wholerow-hovered,
   .octicon-repo-push.discussion-item-icon, .octicon-code.discussion-item-icon, .new-discussion-timeline .discussion-item-icon,
   .menu-container, .bubble, .bubble-contents, .ellipsis-button, .filter-list li span.bar, .selectable_day.today,
   .billing-plans .current, .markdown-body hr, .commits-listing:before, #network .current-repository,
@@ -621,7 +621,7 @@
   .contrib-legend li[style="background-color: #1e6823"] { background-color: #5af !important }
   /* invert (rgb) */
   #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a, .github-jobs-promotion a.jobs-logo strong,
-  iframe[src*="polldaddy.com"] {
+  iframe[src*="polldaddy.com"], .jstree-icon.jstree-ocl {
     filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
     -webkit-filter: invert(100%) !important;
   }
@@ -758,7 +758,7 @@
   .full-commit .browse-button {
     background: linear-gradient(to bottom, #182030, #183040) !important;
   }
-  .new-user-avatar-cta {
+  .new-user-avatar-cta, .jstree-wholerow-clicked {
     background: #182030 !important;
   }
   .timeline-comment.current-user .timeline-comment-header, .new-user-avatar-cta, .full-commit .browse-button {
@@ -796,7 +796,8 @@
   .cheatsheet h2, .file-box .highlight tr:not(.inline-comments):hover td, .section a.section-head, .dashboard-tabs li a,
   a.function-button, .capped-box h3, .expandable-line-num .diff-expander:hover, #contributors .capped-card h3,
   .audit-results-header, .comment-form-head.tabnav, .add-pill-form, .gist .gist-file .gist-meta, .file .meta, .blob-num-hunk,
-  .blob-num-expandable, .blob-code-hunk, .blob-code-expandable, .code-list .divider .blob-num, .code-list .divider .blob-code {
+  .blob-num-expandable, .blob-code-hunk, .blob-code-expandable, .code-list .divider .blob-num, .code-list .divider .blob-code,
+  .octotree_view_header {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
   }
@@ -876,7 +877,8 @@
   .subnav-item.selected:focus, .article-heading .wrap .mega-octicon:before, ol.toc > li a.active, .example-nav li a.selected,
   .guide-cover a .mega-octicon:before, .facebox-alert, .typeahead-result, .no-results, #user-links > li * button,
   .timeline-commits .hidden-text-expander a:hover, .color-editor-input, .state .octicon, #user-links .sign-out-button,
-  .table-list-item label, .audit-action-info .context, .token-scope, .segmented-nav li.active a {
+  .table-list-item label, .audit-action-info .context, .token-scope, .segmented-nav li.active a,
+  a.octotree_toggle:hover, a.octotree_opts:hover, a.octotree_toggle.selected, a.octotree_opts.selected {
     color: #e4e4e4 !important;
   }
   pre, body, h3, h4, a.social-count, span.social-count, #languages a.bar, dl.form dt, .lineoption p, a.select-menu-button, a.blog-title,
