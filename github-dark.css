@@ -23,12 +23,12 @@
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .team-mention, a.octotree_opts:hover,
   .header-logo-invertocat:hover, .comment-header-actions li:hover , .zeroclipboard-link .octicon, .commit .commit-title .issue-link,
   .octofication .mega-octicon:before, .octofication-more strong, .org-repo-stats a:hover, a.muted-link:hover,
-  .org-repo-stats a:hover .octicon:before,.org-module-link:hover,.org-module-link:hover .org-stats,
+  .org-repo-stats a:hover .octicon:before,.org-module-link:hover,.org-module-link:hover .org-stats, .blog .title a,
   .org-module-link:hover .octicon, .org-header-info .name-link:hover, .social-count:hover, .new-file-link span,
   .org-repo-name a:hover .repo-prefix, .timeline-commits .commit-meta .octicon-comment-discussion:before,
   .numbers-summary a:hover .octicon:before, .history-link .octicon:before, .steps li.current .mega-octicon:before,
   .oauth-permissions-details .permission-title, .permission-help .octicon:before, .setup-info-module .octicon:before,
-  .owner-name, .timeline-comment-actions .octicon:hover, .markdown-body a code, .discussion-sidebar-toggle:hover,
+  .owner-name, .timeline-comment-actions .octicon:hover, a code, .discussion-sidebar-toggle:hover,
   .discussion-sidebar-toggle:hover .octicon, .sidebar-assignee .assignee:hover, .timeline-commits .commit-message a:hover,
   .timeline-commits .commit-id:hover, #markdown-toc li a:hover, .sidebar-module ul ul li a:hover, a.button-outline,
   .org-teams-list .team:hover .team-name, .gh-header-back:hover span:before, a.lock-toggle-link:hover,
@@ -262,6 +262,9 @@
   .js-menu-target:focus, .js-menu-target:active {
     text-decoration: none !important;
   }
+  a:hover code {
+    text-decoration: underline !important;
+  }
   /* GitHub Bug: Properly center the pull request tabs header counters vertically. Also match the border-radius to
      match other similar counters on the site  */
   #commits_tab_counter, #files_tab_counter {
@@ -285,7 +288,7 @@
   .chromed-list-browser, .js-activate-link, .chromed-list-browser div, .filter-bar, .columns.sidebar, .title, .lbl,
   .participation-graph canvas, #contributors .person, .tabnav, #commit-activity-master, #services,
   .top-rule, .blog-post, #services .service, ul.stats, .select-menu-filters, .select-menu-item, .select-menu-tabs,
-  .release-list > li, .url-box, .context-body, .code-list-item, .api li:before,
+  .release-list > li, .url-box, .context-body, .code-list-item, .api li:before, .library-list .feature, .lower_footer,
   .cheatsheet, .pagehead.settings-area, .release-body, .suggester, .pull-state, .pull-number, .merge-pr, .gist-file,
   #footer .container, #graph-shots li, .sidebar, .release-timeline, .explore h2, ul.color-label-list .color, #head,
   .leaderboard-list-item, .release-timeline-tags .main, .search-result-item, .sort-bar, .details, .jobs-list,
@@ -295,7 +298,7 @@
   .table-list-cell, .org-add-footer, .auto-search-group .search-filter, #notification-center li, .branch-status,
   .commit-tease .commit-meta, .comment + .comment, .discussion-bubble-inner, .member-row, .press-info,
   .timeline-comment, .timeline-comment-header, .timeline-commits .timeline-commits-header,
-  ul.comparison-list > li, .marketing-section, .featured-callout .screenshot, body.api code,
+  ul.comparison-list > li, .marketing-section, .featured-callout .screenshot,
   .sidebar-module, #footer .wrapper, .collapsed, .expanded, .discussion-topic, .bubble-inner, .team-org-group,
   div.article div.helper div.content, .boxed-group-inner .help, dl.new-email-form, .file .meta-divider,
   .avatar-stack.multiple-avatars:before, .file-box, .file-actions .button-group li, .gist .gist-file .gist-data,
@@ -305,7 +308,7 @@
   .tabnav-tab.selected, .panel-nav, .file, .full-commit .sha-block > a, .theme-selector-thumbnail,.segmented-nav li,
   .ace-github .ace_marker-layer .ace_selected-word, .overall-summary, .boxed-group-inner, .search-form button, .file-box .meta,
   .auth-form-header, .branches .branch-group-heading, .boxed-group > h3,  .boxed-group .heading, .box-header,
-  .issues-list-actions, p code, .wiki-wrapper .wiki-empty-box, #adv_code_search .search-page-label {
+  .issues-list-actions, p code, code, .wiki-wrapper .wiki-empty-box, #adv_code_search .search-page-label {
     border-color: #555 !important;
   }
   .button:not(img), .minibutton, .social-count, .discusion-topic-infobar, .box-header, .box-body, .timeline-comment-label, .logo-box,
@@ -528,12 +531,12 @@
     background-color: #282828 !important;
   }
   /* inline code */
-  .markdown-body code, .list-browser-item.closed, .content .verseblock-content, .terminal, .copyable-terminal,
-  .content .sectionbody .dlist dt, #facebox pre, .commit-preview .message pre, .content p > tt, .markdown-body tt,
-  .markdown-format code, .commit-sha, .content .verseblock-content, .content .sectionbody .dlist dt, .content p > tt,
-  .content dl code, .content ul code, .markdown-body .highlight pre, .markdown-body pre, p code, .markdown-format pre {
+  .list-browser-item.closed, .content .verseblock-content, .terminal, .copyable-terminal,
+  .content .sectionbody .dlist dt, .content p > tt, .markdown-body tt,
+  .commit-sha, .content .verseblock-content, .content .sectionbody .dlist dt, .content p > tt {
     background: #242424 !important;
   }
+
   /* === #333 === */
   /* Panel background (#333) only */
   .progress-bar, .select-menu-modal .select-menu-tabs a.selected, .discusion-topic-infobar, .commits-listing:before,
@@ -1564,10 +1567,14 @@
     }
   }
 
+  /* Code styling - prefixed to selected syntax highlighting theme */
+  .markdown-body code, #facebox pre, .commit-preview .message pre, .markdown-format code,
+  .content dl code, .content ul code, .markdown-body .highlight pre, .markdown-body pre, p code,
+  .markdown-format pre, body.api pre, body.blog pre,
+
   /*[[pygments-theme]]*/
   /* GitHub-Dark syntax highlighting */
-  .highlight, .highlight pre,
-  .highlight table, body.api pre { background-color:#111 !important; color:#d0d0d0 !important; }
+  .highlight, .highlight pre, .highlight table { background-color:#111 !important; color:#d0d0d0 !important; }
   .highlight .hll { background-color:#404040 !important; }
   .highlight .err { color:#a61717 !important; background-color:#311 !important; }
   .highlight .o { color:#777 !important; }
