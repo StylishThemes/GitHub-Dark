@@ -42,6 +42,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.8.40 (9/18/2014)
+
+* Dev pages: fix code styling
+* Commit page: add style to button text "x changed files"
+* Code highlighting: force dark red background on syntax highlighting errors
+* Octotree support added. See [issue #180]()
+* File view: match folder icons to base color
+* Remove build & unused files
+* Update package.json
+* Update screenshots
+
 #### Version 1.8.39 (9/18/2014)
 
 * API pages: fix some boxes
