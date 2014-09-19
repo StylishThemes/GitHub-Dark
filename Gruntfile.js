@@ -22,6 +22,7 @@ module.exports = function(grunt) {
 	// Don't include closing bracket for a chrome build
 	config.newTheme = '<%= grunt.file.read("' + config.themeFile + '") %>' + (config.chrome ? '' : '\n}');
 
+	// custom build
 	config.replacements = [{
 		pattern: '/*[[bg-choice]]*/ url(https://stylishthemes.github.io/GitHub-Dark/images/backgrounds/bg-tile1.png)',
 		replacement: config.image
@@ -47,10 +48,26 @@ module.exports = function(grunt) {
 		replacement: config.newTheme
 	}];
 
-	// for a chrome build, remove the @-moz-document for easier copy & pasting into the editor
+	// userstyles.org - remove defaults & leave placeholders
+	config.replacements_user = [{
+		pattern: '/*[[bg-choice]]*/ url(https://stylishthemes.github.io/GitHub-Dark/images/backgrounds/bg-tile1.png)',
+		replacement: '/*[[bg-choice]]*/'
+	},{
+		pattern: /\/\*\[\[base-color\]\]\*\/ #4183C4/g,
+		replacement: '/*[[base-color]]*/'
+	},{
+		pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
+		replacement: '/*[[tab-size]]*/'
+	},{
+		// remove default syntax theme
+		pattern: /\s+\/\* GitHub-Dark syntax highlighting(.*(\n|\r))+}$/m,
+		replacement: '\n}'
+	}];
+
+	// for a chrome build, remove the @-moz-document wrapper for easier copy & pasting into the editor
 	if (config.chrome) {
 		config.replacements.push({
-			pattern: /@-moz-document regexp\((.*)\) \{/,
+			pattern: /@-moz-document regexp\((.*)\) \{(\n|\r)+/,
 			replacement: ''
 		});
 	}
@@ -66,7 +83,7 @@ module.exports = function(grunt) {
 					'<%= config.buildFile %>' : 'github-dark.css',
 				},
 				options: {
-					replacements: config.replacements
+					replacements: '<%= config.replacements %>'
 				}
 			}
 		},
@@ -82,8 +99,18 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-string-replace');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// register task
+	// build custom userstyle using build.json
 	grunt.registerTask( 'default', [ 'string-replace' ] );
+
+	// build userstyle for pasting into https://userstyles.org/styles/37035/github-dark
+	grunt.registerTask( 'user', 'building userstyles.org file', function(){
+		config.buildFile = 'github-dark-userstyle.build.css';
+		config.replacements = config.replacements_user;
+		// config.chrome = false;
+		grunt.task.run( 'string-replace' );
+	});
+
+	// watch thingy
 	grunt.registerTask( 'dev', [ 'watch' ] );
 
 };
