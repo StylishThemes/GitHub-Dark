@@ -80,6 +80,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-string-replace');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// register task
 	grunt.registerTask( 'default', [ 'string-replace' ] );
