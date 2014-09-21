@@ -26,7 +26,7 @@ module.exports = function (grunt) {
     // do we need a check to see if the theme file exists?
     config.themeFile = 'themes/pygments-' + getTheme() + '.min.css';
     // build file name
-    config.buildFile = 'github-dark-' + getTheme() + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.css';
+    config.buildFile = 'github-dark-' + getTheme() + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
     // background options
     config.bgOptions = config.tiled ?
         'background-repeat: repeat !important; background-size: auto !important; background-position: left top !important;' :
@@ -125,23 +125,31 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+    // build custom GitHub-Dark style using build.json settings
+    grunt.registerTask('default', 'Building custom style', function(){
+      config.buildFile = config.buildFile.replace('.min.css', '.css');
+      grunt.task.run(['string-replace:inline']);
+    });
+    // build custom minified GitHub-Dark style
+    grunt.registerTask('minify', ['string-replace:inline', 'cssmin:minify']);
+
     // build userstyle for pasting into https://userstyles.org/styles/37035/github-dark
     grunt.registerTask('user', 'building userstyles.org file', function () {
         config.buildFile = 'github-dark-userstyle.build.css';
         config.replacements = config.replacements_user;
-        // config.chrome = false;
+        config.chrome = false; // needed in case build.json sets this to true
         grunt.task.run(['string-replace:inline']);
     });
     grunt.registerTask('usermin', 'building userstyles.org file', function () {
         config.buildFile = 'github-dark-userstyle.build.css';
         config.replacements = config.replacements_user;
-        // config.chrome = false;
+        config.chrome = false; // needed in case build.json sets this to true
         grunt.task.run([
             'string-replace:inline',
             'string-replace:mark',
-            'cssmin:minify',
-            'string-replace:unmark',
-            'string-replace:fix'
+            'cssmin:minify'//,
+            //'string-replace:unmark',
+            //'string-replace:fix'
         ]);
     });
 
