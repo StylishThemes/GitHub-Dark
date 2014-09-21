@@ -1,11 +1,29 @@
 module.exports = function (grunt) {
     'use strict';
 
-    if (process.argv[2] !== "minify") {
-        var config = grunt.file.readJSON('build.json'),
-            getTheme = function () {
-                return config.theme.toLowerCase().replace(/\s+/g, '-');
-            };
+    var config, getTheme;
+
+    if (process.argv[2] !== 'minify') {
+        try {
+            config = require("fs").readFileSync('build.json');
+        } catch (err) {
+            if (err.code === 'ENOENT') {
+                console.info('build.json not found - using defaults');
+                config = {
+                    'theme'  : 'GitHub-Dark',
+                    'color'  : '#008080',
+                    'image'  : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
+                    'tiled'  : true,
+                    'attach' : 'scroll',
+                    'tab'    : 4,
+                    'chrome' : false
+                };
+            }
+        }
+
+        getTheme = function () {
+            return config.theme.toLowerCase().replace(/\s+/g, '-');
+        };
 
         // ** set up build options **
         // do we need a check to see if the theme file exists?
@@ -75,58 +93,31 @@ module.exports = function (grunt) {
     }
 
     grunt.initConfig({
-
         pkg: grunt.file.readJSON('package.json'),
         config: config,
 
         'string-replace': {
             inline: {
-                files: {
-                    '<%= config.buildFile %>' : 'github-dark.css',
-                },
-                options: {
-                    replacements: '<%= config.replacements %>'
-                }
+                files:   { '<%= config.buildFile %>' : 'github-dark.css' },
+                options: { replacements: '<%= config.replacements %>' }
             },
             mark: {
-                files: {
-                    'github-dark.min.css' : 'github-dark.css',
-                },
-                options: {
-                    replacements: [{
-                        pattern     : /\/\*\[\[/gm,
-                        replacement : '/*![['
-                    }]
-                }
+                files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
+                options: { replacements: [{ pattern: /\/\*\[\[/gm, replacement: '/*![[' }]}
             },
             unmark: {
-                files: {
-                    'github-dark.min.css' : 'github-dark.min.css',
-                },
-                options: {
-                    replacements: [{
-                        pattern     : /\/\*\!\[\[/gm,
-                        replacement : '/*[['
-                    }]
-                }
+                files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
+                options: { replacements: [{ pattern: /\/\*\!\[\[/gm, replacement: '/*[[' }]}
             }
         },
-
         cssmin: {
             minify: {
-                files: {
-                    'github-dark.min.css': 'github-dark.min.css'
-                },
-                options: {
-                    keepSpecialComments: '*'
-                }
+                files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
+                options: { keepSpecialComments: '*' }
             }
         },
-
         watch: {
-            css: {
-                files: [ 'github-dark.css' ]
-            }
+            css: { files: [ 'github-dark.css' ] }
         }
     });
 
@@ -134,19 +125,22 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    // build custom userstyle using build.json
-    grunt.registerTask('default', ['string-replace']);
-
     // build userstyle for pasting into https://userstyles.org/styles/37035/github-dark
     grunt.registerTask('user', 'building userstyles.org file', function () {
         config.buildFile = 'github-dark-userstyle.build.css';
         config.replacements = config.replacements_user;
         // config.chrome = false;
-        grunt.task.run('string-replace');
+        grunt.task.run(['string-replace:inline']);
+    });
+    grunt.registerTask('usermin', 'building userstyles.org file', function () {
+        config.buildFile = 'github-dark-userstyle.build.css';
+        config.replacements = config.replacements_user;
+        // config.chrome = false;
+        grunt.task.run(['string-replace:inline', 'string-replace:mark', 'cssmin:minify', 'string-replace:unmark']);
     });
 
-    // Minify while keeping userstyles.org comments
-    grunt.registerTask('minify', ['string-replace:mark', 'cssmin:minify', 'string-replace:unmark']);
+    // build custom userstyle using build.json
+    grunt.registerTask('default', ['user']);
 
     // watch thingy
     grunt.registerTask('dev', ['watch']);
