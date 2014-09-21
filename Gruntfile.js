@@ -139,9 +139,6 @@ module.exports = function (grunt) {
         grunt.task.run(['string-replace:inline', 'string-replace:mark', 'cssmin:minify', 'string-replace:unmark']);
     });
 
-    // build custom userstyle using build.json
-    grunt.registerTask('default', ['user']);
-
     // watch thingy
     grunt.registerTask('dev', ['watch']);
 
