@@ -42,6 +42,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.9.0 (9/21/2014)
+
+* Add a grunt build process. See the [Build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more information.
+* Updated dependencies
+* Fix organization page: Fix selected plan
+* Commit compare: Fix branch tags & backgrounds
+* Inline code: Restore background to
+* Branches: Fix state label color
+
 #### Version 1.8.41 (9/18/2014)
 
 * Developer: numbered list border
@@ -52,18 +61,8 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Dev pages: fix code styling
 * Commit page: add style to button text "x changed files"
 * Code highlighting: force dark red background on syntax highlighting errors
-* Octotree support added. See [issue #180]()
+* Octotree support added. See [issue #180](https://github.com/StylishThemes/GitHub-Dark/issues/180)
 * File view: match folder icons to base color
 * Remove build & unused files
 * Update package.json
 * Update screenshots
-
-#### Version 1.8.39 (9/18/2014)
-
-* API pages: fix some boxes
-* Readme: remove svg buttons until caching is resolved
-* New repo page: lots of fixes
-* Issues:
-  * Improve pagination buttons
-  * Fix pending travis icons
-* Pull requests: fix composer form
