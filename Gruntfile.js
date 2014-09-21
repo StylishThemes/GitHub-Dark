@@ -147,9 +147,9 @@ module.exports = function (grunt) {
         grunt.task.run([
             'string-replace:inline',
             'string-replace:mark',
-            'cssmin:minify'//,
-            //'string-replace:unmark',
-            //'string-replace:fix'
+            'cssmin:minify',
+            'string-replace:unmark',
+            'string-replace:fix'
         ]);
     });
 
