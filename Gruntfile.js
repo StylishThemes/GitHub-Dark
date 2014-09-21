@@ -135,7 +135,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // build custom userstyle using build.json
-    grunt.registerTask('default', ['string-replace']);
+    grunt.registerTask('default', ['string-replace:inline']);
 
     // build userstyle for pasting into https://userstyles.org/styles/37035/github-dark
     grunt.registerTask('user', 'building userstyles.org file', function () {
