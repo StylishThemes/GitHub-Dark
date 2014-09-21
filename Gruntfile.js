@@ -108,6 +108,10 @@ module.exports = function (grunt) {
             unmark: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
                 options: { replacements: [{ pattern: /\/\*\!\[\[/gm, replacement: '/*[[' }]}
+            },
+            fix: {
+                files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
+                options: { replacements: [{ pattern: /\;\:\/\*\[\[/gm, replacement: ';/*[[' }]}
             }
         },
         cssmin: {
@@ -136,7 +140,13 @@ module.exports = function (grunt) {
         config.buildFile = 'github-dark-userstyle.build.css';
         config.replacements = config.replacements_user;
         // config.chrome = false;
-        grunt.task.run(['string-replace:inline', 'string-replace:mark', 'cssmin:minify', 'string-replace:unmark']);
+        grunt.task.run([
+            'string-replace:inline',
+            'string-replace:mark',
+            'cssmin:minify',
+            'string-replace:unmark',
+            'string-replace:fix'
+        ]);
     });
 
     // watch thingy
