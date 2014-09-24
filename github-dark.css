@@ -440,7 +440,7 @@
   .chromed-list-browser .error p, .list-browser-footer, .commandbar .choice:hover, .render-bar, #gollum-editor-help,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
   .commandbar .loading:hover, .comment-content, .commandbar .message, .boxed-group-inner,  #adv_code_search .search-page-label,
-  .timeline-comment, .sidebar-module, #contributors-master svg.viz,
+  .timeline-comment, .sidebar-module, #contributors-master svg.viz, .diff-table .line-comments,
   svg.spark, svg.capped-card-content, body.api .content tbody, .markdown-format img, .mini-repo-list,
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu, .tree-browser td, .tree-browser .alt td,
@@ -471,7 +471,7 @@
   #main, .capped-box, .unread_count, #browser table th, .markdown-format table th, .session-device, .profilecols ul.stats li strong,
   #files .file .data, table.upgrades tr.current td, .definitions, .commit-tease .commit-meta, .discussion-topic-header, .facebox-popup,
   .timeline-commits-minimal .commit-icon .octicon, .timeline-commits .commit-icon .octicon, .upload-progress, .search-results-listing em,
-  .inline-comments, ol.steps li, .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,
+   ol.steps li, .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,
   #wiki-history table td, .commit.file-history-tease, .menu a.selected, .gist .gist-file .gist-data, .repository-lang-stats,
   #message.major, .branch-status, .logo-box, .commit-form, .markdown-example .rendered, .team-grid .team-members,
   .diagram-icon:not(.active), table.capped-list th, .ace_active-line, .ace_gutter-active-line, .overall-summary,
@@ -498,8 +498,8 @@
   }
   /* Darkest background (#222), leave image, with border */
   #watchers li, .browser .listing, .item, .context-pane, .context-loader, .sidebar .module, .tip-body, #assignee, .rule,
-  .sidebar-module > ul, .commit_oneline td, #footer-push, .notifications th, .content table th, .inline-comments .tabnav,
-  .comparison-list, .comparison-list .title, .repo-collection>ul, #graph_data .tab.selected, .line-comments, .full-width-divider,
+  .sidebar-module > ul, .commit_oneline td, #footer-push, .notifications th, .content table th,
+  .comparison-list, .comparison-list .title, .repo-collection>ul, #graph_data .tab.selected, .full-width-divider,
   h3.conversation-list-heading strong, .file-commit-form .commit-form, .thread-subscription-status,
   .blog-feedback {
     background-color: #222 !important;
@@ -585,13 +585,13 @@
     border: 0 !important;
   }
   /* Panel background (#333), no image, with border */
-  .editbox, .editbox .body, .commentstyle, #issues .display, .inline-comment-form,
+  .editbox, .editbox .body, .commentstyle, #issues .display,
   #issues .display .admin, #issues .labels .list li, .issue .summary, .hidden-text-expander a, .view-modes,
   .standard_form, #reply_body, #commit div, #commit td, #commit tr, #commit .envelope, .file-minibutton,
   .context-pane .title, .browser .listing:hover, #dashboard .repos, .date_selector .button,
   .file-box .icon, .list-module .list-body, .list-module a, .label-permissions, .tree-browser th,
   .browser .listing.closed, .starting-comment, .section-nav a:hover, .chzn-drop,
-  .module .inner, .inline-comment-form a.selected, .team-repositories-blankslate,
+  .module .inner, .team-repositories-blankslate,
   .discussion-event-status-head_ref_deleted .discussion-item-icon, .pull-head {
     background: #333 none !important;
     border-color: #555 !important;
@@ -1302,7 +1302,7 @@
   .diff-line-pre {
     color: #ccc !important;
   }
-  .highlight .gc td {
+  .highlight .gc td, .diff-table .line-comments {
     border-top: 1px solid #333 !important;
     border-bottom: 1px solid #333 !important;
   }
