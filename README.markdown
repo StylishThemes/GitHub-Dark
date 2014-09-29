@@ -42,6 +42,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.9.1 (9/27/2014)
+
+* Readme: Adding back star/fork badges.
+* Pull request:
+  * Add unknown Travis build status yellow border.
+  * Tweak inline comment boxes.
+* User page: update styling for contribution counters.
+* Discussions: Fix 'assign self' link.
+* Inline default tile background. Fixes [issues #166](https://github.com/StylishThemes/GitHub-Dark/issues/166).
+* Notifications: Fix icon and header colors.
+* Gist:
+  * Fix dropdown menus.
+  * Fix image backgrounds.
+* Diffs: Fix inline comments border.
+
 #### Version 1.9.0 (9/21/2014)
 
 * Add a grunt build process. See the [Build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more information.
@@ -55,14 +70,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Developer: numbered list border
 * Code: fix blog code & add prefix code selectors to syntax highlighting themes
-
-#### Version 1.8.40 (9/18/2014)
-
-* Dev pages: fix code styling
-* Commit page: add style to button text "x changed files"
-* Code highlighting: force dark red background on syntax highlighting errors
-* Octotree support added. See [issue #180](https://github.com/StylishThemes/GitHub-Dark/issues/180)
-* File view: match folder icons to base color
-* Remove build & unused files
-* Update package.json
-* Update screenshots

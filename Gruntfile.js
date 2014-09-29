@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         pattern: /@-moz-document regexp\((.*)\) \{(\n|\r)+/,
         replacement: ''
     },{
-        pattern: '/*[[bg-choice]]*/ url(https://stylishthemes.github.io/GitHub-Dark/images/backgrounds/bg-tile1.png)',
+        pattern: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/,
         replacement: config.image
     },{
         pattern: '/*[[bg-options]]*/',
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
         pattern: /@-moz-document regexp\((.*)\) \{(\n|\r)+/,
         replacement: ''
     },{
-        pattern: '/*[[bg-choice]]*/ url(https://stylishthemes.github.io/GitHub-Dark/images/backgrounds/bg-tile1.png)',
+        pattern: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/,
         replacement: '/*[[bg-choice]]*/'
     },{
         pattern: /\/\*\[\[base-color\]\]\*\/ #4183C4/g,
