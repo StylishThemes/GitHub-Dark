@@ -42,6 +42,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.9.2 (10/2/2014)
+
+* Fullscreen editor: Remove border.
+* Auth form: Various improvements.
+* Gist:
+  * Fix comment field border.
+  * Fix comment form preview tab.
+* Notifications: read notifications are dimmer. Fixes [issue #183](https://github.com/StylishThemes/GitHub-Dark/issues/183).
+* Organization page: various tweaks.
+* Blame:
+  * Fix line number background.
+  * Fix highlight and author text color.
+* Commit log: Fix child avatar border.
+* Discussions: fix expander colors.
+
 #### Version 1.9.1 (9/27/2014)
 
 * Readme: Adding back star/fork badges.
@@ -65,8 +80,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Commit compare: Fix branch tags & backgrounds
 * Inline code: Restore background to
 * Branches: Fix state label color
-
-#### Version 1.8.41 (9/18/2014)
-
-* Developer: numbered list border
-* Code: fix blog code & add prefix code selectors to syntax highlighting themes
