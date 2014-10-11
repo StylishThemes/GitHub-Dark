@@ -3,6 +3,7 @@
 - Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css).
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe) and [Opera](https://addons.opera.com/en/extensions/details/stylish-for-opera/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
 - Use [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the different code color schemes.
+- Use a [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
 
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
@@ -42,6 +43,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.0 (10/11/2014)
+
+* Add Firefox Mobile styles
+  * Fixes [issue #185](https://github.com/StylishThemes/GitHub-Dark/issues/185)
+  * Add link to Firefox Mobile in readme
+* Settings: fix sidebar
+* Contributor popup: Fix user color
+* Releases: Fix tag color
+* Images:
+  * preview: Update borders
+  * preview: Add darker background. Fixes [issue #186](https://github.com/StylishThemes/GitHub-Dark/issues/186)
+  * Rendering: Tweak borders & background
+* ProTip: Darken code & linked code
+
 #### Version 1.9.3 (10/4/2014)
 
 * Fork: fix background fork target box.
@@ -71,27 +86,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix highlight and author text color.
 * Commit log: Fix child avatar border.
 * Discussions: fix expander colors.
-
-#### Version 1.9.1 (9/27/2014)
-
-* Readme: Adding back star/fork badges.
-* Pull request:
-  * Add unknown Travis build status yellow border.
-  * Tweak inline comment boxes.
-* User page: update styling for contribution counters.
-* Discussions: Fix 'assign self' link.
-* Inline default tile background. Fixes [issues #166](https://github.com/StylishThemes/GitHub-Dark/issues/166).
-* Notifications: Fix icon and header colors.
-* Gist:
-  * Fix dropdown menus.
-  * Fix image backgrounds.
-* Diffs: Fix inline comments border.
-
-#### Version 1.9.0 (9/21/2014)
-
-* Add a grunt build process. See the [Build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more information.
-* Updated dependencies
-* Fix organization page: Fix selected plan
-* Commit compare: Fix branch tags & backgrounds
-* Inline code: Restore background to
-* Branches: Fix state label color
