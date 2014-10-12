@@ -23,6 +23,7 @@ module.exports = function (grunt) {
     };
 
     // ** set up build options **
+    config.sourceFile = 'github-dark.css';
     // do we need a check to see if the theme file exists?
     config.themeFile = 'themes/pygments-' + getTheme() + '.min.css';
     // build file name
@@ -96,7 +97,7 @@ module.exports = function (grunt) {
 
         'string-replace': {
             inline: {
-                files:   { '<%= config.buildFile %>' : 'github-dark.css' },
+                files:   { '<%= config.buildFile %>' : '<%= config.sourceFile %>' },
                 options: { replacements: '<%= config.replacements %>' }
             },
             mark: {
