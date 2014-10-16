@@ -43,6 +43,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.1 (10/16/2014)
+
+* Loading icon:
+  * Optimized svg, removed white spaces updated encoding.
+  * Improved path symmetry.
+  * See [issue #166](https://github.com/StylishThemes/GitHub-Dark/issues/166).
+* Fixed progress barf
+* Commits: Remove inline comment border
+* Base color: change `background` to `background-color` to correctly minify the css ([ref](https://github.com/jakubpawlowicz/clean-css/issues/369))
+* User page: Restore stat count color
+* Issue search: Various fixes.
+
 #### Version 1.10.0 (10/11/2014)
 
 * Add Firefox Mobile styles
@@ -71,18 +83,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Main repo page: fix recently pushed branches notification
 * Compare: Match button text color to links
 * Fix readme & comment unstyled links
-
-#### Version 1.9.2 (10/2/2014)
-
-* Fullscreen editor: Remove border.
-* Auth form: Various improvements.
-* Gist:
-  * Fix comment field border.
-  * Fix comment form preview tab.
-* Notifications: read notifications are dimmer. Fixes [issue #183](https://github.com/StylishThemes/GitHub-Dark/issues/183).
-* Organization page: various tweaks.
-* Blame:
-  * Fix line number background.
-  * Fix highlight and author text color.
-* Commit log: Fix child avatar border.
-* Discussions: fix expander colors.
