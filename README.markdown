@@ -43,6 +43,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.2 (10/25/2014)
+
+* Repo view: remove breadcrumb background
+* Global: Change button hovers to grey, fix mute icons
+* Issues: Fix pagination buttons
+* Pull requests: Fix repo color in title
+* Commit: Improve browse button
+* Commit log: Improve outlined buttons a lot
+
 #### Version 1.10.1 (10/16/2014)
 
 * Loading icon:
@@ -68,18 +77,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * preview: Add darker background. Fixes [issue #186](https://github.com/StylishThemes/GitHub-Dark/issues/186)
   * Rendering: Tweak borders & background
 * ProTip: Darken code & linked code
-
-#### Version 1.9.3 (10/4/2014)
-
-* Fork: fix background fork target box.
-* Notifications: Fix PR icon color and age text.
-* Global:
-  * Make green panels more readable.
-  * Tweak green colors.
-  * Replace some yellow styles with brown. Fixes [issue #184](https://github.com/StylishThemes/GitHub-Dark/issues/184).
-  * Add missing important flag
-  * Fix alert (blue tips) text & link colors to make them more readable.
-* Code view: Make linked highlight more visible.
-* Main repo page: fix recently pushed branches notification
-* Compare: Match button text color to links
-* Fix readme & comment unstyled links
