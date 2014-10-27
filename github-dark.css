@@ -205,7 +205,8 @@
   .timeline-commits .commit-meta .octicon, .file .meta-divider, .avatar-stack.multiple-avatars:before,
   #feedHandler, .discussion-sidebar-item .thread-subscription-status, .boxed-group.application-show-group .logo-upload,
   .diagram-icon-small, .commits-listing .commit-group-title .octicon-git-commit, #readme .highlight,
-  .ace-github, .add-member-team-list.table-list, .theme-picker, .avatar-stack .avatar, .boxed-group, .full-commit .button-outline {
+  .ace-github, .add-member-team-list.table-list, .theme-picker, .avatar-stack .avatar, .boxed-group, .full-commit .button-outline,
+  .prose-diff > .markdown-body ins {
     background: transparent !important;
   }
   /* Redeem Page */
@@ -851,7 +852,8 @@
   /* ProTip(tm) */
   kbd, .kbd, p.tip strong.protip, .boxed-profile .profile-preview .vcard-fullname, .button.primary:hover, .minibutton.primary:hover,
   .integrations .site-footer a, .integrations .site-footer .mega-octicon:before, .diagram-icon.active .mega-octicon:before,
-  .select-menu-item.select-menu-action .octicon, .add-line-comment, a.state, .button-outline:hover {
+  .select-menu-item.select-menu-action .octicon, .add-line-comment, a.state, .button-outline:hover,
+  .prose-diff.collapsed .rich-diff-level-zero.expandable:hover:before {
     color: #fff !important;
   }
   /* Bright text */
@@ -999,7 +1001,7 @@
   .discussion-item .timestamp, .branch-status a, .branch-status .divider, .news .alert .octicon, .news .alert .mega-octicon,
   .blankslate > .mega-octicon, .repo-list-meta, #footer .mega-icon:hover:before, a.discussion-item-help, .page-new-repo .license-info,
   .notification-actions .button-link, .commit-info .commit-meta, .notifications .read .type-icon, .notification-actions .age,
-  .list-item .byline, .issue-list-meta {
+  .list-item .byline, .issue-list-meta, .prose-diff.collapsed .rich-diff-level-zero.expandable:before {
     color: #666 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before, .mini-icon-public-repo:before, .mini-icon-pull-request, .mini-icon-remove-close,
@@ -1069,7 +1071,7 @@
   a.danger, .minibutton.danger, .button.danger, .minibutton.danger span, .closed.mini-icon, .closed.mega-octicon, .deletions,
   .closed.mega-octicon:before, .closed.octicon, .cdel, .gd .diff-line-num, .status-failure, .authors-and-code .deletions,
   .diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
-  .markdown-body .removed *, .status-failure .octicon, .minibutton.danger .octicon:before, .icon-for-failure,
+  .status-failure .octicon, .minibutton.danger .octicon:before, .icon-for-failure,
   ul.summary-stats li .octicon-issue-closed, .branches .branch-delete .octicon, #toc .octicon-diff-removed,
   .file .meta .octicon-button.danger:hover, .pagehead-actions .octicon-mute {
     color: #c31e16 !important;
@@ -1350,8 +1352,10 @@
   }
   /* git diff line additions (dark green) */
   .highlight .gi, .gi .diff-line-code, .gi .diff-line-code pre, .blob-code-addition, .blob-num-addition,
-  .prose-diff > .markdown-body .changed ins, .prose-diff > .markdown-body .changed ins code,
-  .prose-diff > .markdown-body .changed ins pre, .prose-diff > .markdown-body .changed .added {
+  .prose-diff .changed ins, .prose-diff .changed ins code, .prose-diff .changed ins pre,
+  .prose-diff .changed .added, .prose-diff > .markdown-body ins pre,
+  .prose-diff > .markdown-body ins code, .prose-diff > .markdown-body ins > div,
+  .prose-diff > .markdown-body ins > p {
     background: #030 !important;
     border-color: #080 !important;
   }
