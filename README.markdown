@@ -43,6 +43,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.3 (10/29/2014)
+
+* Global:
+  * Fix clipboard button color
+  * Revert removing `<a>` style
+  * Try a flat header
+  * Add slight box-shadow to selected input elements
+* Notifications: Fix filter colors
+* New issue: make form background colors consistent. Fixes [issue #190](https://github.com/StylishThemes/GitHub-Dark/issues/190).
+* Commits: fix bottom border on commit-groups
+* Gist: fix background on gist file.
+* Side navigation, update styling. Fixes [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191).
+
 #### Version 1.10.2 (10/25/2014)
 
 * Repo view: remove breadcrumb background
@@ -63,17 +76,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Base color: change `background` to `background-color` to correctly minify the css ([ref](https://github.com/jakubpawlowicz/clean-css/issues/369))
 * User page: Restore stat count color
 * Issue search: Various fixes.
-
-#### Version 1.10.0 (10/11/2014)
-
-* Add Firefox Mobile styles
-  * Fixes [issue #185](https://github.com/StylishThemes/GitHub-Dark/issues/185)
-  * Add link to Firefox Mobile in readme
-* Settings: fix sidebar
-* Contributor popup: Fix user color
-* Releases: Fix tag color
-* Images:
-  * preview: Update borders
-  * preview: Add darker background. Fixes [issue #186](https://github.com/StylishThemes/GitHub-Dark/issues/186)
-  * Rendering: Tweak borders & background
-* ProTip: Darken code & linked code
