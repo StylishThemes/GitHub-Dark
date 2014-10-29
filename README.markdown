@@ -43,6 +43,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.4 (10/29/2014)
+
+* Side navigation: add back sunken-menu-contents selector for gist pages. See [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191)
+
 #### Version 1.10.3 (10/29/2014)
 
 * Global:
