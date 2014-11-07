@@ -43,6 +43,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.5 (11/6/2014)
+
+* Blame: darken line numbers cell.
+* Diff: Fix expander colors.
+* Editor: Add trasnparency to top. Fixes [issue #193](https://github.com/StylishThemes/GitHub-Dark/issues/193).
+* Profile: Side menu headers & selected indicator style.
+* Popup: Dark popup footer style.
+* Global: Remove side menu selected border styling.
+* Image preview: Add dark grid background to all images.
+* Markdown: Slightly brighter horizontal rule.
+* Gist: Fix file icon.
+* Add .editorconfig file.
+
 #### Version 1.10.4 (10/29/2014)
 
 * Side navigation: add back sunken-menu-contents selector for gist pages. See [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191)
@@ -59,24 +72,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Commits: fix bottom border on commit-groups
 * Gist: fix background on gist file.
 * Side navigation, update styling. Fixes [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191).
-
-#### Version 1.10.2 (10/25/2014)
-
-* Repo view: remove breadcrumb background
-* Global: Change button hovers to grey, fix mute icons
-* Issues: Fix pagination buttons
-* Pull requests: Fix repo color in title
-* Commit: Improve browse button
-* Commit log: Improve outlined buttons a lot
-
-#### Version 1.10.1 (10/16/2014)
-
-* Loading icon:
-  * Optimized svg, removed white spaces updated encoding.
-  * Improved path symmetry.
-  * See [issue #166](https://github.com/StylishThemes/GitHub-Dark/issues/166).
-* Fixed progress barf
-* Commits: Remove inline comment border
-* Base color: change `background` to `background-color` to correctly minify the css ([ref](https://github.com/jakubpawlowicz/clean-css/issues/369))
-* User page: Restore stat count color
-* Issue search: Various fixes.
