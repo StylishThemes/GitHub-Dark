@@ -8,11 +8,14 @@
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
 
-## Available color schemes
+## [Available color schemes](http://stylishthemes.github.io/GitHub-Dark/)
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
-| 256 Jungle | 3024 Night | Anotherdark | Asmanian-blood | Birds of Paradise |
+| 256 Jungle | 3024 Night | Anotherdark | Asmanian-blood | Base16-3024 |
+| Base16-applepips | Base16-chalk | Base16-default | Base16-eighties | Base16-greenscreen |
+| Base16-harper | Base16-kimbie | Base16-mocha | Base16-monokai | Base16-ocean |
+| Base16-paraiso | Base16-railscasts | Base16-solarized | Base16-tomorrow | Birds of Paradise |
 | Blacksea | Brookstream | BusyBee | Candycode | Darcula |
 | Dark | Dark2 | DarkBlue2 | DarkBone | DarkBurn |
 | DarkDevel | DarkOcean | DarkRobot | DarkSpectrum | DarkZ |
