@@ -102,11 +102,21 @@ module.exports = function (grunt) {
             },
             mark: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
-                options: { replacements: [{ pattern: /\/\*\[\[/gm, replacement: '/*![[' }]}
+                options: {
+                    replacements: [
+                        { pattern: /\/\*\[\[/gm, replacement: '/*![[' },
+                        { pattern: '/* AGENT_SHEET */', replacement: '/*! AGENT_SHEET */' }
+                    ]
+                }
             },
             unmark: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
-                options: { replacements: [{ pattern: /\/\*\!\[\[/gm, replacement: '/*[[' }]}
+                options: {
+                    replacements: [
+                        { pattern: /\/\*\!\[\[/gm, replacement: '/*[[' },
+                        { pattern: '/*! AGENT_SHEET */', replacement: '/* AGENT_SHEET */' }
+                    ]
+                }
             },
             fix: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
