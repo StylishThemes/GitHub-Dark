@@ -113,10 +113,27 @@ module.exports = function (grunt) {
                 options: { replacements: [{ pattern: /\;\:\/\*\[\[/gm, replacement: ';/*[[' }]}
             }
         },
+        clean: {
+          themes: {
+            src: [ 'themes/*.min.css' ]
+          }
+        },
         cssmin: {
             minify: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
                 options: { keepSpecialComments: '*' }
+            },
+            themes: {
+                files:   [{
+                    expand : true,
+                    cwd : 'themes/src/',
+                    src : '*.css',
+                    dest : 'themes/',
+                    ext : '.min.css'
+                }],
+                options: {
+                    keepSpecialComments: '*'
+                }
             }
         },
         wrap: {
@@ -134,6 +151,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-wrap');
 
@@ -172,6 +190,14 @@ module.exports = function (grunt) {
             'string-replace:unmark',
             'string-replace:fix',
             'wrap'
+        ]);
+    });
+
+    // build custom minified GitHub-Dark style
+    grunt.registerTask('themes', 'Rebuild minified theme files', function(){
+        grunt.task.run([
+            'clean',
+            'cssmin:themes'
         ]);
     });
 
