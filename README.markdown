@@ -46,6 +46,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.10.6 (11/8/2014)
+
+* Themes
+  * Added missing style to all theme files. Fixes [issue #195](https://github.com/StylishThemes/GitHub-Dark/issues/195).
+  * Added grunt theme build to minify css & made comments permanent.
+  * Added 15 (dark only) themes from https://github.com/idleberg/base16-pygments.
+* Repo: Modify .editorconfig to set a root & only apply to css.
+
 #### Version 1.10.5 (11/6/2014)
 
 * Blame: darken line numbers cell.
@@ -62,16 +70,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.10.4 (10/29/2014)
 
 * Side navigation: add back sunken-menu-contents selector for gist pages. See [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191)
-
-#### Version 1.10.3 (10/29/2014)
-
-* Global:
-  * Fix clipboard button color
-  * Revert removing `<a>` style
-  * Try a flat header
-  * Add slight box-shadow to selected input elements
-* Notifications: Fix filter colors
-* New issue: make form background colors consistent. Fixes [issue #190](https://github.com/StylishThemes/GitHub-Dark/issues/190).
-* Commits: fix bottom border on commit-groups
-* Gist: fix background on gist file.
-* Side navigation, update styling. Fixes [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191).
