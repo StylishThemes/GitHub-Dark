@@ -344,7 +344,7 @@
   #gollum-editor-help-parent, #gollum-editor-help-list, .markdown-format code, .auth-section, .commit-sha,
   .comment-body, .mini-repo-list-item, .advanced-search-form fieldset, .contrib-column, .org-header .edit-org,
   .pulse-summary .summary-box, .pulse-summary .summary-box li:first-child, .list-item + .list-item, .list-item + .list-heading,
-  .list-heading + .list-item, .issue-list-item {
+  .list-heading + .list-item, .issue-list-item, .ace_gutter {
     border-color: #333 !important;
   }
   .pagination a, .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -490,7 +490,7 @@
   .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,
   #wiki-history table td, .commit.file-history-tease, .menu a.selected, .gist .gist-file .gist-data, .repository-lang-stats,
   #message.major, .branch-status, .logo-box, .commit-form, .markdown-example .rendered, .team-grid .team-members,
-  .diagram-icon:not(.active), table.capped-list th, .ace_active-line, .ace_gutter-active-line, .overall-summary,
+  .diagram-icon:not(.active), table.capped-list th, .overall-summary,
   .scope-badge, .filter-bar, .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell,
   .composer-infobar {
     background: #222 !important;
@@ -544,7 +544,7 @@
   .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
   .owner-select-target, .divider .blob-code div.highlight,  pre div[style^="background-color: rgb(248, 238, 199);"],
   .highlight td[style^="background-color: rgb(248, 238, 199);"] {
-    background: #282828 !important;
+    background: #222 !important;
   }
   .rss-subscribe:hover, div#common-issues ul li a:hover {
     background-color: #282828 !important;
@@ -1619,7 +1619,109 @@
 
   /* syntax-theme */
   .highlight {
-    background: #111 !important;
+    background: #141414 !important;
+    color: #ccc !important;
+  }
+  /* string, regexp slash, ? */
+  .highlight .pl-cos,.highlight .pl-ent,.highlight .pl-md,.highlight .pl-mdhf,.highlight .pl-ml,.highlight .pl-pdc1,
+  .highlight .pl-pds,.highlight .pl-s1,.highlight .pl-scp,.highlight .pl-sol {
+    color: #8F9D6A !important;
+  }
+  .highlight .pl-mb,.highlight .pl-pdb {
+    color: #8F9D6A !important;
+    font-weight: bold !important;
+  }
+  /* variable, regexp, ? */
+  .highlight .pl-coc,.highlight .pl-entl,.highlight .pl-entm,.highlight .pl-eoa,.highlight .pl-mai .pl-sf,
+  .highlight .pl-mm,.highlight .pl-pdv,.highlight .pl-sc,.highlight .pl-som,.highlight .pl-sr,.highlight .pl-v,
+  .highlight .pl-vpf {
+    color: #7587A6 !important;
+  }
+  .highlight .pl-mdr {
+    color: #7587A6 !important;
+    font-weight: bold !important;
+  }
+  /* keyword, ? */
+  .highlight .pl-k,.highlight .pl-mc,.highlight .pl-mr,.highlight .pl-ms,
+  .highlight .pl-sok,.highlight .pl-st {
+    color: #CDA869 !important;
+  }
+  .highlight .pl-mi,.highlight .pl-pdi {
+    color: #CDA869 !important;
+    font-style: italic !important;
+  }
+  /* type */
+  .highlight .pl-s {
+    color: #F9EE98 !important;
+  }
+  /* operator */
+  .highlight .pl-ko, .highlight .pl-kolp {
+    color: #CDA869 !important;
+  }
+  /* function ? */
+  .highlight .pl-ef,.highlight .pl-enf,.highlight .pl-enm,.highlight .pl-entc,.highlight .pl-eoi,
+  .highlight .pl-smc {
+    color: #AC885B !important;
+  }
+  .highlight .pl-enti {
+    color: #AC885B !important;
+    font-weight: bold !important;
+  }
+  /* member function */
+  .highlight .pl-sf {
+    color: #DAD085 !important;
+  }
+  /* constant, number, ? */
+  .highlight .pl-c1,.highlight .pl-cn,.highlight .pl-pse,.highlight .pl-pse .pl-s2,.highlight .pl-vi {
+    color: #CF6A4C !important;
+  }
+  /* escape in string, ? */
+  .highlight .pl-cce,.highlight .pl-enc,.highlight .pl-kou,.highlight .pl-mq {
+    color: #CF6A4C !important;
+  }
+  /* comment ? */
+  .highlight .pl-c,.highlight .pl-pdc {
+    color:#5F5A60 !important;
+    font-style: italic !important;
+  }
+
+  /* Unknown classes below */
+  .highlight .pl-eoac,.highlight .pl-mdht,.highlight .pl-mi1,.highlight .pl-mri,.highlight .pl-va,.highlight .pl-vpu {
+    color: #008080 !important;
+  }
+  .highlight .pl-ens,.highlight .pl-eoai,.highlight .pl-kos,.highlight .pl-mh .pl-pdh,.highlight .pl-mp,
+  .highlight .pl-pde,.highlight .pl-stp {
+    color: #458 !important;
+  }
+  .highlight .pl-mp1 .pl-sf {
+    color: #458 !important;
+    font-weight: bold !important;
+  }
+  .highlight .pl-ms1 {
+    background-color: #f5f5f5 !important;
+  }
+  .highlight .pl-mdh,.highlight .pl-mdi {
+    font-weight: bold !important;
+  }
+  .highlight .pl-s2 {
+    color: #333 !important;
+  }
+  .highlight .pl-ii {
+    background-color: #df5000 !important;
+    color: #fff !important;
+  }
+  .highlight .pl-ib {
+    background-color: #f93 !important;
+  }
+  .highlight .pl-id {
+    background-color: #a31515 !important;
+    color: #fff !important;
+  }
+  .highlight .pl-iu {
+    background-color: #b4b7b4 !important;
+  }
+  .highlight .pl-mo {
+    color: #969896 !important;
   }
 
   /*[[ace-theme]]*/
