@@ -8,26 +8,27 @@ module.exports = function (grunt) {
     } catch (err) {
         console.info('build.json not found - using defaults');
         config = {
-            'theme'  : 'GitHub-Dark',
-            'color'  : '#008080',
-            'image'  : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
-            'tiled'  : true,
-            'attach' : 'scroll',
-            'tab'    : 4,
-            'chrome' : false
+            'theme'    : 'Twilight',
+            'color'    : '#008080',
+            'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
+            'tiled'    : true,
+            'attach'   : 'scroll',
+            'tab'      : 4,
+            'chrome'   : false
         };
     }
 
     getTheme = function () {
-        return config.theme.toLowerCase().replace(/\s+/g, '-');
+        return (config.theme || '').toLowerCase().replace(/\s+/g, '-');
     };
 
     // ** set up build options **
     config.sourceFile = 'github-dark.css';
-    // do we need a check to see if the theme file exists?
-    config.themeFile = 'themes/pygments-' + getTheme() + '.min.css';
+    file = getTheme();
+    // setting "ace" to an empty string, or "default" will leave the default GitHub-base16 theme in place, with a dark background
+    config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
     // build file name
-    config.buildFile = 'github-dark-' + getTheme() + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
+    config.buildFile = 'github-dark-' + (file ? file : 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
     // background options
     config.bgOptions = config.tiled ?
         'background-repeat: repeat !important; background-size: auto !important; background-position: left top !important;' :
@@ -37,7 +38,7 @@ module.exports = function (grunt) {
         'background-attachment: fixed !important;';
 
     // Don't include closing bracket for a chrome build
-    config.newTheme = '<%= grunt.file.read("' + config.themeFile + '") %>';
+    config.newTheme = config.themeFile ? '<%= grunt.file.read("' + config.themeFile + '") %>' : '';
 
     // get @-moz prefix
     file = grunt.file.read("github-dark.css").match(/(@-moz-document regexp\((.*)+\) \{(\n|\r)+)/);
@@ -63,12 +64,16 @@ module.exports = function (grunt) {
         pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
         replacement: config.tab
     },{
-        // remove default syntax theme AND closing bracket
-        pattern: /\s+\/\* GitHub-Dark syntax highlighting(.*(\n|\r))+}$/m,
+        // remove default syntax themes AND closing bracket
+        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
         replacement: ''
+//    },{
+//        pattern: '/*[[syntax-theme]]*/',
+//        // add selected theme
+//        replacement: config.newTheme
     },{
-        pattern: '/*[[pygments-theme]]*/',
-        // add selected theme + closing bracket (if not chrome)
+        pattern: '/*[[ace-theme]]*/',
+        // add selected theme
         replacement: config.newTheme
     }];
 
@@ -87,7 +92,7 @@ module.exports = function (grunt) {
         replacement: '/*[[tab-size]]*/'
     },{
         // remove default syntax theme AND closing bracket
-        pattern: /\s+\/\* GitHub-Dark syntax highlighting(.*(\n|\r))+}$/m,
+        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
         replacement: ''
     }];
 
@@ -136,7 +141,7 @@ module.exports = function (grunt) {
             themes: {
                 files:   [{
                     expand : true,
-                    cwd : 'themes/src/',
+                    cwd : 'themes/ace-themes/',
                     src : '*.css',
                     dest : 'themes/',
                     ext : '.min.css'
