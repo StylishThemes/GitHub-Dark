@@ -66,11 +66,7 @@ module.exports = function (grunt) {
     },{
         // remove default syntax themes AND closing bracket
         pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
-        replacement: '',
-    },{
-        pattern: '/*[[language-colors]]*/',
-        // replace with contents of language colors
-        replacement: '<%= grunt.file.read("github-dark-language-colors.css") %>'
+        replacement: ''
 //    },{
 //        pattern: '/*[[syntax-theme]]*/',
 //        // add selected theme
