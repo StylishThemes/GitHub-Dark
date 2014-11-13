@@ -2,31 +2,22 @@
 
 - Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css).
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe) and [Opera](https://addons.opera.com/en/extensions/details/stylish-for-opera/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
-- Use [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the different code color schemes.
+- <del>Use [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the different code color schemes</del>. Once we figure out how to convert these old themes to the new layout, this will get updated.
+- Use [this demo](http://ace.c9.io/tool/mode_creator.html) to visualize the different Ace editor syntax highlighting themes.
 - Use a [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
+
 
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
 
-## [Available color schemes](http://stylishthemes.github.io/GitHub-Dark/)
+## [Available Ace editor color schemes](http://ace.c9.io/tool/mode_creator.html)
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
-| 256 Jungle | 3024 Night | Anotherdark | Asmanian-blood | Base16-3024 |
-| Base16-applepips | Base16-chalk | Base16-default | Base16-eighties | Base16-greenscreen |
-| Base16-harper | Base16-kimbie | Base16-mocha | Base16-monokai | Base16-ocean |
-| Base16-paraiso | Base16-railscasts | Base16-solarized | Base16-tomorrow | Birds of Paradise |
-| Blacksea | Brookstream | BusyBee | Candycode | Darcula |
-| Dark | Dark2 | DarkBlue2 | DarkBone | DarkBurn |
-| DarkDevel | DarkOcean | DarkRobot | DarkSpectrum | DarkZ |
-| DarkerDesert | Desert | Deveiate | Digerati | Dim |
-| Dim2 | Dracula | Freya | Fruity | GitHub-Dark |
-| Herald | Idle Fingers | Inkpot | JellyBeans | Monokai |
-| Mustang | Native | Neverland | No Quarter | Pastels on Dark |
-| Peaksea | Railscasts | Rdark | Refactor | Sahara |
-| Slate | Solarized Dark | Synic | Tomorrow Night | Tomorrow Night Blue |
-| Tomorrow Night Bright | Tomorrow Night Eighties | Twilight | Up | Vim |
-| Vitamins | Wombat | Zenburn | Zenesque |  |
+| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers |
+| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai |
+| Pastel on Dark | Solarized Dark | Terminal | Tomorrow Night | Tomorrow Night Blue |
+| Tomorrow Night Bright | Tomorrow Night Eigthies | Twilight | Vibrant Ink | |
 
 ## Notes
 
@@ -45,6 +36,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Changelog
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.11.0 (11/12/2014)
+
+* Themes
+  * Archived pygments themes as GitHub is no longer using Pygments.
+  * Add 19 dark Ace editor themes. Thanks [ThePenultimateOne](https://github.com/ThePenultimateOne)!
+  * Set Twilight as default.
+* Build:
+  * Preserve version number & agent sheet comments when minifying.
+  * Update grunt to only build ace themes.
+* Branches: Fix branch diff meter.
+* Ace Editor: Add, but later reverted update to background & keyword style in lieu of adding Ace theme support. See [issue #196](https://github.com/StylishThemes/GitHub-Dark/issues/196).
+* Filter lists: Fix count color on selected item.
 
 #### Version 1.10.6 (11/8/2014)
 
@@ -66,7 +70,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Markdown: Slightly brighter horizontal rule.
 * Gist: Fix file icon.
 * Add .editorconfig file.
-
-#### Version 1.10.4 (10/29/2014)
-
-* Side navigation: add back sunken-menu-contents selector for gist pages. See [issue #191](https://github.com/StylishThemes/GitHub-Dark/issues/191)
