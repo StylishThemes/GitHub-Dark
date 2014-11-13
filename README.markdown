@@ -37,6 +37,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.1 (11/13/2014)
+
+* Userstyles has increased its size limit to 200k!
+  * Language colors: removed and restored to get it under 100k
+  * Shadow: text & box shadow selectors modified then restored.
+* Diffs: #181818 background.
+
 #### Version 1.11.0 (11/12/2014)
 
 * Themes
@@ -57,16 +64,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Added grunt theme build to minify css & made comments permanent.
   * Added 15 (dark only) themes from https://github.com/idleberg/base16-pygments.
 * Repo: Modify .editorconfig to set a root & only apply to css.
-
-#### Version 1.10.5 (11/6/2014)
-
-* Blame: darken line numbers cell.
-* Diff: Fix expander colors.
-* Editor: Add trasnparency to top. Fixes [issue #193](https://github.com/StylishThemes/GitHub-Dark/issues/193).
-* Profile: Side menu headers & selected indicator style.
-* Popup: Dark popup footer style.
-* Global: Remove side menu selected border styling.
-* Image preview: Add dark grid background to all images.
-* Markdown: Slightly brighter horizontal rule.
-* Gist: Fix file icon.
-* Add .editorconfig file.
