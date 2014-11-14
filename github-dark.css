@@ -160,10 +160,7 @@
     position: relative;
     top: -1.5px;
   }
-  /* === show === */
-  .highlight span.gh, .highlight span.gu {
-    display: block !important;
-  }
+
   /* === no margin === */
   #dashboard {
     margin: 0 !important;
@@ -1334,7 +1331,7 @@
     color: #D26911 !important;
   }
   /* secret gists */
-  .secret .mega-octicon:before, .page-new-repo div.form-checkbox .octicon-lock:before, .gist .highlight tr span.gu {
+  .secret .mega-octicon:before, .page-new-repo div.form-checkbox .octicon-lock:before {
     color:#a1882b !important;
   }
   /* diff highlighting (no syntax highlight) */
@@ -1342,7 +1339,7 @@
   .diff-line-pre {
     color: #ccc !important;
   }
-  .highlight .gc td, .diff-table .line-comments {
+  .diff-table .line-comments {
     border-top: 1px solid #333 !important;
     border-bottom: 1px solid #333 !important;
   }
@@ -1353,14 +1350,13 @@
     border-top: none !important;
   }
   /* light grey - breaks in diff (with line numbers) */
-  .highlight .gc td, .highlight .gc pre, .gist .highlight tr .gu, .highlight tr .gh,
   .highlight .expandable-line-num, .highlight .diff-line-num-hunk, .highlight .diff-line-code-hunk,
   .highlight .expandable-line-code {
     background: #222 !important;
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .highlight .gi, .gi .diff-line-code, .gi .diff-line-code pre, .blob-code-addition, .blob-num-addition,
+  .blob-code-addition, .blob-num-addition,
   .prose-diff .changed ins, .prose-diff .changed ins code, .prose-diff .changed ins pre,
   .prose-diff .changed .added, .prose-diff > .markdown-body ins pre,
   .prose-diff > .markdown-body ins code, .prose-diff > .markdown-body ins > div,
@@ -1369,7 +1365,7 @@
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
-  .highlight .gd, .gd .diff-line-code, .blob-code-deletion, .blob-num-deletion,
+  .blob-code-deletion, .blob-num-deletion,
   .prose-diff > .markdown-body .changed del, .prose-diff > .markdown-body .changed del pre,
   .prose-diff > .markdown-body .changed del code, .prose-diff > .markdown-body .changed del > div,
   .prose-diff > .markdown-body .changed .removed, .prose-diff > .markdown-body .changed .removed pre,
@@ -1382,19 +1378,11 @@
     background: #440 !important;
     border-color: #880 !important;
   }
-  /* git diff inline additions (green) */
-  .highlight .gi {
-    color:#589819 !important;
-  }
-  .highlight tr.gi .x, .highlight tr .gi .x, .blob-code-addition .x {
+  .blob-code-addition .x {
     background: #252 !important;
     color: #eee !important;
   }
-  /* git diff inline deletions (red) */
-  .highlight .gd {
-    color: #d22323 !important;
-  }
-  .highlight tr.gd .x, .highlight tr .gd .x, .blob-code-deletion .x {
+  .blob-code-deletion .x {
     background: #622 !important;
     color: #eee !important;
   }
