@@ -2,10 +2,8 @@
 
 - Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css).
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe) and [Opera](https://addons.opera.com/en/extensions/details/stylish-for-opera/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
-- <del>Use [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the different code color schemes</del>. Once we figure out how to convert these old themes to the new layout, this will get updated.
-- Use [this demo](http://ace.c9.io/tool/mode_creator.html) to visualize the different Ace editor syntax highlighting themes.
+- **NOTE**: Not all themes are available, once we figure out how to convert the old pygments themes to the new layout you will see the updates in [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the available code color schemes.
 - Use a [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
-
 
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
