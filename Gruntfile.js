@@ -141,7 +141,7 @@ module.exports = function (grunt) {
             themes: {
                 files:   [{
                     expand : true,
-                    cwd : 'themes/ace-themes/',
+                    cwd : 'themes/src/',
                     src : '*.css',
                     dest : 'themes/',
                     ext : '.min.css'
