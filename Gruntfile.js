@@ -72,7 +72,7 @@ module.exports = function (grunt) {
 //        // add selected theme
 //        replacement: config.newTheme
     },{
-        pattern: '/*[[ace-theme]]*/',
+        pattern: '/*[[syntax-theme]]*/',
         // add selected theme
         replacement: config.newTheme
     }];
