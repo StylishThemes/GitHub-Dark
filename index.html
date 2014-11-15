@@ -84,15 +84,12 @@
 	}
 	/* Ace editor */
 	.ace_marker-layer .ace_active-line {
-		position: absolute;
+		position: relative;
 		z-index: 2;
 	}
-	.ace_content {
-		position: absolute;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		min-width: 100%;
+	.ace_text-layer {
+		position: relative;
+		margin-top: -17.3px;
 	}
 	</style>
 
@@ -915,7 +912,8 @@
 	<label class="wrapper">
 		<input type="checkbox" class="popup">
 		<h3>Ace Editor (Javascript)</h3>
-		<div class="highlight ace_editor">
+		<div class="highlight">
+			<div class="ace_editor">
 			<div class="ace_content" style="margin-top: 0px; width: 884px; height: 496.54545211792px; margin-left: 0px;">
 				<div class="ace_layer ace_print-margin-layer">
 					<div class="ace_print-margin" style="left: 537.8181640625px; visibility: hidden;"></div>
@@ -1008,6 +1006,7 @@
 				<div class="ace_layer ace_cursor-layer ace_hidden-cursors">
 					<div class="ace_cursor" style="left: 16.5977270507813px; top: 0px; width: 6.59772705078125px; height: 17.27272605896px;"></div>
 				</div>
+			</div>
 			</div>
 		</div>
 	</label>
@@ -1794,7 +1793,6 @@ A display-style equation is shown below:
 
 		</div>
 	</label>
-
 
 </body>
 </html>
