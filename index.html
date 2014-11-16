@@ -63,7 +63,8 @@
     display:block;
   }
   /* Gist styles from github-dark.css; slightly tweaked to match GitHub */
-  .highlight .file-diff-line:hover td, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+  .highlight .file-diff-line:hover td, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age),
+  pre div:hover, .diff-table tr:hover pre {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
   }
@@ -683,7 +684,7 @@
   <label class="wrapper gist">
     <input type="checkbox" class="popup">
     <h3>Gist Diff</h3>
-    <div class="highlight file-data diff-data">
+    <div class="highlight file-data diff-data lines">
       <table cellpadding="0" cellspacing="0" class="lines highlight">
         <tbody>
           <tr>
@@ -1092,136 +1093,54 @@
     <input type="checkbox" class="popup">
     <h3>CSS</h3>
     <div class="highlight markdown-body">
-  <div class="highlight highlight-css"><pre><span class="pl-c"><span class="pl-pdc">/*</span>! twilight <span class="pl-pdc">*/</span></span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_gutter</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>232323</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>E2E2E2</span> <span class="pl-k">!important</span>;</span>
+  <div class="highlight highlight-css"><pre><span class="pl-c"><span class="pl-pdc">/*</span> Code error example (no closing comment tag)</span>
+<span class="pl-c"></span>
+<span class="pl-c">/* Repository Network Tree <span class="pl-pdc">*/</span></span>
+<span class="pl-ms"><span class="pl-eoai"><span class="pl-pde">#</span>network</span> <span class="pl-eoac"><span class="pl-pde">.</span>repo</span> <span class="pl-ent">img</span>[alt="T"], <span class="pl-eoai"><span class="pl-pde">#</span>network</span> <span class="pl-eoac"><span class="pl-pde">.</span>repo</span> <span class="pl-ent">img</span>[alt="I"], <span class="pl-eoai"><span class="pl-pde">#</span>network</span> <span class="pl-eoac"><span class="pl-pde">.</span>repo</span> <span class="pl-ent">img</span>[alt="L"] </span>{
+  <span class="pl-mp"><span class="pl-stp">width</span></span><span class="pl-mp1">: <span class="pl-cn">26<span class="pl-kou">px</span></span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">height</span></span><span class="pl-mp1">: <span class="pl-cn">0</span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">padding-top</span></span><span class="pl-mp1">: <span class="pl-cn">22<span class="pl-kou">px</span></span> <span class="pl-k">!important</span>;</span>
+}
+<span class="pl-ms"><span class="pl-eoai"><span class="pl-pde">#</span>network</span> <span class="pl-eoac"><span class="pl-pde">.</span>repo</span> <span class="pl-ent">img</span>[alt="T"] </span>{
+  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-sf">url</span>(<span class="pl-v">http://StylishThemes.github.io/GitHub-Dark/images/t.png</span>) <span class="pl-scp">no-repeat</span> <span class="pl-k">!important</span>;</span>
 }
 
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_print-margin</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">width</span></span><span class="pl-mp1">: <span class="pl-cn">1<span class="pl-kou">px</span></span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>232323</span> <span class="pl-k">!important</span>;</span>
+<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>js-expand-btn</span>, <span class="pl-eoac"><span class="pl-pde">.</span>dashboard-tabs</span> <span class="pl-ent">li</span> <span class="pl-ent">a</span>, <span class="pl-ent">pre</span><span class="pl-eoac"><span class="pl-pde">.</span>headers</span>, <span class="pl-eoac"><span class="pl-pde">.</span>box-header</span> </span>{
+  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">background-image</span></span><span class="pl-mp1">: -webkit-gradient(linear, <span class="pl-scp">left</span> <span class="pl-scp">top</span>, <span class="pl-scp">left</span> <span class="pl-scp">bottom</span>, from(<span class="pl-coc"><span class="pl-pdc1">#</span>333</span>), to(<span class="pl-coc"><span class="pl-pdc1">#</span>181818</span>)) <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">background-image</span></span><span class="pl-mp1">: -webkit-linear-gradient(<span class="pl-scp">top</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>333</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span>) <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">background-image</span></span><span class="pl-mp1">: -moz-linear-gradient(<span class="pl-scp">top</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>333</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span>) <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">background-image</span></span><span class="pl-mp1">: -o-linear-gradient(<span class="pl-scp">top</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>333</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span>) <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">background-image</span></span><span class="pl-mp1">: linear-gradient(to <span class="pl-scp">bottom</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>333</span>, <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span>) <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">border-color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>333</span> <span class="pl-k">!important</span>;</span>
 }
 
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background-color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>141414</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>F8F8F8</span> <span class="pl-k">!important</span>;</span>
+<span class="pl-c"><span class="pl-pdc">/*</span> contributors page - svg styling <span class="pl-pdc">*/</span></span>
+<span class="pl-ms">svg|svg<span class="pl-eoac"><span class="pl-pde">.</span>spark</span>, svg|svg<span class="pl-eoac"><span class="pl-pde">.</span>viz</span> </span>{
+  <span class="pl-mp"><span class="pl-stp">background-color</span></span><span class="pl-mp1">:  <span class="pl-coc"><span class="pl-pdc1">#</span>181818</span> <span class="pl-k">!important</span>;</span>
+}
+<span class="pl-ms">svg|svg<span class="pl-eoac"><span class="pl-pde">.</span>viz</span> </span>{
+  <span class="pl-mp"><span class="pl-stp">border</span></span><span class="pl-mp1">: <span class="pl-cn">1<span class="pl-kou">px</span></span> <span class="pl-scp">solid</span> <span class="pl-coc"><span class="pl-pdc1">#</span>555</span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">display</span></span><span class="pl-mp1">: <span class="pl-scp">block</span> <span class="pl-k">!important</span>;</span>
+}
+<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>graphs</span> svg|line </span>{
+  <span class="pl-mp">stroke</span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>444</span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp">shape-rendering</span><span class="pl-mp1">: <span class="pl-scp">geometricPrecision</span> <span class="pl-k">!important</span>;</span>
 }
 
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_cursor</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>A7A7A7</span> <span class="pl-k">!important</span>;</span>
+<span class="pl-c"><span class="pl-pdc">/*</span> placeholder <span class="pl-pdc">*/</span></span>
+<span class="pl-ms">::-webkit-<span class="pl-ent">input</span>-placeholder </span>{
+  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>444</span> <span class="pl-k">!important</span>;</span>
 }
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_marker-layer</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_selection</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-sf">rgba</span>(<span class="pl-coc">221, 240, 255, 0.20</span>) <span class="pl-k">!important</span>;</span>
+<span class="pl-ms">:-moz-placeholder </span>{
+  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>444</span> <span class="pl-k">!important</span>;</span>
 }
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor<span class="pl-pde">.</span>ace_multiselect</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_selection<span class="pl-pde">.</span>ace_start</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">box-shadow</span></span><span class="pl-mp1">: <span class="pl-cn">0</span> <span class="pl-cn">0</span> <span class="pl-cn">3<span class="pl-kou">px</span></span> <span class="pl-cn">0<span class="pl-kou">px</span></span> <span class="pl-coc"><span class="pl-pdc1">#</span>141414</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">border-radius</span></span><span class="pl-mp1">: <span class="pl-cn">2<span class="pl-kou">px</span></span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_marker-layer</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_step</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-sf">rgb</span>(<span class="pl-coc">102, 82, 0</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_marker-layer</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_bracket</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">margin</span></span><span class="pl-mp1">: <span class="pl-cn">-1<span class="pl-kou">px</span></span> <span class="pl-cn">0</span> <span class="pl-cn">0</span> <span class="pl-cn">-1<span class="pl-kou">px</span></span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">border</span></span><span class="pl-mp1">: <span class="pl-cn">1<span class="pl-kou">px</span></span> <span class="pl-scp">solid</span> <span class="pl-sf">rgba</span>(<span class="pl-coc">255, 255, 255, 0.25</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_marker-layer</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_active-line</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-sf">rgba</span>(<span class="pl-coc">255, 255, 255, 0.031</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_gutter-active-line</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background-color</span></span><span class="pl-mp1">: <span class="pl-sf">rgba</span>(<span class="pl-coc">255, 255, 255, 0.031</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_marker-layer</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_selected-word</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">border</span></span><span class="pl-mp1">: <span class="pl-cn">1<span class="pl-kou">px</span></span> <span class="pl-scp">solid</span> <span class="pl-sf">rgba</span>(<span class="pl-coc">221, 240, 255, 0.20</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_invisible</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-sf">rgba</span>(<span class="pl-coc">255, 255, 255, 0.25</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_keyword</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_meta</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>CDA869</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_constant</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_constant<span class="pl-pde">.</span>ace_character</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_constant<span class="pl-pde">.</span>ace_character<span class="pl-pde">.</span>ace_escape</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_constant<span class="pl-pde">.</span>ace_other</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_heading</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_markup<span class="pl-pde">.</span>ace_heading</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_support<span class="pl-pde">.</span>ace_constant</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>CF6A4C</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_invalid<span class="pl-pde">.</span>ace_illegal</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>F8F8F8</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">background-color</span></span><span class="pl-mp1">: <span class="pl-sf">rgba</span>(<span class="pl-coc">86, 45, 86, 0.75</span>) <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_invalid<span class="pl-pde">.</span>ace_deprecated</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">text-decoration</span></span><span class="pl-mp1">: <span class="pl-scp">underline</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">font-style</span></span><span class="pl-mp1">: <span class="pl-scp">italic</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>D2A8A1</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_support</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>9B859D</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_fold</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background-color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>AC885B</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">border-color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>F8F8F8</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_support<span class="pl-pde">.</span>ace_function</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>DAD085</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_list</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_markup<span class="pl-pde">.</span>ace_list</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_storage</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>F9EE98</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_entity<span class="pl-pde">.</span>ace_name<span class="pl-pde">.</span>ace_function</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_meta<span class="pl-pde">.</span>ace_tag</span>,</span>
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_variable</span> </span>{<span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>AC885B</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_string</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>8F9D6A</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_string<span class="pl-pde">.</span>ace_regexp</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>E9C062</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_comment</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">font-style</span></span><span class="pl-mp1">: <span class="pl-scp">italic</span> <span class="pl-k">!important</span>;</span>
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>5F5A60</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_variable</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>7587A6</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_xml-pe</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>494949</span> <span class="pl-k">!important</span>;</span>
-}
-
-<span class="pl-ms"><span class="pl-eoac"><span class="pl-pde">.</span>ace_editor</span> <span class="pl-eoac"><span class="pl-pde">.</span>ace_indent-guide</span> </span>{
-  <span class="pl-mp"><span class="pl-stp">background</span></span><span class="pl-mp1">: <span class="pl-sf">url</span>(<span class="pl-v">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWMQERFpYLC1tf0PAAgOAnPnhxyiAAAAAElFTkSuQmCC</span>) <span class="pl-scp">right</span> <span class="pl-scp">repeat-y</span> <span class="pl-k">!important</span>;</span>
+<span class="pl-ms">::-moz-placeholder </span>{
+  <span class="pl-mp"><span class="pl-stp">color</span></span><span class="pl-mp1">: <span class="pl-coc"><span class="pl-pdc1">#</span>444</span> <span class="pl-k">!important</span>;</span>
+  <span class="pl-mp"><span class="pl-stp">opacity</span></span><span class="pl-mp1">: <span class="pl-cn">1</span> <span class="pl-k">!important</span>;</span>
 }</pre></div>
 
-    </div>
+  </div>
   </label>
 
   <label class="wrapper">
@@ -1230,28 +1149,28 @@
     <div class="highlight markdown-body">
   <div class="highlight highlight-scss"><pre><span class="pl-c">/* Icon sprite example */</span>
 <span class="pl-v">$icon</span>: <span class="pl-sf">sprite-map</span>(<span class="pl-s1"><span class="pl-pds">"</span>bg/icon/*.png<span class="pl-pds">"</span></span>,<span class="pl-vpu"></span>
-<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>
+&nbsp;&nbsp;<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>
 );
 <span class="pl-v">$icon2x</span>: <span class="pl-sf">sprite-map</span>(<span class="pl-s1"><span class="pl-pds">"</span>bg/icon2x/*.png<span class="pl-pds">"</span></span>,<span class="pl-vpu"></span>
-<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>
+&nbsp;&nbsp;<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>
 );
 
 <span class="pl-k">@mixin</span> <span class="pl-enf">icon-sprite</span>(<span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>: <span class="pl-v">$base-font-size</span>, <span class="pl-v">$offset-x</span>:<span class="pl-cn"> 0</span>, <span class="pl-v">$offset-y</span>:<span class="pl-cn"> 0</span>){
-<span class="pl-mai">    <span class="pl-k">@include</span> <span class="pl-sf">use-sprite</span>(<span class="pl-v">$icon</span>, <span class="pl-v">$icon2x</span>, <span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>, <span class="pl-v">$offset-x</span>, <span class="pl-v">$offset-y</span>);</span>
+&nbsp;&nbsp;<span class="pl-mai"><span class="pl-k">@include</span> <span class="pl-sf">use-sprite</span>(<span class="pl-v">$icon</span>, <span class="pl-v">$icon2x</span>, <span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>, <span class="pl-v">$offset-x</span>, <span class="pl-v">$offset-y</span>);</span>
 }
 
 <span class="pl-c">/* Vertical mode with spacing example */</span>
 <span class="pl-v">$vertical</span>: <span class="pl-sf">sprite-map</span>(<span class="pl-s1"><span class="pl-pds">"</span>bg/vertical/*.png<span class="pl-pds">"</span></span>,<span class="pl-vpu"></span>
-<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-scp">vertical</span>,<span class="pl-vpu"></span>
-<span class="pl-v">$spacing</span><span class="pl-vpu">:</span><span class="pl-cn"> 24</span><span class="pl-kou">px</span><span class="pl-vpu"></span>
+&nbsp;&nbsp;<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-scp">vertical</span>,<span class="pl-vpu"></span>
+&nbsp;&nbsp;<span class="pl-v">$spacing</span><span class="pl-vpu">:</span><span class="pl-cn"> 24</span><span class="pl-kou">px</span><span class="pl-vpu"></span>
 );
 <span class="pl-v">$vertical2x</span>: <span class="pl-sf">sprite-map</span>(<span class="pl-s1"><span class="pl-pds">"</span>bg/vertical2x/*.png<span class="pl-pds">"</span></span>,<span class="pl-vpu"></span>
-<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>,<span class="pl-vpu"></span>
-<span class="pl-v">$spacing</span><span class="pl-vpu">:</span><span class="pl-cn"> 48</span><span class="pl-kou">px</span><span class="pl-vpu"></span>
+&nbsp;&nbsp;<span class="pl-v">$layout</span><span class="pl-vpu">:</span> <span class="pl-vpu">smart</span>,<span class="pl-vpu"></span>
+&nbsp;&nbsp;<span class="pl-v">$spacing</span><span class="pl-vpu">:</span><span class="pl-cn"> 48</span><span class="pl-kou">px</span><span class="pl-vpu"></span>
 );
 
 <span class="pl-k">@mixin</span> <span class="pl-enf">vertical-sprite</span>(<span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>: <span class="pl-v">$base-font-size</span>, <span class="pl-v">$offset-x</span>:<span class="pl-cn"> 0</span>, <span class="pl-v">$offset-y</span>:<span class="pl-cn"> 0</span>){
-<span class="pl-mai">    <span class="pl-k">@include</span> <span class="pl-sf">use-sprite</span>(<span class="pl-v">$vertical</span>, <span class="pl-v">$vertical2x</span>, <span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>, <span class="pl-v">$offset-x</span>, <span class="pl-v">$offset-y</span>);</span>
+&nbsp;&nbsp;<span class="pl-mai"><span class="pl-k">@include</span> <span class="pl-sf">use-sprite</span>(<span class="pl-v">$vertical</span>, <span class="pl-v">$vertical2x</span>, <span class="pl-v">$sprite</span>, <span class="pl-v">$from</span>, <span class="pl-v">$offset-x</span>, <span class="pl-v">$offset-y</span>);</span>
 }</pre></div>
 
     </div>
