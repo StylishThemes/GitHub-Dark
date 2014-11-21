@@ -8,7 +8,7 @@
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
 
-## [Available Ace editor color schemes](http://stylishthemes.github.io/GitHub-Dark/)
+## [Available Syntax Highlighting Themes](http://stylishthemes.github.io/GitHub-Dark/)
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
