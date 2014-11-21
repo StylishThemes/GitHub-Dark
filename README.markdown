@@ -35,6 +35,41 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.3 (11/21/2014)
+
+* Global:
+  * Fix ellipsis button.
+  * Match all inline code blocks with the theme, using a split selector group.
+* Themes:
+  * Lots of adjustments made to Twilight & Solarized Dark themes as the syntax highlighting systems changed slightly. See [issue #197](https://github.com/StylishThemes/GitHub-Dark/issues/197).
+  * Removed most pygments references from this repo as GitHub no longer uses it, except maybe some in Enterprise.
+  * We will start work on other syntax themes once things have stablized.
+* Repo view: Slightly darker summaries.
+* Code:
+  * Remove overriding background color styling.
+  * Diff: fix text coloring of new/deleted content.
+  * In issue code now has a very slight border.
+  * Fix hover highlight in code blocks.
+* Ace editor:
+  * Fix find highlight.
+  * Move some styles out of the theme file.
+* Explore: Fix showcase borders.
+* File tree: Fix up navigation hover.
+* Readme:
+  * Flat buttons.
+  * Change demo link to updated version.
+* OAuth page: lots of tweaks/fixes.
+* Gists:
+  * Fix diff background.
+  * Diff expanded code background will match (slightly darker) selected theme.
+* Markdown:
+  * Fix code in unhighlighted inline code.
+  * Tweak inline code blocks.
+* Enterprise:
+  * Fix background colors on files & diffs.
+  * Fix background colors on code blocks in markdown.
+  * Thanks [chimericdream](https://github.com/chimericdream) for contributing!
+
 #### Version 1.11.2 (11/15/2014)
 
 * Themes
@@ -57,24 +92,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Language colors: removed and restored to get it under 100k
   * Shadow: text & box shadow selectors modified then restored.
 * Diffs: #181818 background.
-
-#### Version 1.11.0 (11/12/2014)
-
-* Themes
-  * Archived pygments themes as GitHub is no longer using Pygments.
-  * Add 19 dark Ace editor themes. Thanks [ThePenultimateOne](https://github.com/ThePenultimateOne)!
-  * Set Twilight as default.
-* Build:
-  * Preserve version number & agent sheet comments when minifying.
-  * Update grunt to only build ace themes.
-* Branches: Fix branch diff meter.
-* Ace Editor: Add, but later reverted update to background & keyword style in lieu of adding Ace theme support. See [issue #196](https://github.com/StylishThemes/GitHub-Dark/issues/196).
-* Filter lists: Fix count color on selected item.
-
-#### Version 1.10.6 (11/8/2014)
-
-* Themes
-  * Added missing style to all theme files. Fixes [issue #195](https://github.com/StylishThemes/GitHub-Dark/issues/195).
-  * Added grunt theme build to minify css & made comments permanent.
-  * Added 15 (dark only) themes from https://github.com/idleberg/base16-pygments.
-* Repo: Modify .editorconfig to set a root & only apply to css.
