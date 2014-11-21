@@ -819,7 +819,7 @@
     border-color: #555 !important;
   }
   /* Gradient hover hightlight */
-  pre div:hover, .diff-table tr:hover > pre,
+  pre div:hover, .diff-table tr:hover > pre, .blob-num[colspan],
   .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
     background: linear-gradient(to bottom, #282828, #181818) !important;
   }
@@ -1368,7 +1368,7 @@
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .blob-code-addition, .blob-num-addition, .highlight .gi,
+  .blob-code.blob-code-addition, .blob-num.blob-num-addition,
   .prose-diff .changed ins, .prose-diff .changed ins code, .prose-diff .changed ins pre,
   .prose-diff .changed .added, .prose-diff > .markdown-body ins pre,
   .prose-diff > .markdown-body ins code, .prose-diff > .markdown-body ins > div,
@@ -1377,7 +1377,7 @@
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
-  .blob-code-deletion, .blob-num-deletion, .highlight .gd,
+  .blob-code.blob-code-deletion, .blob-num.blob-num-deletion,
   .prose-diff > .markdown-body .changed del, .prose-diff > .markdown-body .changed del pre,
   .prose-diff > .markdown-body .changed del code, .prose-diff > .markdown-body .changed del > div,
   .prose-diff > .markdown-body .changed .removed, .prose-diff > .markdown-body .changed .removed pre,
@@ -1619,7 +1619,7 @@
 
   /* inline code blocks - selector group is completed by the theme file */
   .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre, .markdown-body .highlight pre, body.api pre,
-  body.blog pre, #facebox pre,
+  body.blog pre, #facebox pre, .blob-code-context, .blob-num-context,
 
   /*[[syntax-theme]]*/
   /* grunt build - remove to end of file */
