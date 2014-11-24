@@ -12,10 +12,12 @@
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
-| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers |
-| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai |
-| Pastel on Dark | Solarized Dark | Terminal | Tomorrow Night | Tomorrow Night Blue |
-| Tomorrow Night Bright | Tomorrow Night Eigthies | Twilight | Vibrant Ink | |
+| Ambiance* | Chaos* | Clouds Midnight* | Cobalt* | Idle Fingers* |
+| Kr Theme* | Merbivore* | Merbivore Soft* | Mono Industrial* | Monokai* |
+| Pastel on Dark* | Solarized Dark | Terminal* | Tomorrow Night* | Tomorrow Night Blue* |
+| Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight | Vibrant Ink* | |
+
+\* These themes currently only provide partial support (Editor only)
 
 ## Notes
 
@@ -34,6 +36,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Changelog
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.11.4 (11/24/2014)
+
+* Themes:
+  * Update custom theme template
+  * Add default twilight syntax code highlighting to all partially supported themes
+  * Updated demo/readme to indicate which themes are partially supported
+* Diff: fix line number color & highlights
+* Gist: fix "View gist" button
+* Developer: Few tweaks/fixes
 
 #### Version 1.11.3 (11/21/2014)
 
@@ -85,10 +97,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * The select contains all themes with syntax highlighting for Ace editor themes
   * Not all syntax highlighting themes are supported for code views! So far only Twilight & Solarized Dark themes are fully supported.
 * Gist: Fix code view hover highlight
-
-#### Version 1.11.1 (11/13/2014)
-
-* Userstyles has increased its size limit to 200k!
-  * Language colors: removed and restored to get it under 100k
-  * Shadow: text & box shadow selectors modified then restored.
-* Diffs: #181818 background.
