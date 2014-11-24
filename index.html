@@ -5,25 +5,25 @@
   <title>GitHub Dark Syntax Highlighting Themes</title>
 
   <!-- themes -->
-  <link rel="stylesheet" title="Ambiance" href="themes/ambiance.min.css">
-  <link rel="stylesheet" title="Chaos" href="themes/chaos.min.css">
-  <link rel="stylesheet" title="Clouds Midnight" href="themes/clouds-midnight.min.css">
-  <link rel="stylesheet" title="Cobalt" href="themes/cobalt.min.css">
-  <link rel="stylesheet" title="Idle Fingers" href="themes/idle-fingers.min.css">
-  <link rel="stylesheet" title="KR Theme" href="themes/kr-theme.min.css">
-  <link rel="stylesheet" title="Merbivore" href="themes/merbivore.min.css">
-  <link rel="stylesheet" title="Merbivore Soft" href="themes/merbivore-soft.min.css">
-  <link rel="stylesheet" title="Mono Industrial" href="themes/mono-industrial.min.css">
-  <link rel="stylesheet" title="Monokai" href="themes/monokai.min.css">
-  <link rel="stylesheet" title="Pastel on Dark" href="themes/pastel-on-dark.min.css">
+  <link rel="stylesheet" title="Ambiance (editor only)" href="themes/ambiance.min.css">
+  <link rel="stylesheet" title="Chaos (editor only)" href="themes/chaos.min.css">
+  <link rel="stylesheet" title="Clouds Midnight (editor only)" href="themes/clouds-midnight.min.css">
+  <link rel="stylesheet" title="Cobalt (editor only)" href="themes/cobalt.min.css">
+  <link rel="stylesheet" title="Idle Fingers (editor only)" href="themes/idle-fingers.min.css">
+  <link rel="stylesheet" title="KR Theme (editor only)" href="themes/kr-theme.min.css">
+  <link rel="stylesheet" title="Merbivore (editor only)" href="themes/merbivore.min.css">
+  <link rel="stylesheet" title="Merbivore Soft (editor only)" href="themes/merbivore-soft.min.css">
+  <link rel="stylesheet" title="Mono Industrial (editor only)" href="themes/mono-industrial.min.css">
+  <link rel="stylesheet" title="Monokai (editor only)" href="themes/monokai.min.css">
+  <link rel="stylesheet" title="Pastel on Dark (editor only)" href="themes/pastel-on-dark.min.css">
   <link rel="stylesheet" title="Solarized Dark" href="themes/solarized-dark.min.css">
-  <link rel="stylesheet" title="Terminal" href="themes/terminal.min.css">
-  <link rel="stylesheet" title="Tomorrow Night" href="themes/tomorrow-night.min.css">
-  <link rel="stylesheet" title="Tomorrow Night Blue" href="themes/tomorrow-night-blue.min.css">
-  <link rel="stylesheet" title="Tomorrow Night Bright" href="themes/tomorrow-night-bright.min.css">
-  <link rel="stylesheet" title="Tomorrow Night Eighties" href="themes/tomorrow-night-eighties.min.css">
+  <link rel="stylesheet" title="Terminal (editor only)" href="themes/terminal.min.css">
+  <link rel="stylesheet" title="Tomorrow Night (editor only)" href="themes/tomorrow-night.min.css">
+  <link rel="stylesheet" title="Tomorrow Night Blue (editor only)" href="themes/tomorrow-night-blue.min.css">
+  <link rel="stylesheet" title="Tomorrow Night Bright (editor only)" href="themes/tomorrow-night-bright.min.css">
+  <link rel="stylesheet" title="Tomorrow Night Eighties (editor only)" href="themes/tomorrow-night-eighties.min.css">
   <link rel="stylesheet" title="Twilight" href="themes/twilight.min.css">
-  <link rel="stylesheet" title="Vibrant Ink" href="themes/vibrant-ink.min.css">
+  <link rel="stylesheet" title="Vibrant Ink (editor only)" href="themes/vibrant-ink.min.css">
   <!-- <link rel="stylesheet" title="x" href="themes/x.min.css"> -->
 
   <!-- Demo styling -->
@@ -44,6 +44,7 @@
   h3 + .highlight { border: #555 1px solid; text-align: left; height: 350px; overflow-y: auto; font-size: 10px; position: relative; z-index: -1; }
   h3 + .highlight table { width: 100%; }
   h3 + .highlight table.file-code, h3 + .highlight table.file-code td { line-height: 0; border-collapse: collapse; }
+  h3 small { color: #DD8F00; }
   pre { padding: 0 5px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   .popup { display: none; }
   .popup:checked ~ .highlight {
@@ -99,7 +100,7 @@
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .blob-code-addition, .blob-num-addition,
+  .blob-code.blob-code-addition, .blob-num.blob-num-addition,
   .prose-diff .changed ins, .prose-diff .changed ins code, .prose-diff .changed ins pre,
   .prose-diff .changed .added, .prose-diff > .markdown-body ins pre,
   .prose-diff > .markdown-body ins code, .prose-diff > .markdown-body ins > div,
@@ -108,7 +109,7 @@
     border-color: #080 !important;
   }
   /* git diff line deletions (dark red) */
-  .blob-code-deletion, .blob-num-deletion,
+  .blob-code.blob-code-deletion, .blob-num.blob-num-deletion,
   .prose-diff > .markdown-body .changed del, .prose-diff > .markdown-body .changed del pre,
   .prose-diff > .markdown-body .changed del code, .prose-diff > .markdown-body .changed del > div,
   .prose-diff > .markdown-body .changed .removed, .prose-diff > .markdown-body .changed .removed pre,
@@ -121,28 +122,27 @@
     background: #440 !important;
     border-color: #880 !important;
   }
-  .blob-code-addition .x {
+  .blob-code-addition .x , .highlight .blob-code-addition .x {
     background: #252 !important;
     color: #eee !important;
   }
-  .blob-code-deletion .x {
+  .blob-code-deletion .x, .highlight .blob-code-deletion .x {
     background: #622 !important;
     color: #eee !important;
   }
   /* git diff line numbers (med green) */
-  .gi .diff-line-num {
+  .gi .diff-line-num, .gi .diff-line-code {
     background: #020 !important;
     border-color: #040 !important;
   }
   /* git diff line deletions (med red) */
-  .gd .diff-line-num, .highlight .err {
+  .gd .diff-line-num, .highlight .err, .gd .diff-line-code {
     background: #300 !important;
     border-color: #500 !important;
   }
   .highlight tr:hover .blob-num {
     color: #c4c4c4 !important;
   }
-
 
   /* diff extras copied from GitHub */
   a.diff-expander {
@@ -288,7 +288,10 @@
     <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=StylishThemes&amp;repo=GitHub-Dark&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
     <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=StylishThemes&amp;repo=GitHub-Dark&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
   </h3>
-  <h3>Select a syntax highlighting theme: <select></select></h3>
+  <h3>Select a syntax highlighting theme:
+    <select></select>
+    <br><small>Patially supported themes fallback to the Twilight Syntax code highlighter</small>
+  </h3>
 
   <label class="wrapper type-diff file-data">
     <input type="checkbox" class="popup">
