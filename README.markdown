@@ -37,6 +37,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.5 (11/28/2014)
+
+* Readme: fix plaintext readme background.
+* Settings: fix delete buttons.
+* Organizations:
+  * Lots of tweaks/fixes.
+  * Fix members tables.
+* Global: fix header logo hover.
+* Themes:
+  * Twilight - fix java variables & ruby regex highlighting.
+  * Tomorrow Night, Tomorrow Night Blue, Tomorrow Night Bright & Tomorrow Night Eighties themes now fully supported.
+  * Monokai theme now fully supported.
+  * Idle Fingers theme now fully supported.
+  * Pastel on Dark theme now fully supported.
+
 #### Version 1.11.4 (11/24/2014)
 
 * Themes:
@@ -81,19 +96,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix background colors on files & diffs.
   * Fix background colors on code blocks in markdown.
   * Thanks [chimericdream](https://github.com/chimericdream) for contributing!
-
-#### Version 1.11.2 (11/15/2014)
-
-* Themes
-  * Add full Twilight theme syntax highlighting support
-  * Add full Solarized Dark theme syntax highlighting support
-  * Removed unused pygments selectors (pygments selectors still remain in Gists, but GitHub will remove them soon)
-  * Renamed `ace-themes` directory to `src` as source files will contain a combination of syntax highlighting types.
-  * Add an empty template containing the new syntax highlighter selectors, with comments.
-  * Please note that due to the differences in how the syntax highlighter formats the HTML, there will be differences in the new syntax highlighting styles when compared to pygments - there is no way around it!
-* Demo
-  * Moved pygments demo file into archived folder - it still works with pygments only themes and can be accessed [from here](http://stylishthemes.github.io/GitHub-Dark/archived/).
-  * Modified demo to load in the new format themes
-  * The select contains all themes with syntax highlighting for Ace editor themes
-  * Not all syntax highlighting themes are supported for code views! So far only Twilight & Solarized Dark themes are fully supported.
-* Gist: Fix code view hover highlight
