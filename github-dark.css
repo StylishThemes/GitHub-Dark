@@ -387,7 +387,7 @@
     border-right: 1px solid #333 !important;
   }
   .timeline-comment:after, .branch-action-body:after {
-    border-right-color: #282828 !important;
+    border-right-color: #181818 !important;
     z-index: 1 !important;
   }
   .timeline-comment:before {
@@ -470,7 +470,7 @@
   #gollum-editor-help-wrapper, .integrations-quality, .showcase-featured .mo-info .featured-grid-outer,
   .render-shell, .list, .latest-commit .commit-author, .bubble, .tabs > a.selected, .pagination .gap, .pagination .disabled,
   .pagination .gap:hover, .pagination .disabled:hover, .comment-form-head .tabnav-tab.selected, .headers,
-  .table-list {
+  .table-list, .branch-action-body {
     background: #181818 !important;
   }
   .markdown-body table tr {
@@ -487,45 +487,31 @@
   .social-count:after, #new_hook .fields {
     border-width: 0 !important;
   }
-  .commit-icon .octicon { border-radius: 100% !important; }
-
+  .commit-icon .octicon {
+    border-radius: 100% !important;
+  }
   /* === #222 === */
-  /* Darkest background color (#222), no image, leave border */
   #main, .capped-box, .unread_count, #browser table th, .markdown-format table th, .session-device, .profilecols ul.stats li strong,
   table.upgrades tr.current td, .definitions, .commit-tease .commit-meta, .discussion-topic-header, .facebox-popup,
   .timeline-commits-minimal .commit-icon .octicon, .timeline-commits .commit-icon .octicon, .upload-progress, .search-results-listing em,
   .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,  #wiki-history table td,
-  .commit.file-history-tease, .menu a.selected, .gist .gist-file .gist-data, #message.major, .branch-status, .logo-box, .commit-form,
+  .commit.file-history-tease, .menu a.selected, .gist .gist-file .gist-data, #message.major, .logo-box, .commit-form,
   .markdown-example .rendered, .team-grid .team-members, .diagram-icon:not(.active), table.capped-list th, .scope-badge, .filter-bar,
   .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar {
     background: #222 !important;
   }
-  /* Darkest background color (#222), no image, with border & radius */
-  #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content,
-  span.gravatar, .browsered, .browsered .inner, .subnav-bar > ul > li > ul, .comment-form ul.tabs a.selected,
-  .issue.open.read .summary, .unselected_month, .commits th, #MathJax_Message, #header .userbox, .chzn-single,
-  .user-commits, .user-commits th, .metabox, .ranked-repositories > li, .pagehead ul.actions, #issues_search .comment,
-  #header-wrapper,  ul.feature-tabs li.highlight, .pagination, .filterbar .filters li, .starting-comment .body,
-  .list-tip, .commit_oneline, .filterbox, .conversation-list-heading .inner, .autocomplete-results, .new-comments .body,
-  .display tr, .render-container, .sunken-menu-item.selected, .boxed-group-table th, .features-highlight,
-  .outline-box-highlighted, .nav-bar-tabs {
+  #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content, span.gravatar, .browsered,
+  .browsered .inner, .subnav-bar > ul > li > ul, .comment-form ul.tabs a.selected, .issue.open.read .summary, .unselected_month,
+  .commits th, #MathJax_Message, #header .userbox, .chzn-single, .user-commits, .user-commits th, .metabox, .ranked-repositories > li,
+  .pagehead ul.actions, #issues_search .comment, #header-wrapper,  ul.feature-tabs li.highlight, .pagination, .filterbar .filters li,
+  .starting-comment .body, .list-tip, .commit_oneline, .filterbox, .conversation-list-heading .inner, .autocomplete-results,
+  .new-comments .body, .display tr, .render-container, .sunken-menu-item.selected, .boxed-group-table th, .features-highlight,
+  .outline-box-highlighted, .nav-bar-tabs, #watchers li, .browser .listing, .item, .context-pane, .context-loader, .sidebar .module,
+  .tip-body, #assignee, .rule, .sidebar-module > ul, .commit_oneline td, #footer-push, .notifications th, .content table th,
+  .comparison-list, .comparison-list .title, .repo-collection>ul, #graph_data .tab.selected, .full-width-divider,
+  h3.conversation-list-heading strong, .file-commit-form .commit-form, .thread-subscription-status, .blog-feedback, .facebox-footer {
     background: #222 none !important;
     border-color: #444 !important;
-  }
-  /* Darkest background (#222), leave image, no border */
-  .locales, .add-bubble, .select-menu-filters, .notification-settings, #files > .description, li.contextswitch ul,
-  .search-results, .fieldgroup .edit_hook .fields, .dashboard-tabs, .access-avatar {
-    background-color: #222 !important;
-    border: 0 !important;
-  }
-  /* Darkest background (#222), leave image, with border */
-  #watchers li, .browser .listing, .item, .context-pane, .context-loader, .sidebar .module, .tip-body, #assignee, .rule,
-  .sidebar-module > ul, .commit_oneline td, #footer-push, .notifications th, .content table th,
-  .comparison-list, .comparison-list .title, .repo-collection>ul, #graph_data .tab.selected, .full-width-divider,
-  h3.conversation-list-heading strong, .file-commit-form .commit-form, .thread-subscription-status,
-  .blog-feedback, .facebox-footer {
-    background-color: #222 !important;
-    border-color: #555 !important;
   }
   /* inline code */
   .list-browser-item.closed, .content .verseblock-content, .content .verseblock-content, .commit-preview .message pre,
@@ -549,7 +535,7 @@
   /* Navigation focus */
   .list-group-item.navigation-focus, .list-browser-item.navigation-focus, .headlines li:hover, .js-details-container.navigation-focus,
   .boxed-group-list > li:hover, .js-details-container.navigation-focus:nth-child(2n), .menu a:hover,.team-grid .team-members,
-  .new-discussion-timeline .branch-action-body, .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td,
+  .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td,
   .issues-listing .table-list-issues .selectable:hover, .issues-listing .table-list-issues .navigation-focus, .setup-plans tr.selected,
   .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover, .notifications .navigation-focus,
   .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
