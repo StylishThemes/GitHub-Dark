@@ -35,6 +35,24 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.6 (12/5/2014)
+
+* Themes
+  * Readme updated to show fully supported themes.
+  * All partially supported themes are now fully supported.
+  * Again, the colors are not a perfect match, and surely specific language styles will still need some tweaks to look better.
+* Developer
+  * Style blue info boxes
+  * Add json syntax styling to make the colors less harsh (temporary fix until GitHub updates the syntax highlighter in that subdomain)
+* Pull requests:
+  * Tweak Travis status, merge some styles for #222
+  * Style "Add more commits..." block ([ref](https://github.com/StylishThemes/GitHub-Dark/pull/200))
+* Issues
+  * Fix assignee dropdown background
+  * Fix inline comment color
+* Gist: Fix diff line counters
+* Releases: Fix upload file box
+
 #### Version 1.11.5 (11/28/2014)
 
 * Readme: fix plaintext readme background.
@@ -59,38 +77,3 @@ See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diff: fix line number color & highlights
 * Gist: fix "View gist" button
 * Developer: Few tweaks/fixes
-
-#### Version 1.11.3 (11/21/2014)
-
-* Global:
-  * Fix ellipsis button.
-  * Match all inline code blocks with the theme, using a split selector group.
-* Themes:
-  * Lots of adjustments made to Twilight & Solarized Dark themes as the syntax highlighting systems changed slightly. See [issue #197](https://github.com/StylishThemes/GitHub-Dark/issues/197).
-  * Removed most pygments references from this repo as GitHub no longer uses it, except maybe some in Enterprise.
-  * We will start work on other syntax themes once things have stablized.
-* Repo view: Slightly darker summaries.
-* Code:
-  * Remove overriding background color styling.
-  * Diff: fix text coloring of new/deleted content.
-  * In issue code now has a very slight border.
-  * Fix hover highlight in code blocks.
-* Ace editor:
-  * Fix find highlight.
-  * Move some styles out of the theme file.
-* Explore: Fix showcase borders.
-* File tree: Fix up navigation hover.
-* Readme:
-  * Flat buttons.
-  * Change demo link to updated version.
-* OAuth page: lots of tweaks/fixes.
-* Gists:
-  * Fix diff background.
-  * Diff expanded code background will match (slightly darker) selected theme.
-* Markdown:
-  * Fix code in unhighlighted inline code.
-  * Tweak inline code blocks.
-* Enterprise:
-  * Fix background colors on files & diffs.
-  * Fix background colors on code blocks in markdown.
-  * Thanks [chimericdream](https://github.com/chimericdream) for contributing!
