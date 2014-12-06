@@ -12,12 +12,10 @@
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
-| Ambiance* | Chaos* | Clouds Midnight* | Cobalt* | Idle Fingers |
-| Kr Theme* | Merbivore* | Merbivore Soft* | Mono Industrial* | Monokai |
-| Pastel on Dark | Solarized Dark | Terminal* | Tomorrow Night | Tomorrow Night Blue |
-| Tomorrow Night Bright | Tomorrow Night Eigthies | Twilight | Vibrant Ink* | |
-
-\* These themes currently only provide partial support (Editor only)
+| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers |
+| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai |
+| Pastel on Dark | Solarized Dark | Terminal | Tomorrow Night | Tomorrow Night Blue |
+| Tomorrow Night Bright | Tomorrow Night Eigthies | Twilight | Vibrant Ink | |
 
 ## Notes
 

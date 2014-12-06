@@ -5,25 +5,25 @@
   <title>GitHub Dark Syntax Highlighting Themes</title>
 
   <!-- themes -->
-  <link rel="stylesheet" title="Ambiance (editor only)" href="themes/ambiance.min.css">
-  <link rel="stylesheet" title="Chaos (editor only)" href="themes/chaos.min.css">
-  <link rel="stylesheet" title="Clouds Midnight (editor only)" href="themes/clouds-midnight.min.css">
-  <link rel="stylesheet" title="Cobalt (editor only)" href="themes/cobalt.min.css">
+  <link rel="stylesheet" title="Ambiance" href="themes/ambiance.min.css">
+  <link rel="stylesheet" title="Chaos" href="themes/chaos.min.css">
+  <link rel="stylesheet" title="Clouds Midnight" href="themes/clouds-midnight.min.css">
+  <link rel="stylesheet" title="Cobalt" href="themes/cobalt.min.css">
   <link rel="stylesheet" title="Idle Fingers" href="themes/idle-fingers.min.css">
-  <link rel="stylesheet" title="KR Theme (editor only)" href="themes/kr-theme.min.css">
-  <link rel="stylesheet" title="Merbivore (editor only)" href="themes/merbivore.min.css">
-  <link rel="stylesheet" title="Merbivore Soft (editor only)" href="themes/merbivore-soft.min.css">
-  <link rel="stylesheet" title="Mono Industrial (editor only)" href="themes/mono-industrial.min.css">
+  <link rel="stylesheet" title="KR Theme" href="themes/kr-theme.min.css">
+  <link rel="stylesheet" title="Merbivore" href="themes/merbivore.min.css">
+  <link rel="stylesheet" title="Merbivore Soft" href="themes/merbivore-soft.min.css">
+  <link rel="stylesheet" title="Mono Industrial" href="themes/mono-industrial.min.css">
   <link rel="stylesheet" title="Monokai" href="themes/monokai.min.css">
   <link rel="stylesheet" title="Pastel on Dark" href="themes/pastel-on-dark.min.css">
   <link rel="stylesheet" title="Solarized Dark" href="themes/solarized-dark.min.css">
-  <link rel="stylesheet" title="Terminal (editor only)" href="themes/terminal.min.css">
+  <link rel="stylesheet" title="Terminal" href="themes/terminal.min.css">
   <link rel="stylesheet" title="Tomorrow Night" href="themes/tomorrow-night.min.css">
   <link rel="stylesheet" title="Tomorrow Night Blue" href="themes/tomorrow-night-blue.min.css">
   <link rel="stylesheet" title="Tomorrow Night Bright" href="themes/tomorrow-night-bright.min.css">
   <link rel="stylesheet" title="Tomorrow Night Eighties" href="themes/tomorrow-night-eighties.min.css">
   <link rel="stylesheet" title="Twilight" href="themes/twilight.min.css">
-  <link rel="stylesheet" title="Vibrant Ink (editor only)" href="themes/vibrant-ink.min.css">
+  <link rel="stylesheet" title="Vibrant Ink" href="themes/vibrant-ink.min.css">
   <!-- <link rel="stylesheet" title="x" href="themes/x.min.css"> -->
 
   <!-- Demo styling -->
@@ -44,7 +44,6 @@
   h3 + .highlight { border: #555 1px solid; text-align: left; height: 350px; overflow-y: auto; font-size: 10px; position: relative; z-index: -1; }
   h3 + .highlight table { width: 100%; }
   h3 + .highlight table.file-code, h3 + .highlight table.file-code td { line-height: 0; border-collapse: collapse; }
-  h3 small { color: #DD8F00; }
   pre { padding: 0 5px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   .popup { display: none; }
   .popup:checked ~ .highlight {
@@ -66,7 +65,8 @@
   }
   /* Gist styles from github-dark.css; slightly tweaked to match GitHub */
   .highlight .file-diff-line:hover td, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age),
-  pre div:hover, .diff-table tr:hover pre {
+  pre div:hover, .diff-table tr:hover > pre, .blob-num[colspan],
+  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #333 !important;
   }
@@ -145,6 +145,11 @@
   }
 
   /* diff extras copied from GitHub */
+  .diff-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
   a.diff-expander {
     text-decoration: none;
     text-align: center;
@@ -290,7 +295,6 @@
   </h3>
   <h3>Select a syntax highlighting theme:
     <select></select>
-    <br><small>Patially supported themes fallback to the Twilight Syntax code highlighter</small>
   </h3>
 
   <label class="wrapper type-diff file-data">
