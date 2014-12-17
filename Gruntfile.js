@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         pattern: '/*[[bg-options2]]*/',
         replacement: config.bgOptions2
     },{
-        pattern: /\/\*\[\[base-color\]\]\*\/ #4183C4/g,
+        pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: config.color
     },{
         pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
@@ -85,7 +85,7 @@ module.exports = function (grunt) {
         pattern: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/,
         replacement: '/*[[bg-choice]]*/'
     },{
-        pattern: /\/\*\[\[base-color\]\]\*\/ #4183C4/g,
+        pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: '/*[[base-color]]*/'
     },{
         pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
