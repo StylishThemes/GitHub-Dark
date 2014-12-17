@@ -31,9 +31,15 @@ If you would like to contribute to this repository, please...
 
 Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors) so far!
 
-## Changelog
+## Change Log
 
 See the [full changelog](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.11.7 (12/17/2014)
+
+* Diffs: Change tab-size to user preference.
+* Contribution calendar & heat map colors now use the base color.
+* :christmas_tree: And Happy Holidays! :christmas_tree:
 
 #### Version 1.11.6 (12/5/2014)
 
