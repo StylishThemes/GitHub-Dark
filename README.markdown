@@ -6,7 +6,7 @@
 - Use a [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
 
 ## Preview
-![GitHub Dark preview](http://i.imgur.com/MsrHuFh.png)
+![GitHub Dark preview](http://i.imgur.com/9ChgiR6.png)
 
 ## [Available Syntax Highlighting Themes](http://stylishthemes.github.io/GitHub-Dark/)
 
