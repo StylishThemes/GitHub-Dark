@@ -35,6 +35,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.9 (12/31/2014)
+
+* Theme: Fix Twilight markdown heading text color
+* Diff: Remove forced border from suppressed diff
+* Organization: Add invitation banner styling
+* Notifications: Selected notification item styling color matches base color
+
 #### Version 1.11.8 (12/22/2014)
 
 * Contrib calendar
@@ -50,21 +57,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diffs: Change tab-size to user preference.
 * Contribution calendar & heat map colors now use the base color.
 * :christmas_tree: And Happy Holidays! :christmas_tree:
-
-#### Version 1.11.6 (12/5/2014)
-
-* Themes
-  * Readme updated to show fully supported themes.
-  * All partially supported themes are now fully supported.
-  * Again, the colors are not a perfect match, and surely specific language styles will still need some tweaks to look better.
-* Developer
-  * Style blue info boxes
-  * Add json syntax styling to make the colors less harsh (temporary fix until GitHub updates the syntax highlighter in that subdomain)
-* Pull requests:
-  * Tweak Travis status, merge some styles for #222
-  * Style "Add more commits..." block ([ref](https://github.com/StylishThemes/GitHub-Dark/pull/200))
-* Issues
-  * Fix assignee dropdown background
-  * Fix inline comment color
-* Gist: Fix diff line counters
-* Releases: Fix upload file box
