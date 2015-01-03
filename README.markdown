@@ -35,6 +35,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.10 (1/3/2015)
+
+* Releases:
+  * Fix big expander dots and tag dates
+  * Fix tag reference links
+* Fix commit hash links in markdown
+* Discussions: Fix travis status bubble border and icon background
+* Help: Fix search box icon
+
 #### Version 1.11.9 (12/31/2014)
 
 * Theme: Fix Twilight markdown heading text color
@@ -51,9 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix grammatical error
   * Add tag badge
   * Update screenshot
-
-#### Version 1.11.7 (12/17/2014)
-
-* Diffs: Change tab-size to user preference.
-* Contribution calendar & heat map colors now use the base color.
-* :christmas_tree: And Happy Holidays! :christmas_tree:
