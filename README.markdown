@@ -1,9 +1,10 @@
 # GitHub Dark [![tags](https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?style=flat)](https://github.com/StylishThemes/GitHub-Dark/tags) [![star this repo](http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=1081C1)](http://github.com/StylishThemes/GitHub-Dark) [![fork this repo](http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=1081C1)](http://github.com/StylishThemes/GitHub-Dark/fork)
 
 - Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css).
-- Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish-for-opera/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
+- Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
 - **NOTE**: Not all themes are available, once we figure out how to convert the old pygments themes to the new layout you will see the updates in [this demo](http://StylishThemes.github.io/GitHub-Dark/) to visualize the available code color schemes.
 - Use a [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
+- Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
 
 ## Preview
 ![GitHub Dark preview](http://i.imgur.com/9ChgiR6.png)
@@ -35,6 +36,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.11 (1/10/2015)
+
+* Pull request:
+  * Fix range editor background
+  * Fix build status details box
+* Merge dark borders to `#383838`, tweak build status
+* Add documentation on how to [manually install this style](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). Fixes [issue #204](https://github.com/StylishThemes/GitHub-Dark/issues/204).
+
 #### Version 1.11.10 (1/3/2015)
 
 * Releases:
@@ -50,13 +59,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diff: Remove forced border from suppressed diff
 * Organization: Add invitation banner styling
 * Notifications: Selected notification item styling color matches base color
-
-#### Version 1.11.8 (12/22/2014)
-
-* Contrib calendar
-  * Highlighted selected dates
-  * Fix & shorten styles
-* Readme
-  * Fix grammatical error
-  * Add tag badge
-  * Update screenshot
