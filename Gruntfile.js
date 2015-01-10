@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             'tiled'    : true,
             'attach'   : 'scroll',
             'tab'      : 4,
-            'chrome'   : false
+            'webkit'   : false
         };
     }
 
@@ -174,7 +174,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', 'Building custom style', function(){
       config.buildFile = config.buildFile.replace('.min.css', '.css');
       grunt.task.run(['string-replace:inline']);
-      if (!config.chrome) {
+      if (!(config.chrome || config.webkit)) {
         grunt.task.run(['wrap']);
       }
     });
