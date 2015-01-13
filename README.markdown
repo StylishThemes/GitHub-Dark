@@ -35,6 +35,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.12 (1/13/2015)
+
+* Readme:
+  * Add link to Safari Stylish extension.
+  * Remove note about unavailable themes.
+* Wiki editor: Fix a few white highlights.
+* Fullscreen editor: Remove box shadows and fix icons.
+* Add [ZenHub](https://www.zenhub.io/) styling.
+* Fix background colors for GitHub enterprise. Fixes [issue #205](https://github.com/StylishThemes/GitHub-Dark/issues/205); thanks [chimericdream](https://github.com/chimericdream)!
+
 #### Version 1.11.11 (1/10/2015)
 
 * Pull request:
@@ -51,10 +61,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Fix commit hash links in markdown
 * Discussions: Fix travis status bubble border and icon background
 * Help: Fix search box icon
-
-#### Version 1.11.9 (12/31/2014)
-
-* Theme: Fix Twilight markdown heading text color
-* Diff: Remove forced border from suppressed diff
-* Organization: Add invitation banner styling
-* Notifications: Selected notification item styling color matches base color
