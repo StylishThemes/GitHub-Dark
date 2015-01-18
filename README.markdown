@@ -35,6 +35,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.13 (1/18/2015)
+
+* Repo list: Participation graph changed from canvas to svg.
+* Pull requests: Remove background on branch message
+* Global: Search fixes & tweak text colors
+* ZebHub
+  * Update vote & upload target styling
+  * Style dragged issue placeholder.
+
 #### Version 1.11.12 (1/13/2015)
 
 * Readme:
@@ -52,12 +61,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix build status details box
 * Merge dark borders to `#383838`, tweak build status
 * Add documentation on how to [manually install this style](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). Fixes [issue #204](https://github.com/StylishThemes/GitHub-Dark/issues/204).
-
-#### Version 1.11.10 (1/3/2015)
-
-* Releases:
-  * Fix big expander dots and tag dates
-  * Fix tag reference links
-* Fix commit hash links in markdown
-* Discussions: Fix travis status bubble border and icon background
-* Help: Fix search box icon
