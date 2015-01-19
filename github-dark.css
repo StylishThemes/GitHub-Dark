@@ -167,7 +167,13 @@
     position: relative;
     top: -1.5px;
   }
-
+  /* HACK: Fix annoying text selection bug in Firefox */
+  .markdown-body code, .markdown-body tt {
+    padding: .2em .4em !important;
+  }
+  .markdown-body code::before, .markdown-body code::after, .markdown-body tt::before, .markdown-body tt::after {
+    content: "" !important;
+  }
   /* === no margin === */
   #dashboard {
     margin: 0 !important;
