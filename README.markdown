@@ -35,6 +35,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.14 (1/23/2015)
+
+* Global: Unify branch tags.
+* ZenHub: vote button style applied to proper element.
+* Settings: Tweak 2-factor-auth page.
+* Wiki: Remove semi-transparent background.
+* Homepage (logged out) megaicon styling.
+* Rendering: remove marker background from geojson maps.
+* Markdown: Don't add padding to 'big' code blocks.
+* Keyboard shortcuts popup (press ?): darken box shadow.
+* Labels:
+  * Optimize selector. Fixes [issue #208](https://github.com/StylishThemes/GitHub-Dark/issues/208).
+  * Back slashes not needed in selector.
+* Issues: style unread issues indicator.
+* User page: Fix a border color.
+
 #### Version 1.11.13 (1/18/2015)
 
 * Repo list: Participation graph changed from canvas to svg.
@@ -53,11 +69,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Fullscreen editor: Remove box shadows and fix icons.
 * Add [ZenHub](https://www.zenhub.io/) styling.
 * Fix background colors for GitHub enterprise. Fixes [issue #205](https://github.com/StylishThemes/GitHub-Dark/issues/205); thanks [chimericdream](https://github.com/chimericdream)!
-
-#### Version 1.11.11 (1/10/2015)
-
-* Pull request:
-  * Fix range editor background
-  * Fix build status details box
-* Merge dark borders to `#383838`, tweak build status
-* Add documentation on how to [manually install this style](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). Fixes [issue #204](https://github.com/StylishThemes/GitHub-Dark/issues/204).
