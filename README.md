@@ -35,6 +35,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.15 (1/30/2015)
+
+* Markdown
+  * Remove extra line on inline code boxes.
+  * Experiment with inline code block.
+  * Remove vertical padding on inline code.
+* Search: Fix code search result highlight.
+* Organizations:
+  * Fix emphasized text.
+  * Fix "x" links.
+* Readme: Rename to ".md".
+
 #### Version 1.11.14 (1/23/2015)
 
 * Global: Unify branch tags.
@@ -59,13 +71,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZebHub
   * Update vote & upload target styling
   * Style dragged issue placeholder.
-
-#### Version 1.11.12 (1/13/2015)
-
-* Readme:
-  * Add link to Safari Stylish extension.
-  * Remove note about unavailable themes.
-* Wiki editor: Fix a few white highlights.
-* Fullscreen editor: Remove box shadows and fix icons.
-* Add [ZenHub](https://www.zenhub.io/) styling.
-* Fix background colors for GitHub enterprise. Fixes [issue #205](https://github.com/StylishThemes/GitHub-Dark/issues/205); thanks [chimericdream](https://github.com/chimericdream)!
