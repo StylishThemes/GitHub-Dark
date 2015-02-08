@@ -35,6 +35,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.16 (2/8/2015)
+
+* Gist: fix row highlight background.
+* Move _custom-theme-template.css file.
+* Developer: Fix Octocat icons.
+* Frontpage: fix broadcast close button.
+* Diff:
+  * Fix image swipe handles.
+  * Fix onion diff slider, fix iframe boarder radii.
+* OAuth page: Fix organization access box.
+
 #### Version 1.11.15 (1/30/2015)
 
 * Markdown
