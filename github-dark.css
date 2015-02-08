@@ -237,6 +237,9 @@
   #readme .plain pre, .uploaded-files, .merge-pr-more-commits code, .two-factor-toggle .two-factor-status button {
     background: transparent !important;
   }
+  .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
+    background: none !important;
+  }
   /* Redeem Page */
   .coupons .coupon-form-body {
     background-image: none !important;
@@ -257,6 +260,9 @@
   #wrapper, #your-repos-filter, .topsearch ul.nav, .merge-pr-more-commits {
     border-radius: 3px !important;
     background-clip: padding-box !important;
+  }
+  body[data-render-url], .render-viewer {
+    border-radius: 0 0 3px 3px !important;
   }
   /* remove border-radius */
   .dashboard-tabs a, .search-filters {
@@ -484,7 +490,7 @@
   }
   #readme .markdown-body, .social-count, .file, .box-body, .markdown-body table tr:nth-child(2n), .steps li,
   .explore-section:nth-child(2n), .markdown-format table, .list-group-item, .chromed-list-browser .none p,
-  .chromed-list-browser .error p, .list-browser-footer, .commandbar .choice:hover, .render-bar, #gollum-editor-help,
+  .chromed-list-browser .error p, .list-browser-footer, .commandbar .choice:hover, #gollum-editor-help,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
   .commandbar .loading:hover, .comment-content, .commandbar .message, .boxed-group-inner,  #adv_code_search .search-page-label,
   .timeline-comment, .sidebar-module, #contributors-master svg.viz, .diff-table .line-comments, .menu,
@@ -650,7 +656,8 @@
   /* invert (rgb) */
   #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a, .github-jobs-promotion a.jobs-logo strong,
   iframe[src*="polldaddy.com"], .jstree-icon.jstree-ocl, .octotree_toggle .loader, .swipe .swipe-frame .swipe-bar .top-handle,
-  .swipe .swipe-frame .swipe-bar .bottom-handle {
+  .swipe .swipe-frame .swipe-bar .bottom-handle, .onion-skin .controls .transparent, .onion-skin .controls .opaque,
+  .onion-skin .controls .slider .slider-track, .onion-skin .controls .slider .slider-track .dragger {
     filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
     -webkit-filter: invert(100%) !important;
   }
@@ -850,7 +857,7 @@
   }
   /* inverted dark grey gradient */
   .asc .sort-type, .desc .sort-type, .mini-bar-graph, .issues-list>ul>li.unread, .timeline-commits-header,
-  .usage-bar dd, .simple-stacked-bar {
+  .usage-bar dd, .simple-stacked-bar, .render-bar {
     background: linear-gradient(to bottom, #181818, #282828) !important;
     border-color: #383838 !important;
   }
