@@ -35,6 +35,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.17 (2/12/2015)
+
+* Add custom code fonts. Fixes [issue #210](https://github.com/StylishThemes/GitHub-Dark/issues/210).
+* Markdown:
+  * Fix padding on `tt` elements.
+  * Fix nested code tags in `a` tags. Fixes [issue #209](https://github.com/StylishThemes/GitHub-Dark/issues/209).
+  * Fix underline on hover on things nested inside links.
+* Discussions:
+  * Fix yellow travis status triangle.
+  * Better background for speech triangle.
+  * Better background for own speech triangle.
+* Issues:
+  * Update travis checkmark success & failure.
+  * Update travis icon for error.
+
 #### Version 1.11.16 (2/8/2015)
 
 * Gist: fix row highlight background.
@@ -57,28 +72,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix emphasized text.
   * Fix "x" links.
 * Readme: Rename to ".md".
-
-#### Version 1.11.14 (1/23/2015)
-
-* Global: Unify branch tags.
-* ZenHub: vote button style applied to proper element.
-* Settings: Tweak 2-factor-auth page.
-* Wiki: Remove semi-transparent background.
-* Homepage (logged out) megaicon styling.
-* Rendering: remove marker background from geojson maps.
-* Markdown: Don't add padding to 'big' code blocks.
-* Keyboard shortcuts popup (press ?): darken box shadow.
-* Labels:
-  * Optimize selector. Fixes [issue #208](https://github.com/StylishThemes/GitHub-Dark/issues/208).
-  * Back slashes not needed in selector.
-* Issues: style unread issues indicator.
-* User page: Fix a border color.
-
-#### Version 1.11.13 (1/18/2015)
-
-* Repo list: Participation graph changed from canvas to svg.
-* Pull requests: Remove background on branch message
-* Global: Search fixes & tweak text colors
-* ZebHub
-  * Update vote & upload target styling
-  * Style dragged issue placeholder.
