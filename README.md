@@ -35,6 +35,30 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.18 (2/17/2015)
+
+* Discussions
+  * Slightly brighter toggle buttons.
+  * Honor tab size preference in inline diffs.
+  * Slightly darken commit messages.
+  * Include conversation tab in fixes.
+  * Update label styling.
+* Frontpage
+  * Update protip.
+  * Fix 'show more repos' link.
+* Tree browser hover icon styling.
+* Branch comparison: various fixes.
+* Issues: Fix label styling. Fixes [issue #208](https://github.com/StylishThemes/GitHub-Dark/issues/208).
+* Branches: Fix pending travis icon.
+* Global: Tweak border colors, merge some selector groups.
+* Wiki: Add background for custom sidebar.
+* Repo: Fix branch selector color.
+* Diff:
+  * Fix file header
+  * Fix disabled buttons in file header.
+* File: More fixes for new headers.
+* Gist: Fix header.
+
 #### Version 1.11.17 (2/12/2015)
 
 * Add custom code fonts. Fixes [issue #210](https://github.com/StylishThemes/GitHub-Dark/issues/210).
@@ -60,15 +84,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix image swipe handles.
   * Fix onion diff slider, fix iframe boarder radii.
 * OAuth page: Fix organization access box.
-
-#### Version 1.11.15 (1/30/2015)
-
-* Markdown
-  * Remove extra line on inline code boxes.
-  * Experiment with inline code block.
-  * Remove vertical padding on inline code.
-* Search: Fix code search result highlight.
-* Organizations:
-  * Fix emphasized text.
-  * Fix "x" links.
-* Readme: Rename to ".md".
