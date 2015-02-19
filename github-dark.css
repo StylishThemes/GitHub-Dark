@@ -22,8 +22,8 @@
   a:not([href*="/labels/"]), .profilecols ul.stats li a:hover strong, .plans-row .plan, .filters li.selected, .vcard-stat,
   .repo_list span.css-truncate-target, strong.css-truncate-target, .zeroclipboard-button, .creator a, button#logout:hover,
   #user-links > li > a:hover, #user-links .sign-out-button:hover, .numbers-summary a:hover, .numbers-summary a:hover span,
-  .tag-info a:hover, .tag-info a:hover span, #forkqueue .instructions, .addon h4, .header a:hover, .header a:hover .mini-icon,
-  .api-status a:hover, .header a:hover .mega-icon:before, #footer a, #userbox a:hover, .header-logo-wordmark:hover span,
+  .tag-info a:hover, .tag-info a:hover span, #forkqueue .instructions, .addon h4, .header-nav-link:hover, .header-nav-link:focus,
+  .api-status a:hover, #footer a, #userbox a:hover, .header-logo-wordmark:hover span,
   #userbox a:hover .mini-icon, .gist-item ul.meta>li>a:hover, #userbox a:hover, .sidebar-module h3 a:hover,
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span, .team-mention, a.octotree_opts:hover,
   .header .header-logo-invertocat:hover span, .comment-header-actions li:hover, .commit .commit-title .issue-link,
@@ -39,7 +39,7 @@
   .org-teams-list .team:hover .team-name, .gh-header-back:hover span:before, a.lock-toggle-link:hover,
   .tabnav a.tabnav-extras:hover, .tabnav .tabnav-extras:hover .octicon, .org-header .edit-org:hover .octicon,
   .diagram-icon-small:not(.active) .mega-octicon:before, .diagram-icon:not(.active) .mega-octicon:before,
-  .panel-nav:not(.disabled) .mega-octicon:before, #header ul.top-nav li a:hover, .team-info-card .stats-group .stat:hover,
+  .panel-nav:not(.disabled) .mega-octicon:before, .team-info-card .stats-group .stat:hover,
   .team-info-card .stats-group .stat:hover .stat-number, .octicon-button:hover, a.discussion-item-entity:hover,
   span.discussion-item-entity:hover, .issues-listing .table-list-issues .issue-comments-link:hover,
   .issues-listing .table-list-issues .issue-title-link:hover, .issues-listing .table-list-issues .issue-meta-section a:hover,
@@ -50,7 +50,8 @@
   a.discussion-item-toggle-open:hover, a.discussion-item-toggle-closed:hover,
   .task-list a, .full-commit .button-outline:hover, .zeroclipboard-link, .stats-group-stat:hover,
   .stats-group-stat:hover .stat-number, a.commit-link, .tag-references > li a:hover, .two-factor-toggle .two-factor-status button,
-  .homepage .mega-octicon:before, .tree-browser tr.navigation-focus .octicon-chevron-right {
+  .homepage .mega-octicon:before, .tree-browser tr.navigation-focus .octicon-chevron-right, #header ul.top-nav > li > a:hover,
+  #header ul.top-nav > li > button:hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -71,6 +72,9 @@
   .octofication .message, .panel-nav:not(.disabled):active, .diagram-icon:not(.active), .full-commit .button-outline:hover,
   .button-outline:hover, .button-outline.zeroclipboard-is-hover {
     border-color: /*[[base-color]]*/ #4183C4 !important;
+  }
+  #header ul.top-nav .dropdown-button:hover .dropdown-caret {
+    border-top-color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* === Notification icon === */
   .notification-indicator .mail-status {
@@ -398,7 +402,7 @@
   .list-heading + .list-item, .issue-list-item, .ace_gutter, .collection-card, .setup-header, body.api pre,
   .stats-group-stat:first-child, .build-statuses-list, #gollum-dialog-dialog-buttons, #gollum-dialog-dialog h4,
   a.gollum-minibutton, a.gollum-minibutton:visited, .two-factor-toggle .two-factor-status, .two-factor-settings-group,
-  .member-badge, ul.comparison-list > li {
+  .member-badge, ul.comparison-list > li, .markdown-format ol > li::before {
     border-color: #343434 !important;
   }
   .pagination a, .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -450,7 +454,7 @@
   .sunken-menu.vertical-right .sunken-menu-item.selected {
     border-left: transparent 1px solid !important;
   }
-  .context-button:hover:after, .switcher > span:before {
+  .context-button:hover:after, .switcher > span:before, .dropdown-caret {
     border-color: #eee transparent transparent !important;
   }
   /* branch selector button - uses borders to make select button */
@@ -514,12 +518,12 @@
   #common-issues, .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu, .tree-browser td, .tree-browser .alt td,
   .branches .branch-summary, .branches .no-results-message, .simple-box-footer, .commit-group,
-  .blankslate, .content table tr, #search-results, table.files, .mergeable, .org-module, .org-add-footer, .fullscreen-overlay,
+  .blankslate, .content table tr, #search-results, table.files, .mergeable, .org-module, .org-add-footer,
   .commit-tease, .branch-infobar, .table-list-header, table.capped-list tr:nth-child(2n), .team-org-group,
   #gollum-editor-help-wrapper, .integrations-quality, .showcase-featured .mo-info .featured-grid-outer,
   .render-shell, .list, .latest-commit .commit-author, .bubble, .tabs > a.selected, .pagination .gap, .pagination .disabled,
   .pagination .gap:hover, .pagination .disabled:hover, .comment-form-head .tabnav-tab.selected, .headers,
-  .table-list, .branch-action-body, .oauth-org-access-details .boxed-group-list > li.on {
+  .table-list, .branch-action-body, .oauth-org-access-details .boxed-group-list > li.on, #fullscreen_overlay {
     background: #181818 !important;
   }
   .markdown-body table tr {
@@ -953,7 +957,7 @@
   ul.filter-list .filter-item.selected, .blob-num-expandable .diff-expander:hover, .email-format .email-hidden-toggle a:hover,
   #gollum-editor-help-parent li a.selected, #gollum-editor-help-list li a.selected, a.gollum-minibutton,
   a.gollum-minibutton:visited, a.token-warning, a.lightertooltipped, .org-team-sidebar .team-note .note-emphasis,
-  .select-menu-tabs a.selected {
+  .select-menu-tabs a.selected, #com .dropdown-menu a:hover {
     color: #e0e0e0 !important;
   }
   pre, body, h3, h4, a.social-count, span.social-count, #languages a.bar, dl.form dt, .lineoption p, a.select-menu-button, a.blog-title,
@@ -987,7 +991,7 @@
   .contrib-number, .pulse-summary .summary-box .count, .list-options .selected .list-item-title,
   .nav-bar-inner .brand-logo-invertocat .octicon-mark-github, .menu a .octicon, .issue-list-meta a, .stat-number,
   div.search-form button span, .fullscreen-overlay .octicon:hover:before, .fullscreen-overlay .mega-octicon:hover:before,
-  .protip-callout {
+  .protip-callout, .fullscreen-overlay textarea:focus, .fullscreen-overlay textarea:hover {
     color: #c0c0c0 !important;
   }
   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -1022,7 +1026,8 @@
   .select-menu-header .octicon:hover, .repo-list-description, .boxed-group-success a,
   .latest-commit .bubble-content strong, .file .meta, .email-format .email-hidden-toggle a, .file-diffstat,
   .program-info-column .mega-octicon, .octofication .notice-dismiss:hover, a.discussion-item-toggle-open,
-  a.discussion-item-toggle-closed, .timeline-commits .commit-message a {
+  a.discussion-item-toggle-closed, .timeline-commits .commit-message a, .markdown-format .intro, .markdown-format code,
+  .markdown-format ol > li::before {
     color: #a0a0a0 !important;
   }
   /* content text */
@@ -1062,7 +1067,7 @@
   .list-item .byline, .issue-list-meta, .prose-diff.collapsed .rich-diff-level-zero.expandable:before,
   .blob-num-expandable .diff-expander, .file-type-icon, .uploaded-files .remove, .releases-tag-list td.date a,
   .fullscreen-overlay .octicon:before, .fullscreen-overlay .mega-octicon:before, .collaborators .collab-remove .remove-link,
-  .octofication .notice-dismiss, ul.comparison-list > li .octicon {
+  .octofication .notice-dismiss, ul.comparison-list > li .octicon, div.content-header h6, .fullscreen-overlay textarea {
     color: #666 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before, .mini-icon-public-repo:before, .mini-icon-pull-request, .mini-icon-remove-close,
@@ -1582,6 +1587,9 @@
   }
   .popover.right .arrow {
     border-right-color: #555 !important;
+  }
+  .file-commit-form .commit-form:before, .file-commit-form .commit-form:after {
+    border-right-color: #333 !important;
   }
   /* text */
   .zh-uploader-container *, .zh-overlay-body, .zh-pipeline-issue-action {
