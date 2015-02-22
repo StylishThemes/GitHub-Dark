@@ -35,6 +35,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.19 (2/22/2015)
+
+* Blame: heat map update
+* Help
+  * Lots of tweaks & fixes
+  * Fix start page title
+* Removed unnecessary margin/paddings
+* Releases: Fix some borders
+* Diff
+  * Fix cutoff message
+  * Fix warning flash
+
 #### Version 1.11.18 (2/17/2015)
 
 * Discussions
@@ -73,14 +85,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Issues:
   * Update travis checkmark success & failure.
   * Update travis icon for error.
-
-#### Version 1.11.16 (2/8/2015)
-
-* Gist: fix row highlight background.
-* Move _custom-theme-template.css file.
-* Developer: Fix Octocat icons.
-* Frontpage: fix broadcast close button.
-* Diff:
-  * Fix image swipe handles.
-  * Fix onion diff slider, fix iframe boarder radii.
-* OAuth page: Fix organization access box.
