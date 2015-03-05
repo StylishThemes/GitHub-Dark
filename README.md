@@ -35,6 +35,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.20 (3/5/2015)
+
+* Global: style raw urls - see [issue #214](https://github.com/StylishThemes/GitHub-Dark/issues/214).
+* File:
+  * Add csv/tsv table formatting.
+  * Fix csv header color.
+* Help: Fix search bottom border.
+* Repo: Use filters on language colors - see [issue #68](https://github.com/StylishThemes/GitHub-Dark/issues/68).
+
 #### Version 1.11.19 (2/22/2015)
 
 * Blame: heat map update
@@ -70,18 +79,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix disabled buttons in file header.
 * File: More fixes for new headers.
 * Gist: Fix header.
-
-#### Version 1.11.17 (2/12/2015)
-
-* Add custom code fonts. Fixes [issue #210](https://github.com/StylishThemes/GitHub-Dark/issues/210).
-* Markdown:
-  * Fix padding on `tt` elements.
-  * Fix nested code tags in `a` tags. Fixes [issue #209](https://github.com/StylishThemes/GitHub-Dark/issues/209).
-  * Fix underline on hover on things nested inside links.
-* Discussions:
-  * Fix yellow travis status triangle.
-  * Better background for speech triangle.
-  * Better background for own speech triangle.
-* Issues:
-  * Update travis checkmark success & failure.
-  * Update travis icon for error.
