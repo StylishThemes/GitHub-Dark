@@ -35,6 +35,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.21 (3/17/2015) :four_leaf_clover:
+
+* Labels: Tweak text colors, fix labels on pull request overview.
+* Add Monaco to font stack.
+* Global:
+  * Move Monaco before Consolas.
+  * Fix breadcrumb color.
+* Branches: Fix border on multiple recently touched branches.
+* Twilight: Remove bold from JS regexes.
+
 #### Version 1.11.20 (3/5/2015)
 
 * Global: style raw urls - see [issue #214](https://github.com/StylishThemes/GitHub-Dark/issues/214).
@@ -55,27 +65,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diff
   * Fix cutoff message
   * Fix warning flash
-
-#### Version 1.11.18 (2/17/2015)
-
-* Discussions
-  * Slightly brighter toggle buttons.
-  * Honor tab size preference in inline diffs.
-  * Slightly darken commit messages.
-  * Include conversation tab in fixes.
-  * Update label styling.
-* Frontpage
-  * Update protip.
-  * Fix 'show more repos' link.
-* Tree browser hover icon styling.
-* Branch comparison: various fixes.
-* Issues: Fix label styling. Fixes [issue #208](https://github.com/StylishThemes/GitHub-Dark/issues/208).
-* Branches: Fix pending travis icon.
-* Global: Tweak border colors, merge some selector groups.
-* Wiki: Add background for custom sidebar.
-* Repo: Fix branch selector color.
-* Diff:
-  * Fix file header
-  * Fix disabled buttons in file header.
-* File: More fixes for new headers.
-* Gist: Fix header.
