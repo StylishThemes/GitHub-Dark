@@ -35,6 +35,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.22 (3/19/2015)
+
+* Repo:
+  * '(+) Create new file here' styling.
+  * Use correct class for '+'.
+  * Fix language bar bottom border.
+* Buttons: update button styles.
+* Remove Opera vendor prefix.
+* Organizations:
+  * Fix up invite page.
+  * Fix teams notice.
+* Help: Fix version dropdown in header.
+* Branches: Fix disabled branch delete icon.
+* Breadcrumb: file name styling.
+* Diff: Fix non-expandable expander hover.
+
 #### Version 1.11.21 (3/17/2015) :four_leaf_clover:
 
 * Labels: Tweak text colors, fix labels on pull request overview.
@@ -53,15 +69,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix csv header color.
 * Help: Fix search bottom border.
 * Repo: Use filters on language colors - see [issue #68](https://github.com/StylishThemes/GitHub-Dark/issues/68).
-
-#### Version 1.11.19 (2/22/2015)
-
-* Blame: heat map update
-* Help
-  * Lots of tweaks & fixes
-  * Fix start page title
-* Removed unnecessary margin/paddings
-* Releases: Fix some borders
-* Diff
-  * Fix cutoff message
-  * Fix warning flash
