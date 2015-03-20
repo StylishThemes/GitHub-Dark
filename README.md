@@ -35,6 +35,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.23 (3/20/2015)
+
+* Global:
+  * Buttons tweaks galore!
+  * Fix octicon buttons.
+* Issues:
+  * Fix comment box header, fixes [issue #219](https://github.com/StylishThemes/GitHub-Dark/issues/219).
+  * Simplify header button styling.
+* ZenHub: styling tweaks.
+* Octotree:
+  * Button tweaks.
+  * The save option button was not styled on purpose. Simply adding a "btn" class name would style it ([pull request submitted](https://github.com/buunguyen/octotree/pull/162)).
+
 #### Version 1.11.22 (3/19/2015)
 
 * Repo:
@@ -60,12 +73,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix breadcrumb color.
 * Branches: Fix border on multiple recently touched branches.
 * Twilight: Remove bold from JS regexes.
-
-#### Version 1.11.20 (3/5/2015)
-
-* Global: style raw urls - see [issue #214](https://github.com/StylishThemes/GitHub-Dark/issues/214).
-* File:
-  * Add csv/tsv table formatting.
-  * Fix csv header color.
-* Help: Fix search bottom border.
-* Repo: Use filters on language colors - see [issue #68](https://github.com/StylishThemes/GitHub-Dark/issues/68).
