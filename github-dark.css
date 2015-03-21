@@ -842,7 +842,8 @@
   #readme span.name, .pagination span.current, .box-action:active, .btn:active, .btn.selected,
   .btn.selected:hover, .btn.zeroclipboard-is-active, .minibutton:active, .minibutton.selected,
   .minibutton.selected:hover, .minibutton.zeroclipboard-is-active, .clone-url-button.selected > a,
-  .clone-url-button.selected > a:hover, .pagination a:hover, .octotree_toggle:hover {
+  .clone-url-button.selected > a:hover, .pagination a:hover, .octotree_toggle:hover,
+  button.button:not(:disabled):hover, button.minibutton:not(:disabled):hover, a.minibutton:not(:disabled):hover {
     background: linear-gradient(to bottom, #444, #333) !important;
     border-color: #484848 !important;
   }
@@ -859,11 +860,11 @@
   .dashboard-tabs li a, a.function-button, .capped-box h3, .expandable-line-num .diff-expander:hover, #contributors .capped-card h3,
   .audit-results-header, .add-pill-form, .gist .gist-file .gist-meta, .blob-num-hunk, .blob-num-expandable, .octotree_toggle,
   .blob-code-hunk, .blob-code-expandable, .code-list .divider .blob-num, .code-list .divider .blob-code,
-  ul.comparison-list > li.title, .file-header, .file .meta {
+  ul.comparison-list > li.title, .file-header, .file .meta, button.button, button.minibutton, a.minibutton {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #383838 !important;
   }
-  .minibutton, .search-form button, .file-box .meta, .auth-form-header, .branches .branch-group-heading,
+  .search-form button, .file-box .meta, .auth-form-header, .branches .branch-group-heading,
   .boxed-group > h3,  .boxed-group .heading, .box-header, .issues-list-actions, .branches .more-branches, .menu-heading,
   a.gollum-minibutton, a.gollum-minibutton:visited {
     background: linear-gradient(to bottom, #282828, #181818) !important;
@@ -896,7 +897,8 @@
   }
   /* === Text Color === */
   /* Bright text */
-  h1, h2, .btn, a.btn, .btn.btn-primary, .btn-danger:hover, #gist-form label, ul.repo-stats li a:hover, .text-emphasized,
+  h1, h2, .btn, a.btn, .btn.btn-primary, .button.primary, .minibutton.primary, .btn-danger:hover, #gist-form label,
+  ul.repo-stats li a:hover, .text-emphasized,
   .subnav li a:hover, .filters li.selected a, .filters li a:hover, .code-list em, a.header-anchor, .commandbar .choice .command,
   .search-term, .codesearch-cols em, .image, .selector-item:hover .mini-icon:before, .selector-item.selected .mini-icon:before,
   .new-repo .octicon, .select-menu-item.selected>.octicon, .sunken-menu a.selected .octicon, #header .nav a,
@@ -945,7 +947,8 @@
   ul.filter-list .filter-item.selected, .blob-num-expandable .diff-expander:hover, .email-format .email-hidden-toggle a:hover,
   #gollum-editor-help-parent li a.selected, #gollum-editor-help-list li a.selected, a.gollum-minibutton,
   a.gollum-minibutton:visited, a.token-warning, a.lightertooltipped, .org-team-sidebar .team-note .note-emphasis,
-  .select-menu-tabs a.selected, #com .dropdown-menu a:hover, #com h1 span, #com h2 span, .breadcrumb strong.final-path {
+  .select-menu-tabs a.selected, #com .dropdown-menu a:hover, #com h1 span, #com h2 span, .breadcrumb strong.final-path,
+  button.button, button.minibutton, a.minibutton, .button.primary:hover {
     color: #e0e0e0 !important;
   }
   pre, body, h3, h4, a.social-count, span.social-count, #languages a.bar, dl.form dt, .lineoption p, a.select-menu-button, a.blog-title,
@@ -1062,7 +1065,9 @@
   .context-pane .selector-item:hover a, .mega-icon:before, .mini-icon-public-repo:before, .mini-icon-pull-request, .mini-icon-remove-close,
   .mini-icon-link, .panel-nav.disabled .mega-octicon:before, .task-progress .octicon, .milestone-link .octicon,
   .site-footer .octicon-mark-github, .select-menu-header .octicon, .steps li, .pagination .gap, .pagination .disabled,
-  .octicon-btn.disabled, .octicon-btn.disabled:hover, .branch-delete.disabled {
+  .octicon-btn.disabled, .octicon-btn.disabled:hover, .branch-delete.disabled, button.button:disabled, button.button:disabled:hover,
+  button.button.disabled, button.button.disabled:hover, button.minibutton:disabled, button.minibutton:disabled:hover,
+  button.minibutton.disabled, button.minibutton.disabled:hover {
     color: #444 !important;
   }
   .svg-tip:after, .bootcamp .desc h2, .issues-listing .table-list-issues .issue-comments-link.no-comment {
@@ -1206,11 +1211,11 @@
     color: #6CC644 !important;
   }
   /* interactive button - bright border */
-  .btn-primary:not(.compare-button) {
+  .btn-primary:not(.compare-button), .button.primary {
     background: linear-gradient(to bottom, #407045, #305530) !important;
     border-color: #083 !important;
   }
-  .btn-primary:disabled {
+  .btn-primary:disabled, .button.primary:disabled {
     background: linear-gradient(to bottom, #203522, #152715) !important;
     border-color: #041 !important;
   }
@@ -1223,7 +1228,8 @@
   .noproblems .pageheader_wrap, a.new-repo:hover {
     background: #373 !important;
   }
-  .btn-primary:not(:disabled):not(.compare-button):hover {
+  .btn-primary:not(:disabled):not(.compare-button):hover,
+  .button.primary:not(:disabled):hover {
     background: linear-gradient(to bottom, #508055, #407045) !important;
   }
   /* Red */
