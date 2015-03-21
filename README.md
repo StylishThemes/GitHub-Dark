@@ -35,6 +35,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.11.24 (3/21/2015)
+
+* Commits:
+  * Remove box shadow from avatar childs.
+  * Fix 'Browse Files' button.
+* Issues:
+  * Fix comment header mail icon & color.
+  * Fix assign self sidebar link.
+  * Fix comment icons in issue list.
+  * Remove box shadow from inline labels.
+* Global:
+  * Fix outline buttons.
+  * Remove remaining cases of `.button`.
+* Gist: Fix buttons by re-adding `.button` [#220](https://github.com/StylishThemes/GitHub-Dark/issues/220).
+* Pull request: Add padding to bottom info box.
+
 #### Version 1.11.23 (3/20/2015)
 
 * Global:
@@ -63,13 +79,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Branches: Fix disabled branch delete icon.
 * Breadcrumb: file name styling.
 * Diff: Fix non-expandable expander hover.
-
-#### Version 1.11.21 (3/17/2015) :four_leaf_clover:
-
-* Labels: Tweak text colors, fix labels on pull request overview.
-* Add Monaco to font stack.
-* Global:
-  * Move Monaco before Consolas.
-  * Fix breadcrumb color.
-* Branches: Fix border on multiple recently touched branches.
-* Twilight: Remove bold from JS regexes.
