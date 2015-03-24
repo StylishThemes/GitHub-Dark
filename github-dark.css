@@ -392,7 +392,7 @@
   .stats-group-stat:first-child, .build-statuses-list, #gollum-dialog-dialog-buttons, #gollum-dialog-dialog h4,
   a.gollum-minibutton, a.gollum-minibutton:visited, .two-factor-toggle .two-factor-status, .two-factor-settings-group,
   .member-badge, ul.comparison-list > li, .markdown-format ol > li::before, .release-downloads, .release-downloads li,
-  .blob-interaction-bar {
+  .blob-interaction-bar, .file-header {
     border-color: #343434 !important;
   }
   .pagination a, .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -522,8 +522,25 @@
     background: #141414 !important;
   }
   .blame .blob-num, .blame-blob-num, .overall-summary, .repository-lang-stats, .collection-card, .team-grid .team,
-  .table-list-header {
+  .blob-num-hunk, .blob-code-hunk, .blob-code-expandable, .code-list .divider .blob-num, .code-list .divider .blob-code,
+  .blob-num-expandable, .expandable-line-num .diff-expander:hover {
     background: #1b1b1b !important;
+  }
+  .table-list-header, .timeline-comment-header, .boxed-group > h3, .boxed-group .heading, .file-header {
+    background: #1d1d1d !important;
+  }
+  /* Navigation focus */
+  .list-group-item.navigation-focus, .list-browser-item.navigation-focus, .headlines li:hover, .js-details-container.navigation-focus,
+  .boxed-group-list > li:hover, .js-details-container.navigation-focus:nth-child(2n), .menu a:hover,.team-grid .team-members,
+  .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td,
+  .issues-listing .table-list-issues .selectable:hover, .issues-listing .table-list-issues .navigation-focus, .setup-plans tr.selected,
+  .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover, .notifications .navigation-focus,
+  .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
+  .owner-select-target, .divider .blob-code div.highlight,  pre div[style^="background-color: rgb(248, 238, 199)"],
+  .highlight td[style^="background-color: rgb(248, 238, 199)"], .line[style^="background-color: rgb(255, 255, 204)"],
+  .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover, .diff-table tr:hover > pre,
+  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+    background: #202020 !important;
   }
   .social-count:before {
     border-right-color: #333 !important;
@@ -571,7 +588,7 @@
   .list-browser-item.closed, .content .verseblock-content, .content .verseblock-content, .commit-preview .message pre,
   .content dl code, .content ul code, p code, body.blog pre > code, .content .sectionbody .dlist dt, .content p > tt,
   .content .sectionbody .dlist dt, .content p > tt, .commit-sha, .markdown-body code, .markdown-body tt, .protip code,
-  .simple-stacked-bar {
+  .simple-stacked-bar, .rss-subscribe:hover, div#common-issues ul li a:hover {
     background: #282828 !important;
   }
   /*** semi-transparent #222 ***/
@@ -585,21 +602,6 @@
   /* page overlay */
   .select-menu-loading-overlay, .slow-loading-overlay, .branches .loading-overlay {
     background-color: rgba(24,24,24,.6) !important;
-  }
-  /* Navigation focus */
-  .list-group-item.navigation-focus, .list-browser-item.navigation-focus, .headlines li:hover, .js-details-container.navigation-focus,
-  .boxed-group-list > li:hover, .js-details-container.navigation-focus:nth-child(2n), .menu a:hover,.team-grid .team-members,
-  .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td,
-  .issues-listing .table-list-issues .selectable:hover, .issues-listing .table-list-issues .navigation-focus, .setup-plans tr.selected,
-  .date_selector td.selectable_day:hover, .date_selector td.selectable_day.hover, .notifications .navigation-focus,
-  .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
-  .owner-select-target, .divider .blob-code div.highlight,  pre div[style^="background-color: rgb(248, 238, 199)"],
-  .highlight td[style^="background-color: rgb(248, 238, 199)"], .line[style^="background-color: rgb(255, 255, 204)"],
-  .oauth-org-access-details .boxed-group-list > li.on:hover {
-    background: #202020 !important;
-  }
-  .rss-subscribe:hover, div#common-issues ul li a:hover {
-    background-color: #282828 !important;
   }
   /* === #333 === */
   /* Panel background (#333) only */
@@ -814,7 +816,7 @@
   .timeline-comment.current-user .timeline-comment-header, .github-jobs-promotion p, .octotip,
   .markdown-format .alert:not(.warning), .full-commit.commit, .flash, .bootcamp h1, .bootcamp-body, .owners-notice,
   .full-commit .browse-button, .blob-history, a.branch-name, .branch-name {
-    background: linear-gradient(to bottom, #182030, #183040) !important;
+    background: #182838 !important;
   }
   .new-user-avatar-cta, .jstree-wholerow-clicked, .commit-ref, .api .alert {
     background: #182030 !important;
@@ -858,25 +860,19 @@
     background: linear-gradient(to bottom, #444, #333) !important;
     border-color: #484848 !important;
   }
-  /* Gradient hover hightlight */
-  pre div:hover, .diff-table tr:hover > pre, .blob-num[colspan],
-  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
-    background: linear-gradient(to bottom, #282828, #181818) !important;
-  }
   /* dark grey gradient */
   .btn, header.nav-bar, .bubble .bubble-title, kbd, a.feed, .pagination a, .list-browser-filterbar, .gobutton, .comment-header,
   .pagehead ul.tabs li a, .login_form input[type="submit"], .top-bar, ul#bootcamp li a h4, .pull-info, #gists .context-menu-container,
   .branch-link, body#com #header, .white-nav .selected span, .select-menu-header, .clone-url-button a, .filter-tab, #header-wrapper,
   #header-wrapper .nav, .pagination span, .cheatsheet h2, .section a.section-head, .octotree_view_header, .list-heading,
-  .dashboard-tabs li a, a.function-button, .capped-box h3, .expandable-line-num .diff-expander:hover, #contributors .capped-card h3,
-  .audit-results-header, .add-pill-form, .gist .gist-file .gist-meta, .blob-num-hunk, .blob-num-expandable, .octotree_toggle,
-  .blob-code-hunk, .blob-code-expandable, .code-list .divider .blob-num, .code-list .divider .blob-code,
-  ul.comparison-list > li.title, .file-header, .file .meta, button.button, button.minibutton, a.minibutton {
+  .dashboard-tabs li a, a.function-button, .capped-box h3, #contributors .capped-card h3,
+  .audit-results-header, .add-pill-form, .gist .gist-file .gist-meta, .octotree_toggle,
+  ul.comparison-list > li.title, .file .meta, button.button, button.minibutton, a.minibutton {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #383838 !important;
   }
   .search-form button, .file-box .meta, .auth-form-header, .branches .branch-group-heading,
-  .boxed-group > h3,  .boxed-group .heading, .box-header, .issues-list-actions, .branches .more-branches, .menu-heading,
+  .box-header, .issues-list-actions, .branches .more-branches, .menu-heading,
   a.gollum-minibutton, a.gollum-minibutton:visited {
     background: linear-gradient(to bottom, #282828, #181818) !important;
   }
@@ -885,9 +881,6 @@
   .usage-bar dd, .render-bar {
     background: linear-gradient(to bottom, #181818, #282828) !important;
     border-color: #383838 !important;
-  }
-  .timeline-comment-header {
-    background: linear-gradient(to bottom, #181818, #282828) !important;
   }
   /* vertical left border for side menu */
   .sunken-menu, .sunken-menu-contents {
@@ -1555,7 +1548,7 @@
     border-left: #eee 1px solid !important;
   }
 
-   .enterprise ul.repo-menu a.selected {
+  .enterprise ul.repo-menu a.selected {
     border-color: #343434 !important;
   }
 
