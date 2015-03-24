@@ -79,7 +79,7 @@
   /* === Notification icon === */
   .notification-indicator .mail-status {
     background-color: /*[[base-color]]*/ #4183C4 !important;
-    border-color: #222 !important;
+    border-color: #1d1d1d !important;
   }
   /* text selection */
   ::selection {
@@ -93,6 +93,14 @@
   .ace_selection {
     background-color: /*[[base-color]]*/ #4183C4 !important;
     color: #fff !important;
+  }
+  /* placeholder */
+  ::-webkit-input-placeholder {
+    color: #444 !important;
+  }
+  ::-moz-placeholder {
+    color: #444 !important;
+    opacity: 1 !important;
   }
   /* checked & unread issue indicator */
   .table-list-item.unread .table-list-cell-checkbox {
@@ -371,7 +379,7 @@
   .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph {
     border-color: #484848 !important;
   }
-  h1, h2, h3, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pagination a:first-child, .pulse-graph,
+  h1, h2, h3, .header, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pagination a:first-child, .pulse-graph,
   .btn:not(img), .minibutton, .social-count, .discusion-topic-infobar, .box-header, .box-body, .timeline-comment-label, .logo-box,
   .suggester li, .developer-program-badge, .vcard-details, .vcard-stats, .auth-form-header, .nav-bar-tabs .section-title,
   .pagination a:last-child, .pagination span:first-child, .boxed-group-list > li, .toolbar-bordered, .new-issue-form,
@@ -396,7 +404,7 @@
   .member-badge, ul.comparison-list > li, .markdown-format ol > li::before, .release-downloads, .release-downloads li,
   .blob-interaction-bar, .file-header, input.subnav-search-input, .select-menu-header,
   .select-menu-text-filter:first-child:last-child, .select-menu-modal, #gist-form .file .meta, .file .meta,
-  .file-box .meta, .capped-card {
+  .file-box .meta, .capped-card, .audit-results-header {
     border-color: #343434 !important;
   }
   .pagination a, .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -491,7 +499,7 @@
   .simple-box, .label-edit.edit-color-label-form .color-editor .color-editor-input, .date_selector td,
   .new-label, .range-editor .range, .range-editor .flag, .octotree_sidebar, .auth-form-body, div.border-wrap,
   .profile-header, .btn.btn-outline, .comment-form-head.tabnav, .highlight .gc, .uploaded-files.is-populated, .range-editor,
-  .header, #gollum-editor-help-parent li a.selected, #gollum-editor-help-list li a.selected, #gollum-editor-help-parent li a:hover,
+  #gollum-editor-help-parent li a.selected, #gollum-editor-help-list li a.selected, #gollum-editor-help-parent li a:hover,
   #gollum-editor-help-list li a:hover, .github-access-banner, .protip-callout, ul.comparison-list, .wiki-custom-sidebar,
   .invitation-container, .orgs-help-shelf, .orgs-help-item-octicon {
     background: #181818 !important;
@@ -502,7 +510,7 @@
     background: #181818 !important;
     border-color: #484848 !important;
   }
-  #readme .markdown-body, .social-count, .file, .box-body, .markdown-body table tr:nth-child(2n), .steps li,
+  .header, .headers, #readme .markdown-body, .social-count, .file, .box-body, .markdown-body table tr:nth-child(2n), .steps li,
   .explore-section:nth-child(2n), .markdown-format table, .list-group-item, .chromed-list-browser .none p,
   .chromed-list-browser .error p, .list-browser-footer, .commandbar .choice:hover, #gollum-editor-help,
   .search-filter:hover, #wiki-history table tr:nth-child(2n) td, .display tr:hover, .octofication .message,
@@ -516,7 +524,7 @@
   .commit-tease, .branch-infobar, table.capped-list tr:nth-child(2n), .team-org-group,
   #gollum-editor-help-wrapper, .integrations-quality, .showcase-featured .mo-info .featured-grid-outer,
   .render-shell, .list, .latest-commit .commit-author, .bubble, .tabs > a.selected, .pagination .gap, .pagination .disabled,
-  .pagination .gap:hover, .pagination .disabled:hover, .comment-form-head .tabnav-tab.selected, .headers,
+  .pagination .gap:hover, .pagination .disabled:hover, .comment-form-head .tabnav-tab.selected,
   .table-list, .oauth-org-access-details .boxed-group-list > li.on, #fullscreen_overlay {
     background: #181818 !important;
   }
@@ -822,14 +830,13 @@
   }
   /* === gradient === */
   /* light grey gradient */
-  .btn:hover, .btn:active, .btn.zeroclipboard-is-hover, .btn.zeroclipboard-is-active, .minibutton:hover,
-  .minibutton:active, .minibutton.zeroclipboard-is-hover, .minibutton.zeroclipboard-is-active.kbd, .signup-button:hover,
-  a.signin:hover, .hero .textographic, .hero .screenographic, .dashboard-notice,
-  #readme span.name, .pagination span.current, .box-action:active, .btn:active, .btn.selected,
-  .btn.selected:hover, .btn.zeroclipboard-is-active, .minibutton:active, .minibutton.selected,
+  .btn:hover, .btn:active, .btn.zeroclipboard-is-hover, .btn.zeroclipboard-is-active, .minibutton:hover, .minibutton:active,
+  .minibutton.zeroclipboard-is-hover, .minibutton.zeroclipboard-is-active.kbd, .signup-button:hover, a.signin:hover,
+  .hero .textographic, .hero .screenographic, .dashboard-notice, .pagination span.current, .box-action:active, .btn:active,
+  .btn.selected, .btn.selected:hover, .btn.zeroclipboard-is-active, .minibutton:active, .minibutton.selected,
   .minibutton.selected:hover, .minibutton.zeroclipboard-is-active, .clone-url-button.selected > a,
-  .clone-url-button.selected > a:hover, .pagination a:hover, .octotree_toggle:hover,
-  button.button:hover, button.minibutton:hover, a.minibutton:hover {
+  .clone-url-button.selected > a:hover, .pagination a:hover, .octotree_toggle:hover, button.button:hover, button.minibutton:hover,
+  a.minibutton:hover {
     background: linear-gradient(to bottom, #444, #333) !important;
     border-color: #484848 !important;
   }
@@ -1050,14 +1057,6 @@
   .boxed-group .heading a, .select-menu-item a, .list-heading a, .close-button, .timeline-comment-action, a.timeline-comment-action,
   a.comment-type-icon {
     color: inherit !important;
-  }
-  /* placeholder */
-  ::-webkit-input-placeholder {
-    color: #444 !important;
-  }
-  ::-moz-placeholder {
-    color: #444 !important;
-    opacity: 1 !important;
   }
   /* Alerts and activity, remove background gradient */
   .news .alert .title span, .metabox .editable-text:hover, #inbox .list .item .title span {
