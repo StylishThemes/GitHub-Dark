@@ -35,6 +35,23 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.0 (3/26/2015)
+
+* Global
+  * Fix disabled buttons.
+  * Update header dropdown arrow hover.
+  * Remove a lot of gradients! See [issue #221]().
+  * More gradient work & related things.
+  * Graph fixes.
+  * Border color fixes.
+  * Style tweaks out-the-whazoo!
+* Issues:
+  * Table header and hover highlight more closely match GH's colors.
+  * Fix pagination.
+  * Fix new comment header.
+* Milestones: Date selector tweaks.
+* Front page: Tweak 'More' link.
+
 #### Version 1.11.24 (3/21/2015)
 
 * Commits:
@@ -63,19 +80,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Octotree:
   * Button tweaks.
   * The save option button was not styled on purpose. Simply adding a "btn" class name would style it ([pull request submitted](https://github.com/buunguyen/octotree/pull/162)).
-
-#### Version 1.11.22 (3/19/2015)
-
-* Repo:
-  * '(+) Create new file here' styling.
-  * Use correct class for '+'.
-  * Fix language bar bottom border.
-* Buttons: update button styles.
-* Remove Opera vendor prefix.
-* Organizations:
-  * Fix up invite page.
-  * Fix teams notice.
-* Help: Fix version dropdown in header.
-* Branches: Fix disabled branch delete icon.
-* Breadcrumb: file name styling.
-* Diff: Fix non-expandable expander hover.
