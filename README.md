@@ -35,6 +35,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.1 (4/3/2015)
+
+* Image preview: remove double border.
+* File history: fix breadcrumb color.
+* Global: Remove box shadow from keyboard shortcuts.
+* File finder: Remove input styles.
+* Gist: Fix delete gist button.
+* Discussions: Fix speech bubble arrow colors.
+* Darkened the 'private' label in the repo list ([pull #222](https://github.com/StylishThemes/GitHub-Dark/pull/222)); thanks [EvanDarwin](https://github.com/EvanDarwin)!
+
 #### Version 1.12.0 (3/26/2015)
 
 * Global
@@ -67,16 +77,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Remove remaining cases of `.button`.
 * Gist: Fix buttons by re-adding `.button` [#220](https://github.com/StylishThemes/GitHub-Dark/issues/220).
 * Pull request: Add padding to bottom info box.
-
-#### Version 1.11.23 (3/20/2015)
-
-* Global:
-  * Buttons tweaks galore!
-  * Fix octicon buttons.
-* Issues:
-  * Fix comment box header, fixes [issue #219](https://github.com/StylishThemes/GitHub-Dark/issues/219).
-  * Simplify header button styling.
-* ZenHub: styling tweaks.
-* Octotree:
-  * Button tweaks.
-  * The save option button was not styled on purpose. Simply adding a "btn" class name would style it ([pull request submitted](https://github.com/buunguyen/octotree/pull/162)).
