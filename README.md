@@ -35,6 +35,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.2 (4/8/2015)
+
+* Fix inline code in frontpage feed. Fixes [issue #223](https://github.com/StylishThemes/GitHub-Dark/issues/223).
+* Gist: Fix comment actions.
+* Options: Fix inactive ssh keys color.
+* Issues:
+  * Colored unread issue indicator.
+  * Tweak label text colors.
+* Global: Slightly brighter hover highlights.
+* Add missing selector on Repositories page. Thanks [iJunkie22](https://github.com/iJunkie22) ([pull request #224](https://github.com/StylishThemes/GitHub-Dark/pull/224))!
+
 #### Version 1.12.1 (4/3/2015)
 
 * Image preview: remove double border.
@@ -50,7 +61,7 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Global
   * Fix disabled buttons.
   * Update header dropdown arrow hover.
-  * Remove a lot of gradients! See [issue #221]().
+  * Remove a lot of gradients! See [issue #221](https://github.com/StylishThemes/GitHub-Dark/issues/221).
   * More gradient work & related things.
   * Graph fixes.
   * Border color fixes.
@@ -61,19 +72,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix new comment header.
 * Milestones: Date selector tweaks.
 * Front page: Tweak 'More' link.
-
-#### Version 1.11.24 (3/21/2015)
-
-* Commits:
-  * Remove box shadow from avatar childs.
-  * Fix 'Browse Files' button.
-* Issues:
-  * Fix comment header mail icon & color.
-  * Fix assign self sidebar link.
-  * Fix comment icons in issue list.
-  * Remove box shadow from inline labels.
-* Global:
-  * Fix outline buttons.
-  * Remove remaining cases of `.button`.
-* Gist: Fix buttons by re-adding `.button` [#220](https://github.com/StylishThemes/GitHub-Dark/issues/220).
-* Pull request: Add padding to bottom info box.
