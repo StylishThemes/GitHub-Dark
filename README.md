@@ -35,6 +35,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.3 (4/15/2015)
+
+* Organizations:
+  * Fix admin member label.
+  * Fix org title.
+* Network graph: minor fixes to keyboard shortcuts.
+* Gists: Fix some gist buttons that didn't receive styles. Fixes [issue #225](https://github.com/StylishThemes/GitHub-Dark/issues/225).
+
 #### Version 1.12.2 (4/8/2015)
 
 * Fix inline code in frontpage feed. Fixes [issue #223](https://github.com/StylishThemes/GitHub-Dark/issues/223).
@@ -55,20 +63,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Fix delete gist button.
 * Discussions: Fix speech bubble arrow colors.
 * Darkened the 'private' label in the repo list ([pull #222](https://github.com/StylishThemes/GitHub-Dark/pull/222)); thanks [EvanDarwin](https://github.com/EvanDarwin)!
-
-#### Version 1.12.0 (3/26/2015)
-
-* Global
-  * Fix disabled buttons.
-  * Update header dropdown arrow hover.
-  * Remove a lot of gradients! See [issue #221](https://github.com/StylishThemes/GitHub-Dark/issues/221).
-  * More gradient work & related things.
-  * Graph fixes.
-  * Border color fixes.
-  * Style tweaks out-the-whazoo!
-* Issues:
-  * Table header and hover highlight more closely match GH's colors.
-  * Fix pagination.
-  * Fix new comment header.
-* Milestones: Date selector tweaks.
-* Front page: Tweak 'More' link.
