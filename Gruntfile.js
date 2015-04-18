@@ -33,9 +33,7 @@ module.exports = function (grunt) {
     config.bgOptions = config.tiled ?
         'background-repeat: repeat !important; background-size: auto !important; background-position: left top !important;' :
         'background-repeat: no-repeat !important; background-size: cover !important; background-position: center top !important;';
-    config.bgOptions2 = config.attach.toLowerCase() === 'scroll' ?
-        'background-attachment: scroll !important;' :
-        'background-attachment: fixed !important;';
+    config.bgAttachment = config.attach.toLowerCase() === 'scroll' ? 'scroll' : 'fixed';
 
     // Don't include closing bracket for a chrome build
     config.newTheme = config.themeFile ? '<%= grunt.file.read("' + config.themeFile + '") %>' : '';
@@ -55,8 +53,8 @@ module.exports = function (grunt) {
         pattern: '/*[[bg-options]]*/',
         replacement: config.bgOptions
     },{
-        pattern: '/*[[bg-options2]]*/',
-        replacement: config.bgOptions2
+        pattern: '/*[[bg-attachment]]*/ fixed',
+        replacement: config.bgAttachment
     },{
         pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: config.color
@@ -67,10 +65,6 @@ module.exports = function (grunt) {
         // remove default syntax themes AND closing bracket
         pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
         replacement: ''
-//    },{
-//        pattern: '/*[[syntax-theme]]*/',
-//        // add selected theme
-//        replacement: config.newTheme
     },{
         pattern: '/*[[syntax-theme]]*/',
         // add selected theme
@@ -84,6 +78,9 @@ module.exports = function (grunt) {
     },{
         pattern: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/,
         replacement: '/*[[bg-choice]]*/'
+    },{
+        pattern: '/*[[bg-attachment]]*/ fixed',
+        replacement: '/*[[bg-attachment]]*/'
     },{
         pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: '/*[[base-color]]*/'
