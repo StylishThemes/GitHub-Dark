@@ -35,6 +35,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.4 (4/18/2015)
+
+* Global:
+  * Unify rule color.
+  * Add background attachment fixed. Fixes [issue #226](https://github.com/StylishThemes/GitHub-Dark/issues/226).
+* Labels: fix editor background style & add box shadow.
+
 #### Version 1.12.3 (4/15/2015)
 
 * Organizations:
@@ -53,13 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Tweak label text colors.
 * Global: Slightly brighter hover highlights.
 * Add missing selector on Repositories page. Thanks [iJunkie22](https://github.com/iJunkie22) ([pull request #224](https://github.com/StylishThemes/GitHub-Dark/pull/224))!
-
-#### Version 1.12.1 (4/3/2015)
-
-* Image preview: remove double border.
-* File history: fix breadcrumb color.
-* Global: Remove box shadow from keyboard shortcuts.
-* File finder: Remove input styles.
-* Gist: Fix delete gist button.
-* Discussions: Fix speech bubble arrow colors.
-* Darkened the 'private' label in the repo list ([pull #222](https://github.com/StylishThemes/GitHub-Dark/pull/222)); thanks [EvanDarwin](https://github.com/EvanDarwin)!
