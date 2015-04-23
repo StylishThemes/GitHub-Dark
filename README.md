@@ -35,6 +35,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.5 (4/23/2015)
+
+* Markdown: Fix new `<a>` tags in content.
+* Fix some more gist buttons and 2-factor-auth page.
+* Code: Fix default text colors in some cases. Fixes [issue #228](https://github.com/StylishThemes/GitHub-Dark/issues/228).
+
 #### Version 1.12.4 (4/18/2015)
 
 * Global:
@@ -49,14 +55,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix org title.
 * Network graph: minor fixes to keyboard shortcuts.
 * Gists: Fix some gist buttons that didn't receive styles. Fixes [issue #225](https://github.com/StylishThemes/GitHub-Dark/issues/225).
-
-#### Version 1.12.2 (4/8/2015)
-
-* Fix inline code in frontpage feed. Fixes [issue #223](https://github.com/StylishThemes/GitHub-Dark/issues/223).
-* Gist: Fix comment actions.
-* Options: Fix inactive ssh keys color.
-* Issues:
-  * Colored unread issue indicator.
-  * Tweak label text colors.
-* Global: Slightly brighter hover highlights.
-* Add missing selector on Repositories page. Thanks [iJunkie22](https://github.com/iJunkie22) ([pull request #224](https://github.com/StylishThemes/GitHub-Dark/pull/224))!
