@@ -35,6 +35,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.6 (4/26/2015)
+
+* Discussion: Fix merge PR form.
+* Themes: Add `!important` to chaos theme. Fixes [issue #](https://github.com/StylishThemes/GitHub-Dark/issues/229).
+
 #### Version 1.12.5 (4/23/2015)
 
 * Markdown: Fix new `<a>` tags in content.
@@ -47,11 +52,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Unify rule color.
   * Add background attachment fixed. Fixes [issue #226](https://github.com/StylishThemes/GitHub-Dark/issues/226).
 * Labels: fix editor background style & add box shadow.
-
-#### Version 1.12.3 (4/15/2015)
-
-* Organizations:
-  * Fix admin member label.
-  * Fix org title.
-* Network graph: minor fixes to keyboard shortcuts.
-* Gists: Fix some gist buttons that didn't receive styles. Fixes [issue #225](https://github.com/StylishThemes/GitHub-Dark/issues/225).
