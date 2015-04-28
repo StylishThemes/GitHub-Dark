@@ -49,10 +49,10 @@
   .jstree-icon.tree::before, .octicon-file-directory, .branch-status-details, .notification-actions .btn-link:hover,
   a.discussion-item-toggle-open:hover, a.discussion-item-toggle-closed:hover,
   .task-list a, .full-commit .btn.btn-outline:hover, .zeroclipboard-link, .stats-group-stat:hover,
-  .stats-group-stat:hover .stat-number, a.commit-link, .tag-references > li a:hover, .two-factor-toggle .two-factor-status button,
+  .stats-group-stat:hover .stat-number, .tag-references > li a:hover, .two-factor-toggle .two-factor-status button,
   .homepage .mega-octicon:before, .tree-browser tr.navigation-focus .octicon-chevron-right, #header ul.top-nav > li > a:hover,
   #header ul.top-nav > li > button:hover, .new-file-form, .date_selector td, .pagination a, .pagination span,
-  .pagination em, .timeline-comment-actions .octicon:hover, a.org-link:hover {
+  .pagination em, .timeline-comment-actions .octicon:hover, a.org-link:hover, a.commit-link, a.commit-link tt {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -192,9 +192,8 @@
   }
   /* HACK: Fix annoying text selection bug in Firefox */
   .markdown-body code, .markdown-body tt {
-    padding: 0 .2em !important;
+    padding: 0 .3em !important;
     display: inline-block !important;
-    border: 1px solid #383838 !important;
   }
  .markdown-body pre code, .markdown-body pre tt {
     padding: .2em 0 !important;
@@ -356,7 +355,7 @@
   .wiki-wrapper .wiki-empty-box:hover {
     border-color: #777 !important;
   }
-  pre, img, #browser table, #browser table th, #issues .menu ul li, .branches .more-branches,
+  img, #browser table, #browser table th, #issues .menu ul li, .branches .more-branches,
   .counter, .issues td, ul.main_nav li.selected, .browser_header, .issue-head, .bootcamp-help .image, ul.hook-list,
   .clone-url-button, .list-tip li, .section-nav a, .search-menu-container,
   .repo_list li a, .graphs .axis, .switcher > span:after, a.assignee-bit, .menu li, .notifications td, .filter-tab,
@@ -390,7 +389,7 @@
   .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph {
     border-color: #484848 !important;
   }
-  h1, h2, h3, .header, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pulse-graph,
+  pre, h1, h2, h3, .header, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pulse-graph,
   .btn:not(img), .minibutton, .social-count, .discusion-topic-infobar, .box-header, .box-body, .timeline-comment-label, .logo-box,
   .suggester li, .developer-program-badge, .vcard-details, .vcard-stats, .auth-form-header, .nav-bar-tabs .section-title,
   .pagination a:last-child, .pagination span:first-child, .boxed-group-list > li, .toolbar-bordered, .new-issue-form,
@@ -406,7 +405,7 @@
   .table-list-bordered .table-list-cell:first-child, .table-list-bordered .table-list-cell:last-child, .table-list-cell,
   .table-list, .table-list-header, .blankslate, .labels-list-item, .subnav-divider-right, .subnav-bordered,
   .content table tr th, #search-results li, .subhead, #pages-composer, .render-bar, #gollum-editor-help,
-  #gollum-editor-help-parent, #gollum-editor-help-list, .markdown-format code, .auth-section, .commit-sha,
+  #gollum-editor-help-parent, #gollum-editor-help-list, .auth-section, .commit-sha,
   .comment-body, .mini-repo-list-item, .advanced-search-form fieldset, .contrib-column, .org-header .edit-org,
   .pulse-summary .summary-box, .pulse-summary .summary-box li:first-child, .list-item + .list-item, .list-item + .list-heading,
   .list-heading + .list-item, .issue-list-item, .ace_gutter, .collection-card, .setup-header, body.api pre,
@@ -566,7 +565,7 @@
   .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td, .issues-listing .table-list-issues .selectable:hover,
   .issues-listing .table-list-issues .navigation-focus, .setup-plans tr.selected, .notifications .navigation-focus,
   .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
-  .owner-select-target, .divider .blob-code div.highlight,  pre div[style^="background-color: rgb(248, 238, 199)"],
+  .owner-select-target, .divider .blob-code div.highlight, pre div[style^="background-color: rgb(248, 238, 199)"],
   .highlight td[style^="background-color: rgb(248, 238, 199)"], .line[style^="background-color: rgb(255, 255, 204)"],
   .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover, .diff-table tr:hover > pre,
   .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
@@ -603,10 +602,8 @@
     border-color: #282828 !important;
     color: #444 !important;
   }
-  /* inline code */
-  .list-browser-item.closed, .content .verseblock-content, .content .verseblock-content, .commit-preview .message pre,
-  .content dl code, .content ul code, p code, body.blog pre > code, .content .sectionbody .dlist dt, .content p > tt,
-  .content .sectionbody .dlist dt, .content p > tt, .commit-sha, .markdown-body code, .markdown-body tt, .protip code,
+
+  .list-browser-item.closed, .content .verseblock-content, .content .verseblock-content,
   .simple-stacked-bar, .rss-subscribe:hover, div#common-issues ul li a:hover, .date_selector td.selectable_day:hover,
   .date_selector td.selectable_day.hover, .pagination a:hover, .pagination a:focus, .pagination span:hover,
   .pagination span:focus, .pagination em:hover, .pagination em:focus {
@@ -1360,7 +1357,11 @@
     border-bottom: #343434 8px solid !important;
   }
   /* inline code - add with border */
-  .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre, .markdown-body .highlight pre, body.blog pre,
+  .markdown-format code, .markdown-body code, .markdown-body tt, .markdown-format pre,
+  .markdown-body pre, .markdown-format .highlight pre, .markdown-body .highlight pre,
+  body.blog pre {
+    border: 1px solid rgba(255,255,255,.1) !important;
+  }
   #facebox pre, #contributors-master svg.viz {
     border: 1px solid #343434 !important;
   }
@@ -1647,16 +1648,21 @@
     }
   }
 
-  /* inline code blocks - selector group is completed by the theme file */
+  /* inline code - big blocks */
   pre, .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre, .markdown-body .highlight pre,
   body.blog pre, #facebox pre, .blob-code-context, .blob-num-context, .blob-expanded, .terminal, .copyable-terminal,
+
+  /* inline code - single lines */
+  .markdown-body code, .markdown-body tt, .protip code, .content dl code, .content ul code, p code,
+  body.blog pre > code, .content .sectionbody .dlist dt, .content p > tt, .content .sectionbody .dlist dt,
+  .content p > tt, .commit-sha, .commit-preview .message pre,
 
   /*[[syntax-theme]]*/
   /* grunt build - remove to end of file */
 
   /* Syntax Theme - Twilight */
   .highlight, .ace_editor {
-    background: #141414 !important;
+    background: #1e1e1e !important;
     color: #ddd !important;
   }
 
