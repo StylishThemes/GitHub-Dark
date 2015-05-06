@@ -35,6 +35,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.7 (5/5/2015)
+
+* Various tweaks to code blocks in markdown.
+* More tweaks to code block backgrounds.
+* Sticky sidebar
+  * Add `position: sticky` (only works in Firefox at the moment).
+  * Add z-index.
+  * Applied to repo, blog & gists.
+* Organizations: fix team member ellipsis.
+
 #### Version 1.12.6 (4/26/2015)
 
 * Discussion: Fix merge PR form.
@@ -45,10 +55,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Markdown: Fix new `<a>` tags in content.
 * Fix some more gist buttons and 2-factor-auth page.
 * Code: Fix default text colors in some cases. Fixes [issue #228](https://github.com/StylishThemes/GitHub-Dark/issues/228).
-
-#### Version 1.12.4 (4/18/2015)
-
-* Global:
-  * Unify rule color.
-  * Add background attachment fixed. Fixes [issue #226](https://github.com/StylishThemes/GitHub-Dark/issues/226).
-* Labels: fix editor background style & add box shadow.
