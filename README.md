@@ -35,6 +35,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.12.8 (5/8/2015)
+
+* ZenHub: give card content some contrast.
+* Discussions
+  * Fix inline comment form.
+  * Update hack for the timeline line.
+* Renderers: add styling to jupyter pages. See [issue #230](https://github.com/StylishThemes/GitHub-Dark/issues/230).
+* Fix typo in class name for yellow flash message. Thanks [roblabla](https://github.com/roblabla)!
+* Gist: add search results styling. Fixes [issue #231]((https://github.com/StylishThemes/GitHub-Dark/issues/231).
+
 #### Version 1.12.7 (5/5/2015)
 
 * Various tweaks to code blocks in markdown.
@@ -49,9 +59,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Discussion: Fix merge PR form.
 * Themes: Add `!important` to chaos theme. Fixes [issue #](https://github.com/StylishThemes/GitHub-Dark/issues/229).
-
-#### Version 1.12.5 (4/23/2015)
-
-* Markdown: Fix new `<a>` tags in content.
-* Fix some more gist buttons and 2-factor-auth page.
-* Code: Fix default text colors in some cases. Fixes [issue #228](https://github.com/StylishThemes/GitHub-Dark/issues/228).
