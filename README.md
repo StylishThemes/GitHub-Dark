@@ -43,7 +43,7 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Update hack for the timeline line.
 * Renderers: add styling to jupyter pages. See [issue #230](https://github.com/StylishThemes/GitHub-Dark/issues/230).
 * Fix typo in class name for yellow flash message. Thanks [roblabla](https://github.com/roblabla)!
-* Gist: add search results styling. Fixes [issue #231]((https://github.com/StylishThemes/GitHub-Dark/issues/231).
+* Gist: add search results styling. Fixes [issue #231](https://github.com/StylishThemes/GitHub-Dark/issues/231).
 
 #### Version 1.12.7 (5/5/2015)
 
