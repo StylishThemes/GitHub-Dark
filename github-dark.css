@@ -274,7 +274,7 @@
   .ace-github, .add-member-team-list.table-list, .theme-picker, .avatar-stack .avatar, .boxed-group, .full-commit .btn.btn-outline,
   .prose-diff > .markdown-body ins, .header .divider-vertical, .ace-github-base16, .markdown-body pre code, .markdown-body pre tt,
   #readme .plain pre, .uploaded-files, .merge-pr-more-commits code, .two-factor-toggle .two-factor-status button, .input_area,
-  .highlight.hl-ipython3, .hl-ipython3 pre, .output_area pre {
+  #notebook .highlight, #notebook .highlight pre, .output_area pre {
     background: transparent !important;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
@@ -399,7 +399,7 @@
   .issues-list-actions, p code, code, .wiki-wrapper .wiki-empty-box, #adv_code_search .search-page-label, pre.headers,
   .inline-comment-form, .history-link, .oauth-permissions-details, .setup-info-module .features-list .list-divider,
   .setup-wrapper .oauth-permissions, .setup-info-module h2, .swipe .swipe-frame .swipe-shell, ul.search-results,
-  .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph, .input_area, .output_area .rendered_html table {
+  .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, .header, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pulse-graph,
@@ -427,7 +427,8 @@
   .member-badge, ul.comparison-list > li, .markdown-format ol > li::before, .release-downloads, .release-downloads li,
   .blob-interaction-bar, .file-header, input.subnav-search-input, .select-menu-header, .search-results,
   .select-menu-text-filter:first-child:last-child, .select-menu-modal, #gist-form .file .meta, .file .meta,
-  .file-box .meta, .capped-card, .audit-results-header, .pagination a, .pagination span, .pagination em {
+  .file-box .meta, .capped-card, .audit-results-header, .pagination a, .pagination span, .pagination em,
+  .input_area, .output_area .rendered_html table {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -695,7 +696,7 @@
   iframe[src*="polldaddy.com"], .jstree-icon.jstree-ocl, .octotree_toggle .loader, .swipe .swipe-frame .swipe-bar .top-handle,
   .swipe .swipe-frame .swipe-bar .bottom-handle, .onion-skin .controls .transparent, .onion-skin .controls .opaque,
   .onion-skin .controls .slider .slider-track, .onion-skin .controls .slider .slider-track .dragger {
-    filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
+            filter: invert(100%) !important;
     -webkit-filter: invert(100%) !important;
   }
   .emoji[title=":soon:"], .emoji[title=":on:"], .emoji[title=":end:"], .emoji[title=":heavy_dollar_sign:"], .emoji[title=":registered:"],
@@ -703,9 +704,14 @@
   .emoji[title=":heavy_division_sign:"], .emoji[title=":heavy_check_mark:"], .emoji[title=":arrows_clockwise:"],
   .emoji[title=":wavy_dash:"], .emoji[title=":curly_loop:"], .emoji[title=":copyright:"], .emoji[title=":currency_exchange:"],
   .emoji[title=":top:"], .emoji[title=":back:"] {
-    filter: url("data:image/svg+xml;utf8, <svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'i\'><feColorMatrix color-interpolation-filters=\'srgb\' values=\'-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0\'/></filter></svg>#i");
+            filter: invert(100%) !important;
     -webkit-filter: invert(100%) !important;
     background: transparent !important;
+  }
+  /* match white to #181818 */
+  .output_area img {
+            filter: invert(90%) !important;
+    -webkit-filter: invert(90%) !important;
   }
   /* slightly darker */
   .more-repos-link {
@@ -1675,6 +1681,7 @@
   /* inline code - big blocks */
   pre, .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre, .markdown-body .highlight pre,
   body.blog pre, #facebox pre, .blob-code-context, .blob-num-context, .blob-expanded, .terminal, .copyable-terminal,
+  #notebook .input_area,
 
   /*[[syntax-theme]]*/
   /* grunt build - remove to end of file */
