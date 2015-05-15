@@ -12,10 +12,12 @@
 
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
-| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers |
-| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai |
-| Pastel on Dark | Solarized Dark | Terminal | Tomorrow Night | Tomorrow Night Blue |
-| Tomorrow Night Bright | Tomorrow Night Eigthies | Twilight | Vibrant Ink | |
+| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers* |
+| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai* |
+| Pastel on Dark* | Solarized Dark* | Terminal | Tomorrow Night* | Tomorrow Night Blue* |
+| Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight* | Vibrant Ink | |
+
+\* Supports [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb)
 
 ## Notes
 
@@ -34,6 +36,25 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.13.0 (5/15/2015)
+
+* Add Jupyter notebook support
+  * Style fixes
+  * Use same shade colors for I/O labels
+  * Fix inline code blocks
+  * Fix background color of graphs (using a filter invert style, so the original colors will not be seen).
+  * Add syntax highlighting (pygments) - see ["Available Syntax Highlight Themes"](https://github.com/StylishThemes/GitHub-Dark#available-syntax-highlighting-themes) to see which themes are supported.
+* File View: Fix delete button hover.
+* Global:
+  * Update filter rules.
+  * Fix "Search GitHub" focus box shadow.
+  * Various tweaks.
+* Organizations: Fix team names.
+* Gist: Fix comment box action hover.
+* ZenHub: Add burndown page styling.
+* Status page: use high-res spinner.
+* Markdown: Fix links in code tags.
 
 #### Version 1.12.8 (5/8/2015)
 
@@ -54,8 +75,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add z-index.
   * Applied to repo, blog & gists.
 * Organizations: fix team member ellipsis.
-
-#### Version 1.12.6 (4/26/2015)
-
-* Discussion: Fix merge PR form.
-* Themes: Add `!important` to chaos theme. Fixes [issue #](https://github.com/StylishThemes/GitHub-Dark/issues/229).
