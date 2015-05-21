@@ -37,6 +37,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.13.1 (5/21/2015)
+
+* Themes:
+  * Fix css error.
+  * Update min files.
+* Options:
+  * Remove gradient from dashboard notice.
+  * Tweak a few text colors.
+  * Fix payment tab.
+  * Tweak coupon form.
+* Global: Fix clone input test color.
+
 #### Version 1.13.0 (5/15/2015)
 
 * Add Jupyter notebook support
@@ -65,13 +77,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Renderers: add styling to jupyter pages. See [issue #230](https://github.com/StylishThemes/GitHub-Dark/issues/230).
 * Gist: add search results styling. Fixes [issue #231](https://github.com/StylishThemes/GitHub-Dark/issues/231).
 * Fix typo in class name for yellow flash message. Thanks [roblabla](https://github.com/roblabla)! [pull #232](https://github.com/StylishThemes/GitHub-Dark/pull/232).
-
-#### Version 1.12.7 (5/5/2015)
-
-* Various tweaks to code blocks in markdown.
-* More tweaks to code block backgrounds.
-* Sticky sidebar
-  * Add `position: sticky` (only works in Firefox at the moment).
-  * Add z-index.
-  * Applied to repo, blog & gists.
-* Organizations: fix team member ellipsis.
