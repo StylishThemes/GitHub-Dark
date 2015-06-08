@@ -37,11 +37,6 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
-#### Version 1.13.2 (5/31/2015)
-
-* Fix pull request icon color.
-* Issues: fix a white border.
-
 #### Version 1.13.1 (5/21/2015)
 
 * Themes:
@@ -72,3 +67,13 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZenHub: Add burndown page styling.
 * Status page: use high-res spinner.
 * Markdown: Fix links in code tags.
+
+#### Version 1.12.8 (5/8/2015)
+
+* ZenHub: give card content some contrast.
+* Discussions
+  * Fix inline comment form.
+  * Update hack for the timeline line.
+* Renderers: add styling to jupyter pages. See [issue #230](https://github.com/StylishThemes/GitHub-Dark/issues/230).
+* Gist: add search results styling. Fixes [issue #231](https://github.com/StylishThemes/GitHub-Dark/issues/231).
+* Fix typo in class name for yellow flash message. Thanks [roblabla](https://github.com/roblabla)! [pull #232](https://github.com/StylishThemes/GitHub-Dark/pull/232).
