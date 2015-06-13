@@ -37,6 +37,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.13.3 (6/13/2015)
+
+* Repo View: Fix branch action icons.
+* Sidebar: Hide icons when loader is shown.
+* Global:
+  * Dropdown menu tweaks.
+  * Make dropdown shadow a bit more apparent.
+
 #### Version 1.13.2 (5/31/2015)
 
 * Fix pull request icon color.
@@ -53,22 +61,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix payment tab.
   * Tweak coupon form.
 * Global: Fix clone input test color.
-
-#### Version 1.13.0 (5/15/2015)
-
-* Add Jupyter notebook support
-  * Style fixes
-  * Use same shade colors for I/O labels
-  * Fix inline code blocks
-  * Fix background color of graphs (using a filter invert style, so the original colors will not be seen).
-  * Add syntax highlighting (pygments) - see ["Available Syntax Highlight Themes"](https://github.com/StylishThemes/GitHub-Dark#available-syntax-highlighting-themes) to see which themes are supported.
-* File View: Fix delete button hover.
-* Global:
-  * Update filter rules.
-  * Fix "Search GitHub" focus box shadow.
-  * Various tweaks.
-* Organizations: Fix team names.
-* Gist: Fix comment box action hover.
-* ZenHub: Add burndown page styling.
-* Status page: use high-res spinner.
-* Markdown: Fix links in code tags.
