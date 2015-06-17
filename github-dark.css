@@ -335,6 +335,18 @@
   .menu-item.selected:before {
     background-color: #eee !important;
   }
+  /* hover highlight in code and diffs */
+  .diff-table tr:hover > pre, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+    background: #242424 !important;
+  }
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
+    background: #141 !important;
+  }
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
+    background: #511 !important;
+  }
   /* ace find highlight */
   .ace_editor .ace_marker-layer .ace_selected-word {
     background: transparent !important;
@@ -588,8 +600,7 @@
   .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
   .owner-select-target, .divider .blob-code div.highlight, pre div[style^="background-color: rgb(248, 238, 199)"],
   .highlight td[style^="background-color: rgb(248, 238, 199)"], .line[style^="background-color: rgb(255, 255, 204)"],
-  .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover, .diff-table tr:hover > pre,
-  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+  .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover {
     background: #242424 !important;
   }
   #main, .capped-box, .unread_count, #browser table th, .markdown-format table th, .session-device, .profilecols ul.stats li strong,
