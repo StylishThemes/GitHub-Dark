@@ -37,6 +37,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.13.4 (6/20/2015)
+
+* Code: add custom hover color over diff lines.
+* ZenHub: style updates.
+
 #### Version 1.13.3 (6/13/2015)
 
 * Repo View: Fix branch action icons.
@@ -49,15 +54,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Fix pull request icon color.
 * Issues: fix a white border.
-
-#### Version 1.13.1 (5/21/2015)
-
-* Themes:
-  * Fix css error.
-  * Update min files.
-* Options:
-  * Remove gradient from dashboard notice.
-  * Tweak a few text colors.
-  * Fix payment tab.
-  * Tweak coupon form.
-* Global: Fix clone input test color.
