@@ -37,6 +37,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.13.5 (6/22/2015)
+
+* ZenHub
+  * Add missing `!important` flag.
+  * Burndown style updates.
+  * Fix burndown chart styling.
+* Milestones: expand link style.
+* Top menu (create new & profile) hover styling.
+
 #### Version 1.13.4 (6/20/2015)
 
 * Code: add custom hover color over diff lines.
@@ -49,8 +58,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Global:
   * Dropdown menu tweaks.
   * Make dropdown shadow a bit more apparent.
-
-#### Version 1.13.2 (5/31/2015)
-
-* Fix pull request icon color.
-* Issues: fix a white border.
