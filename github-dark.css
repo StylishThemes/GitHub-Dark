@@ -180,7 +180,10 @@
   .repository-sidebar, .blog-aside, .gist-sidebar {
     position: sticky !important;
     top: 8px !important;
-    z-index: 1 !important;
+  }
+  /* HACK: Fix z-index of sidebar (.discussion-sidebar is at z = 21) */
+  .repository-sidebar {
+    z-index: 32 !important;
   }
   .sunken-menu-item.is-loading .octicon {
     opacity: 0 !important;
