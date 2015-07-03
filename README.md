@@ -38,6 +38,26 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.0 (7/3/2015)
+
+* Readme: add links to Octotree & ZenHub.
+* Diffs:
+  * Darker unchanged stat boxes
+  * Few more minor tweaks
+  * Fixes for line numbers and highlighted lines.
+* File view: Many tweaks to last commit box.
+* Global:
+  * Fix issue link in commit titles.
+  * Fix red text.
+  * Clean up and fix dropdown text colors.
+* License
+  * Use CC-BY-SA-4.0 license.
+  * Update package.json.
+  * Add LICENSE file.
+  * Fixes [issue #235](https://github.com/StylishThemes/GitHub-Dark/issues/235).
+* Build: update devDependencies.
+* User page: Fix member badge color.
+
 #### Version 1.13.5 (6/22/2015)
 
 * ZenHub
