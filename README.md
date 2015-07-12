@@ -38,6 +38,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.1 (7/12/2015)
+
+* Issues: Fix sidebar tooltip z-index.
+* Diff:
+ * Fix another line number issue.
+ * Fix line number color.
+* Gist: Fix line number background on revisions.
+* ZenHub: Vote button highlighting.
+
 #### Version 1.14.0 (7/3/2015)
 
 * Readme: add links to Octotree & ZenHub.
@@ -66,16 +75,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix burndown chart styling.
 * Milestones: expand link style.
 * Top menu (create new & profile) hover styling.
-
-#### Version 1.13.4 (6/20/2015)
-
-* Code: add custom hover color over diff lines.
-* ZenHub: style updates.
-
-#### Version 1.13.3 (6/13/2015)
-
-* Repo View: Fix branch action icons.
-* Sidebar: Hide icons when loader is shown.
-* Global:
-  * Dropdown menu tweaks.
-  * Make dropdown shadow a bit more apparent.
