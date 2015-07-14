@@ -14,9 +14,9 @@
 |   |   |   |   |   |
 | --- | --- | --- | --- | --- |
 | Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers* |
-| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Monokai* |
-| Pastel on Dark* | Solarized Dark* | Terminal | Tomorrow Night* | Tomorrow Night Blue* |
-| Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight* | Vibrant Ink | |
+| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Mono Inductrial Clear |
+| Monokai* | Pastel on Dark* | Solarized Dark* | Terminal | Tomorrow Night* |
+| Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight* | Vibrant Ink |
 
 \* Supports [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb)
 
@@ -37,6 +37,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.14.2 (7/14/2015)
+
+* Change default tab size to 2 - this does not effect the userstyle.
+* Diff: Fix table change backgrounds. Fixes [issue #236](https://github.com/StylishThemes/GitHub-Dark/issues/236).
+* User page: Fix 'Block User' link.
+* Added new theme "Industrial Mono Clear" by [beefmaster](https://github.com/beefmaster).
 
 #### Version 1.14.1 (7/12/2015)
 
@@ -66,12 +73,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fixes [issue #235](https://github.com/StylishThemes/GitHub-Dark/issues/235).
 * Build: update devDependencies.
 * User page: Fix member badge color.
-
-#### Version 1.13.5 (6/22/2015)
-
-* ZenHub
-  * Add missing `!important` flag.
-  * Burndown style updates.
-  * Fix burndown chart styling.
-* Milestones: expand link style.
-* Top menu (create new & profile) hover styling.
