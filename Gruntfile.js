@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         config = {
             'theme'    : 'Twilight',
             'color'    : '#4183C4',
-            "font"     : "Menlo",
+            'font'     : 'Menlo',
             'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
             'tiled'    : true,
             'attach'   : 'scroll',
@@ -27,7 +27,8 @@ module.exports = function (grunt) {
     config.sourceFile = 'github-dark.css';
     file = getTheme();
     // setting "ace" to an empty string, or "default" will leave the default GitHub-base16 theme in place, with a dark background
-    config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
+    // using theme src files until we can figure out why cssmin is removing 2/3 of the definitions - see #240
+    config.themeFile = file === '' || file === 'default' ? '' : 'themes/src/' + file + '.css';
     // build file name
     config.buildFile = 'github-dark-' + (file ? file : 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
     // background options
