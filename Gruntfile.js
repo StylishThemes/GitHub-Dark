@@ -9,7 +9,8 @@ module.exports = function (grunt) {
         console.info('build.json not found - using defaults');
         config = {
             'theme'    : 'Twilight',
-            'color'    : '#008080',
+            'color'    : '#4183C4',
+            "font"     : "Menlo",
             'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
             'tiled'    : true,
             'attach'   : 'scroll',
@@ -59,7 +60,10 @@ module.exports = function (grunt) {
         pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: config.color
     },{
-        pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
+        pattern: '/*[[font-choice]]*/',
+        replacement: config.font
+    },{
+        pattern: /\/\*\[\[tab-size\]\]\*\/ \d+/g,
         replacement: config.tab
     },{
         // remove default syntax themes AND closing bracket
