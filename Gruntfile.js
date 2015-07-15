@@ -138,7 +138,10 @@ module.exports = function (grunt) {
         cssmin: {
             minify: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
-                options: { keepSpecialComments: '*' }
+                options: {
+                    keepSpecialComments: '*',
+                    advanced: false
+                }
             },
             themes: {
                 files:   [{
