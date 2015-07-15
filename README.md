@@ -38,6 +38,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.3 (7/15/2015)
+
+* Global search: word result highlight for code & users. Fixes [issue #238](https://github.com/StylishThemes/GitHub-Dark/issues/238).
+* Build
+  * Add font parameter & fix tabs in custom builds.
+  * Disable cleancss advanced optimization for themes. Fixes [issue #240](https://github.com/StylishThemes/GitHub-Dark/issues/240).
+  * Disable cleancss advanced optimization for userstyle minified file (not currently being used).
+* Update "Industrial Mono Clear" theme on userstyles.
+
 #### Version 1.14.2 (7/14/2015)
 
 * Change default tab size to 2 - this does not effect the userstyle.
