@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.4 (7/20/2015)
+
+* Themes: Fix an issue with backgrounds in notebook renders.
+* Pull requests:
+ * Fix merge form on Windows.
+ * Fix border on pull request checks.
+
 #### Version 1.14.3 (7/15/2015)
 
 * Global search: word result highlight for code & users. Fixes [issue #238](https://github.com/StylishThemes/GitHub-Dark/issues/238).
@@ -53,32 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diff: Fix table change backgrounds. Fixes [issue #236](https://github.com/StylishThemes/GitHub-Dark/issues/236).
 * User page: Fix 'Block User' link.
 * Added new theme "Industrial Mono Clear" by [beefmaster](https://github.com/beefmaster).
-
-#### Version 1.14.1 (7/12/2015)
-
-* Issues: Fix sidebar tooltip z-index.
-* Diff:
- * Fix another line number issue.
- * Fix line number color.
-* Gist: Fix line number background on revisions.
-* ZenHub: Vote button highlighting.
-
-#### Version 1.14.0 (7/3/2015)
-
-* Readme: add links to Octotree & ZenHub.
-* Diffs:
-  * Darker unchanged stat boxes
-  * Few more minor tweaks
-  * Fixes for line numbers and highlighted lines.
-* File view: Many tweaks to last commit box.
-* Global:
-  * Fix issue link in commit titles.
-  * Fix red text.
-  * Clean up and fix dropdown text colors.
-* License
-  * Use CC-BY-SA-4.0 license.
-  * Update package.json.
-  * Add LICENSE file.
-  * Fixes [issue #235](https://github.com/StylishThemes/GitHub-Dark/issues/235).
-* Build: update devDependencies.
-* User page: Fix member badge color.
