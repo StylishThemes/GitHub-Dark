@@ -614,7 +614,7 @@
   .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,  #wiki-history table td,
   .menu a.selected, .gist .gist-file .gist-data, #message.major, .logo-box,
   .markdown-example .rendered, .team-grid .team-members, .diagram-icon:not(.active), table.capped-list th, .scope-badge, .filter-bar,
-  .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar {
+  .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar, .completeness-indicator-blank {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content, span.gravatar, .browsered,
@@ -1044,7 +1044,8 @@
   div.search-form button span, .fullscreen-overlay .octicon:hover:before, .fullscreen-overlay .mega-octicon:hover:before,
   .protip-callout, .fullscreen-overlay textarea:focus, .fullscreen-overlay textarea:hover,
   #header ul.top-nav > li > a, #header ul.top-nav > li > button, a.octotree_toggle, a.team-member-ellipsis:hover,
-  .rendered_html pre, .rendered_html code, .team-grid .team-name, .commit .commit-title, .commit .commit-title a {
+  .rendered_html pre, .rendered_html code, .team-grid .team-name, .commit .commit-title, .commit .commit-title a,
+  .completeness-indicator-success, .completeness-indicator-error, .completeness-indicator-problem {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .marketing-nav a,
@@ -1105,7 +1106,7 @@
   .releases-tag-list p a, .history-link a, a.issue-nwo-link, ul.filter-list .filter-item,
   .member-meta .teams-link, .member-meta .btn-link, a.stats-group-stat, ul.comparison-list > li em, ul.comparison-list > li.title,
   .diffstat-summary, a.team-member-ellipsis, a.discussion-item-toggle-open, a.discussion-item-toggle-closed, .dropdown-header,
-  .participation a {
+  .participation a, .completeness-indicator-info {
     color: #808080 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon, .command-bar .octicon-question:before, .auto-search-group .octicon:before, .news .alert .time,
@@ -1173,8 +1174,8 @@
     background: #a31e16 !important;
     border: #b00 1px solid !important;
   }
-  .mergeable-dirty .bubble, .mergeable-dirty .merge-status-icon {
-    background: #a31e16 !important;
+  .mergeable-dirty .bubble, .mergeable-dirty .merge-status-icon, .completeness-indicator-error {
+    background: #c31e16 !important;
   }
   /* red border */
   .mergeable-dirty .bubble .mergeable, #message.major {
@@ -1256,6 +1257,9 @@
   }
   .mergeable-clean .bubble:after, .branch-action-state-clean .branch-action-body:before {
     border-right-color: #207038 !important;
+  }
+  .completeness-indicator-success {
+    background: #163 !important;
   }
   /* status.github.com */
   #message.good {
