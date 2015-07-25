@@ -196,20 +196,6 @@
   a.label[href*="/issues?"][style*=" color: #2"], a.label[href*="/pulls?"][style*=" color: #2"] { color: #181818 !important }
   a.label[href*="/issues?"][style*=" color: #1"], a.label[href*="/pulls?"][style*=" color: #1"] { color: #181818 !important }
   a.label[href*="/issues?"][style*=" color: #0"], a.label[href*="/pulls?"][style*=" color: #0"] { color: #181818 !important }
-  /* HACK: Center emoji vertically on the line */
-  .emoji {
-    position: relative;
-    top: -1.5px;
-  }
-  /* HACK: Fix image swipe handle misalignment */
-  .swipe .swipe-frame .swipe-bar .top-handle, .swipe .swipe-frame .swipe-bar .bottom-handle {
-    left: -6px !important;
-  }
-  /* HACK: Fix annoying text selection bug in Firefox */
-  .markdown-body code, .markdown-body tt {
-    padding: 0 .3em !important;
-    display: inline-block !important;
-  }
  .markdown-body pre code, .markdown-body pre tt {
     padding: .2em 0 !important;
     border: none !important;
@@ -376,6 +362,25 @@
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter {
     vertical-align: middle !important;
     border-radius: 2px !important;
+  }
+  /* GitHub Bug: Center emoji vertically on the line */
+  .emoji {
+    position: relative !important;
+    top: -1.5px !important;
+  }
+  /* GitHub Bug: Center counters vertically on the line */
+  .boxed-group .counter {
+    position: relative !important;
+    top: -1px !important;
+  }
+  /* GitHub Bug: Fix image swipe handle misalignment */
+  .swipe .swipe-frame .swipe-bar .top-handle, .swipe .swipe-frame .swipe-bar .bottom-handle {
+    left: -6px !important;
+  }
+  /* GitHub Bug: Fix annoying text selection bug in Firefox */
+  .markdown-body code, .markdown-body tt {
+    padding: 0 .3em !important;
+    display: inline-block !important;
   }
   /* invisible border */
   .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover, .timeline-comment-wrapper, .avatar-stack .avatar,
