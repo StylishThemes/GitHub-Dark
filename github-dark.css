@@ -624,7 +624,8 @@
   .repository-sidebar a.js-selected-navigation-item.selected, .discussion-bubble-inner,  #wiki-history table td,
   .menu a.selected, .gist .gist-file .gist-data, #message.major, .logo-box,
   .markdown-example .rendered, .team-grid .team-members, .diagram-icon:not(.active), table.capped-list th, .scope-badge, .filter-bar,
-  .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar, .completeness-indicator-blank {
+  .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar, .completeness-indicator-blank,
+  .leaflet-control-zoom, .leaflet-container .leaflet-control-attribution.leaflet-compact-attribution {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content, span.gravatar, .browsered,
@@ -730,7 +731,8 @@
   #network .repo img:not(.gravatar), #header .logo, img[src="/images/logo@2x.png"], .site-logo a, .github-jobs-promotion a.jobs-logo strong,
   iframe[src*="polldaddy.com"], .jstree-icon.jstree-ocl, .octotree_toggle .loader, .swipe .swipe-frame .swipe-bar .top-handle,
   .swipe .swipe-frame .swipe-bar .bottom-handle, .onion-skin .controls .transparent, .onion-skin .controls .opaque,
-  .onion-skin .controls .slider .slider-track, .onion-skin .controls .slider .slider-track .dragger {
+  .onion-skin .controls .slider .slider-track, .onion-skin .controls .slider .slider-track .dragger, .leaflet-control-zoom a,
+  .leaflet-control-attribution.leaflet-compact-attribution:after {
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
@@ -743,6 +745,16 @@
             filter: invert(100%) !important;
     background: transparent !important;
   }
+  /* GeoJSON maps */
+  .leaflet-tile-container img {
+    -webkit-filter: invert(100%) hue-rotate(200deg) brightness(1.4) !important;
+            filter: invert(100%) hue-rotate(200deg) brightness(1.4) !important;
+  }
+  .leaflet-marker-pane img {
+    -webkit-filter: brightness(.8) !important;
+            filter: brightness(.8) !important;
+  }
+
   /* match white to #181818 */
   .output_area img {
     -webkit-filter: invert(90%) !important;
