@@ -343,13 +343,18 @@
   .diff-table tr:hover > pre, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
     background: #242424 !important;
   }
+
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
-    background: #141 !important;
+    background: #113811 !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
-    background: #511 !important;
+    background: #481111 !important;
+  }
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age) {
+    background: #444421 !important;
   }
   /* ace find highlight */
   .ace_editor .ace_marker-layer .ace_selected-word {
@@ -1232,9 +1237,10 @@
   /* === Yellow panel === */
   .branch-status.status-pending .discussion-item-icon, .discussion-event-status-renamed .discussion-item-icon,
   .state-indicator.renamed, .discussion-topic .branch-status.status-pending, .secret .repo-label span, .compare-pr-placeholder,
-  .compare-cutoff, .diff-cutoff, .flash.flash-warn, .flash-global.flash-warn, td.selected-line.blob-num, td.selected-line.blob-code {
-    background: #383812 !important;
-    border-color: #884 !important;
+  .compare-cutoff, .diff-cutoff, .flash.flash-warn, .flash-global.flash-warn, td.selected-line.blob-num, td.selected-line.blob-code,
+  .markdown-body li.added.moved {
+    background: #343408 !important;
+    border-color: #662 !important;
     color: #aa6 !important;
   }
   /* Yellow border (travis) */
@@ -1498,8 +1504,8 @@
   .prose-diff .changed .added, .prose-diff > .markdown-body ins pre,
   .prose-diff > .markdown-body ins code, .prose-diff > .markdown-body ins > div,
   .prose-diff > .markdown-body ins > p {
-    background: #030 !important;
-    border-color: #080 !important;
+    background: #002800 !important;
+    border-color: #060 !important;
   }
   /* git diff line deletions (dark red) */
   .blob-code.blob-code-deletion, .blob-num.blob-num-deletion,
@@ -1507,18 +1513,12 @@
   .prose-diff > .markdown-body .changed del code, .prose-diff > .markdown-body .changed del > div,
   .prose-diff > .markdown-body .changed .removed, .prose-diff > .markdown-body .changed .removed pre,
   .prose-diff > .markdown-body .changed .removed code, .prose-diff > .markdown-body .changed .removed > div {
-    background: #400 !important;
-    border-color: #800 !important;
-  }
-  /* moved diff - yellow */
-  .markdown-body li.added.moved {
-    background: #440 !important;
-    border-color: #880 !important;
+    background: #380000 !important;
+    border-color: #600 !important;
   }
   .prose-diff > .markdown-body th.changed, .prose-diff > .markdown-body td.changed {
     background: #282818 !important;
   }
-
   .blob-code-addition .x , .highlight .blob-code-addition .x {
     background: #252 !important;
     color: #eee !important;
