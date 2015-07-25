@@ -38,6 +38,29 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.5 (7/25/2015)
+
+* Graphs:
+  * Brighten highlight on contribution graph. Fixes [issue #241](https://github.com/StylishThemes/GitHub-Dark/issues/241).
+  * Fix tooltip.
+* Pull request:
+  * Style new status icons.
+  * Fix grey status icons.
+  * Fix new checks form.
+  * Change sidebar tooltip z-index. See [pull #244](https://github.com/StylishThemes/GitHub-Dark/pull/244) thanks to [40n](https://github.com/40n)!
+* Gist
+  * Add description & meta link styles. Fixes [issue #243](https://github.com/StylishThemes/GitHub-Dark/issues/243).
+  * Fix secret button & gist descriptions.
+  * Fix secret label.
+  * Fix secret button disabled state.
+* ZenHub: add style for new toggle buttons.
+* Diff:
+  * Color tweaks (darker)
+  * More color tweaks, make all line selections yellow.
+* Global: Fix misaligned counters in boxes.
+* GeoJSON map styling (darken). Fixes [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242).
+* Maintenance: remove all empty lines.
+
 #### Version 1.14.4 (7/20/2015)
 
 * Themes: Fix an issue with backgrounds in notebook renders.
@@ -53,10 +76,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Disable cleancss advanced optimization for themes. Fixes [issue #240](https://github.com/StylishThemes/GitHub-Dark/issues/240).
   * Disable cleancss advanced optimization for userstyle minified file (not currently being used).
 * Update "Industrial Mono Clear" theme on userstyles.
-
-#### Version 1.14.2 (7/14/2015)
-
-* Change default tab size to 2 - this does not effect the userstyle.
-* Diff: Fix table change backgrounds. Fixes [issue #236](https://github.com/StylishThemes/GitHub-Dark/issues/236).
-* User page: Fix 'Block User' link.
-* Added new theme "Industrial Mono Clear" by [beefmaster](https://github.com/beefmaster).
