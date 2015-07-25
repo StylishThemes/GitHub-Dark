@@ -127,7 +127,11 @@ module.exports = function (grunt) {
             },
             fix: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
-                options: { replacements: [{ pattern: /\;\:\/\*\[\[/gm, replacement: ';/*[[' }]}
+                options: { replacements: [{ pattern: /\;\:\/\*\[\[/gm, replacement: ';/*[[' }] }
+            },
+            min: {
+                files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
+                options: { replacements: [{ pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g, replacement: ''}] }
             }
         },
         clean: {
@@ -208,6 +212,7 @@ module.exports = function (grunt) {
             'string-replace:inline',
             'string-replace:mark',
             'cssmin:minify',
+            'string-replace:min',
             'string-replace:unmark',
             'string-replace:fix',
             'wrap'
