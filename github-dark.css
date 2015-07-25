@@ -340,21 +340,21 @@
     background-color: #eee !important;
   }
   /* hover highlight in code and diffs */
-  .diff-table tr:hover > pre, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
-    background: #242424 !important;
+  .diff-table tr:hover > pre, .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not([style^="background-color: rgb(248, 238, 199)"]) {
+    background: #272727 !important;
   }
-
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
-    background: #113811 !important;
+    background: #103810 !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
-    background: #481111 !important;
+    background: #481010 !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age) {
-    background: #444421 !important;
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
+  .highlight tr:not(.inline-comments):hover td[style^="background-color: rgb(248, 238, 199)"] {
+    background: #363610 !important;
   }
   /* ace find highlight */
   .ace_editor .ace_marker-layer .ace_selected-word {
@@ -611,8 +611,7 @@
   .subnav-item:hover, .subnav-item:focus, .tree-browser tr.navigation-focus td, .issues-listing .table-list-issues .selectable:hover,
   .issues-listing .table-list-issues .navigation-focus, .setup-plans tr.selected, .notifications .navigation-focus,
   .sidebar-module ul ul li a:hover, .typeahead-result, .no-results, .link-overlay .link, #gollum-editor-help-list,
-  .owner-select-target, .divider .blob-code div.highlight, pre div[style^="background-color: rgb(248, 238, 199)"],
-  .highlight td[style^="background-color: rgb(248, 238, 199)"], .line[style^="background-color: rgb(255, 255, 204)"],
+  .owner-select-target, .divider .blob-code div.highlight, .line[style^="background-color: rgb(255, 255, 204)"],
   .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover {
     background: #242424 !important;
   }
@@ -1237,11 +1236,16 @@
   /* === Yellow panel === */
   .branch-status.status-pending .discussion-item-icon, .discussion-event-status-renamed .discussion-item-icon,
   .state-indicator.renamed, .discussion-topic .branch-status.status-pending, .secret .repo-label span, .compare-pr-placeholder,
-  .compare-cutoff, .diff-cutoff, .flash.flash-warn, .flash-global.flash-warn, td.selected-line.blob-num, td.selected-line.blob-code,
-  .markdown-body li.added.moved {
-    background: #343408 !important;
+  .compare-cutoff, .diff-cutoff, .flash.flash-warn, .flash-global.flash-warn, .markdown-body li.added.moved {
+    background: #323204 !important;
     border-color: #662 !important;
     color: #aa6 !important;
+  }
+  /* code and diff line selection */
+  pre div[style^="background-color: rgb(248, 238, 199)"], .highlight td[style^="background-color: rgb(248, 238, 199)"],
+  td.selected-line.blob-num, td.selected-line.blob-code {
+    background: #262600 !important;
+    border-color: #662 !important;
   }
   /* Yellow border (travis) */
   .branch-action-state-unknown .branch-action-body, .branch-action-state-unknown .branch-status,
