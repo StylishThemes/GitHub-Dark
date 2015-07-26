@@ -90,7 +90,7 @@ module.exports = function (grunt) {
         pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
         replacement: '/*[[base-color]]*/'
     },{
-        pattern: /\/\*\[\[tab-size\]\]\*\/ 4/g,
+        pattern: /\/\*\[\[tab-size\]\]\*\/ \d+/g,
         replacement: '/*[[tab-size]]*/'
     },{
         // remove default syntax theme AND closing bracket
