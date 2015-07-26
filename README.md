@@ -38,6 +38,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.6 (7/26/2015)
+
+* Notifications: correct closed issue icon color. Fixes [issue #245](https://github.com/StylishThemes/GitHub-Dark/issues/245).
+
 #### Version 1.14.5 (7/25/2015)
 
 * Graphs:
