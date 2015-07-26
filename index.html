@@ -243,6 +243,7 @@
 
   <script>
   $(function(){
+    $('div.highlight a').on('click', false);
     var t,
       $links = $('link[title]'),
       $select = $('select'),
@@ -301,835 +302,1279 @@
   <label class="wrapper type-diff file-data">
     <input type="checkbox" class="popup">
     <h3>Commit Diff</h3>
-    <!-- example from https://github.com/StylishThemes/GitHub-Dark/commit/0a7ee0fd7ff1fa5a31025040fd531cfbac04e14c -->
+    <!-- example from https://github.com/StylishThemes/GitHub-Dark/commit/accc6c4a2349580f16fdf5d1542941a5ecb97ff5 -->
     <div class="data highlight blob-wrapper">
-      <table class="diff-table  tab-size-8 " style=" min-width: 980px;">
-
-        <tbody><tr class="js-expandable-line" data-position="0">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=204&amp;next_line_num_right=204&amp;path=github-dark.css&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-203" data-right-range="1-203">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-hunk">@@ -204,7 +204,7 @@</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L204" data-line-number="204" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R204" data-line-number="204" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="1" data-line="204" role="button" aria-label="Add line comment"></b>   #feedHandler, .discussion-sidebar-item .thread-subscription-status, .boxed-group.application-show-group .logo-upload,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L205" data-line-number="205" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R205" data-line-number="205" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="2" data-line="205" role="button" aria-label="Add line comment"></b>   .diagram-icon-small, .commits-listing .commit-group-title .octicon-git-commit, #readme .highlight,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L206" data-line-number="206" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R206" data-line-number="206" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="3" data-line="206" role="button" aria-label="Add line comment"></b>   .ace-github, .add-member-team-list.table-list, .theme-picker, .avatar-stack .avatar, .boxed-group, .full-commit .button-outline,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L207" data-line-number="207" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="4" data-line="207" role="button" aria-label="Add line comment"></b>-  .prose-diff &gt; .markdown-body ins, .header .divider-vertical, .ace-github-base16 {</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R207" data-line-number="207" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="5" data-line="207" role="button" aria-label="Add line comment"></b>+  .prose-diff &gt; .markdown-body ins, .header .divider-vertical, .ace-github-base16<span class="x x-first x-last">, .markdown-body pre code, .markdown-body pre tt</span> {</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L208" data-line-number="208" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R208" data-line-number="208" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="6" data-line="208" role="button" aria-label="Add line comment"></b>     background: transparent !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L209" data-line-number="209" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R209" data-line-number="209" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="7" data-line="209" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L210" data-line-number="210" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R210" data-line-number="210" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="8" data-line="210" role="button" aria-label="Add line comment"></b>   /* Redeem Page */</td>
-        </tr>
-
-        <tr class="js-expandable-line" data-position="9">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=439&amp;next_line_num_right=439&amp;path=github-dark.css&amp;prev_line_num_left=210&amp;prev_line_num_right=210&amp;right_hunk_size=7" data-left-range="211-438" data-right-range="211-438">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-hunk">@@ -439,7 +439,7 @@</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L439" data-line-number="439" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R439" data-line-number="439" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="10" data-line="439" role="button" aria-label="Add line comment"></b>   .native-download, .setup-info-module, div#common-issues ul, #gist-form .name, .subnav-item, .render-notice,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L440" data-line-number="440" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R440" data-line-number="440" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="11" data-line="440" role="button" aria-label="Add line comment"></b>   .simple-box, .label-edit.edit-color-label-form .color-editor .color-editor-input, .date_selector, .date_selector td,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L441" data-line-number="441" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R441" data-line-number="441" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="12" data-line="441" role="button" aria-label="Add line comment"></b>   .new-label, .range-editor .range, .range-editor .flag, .octotree_sidebar, .auth-form-body, div.border-wrap, .protip code,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L442" data-line-number="442" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="13" data-line="442" role="button" aria-label="Add line comment"></b>-  .profile-header, .button-outline, .comment-form-head.tabnav, .highlight<span class="x x-first x-last">, .highlight .gc, .markdown-body code, .markdown-body tt</span> {</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R442" data-line-number="442" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="14" data-line="442" role="button" aria-label="Add line comment"></b>+  .profile-header, .button-outline, .comment-form-head.tabnav, .highlight<span class="x x-first x-last"> .gc</span> {</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L443" data-line-number="443" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R443" data-line-number="443" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="15" data-line="443" role="button" aria-label="Add line comment"></b>     background: #181818 !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L444" data-line-number="444" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R444" data-line-number="444" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="16" data-line="444" role="button" aria-label="Add line comment"></b>     border-color: #444 !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L445" data-line-number="445" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R445" data-line-number="445" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="17" data-line="445" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr class="js-expandable-line" data-position="18">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;left_hunk_size=10&amp;mode=100644&amp;next_line_num_left=526&amp;next_line_num_right=526&amp;path=github-dark.css&amp;prev_line_num_left=445&amp;prev_line_num_right=445&amp;right_hunk_size=10" data-left-range="446-525" data-right-range="446-525">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-hunk">@@ -526,10 +526,10 @@</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L526" data-line-number="526" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R526" data-line-number="526" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="19" data-line="526" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L527" data-line-number="527" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R527" data-line-number="527" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="20" data-line="527" role="button" aria-label="Add line comment"></b>   /* inline code */</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L528" data-line-number="528" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R528" data-line-number="528" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="21" data-line="528" role="button" aria-label="Add line comment"></b>   .list-browser-item.closed, .content .verseblock-content, .terminal, .copyable-terminal, .content .verseblock-content,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L529" data-line-number="529" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="22" data-line="529" role="button" aria-label="Add line comment"></b>-  .commit-preview .message pre, .<span class="x x-first x-last">markdown-body &gt; code, .</span>content dl code, .content ul code, <span class="x x-first x-last">.markdown-format &gt; </span>code, <span class="x x-first x-last">p</span> code,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L530" data-line-number="530" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="23" data-line="530" role="button" aria-label="Add line comment"></b>-  body.<span class="x x-first x-last">api pre &gt; code, body.</span>blog pre &gt; code, .content .sectionbody .dlist dt, .content p &gt; tt, .content .sectionbody .dlist dt, .content p &gt; tt,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L531" data-line-number="531" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="24" data-line="531" role="button" aria-label="Add line comment"></b>-  .markdown-body <span class="x x-first x-last">&gt; tt</span>, .<span class="x x-first x-last">commit-sha</span> {</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L532" data-line-number="532" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="25" data-line="532" role="button" aria-label="Add line comment"></b>-    background: #<span class="x x-first x-last">242424</span> !important;</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R529" data-line-number="529" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="26" data-line="529" role="button" aria-label="Add line comment"></b>+  .commit-preview .message pre, .content dl code, .content ul code, <span class="x x-first x-last">p </span>code, <span class="x x-first x-last">body.api pre &gt;</span> code,</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R530" data-line-number="530" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="27" data-line="530" role="button" aria-label="Add line comment"></b>+  body.blog pre &gt; code, .content .sectionbody .dlist dt, .content p &gt; tt, .content .sectionbody .dlist dt, .content p &gt; tt<span class="x x-first x-last">, .commit-sha</span>,</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R531" data-line-number="531" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="28" data-line="531" role="button" aria-label="Add line comment"></b>+  .markdown-body <span class="x x-first x-last">code</span>, .<span class="x x-first x-last">markdown-body tt</span> {</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R532" data-line-number="532" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="29" data-line="532" role="button" aria-label="Add line comment"></b>+    background: #<span class="x x-first x-last">282828</span> !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L533" data-line-number="533" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R533" data-line-number="533" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="30" data-line="533" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L534" data-line-number="534" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R534" data-line-number="534" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="31" data-line="534" role="button" aria-label="Add line comment"></b>   /*** semi-transparent #222 ***/</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L535" data-line-number="535" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R535" data-line-number="535" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="32" data-line="535" role="button" aria-label="Add line comment"></b>   /* let some background image show */</td>
-        </tr>
-
-        <tr class="js-expandable-line" data-position="33">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=948&amp;next_line_num_right=948&amp;path=github-dark.css&amp;prev_line_num_left=535&amp;prev_line_num_right=535&amp;right_hunk_size=7" data-left-range="536-947" data-right-range="536-947">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-hunk">@@ -948,7 +948,7 @@</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L948" data-line-number="948" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R948" data-line-number="948" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="34" data-line="948" role="button" aria-label="Add line comment"></b>   .table-list-header-toggle .button-link:hover, a.issue-title-link, .table-list-item p,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L949" data-line-number="949" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R949" data-line-number="949" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="35" data-line="949" role="button" aria-label="Add line comment"></b>   .table-list-milestones .milestone-title-link a, .org-header .edit-org, .blob-code, .diff-line-code, .clone-url-button &gt; a,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L950" data-line-number="950" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R950" data-line-number="950" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="36" data-line="950" role="button" aria-label="Add line comment"></b>   .contrib-number, .pulse-summary .summary-box .count, .list-options .selected .list-item-title,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L951" data-line-number="951" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="37" data-line="951" role="button" aria-label="Add line comment"></b>-  .nav-bar-inner .brand-logo-invertocat .octicon-mark-github, .menu a .octicon, .issue-list-meta a {</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R951" data-line-number="951" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="38" data-line="951" role="button" aria-label="Add line comment"></b>+  .nav-bar-inner .brand-logo-invertocat .octicon-mark-github, .menu a .octicon, .issue-list-meta a<span class="x x-first x-last">, .markdown-body code, .markdown-body tt</span> {</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L952" data-line-number="952" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R952" data-line-number="952" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="39" data-line="952" role="button" aria-label="Add line comment"></b>     color: #c4c4c4 !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L953" data-line-number="953" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R953" data-line-number="953" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="40" data-line="953" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L954" data-line-number="954" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R954" data-line-number="954" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="41" data-line="954" role="button" aria-label="Add line comment"></b>   h5, h6, table th, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,</td>
-        </tr>
-
-        <tr class="js-expandable-line" data-position="42">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=981&amp;next_line_num_right=981&amp;path=github-dark.css&amp;prev_line_num_left=954&amp;prev_line_num_right=954&amp;right_hunk_size=7" data-left-range="955-980" data-right-range="955-980">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-hunk">@@ -981,7 +981,7 @@</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L981" data-line-number="981" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R981" data-line-number="981" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="43" data-line="981" role="button" aria-label="Add line comment"></b>   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon, .diffstat-summary a, a.subnav-item,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L982" data-line-number="982" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R982" data-line-number="982" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="44" data-line="982" role="button" aria-label="Add line comment"></b>   .branches .branch-group-heading .branch-group-name, .render-notice, .discussion-sidebar-heading, .dashboard-notice .title p,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L983" data-line-number="983" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R983" data-line-number="983" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="45" data-line="983" role="button" aria-label="Add line comment"></b>   .table-list-milestones .stat, .date_selector td, .commits-listing .commit-group-title .octicon-git-commit,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L984" data-line-number="984" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
-          <td class="blob-num blob-num-deletion empty-cell"></td>
-
-          <td class="blob-code blob-code-deletion"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="46" data-line="984" role="button" aria-label="Add line comment"></b>-  .select-menu-header .octicon:hover, .<span class="x x-first x-last">markdown-format code, .</span>repo-list-description, .boxed-group-success a,</td>
-        </tr>
-
-        <tr>
-          <td class="blob-num blob-num-addition empty-cell"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R984" data-line-number="984" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-addition"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="47" data-line="984" role="button" aria-label="Add line comment"></b>+  .select-menu-header .octicon:hover, .repo-list-description, .boxed-group-success a,</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L985" data-line-number="985" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R985" data-line-number="985" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="48" data-line="985" role="button" aria-label="Add line comment"></b>   .latest-commit .bubble-content strong, .file .meta {</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L986" data-line-number="986" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R986" data-line-number="986" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="49" data-line="986" role="button" aria-label="Add line comment"></b>     color: #a4a4a4 !important;</td>
-        </tr>
-
-        <tr>
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1L987" data-line-number="987" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td id="diff-64ae9f3acdf5e1c48548adca960457b1R987" data-line-number="987" class="blob-num blob-num-context js-linkable-line-number"></td>
-
-          <td class="blob-code blob-code-context"><b class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="50" data-line="987" role="button" aria-label="Add line comment"></b>   }</td>
-        </tr>
-
-        <tr class="js-expandable-line">
-          <td class="blob-num blob-num-expandable" colspan="2">
-            <a class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/084dc5090e04a75ce0e1514ec310cb6e9f5e2348?diff=unified&amp;mode=100644&amp;path=github-dark.css&amp;prev_line_num_left=987&amp;prev_line_num_right=987" data-left-range="988-1762" data-right-range="988-1762">
-              <span class="octicon octicon-unfold"></span>
-            </a>
-          </td>
-          <td class="blob-code blob-code-expandable"></td>
-        </tr>
-
-      </tbody></table>
+      <table class="diff-table tab-size  " data-tab-size="2">
+        <tbody>
+          <tr class="js-expandable-line" data-position="0">
+            <td class="blob-num blob-num-expandable" colspan="2">
+              <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1579&amp;next_line_num_right=1579&amp;path=github-dark.css&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-1578" data-right-range="1-1578">
+                <span class="octicon octicon-unfold"></span>
+              </a>
+            </td>
+            <td class="blob-code blob-code-inner blob-code-hunk">@@ -1579,7 +1579,7 @@</td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1579" data-line-number="1579" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1579" data-line-number="1579" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="1" data-line="1579" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: /*[[base-color]]*/ <span class="pl-c1">#4183C4</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1580" data-line-number="1580" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1580" data-line-number="1580" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="2" data-line="1580" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1581" data-line-number="1581" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1581" data-line-number="1581" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="3" data-line="1581" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1582" data-line-number="1582" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="4" data-line="1582" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">-  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1582" data-line-number="1582" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="5" data-line="1582" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span><span class="x x-first">, </span><span class="pl-e x">.date_selector</span><span class="x"> </span><span class="pl-e x x-last">.date-button</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1583" data-line-number="1583" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1583" data-line-number="1583" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="6" data-line="1583" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">color</span></span>: /*[[base-color]]*/ <span class="pl-c1">#4183C4</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1584" data-line-number="1584" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1584" data-line-number="1584" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="7" data-line="1584" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1585" data-line-number="1585" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1585" data-line-number="1585" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="8" data-line="1585" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-c">/* background */</span></span>
+            </td>
+          </tr>
+          <tr class="js-expandable-line" data-position="9">
+            <td class="blob-num blob-num-expandable" colspan="2">
+              <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1595&amp;next_line_num_right=1595&amp;path=github-dark.css&amp;prev_line_num_left=1585&amp;prev_line_num_right=1585&amp;right_hunk_size=8" data-left-range="1586-1594" data-right-range="1586-1594">
+                <span class="octicon octicon-unfold"></span>
+              </a>
+            </td>
+            <td class="blob-code blob-code-inner blob-code-hunk">@@ -1595,7 +1595,8 @@</td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1595" data-line-number="1595" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1595" data-line-number="1595" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="10" data-line="1595" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1596" data-line-number="1596" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1596" data-line-number="1596" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="11" data-line="1596" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1597" data-line-number="1597" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1597" data-line-number="1597" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="12" data-line="1597" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-ent">li</span><span class="pl-e">.zh-pipeline-issue</span>, <span class="pl-e">.zh-pipeline-issue-content</span>, <span class="pl-e">.zh-issue-meta</span>, <span class="pl-e">.zh-pipeline-issue-action</span>,</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1598" data-line-number="1598" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="13" data-line="1598" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">-  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1598" data-line-number="1598" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="14" data-line="1598" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span>,</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1599" data-line-number="1599" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="15" data-line="1599" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.milestone-start-calendar-container</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1599" data-line-number="1599" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1600" data-line-number="1600" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="16" data-line="1600" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#222</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1600" data-line-number="1600" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1601" data-line-number="1601" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="17" data-line="1601" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1601" data-line-number="1601" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1602" data-line-number="1602" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="18" data-line="1602" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr class="js-expandable-line" data-position="19">
+            <td class="blob-num blob-num-expandable" colspan="2">
+              <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=13&amp;mode=100644&amp;next_line_num_left=1603&amp;next_line_num_right=1604&amp;path=github-dark.css&amp;prev_line_num_left=1601&amp;prev_line_num_right=1602&amp;right_hunk_size=14" data-left-range="1602-1602" data-right-range="1603-1603">
+                <span class="octicon octicon-unfold"></span>
+              </a>
+            </td>
+            <td class="blob-code blob-code-inner blob-code-hunk">@@ -1603,13 +1604,14 @@</td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1603" data-line-number="1603" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1604" data-line-number="1604" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="20" data-line="1604" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#333</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1604" data-line-number="1604" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1605" data-line-number="1605" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="21" data-line="1605" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1605" data-line-number="1605" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1606" data-line-number="1606" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="22" data-line="1606" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-c">/* border */</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1606" data-line-number="1606" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="23" data-line="1606" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">-  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1607" data-line-number="1607" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="24" data-line="1607" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span>,</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1608" data-line-number="1608" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="25" data-line="1608" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-milestone-dates</span>, <span class="pl-e">.zh-burndown-chart-container</span>, <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.stats-container</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1607" data-line-number="1607" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1609" data-line-number="1609" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="26" data-line="1609" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1608" data-line-number="1608" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1610" data-line-number="1610" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="27" data-line="1610" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1609" data-line-number="1609" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1611" data-line-number="1611" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="28" data-line="1611" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-e">.popover.right</span> <span class="pl-e">.arrow</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1610" data-line-number="1610" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1612" data-line-number="1612" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="29" data-line="1612" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1611" data-line-number="1611" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1613" data-line-number="1613" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="30" data-line="1613" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1612" data-line-number="1612" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="31" data-line="1612" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">-  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1614" data-line-number="1614" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="32" data-line="1614" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span><span class="x x-first">, </span><span class="pl-e x">.zh-burndown</span><span class="x"> </span><span class="pl-e x x-last">.stats-item</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1613" data-line-number="1613" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1615" data-line-number="1615" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="33" data-line="1615" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1">#343434</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1614" data-line-number="1614" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1616" data-line-number="1616" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="34" data-line="1616" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1615" data-line-number="1615" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1617" data-line-number="1617" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="35" data-line="1617" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-c">/* text */</span></span>
+            </td>
+          </tr>
+          <tr class="js-expandable-line" data-position="36">
+            <td class="blob-num blob-num-expandable" colspan="2">
+              <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=6&amp;mode=100644&amp;next_line_num_left=1656&amp;next_line_num_right=1658&amp;path=github-dark.css&amp;prev_line_num_left=1615&amp;prev_line_num_right=1617&amp;right_hunk_size=10" data-left-range="1616-1655" data-right-range="1618-1657">
+                <span class="octicon octicon-unfold"></span>
+              </a>
+            </td>
+            <td class="blob-code blob-code-inner blob-code-hunk">@@ -1656,6 +1658,10 @@</td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1656" data-line-number="1656" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1658" data-line-number="1658" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="37" data-line="1658" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1">-webkit-<span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1657" data-line-number="1657" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1659" data-line-number="1659" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="38" data-line="1659" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">             <span class="pl-c1"><span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1658" data-line-number="1658" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1660" data-line-number="1660" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="39" data-line="1660" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   }</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1661" data-line-number="1661" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="40" data-line="1661" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  <span class="pl-e">.zh-icon-burndown</span> {</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1662" data-line-number="1662" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="41" data-line="1662" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+    <span class="pl-c1">-webkit-<span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1663" data-line-number="1663" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="42" data-line="1663" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+            <span class="pl-c1"><span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1664" data-line-number="1664" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="43" data-line="1664" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">+  }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1659" data-line-number="1659" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1665" data-line-number="1665" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="44" data-line="1665" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-c">/* webkit scrollbars */</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1660" data-line-number="1660" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1666" data-line-number="1666" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="45" data-line="1666" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">   <span class="pl-e">.zh-pipeline-issues-wrapper</span>::-webkit-scrollbar-track {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1661" data-line-number="1661" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1667" data-line-number="1667" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="46" data-line="1667" role="button" aria-label="Add line comment"></span>
+              <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#181818</span> <span class="pl-k">!important</span>;</span>
+            </td>
+          </tr>
+          <tr class="js-expandable-line">
+            <td class="blob-num blob-num-expandable" colspan="2">
+              <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;mode=100644&amp;path=github-dark.css&amp;prev_line_num_left=1661&amp;prev_line_num_right=1667" data-left-range="1662-1839" data-right-range="1668-1839">
+                <span class="octicon octicon-unfold"></span>
+              </a>
+            </td>
+            <td class="blob-code blob-code-expandable"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </label>
 
   <label class="wrapper gist">
     <input type="checkbox" class="popup">
     <h3>Gist Diff</h3>
+    <!-- example from https://gist.github.com/paulirish/5558557/revisions (gistfile1.md) -->
     <div class="file-data diff-data highlight blob-wrapper">
-      <table class="diff-table tab-size-2">
-
+      <table class="diff-table tab-size  " data-tab-size="8">
+        <colgroup>
+          <col width="40">
+          <col width="40">
+          <col>
+        </colgroup>
         <tbody>
           <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L3" class="blob-num blob-num-hunk non-expandable is-hovered" data-line-number="..."></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R3" class="blob-num blob-num-hunk non-expandable is-hovered" data-line-number="..."></td>
+            <td class="blob-code blob-code-inner blob-code-hunk is-hovered">@@ -4,72 +4,92 @@ A timeline of the last four years of detecting good old `window.localStorage`</td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L4" data-line-number="4" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R4" data-line-number="4" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -1,11 +1,11 @@</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="1" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-A timeline of the last four years of detecting good old `window.localStorage`</td>
           </tr>
           <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="1" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+A timeline of the last four years of detecting good old `window.localStorage`.</td>
-          </tr>
-          <tr>
-            <td data-line-number="2" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="2" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="3" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="3" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> &lt;hr&gt;</td>
-          </tr>
-          <tr>
-            <td data-line-number="4" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="4" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="5" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="5" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### Jan Lenhart, bless his heart contributed the first patch for support:</td>
-          </tr>
-          <tr>
-            <td data-line-number="6" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="6" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="7" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="7" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> October 2009:</td>
-          </tr>
-          <tr>
-            <td data-line-number="8" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/5059daa4674651cd1adc39d902e4f4afa73426cd#L0R413</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="8" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[5059daa](https://github.com/Modernizr/Modernizr/commit/5059daa4674651cd1adc39d902e4f4afa73426cd#L0R413)</td>
-          </tr>
-          <tr>
-            <td data-line-number="9" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="9" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="10" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="10" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="11" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="11" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> (typeof window.localStorage != 'undefined')</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L5" data-line-number="5" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R5" data-line-number="5" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>Jan Lenhart, bless his heart contributed the first patch for support:</span></span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -14,7 +14,7 @@ https://github.com/Modernizr/Modernizr/commit/5059daa4674651cd1adc39d902e4f4afa7</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="14" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="14" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### Simplicifations</td>
           </tr>
           <tr>
-            <td data-line-number="15" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="15" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="16" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="16" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> November 2009:</td>
-          </tr>
-          <tr>
-            <td data-line-number="17" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/15020e75cb21d29e3514570704aabfa2a9c4ca84#L0L419</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="17" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[15020e7](https://github.com/Modernizr/Modernizr/commit/15020e75cb21d29e3514570704aabfa2a9c4ca84#L0L419)</td>
-          </tr>
-          <tr>
-            <td data-line-number="18" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="18" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="19" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="19" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="20" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="20" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> !!window.localStorage</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L6" data-line-number="6" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R6" data-line-number="6" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -23,7 +23,7 @@ https://github.com/Modernizr/Modernizr/commit/15020e75cb21d29e3514570704aabfa2a9</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="23" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="23" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### If cookies disabled in FF, exception. Softer detect</td>
           </tr>
           <tr>
-            <td data-line-number="24" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="24" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="25" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="25" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> December 2009:</td>
-          </tr>
-          <tr>
-            <td data-line-number="26" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/1e0ba919fa1e71172334df3fb37f5c3a07dacc49?w=1#L0R455</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="26" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[1e0ba91](https://github.com/Modernizr/Modernizr/commit/1e0ba919fa1e71172334df3fb37f5c3a07dacc49?w=1#L0R455)</td>
-          </tr>
-          <tr>
-            <td data-line-number="27" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="27" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="28" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="28" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="29" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="29" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> !!('localStorage' in window)</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R7" data-line-number="7" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+October 2009:</span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -32,7 +32,7 @@ https://github.com/Modernizr/Modernizr/commit/1e0ba919fa1e71172334df3fb37f5c3a07</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="32" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="32" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### If DOM storage disabled in IE, `window.localStorage` is _present_ but `=== null`.</td>
           </tr>
           <tr>
-            <td data-line-number="33" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="33" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="34" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="34" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> January 2010:</td>
-          </tr>
-          <tr>
-            <td data-line-number="35" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/d8947c91982b8018e1d119be44d9c3ed85e521b6#L0L580</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="35" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[d8947c9](https://github.com/Modernizr/Modernizr/commit/d8947c91982b8018e1d119be44d9c3ed85e521b6#L0L580)</td>
-          </tr>
-          <tr>
-            <td data-line-number="36" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="36" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="37" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="37" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="38" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="38" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> (localStorage in window) &amp;&amp; window[localStorage] !== null</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L7" data-line-number="7" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R8" data-line-number="8" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/5059daa4674651cd1adc39d902e4f4afa73426cd#L0R413</span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -41,7 +41,7 @@ https://github.com/Modernizr/Modernizr/commit/d8947c91982b8018e1d119be44d9c3ed85</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="41" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="41" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### FF with dom.storage.enabled = false throws exceptions</td>
           </tr>
           <tr>
-            <td data-line-number="42" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="42" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="43" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="43" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> July 2010:</td>
-          </tr>
-          <tr>
-            <td data-line-number="44" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/ef2c47#L0R633</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="44" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[ef2c47](https://github.com/Modernizr/Modernizr/commit/ef2c47#L0R633)</td>
-          </tr>
-          <tr>
-            <td data-line-number="45" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="45" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="46" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="46" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="47" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="47" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> try {</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L8" data-line-number="8" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R9" data-line-number="9" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -54,7 +54,7 @@ try {</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="54" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="54" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### more shit because of FF exceptions</td>
           </tr>
           <tr>
-            <td data-line-number="55" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="55" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="56" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="56" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> December 2010: </td>
-          </tr>
-          <tr>
-            <td data-line-number="57" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/c630c3938f704bfb4153bc939dc2eeee012e34b5?w=1</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="57" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[c630c39](https://github.com/Modernizr/Modernizr/commit/c630c3938f704bfb4153bc939dc2eeee012e34b5?w=1)</td>
-          </tr>
-          <tr>
-            <td data-line-number="58" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="58" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="59" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="59" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="60" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="60" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> try {</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L9" data-line-number="9" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    (typeof window.localStorage != 'undefined')</span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -68,7 +68,7 @@ try {</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="68" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="68" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### iOS private browsing fucks everyone!!!</td>
           </tr>
           <tr>
-            <td data-line-number="69" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="69" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="70" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="70" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> October 2011:</td>
-          </tr>
-          <tr>
-            <td data-line-number="71" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/5e2fa0ed336279990b8070726c596d7aa2c00b00</td>
-          </tr>
-          <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="71" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[5e2fa0e](https://github.com/Modernizr/Modernizr/commit/5e2fa0ed336279990b8070726c596d7aa2c00b00)</td>
-          </tr>
-          <tr>
-            <td data-line-number="72" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="72" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
-          </tr>
-          <tr>
-            <td data-line-number="73" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="73" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
-          </tr>
-          <tr>
-            <td data-line-number="74" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="74" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> try {</td>
-          </tr>
-          <tr data-position="0">
-            <td class="blob-num" colspan="2">
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L10" data-line-number="10" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-</span>
             </td>
-            <td class="blob-code blob-code-hunk">@@ -82,7 +82,7 @@ try {</td>
-          </tr>
-
-          <tr>
-            <td data-line-number="82" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="82" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> #### stronger full capability test for localstorage with iOS private browsing protection</td>
           </tr>
           <tr>
-            <td data-line-number="83" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="83" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R10" data-line-number="10" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="84" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="84" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> October 2011:</td>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R11" data-line-number="11" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">(<span class="pl-k">typeof</span> <span class="pl-c1">window</span>.localStorage <span class="pl-k">!=</span> <span class="pl-s"><span class="pl-pds">'</span>undefined<span class="pl-pds">'</span></span>)</span></span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="85" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-deletion"></td>
-            <td class="blob-code blob-code-context blob-code-deletion">-https://github.com/Modernizr/Modernizr/commit/a93625c21694fcda6fc1514a48f54232f703194a</td>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R12" data-line-number="12" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="&nbsp;" class="blob-num blob-num-context blob-num-addition"></td>
-            <td data-line-number="85" class="blob-num blob-num-context blob-num-addition"></td>
-            <td class="blob-code blob-code-context blob-code-addition">+[a93625c](https://github.com/Modernizr/Modernizr/commit/a93625c21694fcda6fc1514a48f54232f703194a)</td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L11" data-line-number="11" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R13" data-line-number="13" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="86" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="86" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> </td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L12" data-line-number="12" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R14" data-line-number="14" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>Simplicifations</span></span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="87" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="87" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> ```js</td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L13" data-line-number="13" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R15" data-line-number="15" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
           </tr>
           <tr>
-            <td data-line-number="88" class="blob-num blob-num-context blob-num-"></td>
-            <td data-line-number="88" class="blob-num blob-num-context blob-num-"></td>
-            <td class="blob-code blob-code-context blob-code-"> try {</td>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R16" data-line-number="16" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+November 2009:</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L14" data-line-number="14" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R17" data-line-number="17" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/15020e75cb21d29e3514570704aabfa2a9c4ca84#L0L419</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L15" data-line-number="15" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R18" data-line-number="18" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L16" data-line-number="16" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    !!window.localStorage</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L17" data-line-number="17" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R19" data-line-number="19" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R20" data-line-number="20" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">!!</span><span class="pl-c1">window</span>.localStorage</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R21" data-line-number="21" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L18" data-line-number="18" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R22" data-line-number="22" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L19" data-line-number="19" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R23" data-line-number="23" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>If cookies disabled in FF, exception. Softer detect</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L20" data-line-number="20" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R24" data-line-number="24" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R25" data-line-number="25" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+December 2009:</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L21" data-line-number="21" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R26" data-line-number="26" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/1e0ba919fa1e71172334df3fb37f5c3a07dacc49?w=1#L0R455</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L22" data-line-number="22" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R27" data-line-number="27" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L23" data-line-number="23" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    !!('localStorage' in window)</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R28" data-line-number="28" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R29" data-line-number="29" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">!!</span>(<span class="pl-s"><span class="pl-pds">'</span>localStorage<span class="pl-pds">'</span></span> <span class="pl-k">in</span> <span class="pl-c1">window</span>)</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R30" data-line-number="30" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L24" data-line-number="24" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R31" data-line-number="31" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L25" data-line-number="25" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R32" data-line-number="32" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>If DOM storage disabled in IE, <span class="pl-c1">`window.localStorage`</span> is <span class="pl-mi">_present_</span> but <span class="pl-c1">`=== null`</span>.</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L26" data-line-number="26" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R33" data-line-number="33" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R34" data-line-number="34" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+January 2010:</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L27" data-line-number="27" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R35" data-line-number="35" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/d8947c91982b8018e1d119be44d9c3ed85e521b6#L0L580</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L28" data-line-number="28" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R36" data-line-number="36" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L29" data-line-number="29" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    (localStorage in window) &amp;&amp; window[localStorage] !== null</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R37" data-line-number="37" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R38" data-line-number="38" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">(localStorage <span class="pl-k">in</span> <span class="pl-c1">window</span>) <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">window</span>[localStorage] <span class="pl-k">!==</span> <span class="pl-c1">null</span></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R39" data-line-number="39" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L30" data-line-number="30" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L31" data-line-number="31" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R41" data-line-number="41" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>FF with dom.storage.enabled = false throws exceptions</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L32" data-line-number="32" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-https://github.com/Modernizr/Modernizr/commit/ef2c47#L0R633</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L33" data-line-number="33" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R42" data-line-number="42" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L34" data-line-number="34" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        try {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L35" data-line-number="35" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-          return ('localStorage' in window) &amp;&amp; window[localstorage] !== null;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L36" data-line-number="36" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        } catch(e) {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L37" data-line-number="37" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-          return false;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L38" data-line-number="38" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L39" data-line-number="39" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R43" data-line-number="43" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+July 2010:</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R44" data-line-number="44" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+https://github.com/Modernizr/Modernizr/commit/ef2c47#L0R633</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R45" data-line-number="45" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R46" data-line-number="46" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R47" data-line-number="47" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">try</span> {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R48" data-line-number="48" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">  <span class="pl-k">return</span> (<span class="pl-s"><span class="pl-pds">'</span>localStorage<span class="pl-pds">'</span></span> <span class="pl-k">in</span> <span class="pl-c1">window</span>) <span class="pl-k">&amp;&amp;</span> <span class="pl-c1">window</span>[localstorage] <span class="pl-k">!==</span> <span class="pl-c1">null</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R49" data-line-number="49" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">} <span class="pl-k">catch</span>(e) {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R50" data-line-number="50" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">  <span class="pl-k">return</span> <span class="pl-c1">false</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R51" data-line-number="51" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">}</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R52" data-line-number="52" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```        </span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L41" data-line-number="41" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R53" data-line-number="53" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L42" data-line-number="42" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R54" data-line-number="54" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>more shit because of FF exceptions</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L43" data-line-number="43" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R55" data-line-number="55" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R56" data-line-number="56" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+December 2010: </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L44" data-line-number="44" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R57" data-line-number="57" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/c630c3938f704bfb4153bc939dc2eeee012e34b5?w=1</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L45" data-line-number="45" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R58" data-line-number="58" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L46" data-line-number="46" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    try {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L47" data-line-number="47" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        return !!localStorage.getItem;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L48" data-line-number="48" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    } catch(e) {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L49" data-line-number="49" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        return false;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L50" data-line-number="50" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-    }</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R59" data-line-number="59" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R60" data-line-number="60" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">try</span> {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R61" data-line-number="61" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-k">!!</span>localStorage.getItem;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R62" data-line-number="62" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">} <span class="pl-k">catch</span>(e) {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R63" data-line-number="63" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-c1">false</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R64" data-line-number="64" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">}</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R65" data-line-number="65" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L51" data-line-number="51" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R66" data-line-number="66" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L52" data-line-number="52" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R67" data-line-number="67" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L53" data-line-number="53" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R68" data-line-number="68" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>iOS private browsing fucks everyone!!!</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L54" data-line-number="54" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R69" data-line-number="69" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R70" data-line-number="70" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+October 2011:</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L55" data-line-number="55" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R71" data-line-number="71" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/5e2fa0ed336279990b8070726c596d7aa2c00b00</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L56" data-line-number="56" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R72" data-line-number="72" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L57" data-line-number="57" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        try {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L58" data-line-number="58" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            return !!localStorage.getItem('getItem');</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L59" data-line-number="59" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        } catch(e) {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L60" data-line-number="60" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            return false;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L61" data-line-number="61" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        }</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L62" data-line-number="62" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R73" data-line-number="73" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R74" data-line-number="74" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">try</span> {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R75" data-line-number="75" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-k">!!</span>localStorage.getItem(<span class="pl-s"><span class="pl-pds">'</span>getItem<span class="pl-pds">'</span></span>);</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R76" data-line-number="76" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">} <span class="pl-k">catch</span>(e) {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R77" data-line-number="77" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-c1">false</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R78" data-line-number="78" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">}</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R79" data-line-number="79" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L63" data-line-number="63" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R80" data-line-number="80" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L64" data-line-number="64" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R81" data-line-number="81" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L65" data-line-number="65" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R82" data-line-number="82" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> <span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>stronger full capability test for localstorage with iOS private browsing protection</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L66" data-line-number="66" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R83" data-line-number="83" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R84" data-line-number="84" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+October 2011:</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L67" data-line-number="67" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R85" data-line-number="85" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> https://github.com/Modernizr/Modernizr/commit/a93625c21694fcda6fc1514a48f54232f703194a</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L68" data-line-number="68" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R86" data-line-number="86" class="blob-num blob-num-context js-linkable-line-number"></td>
+            <td class="blob-code blob-code-context">
+              <span class="blob-code-inner"> </span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L69" data-line-number="69" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        try {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L70" data-line-number="70" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            localStorage.setItem(mod, mod);</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L71" data-line-number="71" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            localStorage.removeItem(mod);</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L72" data-line-number="72" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            return true;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L73" data-line-number="73" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        } catch(e) {</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L74" data-line-number="74" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-            return false;</span>
+            </td>
+          </tr>
+          <tr>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754L75" data-line-number="75" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+            <td class="blob-num blob-num-deletion empty-cell"></td>
+            <td class="blob-code blob-code-deletion">
+              <span class="blob-code-inner">-        }</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R87" data-line-number="87" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-c1">```js</span><span class="pl-s1"></span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R88" data-line-number="88" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"><span class="pl-k">try</span> {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R89" data-line-number="89" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    localStorage.setItem(mod, mod);</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R90" data-line-number="90" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    localStorage.removeItem(mod);</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R91" data-line-number="91" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-c1">true</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R92" data-line-number="92" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">} <span class="pl-k">catch</span>(e) {</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R93" data-line-number="93" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">    <span class="pl-k">return</span> <span class="pl-c1">false</span>;</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R94" data-line-number="94" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1">}</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="blob-num blob-num-addition empty-cell"></td>
+            <td id="diff-8a2718e4aa22e4b51b74a52010e8c754R95" data-line-number="95" class="blob-num blob-num-addition js-linkable-line-number"></td>
+            <td class="blob-code blob-code-addition">
+              <span class="blob-code-inner">+<span class="pl-s1"></span><span class="pl-c1">```</span></span>
+              <span class="no-nl-marker tooltipped tooltipped-n" aria-label="No newline at end of file">
+                <span class="octicon octicon-no-newline"></span>
+              </span>
+            </td>
           </tr>
         </tbody>
       </table>
