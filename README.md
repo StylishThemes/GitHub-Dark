@@ -38,6 +38,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.7 (7/26/2015)
+
+* Themes: make invalid code styling more readable.
+* Demo: update HTML in diff examples.
+* Grunt: fix tab-size string replacement
+
 #### Version 1.14.6 (7/26/2015)
 
 * Notifications: correct closed issue icon color. Fixes [issue #245](https://github.com/StylishThemes/GitHub-Dark/issues/245).
@@ -64,19 +70,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Global: Fix misaligned counters in boxes.
 * GeoJSON map styling (darken). Fixes [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242).
 * Maintenance: remove all empty lines.
-
-#### Version 1.14.4 (7/20/2015)
-
-* Themes: Fix an issue with backgrounds in notebook renders.
-* Pull requests:
- * Fix merge form on Windows.
- * Fix border on pull request checks.
-
-#### Version 1.14.3 (7/15/2015)
-
-* Global search: word result highlight for code & users. Fixes [issue #238](https://github.com/StylishThemes/GitHub-Dark/issues/238).
-* Build
-  * Add font parameter & fix tabs in custom builds.
-  * Disable cleancss advanced optimization for themes. Fixes [issue #240](https://github.com/StylishThemes/GitHub-Dark/issues/240).
-  * Disable cleancss advanced optimization for userstyle minified file (not currently being used).
-* Update "Industrial Mono Clear" theme on userstyles.
