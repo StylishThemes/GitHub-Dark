@@ -269,8 +269,7 @@
   .ace-github, .add-member-team-list.table-list, .theme-picker, .avatar-stack .avatar, .boxed-group, .full-commit .btn.btn-outline,
   .prose-diff > .markdown-body ins, .header .divider-vertical, .ace-github-base16, .markdown-body pre code, .markdown-body pre tt,
   #readme .plain pre, .uploaded-files, .merge-pr-more-commits code, .two-factor-toggle .two-factor-status button, .input_area,
-  #notebook .highlight, #notebook .highlight pre, .output_area pre, .gist-snippet-meta .gist-count-links>li>a:hover,
-  .pagehead-tabs-item.selected {
+  #notebook .highlight, #notebook .highlight pre, .output_area pre, .gist-snippet-meta .gist-count-links>li>a:hover {
     background: transparent !important;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
@@ -425,10 +424,10 @@
   .inline-comment-form, .history-link, .oauth-permissions-details, .setup-info-module .features-list .list-divider,
   .setup-wrapper .oauth-permissions, .setup-info-module h2, .swipe .swipe-frame .swipe-shell, ul.search-results,
   .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph, .gist-quicksearch-results, .gist-quicksearch-result,
-  .gist-quicksearch-result-group, .pagehead-tabs-item.selected {
+  .gist-quicksearch-result-group {
     border-color: #484848 !important;
   }
-  pre, h1, h2, h3, .header, #footer, .pagehead, table, table tr, table td, table th, blockquote, .pulse-graph,
+  pre, h1, h2, h3, .header, #footer, table, table tr, table td, table th, blockquote, .pulse-graph,
   .btn:not(img), .minibutton, .social-count, .discusion-topic-infobar, .box-header, .box-body, .timeline-comment-label, .logo-box,
   .suggester li, .developer-program-badge, .vcard-details, .vcard-stats, .auth-form-header, .nav-bar-tabs .section-title,
   .pagination a:last-child, .pagination span:first-child, .boxed-group-list > li, .toolbar-bordered, .new-issue-form,
@@ -457,7 +456,7 @@
   .input_area, .output_area .rendered_html table, .render-info .message, .dashboard-notice, .radio-label,
   .subnav .btn + .issues-search, .branch-action-next .branch-action-item + .branch-action-item,
   .discussion-item-merged.open .discussion-item-details-header, .discussion-item-merged.open .build-statuses-list,
-  .build-status-item {
+  .build-status-item, .pagehead-tabs-item.selected, .org-header, .pagehead {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset, ul.color-label-list .color {
@@ -467,7 +466,7 @@
     border: #444 1px solid !important;
     border-bottom: #333 1px solid !important;
   }
-  .summary-stats, .sunken-menu-separator, .pagehead, .follow-list .follow-list-item, .facebox-header, .org-header {
+  .summary-stats, .sunken-menu-separator, .follow-list .follow-list-item, .facebox-header {
     border-bottom: #333 1px solid !important;
   }
   .more-repos, .simple-conversation-list>li, .site-footer, .blame .section-first td {
@@ -523,7 +522,11 @@
     border-top-color: #eee !important;
   }
   .pagehead-tabs-item.selected {
-    border-top-color: #aaa !important;
+    border-bottom-color: #222 !important;
+    border-top-width: 1px !important;
+  }
+  .pagehead-tabs {
+    margin-bottom: -23px !important;
   }
   .branches .branch-summary + .branch-summary {
     border-top-color: #333 !important;
@@ -630,7 +633,7 @@
   .menu a.selected, .gist .gist-file .gist-data, #message.major, .logo-box,
   .markdown-example .rendered, .team-grid .team-members, .diagram-icon:not(.active), table.capped-list th, .scope-badge, .filter-bar,
   .audit-search-clear, .country-info, .tabnav-tab.selected, .file-diff-split .empty-cell, .composer-infobar, .completeness-indicator-blank,
-  .leaflet-control-zoom, .leaflet-container .leaflet-control-attribution.leaflet-compact-attribution {
+  .leaflet-control-zoom, .leaflet-container .leaflet-control-attribution.leaflet-compact-attribution, .pagehead-tabs-item.selected {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar, .options-content, span.gravatar, .browsered,
@@ -1077,7 +1080,8 @@
   .protip-callout, .fullscreen-overlay textarea:focus, .fullscreen-overlay textarea:hover,
   #header ul.top-nav > li > a, #header ul.top-nav > li > button, a.octotree_toggle, a.team-member-ellipsis:hover,
   .rendered_html pre, .rendered_html code, .team-grid .team-name, .commit .commit-title, .commit .commit-title a,
-  .completeness-indicator-success, .completeness-indicator-error, .completeness-indicator-problem {
+  .completeness-indicator-success, .completeness-indicator-error, .completeness-indicator-problem, .pagehead-tabs-item.selected,
+  a.pagehead-tabs-item.selected, .pagehead-tabs-item:hover, a.pagehead-tabs-item:hover {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box, .marketing-nav a,
@@ -1138,7 +1142,7 @@
   .releases-tag-list p a, .history-link a, a.issue-nwo-link, ul.filter-list .filter-item,
   .member-meta .teams-link, .member-meta .btn-link, a.stats-group-stat, ul.comparison-list > li em, ul.comparison-list > li.title,
   .diffstat-summary, a.team-member-ellipsis, a.discussion-item-toggle-open, a.discussion-item-toggle-closed, .dropdown-header,
-  .participation a, .completeness-indicator-info, .type-icon-state-none, a.type-icon-state-none {
+  .participation a, .completeness-indicator-info, .type-icon-state-none, a.type-icon-state-none, .pagehead-tabs-item, a.pagehead-tabs-item {
     color: #808080 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon, .command-bar .octicon-question:before, .auto-search-group .octicon:before, .news .alert .time,
@@ -1157,10 +1161,10 @@
   .octofication .notice-dismiss, ul.comparison-list > li .octicon, div.content-header h6, .fullscreen-overlay textarea,
   #com h2.search-title, .blob-num.non-expandable:hover, .breadcrumb, #footer .mega-octicon, .application-authorizations .oauth-app-list-meta,
   .application-authorizations .oauth-app-owner, .boxed-group-inner .help, .thread-subscription-status .reason, .clone-url input.input-mini,
-  .toc-diff-stats .octicon, .blob-num, .recent-gists .description .blank, .recent-gists .metadata {
+  .toc-diff-stats .octicon, .blob-num, .recent-gists .description .blank, .recent-gists .metadata, .member-meta .access-link {
     color: #666 !important;
   }
-  .branch-infobar .lightweight-actions > li .octicon {
+  .branch-infobar .lightweight-actions > li .octicon, .pagehead-tabs-item .octicon {
     color: #4b4b4b !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before, .mini-icon-public-repo:before, .mini-icon-pull-request, .mini-icon-remove-close,
@@ -1178,7 +1182,7 @@
   .timeline-comment-header .timestamp, .vcard-stat:hover .text-muted, .boxed-group > h3 a,
   .boxed-group .heading a, .select-menu-item, a.select-menu-item, .list-heading a, .close-button, .timeline-comment-action,
   a.timeline-comment-action, a.comment-type-icon, .timeline-comment-actions .octicon, .commit-title .commit-link tt,
-  .btn-block-user {
+  .btn-block-user, .pagehead-tabs-item.selected > .octicon {
     color: inherit !important;
   }
   /* Alerts and activity, remove background gradient */
