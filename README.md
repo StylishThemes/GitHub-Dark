@@ -38,6 +38,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.8 (7/27/2015)
+
+* Comments: Fix commit SHA.
+* Pull requests: Fix various status text colors.
+* Gist: search result styling. Fixes [issue #243](https://github.com/StylishThemes/GitHub-Dark/issues/243).
+* Notifications: Fix type icon colors. Fixes [issue #246](https://github.com/StylishThemes/GitHub-Dark/issues/246).
+* Organization: add organization tab styling. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
+* Repo: Branch dropdown selector - make Tags tab text white. Fixes [issue #248](https://github.com/StylishThemes/GitHub-Dark/issues/248).
+
 #### Version 1.14.7 (7/26/2015)
 
 * Themes: make invalid code styling more readable.
