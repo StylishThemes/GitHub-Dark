@@ -155,10 +155,6 @@
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cmVjdCBoZWlnaHQ9IjUxMiIgd2lkdGg9IjUxMiIgeT0iMCIgeD0iMCIgZmlsbD0iIzAwMDAwMCIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iNjQiIGZpbGw9IiNkZGRkZGQiLz48L2c+PC9zdmc+) !important;
     background-size: cover !important;
   }
-  /* === Prevent overflow issues === */
-  #dashboard, div.highlight, svg {
-    width: 100% !important;
-  }
   .vcard-fullname, .vcard-username {
     overflow-y: hidden !important;
   }
@@ -389,7 +385,7 @@
     border-color: transparent !important;
   }
   /* === Darken border === */
-  .wiki-wrapper .wiki-empty-box:hover {
+  .wiki-wrapper .wiki-empty-box:hover, .render-shell .slider .slider-track, .render-shell .slider-bar {
     border-color: #777 !important;
   }
   img, #browser table, #browser table th, #issues .menu ul li, .branches .more-branches,
@@ -667,7 +663,8 @@
   }
   /*** semi-transparent #222 ***/
   /* let some background image show */
-  .pagehead, .context-loader.large-format-loader, #graphs .loader, .sunken-menu, .org-header, .sunken-menu-contents {
+  .pagehead, .context-loader.large-format-loader, #graphs .loader, .sunken-menu, .org-header, .sunken-menu-contents,
+  .render-shell .slider {
     background: rgba(24,24,24,0.4) !important;
   }
   .starred-repo.navigation-focus, .marketing-section-stripe, .blob-expanded .blob-num, .blob-expanded .blob-code {
@@ -871,7 +868,7 @@
   .completeness-indicator-problem {
     background: #555 !important;
   }
-  .labels .label-neutral, li.ssh-key .ssh-key-state-indicator.not-recent {
+  .labels .label-neutral, li.ssh-key .ssh-key-state-indicator.not-recent, .slider .dragger {
     background: #666 !important;
   }
   .diverge-widget .separator {
@@ -881,7 +878,7 @@
     background: #fff !important;
     opacity: 1 !important;
   }
-  .state-widget .ahead .bar {
+  .state-widget .ahead .bar, .slider .dragger:hover, .slider .dragger:active {
     background: #999 !important;
   }
   /* actions in issues - this style needs to be after .bubble */
