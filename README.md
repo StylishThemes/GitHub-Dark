@@ -38,6 +38,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.9 (7/30/2015)
+
+* Organization:
+  * Darken selected tab top border. See [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
+  * Numerous tweaks to the new headers. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
+* Diff: Fix GeoJSON diffs. See [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242)
+* Pull requests: Update branch action class. Fixes [issue #249](https://github.com/StylishThemes/GitHub-Dark/issues/249).
+
 #### Version 1.14.8 (7/27/2015)
 
 * Comments: Fix commit SHA.
@@ -52,30 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Themes: make invalid code styling more readable.
 * Demo: update HTML in diff examples.
 * Grunt: fix tab-size string replacement
-
-#### Version 1.14.6 (7/26/2015)
-
-* Notifications: correct closed issue icon color. Fixes [issue #245](https://github.com/StylishThemes/GitHub-Dark/issues/245).
-
-#### Version 1.14.5 (7/25/2015)
-
-* Graphs:
-  * Brighten highlight on contribution graph. Fixes [issue #241](https://github.com/StylishThemes/GitHub-Dark/issues/241).
-  * Fix tooltip.
-* Pull request:
-  * Style new status icons.
-  * Fix grey status icons.
-  * Fix new checks form.
-  * Change sidebar tooltip z-index. See [pull #244](https://github.com/StylishThemes/GitHub-Dark/pull/244) thanks to [40n](https://github.com/40n)!
-* Gist
-  * Add description & meta link styles. Fixes [issue #243](https://github.com/StylishThemes/GitHub-Dark/issues/243).
-  * Fix secret button & gist descriptions.
-  * Fix secret label.
-  * Fix secret button disabled state.
-* ZenHub: add style for new toggle buttons.
-* Diff:
-  * Color tweaks (darker)
-  * More color tweaks, make all line selections yellow.
-* Global: Fix misaligned counters in boxes.
-* GeoJSON map styling (darken). Fixes [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242).
-* Maintenance: remove all empty lines.
