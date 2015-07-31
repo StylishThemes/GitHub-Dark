@@ -11,12 +11,12 @@
 
 ## [Available Syntax Highlighting Themes](http://stylishthemes.github.io/GitHub-Dark/)
 
-|   |   |   |   |   |
-| --- | --- | --- | --- | --- |
-| Ambiance | Chaos | Clouds Midnight | Cobalt | Idle Fingers* |
-| Kr Theme | Merbivore | Merbivore Soft | Mono Industrial | Mono Industrial Clear |
-| Monokai* | Pastel on Dark* | Solarized Dark* | Terminal | Tomorrow Night* |
-| Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight* | Vibrant Ink |
+|                      |                        |                          |                 |                       |
+|----------------------|------------------------|--------------------------|-----------------|-----------------------|
+| Ambiance             | Chaos                  | Clouds Midnight          | Cobalt          | Idle Fingers*         |
+| Kr Theme             | Merbivore              | Merbivore Soft           | Mono Industrial | Mono Industrial Clear |
+| Monokai*             | Pastel on Dark*        | Solarized Dark*          | Terminal        | Tomorrow Night*       |
+| Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight*       |                       |
 
 \* Supports [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb)
 
