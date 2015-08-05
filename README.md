@@ -38,6 +38,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.10 (8/5/2015)
+
+* Readme: Better theme table.
+* Discussions: Fix triangle beside avatars.
+* Markdown:
+  * Make bold text slightly brighter. Fixes [issue #250](https://github.com/StylishThemes/GitHub-Dark/issues/250).
+  * Fix bold links.
+  * Make sure to not change header colors.
+  * Fix overflow on single line code blocks. Fixes [issue #239](https://github.com/StylishThemes/GitHub-Dark/issues/239).
+* Guides: Fix links in header.
+* Gist: Fix file icon background.
+* Branches: Flat footer background.
+* Build: include updated build option.
+
 #### Version 1.14.9 (7/30/2015)
 
 * Organization:
@@ -54,9 +68,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Notifications: Fix type icon colors. Fixes [issue #246](https://github.com/StylishThemes/GitHub-Dark/issues/246).
 * Organization: add organization tab styling. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
 * Repo: Branch dropdown selector - make Tags tab text white. Fixes [issue #248](https://github.com/StylishThemes/GitHub-Dark/issues/248).
-
-#### Version 1.14.7 (7/26/2015)
-
-* Themes: make invalid code styling more readable.
-* Demo: update HTML in diff examples.
-* Grunt: fix tab-size string replacement
