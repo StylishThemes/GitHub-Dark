@@ -191,7 +191,7 @@ module.exports = function (grunt) {
     // build custom minified GitHub-Dark style
     grunt.registerTask('minify', 'Building custom minified style', function(){
       grunt.task.run(['string-replace:inline', 'cssmin:minify']);
-      if (!config.chrome) {
+      if (!(config.chrome || config.webkit)) {
         grunt.task.run(['wrap']);
       }
     });
