@@ -30,7 +30,7 @@ module.exports = function (grunt) {
     // using theme src files until we can figure out why cssmin is removing 2/3 of the definitions - see #240
     config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
     // build file name
-    config.buildFile = 'github-dark-' + (file ? file : 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
+    config.buildFile = 'github-dark-' + (file || 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
     // background options
     config.bgOptions = config.tiled ?
         'background-repeat: repeat !important; background-size: auto !important; background-position: left top !important;' :
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         replacement: config.tab
     },{
         // remove default syntax themes AND closing bracket
-        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
+        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,
         replacement: ''
     },{
         pattern: '/*[[syntax-theme]]*/',
@@ -94,7 +94,7 @@ module.exports = function (grunt) {
         replacement: '/*[[tab-size]]*/'
     },{
         // remove default syntax theme AND closing bracket
-        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+}$/m,
+        pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,
         replacement: ''
     }];
 
@@ -132,12 +132,28 @@ module.exports = function (grunt) {
             min: {
                 files:   { '<%= config.buildFile %>' : '<%= config.buildFile %>' },
                 options: { replacements: [{ pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g, replacement: ''}] }
+            },
+            // cleanup perfectionist comments
+            cleanup: {
+                files:   { '<%= config.sourceFile %>' : '<%= config.sourceFile %>' },
+                options: {
+                    replacements: [
+                        { pattern: /\{\/\*\!/g, replacement: '{\n /*!' },
+                        { pattern: /\/\* /g, replacement: '\n  /* ' },
+                        { pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n' }
+                    ]
+                }
             }
         },
         clean: {
           themes: {
             src: [ 'themes/*.min.css' ]
           }
+        },
+        exec: {
+            // --maxSelectorLength 80 (default)
+            // --maxAtRuleLength 250 is used to keep the @-moz-document rule all on one line
+            perfectionist: 'perfectionist <%= config.sourceFile %> <%= config.sourceFile %> --indentSize 2 --maxAtRuleLength 250'
         },
         cssmin: {
             minify: {
@@ -179,6 +195,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-wrap');
+    grunt.loadNpmTasks('grunt-exec');
 
     // build custom GitHub-Dark style using build.json settings
     grunt.registerTask('default', 'Building custom style', function(){
@@ -188,6 +205,12 @@ module.exports = function (grunt) {
         grunt.task.run(['wrap']);
       }
     });
+
+    // use perfectionist to clean up selectors
+    grunt.registerTask('clean', 'Cleaning up CSS file', function(){
+      grunt.task.run(['exec', 'string-replace:cleanup']);
+    });
+
     // build custom minified GitHub-Dark style
     grunt.registerTask('minify', 'Building custom minified style', function(){
       grunt.task.run(['string-replace:inline', 'cssmin:minify']);
