@@ -7,9 +7,9 @@
 - Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
 
 ## Preview
-![GitHub Dark preview](http://i.imgur.com/9ChgiR6.png)
+![GitHub Dark preview](https://stylishthemes.github.io/GitHub-Dark/images/screenshots/after_blue.png)
 
-## [Available Syntax Highlighting Themes](http://stylishthemes.github.io/GitHub-Dark/)
+## [Available Syntax Highlighting Themes](https://stylishthemes.github.io/GitHub-Dark/)
 
 |                      |                        |                          |                 |                       |
 |----------------------|------------------------|--------------------------|-----------------|-----------------------|
