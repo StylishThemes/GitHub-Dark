@@ -38,6 +38,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.11 (8/19/2015)
+
+* Build:
+  * Add perfectionist to build to allow reformatting of selectors (use `grunt clean` to reformat).
+  * Reformat css to fit 80 columns. Fixes [issue #239](https://github.com/StylishThemes/GitHub-Dark/issues/239).
+* Update the timeline line hack.
+* Pull requests: fix a white border in teh checks box.
+* Discussions: Fix a multicolored header.
+
 #### Version 1.14.10 (8/5/2015)
 
 * Readme: Better theme table.
@@ -59,12 +68,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Numerous tweaks to the new headers. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
 * Diff: Fix GeoJSON diffs. See [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242)
 * Pull requests: Update branch action class. Fixes [issue #249](https://github.com/StylishThemes/GitHub-Dark/issues/249).
-
-#### Version 1.14.8 (7/27/2015)
-
-* Comments: Fix commit SHA.
-* Pull requests: Fix various status text colors.
-* Gist: search result styling. Fixes [issue #243](https://github.com/StylishThemes/GitHub-Dark/issues/243).
-* Notifications: Fix type icon colors. Fixes [issue #246](https://github.com/StylishThemes/GitHub-Dark/issues/246).
-* Organization: add organization tab styling. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
-* Repo: Branch dropdown selector - make Tags tab text white. Fixes [issue #248](https://github.com/StylishThemes/GitHub-Dark/issues/248).
