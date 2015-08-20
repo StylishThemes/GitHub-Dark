@@ -1199,10 +1199,11 @@
   .hero .screenographic, .pagination span.current, .box-action:active,
   .btn:active, .btn.selected, .btn.selected:hover, .btn.zeroclipboard-is-active,
   .minibutton:active, .minibutton.selected, .minibutton.selected:hover,
-  .minibutton.zeroclipboard-is-active, .clone-url-button.selected > a,
-  .clone-url-button.selected > a:hover, .octotree_toggle:hover,
+  .minibutton.zeroclipboard-is-active, .octotree_toggle:hover,
   button.button:hover, a.button:hover, span.button:hover,
-  button.minibutton:hover, a.minibutton:hover, span.minibutton:hover {
+  button.minibutton:hover, a.minibutton:hover, span.minibutton:hover,
+  .clone-url-button.selected > .clone-url-link,
+  .clone-url-button.selected > .clone-url-link:hover {
     background: linear-gradient(to bottom, #444, #333) !important;
     border-color: #484848 !important;
   }
@@ -1210,13 +1211,14 @@
   .btn, header.nav-bar, .bubble .bubble-title, kbd, a.feed,
   .list-browser-filterbar, .gobutton, .comment-header, .pagehead ul.tabs li a,
   .login_form input[type="submit"], .top-bar, ul#bootcamp li a h4,
-  #gists .context-menu-container, body#com #header, .white-nav .selected span,
-  .clone-url-button a, .filter-tab, #header-wrapper, #header-wrapper .nav,
-  .pagination span, .cheatsheet h2, .section a.section-head,
-  .octotree_view_header, .list-heading, .dashboard-tabs li a, a.function-button,
-  .add-pill-form, .gist .gist-file .gist-meta, .octotree_toggle,
-  ul.comparison-list > li.title, button.button, a.button, span.button,
-  button.minibutton, a.minibutton, span.minibutton {
+  #gists .context-menu-container, body#com #header,
+  .white-nav .selected span, .filter-tab, #header-wrapper,
+  #header-wrapper .nav, .pagination span, .cheatsheet h2,
+  .section a.section-head, .octotree_view_header, .list-heading,
+  .dashboard-tabs li a, a.function-button, .add-pill-form,
+  .gist .gist-file .gist-meta, .octotree_toggle, ul.comparison-list > li.title,
+  button.button, a.button, span.button, button.minibutton, a.minibutton,
+  span.minibutton, .clone-url-button > .clone-url-link {
     background: linear-gradient(to bottom, #282828, #181818) !important;
     border-color: #383838 !important;
   }
@@ -1233,6 +1235,12 @@
   /* vertical left border for side menu */
   .sunken-menu, .sunken-menu-contents {
     box-shadow: inset 1px 0 0 #333 !important;
+  }
+  .clone-url-button + .clone-url-button > .clone-url-link {
+    box-shadow: 1px 0 0 #333 !important;
+  }
+  .clone-url-button.selected > .clone-url-link {
+    box-shadow: 0 2px 3px rgba(0,0,0,.3) inset !important;
   }
   .blankslate {
     box-shadow: inset 0 0 10px rgba(255,255,255,.05) !important;
@@ -1342,7 +1350,7 @@
   .select-menu-item.navigation-focus.select-menu-action,
   .select-menu-item.navigation-focus .description-inline,
   .gist-snippet-meta .description, a.select-menu-item-text,
-  .select-menu-item-text strong {
+  .select-menu-item-text strong, .clone-url-button > .clone-url-link {
     color: #e0e0e0 !important;
   }
   b, strong, .explain strong {
@@ -1377,7 +1385,6 @@
   .context-loader, .box-title a, .merge-pr-more-commits a,
   .branch-infobar .lightweight-actions > li a:hover, .dashboard-notice,
   .discussion-item-ref-title .title-link, .org-teams-list .team,
-  .clone-url-button.selected > a, .clone-url-button.selected > a:hover,
   .subnav-search-context .select-menu-item-icon, a.wiki-edit-link, .ace-github,
   a.pagehead-nav-item.selected, a.pagehead-nav-item:hover,
   a.pagehead-nav-item:hover .octicon:before, .repo-collection .collection-stat,
@@ -1392,7 +1399,7 @@
   .table-list-header-toggle .btn-link:hover, a.issue-title-link,
   .table-list-item p, .table-list-milestones .milestone-title-link a,
   .org-header .edit-org, .blob-code, .blob-code-inner, .diff-line-code,
-  .clone-url-button > a, .contrib-number, .pulse-summary .summary-box .count,
+  .contrib-number, .pulse-summary .summary-box .count,
   .list-options .selected .list-item-title,
   .nav-bar-inner .brand-logo-invertocat .octicon-mark-github, .menu a .octicon,
   .issue-list-meta a, .stat-number, div.search-form button span,
@@ -1530,7 +1537,7 @@
   .blob-num.non-expandable:hover, .breadcrumb, #footer .mega-octicon,
   .application-authorizations .oauth-app-list-meta,
   .application-authorizations .oauth-app-owner, .boxed-group-inner .help,
-  .thread-subscription-status .reason, .clone-url input.input-mini,
+  .thread-subscription-status .reason,
   .toc-diff-stats .octicon, .blob-num, .recent-gists .description .blank,
   .recent-gists .metadata, .member-meta .access-link {
     color: #666 !important;
