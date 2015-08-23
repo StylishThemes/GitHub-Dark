@@ -25,6 +25,7 @@ If you don't know CSS very well and have found a missing style, please include a
 
 ## GitHub Dark Style Guide
 
+* Use the provided `.editorconfig` file with your code editor. Don't know what that is? Then check out http://editorconfig.org/.
 * Limit to the [K&R Style](http://en.wikipedia.org/wiki/1_true_brace_style#K.26R_style), and **2 SPACE INDENTATION** (no tabs, and not more, and not less than 2 spaces).
 
   * K&R Example:
@@ -50,7 +51,7 @@ If you don't know CSS very well and have found a missing style, please include a
     /* bad */
     element[attr='value']{ }
     ```
-  
+
   * 2 Space indentation
     ```css
     /* good */
@@ -62,10 +63,11 @@ If you don't know CSS very well and have found a missing style, please include a
     ·property: value;
     ```
 
-* Try to wrap lines at around 120 characters.
+* Try to wrap lines at around 80 characters. If at all possible, use "grunt clean" to do the wrapping for you.
 * This style has a size limit:
-  * I'm not sure if it is [64kb](https://github.com/JasonBarnabe/stylish/wiki/Embedding-images-in-styles) (which I think we've already passed), or [100,000 bytes](http://userstyles.org/help/coding).
-  * So don't add any image URI's to the css; instead add the image into the `/images` directory; then point to using the following url: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
+  * We're doing okay for now since the author of Stylish gave us more room to work; I'm not sure what the value is of the current limit.
+  * <del>I'm not sure if it is [64kb](https://github.com/JasonBarnabe/stylish/wiki/Embedding-images-in-styles) (which I think we've already passed), or [100,000 bytes](http://userstyles.org/help/coding)</del>.
+  * Still, don't add any image URI's to the css; instead add the image into the `/images` directory; then point to using the following url: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
   * If possible, reduce any added selectors. Remember that Stylish requires an `!important` flag to override default styling, so a selector starting from the body isn't always necessary.
   * Don't add any inline comments. If you want to make a comment, add it as a note in the commit.
   * If your css definition already exists within the style, do not add it again! Add your selector to the existing definition.
