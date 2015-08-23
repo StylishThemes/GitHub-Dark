@@ -38,6 +38,27 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.12 (8/22/2015)
+
+* Update support files:
+  * Add updated screenshot to readme.
+  * Update contributing content.
+  * Update `.editorconfig` file.
+* Timelines: flat branch backgrounds.
+* Global:
+  * Flash message (organizational page).
+  * Brown warning panels get light brown text.
+* Teams:
+  * Use base color on mega octicons.
+  * Team count styling.
+* Migration page: add styling.
+* Issues: Fix filter dropdown menu.
+* Releases:
+  * Darken "Latest Release" label.
+  * Fix "Show # other tags" hover style.
+* New repo: Fix clone buttons.
+* Grunt build: move perfectionist to devDeps, update deps
+
 #### Version 1.14.11 (8/19/2015)
 
 * Build:
@@ -60,11 +81,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Fix file icon background.
 * Branches: Flat footer background.
 * Build: include updated build option.
-
-#### Version 1.14.9 (7/30/2015)
-
-* Organization:
-  * Darken selected tab top border. See [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
-  * Numerous tweaks to the new headers. Fixes [issue #247](https://github.com/StylishThemes/GitHub-Dark/issues/247).
-* Diff: Fix GeoJSON diffs. See [issue #242](https://github.com/StylishThemes/GitHub-Dark/issues/242)
-* Pull requests: Update branch action class. Fixes [issue #249](https://github.com/StylishThemes/GitHub-Dark/issues/249).
