@@ -38,6 +38,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.13 (9/2/2015)
+
+* Diff: Image slider..
+* Files: Style new hover highlight.
+
 #### Version 1.14.12 (8/22/2015)
 
 * Update support files:
@@ -67,17 +72,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Update the timeline line hack.
 * Pull requests: fix a white border in teh checks box.
 * Discussions: Fix a multicolored header.
-
-#### Version 1.14.10 (8/5/2015)
-
-* Readme: Better theme table.
-* Discussions: Fix triangle beside avatars.
-* Markdown:
-  * Make bold text slightly brighter. Fixes [issue #250](https://github.com/StylishThemes/GitHub-Dark/issues/250).
-  * Fix bold links.
-  * Make sure to not change header colors.
-  * Fix overflow on single line code blocks. Fixes [issue #239](https://github.com/StylishThemes/GitHub-Dark/issues/239).
-* Guides: Fix links in header.
-* Gist: Fix file icon background.
-* Branches: Flat footer background.
-* Build: include updated build option.
