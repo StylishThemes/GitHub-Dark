@@ -38,6 +38,24 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.14 (9/8/2015)
+
+* Code:
+  * Enable experimental wrapping.
+  * Ensure all long lines are wrapped.
+  * Make sure diff lines don't overflow. See [issue #253](https://github.com/StylishThemes/GitHub-Dark/issues/253).
+  * Black box borders on expanded lines. See [issue #253](https://github.com/StylishThemes/GitHub-Dark/issues/253).
+* Themes:
+  * Fix typo "repitition". See [pull #254](https://github.com/StylishThemes/GitHub-Dark/pull/254); thanks [TheTypoMaster](https://github.com/TheTypoMaster).
+  * Override tag styles inside comments. See [issue #255](https://github.com/StylishThemes/GitHub-Dark/issues/255).
+* Global: Fix bold colored text.
+* Diff:
+  * Enable syntax color in changed parts.
+  * Color tweaks.
+  * Reverted these changes due to readability issues.
+* Organizations: Some fixes for migration pages.
+* Demo: use protocol relative urls.
+
 #### Version 1.14.13 (9/2/2015)
 
 * Diff: Image slider..
@@ -63,12 +81,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix "Show # other tags" hover style.
 * New repo: Fix clone buttons.
 * Grunt build: move perfectionist to devDeps, update deps
-
-#### Version 1.14.11 (8/19/2015)
-
-* Build:
-  * Add perfectionist to build to allow reformatting of selectors (use `grunt clean` to reformat).
-  * Reformat css to fit 80 columns. Fixes [issue #239](https://github.com/StylishThemes/GitHub-Dark/issues/239).
-* Update the timeline line hack.
-* Pull requests: fix a white border in teh checks box.
-* Discussions: Fix a multicolored header.
