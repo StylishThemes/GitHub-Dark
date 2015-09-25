@@ -38,6 +38,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.15 (9/25/2015)
+
+* Discussions:
+  * Fix comment box error message.
+  * Style upload callout.
+* Code: Add experimental wrapping in discussions.
+* Demo:
+  * Update to match changed syntax highlight classes. See [issue #256](https://github.com/StylishThemes/GitHub-Dark/issues/256).
+  * Darken code expand row.
+* User page: Fix contribution calendar highlight.
+* Traffic graph: Fix GitHub favicon.
+
 #### Version 1.14.14 (9/8/2015)
 
 * Code:
@@ -60,24 +72,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Diff: Image slider..
 * Files: Style new hover highlight.
-
-#### Version 1.14.12 (8/22/2015)
-
-* Update support files:
-  * Add updated screenshot to readme.
-  * Update contributing content.
-  * Update `.editorconfig` file.
-* Timelines: flat branch backgrounds.
-* Global:
-  * Flash message (organizational page).
-  * Brown warning panels get light brown text.
-* Teams:
-  * Use base color on mega octicons.
-  * Team count styling.
-* Migration page: add styling.
-* Issues: Fix filter dropdown menu.
-* Releases:
-  * Darken "Latest Release" label.
-  * Fix "Show # other tags" hover style.
-* New repo: Fix clone buttons.
-* Grunt build: move perfectionist to devDeps, update deps
