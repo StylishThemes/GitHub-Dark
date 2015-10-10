@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.16 (10/10/2015)
+
+* Blame: Fix heat colors.
+* Gist: Various fixes to own gist list.
+* Code: Simplify tab-size selector.
+* ZenHub: Add & update styles for pipeline options.
+
 #### Version 1.14.15 (9/25/2015)
 
 * Discussions:
@@ -67,8 +74,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Reverted these changes due to readability issues.
 * Organizations: Some fixes for migration pages.
 * Demo: use protocol relative urls.
-
-#### Version 1.14.13 (9/2/2015)
-
-* Diff: Image slider..
-* Files: Style new hover highlight.
