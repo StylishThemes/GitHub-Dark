@@ -38,6 +38,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.18 (10/13/2015)
+
+* Markdown: Invert 'zzz' emoji.
+* Repo: style commit teaser. Fixes [issue #257](https://github.com/StylishThemes/GitHub-Dark/issues/257).
+
 #### Version 1.14.17 (10/12/2015)
 
 * Markdown:
@@ -50,15 +55,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Various fixes to own gist list.
 * Code: Simplify tab-size selector.
 * ZenHub: Add & update styles for pipeline options.
-
-#### Version 1.14.15 (9/25/2015)
-
-* Discussions:
-  * Fix comment box error message.
-  * Style upload callout.
-* Code: Add experimental wrapping in discussions.
-* Demo:
-  * Update to match changed syntax highlight classes. See [issue #256](https://github.com/StylishThemes/GitHub-Dark/issues/256).
-  * Darken code expand row.
-* User page: Fix contribution calendar highlight.
-* Traffic graph: Fix GitHub favicon.
