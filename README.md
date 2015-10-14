@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.19 (10/13/2015)
+
+* File blob:
+  * Style tease contributors.
+  * Make tease sha & message grey & darken contrib.
+  * See [issue #257](https://github.com/StylishThemes/GitHub-Dark/issues/257).
+
 #### Version 1.14.18 (10/13/2015)
 
 * Markdown: Invert 'zzz' emoji.
