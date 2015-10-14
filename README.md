@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.20 (10/14/2015)
+
+* Files:
+  * Clean up and tweak new commit tease.
+  * Fix file contributor panel (again).
+  * More tweaks to commit tease.
+
 #### Version 1.14.19 (10/13/2015)
 
 * File blob:
@@ -49,16 +56,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Markdown: Invert 'zzz' emoji.
 * Repo: style commit teaser. Fixes [issue #257](https://github.com/StylishThemes/GitHub-Dark/issues/257).
-
-#### Version 1.14.17 (10/12/2015)
-
-* Markdown:
-  * Force transparent background on emojis.
-  * Use transparent background on all img tags.
-
-#### Version 1.14.16 (10/10/2015)
-
-* Blame: Fix heat colors.
-* Gist: Various fixes to own gist list.
-* Code: Simplify tab-size selector.
-* ZenHub: Add & update styles for pipeline options.
