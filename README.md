@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.21 (10/14/2015)
+
+* Files:
+  * Adapt to latest class name change.
+  * Fix non-anchor user names.
+* Build: update dependencies.
+
 #### Version 1.14.20 (10/14/2015)
 
 * Files:
@@ -51,8 +58,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style tease contributors.
   * Make tease sha & message grey & darken contrib.
   * See [issue #257](https://github.com/StylishThemes/GitHub-Dark/issues/257).
-
-#### Version 1.14.18 (10/13/2015)
-
-* Markdown: Invert 'zzz' emoji.
-* Repo: style commit teaser. Fixes [issue #257](https://github.com/StylishThemes/GitHub-Dark/issues/257).
