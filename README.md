@@ -38,6 +38,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.24 (11/6/2015)
+
+* ZenHub: Style updates & icon changes.
+
 #### Version 1.14.23 (10/31/2015)
 
 * ZenHub:
@@ -55,10 +59,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Download: Fix backgrounds.
 * Frontpage: Fix jobs promotion text.
 * ZenHub: Add todo element & page styling.
-
-#### Version 1.14.21 (10/14/2015)
-
-* Files:
-  * Adapt to latest class name change.
-  * Fix non-anchor user names.
-* Build: update dependencies.
