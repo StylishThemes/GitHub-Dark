@@ -38,6 +38,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.25 (11/15/2015)
+
+* Gist
+  * Tweak search box color for 'no result'.
+  * More search box tweaks.
+* Discussion: Fix 'Show outdated diff'.
+* Settings: Fixed Leave button. See [pull #258](https://github.com/StylishThemes/GitHub-Dark/pull/258).
+
 #### Version 1.14.24 (11/6/2015)
 
 * ZenHub: Style updates & icon changes.
@@ -53,9 +61,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix "committed for" in author section. See [pull #259](https://github.com/StylishThemes/GitHub-Dark/pull/259); thanks [auscompgeek](https://github.com/auscompgeek)!
   * Darkerize commit meta (Enterprise). See [pull #260](https://github.com/StylishThemes/GitHub-Dark/pull/260); thanks [jucrouzet](https://github.com/jucrouzet)!
 * User page: Fix Halloween colors in contribution calendar. See [issue #261](https://github.com/StylishThemes/GitHub-Dark/issues/261).
-
-#### Version 1.14.22 (10/19/2015)
-
-* Download: Fix backgrounds.
-* Frontpage: Fix jobs promotion text.
-* ZenHub: Add todo element & page styling.
