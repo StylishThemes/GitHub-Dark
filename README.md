@@ -38,6 +38,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.26 (11/17/2015)
+
+* Organizations: Fix secret teams label & tweak colors.
+* Add GitHub new tab design styling. See [pull #264](https://github.com/StylishThemes/GitHub-Dark/pull/264); thanks [mkoch227](https://github.com/mkoch227)!
+* Build
+  * Update dependencies.
+  * Add quotes to all data-uri & apply modified perfectionist.
+
 #### Version 1.14.25 (11/15/2015)
 
 * Gist
