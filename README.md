@@ -38,6 +38,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.27 (11/18/2015)
+
+* New repos:
+  * Style feature panel.
+  * Various tweaks.
+
 #### Version 1.14.26 (11/17/2015)
 
 * Organizations: Fix secret teams label & tweak colors.
@@ -53,19 +59,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * More search box tweaks.
 * Discussion: Fix 'Show outdated diff'.
 * Settings: Fixed Leave button. See [pull #258](https://github.com/StylishThemes/GitHub-Dark/pull/258).
-
-#### Version 1.14.24 (11/6/2015)
-
-* ZenHub: Style updates & icon changes.
-
-#### Version 1.14.23 (10/31/2015)
-
-* ZenHub:
-  * Add to do item selector.
-  * Add to do sortable styling.
-  * Fix "Add a Pipeline" border.
-* Readme: Add dev dependencies indicator.
-* Commit:
-  * Fix "committed for" in author section. See [pull #259](https://github.com/StylishThemes/GitHub-Dark/pull/259); thanks [auscompgeek](https://github.com/auscompgeek)!
-  * Darkerize commit meta (Enterprise). See [pull #260](https://github.com/StylishThemes/GitHub-Dark/pull/260); thanks [jucrouzet](https://github.com/jucrouzet)!
-* User page: Fix Halloween colors in contribution calendar. See [issue #261](https://github.com/StylishThemes/GitHub-Dark/issues/261).
