@@ -443,7 +443,8 @@
   }
   /* GitHub Bug: Properly center the pull request tabs header counters vertically.
      Also match the border-radius to match other similar counters on the site  */
-  #conversation_tab_counter, #commits_tab_counter, #files_tab_counter {
+  #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
+  .reponav-item .counter {
     vertical-align: middle !important;
     border-radius: 2px !important;
   }
@@ -453,7 +454,7 @@
     top: -1.5px !important;
   }
   /* GitHub Bug: Center counters vertically on the line */
-  .boxed-group .counter {
+  .boxed-group .counter, .reponav-item .counter {
     position: relative !important;
     top: -1px !important;
   }
@@ -659,8 +660,7 @@
   .select-menu-button::before {
     border-top-color: #eee !important;
   }
-  .pagehead-tabs-item.selected,
-  .reponav-item.selected {
+  .pagehead-tabs-item.selected, .reponav-item.selected {
     border-bottom-color: #222 !important;
     border-top-width: 1px !important;
   }
@@ -815,8 +815,7 @@
   .file-diff-split .empty-cell, .composer-infobar, .completeness-indicator-blank,
   .leaflet-control-zoom,
   .leaflet-container .leaflet-control-attribution.leaflet-compact-attribution,
-  .pagehead-tabs-item.selected,
-  .reponav-item.selected {
+  .pagehead-tabs-item.selected, .reponav-item.selected {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected,
@@ -1851,6 +1850,10 @@
   .repo-list-item p, .repo-list-item .repo-list-stats {
     position: relative !important;
     z-index: 1 !important;
+  }
+  .reponav-item {
+    position: relative !important;
+    top: 2px !important;
   }
   .participation-graph svg {
     background: transparent !important;
