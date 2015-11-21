@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.28 (11/21/2015)
+
+* Frontpage:
+  * Style pagination button. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
+  * Fix pagination spinner. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
+* New repos: Fix repository meta/description.
+
 #### Version 1.14.27 (11/18/2015)
 
 * New repos:
@@ -51,11 +58,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Build
   * Update dependencies.
   * Add quotes to all data-uri & apply modified perfectionist.
-
-#### Version 1.14.25 (11/15/2015)
-
-* Gist
-  * Tweak search box color for 'no result'.
-  * More search box tweaks.
-* Discussion: Fix 'Show outdated diff'.
-* Settings: Fixed Leave button. See [pull #258](https://github.com/StylishThemes/GitHub-Dark/pull/258).
