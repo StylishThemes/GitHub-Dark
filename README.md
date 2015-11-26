@@ -38,6 +38,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.29 (11/26/2015)
+
+* Frontpage: make pagination button match base color.
+* Options:
+  * Fix font colors, remove danger gradient.
+  * Fix add collaborator form.
+* Organizations:
+  * Minor fixes to member page.
+  * Style "Manage Access" page.
+* Gist: Fix meta links hover effect.
+* Markdown: Ensure links are always colored correctly. See [issue #268](https://github.com/StylishThemes/GitHub-Dark/issues/268).
+
 #### Version 1.14.28 (11/21/2015)
 
 * Frontpage:
@@ -50,11 +62,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * New repos:
   * Style feature panel.
   * Various tweaks.
-
-#### Version 1.14.26 (11/17/2015)
-
-* Organizations: Fix secret teams label & tweak colors.
-* Add GitHub new tab design styling. See [pull #264](https://github.com/StylishThemes/GitHub-Dark/pull/264); thanks [mkoch227](https://github.com/mkoch227)!
-* Build
-  * Update dependencies.
-  * Add quotes to all data-uri & apply modified perfectionist.
