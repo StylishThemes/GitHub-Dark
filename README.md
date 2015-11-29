@@ -38,6 +38,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.30 (11/29/2015)
+
+* Readme: Update screenshot.
+* Global:
+  * Fix hover color on certain dropdowns.
+  * Cleanup some unused selectors.
+* Organizations:
+  * Fix member management dropdown. See [issue #269](https://github.com/StylishThemes/GitHub-Dark/issues/269).
+  * Fix white border.
+  * Fix border of dropdowns - Fixes [issue #269](https://github.com/StylishThemes/GitHub-Dark/issues/269).
+* Discussions: Fix timeline icons.
+* Issues: Restore background for issue list.
+
 #### Version 1.14.29 (11/26/2015)
 
 * Frontpage: make pagination button match base color.
@@ -56,9 +69,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style pagination button. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
   * Fix pagination spinner. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
 * New repos: Fix repository meta/description.
-
-#### Version 1.14.27 (11/18/2015)
-
-* New repos:
-  * Style feature panel.
-  * Various tweaks.
