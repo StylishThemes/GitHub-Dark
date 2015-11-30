@@ -101,7 +101,7 @@
   #fork-select .target:not(.disabled):hover, .flash-notice,
   table.upgrades tr:hover td, .email-format .email-hidden-toggle:hover a,
   .dashboard-tabs a:hover, .dropdown-menu > li > a:hover,
-  .documentation-results a:hover, input[type=submit]:hover,
+  .documentation-results a:hover,
   .hidden-text-expander a:hover, .dropdown-item:hover,
   .dropdown-item.zeroclipboard-is-hover, .select-menu-item.navigation-focus,
   .subnav-item.selected, .subnav-item.selected:hover,
@@ -173,7 +173,7 @@
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 2px /*[[base-color]]*/ #4183C4 !important;
   }
   /* === Inputs === */
-  select, input:not(.js-color-editor-input), textarea {
+  select, input:not(.js-color-editor-input):not(.btn-link), textarea {
     -moz-appearance: none !important;
     background: #181818 !important;
     border: 1px solid #343434 !important;
@@ -361,7 +361,8 @@
   #readme .plain pre, .uploaded-files, .merge-pr-more-commits code,
   .two-factor-toggle .two-factor-status button, .input_area,
   #notebook .highlight, #notebook .highlight pre, .output_area pre,
-  .gist-snippet-meta .gist-count-links>li>a:hover, .markdown-body img {
+  .gist-snippet-meta .gist-count-links>li>a:hover, .markdown-body img,
+  .delete-owners-button:hover {
     background: transparent !important;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
@@ -1428,7 +1429,6 @@
   a.pagehead-nav-item.selected, a.pagehead-nav-item:hover,
   a.pagehead-nav-item:hover .octicon:before, .repo-collection .collection-stat,
   a.subscribe-feed, header ul.links a:hover,
-  .team-info-card .stats-group .stat.no-link:hover .stat-number,
   div.container > p, .commits-list-item .commit-author,
   .full-commit .sha-block > .sha, .discussion-item .renamed-was,
   .discussion-item .renamed-is, a.discussion-item-entity,
@@ -1452,7 +1452,8 @@
   .pagehead-tabs-item.selected, a.pagehead-tabs-item.selected,
   .pagehead-tabs-item:hover, a.pagehead-tabs-item:hover, .article-meta,
   a.article-meta, .timeline-comment-header-text code a, .commit-tease-sha,
-  a.commit-tease-sha, .reponav-item.selected {
+  a.commit-tease-sha, .reponav-item.selected,
+  .stats-group-stat.no-link:hover .stat-number {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -1539,14 +1540,16 @@
   .notifications .issue-notification.read .type-icon, .notifications .read a,
   .auth-form-header .octicon, .releases-tag-list p a, .history-link a,
   a.issue-nwo-link, ul.filter-list .filter-item, .member-meta .teams-link,
-  .member-meta .btn-link, a.stats-group-stat, ul.comparison-list > li em,
+  .member-meta .btn-link, ul.comparison-list > li em,
   ul.comparison-list > li.title, .diffstat-summary, a.team-member-ellipsis,
   a.discussion-item-toggle-open, a.discussion-item-toggle-closed,
   button.discussion-item-toggle-open, button.discussion-item-toggle-closed,
   .dropdown-header, .participation a, .completeness-indicator-info,
   .type-icon-state-none, a.type-icon-state-none, .pagehead-tabs-item,
   a.pagehead-tabs-item, .org-settings-team-count, a.muted-link strong,
-  table.files td.icon, .commit-tease, .reponav-item, a.reponav-item {
+  table.files td.icon, .commit-tease, .reponav-item, a.reponav-item,
+  .delete-owners-button, .stats-group-stat, a.stats-group-stat,
+  .stats-group-stat.no-link:hover {
     color: #808080 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon,
@@ -1669,7 +1672,7 @@
   .closed.mini-icon, .octicon-btn-danger:hover, .text-danger, a.text-danger,
   .type-icon-state-closed, a.type-icon-state-closed, .reverted.octicon,
   .text-failure strong, .text-error strong, .text-danger strong,
-  .member-two-factor-disabled strong {
+  .member-two-factor-disabled strong, .delete-owners-button:hover {
     color: #c31e16 !important;
   }
   /* === Brown panel === */
