@@ -38,6 +38,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.31 (12/5/2015)
+
+* Organizations:
+  * Fix members table background.
+  * Tweaks & fixes to owner group popup.
+  * More fixes to button and input elements.
+* Global: Fix 'generic' label.
+* Options: Fix a border in billing.
+* Issues: Fix milestone name label.
+* Milestones: Fix title hover.
+* Wiki:
+  * Darken edit icon in sidebar.
+  * Fix date and commit color in history.
+* Pulse: Tweak summary box hover effect.
+* GitHub-Dark: Remove GitHub diff examples from [archived pygments demo](https://stylishthemes.github.io/GitHub-Dark/archived/).
+
 #### Version 1.14.30 (11/29/2015)
 
 * Readme: Update screenshot.
@@ -62,10 +78,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style "Manage Access" page.
 * Gist: Fix meta links hover effect.
 * Markdown: Ensure links are always colored correctly. See [issue #268](https://github.com/StylishThemes/GitHub-Dark/issues/268).
-
-#### Version 1.14.28 (11/21/2015)
-
-* Frontpage:
-  * Style pagination button. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
-  * Fix pagination spinner. Fixes [issue #265](https://github.com/StylishThemes/GitHub-Dark/issues/265).
-* New repos: Fix repository meta/description.
