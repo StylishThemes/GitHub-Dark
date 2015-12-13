@@ -38,6 +38,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.32 (12/13/2015)
+
+* Issues: Fix text color in travis status.
+* Global: Darken scrollbars & add hover style. Thanks [@mmizutani](https://github.com/mmizutani)!
+
 #### Version 1.14.31 (12/5/2015)
 
 * Organizations:
@@ -66,15 +71,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix border of dropdowns - Fixes [issue #269](https://github.com/StylishThemes/GitHub-Dark/issues/269).
 * Discussions: Fix timeline icons.
 * Issues: Restore background for issue list.
-
-#### Version 1.14.29 (11/26/2015)
-
-* Frontpage: make pagination button match base color.
-* Options:
-  * Fix font colors, remove danger gradient.
-  * Fix add collaborator form.
-* Organizations:
-  * Minor fixes to member page.
-  * Style "Manage Access" page.
-* Gist: Fix meta links hover effect.
-* Markdown: Ensure links are always colored correctly. See [issue #268](https://github.com/StylishThemes/GitHub-Dark/issues/268).
