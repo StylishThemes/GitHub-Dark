@@ -38,6 +38,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.33 (12/17/2015)
+
+* Diff: Fix edit button.
+* Discussions: Fix commit hash hover.
+* Readme: Add missing vibrant ink to themes.
+* Commit log: Make avatar child background transparent.
+* Code: disable code wrap with body.nowrap class.
+
 #### Version 1.14.32 (12/13/2015)
 
 * Issues: Fix text color in travis status.
@@ -58,16 +66,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix date and commit color in history.
 * Pulse: Tweak summary box hover effect.
 * GitHub-Dark: Remove GitHub diff examples from [archived pygments demo](https://stylishthemes.github.io/GitHub-Dark/archived/).
-
-#### Version 1.14.30 (11/29/2015)
-
-* Readme: Update screenshot.
-* Global:
-  * Fix hover color on certain dropdowns.
-  * Cleanup some unused selectors.
-* Organizations:
-  * Fix member management dropdown. See [issue #269](https://github.com/StylishThemes/GitHub-Dark/issues/269).
-  * Fix white border.
-  * Fix border of dropdowns - Fixes [issue #269](https://github.com/StylishThemes/GitHub-Dark/issues/269).
-* Discussions: Fix timeline icons.
-* Issues: Restore background for issue list.
