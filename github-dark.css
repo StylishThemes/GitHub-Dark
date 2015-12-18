@@ -36,12 +36,11 @@
   .header-logo-wordmark:hover span, #userbox a:hover .mini-icon,
   .gist-item ul.meta>li>a:hover, #userbox a:hover, .sidebar-module h3 a:hover,
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span,
-  .team-mention, a.octotree_opts:hover,
-  .header .header-logo-invertocat:hover span, .comment-header-actions li:hover,
-  .octofication .mega-octicon:before, .octofication-more strong,
-  .org-repo-stats a:hover, .muted-link:hover, a.muted-link:hover,
-  .org-repo-stats a:hover .octicon:before, .org-module-link:hover,
-  .org-module-link:hover .org-stats, .blog .title a,
+  .team-mention, .header .header-logo-invertocat:hover span,
+  .comment-header-actions li:hover, .octofication .mega-octicon:before,
+  .octofication-more strong, .org-repo-stats a:hover, .muted-link:hover,
+  a.muted-link:hover, .org-repo-stats a:hover .octicon:before,
+  .org-module-link:hover, .org-module-link:hover .org-stats, .blog .title a,
   .org-module-link:hover .octicon, .org-header-info .name-link:hover,
   .social-count:hover, .new-file-link span, .org-repo-name a:hover .repo-prefix,
   .timeline-commits .commit-meta .octicon-comment-discussion:before,
@@ -69,11 +68,9 @@
   .labels-list-action:hover, .commits-list-item .commits-comments-link:hover,
   .discussion-item-ref-title .title-link:hover, .box-action:hover,
   .box-action:active, input[type="text"]:focus+.scope-badge,
-  .repo-list-stats .repo-list-stat-item:hover,
-  .octotree_views .octotree_treeview .jstree-anchor, .jstree-icon.tree::before,
-  .octicon-file-directory, .branch-status-details,
-  .notification-actions .btn-link:hover, a.discussion-item-toggle-open:hover,
-  a.discussion-item-toggle-closed:hover,
+  .repo-list-stats .repo-list-stat-item:hover, .octicon-file-directory,
+  .branch-status-details, .notification-actions .btn-link:hover,
+  a.discussion-item-toggle-open:hover, a.discussion-item-toggle-closed:hover,
   button.discussion-item-toggle-open:hover,
   button.discussion-item-toggle-closed:hover, .task-list a,
   .full-commit .btn.btn-outline:hover, .zeroclipboard-link,
@@ -94,7 +91,12 @@
   .release-timeline-tags .expander-text:hover, .muted-link:hover strong,
   .ajax-pagination-btn, .markdown-body a[href*="/labels/"],
   .select-menu-action:hover, .wiki-wrapper .wiki-history .commit-id:hover,
-  .milestone-title-link a:hover {
+  .milestone-title-link a:hover,
+  .octotree_views .octotree_treeview .jstree-anchor .jstree-icon.tree::before,
+  .octotree_github_sidebar a.octotree_toggle:hover,
+  .octotree_github_sidebar a.octotree_opts:hover,
+  .octotree_github_sidebar a.octotree_opts.selected,
+  .octotree_github_sidebar .octotree_views .octotree_treeview .jstree-anchor {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -470,7 +472,8 @@
     max-width: 100% !important;
   }
   /* GitHub Bug: Enable wrapping of long code lines */
-  body:not(.nowrap) .blob-code-inner, body:not(.nowrap) .markdown-body > pre > code,
+  body:not(.nowrap) .blob-code-inner,
+  body:not(.nowrap) .markdown-body > pre > code,
   body:not(.nowrap) .markdown-body > .highlight > pre {
     white-space: pre-wrap !important;
     word-break: break-all !important;
@@ -1364,8 +1367,7 @@
   #user-links > li * button, .timeline-commits .hidden-text-expander a:hover,
   .color-editor-input, .state .octicon, #user-links .sign-out-button,
   .table-list-item label, .audit-action-info .context, .token-scope,
-  .segmented-nav li.active a, a.octotree_toggle:hover, a.octotree_opts,
-  a.octotree_toggle.selected, a.octotree_opts.selected, .tabs > a.selected,
+  .segmented-nav li.active a, .tabs > a.selected,
   .highlight tr:hover .blob-num:not(.non-expandable),
   .highlight tr:hover .blob-num:not(.non-expandable):before, a .mega-octicon,
   .member-username, .invited-banner p, kbd, .kbd,
@@ -1393,7 +1395,7 @@
   a.select-menu-item-text, .select-menu-item-text strong,
   .clone-url-button > .clone-url-link, a.user-mention, .user-mention,
   a.team-mention, .team-mention, .github-jobs-promotion strong,
-  .boxed-group-inner h4 {
+  .boxed-group-inner h4, .octotree_github_sidebar a.octotree_toggle {
     color: #e0e0e0 !important;
   }
   b, strong, .explain strong {
@@ -1444,15 +1446,15 @@
   .fullscreen-overlay .mega-octicon:hover:before, .protip-callout,
   .fullscreen-overlay textarea:focus, .fullscreen-overlay textarea:hover,
   #header ul.top-nav > li > a, #header ul.top-nav > li > button,
-  a.octotree_toggle, a.team-member-ellipsis:hover, .rendered_html pre,
-  .rendered_html code, .team-grid .team-name, .commit .commit-title,
-  .commit .commit-title a, .completeness-indicator-success,
-  .completeness-indicator-error, .completeness-indicator-problem,
-  .pagehead-tabs-item.selected, a.pagehead-tabs-item.selected,
-  .pagehead-tabs-item:hover, a.pagehead-tabs-item:hover, .article-meta,
-  a.article-meta, .timeline-comment-header-text code a, .commit-tease-sha,
-  a.commit-tease-sha, .reponav-item.selected,
-  .stats-group-stat.no-link:hover .stat-number {
+  a.team-member-ellipsis:hover, .rendered_html pre, .rendered_html code,
+  .team-grid .team-name, .commit .commit-title, .commit .commit-title a,
+  .completeness-indicator-success, .completeness-indicator-error,
+  .completeness-indicator-problem, .pagehead-tabs-item.selected,
+  a.pagehead-tabs-item.selected, .pagehead-tabs-item:hover,
+  a.pagehead-tabs-item:hover, .article-meta, a.article-meta,
+  .timeline-comment-header-text code a, .commit-tease-sha, a.commit-tease-sha,
+  .reponav-item.selected, .stats-group-stat.no-link:hover .stat-number,
+  .octotree_github_sidebar a.octotree_opts, .octotree_help > span {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -1533,10 +1535,10 @@
   .issues-listing .table-list-issues .issue-comments-link,
   .issues-listing .table-list-issues .issue-meta-section a, a.issues-reset-query,
   .labels-list-action, table.tag-list p a, table.tag-list td.date a,
-  .markdown-body blockquote, .muted-link, a.muted-link,
-  .render-view-modes li, .scope-badge, .site-footer,
-  .site-footer .octicon-mark-github:hover, .repo-list-stats .repo-list-stat-item,
-  .range-editor span.flag .octicon, .commit-info .commit-meta a,
+  .markdown-body blockquote, .muted-link, a.muted-link, .render-view-modes li,
+  .scope-badge, .site-footer, .site-footer .octicon-mark-github:hover,
+  .repo-list-stats .repo-list-stat-item, .range-editor span.flag .octicon,
+  .commit-info .commit-meta a,
   .notifications .issue-notification.read .type-icon, .notifications .read a,
   .auth-form-header .octicon, .releases-tag-list p a, .history-link a,
   a.issue-nwo-link, ul.filter-list .filter-item, .member-meta .teams-link,
