@@ -38,6 +38,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.34 (12/20/2015)
+
+* Octotree: Update style.
+* Diff: Update colored diff blocks.
+* Repo: Make recently pushed box blue.
+
 #### Version 1.14.33 (12/17/2015)
 
 * Diff: Fix edit button.
@@ -50,19 +56,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Issues: Fix text color in travis status.
 * Global: Darken scrollbars & add hover style. Thanks [@mmizutani](https://github.com/mmizutani)!
-
-#### Version 1.14.31 (12/5/2015)
-
-* Organizations:
-  * Fix members table background.
-  * Tweaks & fixes to owner group popup.
-  * More fixes to button and input elements.
-* Global: Fix 'generic' label.
-* Options: Fix a border in billing.
-* Issues: Fix milestone name label.
-* Milestones: Fix title hover.
-* Wiki:
-  * Darken edit icon in sidebar.
-  * Fix date and commit color in history.
-* Pulse: Tweak summary box hover effect.
-* GitHub-Dark: Remove GitHub diff examples from [archived pygments demo](https://stylishthemes.github.io/GitHub-Dark/archived/).
