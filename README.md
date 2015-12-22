@@ -38,6 +38,24 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.35 (12/21/2015)
+
+* Script:
+  * Add focus style for options panel.
+  * Update for recent id change.
+* Login page: various fixes.
+* Readme: Update badges.
+* Code:
+  * Fix black borders on expanded diff lines.
+  * Restore original font stack.
+* Repo: Update summary hover color.
+* MediaWiki: Apply background-color to the TOC. See [pull #276](https://github.com/StylishThemes/GitHub-Dark/pull/276); thanks [SEAPUNK](https://github.com/SEAPUNK)!
+* Markdown:
+  * Fix wrapping of code block in lists.
+  * Add border to TOC and related tweaks.
+  * More TOC tweaks.
+* Global: Darken webkit scrollbar corners. See [pull #273](https://github.com/StylishThemes/GitHub-Dark/pull/273); thanks [mmizutani](https://github.com/mmizutani)!
+
 #### Version 1.14.34 (12/20/2015)
 
 * Octotree: Update style.
@@ -51,8 +69,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Readme: Add missing vibrant ink to themes.
 * Commit log: Make avatar child background transparent.
 * Code: disable code wrap with body.nowrap class.
-
-#### Version 1.14.32 (12/13/2015)
-
-* Issues: Fix text color in travis status.
-* Global: Darken scrollbars & add hover style. Thanks [@mmizutani](https://github.com/mmizutani)!
