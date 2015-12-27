@@ -38,6 +38,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.36 (12/27/2015)
+
+* Global: Make scrollbar thumb slightly transparent - allows search result lines to be seen (Chrome).
+* Notifications: Fix indicator style.
+* Script: Add checkbox focus outline color.
+* Themes:
+  * Add API highlighting to Twilight.
+  * Modified all Jupyter themes to include GitHub API pages.
+
 #### Version 1.14.35 (12/21/2015)
 
 * Script:
@@ -61,11 +70,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Octotree: Update style.
 * Diff: Update colored diff blocks.
 * Repo: Make recently pushed box blue.
-
-#### Version 1.14.33 (12/17/2015)
-
-* Diff: Fix edit button.
-* Discussions: Fix commit hash hover.
-* Readme: Add missing vibrant ink to themes.
-* Commit log: Make avatar child background transparent.
-* Code: disable code wrap with body.nowrap class.
