@@ -38,6 +38,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.37 (12/31/2015)
+
+* ZenHub: Fix pipeline icon colors.
+
 #### Version 1.14.36 (12/27/2015)
 
 * Global: Make scrollbar thumb slightly transparent - allows search result lines to be seen (Chrome).
@@ -64,9 +68,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add border to TOC and related tweaks.
   * More TOC tweaks.
 * Global: Darken webkit scrollbar corners. See [pull #273](https://github.com/StylishThemes/GitHub-Dark/pull/273); thanks [mmizutani](https://github.com/mmizutani)!
-
-#### Version 1.14.34 (12/20/2015)
-
-* Octotree: Update style.
-* Diff: Update colored diff blocks.
-* Repo: Make recently pushed box blue.
