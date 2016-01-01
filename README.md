@@ -38,6 +38,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.39 (1/1/2016)
+
+* Repo: Fix border of recently pushed branches, fixes [issue #280](https://github.com/StylishThemes/GitHub-Dark/issues/280).
+
 #### Version 1.14.38 (1/1/2016)
 
 * ZenHub:
