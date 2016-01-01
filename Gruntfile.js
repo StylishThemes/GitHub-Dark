@@ -13,6 +13,7 @@ module.exports = function (grunt) {
             'font'     : 'Menlo',
             'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
             'tiled'    : true,
+            'codeWrap' : true,
             'attach'   : 'scroll',
             'tab'      : 4,
             'webkit'   : false
@@ -36,6 +37,20 @@ module.exports = function (grunt) {
         'background-repeat: repeat !important; background-size: auto !important; background-position: left top !important;' :
         'background-repeat: no-repeat !important; background-size: cover !important; background-position: center top !important;';
     config.bgAttachment = config.attach.toLowerCase() === 'scroll' ? 'scroll' : 'fixed';
+
+    config.codeWrapCss = config.codeWrap ?  [
+      '/* GitHub Bug: Enable wrapping of long code lines */',
+      '  body:not(.nowrap) .blob-code-inner,',
+      '  body:not(.nowrap) .markdown-body pre > code,',
+      '  body:not(.nowrap) .markdown-body .highlight > pre {',
+      '    white-space: pre-wrap !important;',
+      '    word-break: break-all !important;',
+      '    display: block !important;',
+      '  }',
+      '  body:not(.nowrap) td.blob-code-inner {',
+      '    display: table-cell !important;',
+      '  }'
+      ].join('\n') : '';
 
     // Don't include closing bracket for a chrome build
     config.newTheme = config.themeFile ? '<%= grunt.file.read("' + config.themeFile + '") %>' : '';
@@ -64,12 +79,19 @@ module.exports = function (grunt) {
         pattern: '/*[[font-choice]]*/',
         replacement: config.font
     },{
+        pattern: '/*[[code-wrap]]*/',
+        replacement: config.codeWrapCss
+    },{
         pattern: /\/\*\[\[tab-size\]\]\*\/ \d+/g,
         replacement: config.tab
     },{
         // remove default syntax themes AND closing bracket
         pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,
         replacement: ''
+    },{
+      // remove blocks of code
+      pattern: /\s+\/\* grunt-remove-block-below (.*(\n|\r))+\s+\/\* grunt-remove-block-above \*\//gm,
+      replacement: ''
     },{
         pattern: '/*[[syntax-theme]]*/',
         // add selected theme
@@ -92,6 +114,10 @@ module.exports = function (grunt) {
     },{
         pattern: /\/\*\[\[tab-size\]\]\*\/ \d+/g,
         replacement: '/*[[tab-size]]*/'
+    },{
+        // remove blocks of code
+        pattern: /\s+\/\* grunt-remove-block-below (.*(\n|\r))+\s+\/\* grunt-remove-block-above \*\//gm,
+        replacement: ''
     },{
         // remove default syntax theme AND closing bracket
         pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,

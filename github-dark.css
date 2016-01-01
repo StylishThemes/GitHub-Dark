@@ -468,17 +468,6 @@
     display: inline-block !important;
     max-width: 100% !important;
   }
-  /* GitHub Bug: Enable wrapping of long code lines */
-  body:not(.nowrap) .blob-code-inner,
-  body:not(.nowrap) .markdown-body pre > code,
-  body:not(.nowrap) .markdown-body .highlight > pre {
-    white-space: pre-wrap !important;
-    word-break: break-all !important;
-    display: block !important;
-  }
-  body:not(.nowrap) td.blob-code-inner {
-    display: table-cell !important;
-  }
   /* invisible border */
   .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover,
   .timeline-comment-wrapper, .avatar-stack .avatar,
@@ -2332,6 +2321,20 @@
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
+  /*[[code-wrap]]*/
+  /* grunt-remove-block-below */
+  /* GitHub Bug: Enable wrapping of long code lines */
+  body:not(.nowrap) .blob-code-inner,
+  body:not(.nowrap) .markdown-body pre > code,
+  body:not(.nowrap) .markdown-body .highlight > pre {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+    display: block !important;
+  }
+  body:not(.nowrap) td.blob-code-inner {
+    display: table-cell !important;
+  }
+  /* grunt-remove-block-above */
   /* OS X font rendering tweak, only active on sub-retina pixel ratios, might affect
    * Chrome on other OSs too, see https://github.com/StylishThemes/GitHub-Dark/issues/86
    */
