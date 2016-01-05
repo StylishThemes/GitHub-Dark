@@ -1,6 +1,6 @@
 # GitHub Dark [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg)](https://github.com/StylishThemes/GitHub-Dark/tags) [![stars](http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark) [![forks](http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark/fork) [![devdeps](https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg)](https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies)
 
-- Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css).
+- Install from [userstyles.org](http://userstyles.org/styles/37035) (with customization options) or [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css). Or, try out our [GitHub-Dark (user)Script](https://github.com/StylishThemes/GitHub-Dark-Script) which allows dynamic style updates :bangbang:
 - Stylish is available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
 - Includes styling for [Octotree](https://github.com/buunguyen/octotree/#octotree) &amp; [ZenHub](https://www.zenhub.io/).
 - Use the [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
@@ -38,6 +38,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.40 (1/4/2016)
+
+* Wiki: Darken "Edit Mode" dropdown.
+* Global: Add missing disabled button styling.
+* Twilight theme: Fix overly bright `<pre>` contents.
+* Readme: Add link to [GitHub-Dark-Script](https://github.com/StylishThemes/GitHub-Dark-Script).
+
 #### Version 1.14.39 (1/1/2016)
 
 * Repo: Fix border of recently pushed branches, fixes [issue #280](https://github.com/StylishThemes/GitHub-Dark/issues/280).
@@ -53,34 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Make vertical scrollbar width consistent with horizontal height.
 * Pull Requests: Make contributing notice box blue.
 * Grunt: Add code-wrap option. See [issue #277](https://github.com/StylishThemes/GitHub-Dark/issues/277).
-
-#### Version 1.14.37 (12/31/2015)
-
-* ZenHub: Fix pipeline icon colors.
-
-#### Version 1.14.36 (12/27/2015)
-
-* Global: Make scrollbar thumb slightly transparent - allows search result lines to be seen (Chrome).
-* Notifications: Fix indicator style.
-* Script: Add checkbox focus outline color.
-* Themes:
-  * Add API highlighting to Twilight.
-  * Modified all Jupyter themes to include GitHub API pages.
-
-#### Version 1.14.35 (12/21/2015)
-
-* Script:
-  * Add focus style for options panel.
-  * Update for recent id change.
-* Login page: various fixes.
-* Readme: Update badges.
-* Code:
-  * Fix black borders on expanded diff lines.
-  * Restore original font stack.
-* Repo: Update summary hover color.
-* MediaWiki: Apply background-color to the TOC. See [pull #276](https://github.com/StylishThemes/GitHub-Dark/pull/276); thanks [SEAPUNK](https://github.com/SEAPUNK)!
-* Markdown:
-  * Fix wrapping of code block in lists.
-  * Add border to TOC and related tweaks.
-  * More TOC tweaks.
-* Global: Darken webkit scrollbar corners. See [pull #273](https://github.com/StylishThemes/GitHub-Dark/pull/273); thanks [mmizutani](https://github.com/mmizutani)!
