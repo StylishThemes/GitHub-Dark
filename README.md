@@ -39,6 +39,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.41 (1/13/2016)
+
+* Readme: move script to new line.
+* Discussions: Update timeline line hack.
+* Issues: Fix meta octicons.
+* Global: Fix octicon buttons.
+
 #### Version 1.14.40 (1/4/2016)
 
 * Wiki: Darken "Edit Mode" dropdown.
@@ -49,15 +56,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.14.39 (1/1/2016)
 
 * Repo: Fix border of recently pushed branches, fixes [issue #280](https://github.com/StylishThemes/GitHub-Dark/issues/280).
-
-#### Version 1.14.38 (1/1/2016)
-
-* ZenHub:
-  * More style tweaks.
-  * Fix selector.
-  * Style sign-in box. Fixes [issue #279](https://github.com/StylishThemes/GitHub-Dark/issues/279).
-* Global:
-  * Constrict horizontal scrollbar height. See [pull #278](https://github.com/StylishThemes/GitHub-Dark/pull/278); thanks [keith](https://github.com/keith)!
-  * Make vertical scrollbar width consistent with horizontal height.
-* Pull Requests: Make contributing notice box blue.
-* Grunt: Add code-wrap option. See [issue #277](https://github.com/StylishThemes/GitHub-Dark/issues/277).
