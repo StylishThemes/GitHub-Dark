@@ -180,7 +180,8 @@ module.exports = function (grunt) {
         exec: {
             // --maxSelectorLength 80 (default)
             // --maxAtRuleLength 250 is used to keep the @-moz-document rule all on one line
-            perfectionist: 'perfectionist <%= config.sourceFile %> <%= config.sourceFile %> --indentSize 2 --maxAtRuleLength 250'
+            perfectionist: 'node_modules/.bin/perfectionist <%= config.sourceFile %> --indentSize 2 --maxAtRuleLength 250',
+            stylelint: 'node_modules/.bin/stylelint <%= config.sourceFile %> themes/src/*.css',
         },
         cssmin: {
             minify: {
@@ -235,7 +236,12 @@ module.exports = function (grunt) {
 
     // use perfectionist to clean up selectors
     grunt.registerTask('clean', 'Cleaning up CSS file', function(){
-      grunt.task.run(['exec', 'string-replace:cleanup']);
+      grunt.task.run(['exec:perfectionist', 'string-replace:cleanup']);
+    });
+
+    // lint css
+    grunt.registerTask('lint', 'Lint CSS for style errors', function(){
+      grunt.task.run(['exec:stylelint']);
     });
 
     // build custom minified GitHub-Dark style
