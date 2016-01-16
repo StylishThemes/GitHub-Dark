@@ -155,12 +155,11 @@ module.exports = function(grunt) {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {replacements: [{pattern: /\;\:\/\*\[\[/gm, replacement: ';/*[['}]}
       },
-      min: {
+      afterCleanCss: {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {replacements: [{pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g, replacement: ''}]}
       },
-      // cleanup perfectionist comments
-      cleanup: {
+      afterPerfectionist: {
         files: {'<%= config.sourceFile %>' : '<%= config.sourceFile %>'},
         options: {
           replacements: [
@@ -180,8 +179,8 @@ module.exports = function(grunt) {
     exec: {
       // --maxSelectorLength 80 (default)
       // --maxAtRuleLength 250 is used to keep the @-moz-document rule all on one line
-      perfectionist: 'node_modules/.bin/perfectionist <%= config.sourceFile %> --indentSize 2 --maxAtRuleLength 250',
-      stylelint: 'node_modules/.bin/stylelint <%= config.sourceFile %> themes/src/*.css',
+      perfectionist: 'node_modules/.bin/perfectionist github-dark.css --indentSize 2 --maxAtRuleLength 250',
+      stylelint: 'node_modules/.bin/stylelint github-dark.css themes/src/*.css',
     },
     cssmin: {
       minify: {
@@ -258,7 +257,7 @@ module.exports = function(grunt) {
       'string-replace:inline',
       'string-replace:mark',
       'cssmin:minify',
-      'string-replace:min',
+      'string-replace:afterCleanCss',
       'string-replace:unmark',
       'string-replace:fix',
       'wrap'
@@ -268,14 +267,14 @@ module.exports = function(grunt) {
   // build custom minified GitHub-Dark style
   grunt.registerTask('themes', 'Rebuild minified theme files', function() {
     grunt.task.run([
-      'clean',
+      'format',
       'cssmin:themes'
     ]);
   });
 
   // auto-format github-dark.css
   grunt.registerTask('format', 'Format CSS', function() {
-    grunt.task.run(['exec:perfectionist', 'string-replace:cleanup']);
+    grunt.task.run(['exec:perfectionist', 'string-replace:afterPerfectionist']);
   });
 
   // lint github-dark.css and themes for errors
