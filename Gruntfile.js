@@ -166,7 +166,8 @@ module.exports = function (grunt) {
                     replacements: [
                         { pattern: /\{\/\*\!/g, replacement: '{\n /*!' },
                         { pattern: /\/\* /g, replacement: '\n  /* ' },
-                        { pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n' }
+                        { pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n' },
+                        { pattern: /  }\/\*/gm, replacement: '  }\n  /*' },
                     ]
                 }
             }
