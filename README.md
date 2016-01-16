@@ -39,6 +39,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.42 (1/16/2016)
+
+* Global: Add table-list background.
+* Options: Fix authorized application color.
+* Markdown: darker quoted text.
+* Twilight: Darker base code color.
+* Issues: Fix milestone name hover.
+
 #### Version 1.14.41 (1/13/2016)
 
 * Readme: move script to new line.
@@ -52,7 +60,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Global: Add missing disabled button styling.
 * Twilight theme: Fix overly bright `<pre>` contents.
 * Readme: Add link to [GitHub-Dark-Script](https://github.com/StylishThemes/GitHub-Dark-Script).
-
-#### Version 1.14.39 (1/1/2016)
-
-* Repo: Fix border of recently pushed branches, fixes [issue #280](https://github.com/StylishThemes/GitHub-Dark/issues/280).
