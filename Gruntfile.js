@@ -179,8 +179,8 @@ module.exports = function(grunt) {
     exec: {
       // --maxSelectorLength 80 (default)
       // --maxAtRuleLength 250 is used to keep the @-moz-document rule all on one line
-      perfectionist: 'node_modules/.bin/perfectionist github-dark.css --indentSize 2 --maxAtRuleLength 250',
-      stylelint: 'node_modules/.bin/stylelint github-dark.css themes/src/*.css',
+      perfectionist: 'npm run perfectionist -- github-dark.css --indentSize 2 --maxAtRuleLength 250',
+      stylelint: 'npm run stylelint -- github-dark.css themes/src/*.css',
     },
     cssmin: {
       minify: {
