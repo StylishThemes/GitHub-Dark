@@ -39,6 +39,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.43 (1/20/2016)
+
+* Gist: Various fixes on 'Forks' tab.
+* News feed: Fix code blocks.
+* Grunt:
+  * Update dependencies.
+  * Add stylelint.
+  * Gruntfile tweaks.
+* Repo:
+  * Add missing hover effect on tabs.
+  * Tweak tab octicon color.
+* ZenHub: Darken issue popup header.
+
 #### Version 1.14.42 (1/16/2016)
 
 * Global: Add table-list background.
@@ -53,10 +66,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Discussions: Update timeline line hack.
 * Issues: Fix meta octicons.
 * Global: Fix octicon buttons.
-
-#### Version 1.14.40 (1/4/2016)
-
-* Wiki: Darken "Edit Mode" dropdown.
-* Global: Add missing disabled button styling.
-* Twilight theme: Fix overly bright `<pre>` contents.
-* Readme: Add link to [GitHub-Dark-Script](https://github.com/StylishThemes/GitHub-Dark-Script).
