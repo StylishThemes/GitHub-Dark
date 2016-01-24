@@ -39,6 +39,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.44 (1/24/2016)
+
+* Grunt: Fix scripts.
+* Markdown: Fix quoted bold text color.
+* ZenHub: Board tweaks.
+* Pull requests: Fixes for the command line help.
+* Discussions: Fix reference colors.
+
 #### Version 1.14.43 (1/20/2016)
 
 * Gist: Various fixes on 'Forks' tab.
@@ -59,10 +67,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Markdown: darker quoted text.
 * Twilight: Darker base code color.
 * Issues: Fix milestone name hover.
-
-#### Version 1.14.41 (1/13/2016)
-
-* Readme: move script to new line.
-* Discussions: Update timeline line hack.
-* Issues: Fix meta octicons.
-* Global: Fix octicon buttons.
