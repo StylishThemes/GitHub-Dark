@@ -40,6 +40,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.45 (1/25/2016)
+
+* Grunt:
+  * Update dependencies.
+  * Disable code wrap by default.
+* Readme: Add note about GitHub Commit Limit style.
+* Code: Remove code wrap style.
+
 #### Version 1.14.44 (1/24/2016)
 
 * Grunt: Fix scripts.
@@ -60,11 +68,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add missing hover effect on tabs.
   * Tweak tab octicon color.
 * ZenHub: Darken issue popup header.
-
-#### Version 1.14.42 (1/16/2016)
-
-* Global: Add table-list background.
-* Options: Fix authorized application color.
-* Markdown: darker quoted text.
-* Twilight: Darker base code color.
-* Issues: Fix milestone name hover.
