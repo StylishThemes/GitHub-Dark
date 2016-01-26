@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       'font'     : 'Menlo',
       'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
       'tiled'    : true,
-      'codeWrap' : true,
+      'codeWrap' : false,
       'attach'   : 'scroll',
       'tab'      : 4,
       'webkit'   : false
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
   config.bgAttachment = config.attach.toLowerCase() === 'scroll' ? 'scroll' : 'fixed';
 
   config.codeWrapCss = config.codeWrap ?  [
-    '/* GitHub Bug: Enable wrapping of long code lines */',
+    '/* GitHub: Enable wrapping of long code lines */',
     '  body:not(.nowrap) .blob-code-inner,',
     '  body:not(.nowrap) .markdown-body pre > code,',
     '  body:not(.nowrap) .markdown-body .highlight > pre {',
@@ -89,10 +89,6 @@ module.exports = function(grunt) {
     pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,
     replacement: ''
   }, {
-    // remove blocks of code
-    pattern: /\s+\/\* grunt-remove-block-below (.*(\n|\r))+\s+\/\* grunt-remove-block-above \*\//gm,
-    replacement: ''
-  }, {
     // add selected theme
     pattern: '/*[[syntax-theme]]*/',
     replacement: config.newTheme
@@ -114,10 +110,6 @@ module.exports = function(grunt) {
   }, {
     pattern: /\/\*\[\[tab-size\]\]\*\/ \d+/g,
     replacement: '/*[[tab-size]]*/'
-  }, {
-    // remove blocks of code
-    pattern: /\s+\/\* grunt-remove-block-below (.*(\n|\r))+\s+\/\* grunt-remove-block-above \*\//gm,
-    replacement: ''
   }, {
     // remove default syntax theme AND closing bracket
     pattern: /\s+\/\* grunt build - remove to end of file(.*(\n|\r))+\}$/m,
