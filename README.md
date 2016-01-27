@@ -40,6 +40,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.46 (1/27/2016)
+
+* Code: Make line highlight work better with themes.
+* Global:
+  * Tweak emoji centering.
+  * Remove all unnecessary icon font selectors.
+  * Numerous fixes for icons and text colors.
+* Notifications: Fix broadcast icon.
+* Discussions:
+  * Fixes for the new edit box buttons.
+  * Slightly darker markdown hint.
+* Options: Add missing selector for headers.
+* Frontpage:
+  * Fix broadcast icon.
+  * Match news box color to primary color.
+
 #### Version 1.14.45 (1/25/2016)
 
 * Grunt:
@@ -55,16 +71,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZenHub: Board tweaks.
 * Pull requests: Fixes for the command line help.
 * Discussions: Fix reference colors.
-
-#### Version 1.14.43 (1/20/2016)
-
-* Gist: Various fixes on 'Forks' tab.
-* News feed: Fix code blocks.
-* Grunt:
-  * Update dependencies.
-  * Add stylelint.
-  * Gruntfile tweaks.
-* Repo:
-  * Add missing hover effect on tabs.
-  * Tweak tab octicon color.
-* ZenHub: Darken issue popup header.
