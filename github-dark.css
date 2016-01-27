@@ -22,7 +22,7 @@
   /* Base link/panel colors - text */
   a:not([href*="/labels/"]), a strong, .profilecols ul.stats li a:hover strong,
   .plans-row .plan, .filters li.selected, .vcard-stat, .zeroclipboard-button,
-  .creator a, button#logout:hover, #user-links > li > a:hover,
+  .creator a, button#logout:hover,
   #user-links .sign-out-button:hover, .numbers-summary a:hover,
   .numbers-summary a:hover span, .tag-info a:hover, .tag-info a:hover span,
   #forkqueue .instructions, .addon h4, .header-nav-link:hover,
@@ -30,7 +30,7 @@
   .header-logo-wordmark:hover span, #userbox a:hover .mini-icon,
   .gist-item ul.meta>li>a:hover, #userbox a:hover, .sidebar-module h3 a:hover,
   #userbox a:hover .mini-icon, a.browse-button:hover, a.browse-button:hover span,
-  .team-mention, .header .header-logo-invertocat:hover span,
+  .team-mention, .header-logo-invertocat:hover,
   .comment-header-actions li:hover,
   .octofication-more strong, .org-repo-stats a:hover, .muted-link:hover,
   a.muted-link:hover,
@@ -86,7 +86,8 @@
   .octotree_github_sidebar a.octotree_opts.selected,
   .octotree_github_sidebar .octotree_views .octotree_treeview .jstree-anchor,
   .milestone-name:hover, .toolbar-item .menu-target:hover, .toolbar-item:hover,
-  .toolbar-commenting .dropdown-item:hover {
+  .toolbar-commenting .dropdown-item:hover,
+  .member-meta .member-meta-link:hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -118,7 +119,8 @@
   :checked + .radio-label, .gist-snippet .file-box:hover .file {
     border-color: /*[[base-color]]*/ #4183C4 !important;
   }
-  .header-nav-link:hover .dropdown-caret, .header-nav-link:focus .dropdown-caret {
+  .header-nav-link:hover .dropdown-caret, .header-nav-link:focus .dropdown-caret,
+  #com #header .top-nav .dropdown-button:hover .dropdown-caret {
     border-top-color: /*[[base-color]]*/ #4183C4 !important;
   }
   .table-list .table-list-item.unread .table-list-cell-checkbox {
@@ -426,11 +428,12 @@
     background: transparent !important;
     border: 1px solid /*[[base-color]]*/ #4183C4 !important;
   }
-  /* dropdown arrows are css triangles, so we can't just apply color to all
-     four borders */
   .dropdown-arrow {
     border-top-color: #eee !important;
     transition: none !important;
+  }
+  #com #header .top-nav .dropdown-caret {
+    border-top-color: #ccc !important;
   }
   .js-menu-target:hover .dropdown-arrow {
     border-top-color: /*[[base-color]]*/ #4183C4 !important;
@@ -843,11 +846,14 @@
   }
   .list-browser-item.closed, .content .verseblock-content,
   .content .verseblock-content, .simple-stacked-bar, .rss-subscribe:hover,
-  div#common-issues ul li a:hover, .date_selector td.selectable_day:hover,
+  .date_selector td.selectable_day:hover,
   .date_selector td.selectable_day.hover, .pagination a:hover,
   .pagination a:focus, .pagination span:hover, .pagination span:focus,
   .pagination em:hover, .pagination em:focus, .dropdown-divider {
     background: #282828 !important;
+  }
+  div#common-issues ul li a:hover {
+    background-color: #282828 !important;
   }
   /*** semi-transparent #222 ***/
   /* let some background image show */
@@ -1291,11 +1297,17 @@
   /* Bright text */
   .dropdown-item:hover, .dropdown-item.zeroclipboard-is-hover,
   .gist-snippet .link-overlay .link, .gist-snippet .link-overlay strong,
-  .select-menu-item.navigation-focus,
-  .select-menu-item.navigation-focus.selected,
+  .select-menu-item.navigation-focus .text-danger,
+  .select-menu-item.navigation-focus .description,
+  .select-menu-item.navigation-focus.selected .text-danger,
+  .select-menu-item.navigation-focus.selected .description,
+  .select-menu-item.navigation-focus.select-menu-action .text-danger,
+  .select-menu-item.navigation-focus.select-menu-action .description,
+  .select-menu-item.navigation-focus .description-inline .text-danger,
+  .select-menu-item.navigation-focus .description-inline .description,
+  .select-menu-item.navigation-focus, .select-menu-item.navigation-focus.selected,
   .select-menu-item.navigation-focus.select-menu-action,
   .select-menu-item.navigation-focus .description-inline,
-  .select-menu-item.navigation-focus h4, .dangerzone > h3,
   .gist-snippet-meta .gist-count-links > li > a:hover,
   .team-member-list .manage-team-member .navigation-focus .btn-link {
     color: #fff !important;
@@ -1357,7 +1369,7 @@
   .table-list-item label, .audit-action-info .context, .token-scope,
   .segmented-nav li.active a, .tabs > a.selected,
   .highlight tr:hover .blob-num:not(.non-expandable),
-  .highlight tr:hover .blob-num:not(.non-expandable):before, a .mega-octicon,
+  .highlight tr:hover .blob-num:not(.non-expandable):before,
   .member-username, .invited-banner p, kbd, .kbd,
   .boxed-profile .profile-preview .vcard-fullname, .btn.btn-primary:hover,
   .minibutton.btn-primary:hover, .integrations .site-footer a,
@@ -1377,7 +1389,7 @@
   .pagination .current:hover, .repo-private-label,
   a.repo_filter.js-repo-filter-tab.filter-selected, .keyboard-mappings th,
   .rendered_html, .render-health:hover .symbol, .radio-label,
-  .select-menu-action, .select-menu-item.selected,
+  .select-menu-item.selected,
   .select-menu-item.selected > .octicon, .gist-snippet-meta .description,
   a.select-menu-item-text, .select-menu-item-text strong,
   .clone-url-button > .clone-url-link, a.user-mention, .user-mention,
@@ -1395,7 +1407,7 @@
   .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4,
   .fieldgroup p.explain.planusage, ol.repository-lang-stats-numbers li .lang,
   .explore h2, .tabnav .active a, .vcard-username, #markdown-toc li a,
-  .tag-info .tag-name, .language, .featured-callout h2, .header a,
+  .tag-info .tag-name, .language, .featured-callout h2,
   .commit-title .message, .files .message, .revision .creator,
   .mini-icon.search-input, .lines-changed, .lines-changed:hover,
   .discussion-topic-author a, .boxed-group-table td, .graph .data .number,
@@ -1442,11 +1454,13 @@
   .timeline-comment-header-text code a, .commit-tease-sha, a.commit-tease-sha,
   .reponav-item.selected, .stats-group-stat.no-link:hover .stat-number,
   .octotree_github_sidebar a.octotree_opts, .octotree_help > span,
-  .application-authorizations .oauth-app-access-name, .dropdown-item {
+  .application-authorizations .oauth-app-access-name, .dropdown-item,
+  a.dropdown-item, .header-nav-link, a.header-nav-link,
+  .header-logo-invertocat, a.header-logo-invertocat {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
-  .marketing-nav a, .header .header-logo-invertocat span, .repository-meta,
+  .marketing-nav a, .repository-meta,
   .gist-item .description, p.explain, .news .alert .simple .title,
   #network .graph-date, .tabnav-widget.text, .feature .intro, span.diffstat,
   span.diffstat a, .commit .commit-branches a, #readme .plain,
@@ -1494,10 +1508,11 @@
   .timeline-commits .commit-message a, .markdown-format .intro,
   .markdown-format code, .markdown-format ol > li::before, a.tabnav-extra,
   .tabnav .tabnav-extras, .label-admin, .program-info-column p,
-  .form-checkbox .note, .file-history-tease, .blob-num:hover, .select-menu-modal,
+  .form-checkbox .note, .file-history-tease, .blob-num:hover,
   .gist-snippet-meta .gist-count-links > li > a, .commit-tease .message,
   .commit-author-section, .boxed-group-inner, .manage-repo-access-not-active,
-  .milestone-name, a.milestone-name, .news .body blockquote code {
+  .milestone-name, a.milestone-name, .news .body blockquote code,
+  .select-menu-modal, .select-menu-action, a.select-menu-action {
     color: #a0a0a0 !important;
   }
   /* content text */
@@ -1519,7 +1534,7 @@
   .list-group-item-meta .octicon, .repo-leaderboard-title .title-meta,
   a.pagehead-nav-item, a.lock-toggle-link, .wiki-wrapper .wiki-empty-box,
   .commits-list-item .commits-comments-link, .timeline-comment-header,
-  .commits-list-item .commit-meta, .table-list-header-toggle .btn-link,
+  .commits-list-item .commit-meta,
   .issues-listing .table-list-issues .issue-comments-link,
   .issues-listing .table-list-issues .issue-meta-section a, a.issues-reset-query,
   .labels-list-action, table.tag-list p a, table.tag-list td.date a, .muted-link,
@@ -1541,7 +1556,7 @@
   .stats-group-stat.no-link:hover, .wiki-edit-link, a.wiki-edit-link,
   .markdown-body blockquote strong, .news .body blockquote strong,
   .discussion-item-header, .discussion-item-header strong,
-  .toolbar-item .menu-target {
+  .toolbar-item .menu-target, .member-meta .member-meta-link {
     color: #808080 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon,
@@ -1577,13 +1592,19 @@
   .member-meta .access-link, .gist-quicksearch-no-results,
   #user-content-toc ul ul li:before, .btn-octicon, a.btn-octicon,
   button.btn-octicon, .markdown-body blockquote, .markdown-body blockquote code,
-  .user-list li em, .reponav-item .octicon, .pagehead-tabs-item .octicon {
+  .user-list li em, .reponav-item .octicon, .pagehead-tabs-item .octicon,
+  .table-list-header-toggle .btn-link, #graph_data h2,
+  #message-list .message .time {
     color: #666 !important;
   }
   .branch-infobar .lightweight-actions > li .octicon,
   .manage-repo-access-icon .octicon, .wiki-wrapper .wiki-history .date,
   .wiki-wrapper .wiki-history .commit-id, .issue-meta-section .octicon,
-  .thread-subscription-status .mega-octicon {
+  .thread-subscription-status .mega-octicon, .repohead h1 .octicon-lock,
+  .repohead h1 .octicon-repo, .repohead h1 .octicon-mirror,
+  .repohead h1 .octicon-repo-forked, .repohead h1 .octicon-gist,
+  .repohead h1 .octicon-gist-secret, .subnav-search-icon,
+  .discussion-sidebar-toggle .octicon, .auto-search-group > .octicon {
     color: #4b4b4b !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before,
@@ -1606,13 +1627,14 @@
     color: #222 !important;
   }
   .timeline-comment-header .timestamp, .vcard-stat:hover .text-muted,
-  .boxed-group > h3 a, .boxed-group .heading a, .select-menu-item,
-  a.select-menu-item, .list-heading a, .close-button, .timeline-comment-action,
+  .boxed-group > h3 a, .boxed-group .heading a, .list-heading a, .close-button,
+  .timeline-comment-action,
   a.timeline-comment-action, a.comment-type-icon,
   .timeline-comment-actions .octicon, .commit-title .commit-link tt,
   .btn-block-user, .pagehead-tabs-item.selected > .octicon,
   .reponav-item.selected > .octicon, .select-menu-action > .octicon,
-  .text-muted strong:not(.text-emphasized) {
+  .text-muted strong:not(.text-emphasized), .select-menu-item,
+  a.select-menu-item {
     color: inherit !important;
   }
   /* Alerts and activity, remove background gradient */
