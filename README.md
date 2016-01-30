@@ -40,6 +40,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.47 (1/30/2016)
+
+* Stylelint: Add some rules and fix errors.
+* Build:
+  * Drop perfectionist, rebuild themes.
+  * Reformat dotfiles.
+* Global: Exclude hard-to-read unicode codepoints. Fixes [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
+
 #### Version 1.14.46 (1/27/2016)
 
 * Code: Make line highlight work better with themes.
@@ -63,11 +71,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Disable code wrap by default.
 * Readme: Add note about GitHub Commit Limit style.
 * Code: Remove code wrap style.
-
-#### Version 1.14.44 (1/24/2016)
-
-* Grunt: Fix scripts.
-* Markdown: Fix quoted bold text color.
-* ZenHub: Board tweaks.
-* Pull requests: Fixes for the command line help.
-* Discussions: Fix reference colors.
