@@ -150,17 +150,6 @@ module.exports = function(grunt) {
       afterCleanCss: {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {replacements: [{pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g, replacement: ''}]}
-      },
-      afterPerfectionist: {
-        files: {'<%= config.sourceFile %>' : '<%= config.sourceFile %>'},
-        options: {
-          replacements: [
-            {pattern: /\{\/\*\!/g, replacement: '{\n /*!'},
-            {pattern: /\/\* /g, replacement: '\n  /* '},
-            {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n'},
-            {pattern: / {2}}\/\*/gm, replacement: '  }\n  /*'},
-          ]
-        }
       }
     },
     clean: {
@@ -169,9 +158,6 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      // --maxSelectorLength 80 (default)
-      // --maxAtRuleLength 250 is used to keep the @-moz-document rule all on one line
-      perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250',
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/src/twilight.css',
     },
     cssmin: {
@@ -259,14 +245,8 @@ module.exports = function(grunt) {
   // build custom minified GitHub-Dark style
   grunt.registerTask('themes', 'Rebuild minified theme files', function() {
     grunt.task.run([
-      'format',
       'cssmin:themes'
     ]);
-  });
-
-  // auto-format github-dark.css
-  grunt.registerTask('format', 'Format CSS', function() {
-    grunt.task.run(['exec:perfectionist', 'string-replace:afterPerfectionist']);
   });
 
   // lint github-dark.css and themes for errors
