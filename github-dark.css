@@ -1019,23 +1019,25 @@
     background: transparent !important;
   }
 
-  /* Exclude certain hard-to-read unicode codepoints on OS X */
-  /* http://www.kreativekorp.com/charset/font.php?font=Apple+Color+Emoji */
+  /* Exclude problematic non-emojis, use tools/unicode-gen.js to generate */
   @font-face {
     font-family: "Apple Color Emoji";
     src: local("Apple Color Emoji");
-    unicode-range: U+0000-00A8,U+00AF-2121,U+2123-25A9,U+25AB-25FB,U+25FD-25FD,
-                   U+25FF-265A,U+2661-2662,U+2663-26AA,U+26AC-2713,U+2715-2715,
-                   U+2717-2794,U+2798-27AF,U+27B1-2B1A,U+2B1C-302A,U+3031-1F3B5,
-                   U+1F23B7-1F3BB,U+1F3BD-1F4B0,U+1F4B3-1F502,U+1F504-1F518,
-                   U+1F51E-10FFFF;
+    unicode-range: U+00000-000A8,U+000AA-000AD,U+000AF-02121,U+02123-025A9,
+                   U+025AB-025FB,U+025FD-025FD,U+025FF-0265F,U+02661-02662,
+                   U+02664-02713,U+02715-02715,U+02717-0302F,U+03031-10FFFF;
   }
-  /* http://www.istartedsomething.com/uploads/emojisegoe.html */
-  @font-face {
-    font-family: "Segeo UI Emoji";
-    src: local("Segeo UI Emoji");
-    unicode-range: U+0000-1F3B5,U+1F23B7-1F3BB,U+1F3BD-1F4B0,U+1F4B3-1F502,
-                   U+1F504-1F518,U+1F51E-10FFFF;
+  /* Exclude problematic emojis, use tools/unicode-gen.js to generate */
+  g-emoji[fallback-src$="2795.png"], g-emoji[fallback-src$="2796.png"],
+  g-emoji[fallback-src$="2797.png"], g-emoji[fallback-src$="27b0.png"],
+  g-emoji[fallback-src$="2b1b.png"], g-emoji[fallback-src$="1f3b6.png"],
+  g-emoji[fallback-src$="1f3bc.png"], g-emoji[fallback-src$="1f4b1.png"],
+  g-emoji[fallback-src$="1f4b2.png"], g-emoji[fallback-src$="1f503.png"],
+  g-emoji[fallback-src$="1f519.png"], g-emoji[fallback-src$="1f51a.png"],
+  g-emoji[fallback-src$="1f51b.png"], g-emoji[fallback-src$="1f51c.png"],
+  g-emoji[fallback-src$="1f51d.png"] {
+    -webkit-filter: invert(100%) !important;
+            filter: invert(100%) !important;
   }
 
   /* GeoJSON maps */
