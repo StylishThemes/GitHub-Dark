@@ -39,6 +39,9 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+#### Version 1.14.49 (1/31/2016)
+
+* Global: Fix OS X emoji invert; see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
 
 #### Version 1.14.48 (1/31/2016)
 
