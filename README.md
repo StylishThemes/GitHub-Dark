@@ -40,6 +40,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.48 (1/31/2016)
+
+* Global (see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283)):
+  * Exclude more hard-to-read unicode codepoints.
+  * Handle two more dark emoji.
+  * Fix all remaining unicode issues, add generator script.
+  * Slightly darken inverted unicode.
+  * Yet more unicode fixes, handle image fallback.
+  * Fix style, add comment.
+  * Apply invert only to unicode fallback images.
+
 #### Version 1.14.47 (1/30/2016)
 
 * Stylelint: Add some rules and fix errors.
@@ -63,11 +74,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Frontpage:
   * Fix broadcast icon.
   * Match news box color to primary color.
-
-#### Version 1.14.45 (1/25/2016)
-
-* Grunt:
-  * Update dependencies.
-  * Disable code wrap by default.
-* Readme: Add note about GitHub Commit Limit style.
-* Code: Remove code wrap style.
