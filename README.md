@@ -39,6 +39,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.14.50 (2/4/2016)
+
+* Global: Change default background.
+* ZenHub: Invert updated ZenHub icons.
+* Issues: Add collapsed timeline style. Fixes [issue #284](https://github.com/StylishThemes/GitHub-Dark/issues/284).
+* Discussions:
+  * Fix 'View More' button on collapsed sections.
+  * Fix commit refs in linked commits.
+* Organizations:
+  * Fix hover in member list.
+  * Add repo issues bug icon style (icon added by [Github-show-repo-issues](https://github.com/Mottie/Github-show-repo-issues).
+* Gist: Fix logo color.
+* Script: Add GHD Script class for styling (icon active matching base color).
+
 #### Version 1.14.49 (1/31/2016)
 
 * Global: Fix OS X emoji invert; see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
@@ -53,27 +68,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Yet more unicode fixes, handle image fallback.
   * Fix style, add comment.
   * Apply invert only to unicode fallback images.
-
-#### Version 1.14.47 (1/30/2016)
-
-* Stylelint: Add some rules and fix errors.
-* Build:
-  * Drop perfectionist, rebuild themes.
-  * Reformat dotfiles.
-* Global: Exclude hard-to-read unicode codepoints. Fixes [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
-
-#### Version 1.14.46 (1/27/2016)
-
-* Code: Make line highlight work better with themes.
-* Global:
-  * Tweak emoji centering.
-  * Remove all unnecessary icon font selectors.
-  * Numerous fixes for icons and text colors.
-* Notifications: Fix broadcast icon.
-* Discussions:
-  * Fixes for the new edit box buttons.
-  * Slightly darker markdown hint.
-* Options: Add missing selector for headers.
-* Frontpage:
-  * Fix broadcast icon.
-  * Match news box color to primary color.
