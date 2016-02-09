@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 
 const chars = "©®™▪◼◾♠♣✔✖〰";
@@ -31,6 +32,6 @@ function cssString(ranges) {
 
 console.log(cssString(getExcludeRanges(chars)) + "\n");
 console.log(Array.from(emojis).map(char => {
-  var hex = char.codePointAt(0).toString(16);
+  const hex = char.codePointAt(0).toString(16);
   return 'g-emoji[fallback-src$="' + hex  + '.png"]';
 }).join(", "));
