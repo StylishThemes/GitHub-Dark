@@ -34,11 +34,25 @@ If you would like to contribute to this repository, please...
 2. Make changes (please read the [contribution guidelines](https://github.com/StylishThemes/GitHub-Dark/blob/master/CONTRIBUTING.md) and abide by them)
 3. Create a pull request!
 
-Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors) so far!
+Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/blob/master/AUTHORS) so far!
 
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.14.51 (2/10/2016)
+
+* Global: Fix disabled outline buttons hover.
+* User Page: Better contrast on the calendar. Fixes [issue #286](https://github.com/StylishThemes/GitHub-Dark/issues/286).
+* Readme: update screenshot.
+* Pull requests: Style CI callout.
+* Integrations: General fixes.
+* Options: Fixes for the application tab.
+* Issues: Fix emoji &amp; @person suggestion highlight.
+* Tools:
+  * Removed contributors from package.json.
+  * Build `AUTHORS` file using shell script.
+  * Bump dependencies.
 
 #### Version 1.14.50 (2/4/2016)
 
@@ -57,14 +71,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.14.49 (1/31/2016)
 
 * Global: Fix OS X emoji invert; see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
-
-#### Version 1.14.48 (1/31/2016)
-
-* Global (see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283)):
-  * Exclude more hard-to-read unicode codepoints.
-  * Handle two more dark emoji.
-  * Fix all remaining unicode issues, add generator script.
-  * Slightly darken inverted unicode.
-  * Yet more unicode fixes, handle image fallback.
-  * Fix style, add comment.
-  * Apply invert only to unicode fallback images.
