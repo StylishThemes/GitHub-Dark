@@ -89,7 +89,8 @@
   .toolbar-commenting .dropdown-item:hover,
   .member-meta .member-meta-link:hover, .octofication .broadcast-icon,
   .member-meta .btn-link:hover, .ghd-icon-active,
-  .oauth-application-info .meta-link:hover {
+  .oauth-application-info .meta-link:hover,
+  .octotree_github_sidebar a.octotree_toggle:not(.octotree_loading):hover {
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* Base color panel */
@@ -1981,6 +1982,18 @@
   }
   img[src="/images/spinner.gif"] {
     padding: 32px !important;
+  }
+  /* octotree icons */
+  a.octotree_toggle:not(.octotree_loading) > span::after,
+  .octotree_github_sidebar a.octotree_opts, .octotree_help > span {
+    -webkit-filter: invert(100%) !important;
+            filter: invert(100%) !important;
+  }
+  a.octotree_toggle:not(.octotree_loading):hover > span::after,
+  .octotree_github_sidebar a.octotree_opts:hover,
+  .octotree_treeview .jstree-icon.tree {
+    -webkit-filter: grayscale(100%) !important;
+            filter: grayscale(100%) !important;
   }
   /* front page: 'more' spinner */
   .ajax-pagination-form.loading .ajax-pagination-btn {
