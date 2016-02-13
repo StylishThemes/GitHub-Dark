@@ -40,6 +40,19 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.52 (2/13/2016)
+
+* ZenHub:
+  * Use base color on hover of pipeline options.
+  * Shift expanded boards toolbar if Octotree exists.
+* Octotree:
+  * Fix icon colors. Sorry we can't perfectly color background svg :(
+  * Remove double colon - lint was unhappy.
+* Fileview: Trash icon hover back to red.
+* Gist: Fix file icons.
+* Issues: Fix sidebar going off-screen in Firefox.
+* Blog: Use at-rule to scope position: sticky.
+
 #### Version 1.14.51 (2/10/2016)
 
 * Global: Fix disabled outline buttons hover.
@@ -67,7 +80,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add repo issues bug icon style (icon added by [Github-show-repo-issues](https://github.com/Mottie/Github-show-repo-issues).
 * Gist: Fix logo color.
 * Script: Add GHD Script class for styling (icon active matching base color).
-
-#### Version 1.14.49 (1/31/2016)
-
-* Global: Fix OS X emoji invert; see [issue #283](https://github.com/StylishThemes/GitHub-Dark/issues/283).
