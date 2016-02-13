@@ -226,9 +226,11 @@
          tab-size: /*[[tab-size]]*/ 2 !important;
     -moz-tab-size: /*[[tab-size]]*/ 2 !important;
   }
-  .blog-aside {
-    position: sticky !important;
-    top: 8px !important;
+  @supports (position: sticky) {
+    .blog-aside {
+      position: sticky !important;
+      top: 8px !important;
+    }
   }
   .sunken-menu-item.is-loading .octicon {
     opacity: 0 !important;
