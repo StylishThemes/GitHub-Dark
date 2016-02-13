@@ -477,6 +477,20 @@
     display: inline-block !important;
     max-width: 100% !important;
   }
+  /* GitHub Bug: Disable broken position:sticky emulation for Firefox */
+  @supports (position: sticky) {
+    .discussion-sidebar {
+      position: sticky !important;
+      top: 0 !important;
+    }
+    .discussion-sidebar-sticky {
+      position: static !important;
+      width: auto !important;
+    }
+    .discussion-sidebar .is-placeholder {
+      display: none !important;
+    }
+  }
   /* invisible border */
   .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover,
   .timeline-comment-wrapper, .avatar-stack .avatar,
