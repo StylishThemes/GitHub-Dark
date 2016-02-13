@@ -159,6 +159,7 @@ module.exports = function(grunt) {
     },
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/src/twilight.css',
+      authors: 'bash tools/authors.sh'
     },
     cssmin: {
       minify: {
@@ -252,6 +253,11 @@ module.exports = function(grunt) {
   // lint github-dark.css and themes for errors
   grunt.registerTask('lint', 'Lint CSS for style errors', function() {
     grunt.task.run(['exec:stylelint']);
+  });
+
+  // regenerate AUTHORS based on commits
+  grunt.registerTask('authors', 'Regenerate AUTHORS', function() {
+    grunt.task.run(['exec:authors']);
   });
 
   // watch thingy
