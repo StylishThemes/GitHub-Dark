@@ -2425,9 +2425,15 @@
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
+  /* move expanded zenhub board toolbar when octotree exists
+   see https://github.com/buunguyen/octotree/issues/242 */
+  html.octotree:not(.octotree-show) .zh-board-menu .tabnav-left {
+    margin-left: 20px;
+  }
   /*[[code-wrap]]*/
-  /* OS X font rendering tweak, only active on sub-retina pixel ratios, might affect
-   * Chrome on other OSs too, see https://github.com/StylishThemes/GitHub-Dark/issues/86
+  /* OS X font rendering tweak, only active on sub-retina
+   * pixel ratios, might affect Chrome on other OSs too, see
+   * https://github.com/StylishThemes/GitHub-Dark/issues/86
    */
   @media screen and (max-resolution: 1.99dppx) {
     html {
