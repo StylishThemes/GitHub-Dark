@@ -447,24 +447,14 @@
   .js-menu-target:hover .dropdown-arrow {
     border-top-color: /*[[base-color]]*/ #4183C4 !important;
   }
-  /* GitHub Bug: The focused + in the header has an ugly underline from a:active */
-  .js-menu-target:focus, .js-menu-target:active {
-    text-decoration: none !important;
-  }
-  /* GitHub Bug: Properly center the pull request tabs header counters vertically.
-     Also match the border-radius to match other similar counters on the site  */
+  /* GitHub Bug: Center tab counters vertically on the line  */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
   .reponav-item .counter {
     vertical-align: middle !important;
     border-radius: 2px !important;
   }
   /* GitHub Bug: Center emoji vertically on the line */
-  .emoji {
-    position: relative !important;
-    top: -1px !important;
-  }
-  /* GitHub Bug: Center counters vertically on the line */
-  .boxed-group .counter, .reponav-item .counter {
+  .emoji, .boxed-group .counter, .reponav-item .counter {
     position: relative !important;
     top: -1px !important;
   }
@@ -473,13 +463,13 @@
   .swipe .swipe-frame .swipe-bar .bottom-handle {
     left: -6px !important;
   }
-  /* GitHub Bug: Fix annoying text selection bug in Firefox */
+  /* GitHub Bug: Fix text selection not working on inline <code> bug in Firefox */
   .markdown-body code, .markdown-body tt {
     padding: 0 .3em !important;
     display: inline-block !important;
     max-width: 100% !important;
   }
-  /* GitHub Bug: Disable broken position:sticky emulation for Firefox */
+  /* GitHub Bug: Fix broken position:sticky emulation in Firefox */
   @supports (position: sticky) {
     .discussion-sidebar {
       position: sticky !important;
