@@ -159,7 +159,7 @@ module.exports = function(grunt) {
     },
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/src/twilight.css',
-      authors: 'bash tools/authors.sh'
+      authors: 'bash tools/authors'
     },
     cssmin: {
       minify: {
