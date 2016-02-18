@@ -315,7 +315,7 @@
   li.ssh-key .ssh-key-state-indicator.not-recent, #gist-form .gist-name-textbox,
   .labels .label, .octotree_views .octotree_view .octotree_view_header,
   .fullscreen-overlay textarea, .avatar-child, .discussion-item .label-color,
-  .coupons .coupon-form-body, .label-private {
+  .coupons .coupon-form-body, .label-private, .repo-file-upload-progress {
     text-shadow: none !important;
     box-shadow: none !important;
   }
@@ -708,7 +708,9 @@
   .discussion-item-merged.open .discussion-item-details, .word-upload-callout,
   .commit-tease-contributors, .ajax-pagination-form .ajax-pagination-btn,
   .access-form-wrapper, .session-authentication .create-account-callout,
-  .intgrs-lstng-item, .intgr-install-callout {
+  .intgrs-lstng-item, .intgr-install-callout, .is-failed .repo-file-upload-errors,
+  .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
+  .is-too-many .repo-file-upload-errors, .is-empty .repo-file-upload-errors {
     background: #181818 !important;
     border-color: #343434 !important;
   }
@@ -747,7 +749,7 @@
   .inline-comment-form, .file-history-tease .participation,
   .gist-quicksearch-result-header, .label-generic, .migrate-org-roles,
   .commit-tease .commit-meta, .manage-repo-access-icon,
-  .table-list:not(.team-member-list) {
+  .table-list:not(.team-member-list), .repo-file-upload-progress {
     background: #181818 !important;
   }
   .markdown-body table tr, .blob-num-context, #user-content-toc td {
@@ -1206,10 +1208,14 @@
   .recently-touched-branches, .contributing {
     background: #182030 !important;
   }
+  .repo-file-upload-progress .repo-file-upload-meter {
+    background: #273045 !important;
+  }
   .timeline-comment.current-user .timeline-comment-header, .new-user-avatar-cta,
   .full-commit .browse-button, .markdown-format .alert p, .blob-history, .flash,
   .flash-global, .feature-banner, .recently-pushed-branch-details,
-  .recently-touched-branches, .recently-touched-branches li, .contributing {
+  .recently-touched-branches, .recently-touched-branches li, .contributing,
+  .repo-file-upload-progress {
     color: #8195BE !important;
   }
   .timeline-comment.current-user, .github-jobs-promotion p, .octotip,
@@ -1222,6 +1228,9 @@
   .recently-touched-branches, .contributing,
   .timeline-progressive-disclosure-items button {
     border: 1px solid #246 !important;
+  }
+  .repo-file-upload-progress {
+    border-color: #246 !important;
   }
   .timeline-comment.current-user .timeline-comment-header, .blob-history,
   .recently-touched-branches li {
@@ -1556,7 +1565,7 @@
   .commit-author-section, .boxed-group-inner, .manage-repo-access-not-active,
   .milestone-name, a.milestone-name, .news .body blockquote code,
   .select-menu-modal, .select-menu-action, a.select-menu-action,
-  .feature-callout {
+  .feature-callout, .repo-file-upload-file-wrap .remove-file:hover {
     color: #a0a0a0 !important;
   }
   /* content text */
@@ -1640,7 +1649,8 @@
   #message-list .message .time, a.tabnav-extra,
   .tabnav .tabnav-extras,
   .discussion-item-integrations-callout .pull-request-integrations-dismiss,
-  .oauth-application-info .meta-link, .oauth-application-info .app-info {
+  .oauth-application-info .meta-link, .oauth-application-info .app-info,
+  .repo-file-upload-file-wrap .remove-file {
     color: #666 !important;
   }
   .branch-infobar .lightweight-actions > li .octicon,
