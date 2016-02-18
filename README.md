@@ -40,6 +40,35 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.53 (2/18/2016)
+
+* Global:
+  * Clean up fixes for GitHub bugs.
+  * Clean up old sidebar styles and comments.
+* Organizations:
+  * Don't add background to team member lists.
+* Search: Tweak border.
+* Authentication: Fix logo.
+* Markdown: Invert :ant:.
+* Readme: Add link to lovely-forks addon.
+* Repo/Files:
+  * Add support for lovely-forks addon.
+  * Style new feature callout.
+* Upload:
+  * Style file upload overlay.
+  * Lots of fixes - upload progress, errors, etc.
+  * Lock text area resize to vertical only.
+  * Tweak overlay to be more transparent.
+* Help:
+  * Fix hover links.
+  * Fix footer.
+  * Fix search box.
+* Misc:
+  * Update dependencies.
+  * Messed with authors code & editorconfig.
+  * Optimize wiki and screenshots PNGs.
+  * Add issue template (experimental).
+
 #### Version 1.14.52 (2/13/2016)
 
 * ZenHub:
@@ -66,17 +95,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Removed contributors from package.json.
   * Build `AUTHORS` file using shell script.
   * Bump dependencies.
-
-#### Version 1.14.50 (2/4/2016)
-
-* Global: Change default background.
-* ZenHub: Invert updated ZenHub icons.
-* Issues: Add collapsed timeline style. Fixes [issue #284](https://github.com/StylishThemes/GitHub-Dark/issues/284).
-* Discussions:
-  * Fix 'View More' button on collapsed sections.
-  * Fix commit refs in linked commits.
-* Organizations:
-  * Fix hover in member list.
-  * Add repo issues bug icon style (icon added by [Github-show-repo-issues](https://github.com/Mottie/Github-show-repo-issues).
-* Gist: Fix logo color.
-* Script: Add GHD Script class for styling (icon active matching base color).
