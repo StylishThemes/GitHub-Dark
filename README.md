@@ -40,6 +40,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.54 (2/20/2016)
+
+* Global:
+  * Darker green boxes + tweak.
+  * Darker red boxes.
+* Commits: Fix ellipsis button.
+* Discussions:
+  * Fix tab colors.
+  * Fix lock links.
+  * Fix misaligned issue close icon.
+* ZenHub + Octotree: Fix expanded boards toolbar position.
+
 #### Version 1.14.53 (2/18/2016)
 
 * Global:
@@ -81,17 +93,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Fix file icons.
 * Issues: Fix sidebar going off-screen in Firefox.
 * Blog: Use at-rule to scope position: sticky.
-
-#### Version 1.14.51 (2/10/2016)
-
-* Global: Fix disabled outline buttons hover.
-* User Page: Better contrast on the calendar. Fixes [issue #286](https://github.com/StylishThemes/GitHub-Dark/issues/286).
-* Readme: update screenshot.
-* Pull requests: Style CI callout.
-* Integrations: General fixes.
-* Options: Fixes for the application tab.
-* Issues: Fix emoji &amp; @person suggestion highlight.
-* Tools:
-  * Removed contributors from package.json.
-  * Build `AUTHORS` file using shell script.
-  * Bump dependencies.
