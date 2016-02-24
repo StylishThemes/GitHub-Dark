@@ -23,7 +23,7 @@ Ours dark style includes support for the following GitHub addons:
 ## Preview
 ![GitHub Dark preview](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
 
-## [Available Syntax Highlighting Themes](https://stylishthemes.github.io/GitHub-Dark/)
+## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
 |                      |                        |                          |                 |                       |
 |----------------------|------------------------|--------------------------|-----------------|-----------------------|
