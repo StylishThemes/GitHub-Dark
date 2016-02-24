@@ -2,7 +2,7 @@
 
 Your eyes will :heart: you.
 
-Ours dark style includes support for the following GitHub addons:
+Our dark style includes support for the following GitHub addons:
 
 * [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
 * [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
