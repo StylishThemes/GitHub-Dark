@@ -53,6 +53,22 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.55 (2/24/2016)
+
+* Issues: Fix comment icon on commentless issues.
+* Comments:
+  * Add toolbar focus color.
+  * Add style for a WIP script ;)
+* Diff: Tweak red blocks.
+* Profiles: Better image crop spinner.
+* API: Various fixes.
+* Blog: Various fixes.
+* Graphs:
+  * Fix anonymous site favicons.
+  * Fix popular content icons.
+* Add support for [github-canned-responses](https://github.com/notwaldorf/github-canned-responses) addon.
+* GHD Readme: Reorganized a bit.
+
 #### Version 1.14.54 (2/20/2016)
 
 * Global:
@@ -93,16 +109,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Messed with authors code & editorconfig.
   * Optimize wiki and screenshots PNGs.
   * Add issue template (experimental).
-
-#### Version 1.14.52 (2/13/2016)
-
-* ZenHub:
-  * Use base color on hover of pipeline options.
-  * Shift expanded boards toolbar if Octotree exists.
-* Octotree:
-  * Fix icon colors. Sorry we can't perfectly color background svg :(
-  * Remove double colon - lint was unhappy.
-* Fileview: Trash icon hover back to red.
-* Gist: Fix file icons.
-* Issues: Fix sidebar going off-screen in Firefox.
-* Blog: Use at-rule to scope position: sticky.
