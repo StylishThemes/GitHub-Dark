@@ -54,6 +54,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.57 (2/27/2016)
+
+* Themes: Properly add escapes to css selectors.
+* Demo: Fix url to Obsidian theme.
+* Frontpage: Fix repo tabs.
+
 #### Version 1.14.56 (2/27/2016)
 
 * Readme:
@@ -80,15 +86,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix popular content icons.
 * Add support for [github-canned-responses](https://github.com/notwaldorf/github-canned-responses) addon.
 * GHD Readme: Reorganized a bit.
-
-#### Version 1.14.54 (2/20/2016)
-
-* Global:
-  * Darker green boxes + tweak.
-  * Darker red boxes.
-* Commits: Fix ellipsis button.
-* Discussions:
-  * Fix tab colors.
-  * Fix lock links.
-  * Fix misaligned issue close icon.
-* ZenHub + Octotree: Fix expanded boards toolbar position.
