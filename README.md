@@ -25,12 +25,13 @@ Our dark style includes support for the following GitHub addons:
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
-|                      |                        |                          |                 |                       |
-|----------------------|------------------------|--------------------------|-----------------|-----------------------|
-| Ambiance             | Chaos                  | Clouds Midnight          | Cobalt          | Idle Fingers*         |
-| Kr Theme             | Merbivore              | Merbivore Soft           | Mono Industrial | Mono Industrial Clear |
-| Monokai*             | Pastel on Dark*        | Solarized Dark*          | Terminal        | Tomorrow Night*       |
-| Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight*       | Vibrant Ink           |
+|                 |                      |                        |                          |                       |
+|-----------------|----------------------|------------------------|--------------------------|-----------------------|
+| Ambiance        | Chaos                | Clouds Midnight        | Cobalt                   | Idle Fingers*         |
+| Kr Theme        | Merbivore            | Merbivore Soft         | Mono Industrial          | Mono Industrial Clear |
+| Monokai*        | Obsidian*            | Pastel on Dark*        | Solarized Dark*          | Terminal              |
+| Tomorrow Night* | Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight*             |
+| Vibrant Ink     |                      |                        |                          |                       |
 
 \* Supports [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb)
 
@@ -52,6 +53,17 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+#### Version 1.14.56 (2/27/2016)
+
+* Readme:
+  * Make syntax highlighting demo link more obvious.
+  * Fix grammar.
+  * Add Obsidian theme to list of available themes.
+* Themes:
+  * Add Obsidian theme. Fixes [issue #290](https://github.com/StylishThemes/GitHub-Dark/issues/290).
+  * Fix class for code type tweaks in various themes. Note: These tweaks currently *only work* on [wiki pages](https://github.com/StylishThemes/GitHub-Dark/wiki/Highlighting). Main files &
+    diffs do no include the "highlight-source-..." code type class name (e.g. "highlight-source-css")!
 
 #### Version 1.14.55 (2/24/2016)
 
@@ -80,32 +92,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix lock links.
   * Fix misaligned issue close icon.
 * ZenHub + Octotree: Fix expanded boards toolbar position.
-
-#### Version 1.14.53 (2/18/2016)
-
-* Global:
-  * Clean up fixes for GitHub bugs.
-  * Clean up old sidebar styles and comments.
-* Organizations:
-  * Don't add background to team member lists.
-* Search: Tweak border.
-* Authentication: Fix logo.
-* Markdown: Invert :ant:.
-* Readme: Add link to lovely-forks addon.
-* Repo/Files:
-  * Add support for lovely-forks addon.
-  * Style new feature callout.
-* Upload:
-  * Style file upload overlay.
-  * Lots of fixes - upload progress, errors, etc.
-  * Lock text area resize to vertical only.
-  * Tweak overlay to be more transparent.
-* Help:
-  * Fix hover links.
-  * Fix footer.
-  * Fix search box.
-* Misc:
-  * Update dependencies.
-  * Messed with authors code & editorconfig.
-  * Optimize wiki and screenshots PNGs.
-  * Add issue template (experimental).
