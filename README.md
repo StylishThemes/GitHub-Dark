@@ -45,7 +45,7 @@ Our dark style includes support for the following GitHub addons:
 If you would like to contribute to this repository, please...
 
 1. Fork
-2. Make changes (please read the [contribution guidelines](https://github.com/StylishThemes/GitHub-Dark/blob/master/CONTRIBUTING.md) and abide by them)
+2. Make changes (please read the [contribution guidelines](https://github.com/StylishThemes/GitHub-Dark/blob/master/.github/CONTRIBUTING.md) and abide by them)
 3. Create a pull request!
 
 Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/blob/master/AUTHORS) so far!
