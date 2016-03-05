@@ -54,6 +54,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.58 (3/5/2016)
+
+* Gist: Fix user actions.
+* Readme: Fix broken link. See [pull #291](https://github.com/StylishThemes/GitHub-Dark/pull/291); thanks [liquiddandruff](https://github.com/liquiddandruff)!
+* Tools:
+  * Add pre-commit run lint.
+  * Update dependencies.
+
 #### Version 1.14.57 (2/27/2016)
 
 * Themes: Properly add escapes to css selectors.
@@ -70,19 +78,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add Obsidian theme. Fixes [issue #290](https://github.com/StylishThemes/GitHub-Dark/issues/290).
   * Fix class for code type tweaks in various themes. Note: These tweaks currently *only work* on [wiki pages](https://github.com/StylishThemes/GitHub-Dark/wiki/Highlighting). Main files &
     diffs do no include the "highlight-source-..." code type class name (e.g. "highlight-source-css")!
-
-#### Version 1.14.55 (2/24/2016)
-
-* Issues: Fix comment icon on commentless issues.
-* Comments:
-  * Add toolbar focus color.
-  * Add style for a WIP script ;)
-* Diff: Tweak red blocks.
-* Profiles: Better image crop spinner.
-* API: Various fixes.
-* Blog: Various fixes.
-* Graphs:
-  * Fix anonymous site favicons.
-  * Fix popular content icons.
-* Add support for [github-canned-responses](https://github.com/notwaldorf/github-canned-responses) addon.
-* GHD Readme: Reorganized a bit.
