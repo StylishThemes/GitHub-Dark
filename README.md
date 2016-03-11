@@ -54,6 +54,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.59 (3/10/2016)
+
+* Issues:
+  * Handle reaction image borders.
+  * Add reactions backgrounds.
+  * Fix reaction menu arrow.
+
 #### Version 1.14.58 (3/5/2016)
 
 * Gist: Fix user actions.
@@ -67,14 +74,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Themes: Properly add escapes to css selectors.
 * Demo: Fix url to Obsidian theme.
 * Frontpage: Fix repo tabs.
-
-#### Version 1.14.56 (2/27/2016)
-
-* Readme:
-  * Make syntax highlighting demo link more obvious.
-  * Fix grammar.
-  * Add Obsidian theme to list of available themes.
-* Themes:
-  * Add Obsidian theme. Fixes [issue #290](https://github.com/StylishThemes/GitHub-Dark/issues/290).
-  * Fix class for code type tweaks in various themes. Note: These tweaks currently *only work* on [wiki pages](https://github.com/StylishThemes/GitHub-Dark/wiki/Highlighting). Main files &
-    diffs do no include the "highlight-source-..." code type class name (e.g. "highlight-source-css")!
