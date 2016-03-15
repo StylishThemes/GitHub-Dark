@@ -54,6 +54,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.61 (3/15/2016)
+
+* Global: More button tweaks.
+* Diff:
+  * Disable useless position: sticky on PR diffs.
+  * Fix prev/next buttons.
+  * Fix top notice.
+* Grunt: update dependencies.
+
 #### Version 1.14.60 (3/15/2016)
 
 * Issues:
@@ -74,11 +83,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Handle reaction image borders.
   * Add reactions backgrounds.
   * Fix reaction menu arrow.
-
-#### Version 1.14.58 (3/5/2016)
-
-* Gist: Fix user actions.
-* Readme: Fix broken link. See [pull #291](https://github.com/StylishThemes/GitHub-Dark/pull/291); thanks [liquiddandruff](https://github.com/liquiddandruff)!
-* Tools:
-  * Add pre-commit run lint.
-  * Update dependencies.
