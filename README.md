@@ -54,6 +54,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.60 (3/15/2016)
+
+* Issues:
+  * Add blue background to own reactions.
+  * Tweak reactions, reduce size.
+  * Better centering of reaction emoji.
+* Grunt: update dependencies.
+* New Styles:
+  * Style reviews tools bar. Fixes [issue #293](https://github.com/StylishThemes/GitHub-Dark/issues/293).
+  * Style new blog header.
+  * Style GitHub business page.
+  * Style project showcases.
+  * Help: remove link background.
+
 #### Version 1.14.59 (3/10/2016)
 
 * Issues:
@@ -68,9 +82,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Tools:
   * Add pre-commit run lint.
   * Update dependencies.
-
-#### Version 1.14.57 (2/27/2016)
-
-* Themes: Properly add escapes to css selectors.
-* Demo: Fix url to Obsidian theme.
-* Frontpage: Fix repo tabs.
