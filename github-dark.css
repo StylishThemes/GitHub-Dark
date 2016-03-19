@@ -2355,7 +2355,8 @@
     color: #808080 !important;
   }
   /* ZenHub styling */
-  .zh-button, .is-not-pawed:hover .zh-paw-btn-inner, .popover li:hover {
+  .zh-button, .is-not-pawed:hover .zh-paw-btn-inner, .popover li:hover,
+  .zh-select-menu-item.navigation-focus {
     background: /*[[base-color]]*/ #4183C4 !important;
     border-color: /*[[base-color]]*/ #4183C4 !important;
     color: #fff !important;
@@ -2395,7 +2396,7 @@
   .zh-toggle-button.selected, .popover li, .zh-todo-item,
   div.zh-issuecard-container, .zh-onboarding-modal,
   .zh-onboarding-tooltip-target, .zh-onboarding-tooltip, .zh-login-status,
-  .zh-board-loading-message {
+  .zh-board-loading-message, .zh-select-menu-header {
     background: #222 !important;
     border-color: #484848 !important;
   }
@@ -2417,24 +2418,21 @@
   .zh-todolist-menu.ui-sortable-helper, .zh-new-pipeline-header,
   .zh-issuecard-main, .zh-onboarding-tooltip-title, .zh-onboarding-modal-title,
   .zh-multi-repo-show-one-btn:disabled,
-  .zh-multi-repo-show-one-btn:disabled:hover {
-    border-color: #484848 !important;
-  }
-  .popover.right .arrow {
-    border-right-color: #484848 !important;
+  .zh-multi-repo-show-one-btn:disabled:hover, .zh-select-menu-item {
+    border-color: #343434 !important;
   }
   .file-commit-form .commit-form:before, .file-commit-form .commit-form:after,
-  .zh-burndown .stats-item, .zh-todopage-menu {
+  .zh-burndown .stats-item, .zh-todopage-menu, .popover.right .arrow {
     border-right-color: #343434 !important;
   }
-  .zh-onboarding-tooltip-w:after {
+  .zh-onboarding-tooltip-w:after, .popover.left .arrow {
     border-left-color: #343434 !important;
   }
   /* text */
   .zh-uploader-container *, .zh-overlay-body, .zh-pipeline-issue-action,
   .zh-board-menu-item button.selected .octicon, .zh-todolist-create:hover,
   .zh-onboarding-modal *, .zh-onboarding-tooltip-target,
-  .zh-onboarding-tooltip * {
+  .zh-onboarding-tooltip *, .zh-select-menu-title {
     color: #fff !important;
   }
   .popover li {
@@ -2456,7 +2454,9 @@
   }
   /* tooltip */
   .popover {
-    background: #333 !important;
+    background: #222 !important;
+  }
+  .popover, .zh-select-menu-title, .is-pawed .zh-paw-btn-inner {
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -2484,8 +2484,6 @@
   .is-pawed .zh-paw-btn-inner {
     background: #207038 !important;
     color: #333 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
   }
   .zh-paw-btn-count, .zh-todo-link span {
     color: #ddd !important;
@@ -2500,7 +2498,8 @@
   .zh-pipeline-actions .zh-pipeline-icon, .zh-toggle-button .octicon > span,
   .zh-octicon-issue-closed, .zh-octicon-git-pull-request,
   .zh-octicon-list-unordered, .zh-octicon-check, .zh-octicon-inbox,
-  .zh-octicon-plus, .zh-octicon-chevron-down, .zh-octicon-pencil {
+  .zh-octicon-plus, .zh-octicon-chevron-down, .zh-octicon-pencil,
+  .zh-octicon-issue-opened {
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
