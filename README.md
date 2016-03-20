@@ -54,6 +54,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.62 (3/20/2016)
+
+* Notifications: Fix notificiation settings button border.
+* Diff: Fix jumping toolbar.
+* Home & loggedout: add section styles.
+* ZenHub:
+  * Style fixes to icon & switch boards popup.
+  * Style toolbar icon - for [toggle meta button](https://github.com/Mottie/ZenHub-userscripts) userscript.
+
 #### Version 1.14.61 (3/15/2016)
 
 * Global: More button tweaks.
@@ -76,10 +85,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style GitHub business page.
   * Style project showcases.
   * Help: remove link background.
-
-#### Version 1.14.59 (3/10/2016)
-
-* Issues:
-  * Handle reaction image borders.
-  * Add reactions backgrounds.
-  * Fix reaction menu arrow.
