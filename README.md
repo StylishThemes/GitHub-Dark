@@ -54,6 +54,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.63 (3/21/2016)
+
+* Gist: Style banner seen when logged out.
+* Global: Color the top loading bar.
+* Jupyter: Adjust image color to more closely match original. Fixes [issue #297](https://github.com/StylishThemes/GitHub-Dark/issues/297).
+
 #### Version 1.14.62 (3/20/2016)
 
 * Notifications: Fix notificiation settings button border.
@@ -71,17 +77,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix prev/next buttons.
   * Fix top notice.
 * Grunt: update dependencies.
-
-#### Version 1.14.60 (3/15/2016)
-
-* Issues:
-  * Add blue background to own reactions.
-  * Tweak reactions, reduce size.
-  * Better centering of reaction emoji.
-* Grunt: update dependencies.
-* New Styles:
-  * Style reviews tools bar. Fixes [issue #293](https://github.com/StylishThemes/GitHub-Dark/issues/293).
-  * Style new blog header.
-  * Style GitHub business page.
-  * Style project showcases.
-  * Help: remove link background.
