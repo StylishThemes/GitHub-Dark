@@ -4,10 +4,11 @@ Your eyes will :heart: you.
 
 Our dark style includes support for the following GitHub addons:
 
+* [ZenHub](https://www.zenhub.io/)
+* [Octotree](https://github.com/buunguyen/octotree/#octotree)
+* [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
 * [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
 * [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
-* [Octotree](https://github.com/buunguyen/octotree/#octotree)
-* [ZenHub](https://www.zenhub.io/)
 
 ## Install
 
