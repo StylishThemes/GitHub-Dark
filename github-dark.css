@@ -115,7 +115,7 @@
   .suggester li.navigation-focus, .suggester .cur,
   .btn.btn-outline:hover, .btn.btn-outline:active, .btn.btn-outline.selected,
   .btn.btn-outline.zeroclipboard-is-hover, .btn.btn-outline.zeroclipboard-is-active,
-  .select-menu-item:not(.select-menu-item-parent).navigation-focus,
+  .select-menu-item:not(.select-menu-item-parent):not(.selected).navigation-focus,
   .reaction-sort-item:hover, .reaction-sort-item.selected {
     background: /*[[base-color]]*/ #4183C4 !important;
   }
@@ -845,7 +845,7 @@
   .line[style^="background-color: rgb(255, 255, 204)"],
   .oauth-org-access-details .boxed-group-list > li.on:hover, pre div:hover,
   table.files tr.navigation-focus td, .summary-stats li a:hover,
-  .label-select-menu .select-menu-item.navigation-focus {
+  .label-select-menu .select-menu-item.navigation-focus:not(.selected) {
     background: #242424 !important;
   }
   #main, .capped-box, .unread_count, #browser table th,
@@ -959,7 +959,7 @@
   .commit-preview p.error, .pagehead ul.tabs li.contextswitch, #browser tr th,
   .status-box h4, .line_numbers, #files span.icon, #issues_list .actions,
   #repos .public, .inset-callout, #repo-message, .repo-private-label,
-  .label-admin, a.team-member-ellipsis, .code-list em, .user-list em {
+  .label-admin, a.team-member-ellipsis, .code-list em, .user-list em  {
     background: #333 !important;
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -1576,7 +1576,8 @@
   .session-authentication .header-logo, .repo-file-upload-progress,
   a .mega-octicon, .anchor, a.anchor,
   .gcr-ext-editor-close .delete-button:hover svg,
-  .repo-filterer .repo-filter.filter-selected, .select-menu-divider {
+  .repo-filterer .repo-filter.filter-selected, .select-menu-divider,
+  .label-select-menu .select-menu-item.selected  {
     color: #c0c0c0 !important;
   }
   h5, h6, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -1925,8 +1926,7 @@
   .branch-action-state-clean .branch-action-body:before {
     border-right-color: #041 !important;
   }
-  .completeness-indicator-success, .label-select-menu .select-menu-item.selected,
-  .label-select-menu .select-menu-item.navigation-focus.selected {
+  .completeness-indicator-success {
     background: #152 !important;
   }
   /* Green text */
@@ -1938,8 +1938,7 @@
   ul.summary-stats li .octicon-issue-opened, #toc .octicon-diff-added,
   .boxed-group-success, .setup-info-module .features-list .octicon,
   .setup-form-container .secure, .highlight .gi, .type-icon-state-open,
-  a.type-icon-state-open, .text-success strong, .text-open strong,
-  .label-select-menu .select-menu-item.selected {
+  a.type-icon-state-open, .text-success strong, .text-open strong {
     color: #6CC644 !important;
   }
   /* bright green background */
