@@ -55,6 +55,28 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.64 (3/24/2016)
+
+* Global:
+  * Tweak Jupyter graphs and GeoJSON maps. See [issue #297](https://github.com/StylishThemes/GitHub-Dark/issues/297).
+  * Fix outline buttons with custom colors.
+  * Fix header search styling, then reverted & manually merged [pull #299](https://github.com/StylishThemes/GitHub-Dark/pull/299); thanks [rayrutjes](https://github.com/rayrutjes)!
+  * Add color to focused search box badge.
+  * Add GitHub Awesome Autocomplete support!
+* Maps: Tweak maps overlay.
+* Issues:
+  * Fix sort by reactions style.
+  * Update label dropdown.
+  * More tweaks to label dropdown.
+* Pull request diff: Style "This page is out of date. Refresh" label.
+* Showcase:
+  * Remove header styling. Fixes [issue #301](https://github.com/StylishThemes/GitHub-Dark/issues/301).
+  * Tweak side panels.
+  * Fix header color.
+* Integrations: Fix header color.
+* ZenHub: Switch repo button tweaks x2. Fixes [issue #303](https://github.com/StylishThemes/GitHub-Dark/issues/303).
+* Grunt: Update stylelint rules for version 5. See [pull #300](https://github.com/StylishThemes/GitHub-Dark/pull/300); thanks [rayrutjes](https://github.com/rayrutjes)!
+
 #### Version 1.14.63 (3/21/2016)
 
 * Gist: Style banner seen when logged out.
@@ -69,12 +91,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZenHub:
   * Style fixes to icon & switch boards popup.
   * Style toolbar icon - for [toggle meta button](https://github.com/Mottie/ZenHub-userscripts) userscript.
-
-#### Version 1.14.61 (3/15/2016)
-
-* Global: More button tweaks.
-* Diff:
-  * Disable useless position: sticky on PR diffs.
-  * Fix prev/next buttons.
-  * Fix top notice.
-* Grunt: update dependencies.
