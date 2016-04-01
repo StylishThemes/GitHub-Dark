@@ -55,6 +55,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.65 (4/1/2016)
+
+* Global:
+  * Add selected dropdown item hover style.
+  * Tweak heading colors.
+  * Style arrow for dropdown.
+* Issue:
+  * Fix filter by author background.
+  * Comments: FIx arrow on saved reply dropdown.
+* Feed: Fix "More" button focus highlight.
+* Settings: Style saved reply form.
+* ZenHub: Remove upload selector.
+* Readme: Misc updates.
+
 #### Version 1.14.64 (3/24/2016)
 
 * Global:
@@ -82,12 +96,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Gist: Style banner seen when logged out.
 * Global: Color the top loading bar.
 * Jupyter: Adjust image color to more closely match original. Fixes [issue #297](https://github.com/StylishThemes/GitHub-Dark/issues/297).
-
-#### Version 1.14.62 (3/20/2016)
-
-* Notifications: Fix notificiation settings button border.
-* Diff: Fix jumping toolbar.
-* Home & loggedout: add section styles.
-* ZenHub:
-  * Style fixes to icon & switch boards popup.
-  * Style toolbar icon - for [toggle meta button](https://github.com/Mottie/ZenHub-userscripts) userscript.
