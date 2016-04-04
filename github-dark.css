@@ -2371,7 +2371,7 @@
   .lovely-forks-addon {
     color: #808080 !important;
   }
-  /* ZenHub styling */
+  /*** ZenHub styling ***/
   .zh-button, .is-not-pawed:hover .zh-paw-btn-inner, .popover li:hover,
   .zh-select-menu-item.navigation-focus {
     background: /*[[base-color]]*/ #4183C4 !important;
@@ -2383,7 +2383,7 @@
     color: /*[[base-color]]*/ #4183C4 !important;
   }
   /* background */
-  li.new-pipeline-column {
+  li.new-pipeline-column, .zh-epic-creator-top, .zh-epic-creator-nav {
     background: transparent !important;
   }
   .zh-overlay {
@@ -2403,7 +2403,9 @@
   }
   li.zh-pipeline, .zh-schema-pipelines, .zh-pipeline-issue-heading,
   .zh-connect-repository-container, .burndown-chart, .zh-todolist-box,
-  .zh-issueviewer-title {
+  .zh-issueviewer-title, .zh-timeline-comment, .zh-epic-issue-list-container,
+  .zh-epic-issue-list-container li, .zh-epic-creator-issue-list,
+  .zh-epic-creator-issue-list li, .zh-epic-creator-tab {
     background: #181818 !important;
     border-color: #484848 !important;
   }
@@ -2413,7 +2415,10 @@
   .zh-toggle-button.selected, .popover li, .zh-todo-item,
   div.zh-issuecard-container, .zh-onboarding-modal,
   .zh-onboarding-tooltip-target, .zh-onboarding-tooltip, .zh-login-status,
-  .zh-board-loading-message, .zh-select-menu-header {
+  .zh-board-loading-message, .zh-select-menu-header,
+  .zh-timeline-comment-header, .zh-epic-issue-list-footer,
+  .zh-epic-issue-list-container li:hover, .zh-epic-creator-issue-list li:hover,
+  .zh-epic-creator-tab.selected {
     background: #222 !important;
     border-color: #484848 !important;
   }
@@ -2421,7 +2426,8 @@
   .is-not-pawed:not(.zh-paw-count-0), .zh-board-menu-item button:hover,
   .zh-toggle-button.selected:hover,
   .zh-todolist-today-separator, .zh-todolist-completed-separator,
-  .zh-todolist-menu.ui-sortable-helper {
+  .zh-todolist-menu.ui-sortable-helper, .zh-epic-issue-progress-bar,
+  .zh-epic-creator-progress-bar, .zh-pipeline-badge-light, .zh-pipeline-badge {
     background: #333 !important;
   }
   .zh-chart .yaxis-strips .hstripe:nth-child(2n) {
@@ -2435,7 +2441,8 @@
   .zh-todolist-menu.ui-sortable-helper, .zh-new-pipeline-header,
   .zh-issuecard-main, .zh-onboarding-tooltip-title, .zh-onboarding-modal-title,
   .zh-multi-repo-show-one-btn:disabled,
-  .zh-multi-repo-show-one-btn:disabled:hover, .zh-select-menu-item {
+  .zh-multi-repo-show-one-btn:disabled:hover, .zh-select-menu-item,
+  .zh-epic-creator-picker-container, .zh-epic-creator-nav, .zh-board-menu {
     border-color: #343434 !important;
   }
   .file-commit-form .commit-form:before, .file-commit-form .commit-form:after,
@@ -2449,10 +2456,11 @@
   .zh-uploader-container *, .zh-overlay-body, .zh-pipeline-issue-action,
   .zh-board-menu-item button.selected .octicon, .zh-todolist-create:hover,
   .zh-onboarding-modal *, .zh-onboarding-tooltip-target,
-  .zh-onboarding-tooltip *, .zh-select-menu-title {
+  .zh-onboarding-tooltip *, .zh-select-menu-title,
+  .zh-epic-creator-tab.selected, .zh-delete-epic-button:hover {
     color: #fff !important;
   }
-  .popover li {
+  .popover li, .zh-epic-creator-tab {
     color: #ccc !important;
   }
   .zh-schema-pipeline-name, #zh-export-issue-json .octicon-file-directory,
@@ -2468,6 +2476,22 @@
   .zh-icon-compress {
     -webkit-filter: brightness(4) !important;
             filter: brightness(4) !important;
+  }
+  /* ZenHub buttons */
+  .zh-btn, .zh-delete-epic-button {
+    background: linear-gradient(#282828,#181818) !important;
+    border-color: #383838 !important;
+  }
+  .zh-delete-epic-button {
+    color: #c31e16 !important;
+  }
+  .zh-btn:hover {
+    background: linear-gradient(#444,#333) !important;
+    border-color: #484848 !important;
+  }
+  .zh-delete-epic-button:hover {
+    background: #911 !important;
+    border-color: #b00 !important;
   }
   /* tooltip */
   .popover {
@@ -2519,7 +2543,7 @@
   .zh-octicon-issue-closed, .zh-octicon-git-pull-request,
   .zh-octicon-list-unordered, .zh-octicon-check, .zh-octicon-inbox,
   .zh-octicon-plus, .zh-octicon-chevron-down, .zh-octicon-pencil,
-  .zh-octicon-issue-opened, .zh-board-menu-itemgroup svg {
+  .zh-octicon-issue-opened, .zh-board-menu-itemgroup svg, .zh-icon-storypoint {
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
