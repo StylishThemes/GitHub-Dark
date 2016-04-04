@@ -55,6 +55,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.66 (4/4/2016)
+
+* Settings: Webhooks - style item border.
+* ZenHub: Add style for Epic functionality.
+
 #### Version 1.14.65 (4/1/2016)
 
 * Global:
@@ -90,9 +95,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Integrations: Fix header color.
 * ZenHub: Switch repo button tweaks x2. Fixes [issue #303](https://github.com/StylishThemes/GitHub-Dark/issues/303).
 * Grunt: Update stylelint rules for version 5. See [pull #300](https://github.com/StylishThemes/GitHub-Dark/pull/300); thanks [rayrutjes](https://github.com/rayrutjes)!
-
-#### Version 1.14.63 (3/21/2016)
-
-* Gist: Style banner seen when logged out.
-* Global: Color the top loading bar.
-* Jupyter: Adjust image color to more closely match original. Fixes [issue #297](https://github.com/StylishThemes/GitHub-Dark/issues/297).
