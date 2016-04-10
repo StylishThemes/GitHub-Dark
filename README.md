@@ -55,6 +55,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.67 (4/10/2016)
+
+* Help: Add search autocomplete styling.
+* Settings: Keys Add border style to key badge.
+* Options: Style saved replies boxes.
+* Commits: Style signed commits.
+* Pull Requests: Add backgrounds to small badges.
+* Grunt: update dependencies.
+
 #### Version 1.14.66 (4/4/2016)
 
 * Settings: Webhooks - style item border.
@@ -73,25 +82,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Settings: Style saved reply form.
 * ZenHub: Remove upload selector.
 * Readme: Misc updates.
-
-#### Version 1.14.64 (3/24/2016)
-
-* Global:
-  * Tweak Jupyter graphs and GeoJSON maps. See [issue #297](https://github.com/StylishThemes/GitHub-Dark/issues/297).
-  * Fix outline buttons with custom colors.
-  * Fix header search styling, then reverted & manually merged [pull #299](https://github.com/StylishThemes/GitHub-Dark/pull/299); thanks [rayrutjes](https://github.com/rayrutjes)!
-  * Add color to focused search box badge.
-  * Add GitHub Awesome Autocomplete support!
-* Maps: Tweak maps overlay.
-* Issues:
-  * Fix sort by reactions style.
-  * Update label dropdown.
-  * More tweaks to label dropdown.
-* Pull request diff: Style "This page is out of date. Refresh" label.
-* Showcase:
-  * Remove header styling. Fixes [issue #301](https://github.com/StylishThemes/GitHub-Dark/issues/301).
-  * Tweak side panels.
-  * Fix header color.
-* Integrations: Fix header color.
-* ZenHub: Switch repo button tweaks x2. Fixes [issue #303](https://github.com/StylishThemes/GitHub-Dark/issues/303).
-* Grunt: Update stylelint rules for version 5. See [pull #300](https://github.com/StylishThemes/GitHub-Dark/pull/300); thanks [rayrutjes](https://github.com/rayrutjes)!
