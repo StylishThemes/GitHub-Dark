@@ -55,6 +55,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.68 (4/14/2016)
+
+* Repo:
+  * Fix focus outline on https/ssh selector.
+  * Add pull request link styling.
+* Pull Request: Add verified tooltip arrow style. Fixes [issue #306](https://github.com/StylishThemes/GitHub-Dark/issues/306).
+
 #### Version 1.14.67 (4/10/2016)
 
 * Help: Add search autocomplete styling.
@@ -68,17 +75,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Settings: Webhooks - style item border.
 * ZenHub: Add style for Epic functionality.
-
-#### Version 1.14.65 (4/1/2016)
-
-* Global:
-  * Add selected dropdown item hover style.
-  * Tweak heading colors.
-  * Style arrow for dropdown.
-* Issue:
-  * Fix filter by author background.
-  * Comments: FIx arrow on saved reply dropdown.
-* Feed: Fix "More" button focus highlight.
-* Settings: Style saved reply form.
-* ZenHub: Remove upload selector.
-* Readme: Misc updates.
