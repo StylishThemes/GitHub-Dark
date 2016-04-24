@@ -55,6 +55,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.69 (4/24/2016)
+
+* ZenHub: Tweak repo switcher button & fix border in issue cards.
+* Discussions: Color tweaks.
+* Issues: Add background to reactions filter dropdown hover.
+
 #### Version 1.14.68 (4/14/2016)
 
 * Repo:
@@ -70,8 +76,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Commits: Style signed commits.
 * Pull Requests: Add backgrounds to small badges.
 * Grunt: update dependencies.
-
-#### Version 1.14.66 (4/4/2016)
-
-* Settings: Webhooks - style item border.
-* ZenHub: Add style for Epic functionality.
