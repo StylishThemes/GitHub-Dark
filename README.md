@@ -55,6 +55,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.70 (4/29/2016)
+
+* Repo: Fixes for the fork popup.
+* Markdown: Tweak emoji centering fix to cover unicode emoji.
+* Commits: Fix verified badge.
+* Diff: Fix rare layout issue with diff bar.
+* Global: Remove markdown table border.
+* Grunt: Update dependencies.
+
 #### Version 1.14.69 (4/24/2016)
 
 * ZenHub: Tweak repo switcher button & fix border in issue cards.
@@ -67,12 +76,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix focus outline on https/ssh selector.
   * Add pull request link styling.
 * Pull Request: Add verified tooltip arrow style. Fixes [issue #306](https://github.com/StylishThemes/GitHub-Dark/issues/306).
-
-#### Version 1.14.67 (4/10/2016)
-
-* Help: Add search autocomplete styling.
-* Settings: Keys Add border style to key badge.
-* Options: Style saved replies boxes.
-* Commits: Style signed commits.
-* Pull Requests: Add backgrounds to small badges.
-* Grunt: update dependencies.
