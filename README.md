@@ -55,6 +55,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.71 (5/5/2016) :dancer:
+
+* Markdown: Fix quoted linked codeblocks.
+* Meta:
+  * Bump dependencies.
+  * Expand stylelint config.
+* ZenHub: Darken read only message.
+* Settings: Style key email address.
+* Importer:
+  * Fix a border.
+  * Various fixes.
+
 #### Version 1.14.70 (4/29/2016)
 
 * Repo: Fixes for the fork popup.
@@ -69,10 +81,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZenHub: Tweak repo switcher button & fix border in issue cards.
 * Discussions: Color tweaks.
 * Issues: Add background to reactions filter dropdown hover.
-
-#### Version 1.14.68 (4/14/2016)
-
-* Repo:
-  * Fix focus outline on https/ssh selector.
-  * Add pull request link styling.
-* Pull Request: Add verified tooltip arrow style. Fixes [issue #306](https://github.com/StylishThemes/GitHub-Dark/issues/306).
