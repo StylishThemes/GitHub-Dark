@@ -55,6 +55,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.72 (5/10/2016)
+
+* Frontpage: Style various things on the logged-out page.
+* Help:
+  * Add deprecation notice style.
+  * Add deprecation warning style.
+* Issues:
+  * Style explore signup dialog. See [pull #310](https://github.com/StylishThemes/GitHub-Dark/pull/310).
+  * Style intro-shelf. See [pull #309](https://github.com/StylishThemes/GitHub-Dark/pull/309).
+
 #### Version 1.14.71 (5/5/2016) :dancer:
 
 * Markdown: Fix quoted linked codeblocks.
@@ -75,9 +85,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Diff: Fix rare layout issue with diff bar.
 * Global: Remove markdown table border.
 * Grunt: Update dependencies.
-
-#### Version 1.14.69 (4/24/2016)
-
-* ZenHub: Tweak repo switcher button & fix border in issue cards.
-* Discussions: Color tweaks.
-* Issues: Add background to reactions filter dropdown hover.
