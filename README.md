@@ -1,17 +1,6 @@
-<h1 align="center">
-  GitHub Dark
-</h1>
+# GitHub Dark [![](https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg)](https://github.com/StylishThemes/GitHub-Dark/tags) [![](http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark) [![](http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark/fork) [![](https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg)](https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies)
 
-<p align="center">
-  Your eyes will :heart: you.
-</p>
-
-<div align="center">
-  <a href="https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies"><img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg"></a>
-  <a href="https://github.com/StylishThemes/GitHub-Dark/tags"><img src="https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg"></a>
-  <a href="http://github.com/StylishThemes/GitHub-Dark"><img src="http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6"></a>
-  <a href="(http://github.com/StylishThemes/GitHub-Dark/fork"><img src="http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6"></a>
-</div>
+Your eyes will :heart: you.
 
 ## Preview
 ![](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
