@@ -803,7 +803,7 @@
   .comment-content, .commandbar .message, .boxed-group-inner,
   #adv_code_search .search-page-label, .timeline-comment,
   #contributors-master svg.viz, .diff-table .line-comments, .menu, svg.spark,
-  svg.capped-card-content, body.api .content tbody, .markdown-format img,
+  svg.capped-card-content, body.api .content tbody, .markdown-format img:not(.emoji),
   .mini-repo-list, #common-issues, .full-commit .commit-meta,
   .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu,
@@ -1097,8 +1097,8 @@
   .leaflet-control-attribution.leaflet-compact-attribution:after,
   img[src$="favicons.githubusercontent.com/github.com"],
   img[src$="invertocat.png"] {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+            filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* inver problematic emoji images */
   [title=":soon:"], [title=":on:"], [title=":end:"],
@@ -1112,8 +1112,8 @@
   [title=":back:"], [title=":zzz:"], [title=":notes:"],
   [title=":musical_score:"], [title=":black_large_square:"]
   [title=":black_medium_small_square:"], [title=":ant:"] {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+            filter: invert(100%) hue-rotate(180deg) !important;
     background: transparent !important;
   }
   g-emoji > img.emoji {
