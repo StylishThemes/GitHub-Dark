@@ -1,14 +1,8 @@
-# GitHub Dark [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg)](https://github.com/StylishThemes/GitHub-Dark/tags) [![stars](http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark) [![forks](http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark/fork) [![devdeps](https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg)](https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies)
+# GitHub Dark [![](https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg)](https://github.com/StylishThemes/GitHub-Dark/tags) [![](http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark) [![](http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6)](http://github.com/StylishThemes/GitHub-Dark/fork) [![](https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg)](https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies)
 
 Your eyes will :heart: you.
 
-Our dark style includes support for the following GitHub addons:
-
-* [ZenHub](https://www.zenhub.io/)
-* [Octotree](https://github.com/buunguyen/octotree/#octotree)
-* [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
-* [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
-* [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
+![](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
 
 ## Install
 
@@ -21,8 +15,19 @@ Our dark style includes support for the following GitHub addons:
       * Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
 * Or, use our [GitHub-Dark Script](https://github.com/StylishThemes/GitHub-Dark-Script) which requires a [user script addon](https://github.com/StylishThemes/GitHub-Dark-Script/wiki/Install), but allows dynamic style changes & updates:bangbang:
 
-## Preview
-![GitHub Dark preview](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
+## Additional GitHub customization
+
+* [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes
+* [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
+* [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message
+
+## Supported GitHub Addons
+
+* [ZenHub](https://www.zenhub.io/)
+* [Octotree](https://github.com/buunguyen/octotree/#octotree)
+* [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
+* [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
+* [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
