@@ -61,6 +61,24 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.73 (5/13/2016)
+
+* Global: Fix link buttons like "view more".
+* Issues: Style view more issues button.
+* Main:
+  * Style shelf. See [issue #309](https://github.com/StylishThemes/GitHub-Dark/pull/309).
+  * Refactor shelf border styling.
+  * Add style for featurette.
+* Markdown:
+  * Fix inverted emoji background and hue-rotate them.
+  * Re-center emoji on the line.
+* Readme:
+  * Many tweaks, add additional styles section.
+  * Center title & tags - reverted.
+* Discussions: Fix commit reference's repo color.
+* ZenHub: Multiple card select styling.
+* Commits: Fix contributor counter.
+
 #### Version 1.14.72 (5/10/2016)
 
 * Frontpage: Style various things on the logged-out page.
@@ -82,12 +100,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Importer:
   * Fix a border.
   * Various fixes.
-
-#### Version 1.14.70 (4/29/2016)
-
-* Repo: Fixes for the fork popup.
-* Markdown: Tweak emoji centering fix to cover unicode emoji.
-* Commits: Fix verified badge.
-* Diff: Fix rare layout issue with diff bar.
-* Global: Remove markdown table border.
-* Grunt: Update dependencies.
