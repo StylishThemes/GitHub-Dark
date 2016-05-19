@@ -61,6 +61,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.74 (5/19/2016)
+
+* User page: Fix info icon.
+* Discussions: Recenter reaction emoji in inline comments.
+* Logos: Style feature boxes (see See https://github.com/logos).
+* Preview images: remove background behind images.
+* Settings: Fix border for access tokens.
+* Global: Restyle dropdown item background. Fixes [issue #312](https://github.com/StylishThemes/GitHub-Dark/issues/312).
+
 #### Version 1.14.73 (5/13/2016)
 
 * Global: Fix link buttons like "view more".
@@ -88,15 +97,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Issues:
   * Style explore signup dialog. See [pull #310](https://github.com/StylishThemes/GitHub-Dark/pull/310).
   * Style intro-shelf. See [pull #309](https://github.com/StylishThemes/GitHub-Dark/pull/309).
-
-#### Version 1.14.71 (5/5/2016) :dancer:
-
-* Markdown: Fix quoted linked codeblocks.
-* Meta:
-  * Bump dependencies.
-  * Expand stylelint config.
-* ZenHub: Darken read only message.
-* Settings: Style key email address.
-* Importer:
-  * Fix a border.
-  * Various fixes.
