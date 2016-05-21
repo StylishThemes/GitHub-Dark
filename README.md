@@ -61,6 +61,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.75 (5/21/2016)
+
+* Pull Requests: Add box shadow to dropdowns.
+* Discussions: Another attempt at centering reactions.
+* Issues: Fix hover over current pagination page.
+* Meta:
+  * Optimize all PNGs for size.
+  * Optimize all GIFs for size.
+
 #### Version 1.14.74 (5/19/2016)
 
 * User page: Fix info icon.
@@ -87,13 +96,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Discussions: Fix commit reference's repo color.
 * ZenHub: Multiple card select styling.
 * Commits: Fix contributor counter.
-
-#### Version 1.14.72 (5/10/2016)
-
-* Frontpage: Style various things on the logged-out page.
-* Help:
-  * Add deprecation notice style.
-  * Add deprecation warning style.
-* Issues:
-  * Style explore signup dialog. See [pull #310](https://github.com/StylishThemes/GitHub-Dark/pull/310).
-  * Style intro-shelf. See [pull #309](https://github.com/StylishThemes/GitHub-Dark/pull/309).
