@@ -61,6 +61,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.76 (5/24/2016)
+
+* Global:
+  * Override "text-blue" style; mostly to fix [this userscript](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-image-preview).
+  * Fix repository invitations; Fixes [issue #315](https://github.com/StylishThemes/GitHub-Dark/issues/315).
+* Themes: Monokai; make css strings match quotes. Fixes [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
+
 #### Version 1.14.75 (5/21/2016)
 
 * Pull Requests: Add box shadow to dropdowns.
@@ -78,21 +85,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Preview images: remove background behind images.
 * Settings: Fix border for access tokens.
 * Global: Restyle dropdown item background. Fixes [issue #312](https://github.com/StylishThemes/GitHub-Dark/issues/312).
-
-#### Version 1.14.73 (5/13/2016)
-
-* Global: Fix link buttons like "view more".
-* Issues: Style view more issues button.
-* Main:
-  * Style shelf. See [issue #309](https://github.com/StylishThemes/GitHub-Dark/pull/309).
-  * Refactor shelf border styling.
-  * Add style for featurette.
-* Markdown:
-  * Fix inverted emoji background and hue-rotate them.
-  * Re-center emoji on the line.
-* Readme:
-  * Many tweaks, add additional styles section.
-  * Center title & tags - reverted.
-* Discussions: Fix commit reference's repo color.
-* ZenHub: Multiple card select styling.
-* Commits: Fix contributor counter.
