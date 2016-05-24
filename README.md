@@ -61,6 +61,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.77 (5/24/2016)
+
+* Themes: Monokai; make all strings match the quotes. See [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
+
 #### Version 1.14.76 (5/24/2016)
 
 * Global:
@@ -76,12 +80,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Meta:
   * Optimize all PNGs for size.
   * Optimize all GIFs for size.
-
-#### Version 1.14.74 (5/19/2016)
-
-* User page: Fix info icon.
-* Discussions: Recenter reaction emoji in inline comments.
-* Logos: Style feature boxes (see See https://github.com/logos).
-* Preview images: remove background behind images.
-* Settings: Fix border for access tokens.
-* Global: Restyle dropdown item background. Fixes [issue #312](https://github.com/StylishThemes/GitHub-Dark/issues/312).
