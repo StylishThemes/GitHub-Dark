@@ -61,6 +61,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.78 (5/24/2016)
+
+* Code: Make sure theme color applied to code view.
+* Themes:
+  * Update Twilight in default stylesheet.
+  * All: Make sure code color is correct in code views.
+  * Monokai: lots of tweaks, more purple.
+  * Cobalt: Fix Cobalt strings.
+
 #### Version 1.14.77 (5/24/2016)
 
 * Themes: Monokai; make all strings match the quotes. See [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
