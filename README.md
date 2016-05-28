@@ -61,6 +61,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.79 (5/28/2016)
+
+* About: Add tab styling.
+* Settings: Darken Oauth border. See [issue #316](https://github.com/StylishThemes/GitHub-Dark/issues/316).
+* Issues: Fix hovered task group. Fixes [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
+* Themes: Fix linter issue.
+
 #### Version 1.14.78 (5/24/2016)
 
 * Code: Make sure theme color applied to code view.
@@ -73,19 +80,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.14.77 (5/24/2016)
 
 * Themes: Monokai; make all strings match the quotes. See [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
-
-#### Version 1.14.76 (5/24/2016)
-
-* Global:
-  * Override "text-blue" style; mostly to fix [this userscript](https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-image-preview).
-  * Fix repository invitations; Fixes [issue #315](https://github.com/StylishThemes/GitHub-Dark/issues/315).
-* Themes: Monokai; make css strings match quotes. Fixes [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
-
-#### Version 1.14.75 (5/21/2016)
-
-* Pull Requests: Add box shadow to dropdowns.
-* Discussions: Another attempt at centering reactions.
-* Issues: Fix hover over current pagination page.
-* Meta:
-  * Optimize all PNGs for size.
-  * Optimize all GIFs for size.
