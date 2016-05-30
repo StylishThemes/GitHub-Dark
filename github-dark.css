@@ -188,7 +188,7 @@
   select, input:not(.btn-link), textarea {
     -moz-appearance: none !important;
     background: #181818 !important;
-    border: 1px solid #343434 !important;
+    border-color: #343434 !important;
     color: #eee !important;
   }
   /* custom checkbox and radio styles. We need a full set of styles here as
@@ -660,7 +660,8 @@
   .result-group a, .signed-commit-badge, .signed-commit-header,
   .user-key-email, .border-top, .pricing-card-cta, .shelf, .access-token,
   .border, .about-menu, .oauth-border,
-  .reorderable-task-lists .markdown-body .task-list-item.hovered {
+  .reorderable-task-lists .markdown-body .task-list-item.hovered,
+  .ace_search {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset,
@@ -789,7 +790,7 @@
   .is-too-many .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .site-header, .site-subheader, .pricing-card,
   input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus),
-  .bg-gray-light, .explore-signup-entice {
+  .bg-gray-light, .explore-signup-entice, .ace_search_form, .ace_replace_form {
     background: #181818 !important;
     border-color: #343434 !important;
   }
@@ -858,7 +859,8 @@
   .commit-form, .comment-form-head.tabnav, .dashboard-notice,
   .migration-jumbotron, .migration-sub-header, .commit-tease,
   .manage-repo-access-title, .select-menu-divider, .signed-commit-header,
-  .reorderable-task-lists .markdown-body .task-list-item.hovered {
+  .reorderable-task-lists .markdown-body .task-list-item.hovered,
+  .ace_search {
     background: #1d1d1d !important;
   }
   /* Navigation focus */
@@ -896,7 +898,7 @@
   .ajax-pagination-form .ajax-pagination-btn:hover,
   .ajax-pagination-form .ajax-pagination-btn:focus,
   .manage-repo-access-not-active, .header-search-scope,
-  .reverse-progress-bar, .featurette.py-5 {
+  .reverse-progress-bar, .featurette.py-5, .ace_button:hover {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected,
@@ -1161,9 +1163,9 @@
     -webkit-filter: brightness(.8) !important;
             filter: brightness(.8) !important;
   }
-  /* Jupyter graphs, match #181818 on the background */
+  /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
-  .output_area img {
+  .output_area img, .ace_searchbtn, .ace_replacebtn {
     -webkit-filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
             filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
   }
@@ -1553,7 +1555,8 @@
   .markdown-format h4 .octicon-link, .markdown-format h5 .octicon-link,
   .markdown-format h6 .octicon-link, .tabnav-tab.selected,
   .leaflet-control-attribution, .leaflet-control-attribution a,
-  .integrations-breadcrumb-link, a.integrations-breadcrumb-link {
+  .integrations-breadcrumb-link, a.integrations-breadcrumb-link,
+  .ace_button {
     color: #e0e0e0 !important;
   }
   b, strong, .explain strong {
@@ -1805,7 +1808,7 @@
   .list-tip:before, .selector-item .mini-icon:before,
   .browser .mini-icon-arr-right, .selected .select-menu-checkmark,
   .octicon-person-team:before, .issues-reset-query .octicon-x,
-  a.darkertooltipped {
+  a.darkertooltipped, .ace_searchbtn, .ace_replacebtn {
     color: #222 !important;
   }
   .timeline-comment-header .timestamp, .vcard-stat:hover .text-muted,
