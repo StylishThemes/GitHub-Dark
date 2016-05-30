@@ -61,6 +61,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.80 (5/30/2016)
+
+* Issues: Also fix the drag handle. See [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
+* Ace: Fix search and replace boxes. Fixes [issue #320](https://github.com/StylishThemes/GitHub-Dark/issues/320).
+* Global: Fix emoji positioning bias. See [pull #319](https://github.com/StylishThemes/GitHub-Dark/pull/319); thanks [@SSARCandy](https://github.com/SSARCandy)!
+
 #### Version 1.14.79 (5/28/2016)
 
 * About: Add tab styling.
@@ -76,7 +82,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * All: Make sure code color is correct in code views.
   * Monokai: lots of tweaks, more purple.
   * Cobalt: Fix Cobalt strings.
-
-#### Version 1.14.77 (5/24/2016)
-
-* Themes: Monokai; make all strings match the quotes. See [GitHub-Dark-Script issue #14](StylishThemes/GitHub-Dark-Script/issues/14).
