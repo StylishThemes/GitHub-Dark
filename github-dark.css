@@ -179,7 +179,8 @@
   input[type="url"]:focus, textarea.focus, textarea:focus, #q:focus ~ button,
   input.color-editor-input:focus, #ghd-settings select:focus,
   #ghd-settings input:focus, .intgrs-lstng-item:hover, .ajax-pagination-btn:focus,
-  .select-menu-item:focus {
+  .select-menu-item:focus, .form-control.focus, .form-control:focus,
+  .form-select.focus, .form-select:focus {
     border-color: /*[[base-color]]*/ #4183C4 !important;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.075),0 0 2px /*[[base-color]]*/ #4183C4 !important;
     outline-color: /*[[base-color]]*/ #4183C4 !important;
@@ -577,7 +578,7 @@
   #adv_code_search .search-page-label, pre.headers, .inline-comment-form,
   .history-link, .oauth-permissions-details,
   .setup-info-module .features-list .list-divider,
-  .setup-wrapper .oauth-permissions, .setup-info-module h2,
+  .setup-wrapper .oauth-permissions,
   .swipe .swipe-frame .swipe-shell, ul.search-results,
   .orgs-help-shelf-content .orgs-help-divider, .repository-lang-stats-graph,
   .gist-quicksearch-results, .gist-quicksearch-result,
@@ -627,7 +628,7 @@
   #gist-form .file .meta, .file .meta, .file-box .meta, .capped-card,
   .audit-results-header, .pagination a, .pagination span, .pagination em,
   .input_area, .output_area .rendered_html table, .render-info .message,
-  .dashboard-notice, .radio-label, .subnav .btn + .issues-search,
+  .dashboard-notice, .subnav .btn + .issues-search,
   .branch-action-body .branch-action-item + .branch-action-item,
   .discussion-item-merged.open .discussion-item-details-header,
   .discussion-item-merged.open .build-statuses-list, .build-status-item,
@@ -648,7 +649,7 @@
   .user-key-email, .border-top, .pricing-card-cta, .shelf, .access-token,
   .border, .about-menu, .oauth-border,
   .reorderable-task-lists .markdown-body .task-list-item.hovered,
-  .ace_search {
+  .ace_search, .next-charge-box, .setup-info-module h2 {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset,
@@ -777,7 +778,8 @@
   .is-too-many .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .site-header, .site-subheader, .pricing-card,
   input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus),
-  .bg-gray-light, .explore-signup-entice, .ace_search_form, .ace_replace_form {
+  .bg-gray-light, .explore-signup-entice, .ace_search_form, .ace_replace_form,
+  .radio-label, .price-box, .cvv-hint-tooltip {
     background: #181818 !important;
     border-color: #343434 !important;
   }
@@ -847,7 +849,7 @@
   .migration-jumbotron, .migration-sub-header, .commit-tease,
   .manage-repo-access-title, .select-menu-divider, .signed-commit-header,
   .reorderable-task-lists .markdown-body .task-list-item.hovered,
-  .ace_search {
+  .ace_search, .next-charge-box, .credit-card {
     background: #1d1d1d !important;
   }
   /* Navigation focus */
@@ -990,7 +992,8 @@
   .commit-preview p.error, .pagehead ul.tabs li.contextswitch, #browser tr th,
   .status-box h4, .line_numbers, #files span.icon, #issues_list .actions,
   #repos .public, .inset-callout, #repo-message, .repo-private-label,
-  .label-admin, a.team-member-ellipsis, .code-list em, .user-list em  {
+  .label-admin, a.team-member-ellipsis, .code-list em, .user-list em,
+  .credit-card.normal .signature, .credit-card.amex .gladiator {
     background: #333 !important;
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -1974,6 +1977,9 @@
   .completeness-indicator-success {
     background: #152 !important;
   }
+  .billing-confirmation-box {
+    border-color: #083 !important;
+  }
   /* original color */
   .signed-commit-badge.verified:hover {
     border-color: #6cc644 !important;
@@ -2160,6 +2166,12 @@
   /* image preview background */
   .render-shell .img-view img, .file .image img, .file .image canvas {
     background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAABoaGgAAACwAAAAACgAKAAACEYQdmYcaDNxjEspKndVZbc8UADs=") !important;
+  }
+  /* <select> dropdown arrows */
+  /* https://github.com/account/upgrade */
+  .form-select {
+    background: #181818 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUAgMAAAD5DFXkAAAACVBMVEUAAADMzMzMzMyYHxqWAAAAAnRSTlMAgJsrThgAAAA9SURBVAjXZYw5FQAwDELpEhFREz1RExFZisryWMvAwPGBUwBiZLmyvorIQpCDJBdNKvzlwhOPfTPAKEONfyDYFUEhnDrUAAAAAElFTkSuQmCC") no-repeat right 8px center !important;
+    background-size: 8px 10px !important;
   }
   /* language stats bar */
   .repository-lang-stats-graph {
@@ -2507,7 +2519,7 @@
   .zh-multi-repo-show-one-btn:disabled,
   .zh-multi-repo-show-one-btn:disabled:hover, .zh-select-menu-item,
   .zh-epic-creator-picker-container, .zh-epic-creator-nav, .zh-board-menu,
-  .zh-issuecard-meta, .logos-download {
+  .zh-issuecard-meta, .logos-download, .credit-card.amex .gladiator {
     border-color: #343434 !important;
   }
   .file-commit-form .commit-form:before, .file-commit-form .commit-form:after,
