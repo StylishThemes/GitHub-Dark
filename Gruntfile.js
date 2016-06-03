@@ -45,6 +45,7 @@ module.exports = function(grunt) {
     '  body:not(.nowrap) .markdown-body .highlight > pre {',
     '    white-space: pre-wrap !important;',
     '    word-break: break-all !important;',
+    '    overflow-wrap: break-word !important;',
     '    display: block !important;',
     '  }',
     '  body:not(.nowrap) td.blob-code-inner {',
