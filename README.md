@@ -61,6 +61,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.81 (6/3/2016)
+
+* Tools: Fix issue template checklist rendering. See [pull #322](https://github.com/StylishThemes/GitHub-Dark/pull/322); thanks [jawshooah](https://github.com/jawshooah)!
+* Account:
+  * Various fixes on the Upgrade page. Fixes [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
+  * Fix hidden label for radio-boxes. See  [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
+* Code: Add overflow-wrap to wrap code in Chrome. See [code-wrap issue #1](https://github.com/StylishThemes/GitHub-code-wrap/issues/1).
+
 #### Version 1.14.80 (5/30/2016)
 
 * Issues: Also fix the drag handle. See [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
@@ -73,12 +81,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Settings: Darken Oauth border. See [issue #316](https://github.com/StylishThemes/GitHub-Dark/issues/316).
 * Issues: Fix hovered task group. Fixes [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
 * Themes: Fix linter issue.
-
-#### Version 1.14.78 (5/24/2016)
-
-* Code: Make sure theme color applied to code view.
-* Themes:
-  * Update Twilight in default stylesheet.
-  * All: Make sure code color is correct in code views.
-  * Monokai: lots of tweaks, more purple.
-  * Cobalt: Fix Cobalt strings.
