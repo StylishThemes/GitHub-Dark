@@ -61,6 +61,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.82 (6/4/2016)
+
+* Help page: Improve blue box text visibility.
+* Upgrade plan: Darken table background. Fixes [issue #326](https://github.com/StylishThemes/GitHub-Dark/issues/326).
+
 #### Version 1.14.81 (6/3/2016)
 
 * Tools: Fix issue template checklist rendering. See [pull #322](https://github.com/StylishThemes/GitHub-Dark/pull/322); thanks [jawshooah](https://github.com/jawshooah)!
@@ -74,10 +79,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Issues: Also fix the drag handle. See [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
 * Ace: Fix search and replace boxes. Fixes [issue #320](https://github.com/StylishThemes/GitHub-Dark/issues/320).
 * Global: Fix emoji positioning bias. See [pull #319](https://github.com/StylishThemes/GitHub-Dark/pull/319); thanks [@SSARCandy](https://github.com/SSARCandy)!
-
-#### Version 1.14.79 (5/28/2016)
-
-* About: Add tab styling.
-* Settings: Darken Oauth border. See [issue #316](https://github.com/StylishThemes/GitHub-Dark/issues/316).
-* Issues: Fix hovered task group. Fixes [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
-* Themes: Fix linter issue.
