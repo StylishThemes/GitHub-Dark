@@ -61,6 +61,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.83 (6/9/2016)
+
+* Join: Darken plan choices.
+* Feed: Darken placeholder border.
+* Integrations: Make selected filter text readable. Fixes [issue #327](https://github.com/StylishThemes/GitHub-Dark/issues/327).
+
 #### Version 1.14.82 (6/4/2016)
 
 * Help page: Improve blue box text visibility.
@@ -73,9 +79,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Various fixes on the Upgrade page. Fixes [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
   * Fix hidden label for radio-boxes. See  [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
 * Code: Add overflow-wrap to wrap code in Chrome. See [code-wrap issue #1](https://github.com/StylishThemes/GitHub-code-wrap/issues/1).
-
-#### Version 1.14.80 (5/30/2016)
-
-* Issues: Also fix the drag handle. See [issue #318](https://github.com/StylishThemes/GitHub-Dark/issues/318).
-* Ace: Fix search and replace boxes. Fixes [issue #320](https://github.com/StylishThemes/GitHub-Dark/issues/320).
-* Global: Fix emoji positioning bias. See [pull #319](https://github.com/StylishThemes/GitHub-Dark/pull/319); thanks [@SSARCandy](https://github.com/SSARCandy)!
