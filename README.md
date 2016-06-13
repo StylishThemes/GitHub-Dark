@@ -61,6 +61,12 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.84 (6/13/2016)
+
+* Code: Include code in diffs. Fixes [GitHub-Dark-Script/17](https://github.com/StylishThemes/GitHub-Dark-Script/issues/17).
+* Script: Add class for userscripts to invert elements.
+* Guides: Darken alert boxes.
+
 #### Version 1.14.83 (6/9/2016)
 
 * Join: Darken plan choices.
@@ -71,11 +77,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Help page: Improve blue box text visibility.
 * Upgrade plan: Darken table background. Fixes [issue #326](https://github.com/StylishThemes/GitHub-Dark/issues/326).
-
-#### Version 1.14.81 (6/3/2016)
-
-* Tools: Fix issue template checklist rendering. See [pull #322](https://github.com/StylishThemes/GitHub-Dark/pull/322); thanks [jawshooah](https://github.com/jawshooah)!
-* Account:
-  * Various fixes on the Upgrade page. Fixes [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
-  * Fix hidden label for radio-boxes. See  [issue #323](https://github.com/StylishThemes/GitHub-Dark/issues/323).
-* Code: Add overflow-wrap to wrap code in Chrome. See [code-wrap issue #1](https://github.com/StylishThemes/GitHub-code-wrap/issues/1).
