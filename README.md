@@ -61,6 +61,18 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.85 (6/16/2016)
+
+* Global:
+  * Unify button colors for the edit box.
+  * Style a few missing borders.
+* Markdown:
+  * Fix non-inverted emoji images.
+  * Fix emoji inversion for unicode emoji (macOS).
+* User page:
+  * Fix pinned repo border.
+  * More fixes to pinned repos.
+
 #### Version 1.14.84 (6/13/2016)
 
 * Code: Include code in diffs. Fixes [GitHub-Dark-Script/17](https://github.com/StylishThemes/GitHub-Dark-Script/issues/17).
@@ -72,8 +84,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Join: Darken plan choices.
 * Feed: Darken placeholder border.
 * Integrations: Make selected filter text readable. Fixes [issue #327](https://github.com/StylishThemes/GitHub-Dark/issues/327).
-
-#### Version 1.14.82 (6/4/2016)
-
-* Help page: Improve blue box text visibility.
-* Upgrade plan: Darken table background. Fixes [issue #326](https://github.com/StylishThemes/GitHub-Dark/issues/326).
