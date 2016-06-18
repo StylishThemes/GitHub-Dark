@@ -61,6 +61,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.86 (6/18/2016)
+
+* Organizations: Fix header. Fixes [issue #329](https://github.com/StylishThemes/GitHub-Dark/issues/329).
+* Grunt: Update dependencies.
+
 #### Version 1.14.85 (6/16/2016)
 
 * Global:
@@ -78,9 +83,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Code: Include code in diffs. Fixes [GitHub-Dark-Script/17](https://github.com/StylishThemes/GitHub-Dark-Script/issues/17).
 * Script: Add class for userscripts to invert elements.
 * Guides: Darken alert boxes.
-
-#### Version 1.14.83 (6/9/2016)
-
-* Join: Darken plan choices.
-* Feed: Darken placeholder border.
-* Integrations: Make selected filter text readable. Fixes [issue #327](https://github.com/StylishThemes/GitHub-Dark/issues/327).
