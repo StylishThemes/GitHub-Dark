@@ -61,6 +61,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.87 (6/21/2016)
+
+* Issues:
+  * Add style to new hover class. See [issue #330](https://github.com/StylishThemes/GitHub-Dark/issues/330).
+  * More fixes for new classes.
+* ZenHub: Update menu styling & some borders.
+
 #### Version 1.14.86 (6/18/2016)
 
 * Organizations: Fix header. Fixes [issue #329](https://github.com/StylishThemes/GitHub-Dark/issues/329).
@@ -77,9 +84,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * User page:
   * Fix pinned repo border.
   * More fixes to pinned repos.
-
-#### Version 1.14.84 (6/13/2016)
-
-* Code: Include code in diffs. Fixes [GitHub-Dark-Script/17](https://github.com/StylishThemes/GitHub-Dark-Script/issues/17).
-* Script: Add class for userscripts to invert elements.
-* Guides: Darken alert boxes.
