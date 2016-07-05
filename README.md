@@ -61,6 +61,15 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.88 (7/5/2016)
+
+* Global:
+  * Fix `<detail>` arrow in Firefox & include bugzilla link.
+  * Update `<details>` arrow to work on not just markdown.
+* Issues: Tweak sidebar text color, fix bold links.
+* Help: Style version dropdown arrow. Fixes [issue #333](https://github.com/StylishThemes/GitHub-Dark/issues/333).
+* Organization: Style arrow in Settings > Billing overview. Fixes [issue #332](https://github.com/StylishThemes/GitHub-Dark/issues/332).
+
 #### Version 1.14.87 (6/21/2016)
 
 * Issues:
@@ -72,15 +81,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Organizations: Fix header. Fixes [issue #329](https://github.com/StylishThemes/GitHub-Dark/issues/329).
 * Grunt: Update dependencies.
-
-#### Version 1.14.85 (6/16/2016)
-
-* Global:
-  * Unify button colors for the edit box.
-  * Style a few missing borders.
-* Markdown:
-  * Fix non-inverted emoji images.
-  * Fix emoji inversion for unicode emoji (macOS).
-* User page:
-  * Fix pinned repo border.
-  * More fixes to pinned repos.
