@@ -61,6 +61,35 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.89 (7/16/2016)
+
+* Global
+  * Make it more apparent that `<details>` is clickable.
+  * Tweak counters.
+  * Remove "classy" button class.
+  * Change yellow panels to semi-transparent brown. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
+  * Replace yellow buttons/text. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
+  * Combine text color definitions.
+* Milestones: Style progress bar & calendar.
+* Issues:
+  * Fix rare white background on issue hover.
+  * Remove "contributing" class from blue styles.
+  * Make labels & milestones hover brighter.
+  * Brighten labels & milestones text color on hover. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
+  * Fix `.RecentBranches` and text pending colors. See [pull #343](https://github.com/StylishThemes/GitHub-Dark/pull/343).
+* Pull:
+  * Comparing change; no merge.
+  * Fix unstyled border. Fixes [issue #342](https://github.com/StylishThemes/GitHub-Dark/issues/342).
+* Code:
+  * Fix highlight color. See [issue #339](https://github.com/StylishThemes/GitHub-Dark/issues/339).
+  * Brighten hover over selected lines. See [issue #339](https://github.com/StylishThemes/GitHub-Dark/issues/339).
+  * Move highlighted code out of "yellow" section.
+* Gists: Add a border to the "Secret" label.
+* Explore: Many tweaks & fixes to cards.
+* Profile: Darken "New" bio label.
+* ZenHub: Style epic filter.
+* Readme: Add minor space to shield/io labels. See [pull #341](https://github.com/StylishThemes/GitHub-Dark/pull/341).
+
 #### Version 1.14.88 (7/5/2016)
 
 * Global:
@@ -76,8 +105,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Add style to new hover class. See [issue #330](https://github.com/StylishThemes/GitHub-Dark/issues/330).
   * More fixes for new classes.
 * ZenHub: Update menu styling & some borders.
-
-#### Version 1.14.86 (6/18/2016)
-
-* Organizations: Fix header. Fixes [issue #329](https://github.com/StylishThemes/GitHub-Dark/issues/329).
-* Grunt: Update dependencies.
