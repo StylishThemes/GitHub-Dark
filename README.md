@@ -61,6 +61,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.90 (7/17/2016)
+
+* Global:
+  * Set brown panels background-color to preserve background image on feed page. Fixes [issue #346](https://github.com/StylishThemes/GitHub-Dark/issues/346).
+* Tabs - add border matching base color to:
+  * Site navigation tabs.
+  * Comment tabs.
+  * User profile tabs.
+  * Settings side navigation.
+* Network: Darken network graph. This does invert some avatars, which may not be ideal!
+* Feed
+  * Remove user RSS icon background & set color. Fixes [issue #345](https://github.com/StylishThemes/GitHub-Dark/issues/345).
+  * Darken `.atom` page feed button (in Firefox). Fixes [issue #346](https://github.com/StylishThemes/GitHub-Dark/issues/346).
+
 #### Version 1.14.89 (7/16/2016)
 
 * Global
