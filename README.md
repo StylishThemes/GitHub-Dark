@@ -61,6 +61,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.91 (7/18/2016)
+
+* Global: Split out selected tab color into a separate repo/style.
+
 #### Version 1.14.90 (7/17/2016)
 
 * Global:
@@ -103,19 +107,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Profile: Darken "New" bio label.
 * ZenHub: Style epic filter.
 * Readme: Add minor space to shield/io labels. See [pull #341](https://github.com/StylishThemes/GitHub-Dark/pull/341).
-
-#### Version 1.14.88 (7/5/2016)
-
-* Global:
-  * Fix `<detail>` arrow in Firefox & include bugzilla link.
-  * Update `<details>` arrow to work on not just markdown.
-* Issues: Tweak sidebar text color, fix bold links.
-* Help: Style version dropdown arrow. Fixes [issue #333](https://github.com/StylishThemes/GitHub-Dark/issues/333).
-* Organization: Style arrow in Settings > Billing overview. Fixes [issue #332](https://github.com/StylishThemes/GitHub-Dark/issues/332).
-
-#### Version 1.14.87 (6/21/2016)
-
-* Issues:
-  * Add style to new hover class. See [issue #330](https://github.com/StylishThemes/GitHub-Dark/issues/330).
-  * More fixes for new classes.
-* ZenHub: Update menu styling & some borders.
