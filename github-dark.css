@@ -309,7 +309,8 @@
   .markdown-body code:before, .markdown-body code:after,
   .markdown-body tt:before, .markdown-body tt:after,
   .markdown-body pre code:before, .markdown-body pre code:after,
-  .markdown-body pre tt:before, .markdown-body pre tt:after {
+  .markdown-body pre tt:before, .markdown-body pre tt:after,
+  .network-tree {
     display: none !important;
   }
   .intgrs-lstng-item-description:after {
@@ -325,7 +326,7 @@
     padding: 2px 5px !important;
   }
   input.tree-finder-input, input.tree-finder-input:focus,
-  input.js-site-search-focus, #network {
+  input.js-site-search-focus {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -976,6 +977,10 @@
   div#common-issues ul li a:hover, .rss-subscribe:hover {
     background-color: #282828 !important;
   }
+  #network .current-repository {
+    background: #343434 !important;
+    box-shadow: 0 0 0 2px #343434 !important;
+  }
   /* semi-transparent */
   .pagehead, .context-loader.large-format-loader, #graphs .loader,
   .org-header, .render-shell .slider, .illflow-item:not(.selected):hover,
@@ -1017,7 +1022,7 @@
   .commits-listing:before, .discussion-item-icon, .jstree-wholerow-hovered,
   .bubble-contents, .ellipsis-button, .filter-list li span.bar,
   .selectable_day.today, .billing-plans .current, .commits-listing:before,
-  #network .current-repository, .billing-section .usage-bar, .issue-list em,
+  .billing-section .usage-bar, .issue-list em,
   .file-info-divider, .pagehead ul.tabs li a:hover, .repos .bottom-bar,
   #languages .popular, .tip-box h4, table.upgrades td, .commit-preview .message,
   .commit-preview p.error, .pagehead ul.tabs li.contextswitch, #browser tr th,
@@ -1328,6 +1333,9 @@
   }
   .diverge-widget .separator {
     background: #ccc !important;
+  }
+  #network canvas {
+    background: #fff !important;
   }
   .state-widget .ahead .bar, .render-shell > .slider .dragger:hover,
   .render-shell > .slider .dragger:active {
@@ -2110,10 +2118,6 @@
     opacity: .1 !important;
     z-index: 0 !important;
   }
-  #network canvas {
-    background: #fff !important;
-    opacity: .85 !important;
-  }
   .inbox-zero-octocat {
     opacity: .6 !important;
   }
@@ -2412,10 +2416,6 @@
    *      '------'---.___ -  _ =   _.-'
    *                     `--------'
    */
-  .enterprise #network canvas {
-    background: none transparent !important;
-    opacity: 1 !important;
-  }
   .enterprise.page-profile .profilecols ul.stats li strong {
     color: #CCC;
     background: transparent !important;
