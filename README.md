@@ -62,6 +62,21 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.92 (7/19/2016)
+
+* Global: Fix signed out comment style. See [pull #350](https://github.com/StylishThemes/GitHub-Dark/pull/350).
+* Readme: Add link to selected tab color style.
+* Network:
+  * Tweak invert.
+  * Tweaks, remove #000 backgrounds.
+* Member:
+  * Tweaks, remove #000 backgrounds.
+  * Add tree images.
+* Frontpage/Feed:
+  * Make feed icon orange. See [pull #348](https://github.com/StylishThemes/GitHub-Dark/pull/348).
+  * Use more specific icon selector (x3).
+* Contact: Fix side menu border.
+
 #### Version 1.14.91 (7/18/2016)
 
 * Global: Split out selected tab color into a separate repo/style.
