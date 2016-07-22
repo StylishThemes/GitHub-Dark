@@ -62,6 +62,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.93 (7/22/2016)
+
+* Diff: Add image preview background to diff view.
+* Global:
+  * Include raw gist view. See [pull #355](https://github.com/StylishThemes/GitHub-Dark/pull/355).
+  * Combine `@-moz-document` domains into a regexp.
+
 #### Version 1.14.92 (7/19/2016)
 
 * Global: Fix signed out comment style. See [pull #350](https://github.com/StylishThemes/GitHub-Dark/pull/350).
@@ -80,46 +87,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.14.91 (7/18/2016)
 
 * Global: Split out selected tab color into a separate repo/style.
-
-#### Version 1.14.90 (7/17/2016)
-
-* Global:
-  * Set brown panels background-color to preserve background image on feed page. Fixes [issue #346](https://github.com/StylishThemes/GitHub-Dark/issues/346).
-* Tabs - add border matching base color to:
-  * Site navigation tabs.
-  * Comment tabs.
-  * User profile tabs.
-  * Settings side navigation.
-* Network: Darken network graph. This does invert some avatars, which may not be ideal!
-* Feed
-  * Remove user RSS icon background & set color. Fixes [issue #345](https://github.com/StylishThemes/GitHub-Dark/issues/345).
-  * Darken `.atom` page feed button (in Firefox). Fixes [issue #346](https://github.com/StylishThemes/GitHub-Dark/issues/346).
-
-#### Version 1.14.89 (7/16/2016)
-
-* Global
-  * Make it more apparent that `<details>` is clickable.
-  * Tweak counters.
-  * Remove "classy" button class.
-  * Change yellow panels to semi-transparent brown. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
-  * Replace yellow buttons/text. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
-  * Combine text color definitions.
-* Milestones: Style progress bar & calendar.
-* Issues:
-  * Fix rare white background on issue hover.
-  * Remove "contributing" class from blue styles.
-  * Make labels & milestones hover brighter.
-  * Brighten labels & milestones text color on hover. See [issue #340](https://github.com/StylishThemes/GitHub-Dark/issues/340).
-  * Fix `.RecentBranches` and text pending colors. See [pull #343](https://github.com/StylishThemes/GitHub-Dark/pull/343).
-* Pull:
-  * Comparing change; no merge.
-  * Fix unstyled border. Fixes [issue #342](https://github.com/StylishThemes/GitHub-Dark/issues/342).
-* Code:
-  * Fix highlight color. See [issue #339](https://github.com/StylishThemes/GitHub-Dark/issues/339).
-  * Brighten hover over selected lines. See [issue #339](https://github.com/StylishThemes/GitHub-Dark/issues/339).
-  * Move highlighted code out of "yellow" section.
-* Gists: Add a border to the "Secret" label.
-* Explore: Many tweaks & fixes to cards.
-* Profile: Darken "New" bio label.
-* ZenHub: Style epic filter.
-* Readme: Add minor space to shield/io labels. See [pull #341](https://github.com/StylishThemes/GitHub-Dark/pull/341).
