@@ -62,6 +62,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.94 (7/24/2016)
+
+* Global: Fix GitHub content regex.
+
 #### Version 1.14.93 (7/22/2016)
 
 * Diff: Add image preview background to diff view.
@@ -83,7 +87,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Make feed icon orange. See [pull #348](https://github.com/StylishThemes/GitHub-Dark/pull/348).
   * Use more specific icon selector (x3).
 * Contact: Fix side menu border.
-
-#### Version 1.14.91 (7/18/2016)
-
-* Global: Split out selected tab color into a separate repo/style.
