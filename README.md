@@ -62,6 +62,10 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.95 (7/24/2016)
+
+* Global: Include "patch-diff" GitHub user content.
+
 #### Version 1.14.94 (7/24/2016)
 
 * Global: Fix GitHub content regex.
