@@ -17,8 +17,7 @@
     <img src="https://img.shields.io/gitter/room/StylishThemes/Github-Dark.js.svg?maxAge=2592000" alt="Gitter">
   </a>
 </p>
-
-Your eyes will :heart: you.
+<p align="center">Your eyes will :heart: you.</p>
 
 ## Preview
 ![](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
@@ -80,6 +79,20 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.96 (7/24/2016)
+
+* Global:
+  * Switch to target githubusercontent domain.
+  * Brighten most text by 20 lightness (HSL).
+  * Adjust red panel colors.
+  * Blue labels: make text white.
+* Pull Request: Fix Travis pending dot x2.
+* Comments: Bright quote block text.
+* Status: Change red text to white x2.
+* Readme:
+  * Beautify readme; See [pull #356](https://github.com/StylishThemes/GitHub-Dark/pull/356); thanks [@un1versal](https://github.com/un1versal)!
+  * Center images.
+
 #### Version 1.14.95 (7/24/2016)
 
 * Global: Include "patch-diff" GitHub user content.
@@ -94,18 +107,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Global:
   * Include raw gist view. See [pull #355](https://github.com/StylishThemes/GitHub-Dark/pull/355).
   * Combine `@-moz-document` domains into a regexp.
-
-#### Version 1.14.92 (7/19/2016)
-
-* Global: Fix signed out comment style. See [pull #350](https://github.com/StylishThemes/GitHub-Dark/pull/350).
-* Readme: Add link to selected tab color style.
-* Network:
-  * Tweak invert.
-  * Tweaks, remove #000 backgrounds.
-* Member:
-  * Tweaks, remove #000 backgrounds.
-  * Add tree images.
-* Frontpage/Feed:
-  * Make feed icon orange. See [pull #348](https://github.com/StylishThemes/GitHub-Dark/pull/348).
-  * Use more specific icon selector (x3).
-* Contact: Fix side menu border.
