@@ -79,6 +79,16 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.97 (7/25/2016)
+
+* Global:
+  * Brighten placeholders a bit. Fixes [issue #359](https://github.com/StylishThemes/GitHub-Dark/issues/359).
+  * Darken brighter text colors. See [pull #358](https://github.com/StylishThemes/GitHub-Dark/pull/358).
+* PR: Make stale files link match base color. See [issue #360](https://github.com/StylishThemes/GitHub-Dark/issues/360).
+* Settings: Remove session device background & hover. Fixes [issue #361](https://github.com/StylishThemes/GitHub-Dark/issues/361).
+* Status: brighten disabled pager. Fixes [issue #362](https://github.com/StylishThemes/GitHub-Dark/issues/362).
+* Grunt: Add back perfectionist & clean up code selectors.
+
 #### Version 1.14.96 (7/24/2016)
 
 * Global:
@@ -96,14 +106,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 #### Version 1.14.95 (7/24/2016)
 
 * Global: Include "patch-diff" GitHub user content.
-
-#### Version 1.14.94 (7/24/2016)
-
-* Global: Fix GitHub content regex.
-
-#### Version 1.14.93 (7/22/2016)
-
-* Diff: Add image preview background to diff view.
-* Global:
-  * Include raw gist view. See [pull #355](https://github.com/StylishThemes/GitHub-Dark/pull/355).
-  * Combine `@-moz-document` domains into a regexp.
