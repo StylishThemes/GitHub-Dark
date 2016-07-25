@@ -151,6 +151,17 @@ module.exports = function(grunt) {
       afterCleanCss: {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {replacements: [{pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g, replacement: ''}]}
+      },
+      afterPerfectionist: {
+        files: {'<%= config.sourceFile %>' : '<%= config.sourceFile %>'},
+        options: {
+          replacements: [
+            {pattern: /\{\/\*\!/g, replacement: '{\n /*!'},
+            {pattern: /\/\* /g, replacement: '\n  /* '},
+            {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n'},
+            {pattern: / {2}}\/\*/gm, replacement: '  }\n  /*'},
+          ]
+        }
       }
     },
     clean: {
@@ -160,7 +171,8 @@ module.exports = function(grunt) {
     },
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/src/twilight.css',
-      authors: 'bash tools/authors'
+      authors: 'bash tools/authors',
+      perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250'
     },
     cssmin: {
       minify: {
@@ -249,6 +261,10 @@ module.exports = function(grunt) {
     grunt.task.run([
       'cssmin:themes'
     ]);
+  });
+
+  grunt.registerTask('clean', 'Perfectionist cleanup', function() {
+    grunt.task.run(['exec:perfectionist', 'string-replace:afterPerfectionist']);
   });
 
   // lint github-dark.css and themes for errors
