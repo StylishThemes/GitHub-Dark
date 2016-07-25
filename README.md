@@ -17,7 +17,7 @@
     <img src="https://img.shields.io/gitter/room/StylishThemes/Github-Dark.js.svg?maxAge=2592000" alt="Gitter">
   </a>
 </p>
-<p align="center">Your eyes will :heart: you.</p>
+<h2 align="center">Your eyes will :heart: you.</h2>
 
 ## Preview
 ![](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
