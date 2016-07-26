@@ -79,6 +79,11 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.98 (7/26/2016)
+
+* Status: Fix pagination hover underline.
+* ZenHub: Update to new styles.
+
 #### Version 1.14.97 (7/25/2016)
 
 * Global:
@@ -102,7 +107,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Readme:
   * Beautify readme; See [pull #356](https://github.com/StylishThemes/GitHub-Dark/pull/356); thanks [@un1versal](https://github.com/un1versal)!
   * Center images.
-
-#### Version 1.14.95 (7/24/2016)
-
-* Global: Include "patch-diff" GitHub user content.
