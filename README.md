@@ -79,6 +79,13 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.99 (7/26/2016)
+
+* ZenHub:
+  * Fix banner selector (readonly)
+  * One more selector Fix.
+  * More tweaks for issue popovers.
+
 #### Version 1.14.98 (7/26/2016)
 
 * Status: Fix pagination hover underline.
