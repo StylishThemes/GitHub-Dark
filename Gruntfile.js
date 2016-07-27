@@ -170,7 +170,7 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      stylelint: 'npm run stylelint --silent -- github-dark.css themes/src/twilight.css',
+      stylelint: 'npm run stylelint --silent -- github-dark.css',
       authors: 'bash tools/authors',
       perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250'
     },
