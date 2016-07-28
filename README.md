@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="githubdark-logo" src="./images/githubdark-ish.png" width="580">
+  <img alt="githubdark-logo" src="https://rawgit.com/StylishThemes/logo/master/github.dark/githubdark.svg" width="580">
   <br>
   <a href="https://github.com/StylishThemes/GitHub-Dark/tags">
     <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=%20tag%20" alt="Tag">
@@ -20,9 +20,9 @@
 <h2 align="center">Your eyes will :heart: you.</h2>
 
 ## Preview
-![](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/screenshots/after_blue.png)
+![](./images/screenshots/after_blue.png)
 
-## Install
+## Installing
 
 * If using Stylish:
   * Get the Stylish addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
@@ -33,7 +33,7 @@
       * Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
 * Or, use our [GitHub-Dark Script](https://github.com/StylishThemes/GitHub-Dark-Script) which requires a [user script addon](https://github.com/StylishThemes/GitHub-Dark-Script/wiki/Install), but allows dynamic style changes & updates:bangbang:
 
-## Additional GitHub customization
+## Additional GitHub Customization
 
 * [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes
 * [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
@@ -70,10 +70,10 @@
 If you would like to contribute to this repository, please...
 
 1. Fork
-2. Make changes (please read the [contribution guidelines](https://github.com/StylishThemes/GitHub-Dark/blob/master/.github/CONTRIBUTING.md) and abide by them)
+2. Make changes (please read the [contribution guidelines](./.github/CONTRIBUTING.md) and abide by them)
 3. Create a pull request!
 
-Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Dark/blob/master/AUTHORS) so far!
+Thanks to all that have [contributed](./AUTHORS) so far!
 
 ## Recent Changes
 
