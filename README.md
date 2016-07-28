@@ -79,6 +79,14 @@ Thanks to all that have [contributed](https://github.com/StylishThemes/GitHub-Da
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+#### Version 1.14.100 (7/27/2016)
+
+* Global: Revert part of [pull 358](https://github.com/StylishThemes/GitHub-Dark/pull/358); see [pull #364](https://github.com/StylishThemes/GitHub-Dark/pull/364).
+* Diff: Fix line comment [+] sign.
+* Readme: draw attention to tag line. See [pull #363](https://github.com/StylishThemes/GitHub-Dark/pull/363).
+* Meta: Update deps, update stylelint rules for 7.0.3.
+* Grunt: Fix unicode-range block & add missing comma to main css file.
+
 #### Version 1.14.99 (7/26/2016)
 
 * ZenHub:
@@ -90,27 +98,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
 * Status: Fix pagination hover underline.
 * ZenHub: Update to new styles.
-
-#### Version 1.14.97 (7/25/2016)
-
-* Global:
-  * Brighten placeholders a bit. Fixes [issue #359](https://github.com/StylishThemes/GitHub-Dark/issues/359).
-  * Darken brighter text colors. See [pull #358](https://github.com/StylishThemes/GitHub-Dark/pull/358).
-* PR: Make stale files link match base color. See [issue #360](https://github.com/StylishThemes/GitHub-Dark/issues/360).
-* Settings: Remove session device background & hover. Fixes [issue #361](https://github.com/StylishThemes/GitHub-Dark/issues/361).
-* Status: brighten disabled pager. Fixes [issue #362](https://github.com/StylishThemes/GitHub-Dark/issues/362).
-* Grunt: Add back perfectionist & clean up code selectors.
-
-#### Version 1.14.96 (7/24/2016)
-
-* Global:
-  * Switch to target githubusercontent domain.
-  * Brighten most text by 20 lightness (HSL).
-  * Adjust red panel colors.
-  * Blue labels: make text white.
-* Pull Request: Fix Travis pending dot x2.
-* Comments: Bright quote block text.
-* Status: Change red text to white x2.
-* Readme:
-  * Beautify readme; See [pull #356](https://github.com/StylishThemes/GitHub-Dark/pull/356); thanks [@un1versal](https://github.com/un1versal)!
-  * Center images.
