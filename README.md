@@ -79,7 +79,24 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
-#### Version 1.14.100 (7/27/2016)
+### Version 1.14.101 (7/29/2016)
+
+* Global:
+  * Fix rendering of certain buttons in Firefox.
+  * Combine color definitions.
+* Blame: Fix vertical alignment of paste button icon.
+* Status Boxes:
+  * `#message.major` add title to white selectors. See [pull #365](https://github.com/StylishThemes/GitHub-Dark/pull/365).
+  * Make all status box text white.
+* Settings: Make GitHub pages text white.
+* Help: Fix alert boxes.
+* Issues: Timeline icons need solid background color.
+* Readme:
+  * Update logo links and relative links. See [pull #366](https://github.com/StylishThemes/GitHub-Dark/pull/366).
+* Misc:
+  * Fix Emoji userscript dropdown text color (partially reverted).
+
+### Version 1.14.100 (7/27/2016)
 
 * Global: Revert part of [pull 358](https://github.com/StylishThemes/GitHub-Dark/pull/358); see [pull #364](https://github.com/StylishThemes/GitHub-Dark/pull/364).
 * Diff: Fix line comment [+] sign.
@@ -87,14 +104,9 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Meta: Update deps, update stylelint rules for 7.0.3.
 * Grunt: Fix unicode-range block & add missing comma to main css file.
 
-#### Version 1.14.99 (7/26/2016)
+### Version 1.14.99 (7/26/2016)
 
 * ZenHub:
   * Fix banner selector (readonly)
   * One more selector Fix.
   * More tweaks for issue popovers.
-
-#### Version 1.14.98 (7/26/2016)
-
-* Status: Fix pagination hover underline.
-* ZenHub: Update to new styles.
