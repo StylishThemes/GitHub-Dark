@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="githubdark-logo" src="https://rawgit.com/StylishThemes/logo/master/github.dark/githubdark.svg" width="580">
+  <img alt="githubdark-logo" src="https://rawgit.com/StylishThemes/logos/master/github.dark/githubdark-mini.svg" width="580">
   <br>
   <a href="https://github.com/StylishThemes/GitHub-Dark/tags">
     <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=%20tag%20" alt="Tag">
