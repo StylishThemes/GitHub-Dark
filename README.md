@@ -79,6 +79,17 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.102 (7/31/2016)
+
+* Global:
+  * Brighten mention suggester text. Fixes [issue #368](https://github.com/StylishThemes/GitHub-Dark/issues/368).
+  * Add base-color to outlines.
+  * Add outline to elements with a tabindex.
+* Settings: Style add collaborator autocomplete dropdown.
+* ZenHub: Fix new pipeline icon styles; but partially revert due to broken selector issues.
+* Header: Remove input focus.
+* Issues/PR: Add unread indicator. Fixes [issue #371](https://github.com/StylishThemes/GitHub-Dark/issues/371).
+
 ### Version 1.14.101 (7/29/2016)
 
 * Global:
@@ -103,10 +114,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Readme: draw attention to tag line. See [pull #363](https://github.com/StylishThemes/GitHub-Dark/pull/363).
 * Meta: Update deps, update stylelint rules for 7.0.3.
 * Grunt: Fix unicode-range block & add missing comma to main css file.
-
-### Version 1.14.99 (7/26/2016)
-
-* ZenHub:
-  * Fix banner selector (readonly)
-  * One more selector Fix.
-  * More tweaks for issue popovers.
