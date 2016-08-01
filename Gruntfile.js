@@ -21,9 +21,19 @@ module.exports = function(grunt) {
     };
   }
 
-  getTheme = function() {
+  function getTheme() {
     return (config.theme || '').toLowerCase().replace(/\s+/g, '-');
-  };
+  }
+
+  // modified from http://stackoverflow.com/a/5624139/145346
+  function hexToRgb(hex) {
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? [
+      parseInt(result[1], 16),
+      parseInt(result[2], 16),
+      parseInt(result[3], 16)
+    ].join(", ") : "";
+  }
 
   // ** set up build options **
   config.sourceFile = 'github-dark.css';
@@ -77,6 +87,9 @@ module.exports = function(grunt) {
   }, {
     pattern: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g,
     replacement: config.color
+  }, {
+    pattern: /\/\*\[\[base-color-rgb\]\]\*\//g,
+    replacement: hexToRgb(config.color)
   }, {
     pattern: '/*[[font-choice]]*/',
     replacement: config.font
