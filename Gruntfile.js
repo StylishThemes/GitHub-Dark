@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
   'use strict';
 
-  var config, getTheme, file;
+  var config, file;
 
   try {
     config = grunt.file.readJSON('build.json');
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
   // modified from http://stackoverflow.com/a/5624139/145346
   function hexToRgb(hex) {
-    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? [
       parseInt(result[1], 16),
       parseInt(result[2], 16),
