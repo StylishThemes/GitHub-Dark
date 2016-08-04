@@ -79,6 +79,18 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.103 (8/4/2016)
+
+* Global:
+  * Brighten scrollbar. Fixes [issue #372](https://github.com/StylishThemes/GitHub-Dark/issues/372).
+  * Set hovered scrollbar to base color. See [issue #372](https://github.com/StylishThemes/GitHub-Dark/issues/372).
+  * Make hovered scrollbar more transparent.
+  * Adjust label dropdown hovers. Fixes [issue #375](https://github.com/StylishThemes/GitHub-Dark/issues/375).
+* Grunt:
+  * Include "base-color-rgb" in custom build style.
+  * Fix js issues.
+  * Remove trailing space from `[alt=":ant:"],` selector.
+
 ### Version 1.14.102 (7/31/2016)
 
 * Global:
@@ -106,11 +118,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Update logo links and relative links. See [pull #366](https://github.com/StylishThemes/GitHub-Dark/pull/366).
 * Misc:
   * Fix Emoji userscript dropdown text color (partially reverted).
-
-### Version 1.14.100 (7/27/2016)
-
-* Global: Revert part of [pull 358](https://github.com/StylishThemes/GitHub-Dark/pull/358); see [pull #364](https://github.com/StylishThemes/GitHub-Dark/pull/364).
-* Diff: Fix line comment [+] sign.
-* Readme: draw attention to tag line. See [pull #363](https://github.com/StylishThemes/GitHub-Dark/pull/363).
-* Meta: Update deps, update stylelint rules for 7.0.3.
-* Grunt: Fix unicode-range block & add missing comma to main css file.
