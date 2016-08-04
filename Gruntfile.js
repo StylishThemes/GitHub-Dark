@@ -174,6 +174,7 @@ module.exports = function(grunt) {
             {pattern: /\/\* /g, replacement: '\n  /* '},
             {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n'},
             {pattern: / {2}}\/\*/gm, replacement: '  }\n  /*'},
+            {pattern: /,\s+\n/gm, replacement: ',\n'},
             // fix unicode-range block
             {pattern: /\n\s{23}/gm, replacement: ''},
             {pattern: /(-025A9,|-02662,)/gim, replacement: '$&\n                   '}
