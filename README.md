@@ -79,6 +79,10 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.104 (8/5/2016)
+
+* PR: Add build status styling. Fixes issue [#379](https://github.com/StylishThemes/GitHub-Dark/issues/379) and [#380](https://github.com/StylishThemes/GitHub-Dark/issues/380).
+
 ### Version 1.14.103 (8/4/2016)
 
 * Global:
@@ -101,20 +105,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * ZenHub: Fix new pipeline icon styles; but partially revert due to broken selector issues.
 * Header: Remove input focus.
 * Issues/PR: Add unread indicator. Fixes [issue #371](https://github.com/StylishThemes/GitHub-Dark/issues/371).
-
-### Version 1.14.101 (7/29/2016)
-
-* Global:
-  * Fix rendering of certain buttons in Firefox.
-  * Combine color definitions.
-* Blame: Fix vertical alignment of paste button icon.
-* Status Boxes:
-  * `#message.major` add title to white selectors. See [pull #365](https://github.com/StylishThemes/GitHub-Dark/pull/365).
-  * Make all status box text white.
-* Settings: Make GitHub pages text white.
-* Help: Fix alert boxes.
-* Issues: Timeline icons need solid background color.
-* Readme:
-  * Update logo links and relative links. See [pull #366](https://github.com/StylishThemes/GitHub-Dark/pull/366).
-* Misc:
-  * Fix Emoji userscript dropdown text color (partially reverted).
