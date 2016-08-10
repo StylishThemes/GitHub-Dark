@@ -79,6 +79,22 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.105 (8/10/2016)
+
+* PR: Tweak background on branch actions frame.
+* Global:
+  * Brighten item hover text. Fixes [issue #385](https://github.com/StylishThemes/GitHub-Dark/issues/385).
+  * Clean up a lot of accumulated cruft, fix quoted text. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
+* Discussion:
+  * Fix Comment form error text color. See issues [#381](https://github.com/StylishThemes/GitHub-Dark/issues/381) and [#382](https://github.com/StylishThemes/GitHub-Dark/issues/382).
+  * Tweak comment error color.
+  * Tweak red boxes. See [issue #382](https://github.com/StylishThemes/GitHub-Dark/issues/382).
+* Help:
+  * Style main page. Fixes [issue #386](https://github.com/StylishThemes/GitHub-Dark/issues/386).
+  * Use more general header selectors. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
+  * Brighten menu header text. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
+* Business: Invert pricing table. Fixes [issue #383](https://github.com/StylishThemes/GitHub-Dark/issues/383).
+
 ### Version 1.14.104 (8/5/2016)
 
 * PR: Add build status styling. Fixes issue [#379](https://github.com/StylishThemes/GitHub-Dark/issues/379) and [#380](https://github.com/StylishThemes/GitHub-Dark/issues/380).
@@ -94,14 +110,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Include "base-color-rgb" in custom build style.
   * Fix js issues.
   * Remove trailing space from `[alt=":ant:"],` selector.
-
-### Version 1.14.102 (7/31/2016)
-
-* Global:
-  * Brighten mention suggester text. Fixes [issue #368](https://github.com/StylishThemes/GitHub-Dark/issues/368).
-  * Add base-color to outlines.
-  * Add outline to elements with a tabindex.
-* Settings: Style add collaborator autocomplete dropdown.
-* ZenHub: Fix new pipeline icon styles; but partially revert due to broken selector issues.
-* Header: Remove input focus.
-* Issues/PR: Add unread indicator. Fixes [issue #371](https://github.com/StylishThemes/GitHub-Dark/issues/371).
