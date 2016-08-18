@@ -79,6 +79,20 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.106 (8/18/2016)
+
+* Open-source: Brighten "<> with ♥ by GitHub". See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
+* Item hover: Bump selector specificity. See [issue #385](https://github.com/StylishThemes/GitHub-Dark/issues/385).
+* Global:
+  * Reduce gradient intensity slightly. Fixes [issue #392](https://github.com/StylishThemes/GitHub-Dark/issues/392).
+  * Also tweak brighter gradients.
+* Pulse: Fix bold text.
+* Organization: Set organization text color. See [pull #393](https://github.com/StylishThemes/GitHub-Dark/pull/393).
+* Search: Fix wiki search result highlights.
+* Integrations:
+  * Fix hover header text color.
+  * Fix category hover color.
+
 ### Version 1.14.105 (8/10/2016)
 
 * PR: Tweak background on branch actions frame.
@@ -98,15 +112,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 ### Version 1.14.104 (8/5/2016)
 
 * PR: Add build status styling. Fixes issue [#379](https://github.com/StylishThemes/GitHub-Dark/issues/379) and [#380](https://github.com/StylishThemes/GitHub-Dark/issues/380).
-
-### Version 1.14.103 (8/4/2016)
-
-* Global:
-  * Brighten scrollbar. Fixes [issue #372](https://github.com/StylishThemes/GitHub-Dark/issues/372).
-  * Set hovered scrollbar to base color. See [issue #372](https://github.com/StylishThemes/GitHub-Dark/issues/372).
-  * Make hovered scrollbar more transparent.
-  * Adjust label dropdown hovers. Fixes [issue #375](https://github.com/StylishThemes/GitHub-Dark/issues/375).
-* Grunt:
-  * Include "base-color-rgb" in custom build style.
-  * Fix js issues.
-  * Remove trailing space from `[alt=":ant:"],` selector.
