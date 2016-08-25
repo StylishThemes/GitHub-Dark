@@ -79,6 +79,24 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.107 (8/25/2016)
+
+* Global:
+  * FIx green/red text selectors.
+  * Add a few more text color styles.
+* Flashes: Remove double border.
+* Organizations: Darken organization URL.
+* Wiki: Add broken link style.
+* PR/PR list:
+  * Make failed discussion commit build status (x) icon red.
+  * Fix build status icon colors x2.
+* Commits: Style unsigned commits.
+* Explore: Style new header.
+* Meta:
+  * Update AUTHORS
+  * Update dependencies, styllint and its config.
+  * Replace tabs in .gitattributes.
+
 ### Version 1.14.106 (8/18/2016)
 
 * Open-source: Brighten "<> with ♥ by GitHub". See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
