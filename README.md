@@ -126,7 +126,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Use more general header selectors. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
   * Brighten menu header text. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
 * Business: Invert pricing table. Fixes [issue #383](https://github.com/StylishThemes/GitHub-Dark/issues/383).
-
-### Version 1.14.104 (8/5/2016)
-
-* PR: Add build status styling. Fixes issue [#379](https://github.com/StylishThemes/GitHub-Dark/issues/379) and [#380](https://github.com/StylishThemes/GitHub-Dark/issues/380).
