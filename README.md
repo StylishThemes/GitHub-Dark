@@ -10,7 +10,7 @@
   <a href="http://github.com/StylishThemes/GitHub-Dark/fork">
     <img src="http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Fork">
   </a>
-  <a href="https://david-dm.org/StylishThemes/GitHub-Dark#info=devDependencies">
+  <a href="https://david-dm.org/StylishThemes/GitHub-Dark?type=dev">
     <img src="https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg?label=%20devDependencies%20" alt="devDependencies">
   </a>
   <a href="https://gitter.im/StylishThemes/GitHub-Dark">
