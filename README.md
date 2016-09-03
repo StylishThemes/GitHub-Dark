@@ -79,6 +79,20 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.109 (9/3/2016)
+
+* Frontpage:
+  * User high resolution spinner for "Show more repos" button.
+  * Tweak and fix "Show more repos" buttons.
+* Global:
+  * Optimize SVG spinner further.
+  * Fix various text colors.
+  * Signup button: Consistent styling normal + hover is green. See [pull #397](https://github.com/StylishThemes/GitHub-Dark/pull/397).
+  * Tweak green button style.
+* Milestones: Fix open/close counters.
+* Meta: Fix typo calendar. See [pull #396](https://github.com/StylishThemes/GitHub-Dark/pull/396).
+* Readme: Fix dev dependencies link.
+
 ### Version 1.14.108 (8/30/2016)
 
 * Graphs: Make network graph transparent to workaround Firefox bug. See [issue #395](https://github.com/StylishThemes/GitHub-Dark/issues/395).
@@ -103,17 +117,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Update AUTHORS
   * Update dependencies, styllint and its config.
   * Replace tabs in .gitattributes.
-
-### Version 1.14.106 (8/18/2016)
-
-* Open-source: Brighten "<> with ♥ by GitHub". See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
-* Item hover: Bump selector specificity. See [issue #385](https://github.com/StylishThemes/GitHub-Dark/issues/385).
-* Global:
-  * Reduce gradient intensity slightly. Fixes [issue #392](https://github.com/StylishThemes/GitHub-Dark/issues/392).
-  * Also tweak brighter gradients.
-* Pulse: Fix bold text.
-* Organization: Set organization text color. See [pull #393](https://github.com/StylishThemes/GitHub-Dark/pull/393).
-* Search: Fix wiki search result highlights.
-* Integrations:
-  * Fix hover header text color.
-  * Fix category hover color.
