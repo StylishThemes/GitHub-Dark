@@ -79,6 +79,24 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.14.110 (9/6/2016)
+
+* Global:
+  * Remove darker h6 styling. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
+  * Override default h6 style. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377) again.
+  * Match HR background to H1 border. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
+  * Make markdown blockquote match other blockquotes.
+  * Darken inline & unhighlighted code slightly.
+  * Break up box- and text-shadow groups.
+* Help:
+  * Fix code styling. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
+  * Bright h4 headers. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
+* Frontpage: Tweaks 'show more repos' button once more.
+* Meta: Use correct border shorthand ordering.
+* Options: Fix access token color
+* OAuth: Fix organization names.
+* Fix background in payments for failed/refunded txn. See [pull #400](https://github.com/StylishThemes/GitHub-Dark/pull/400); thanks [yaauie](https://github.com/yaauie)!
+
 ### Version 1.14.109 (9/3/2016)
 
 * Frontpage:
@@ -100,20 +118,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Help: Brighten h2 & h3 headers.
 * Readme: Remove older change.
 
-### Version 1.14.107 (8/25/2016)
-
-* Global:
-  * FIx green/red text selectors.
-  * Add a few more text color styles.
-* Flashes: Remove double border.
-* Organizations: Darken organization URL.
-* Wiki: Add broken link style.
-* PR/PR list:
-  * Make failed discussion commit build status (x) icon red.
-  * Fix build status icon colors x2.
-* Commits: Style unsigned commits.
-* Explore: Style new header.
-* Meta:
-  * Update AUTHORS
-  * Update dependencies, styllint and its config.
-  * Replace tabs in .gitattributes.
