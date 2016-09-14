@@ -79,6 +79,32 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.15.0 (9/14/2016)
+
+* Global:
+  * Restore color to commit refs.
+  * Style color commit-ref user.
+  * Fix sticky header.
+* Integrations: Bright item header text. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
+* Code: Darken selection color slightly.
+* Repo: Darken repo icon.
+* User:
+  * Fix contribution graph.
+  * Fix year selector background.
+  * Fix timeline borders & another timeline tweak.
+  * Fix & darken contribution progress bars.
+  * Add background to popular repo cards.
+  * Add background to contribution graph.
+  * Dim & pad timeline first images.
+  * Remove text shadow on contribution dropdown.
+  * Dim & pad join GitHub image.
+* Project: Initial styling - probably missed a bunch!
+* Developer: Style cards & headers.
+* PR:
+  * Style review thread. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Add solid background to review thread.
+* Meta: Update dependencies and fix lint issues.
+
 ### Version 1.14.110 (9/6/2016)
 
 * Global:
@@ -110,11 +136,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Milestones: Fix open/close counters.
 * Meta: Fix typo calendar. See [pull #396](https://github.com/StylishThemes/GitHub-Dark/pull/396).
 * Readme: Fix dev dependencies link.
-
-### Version 1.14.108 (8/30/2016)
-
-* Graphs: Make network graph transparent to workaround Firefox bug. See [issue #395](https://github.com/StylishThemes/GitHub-Dark/issues/395).
-* Frontpage: Fix color of linked inline code.
-* Help: Brighten h2 & h3 headers.
-* Readme: Remove older change.
-
