@@ -4,7 +4,7 @@
   <a href="https://github.com/StylishThemes/GitHub-Dark/tags">
     <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=%20tag%20" alt="Tag">
   </a>
-  <a href="https://github.com/un1versal/GitHub-Dark/stargazers">
+  <a href="https://github.com/StylishThemes/GitHub-Dark/stargazers">
     <img src="http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Star">
   </a>
   <a href="http://github.com/StylishThemes/GitHub-Dark/fork">
