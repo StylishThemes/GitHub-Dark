@@ -90,7 +90,7 @@
   .Box-body-row--highlight .Box-row-link:hover, td.selectable-day,
   .date-selector .date-button, .exploregrid-item:hover .exploregrid-item-title,
   .stale-files-tab a, .intgrs-lstng-item-link:hover .intgrs-lstng-item-header,
-  .link-blue, a.link-blue {
+  .link-blue, a.link-blue, .profile-rollup-toggle:hover {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* Base color panel */
@@ -128,7 +128,8 @@
     border-color: /*[[base-color]]*/ #4183C4 transparent transparent !important;
   }
   .octofication .message, .panel-nav:not(.disabled):active,
-  .diagram-icon:not(.active), .btn.btn-outline, .btn.btn-outline:hover,
+  .diagram-icon:not(.active), .btn.btn-outline,
+  .btn.btn-outline:hover:not(.ajax-pagination-btn),
   .btn.btn-outline.zeroclipboard-is-hover, :checked + .radio-label,
   .gist-snippet .file-box:hover .file, .octofication .message,
   .reaction-sort-item.selected, .pull-request-link,
@@ -275,6 +276,10 @@
   /* .. and fix rare layout issue related to above hack */
   .diffbar.details-collapse {
     width: 980px !important;
+  }
+  /* User profile: Make the border not cross into the years buttons */
+  .profile-timeline-month-heading:after {
+    width: calc(100% - 94px) !important;
   }
   /* HACK: Tweak issue reaction */
   .reaction-summary-item {
@@ -443,8 +448,8 @@
   a.feed-icon, .session-device, .boxed-group-list > li.session-device:hover,
   #message-list .pagination a, #message-list .pagination .disabled,
   .merge-status-item .merge-status-icon,
-  .js-release-form .comment-form-head.tabnav,
-  .profile-timeline-year-list.bg-white, .project-columns, .project-header {
+  .js-release-form .comment-form-head.tabnav, .project-columns,
+  .project-header, .user-profile-nav, .profile-timeline-year-list.bg-white {
     background: transparent !important;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
@@ -638,7 +643,7 @@
   .repository-lang-stats-graph, .gist-quicksearch-results,
   .gist-quicksearch-result, .gist-quicksearch-result-group, .listgroup,
   .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
-  .progress-bar-inline .progress-bar, .menu-heading {
+  .progress-bar-inline .progress-bar, .menu-heading, .border-gray-dark {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, .header, table, table tr, table td, table th, blockquote,
@@ -710,7 +715,8 @@
   .discussion-item-deployed, .branch-action-body .merge-message,
   .profile-timeline-card-wrapper,
   .profile-rollup-wrapper + .profile-rollup-wrapper, .new-project-column,
-  .confirm-removal-list-container, .confirm-removal-list-item {
+  .confirm-removal-list-container, .confirm-removal-list-item, .user-profile-nav,
+  .border-gray-light, .ajax-pagination-form .ajax-pagination-btn {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset,
@@ -841,7 +847,7 @@
   input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus),
   .bg-gray-light, .explore-signup-entice, .ace_search_form, .ace_replace_form,
   .price-box, .cvv-hint-tooltip, .plan-choice, .billing-per-seat-callout:after,
-  .date-selector td, .merge-status-item, .user-profile-nav,
+  .date-selector td, .merge-status-item,
   .user-profile-sticky-bar:after, .review-thread, .review-thread-reply {
     background: #181818 !important;
     border-color: #343434 !important;
@@ -887,9 +893,10 @@
   .table-list:not(.team-member-list), .repo-file-upload-progress,
   .gcr-ext-editor-dialog, .shade-gray, .exploregrid-item, .listgroup-item,
   .signed-commit-badge-small, .facebox-popup, .explore-signup-entice-wrapper,
-  .bg-white, .billing-addon-items tr.total-row, .billing-addon-items tr.dark-row,
+  .billing-addon-items tr.total-row, .billing-addon-items tr.dark-row,
   .Box-body, li.pinned-repo-item, .js-contribution-graph h2 + div:last-child,
-  .project-triage-pane {
+  .project-triage-pane, .user-profile-nav.is-stuck,
+  .profile-timeline-card.bg-white {
     background: #181818 !important;
   }
   .sidebar-module {
@@ -958,7 +965,7 @@
   .ajax-pagination-form .ajax-pagination-btn:focus,
   .manage-repo-access-not-active, .header-search-scope, .reverse-progress-bar,
   .featurette.py-5, .ace_button:hover, .payment-history .refunded,
-  .payment-history .failed {
+  .payment-history .failed, .bg-white {
     background: #222 !important;
   }
   hr, .rule, #browser, .repos, .options-group, .pagehead ul.tabs li a.selected,
@@ -1165,6 +1172,9 @@
     background-color: #fc3 !important;
     fill: #fc3 !important;
   }
+  .progress-bar.anim-grow-x {
+    filter: brightness(75%) !important;
+  }
   /* invert (rgb) */
   #network .repo img:not(.gravatar), #header .logo,
   img[src="/images/logo@2x.png"], .site-logo a,
@@ -1177,7 +1187,7 @@
   .onion-skin .controls .slider .slider-track .dragger, .leaflet-control-zoom a,
   .leaflet-control-attribution.leaflet-compact-attribution:after,
   img[src$="favicons.githubusercontent.com/github.com"],
-  img[src$="invertocat.png"], .ghd-invert, .progress-bar.anim-grow-x {
+  img[src$="invertocat.png"], .ghd-invert {
     -webkit-filter: invert(100%) hue-rotate(180deg) !important;
             filter: invert(100%) hue-rotate(180deg) !important;
   }
@@ -1854,7 +1864,7 @@
   .subnav-search-icon, .discussion-sidebar-toggle .octicon,
   .auto-search-group > .octicon, .page-gist-edit .octicon-gist,
   .unselected-month, .pagination .disabled, .text-gray-light, a.text-gray-light,
-  .repohead h1 .octicon {
+  .repohead h1 .octicon, .profile-rollup-toggle {
     color: #606060 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before,
@@ -1920,7 +1930,7 @@
   }
   /* red border */
   .mergeable-dirty .bubble .mergeable, #message.major, .comment-form-error,
-  .comment-form-stale, .deprecation-notice {
+  .comment-form-stale, .deprecation-notice, .flash-error {
     border-color: #f44 !important;
     background: #300 !important;
   }
@@ -1942,7 +1952,7 @@
   .delete-owners-button:hover, .dangerzone-module h4, .btn-octicon-danger:hover,
   .deprecation-notice a, .billing-addon-items tr.total-row *,
   .comment-form-error, .comment-form-stale, .markdown-body .absent, .text-red,
-  a.text-red {
+  a.text-red, .flash-error {
     color: #f44 !important;
   }
   /* purple */
