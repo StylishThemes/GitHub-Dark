@@ -79,6 +79,33 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.15.1 (9/16/2016)
+
+* Global: Style tutorial bubbles.
+* User:
+  * Invert first and Joined GitHub images in timeline. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Add padding to month-year header.
+  * Make timeline vertical bar full height.
+  * Remove extra border on timeline events.
+  * Fix contribution graph/dropdown selector. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Various tweaks related to recent updates. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+* Project:
+  * Add solid background to project panel. See [issue #406](https://github.com/StylishThemes/GitHub-Dark/issues/406).
+  * Darken new project column border.
+* Security: Darken confirm TFA borders. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+* Pull Requests/Review:
+  * Make review thread timeline visible. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Revert last commit and only set z-index.
+  * Tweaks and fixes. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * More fixes. Fix stylelint. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Fix a border. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+  * Fix avatar timeline in review comments. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
+* Diff: Fixes to feature callout and disabled diff mode button.
+* File:
+  * Clipboard copy button. Fixes [issue #408](https://github.com/StylishThemes/GitHub-Dark/issues/408).
+  * Revert above commit as GitHub fixed it.
+* Readme: Fix link.
+
 ### Version 1.15.0 (9/14/2016)
 
 * Global:
@@ -122,17 +149,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Options: Fix access token color
 * OAuth: Fix organization names.
 * Fix background in payments for failed/refunded txn. See [pull #400](https://github.com/StylishThemes/GitHub-Dark/pull/400); thanks [yaauie](https://github.com/yaauie)!
-
-### Version 1.14.109 (9/3/2016)
-
-* Frontpage:
-  * User high resolution spinner for "Show more repos" button.
-  * Tweak and fix "Show more repos" buttons.
-* Global:
-  * Optimize SVG spinner further.
-  * Fix various text colors.
-  * Signup button: Consistent styling normal + hover is green. See [pull #397](https://github.com/StylishThemes/GitHub-Dark/pull/397).
-  * Tweak green button style.
-* Milestones: Fix open/close counters.
-* Meta: Fix typo calendar. See [pull #396](https://github.com/StylishThemes/GitHub-Dark/pull/396).
-* Readme: Fix dev dependencies link.
