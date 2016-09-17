@@ -79,6 +79,16 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.15.2 (9/17/2016)
+
+* Global: Style disabled dropdown sections.
+* Projects: Invert preview images.
+* Developer:
+  * Style current topic indicator.
+  * Fix sidebar arrow hover.
+* Libraries: Bright text & fix jumbotron.
+* Blog: Use selected theme for `pre > code` block styling. See [issue #410](https://github.com/StylishThemes/GitHub-Dark/issues/410).
+
 ### Version 1.15.1 (9/16/2016)
 
 * Global: Style tutorial bubbles.
@@ -131,21 +141,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Style review thread. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
   * Add solid background to review thread.
 * Meta: Update dependencies and fix lint issues.
-
-### Version 1.14.110 (9/6/2016)
-
-* Global:
-  * Remove darker h6 styling. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
-  * Override default h6 style. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377) again.
-  * Match HR background to H1 border. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
-  * Make markdown blockquote match other blockquotes.
-  * Darken inline & unhighlighted code slightly.
-  * Break up box- and text-shadow groups.
-* Help:
-  * Fix code styling. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
-  * Bright h4 headers. See [issue #377](https://github.com/StylishThemes/GitHub-Dark/issues/377).
-* Frontpage: Tweaks 'show more repos' button once more.
-* Meta: Use correct border shorthand ordering.
-* Options: Fix access token color
-* OAuth: Fix organization names.
-* Fix background in payments for failed/refunded txn. See [pull #400](https://github.com/StylishThemes/GitHub-Dark/pull/400); thanks [yaauie](https://github.com/yaauie)!
