@@ -79,6 +79,24 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.15.3 (9/19/2016)
+
+* Global:
+  * Tweak grey background shades.
+  * Tweak light grey backgrounds.
+* Blog:
+  * Brighten H2 headers.
+  * Brighten all dark blog styles.
+* Developer:
+  * Many fixes.
+  * At least it's not fubar. Fixes [issue #413](https://github.com/StylishThemes/GitHub-Dark/issues/413).
+* Review:
+  * Fix another border.
+  * Another border fix.
+* Jupyter:
+  * Remove universal selector in Twilight theme.
+  * Remove table syntax highlight definition.
+
 ### Version 1.15.2 (9/17/2016)
 
 * Global: Style disabled dropdown sections.
@@ -115,29 +133,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Clipboard copy button. Fixes [issue #408](https://github.com/StylishThemes/GitHub-Dark/issues/408).
   * Revert above commit as GitHub fixed it.
 * Readme: Fix link.
-
-### Version 1.15.0 (9/14/2016)
-
-* Global:
-  * Restore color to commit refs.
-  * Style color commit-ref user.
-  * Fix sticky header.
-* Integrations: Bright item header text. See [issue #388](https://github.com/StylishThemes/GitHub-Dark/issues/388).
-* Code: Darken selection color slightly.
-* Repo: Darken repo icon.
-* User:
-  * Fix contribution graph.
-  * Fix year selector background.
-  * Fix timeline borders & another timeline tweak.
-  * Fix & darken contribution progress bars.
-  * Add background to popular repo cards.
-  * Add background to contribution graph.
-  * Dim & pad timeline first images.
-  * Remove text shadow on contribution dropdown.
-  * Dim & pad join GitHub image.
-* Project: Initial styling - probably missed a bunch!
-* Developer: Style cards & headers.
-* PR:
-  * Style review thread. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Add solid background to review thread.
-* Meta: Update dependencies and fix lint issues.
