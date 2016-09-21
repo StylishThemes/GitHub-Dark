@@ -79,6 +79,13 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.15.4 (9/21/2016)
+
+* Developer: More tweaks.
+* Meta:
+  * Optimize default background image further.
+  * Optimize PNGs, add select-arrow image.
+
 ### Version 1.15.3 (9/19/2016)
 
 * Global:
@@ -106,30 +113,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
   * Fix sidebar arrow hover.
 * Libraries: Bright text & fix jumbotron.
 * Blog: Use selected theme for `pre > code` block styling. See [issue #410](https://github.com/StylishThemes/GitHub-Dark/issues/410).
-
-### Version 1.15.1 (9/16/2016)
-
-* Global: Style tutorial bubbles.
-* User:
-  * Invert first and Joined GitHub images in timeline. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Add padding to month-year header.
-  * Make timeline vertical bar full height.
-  * Remove extra border on timeline events.
-  * Fix contribution graph/dropdown selector. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Various tweaks related to recent updates. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-* Project:
-  * Add solid background to project panel. See [issue #406](https://github.com/StylishThemes/GitHub-Dark/issues/406).
-  * Darken new project column border.
-* Security: Darken confirm TFA borders. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-* Pull Requests/Review:
-  * Make review thread timeline visible. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Revert last commit and only set z-index.
-  * Tweaks and fixes. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * More fixes. Fix stylelint. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Fix a border. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-  * Fix avatar timeline in review comments. See [issue #404](https://github.com/StylishThemes/GitHub-Dark/issues/404).
-* Diff: Fixes to feature callout and disabled diff mode button.
-* File:
-  * Clipboard copy button. Fixes [issue #408](https://github.com/StylishThemes/GitHub-Dark/issues/408).
-  * Revert above commit as GitHub fixed it.
-* Readme: Fix link.
