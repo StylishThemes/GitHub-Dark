@@ -33,6 +33,10 @@
       * Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
 * Or, use our [GitHub-Dark Script](https://github.com/StylishThemes/GitHub-Dark-Script) which requires a [user script addon](https://github.com/StylishThemes/GitHub-Dark-Script/wiki/Install), but allows dynamic style changes & updates:bangbang:
 
+## Updating
+
+If a recent change by GitHub broke the style, chances are that we already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/37035/github-dark) or [GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) before opening an issue. Note that only Stylish for Firefox performs automatic style updates.
+
 ## Additional GitHub Customization
 
 * [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes
