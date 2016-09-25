@@ -40,7 +40,7 @@ module.exports = function(grunt) {
   file = getTheme();
   // setting "ace" to an empty string, or "default" will leave the default GitHub-base16 theme in place, with a dark background
   // using theme src files until we can figure out why cssmin is removing 2/3 of the definitions - see #240
-  config.themeFile = file === '' || file === 'default' ? '' : 'themes/min/' + file + '.min.css';
+  config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
   // build file name
   config.buildFile = 'github-dark-' + (file || 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
   // background options
@@ -183,10 +183,10 @@ module.exports = function(grunt) {
       }
     },
     clean: {
-      themesBefore: {
+      cssmins: {
         src: ['themes/*.min.css']
       },
-      themesAfter: {
+      build: {
         src: ['themes/build/']
       }
     },
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
       themes: {
         files: [{
           expand : true,
-          cwd : 'build/',
+          cwd : 'themes/build/',
           src : '*.css',
           dest : 'themes/',
           ext : '.min.css'
@@ -279,33 +279,37 @@ module.exports = function(grunt) {
 
   // build custom minified GitHub-Dark style
   grunt.registerTask('themes', 'Rebuild minified theme files', function() {
-    grunt.task.run(['themesBefore']);
+    grunt.task.run(['clean:cssmins']);
     var fallbacks = {
-      codemirror: grunt.file.read('/themes/codemirror/twilight.css'),
-      jupyter: grunt.file.read('/themes/jupyter/twilight.css')
+      codemirror: grunt.file.read('themes/codemirror/twilight.css'),
+      jupyter: grunt.file.read('themes/jupyter/twilight.css')
     };
+    grunt.file.mkdir('themes/build');
     grunt.file.expand({
       filter: "isFile",
-      cwd: "themes/github",
+      cwd: "themes/github/",
     }, [
       "*.css",
       "!_template.css"
-    ]).forEach(function(path) {
+    ]).forEach(function(name) {
       // concat similar named theme files; use fallback if it doesn't exist
-      var name = path.substring(path.lastIndexOf('/') + 1, path.length),
-        cur = grunt.file.read('github' + name);
+      var cur = grunt.file.read('themes/github/' + name);
+      console.log(name);
       if (cur) {
-        cur += grunt.file.exists('codemirror' + name) ?
-          grunt.file.read('codemirror' + name) : fallback.codemirror;
-        cur += grunt.file.exists('jupyter' + name) ?
-          grunt.file.read('jupyter' + name) : fallback.jupyter;
-        grunt.file.write("build/" + name, cur);
+        cur += grunt.file.exists('themes/codemirror/' + name) ?
+          grunt.file.read('themes/codemirror/' + name) : fallbacks.codemirror;
+        cur += grunt.file.exists('themes/jupyter/' + name) ?
+          grunt.file.read('themes/jupyter/' + name) : fallbacks.jupyter;
+        grunt.file.write("themes/build/" + name, cur);
       } else {
         grunt.log.error('Unable to read ' + cur);
       }
     });
     // compress & clean
-    grunt.task.run(['cssmin:themes', 'themesAfter']);
+    grunt.task.run([
+      'cssmin:themes',
+      'clean:build'
+    ]);
   });
 
   grunt.registerTask('clean', 'Perfectionist cleanup', function() {
