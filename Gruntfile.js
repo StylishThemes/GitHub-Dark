@@ -183,8 +183,11 @@ module.exports = function(grunt) {
       }
     },
     clean: {
-      themes: {
-        src: ['themes/min/*.min.css']
+      themesBefore: {
+        src: ['themes/*.min.css']
+      },
+      themesAfter: {
+        src: ['themes/build/']
       }
     },
     exec: {
@@ -203,9 +206,9 @@ module.exports = function(grunt) {
       themes: {
         files: [{
           expand : true,
-          cwd : 'themes/',
+          cwd : 'build/',
           src : '*.css',
-          dest : 'themes/min/',
+          dest : 'themes/',
           ext : '.min.css'
         }],
         options: {
@@ -276,9 +279,33 @@ module.exports = function(grunt) {
 
   // build custom minified GitHub-Dark style
   grunt.registerTask('themes', 'Rebuild minified theme files', function() {
-    grunt.task.run([
-      'cssmin:themes'
-    ]);
+    grunt.task.run(['themesBefore']);
+    var fallbacks = {
+      codemirror: grunt.file.read('/themes/codemirror/twilight.css'),
+      jupyter: grunt.file.read('/themes/jupyter/twilight.css')
+    };
+    grunt.file.expand({
+      filter: "isFile",
+      cwd: "themes/github",
+    }, [
+      "*.css",
+      "!_template.css"
+    ]).forEach(function(path) {
+      // concat similar named theme files; use fallback if it doesn't exist
+      var name = path.substring(path.lastIndexOf('/') + 1, path.length),
+        cur = grunt.file.read('github' + name);
+      if (cur) {
+        cur += grunt.file.exists('codemirror' + name) ?
+          grunt.file.read('codemirror' + name) : fallback.codemirror;
+        cur += grunt.file.exists('jupyter' + name) ?
+          grunt.file.read('jupyter' + name) : fallback.jupyter;
+        grunt.file.write("build/" + name, cur);
+      } else {
+        grunt.log.error('Unable to read ' + cur);
+      }
+    });
+    // compress & clean
+    grunt.task.run(['cssmin:themes', 'themesAfter']);
   });
 
   grunt.registerTask('clean', 'Perfectionist cleanup', function() {
