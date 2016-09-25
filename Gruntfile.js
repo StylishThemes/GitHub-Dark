@@ -40,7 +40,7 @@ module.exports = function(grunt) {
   file = getTheme();
   // setting "ace" to an empty string, or "default" will leave the default GitHub-base16 theme in place, with a dark background
   // using theme src files until we can figure out why cssmin is removing 2/3 of the definitions - see #240
-  config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
+  config.themeFile = file === '' || file === 'default' ? '' : 'themes/min/' + file + '.min.css';
   // build file name
   config.buildFile = 'github-dark-' + (file || 'default') + '-' + config.color.replace(/[^\d\w]/g, '') + '.build.min.css';
   // background options
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
     },
     clean: {
       themes: {
-        src: ['themes/*.min.css']
+        src: ['themes/min/*.min.css']
       }
     },
     exec: {
@@ -203,9 +203,9 @@ module.exports = function(grunt) {
       themes: {
         files: [{
           expand : true,
-          cwd : 'themes/src/',
+          cwd : 'themes/',
           src : '*.css',
-          dest : 'themes/',
+          dest : 'themes/min/',
           ext : '.min.css'
         }],
         options: {
