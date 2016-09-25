@@ -1,5 +1,5 @@
 /*! Pastel on Dark */
-.highlight, .ace_editor {
+.highlight, .CodeMirror {
   background-color: #2C2828 !important;
   color: #E6E1DC !important;
 }
@@ -108,131 +108,44 @@
 .highlight-text-tex .pl-s3 { color: #757aD8 !important; } /* support */
 
 /* pastel_on_dark */
-.ace_editor .ace_gutter {
-  background: #353030 !important;
+/* https://github.com/codemirror/CodeMirror/blob/master/theme/pastel-on-dark.css */
+.CodeMirror-selected { background: rgba(221,240,255,0.2) !important; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: rgba(221,240,255,0.2) !important; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: rgba(221,240,255,0.2) !important; }
+.CodeMirror-gutters {
+  background: #34302f !important;
+  border-right: 0px !important;
+  padding: 0 3px !important;
+}
+.CodeMirror-guttermarker { color: white !important; }
+.CodeMirror-guttermarker-subtle { color: #8F938F !important; }
+.CodeMirror-linenumber { color: #8F938F !important; }
+.CodeMirror-cursor { border-left: 1px solid #A7A7A7 !important; }
+.cm-comment { color: #A6C6FF !important; }
+.cm-atom { color: #DE8E30 !important; }
+.cm-number { color: #CCCCCC !important; }
+.cm-property { color: #8F938F !important; }
+.cm-attribute { color: #a6e22e !important; }
+.cm-keyword { color: #AEB2F8 !important; }
+.cm-string { color: #66A968 !important; }
+.cm-variable { color: #AEB2F8 !important; }
+.cm-variable-2 { color: #BEBF55 !important; }
+.cm-variable-3 { color: #DE8E30 !important; }
+.cm-def { color: #757aD8 !important; }
+.cm-bracket { color: #f8f8f2 !important; }
+.cm-tag { color: #C1C144 !important; }
+.cm-link { color: #ae81ff !important; }
+.cm-qualifier,span.cm-builtin { color: #C1C144 !important; }
+.cm-error {
+  background: #757aD8 !important;
+  color: #f8f8f0 !important;
+}
+.CodeMirror-activeline-background { background: rgba(255, 255, 255, 0.031) !important; }
+.CodeMirror-matchingbracket {
+  border: 1px solid rgba(255,255,255,0.25) !important;
   color: #8F938F !important;
+  margin: -1px -1px 0 -1px !important;
 }
-
-.ace_editor .ace_print-margin {
-  width: 1px !important;
-  background: #353030 !important;
-}
-
-.ace_editor .ace_cursor {
-  color: #A7A7A7 !important;
-}
-
-.ace_editor .ace_marker-layer .ace_selection {
-  background: rgba(221, 240, 255, 0.20) !important;
-}
-
-.ace_editor.ace_multiselect .ace_selection.ace_start {
-  box-shadow: 0 0 3px 0px #2C2828 !important;
-  border-radius: 2px !important;
-}
-
-.ace_editor .ace_marker-layer .ace_step {
-  background: rgb(102, 82, 0) !important;
-}
-
-.ace_editor .ace_marker-layer .ace_bracket {
-  margin: -1px 0 0 -1px !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-}
-
-.ace_editor .ace_marker-layer .ace_active-line {
-  background: rgba(255, 255, 255, 0.031) !important;
-}
-
-.ace_editor .ace_gutter-active-line {
-  background-color: rgba(255, 255, 255, 0.031) !important;
-}
-
-.ace_editor .ace_marker-layer .ace_selected-word {
-  border: 1px solid rgba(221, 240, 255, 0.20) !important;
-}
-
-.ace_editor .ace_invisible {
-  color: rgba(255, 255, 255, 0.25) !important;
-}
-
-.ace_editor .ace_keyword,
-.ace_editor .ace_meta {
-  color: #757aD8 !important;
-}
-
-.ace_editor .ace_constant,
-.ace_editor .ace_constant.ace_character,
-.ace_editor .ace_constant.ace_character.ace_escape,
-.ace_editor .ace_constant.ace_other {
-  color: #4FB7C5 !important;
-}
-
-.ace_editor .ace_keyword.ace_operator {
-  color: #797878 !important;
-}
-
-.ace_editor .ace_constant.ace_character {
-  color: #AFA472 !important;
-}
-
-.ace_editor .ace_constant.ace_language {
-  color: #DE8E30 !important;
-}
-
-.ace_editor .ace_constant.ace_numeric {
-  color: #CCCCCC !important;
-}
-
-.ace_editor .ace_invalid,
-.ace_editor .ace_invalid.ace_illegal {
-  color: #F8F8F8 !important;
-  background-color: rgba(86, 45, 86, 0.75) !important;
-}
-
-.ace_editor .ace_invalid.ace_deprecated {
-  text-decoration: underline !important;
-  font-style: italic !important;
-  color: #D2A8A1 !important;
-}
-
-.ace_editor .ace_fold {
-  background-color: #757aD8 !important;
-  border-color: #8F938F !important;
-}
-
-.ace_editor .ace_support.ace_function {
-  color: #AEB2F8 !important;
-}
-
-.ace_editor .ace_string {
-  color: #66A968 !important;
-}
-
-.ace_editor .ace_string.ace_regexp {
-  color: #E9C062 !important;
-}
-
-.ace_editor .ace_comment {
-  color: #A6C6FF !important;
-}
-
-.ace_editor .ace_variable {
-  color: #BEBF55 !important;
-}
-
-.ace_editor .ace_variable.ace_language {
-  color: #C1C144 !important;
-}
-
-.ace_editor .ace_xml-pe {
-  color: #494949 !important;
-}
-
-.ace_editor .ace_indent-guide {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYIiPj/8PAARgAh2NTMh8AAAAAElFTkSuQmCC) right repeat-y !important;
-}
-
 /* Jupyter Notebooks */
 /*! pastels on dark syntax highlighting */
 #notebook .highlight table { background: #2B2B2B !important; }
