@@ -54,15 +54,33 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
-|                 |                      |                        |                          |                       |
-|-----------------|----------------------|------------------------|--------------------------|-----------------------|
-| Ambiance        | Chaos                | Clouds Midnight        | Cobalt                   | Idle Fingers*         |
-| Kr Theme        | Merbivore            | Merbivore Soft         | Mono Industrial          | Mono Industrial Clear |
-| Monokai*        | Obsidian*            | Pastel on Dark*        | Solarized Dark*          | Terminal              |
-| Tomorrow Night* | Tomorrow Night Blue* | Tomorrow Night Bright* | Tomorrow Night Eigthies* | Twilight*             |
-| Vibrant Ink     |                      |                        |                          |                       |
+| Theme                   | GitHub | CodeMirror | Jupyter  |
+|-------------------------|:------:|:----------:|:--------:|
+| Ambiance                |   *    |     *      |          |
+| Chaos                   |   *    |            |          |
+| Clouds Midnight         |   *    |            |          |
+| Cobalt                  |   *    |     *      |          |
+| Idle Fingers            |   *    |            |     *    |
+| Kr Theme                |   *    |            |          |
+| Merbivore               |   *    |            |          |
+| Merbivore Soft          |   *    |            |          |
+| Mono Industrial         |   *    |            |          |
+| Mono Industrial Clear   |   *    |            |          |
+| Monokai                 |   *    |     *      |     *    |
+| Obsidian                |   *    |            |     *    |
+| Pastel on Dark          |   *    |     *      |     *    |
+| Solarized Dark          |   *    |     *      |     *    |
+| Terminal                |   *    |            |          |
+| Tomorrow Night          |   *    |            |          |
+| Tomorrow Night Blue     |   *    |            |     *    |
+| Tomorrow Night Bright   |   *    |     *      |     *    |
+| Tomorrow Night Eigthies |   *    |     *      |     *    |
+| Twilight                |   *    |     *      |     *    |
+| Vibrant Ink             |   *    |     *      |          |
 
-\* Supports [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb)
+* Partial support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes.
+* If the selected theme does not have an associated CodeMirror or Jupyter theme, it will fall back to a Twilight theme.
+* Please provide a pull request if you have or want to create a missing theme.
 
 ## Notes
 
@@ -82,6 +100,32 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+### Version 1.16.0 (9/25/2016)
+
+* Global: Remove `ace_` and `CodeMirror` selectors from the main theme. See [issue #422](https://github.com/StylishThemes/GitHub-Dark/issues/422).
+* Guides: Brighten headers. Fixes [issue #418](https://github.com/StylishThemes/GitHub-Dark/issues/418).
+* Trending: Style subheading.
+* Organization: Add border to team info box. Fixes [issue #420](https://github.com/StylishThemes/GitHub-Dark/issues/420).
+* Explore: Brighten subtitle.
+* Themes:
+  * Switch Twilight from ACE to CodeMirror. See [issue #422](https://github.com/StylishThemes/GitHub-Dark/issues/422).
+  * Add CodeMirror theme for Ambiance.
+  * Add CodeMirror theme for Cobalt.
+  * Add CodeMirror theme for Monokai.
+  * Add CodeMirror theme for Pastel-on-Dark.
+  * Add CodeMirror theme for Solarized-Dark.
+  * Add CodeMirror theme for Tomorrow-Night-Bright.
+  * Add CodeMirror theme for Tomoorow-Night-Eighties.
+  * Add CodeMirror theme for Vibrant Ink.
+  * Restructure folders.
+* Editor: Fix selection and remove selection style out of theme. See [issue #422](https://github.com/StylishThemes/GitHub-Dark/issues/422).
+* Meta:
+  * Add "Updating" section to README.
+  * Update devDependencies.
+  * Update issue template with instructions.
+  * Switch theme src and min location.
+  * Build min css from separate files with Twilight fallback. See [issue #422](https://github.com/StylishThemes/GitHub-Dark/issues/422).
 
 ### Version 1.15.4 (9/21/2016)
 
@@ -107,13 +151,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Jupyter:
   * Remove universal selector in Twilight theme.
   * Remove table syntax highlight definition.
-
-### Version 1.15.2 (9/17/2016)
-
-* Global: Style disabled dropdown sections.
-* Projects: Invert preview images.
-* Developer:
-  * Style current topic indicator.
-  * Fix sidebar arrow hover.
-* Libraries: Bright text & fix jumbotron.
-* Blog: Use selected theme for `pre > code` block styling. See [issue #410](https://github.com/StylishThemes/GitHub-Dark/issues/410).
