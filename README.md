@@ -60,6 +60,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | Chaos                      |   *    |            |          |
 | Clouds Midnight            |   *    |            |          |
 | Cobalt                     |   *    |     *      |          |
+| GitHub Dark                |   *    |            |     *    |
 | Idle Fingers               |   *    |            |     *    |
 | Kr Theme                   |   *    |            |          |
 | Merbivore                  |   *    |            |          |
@@ -101,6 +102,12 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+### Version 1.16.2 (10/1/2016)
+
+* Themes:
+  * Update `github/_template.css`.
+  * Add GitHub Dark theme (GitHub &amp; Jupyter).
 
 ### Version 1.16.1 (10/1/2016)
 
