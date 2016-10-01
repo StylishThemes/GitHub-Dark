@@ -192,6 +192,9 @@ module.exports = function(grunt) {
     },
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css',
+      stylelintCodemirror: 'npm run stylelint --silent -- themes/codemirror/*.css',
+      stylelintGitHub: 'npm run stylelint --silent -- themes/github/*.css',
+      stylelintJupyter: 'npm run stylelint --silent -- themes/jupyter/*.css',
       authors: 'bash tools/authors',
       perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250'
     },
@@ -318,7 +321,12 @@ module.exports = function(grunt) {
 
   // lint github-dark.css and themes for errors
   grunt.registerTask('lint', 'Lint CSS for style errors', function() {
-    grunt.task.run(['exec:stylelint']);
+    grunt.task.run([
+      'exec:stylelint',
+      'exec:stylelintCodemirror',
+      'exec:stylelintGitHub',
+      'exec:stylelintJupyter'
+    ]);
   });
 
   // regenerate AUTHORS based on commits
