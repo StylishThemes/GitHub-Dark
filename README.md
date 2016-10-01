@@ -54,29 +54,30 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
-| Theme                   | GitHub | CodeMirror | Jupyter  |
-|-------------------------|:------:|:----------:|:--------:|
-| Ambiance                |   *    |     *      |          |
-| Chaos                   |   *    |            |          |
-| Clouds Midnight         |   *    |            |          |
-| Cobalt                  |   *    |     *      |          |
-| Idle Fingers            |   *    |            |     *    |
-| Kr Theme                |   *    |            |          |
-| Merbivore               |   *    |            |          |
-| Merbivore Soft          |   *    |            |          |
-| Mono Industrial         |   *    |            |          |
-| Mono Industrial Clear   |   *    |            |          |
-| Monokai                 |   *    |     *      |     *    |
-| Obsidian                |   *    |            |     *    |
-| Pastel on Dark          |   *    |     *      |     *    |
-| Solarized Dark          |   *    |     *      |     *    |
-| Terminal                |   *    |            |          |
-| Tomorrow Night          |   *    |            |          |
-| Tomorrow Night Blue     |   *    |            |     *    |
-| Tomorrow Night Bright   |   *    |     *      |     *    |
-| Tomorrow Night Eigthies |   *    |     *      |     *    |
-| Twilight                |   *    |     *      |     *    |
-| Vibrant Ink             |   *    |     *      |          |
+| Theme                      | GitHub | CodeMirror | Jupyter  |
+|----------------------------|:------:|:----------:|:--------:|
+| Ambiance                   |   *    |     *      |          |
+| Chaos                      |   *    |            |          |
+| Clouds Midnight            |   *    |            |          |
+| Cobalt                     |   *    |     *      |          |
+| Idle Fingers               |   *    |            |     *    |
+| Kr Theme                   |   *    |            |          |
+| Merbivore                  |   *    |            |          |
+| Merbivore Soft             |   *    |            |          |
+| Mono Industrial            |   *    |            |          |
+| Mono Industrial Clear      |   *    |            |          |
+| Monokai                    |   *    |     *      |     *    |
+| Monokai Spacegray Eighties |   *    |     *      |     *    |
+| Obsidian                   |   *    |            |     *    |
+| Pastel on Dark             |   *    |     *      |     *    |
+| Solarized Dark             |   *    |     *      |     *    |
+| Terminal                   |   *    |            |          |
+| Tomorrow Night             |   *    |            |          |
+| Tomorrow Night Blue        |   *    |            |     *    |
+| Tomorrow Night Bright      |   *    |     *      |     *    |
+| Tomorrow Night Eigthies    |   *    |     *      |     *    |
+| Twilight                   |   *    |     *      |     *    |
+| Vibrant Ink                |   *    |     *      |          |
 
 * Partial support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes.
 * If the selected theme does not have an associated CodeMirror or Jupyter theme, it will fall back to a Twilight theme.
@@ -100,6 +101,25 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 ## Recent Changes
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
+
+### Version 1.16.1 (10/1/2016)
+
+* Form Select: Fix arrow icon.
+* Developer:
+  * Fix plain code style. See [issue #424](https://github.com/StylishThemes/GitHub-Dark/issues/424).
+  * Transparent table background & add border to `pre`.
+* Themes:
+  * Add partial Dracula support for CodeMirror &amp; Jupyter. See [issue #415](https://github.com/StylishThemes/GitHub-Dark/issues/415).
+  * Fix up Dracula CodeMirror theme.
+  * Added Monokai - Spacegray Eighties theme from [Sublime](https://github.com/pyoio/monokai-spacegray)  [pull #426](https://github.com/StylishThemes/GitHub-Dark/pull/426); thanks [@torrentails](https://github.com/torrentails); closes [issue #425](https://github.com/StylishThemes/GitHub-Dark/issues/425).
+* Meta:
+  * Ignore build folder in case it is not removed. See [issue #422](https://github.com/StylishThemes/GitHub-Dark/issues/422).
+  * Remove `.min.css` files from git. Fixes [issue #424](https://github.com/StylishThemes/GitHub-Dark/issues/424).
+  * Revert "Meta: Remove `.min.css` files from git". Fixes [issue #424](https://github.com/StylishThemes/GitHub-Dark/issues/424).
+  * Move `archive` folder to https://github.com/StylishThemes/Syntax-Themes.
+* Demo
+  * Use source theme files. See [issue #424](https://github.com/StylishThemes/GitHub-Dark/issues/424).
+  * Add Monokai Spacegray Eighties min &amp; demo.
 
 ### Version 1.16.0 (9/25/2016)
 
@@ -133,21 +153,3 @@ See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 * Meta:
   * Optimize default background image further.
   * Optimize PNGs, add select-arrow image.
-
-### Version 1.15.3 (9/19/2016)
-
-* Global:
-  * Tweak grey background shades.
-  * Tweak light grey backgrounds.
-* Blog:
-  * Brighten H2 headers.
-  * Brighten all dark blog styles.
-* Developer:
-  * Many fixes.
-  * At least it's not fubar. Fixes [issue #413](https://github.com/StylishThemes/GitHub-Dark/issues/413).
-* Review:
-  * Fix another border.
-  * Another border fix.
-* Jupyter:
-  * Remove universal selector in Twilight theme.
-  * Remove table syntax highlight definition.
