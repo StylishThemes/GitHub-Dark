@@ -103,6 +103,16 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.16.3 (10/8/2016)
+
+* Review:
+  * Colored review item icons
+  * Fix pending review boxes
+* Organization:
+  * Fixes for the invite page
+* Status:
+  * Various text color fixes
+
 ### Version 1.16.2 (10/1/2016)
 
 * Themes:
