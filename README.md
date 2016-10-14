@@ -103,6 +103,10 @@ Thanks to all that have [contributed](./AUTHORS) so far!
 
 See the [full change log](https://github.com/StylishThemes/GitHub-Dark/wiki).
 
+### Version 1.16.4 (10/13/2016)
+
+* Minor Fixes for Review and inline tags
+
 ### Version 1.16.3 (10/8/2016)
 
 * Review:
