@@ -225,6 +225,7 @@ module.exports = function(grunt) {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/**/*.css --color',
       authors: 'bash tools/authors',
       perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250',
+      add: 'git add github-dark.css',
       patch: 'npm version -f patch',
       minor: 'npm version -f minor',
       major: 'npm version -f major'
@@ -362,13 +363,13 @@ module.exports = function(grunt) {
 
   // version bump tasks
   grunt.registerTask('patch', 'Bump patch version', function() {
-    grunt.task.run(['string-replace:patch', 'exec:patch', 'user']);
+    grunt.task.run(['string-replace:patch', 'exec:add', 'exec:patch', 'user']);
   });
   grunt.registerTask('minor', 'Bump minor version', function() {
-    grunt.task.run(['string-replace:minor', 'exec:minor', 'user']);
+    grunt.task.run(['string-replace:minor', 'exec:add', 'exec:minor', 'user']);
   });
   grunt.registerTask('major', 'Bump major version', function() {
-    grunt.task.run(['string-replace:major', 'exec:major', 'user']);
+    grunt.task.run(['string-replace:major', 'exec:add', 'exec:major', 'user']);
   });
 
   // watch thingy
