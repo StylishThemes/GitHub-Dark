@@ -3,8 +3,6 @@ module.exports = function(grunt) {
   'use strict';
 
   var config, file;
-  var semver = require("semver");
-  var version = require("./package.json").version;
 
   try {
     config = grunt.file.readJSON('build.json');
@@ -28,6 +26,8 @@ module.exports = function(grunt) {
   }
 
   function getVersion(level) {
+    var semver = require("semver");
+    var version = require("./package.json").version;
     return semver.inc(version, level);
   }
 
