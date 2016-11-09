@@ -26,8 +26,8 @@ module.exports = function(grunt) {
   }
 
   function getVersion(level) {
-    var semver = require("semver");
-    var version = require("./package.json").version;
+    var semver = require('semver');
+    var version = require('./package.json').version;
     return semver.inc(version, level);
   }
 
@@ -42,13 +42,13 @@ module.exports = function(grunt) {
       parseInt(result[1], 16),
       parseInt(result[2], 16),
       parseInt(result[3], 16)
-    ].join(", ") : "";
+    ].join(', ') : '';
   }
 
   // ** set up build options **
   config.sourceFile = 'github-dark.css';
   file = getTheme();
-  // setting "ace" to an empty string, or "default" will leave the default GitHub-base16 theme in place, with a dark background
+  // setting 'ace' to an empty string, or 'default' will leave the default GitHub-base16 theme in place, with a dark background
   // using theme src files until we can figure out why cssmin is removing 2/3 of the definitions - see #240
   config.themeFile = file === '' || file === 'default' ? '' : 'themes/' + file + '.min.css';
   // build file name
@@ -321,11 +321,11 @@ module.exports = function(grunt) {
     };
     grunt.file.mkdir('themes/build');
     grunt.file.expand({
-      filter: "isFile",
-      cwd: "themes/github/",
+      filter: 'isFile',
+      cwd: 'themes/github/',
     }, [
-      "*.css",
-      "!_template.css"
+      '*.css',
+      '!_template.css'
     ]).forEach(function(name) {
       // concat similar named theme files; use fallback if it doesn't exist
       var cur = grunt.file.read('themes/github/' + name);
@@ -335,7 +335,7 @@ module.exports = function(grunt) {
           grunt.file.read('themes/codemirror/' + name) : fallbacks.codemirror;
         cur += grunt.file.exists('themes/jupyter/' + name) ?
           grunt.file.read('themes/jupyter/' + name) : fallbacks.jupyter;
-        grunt.file.write("themes/build/" + name, cur);
+        grunt.file.write('themes/build/' + name, cur);
       } else {
         grunt.log.error('Unable to read ' + cur);
       }
