@@ -3,6 +3,8 @@ module.exports = function(grunt) {
   'use strict';
 
   var config, file;
+  var semver = require("semver");
+  var version = require("./package.json").version;
 
   try {
     config = grunt.file.readJSON('build.json');
@@ -23,6 +25,14 @@ module.exports = function(grunt) {
 
   function getTheme() {
     return (config.theme || '').toLowerCase().replace(/\s+/g, '-');
+  }
+
+  function getVersion(level) {
+    return semver.inc(version, level);
+  }
+
+  function getDate() {
+    return (new Date()).toISOString().substring(0, 10);
   }
 
   // modified from http://stackoverflow.com/a/5624139/145346
@@ -180,6 +190,27 @@ module.exports = function(grunt) {
             {pattern: /(-025A9,|-02662,)/gim, replacement: '$&\n                   '}
           ]
         }
+      },
+      patch: {
+        files: {'github-dark.css': 'github-dark.css'},
+        options: { replacements: [{
+            pattern: /v[0-9\.]+ \(.+\)/,
+            replacement: 'v' + getVersion('patch') + ' (' + getDate() + ')'
+        }]}
+      },
+      minor: {
+        files: {'github-dark.css': 'github-dark.css'},
+        options: { replacements: [{
+            pattern: /v[0-9\.]+ \(.+\)/,
+            replacement: 'v' + getVersion('minor') + ' (' + getDate() + ')'
+        }]}
+      },
+      major: {
+        files: {'github-dark.css': 'github-dark.css'},
+        options: { replacements: [{
+            pattern: /v[0-9\.]+ \(.+\)/,
+            replacement: 'v' + getVersion('major') + ' (' + getDate() + ')'
+        }]}
       }
     },
     clean: {
@@ -193,7 +224,10 @@ module.exports = function(grunt) {
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/**/*.css --color',
       authors: 'bash tools/authors',
-      perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250'
+      perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250',
+      patch: 'npm version -f patch',
+      minor: 'npm version -f minor',
+      major: 'npm version -f major'
     },
     cssmin: {
       minify: {
@@ -324,6 +358,17 @@ module.exports = function(grunt) {
   // regenerate AUTHORS based on commits
   grunt.registerTask('authors', 'Regenerate AUTHORS', function() {
     grunt.task.run(['exec:authors']);
+  });
+
+  // version bump tasks
+  grunt.registerTask('patch', 'Bump patch version', function() {
+    grunt.task.run(['string-replace:patch', 'exec:patch', 'user']);
+  });
+  grunt.registerTask('minor', 'Bump minor version', function() {
+    grunt.task.run(['string-replace:minor', 'exec:minor', 'user']);
+  });
+  grunt.registerTask('major', 'Bump major version', function() {
+    grunt.task.run(['string-replace:major', 'exec:major', 'user']);
   });
 
   // watch thingy
