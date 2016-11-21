@@ -90,7 +90,8 @@
   .date-selector .date-button, .exploregrid-item:hover .exploregrid-item-title,
   .stale-files-tab a, .intgrs-lstng-item-link:hover .intgrs-lstng-item-header,
   .link-blue, a.link-blue, .profile-rollup-toggle:hover,
-  .site-header-nav a:hover, .link-gray-dark:hover {
+  .site-header-nav a:hover, .link-gray-dark:hover,
+  .dashboard-notice .octicon-organization {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* Base color panel */
@@ -337,7 +338,8 @@
   .markdown-body code:before, .markdown-body code:after,
   .markdown-body tt:before, .markdown-body tt:after,
   .markdown-body pre code:before, .markdown-body pre code:after,
-  .markdown-body pre tt:before, .markdown-body pre tt:after {
+  .markdown-body pre tt:before, .markdown-body pre tt:after,
+  img[src$="/notices/context_button.png"] {
     display: none !important;
   }
   .intgrs-lstng-item-description:after {
@@ -452,12 +454,10 @@
   .user-profile-nav, .profile-timeline-year-list.bg-white,
   .discussion-item-review .timeline-comment, .libraries-jumbotron,
   .sidebar-module h3 a:hover, .menu-item.selected, .bg-shade-gradient, .dev-hero,
-  .api table {
-    background: transparent !important;
-  }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
   .user-list li em, .toolbar-commenting .dropdown-item,
-  .toolbar-commenting .dropdown-item:hover, .CodeMirror-lines {
+  .toolbar-commenting .dropdown-item:hover, .CodeMirror-lines,
+  .api table, .dashboard-notice .coupon {
     background: none !important;
   }
   /* remove background gradient */
@@ -686,7 +686,7 @@
   .select-menu-modal, #gist-form .file .meta, .file .meta, .file-box .meta,
   .capped-card, .audit-results-header, .pagination a, .pagination span,
   .pagination em, .input_area, .output_area .rendered_html table,
-  .render-info .message, .dashboard-notice, .subnav .btn + .issues-search,
+  .render-info .message, .subnav .btn + .issues-search,
   .branch-action-body .branch-action-item + .branch-action-item,
   .discussion-item-merged.open .discussion-item-details-header,
   .discussion-item-merged.open .build-statuses-list, .build-status-item,
@@ -721,7 +721,7 @@
   .last-review-thread, .menu-item, .review-comment.is-comment-editing, .Box,
   .team-list-footer, .Box-header,
   .profile-rollup-summarized + .profile-rollup-summarized,
-  .Subhead {
+  .Subhead, .dashboard-notice .coupon {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, .render-shell img, img.asset,
@@ -942,7 +942,7 @@
   .boxed-group .heading, .file-header, .capped-card h3, .select-menu-header,
   #gist-form .file .meta, .file .meta, .file-box .meta, .menu-heading,
   .audit-results-header, .branches .branch-group-heading, .auth-form-header,
-  .commit-form, .comment-form-head.tabnav, .dashboard-notice,
+  .commit-form, .comment-form-head.tabnav,
   .migration-jumbotron, .migration-sub-header, .commit-tease,
   .manage-repo-access-title, .select-menu-divider, .signed-commit-header,
   .reorderable-task-lists .markdown-body .task-list-item.hovered,
@@ -1664,7 +1664,7 @@
   .blog .text-delta, .blog .text-gamma, .blog h1, .blog h2, .blog h3, .blog h4,
   .blog h5, .site-header-nav a, .menu-item.selected, .overview .text-beta,
   article h2, #message-list h1, #message-list h3, .graph-page h1,
-  .graph-page h3 {
+  .graph-page h3, .dashboard-notice h2 {
     color: #e2e2e2 !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -1690,11 +1690,11 @@
   .steps li.current, .discussion-item-entity, .blog-post-body,
   .subnav-search-context .btn, .context-loader, .box-title a,
   .merge-pr-more-commits a, .branch-infobar .lightweight-actions > li a:hover,
-  .dashboard-notice, .discussion-item-ref-title .title-link,
+  .discussion-item-ref-title .title-link,
   .org-teams-list .team, .subnav-search-context .select-menu-item-icon,
   .ace-github, a.pagehead-nav-item.selected, a.pagehead-nav-item:hover,
   .repo-collection .collection-stat, a.subscribe-feed, header ul.links a:hover,
-  div.container > p, .commits-list-item .commit-author, .dashboard-notice h2,
+  div.container > p, .commits-list-item .commit-author,
   .full-commit .sha-block > .sha, .discussion-item .renamed-was,
   .discussion-item .renamed-is, a.discussion-item-entity,
   span.discussion-item-entity, .table-list-header-toggle .btn-link.selected,
@@ -1780,7 +1780,7 @@
   .select-menu.is-showing-clear-item .select-menu-clear-item .octicon,
   .diffstat-summary a, a.subnav-item,
   .branches .branch-group-heading .branch-group-name, .render-notice,
-  .dashboard-notice .title p, .table-list-milestones .stat,
+  .table-list-milestones .stat,
   .commits-listing .commit-group-title .octicon-git-commit,
   .select-menu-header .octicon:hover, .repo-list-description, .file .meta,
   .email-format .email-hidden-toggle a, .file-diffstat,
@@ -1839,7 +1839,7 @@
   .header-search-scope, .listgroup-item, .discussion-item-header,
   .discussion-sidebar-heading, .org-header-meta .meta-item .meta-link,
   .underline-nav-item, a.underline-nav-item, .boxed-group-inner, .lead,
-  .form-checkbox .note, .bot-identifier {
+  .form-checkbox .note, .bot-identifier, .dashboard-notice .dismiss:hover {
     color: #949494 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon,
@@ -1891,7 +1891,8 @@
   .auto-search-group > .octicon, .page-gist-edit .octicon-gist,
   .unselected-month, .pagination .disabled, .text-gray-light, a.text-gray-light,
   .repohead h1 .octicon, .profile-rollup-toggle, .select-menu-item.disabled,
-  .select-menu-item.disabled.selected, .select-menu-item.disabled .description {
+  .select-menu-item.disabled.selected, .select-menu-item.disabled .description,
+  .dashboard-notice .dismiss {
     color: #606060 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before,
@@ -2612,7 +2613,7 @@
   .zh-todo-empty-today, .zh-todo-empty-list, .zh-epic-issue-list-container,
   .zh-epic-creator-tab.selected, .zh-epic-creator-issue-list, .popover,
   .zh-epic-issue-list-container li, .zh-epic-creator-issue-list li,
-  .full-screen-project-header {
+  .full-screen-project-header, .dashboard-notice {
     background: #181818 !important;
     border-color: #484848 !important;
   }
