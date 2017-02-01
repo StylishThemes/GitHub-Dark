@@ -122,7 +122,7 @@
   .date-selector td.selectable-day:hover, .add-line-comment,
   button.add-line-comment, .suggester .cur, .autocomplete-item.selected,
   .autocomplete-item.navigation-focus,
-  .select-menu-item.navigation-focus.selected {
+  .select-menu-item.navigation-focus.selected, .reblame-link:hover {
     background: /*[[base-color]]*/ #4183c4 !important;
   }
   .context-button:after {
@@ -279,7 +279,7 @@
     position: static !important;
     margin-top: -20px !important;
   }
-  .pr-toolbar.is-stuck:after {
+  .pr-toolbar.is-stuck:after, .blame-commit .blame-commit-info {
     box-shadow: none !important;
     border: none !important;
   }
@@ -368,6 +368,10 @@
   }
   .markdown-body strike code, .markdown-body strike tt {
     text-decoration: line-through !important;
+  }
+  .blame-commit + .blame-line {
+    border-top: 1px solid #484848 !important;
+    box-shadow: none !important; /* inset 0 1px 0 #484848 !important; */
   }
   .dropdown-menu, .word-upload-callout, .select-menu-modal {
     box-shadow: 0 3px 12px rgba(0, 0, 0, .4) !important;
@@ -641,7 +645,7 @@
   .gist-quicksearch-result, .gist-quicksearch-result-group, .listgroup,
   .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
   .progress-bar-inline .progress-bar, .menu-heading, body .border-gray-dark,
-  .discussion-item-review .blob-wrapper, .bot-identifier {
+  .discussion-item-review .blob-wrapper, .bot-identifier, .blame-commit {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, .header, table, table tr, table td, table th, blockquote,
@@ -1592,7 +1596,8 @@
   .subnav-item:hover, .subnav-item:focus, .owner-select-target:hover,
   .owner-select-target:focus, .suggester li.navigation-focus,
   .suggester li.navigation-focus small, .intgrs-lstng-categories a:hover,
-  .text-white, a.text-white, .blame-next-container .reblame-link:hover {
+  .text-white, a.text-white, .blame-next-container .reblame-link:hover,
+  .reblame-link:hover {
     color: #efefef !important;
   }
   .btn, a.btn, .btn.btn-primary, .button.primary, .minibutton.primary,
