@@ -2412,7 +2412,7 @@
     border-top-color: #343434 !important;
   }
   .dropdown-menu-e:after, .tutorial-e:after,
-  .file-commit-form .commit-form:before {
+  .file-commit-form .commit-form:before,  {
     border-right-color: #343434 !important;
     border-bottom-color: transparent !important;
   }
@@ -2644,6 +2644,9 @@
     border-color: /*[[base-color]]*/ #4183c4 !important;
     color: #fff !important;
   }
+  .zhc-pipeline-sort-status__clear {
+    color: /*[[base-color]]*/ #4183c4 !important;
+  }
   /* background */
   .zhc-pipeline, .zh-epic-creator-top, .zh-epic-creator-nav, input.zhc-icon {
     background-color: transparent !important;
@@ -2672,7 +2675,8 @@
   .zh-epic-issue-list-container li:hover, .zh-epic-creator-issue-list li:hover,
   .zh-epic-creator-progress-bar, .zhc-tooltip-action__content,
   .zh-timeline-comment-header, .zh-issueviewer-title,
-  .zh-new-issue-suggester-input-container {
+  .zh-new-issue-suggester-input-container, .zhc-pr-issue-connector__info,
+  .zhu-tag-default {
     background: #202020 !important;
     border-color: #484848 !important;
   }
@@ -2697,15 +2701,19 @@
     background: #182030 !important;
   }
   /* border */
+  .zhc-pr-issue-connector__info:after {
+    border-right-color: #202020 !important;
+  }
   .zhc-selection-item, .zhc-pipeline-header__actions, .zhc-pipeline,
   .zhc-pipeline--new-placeholder .zhc-pipeline__head, .zhc-merge-repo-item,
   .zh-todopage-menu, .zh-select-menu-item, .zh-epic-issue-list-container ul,
   .zh-epic-creator-nav, .zh-epic-creator-picker-container, .zh-board-menu,
   .zh-epic-creator-filters, .zh-epic-issues-picker-new-issue, .merge-status-list,
-  .zhc-dropdown-simple-item, .zhc-pipeline-body {
+  .zhc-dropdown-simple-item, .zhc-pipeline-body, .zhc-board-settings-head,
+  .zhc-pipeline-sort-status {
     border-color: #343434 !important;
   }
-  .zhc-tooltip-action__content:before {
+  .zhc-tooltip-action__content:before, .zhc-pr-issue-connector__info:before {
     border-right-color: #343434 !important;
   }
   .popover.left .arrow {
@@ -2749,9 +2757,17 @@
     background: linear-gradient(#444, #333) !important;
     border-color: #484848 !important;
   }
+  .zhc-btn-gh--primary {
+    background: linear-gradient(#203522, #152715) !important;
+    border-color: #041 !important;
+  }
+  .zhc-btn.zhc-btn-gh--primary:hover {
+    background: linear-gradient(#407045, #305530) !important;
+    border-color: #083 !important;
+  }
   /* popovers */
   .zhc-selection-list__header__text, .zhc-tooltip-action__content,
-  .zh-select-menu-title, .popover {
+  .zh-select-menu-title, .popover, .zhc-board-settings__items__header {
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -2770,7 +2786,7 @@
     -webkit-filter: invert(40%) brightness(120%) !important;
             filter: invert(40%) brightness(120%) !important;
   }
-  .zhc-icon:not(.zhc-icon--issue-closed-red):not(.zhc-icon--stop-white),
+  .zhc-icon:not([class$="-red"]):not([class$="-white"]),
   .zhc-board-loading, .zhc-board-loading__message, .zh-octicon-list-unordered,
   .zh-octicon-pencil, .zh-octicon-inbox, .zh-octicon-plus, .zh-octicon-info,
   .zh-octicon-milestone, .zh-octicon-chevron-down, .zh-epic-creator-tab-icon,
