@@ -348,7 +348,11 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('clean', 'Perfectionist cleanup', function() {
-    grunt.task.run(['exec:perfectionist', 'string-replace:afterPerfectionist']);
+    grunt.task.run([
+      'exec:stylelint', // check linting first
+      'exec:perfectionist',
+      'string-replace:afterPerfectionist'
+    ]);
   });
 
   // lint github-dark.css and themes for errors
