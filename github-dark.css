@@ -122,7 +122,8 @@
   .date-selector td.selectable-day:hover, .add-line-comment,
   button.add-line-comment, .suggester .cur, .autocomplete-item.selected,
   .autocomplete-item.navigation-focus,
-  .select-menu-item.navigation-focus.selected, .reblame-link:hover {
+  .select-menu-item.navigation-focus.selected, .reblame-link:hover,
+  .topic-tag {
     background: /*[[base-color]]*/ #4183c4 !important;
   }
   .context-button:after {
@@ -200,7 +201,10 @@
   }
   input.focus[type="text"], #adv_code_search .focus.search-page-label,
   .js-chromeless-input-container.focus,
-  input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus),
+  /* below selector has a ton of weight, better to override it with
+     class selectors that unset box-shadow and rules here. Testable
+     on the repo tag editor */
+  input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
   .focused .drag-and-drop, #adv_code_search .search-page-label:focus,
   input.focus[type="password"], input[type="password"]:focus,
   input.focus[type="email"], input[type="email"]:focus,
@@ -1427,10 +1431,13 @@
   .file-history-tease, .flash, .flash-global, .feature-banner,
   .recently-touched-branches, .comment-reactions .user-has-reacted,
   .pr-toolbar .subset-files-tab, article.full .alert, .project-updated-message,
-  .bg-blue, .btn.btn-blue, .hook-delivery-guid {
+  .bg-blue, .btn.btn-blue, .hook-delivery-guid, .topic-tag,
+  .topic-tag-action, .delete-topic-button, .topic-tag-action .add-topic-button,
+  .topic-tag-action .remove-topic-button {
     background: #182030 !important;
   }
-  .repo-file-upload-progress .repo-file-upload-meter, .btn.btn-blue:hover {
+  .repo-file-upload-progress .repo-file-upload-meter, .btn.btn-blue:hover,
+  .topic-tag-link:hover, .delete-topic-button:hover {
     background: #273045 !important;
   }
   .timeline-comment.current-user .timeline-comment-header, .new-user-avatar-cta,
@@ -1439,7 +1446,7 @@
   .recently-touched-branches, .recently-touched-branches li,
   .pr-toolbar .subset-files-tab, .alert.tip, article.full .alert a, .commit-ref,
   .project-updated-message, .timeline-comment-label.collaborator-comment,
-  .hook-delivery-guid .octicon, .hook-delivery-guid a {
+  .hook-delivery-guid .octicon, .hook-delivery-guid a, a.topic-tag {
     color: #9daccc !important;
   }
   .commit-ref .user {
@@ -1452,10 +1459,13 @@
   .timeline-comment.current-user .timeline-comment-header .timeline-comment-label,
   .file-history-tease, .flash, .flash-global, .feature-banner,
   .recently-touched-branches, .timeline-progressive-disclosure-items button,
-  .pr-toolbar .subset-files-tab, article.full .alert, .btn.btn-blue {
+  .pr-toolbar .subset-files-tab, article.full .alert, .btn.btn-blue,
+  .topic-tag {
     border: 1px solid #246 !important;
   }
-  .repo-file-upload-progress, .project-updated-message {
+  .repo-file-upload-progress, .project-updated-message,
+  .delete-topic-button, .topic-tag-action .add-topic-button,
+  .topic-tag-action .remove-topic-button {
     border-color: #246 !important;
   }
   .timeline-comment.current-user .timeline-comment-header, .blob-history,
@@ -1520,8 +1530,7 @@
   button.button:hover, a.button:hover, span.button:hover,
   button.minibutton:hover, a.minibutton:hover, span.minibutton:hover,
   .clone-url-button.selected > .clone-url-link,
-  .clone-url-button.selected > .clone-url-link:hover, ul#bootcamp li a:hover h4,
-  .topic-tag:hover, .delete-topic-button:hover {
+  .clone-url-button.selected > .clone-url-link:hover, ul#bootcamp li a:hover h4 {
     background: linear-gradient(#303030, #282828) !important;
     border-color: #484848 !important;
   }
@@ -1535,9 +1544,7 @@
   .dashboard-tabs li a, a.function-button, .add-pill-form,
   .gist .gist-file .gist-meta, .octotree_toggle, ul.comparison-list > li.title,
   button.button, a.button, span.button, button.minibutton, a.minibutton,
-  span.minibutton, .clone-url-button > .clone-url-link, .topic-tag,
-  .topic-tag-action, .add-topic-button, .delete-topic-button,
-  .remove-topic-button {
+  span.minibutton, .clone-url-button > .clone-url-link {
     background: linear-gradient(#202020, #181818) !important;
     border-color: #383838 !important;
   }
@@ -1597,7 +1604,8 @@
   .owner-select-target:focus, .suggester li.navigation-focus,
   .suggester li.navigation-focus small, .intgrs-lstng-categories a:hover,
   .text-white, a.text-white, .blame-next-container .reblame-link:hover,
-  .reblame-link:hover {
+  .reblame-link:hover, .topic-tag-action .add-topic-button:hover,
+  .topic-tag-action .remove-topic-button:hover {
     color: #efefef !important;
   }
   .btn, a.btn, .btn.btn-primary, .button.primary, .minibutton.primary,
@@ -1682,7 +1690,7 @@
   .blog .text-delta, .blog .text-gamma, .blog h1, .blog h2, .blog h3, .blog h4,
   .blog h5, .site-header-nav a, .menu-item.selected, .overview .text-beta,
   article h2, #message-list h1, #message-list h3, .graph-page h1, .graph-page h3,
-  .dashboard-notice h2, .topic-tag-action {
+  .dashboard-notice h2 {
     color: #e2e2e2 !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -1759,7 +1767,7 @@
   .api .text-gamma, .api h1, .api h2, .api h3, .api h4, .api h5,
   .octokit-language span, .lead, .merge-branch-heading,
   .org-user-notice-content strong, .timeline-comment-label.owner-comment,
-  .Box-row-link, a.Box-row-link {
+  .Box-row-link, a.Box-row-link, .form-control, .form-select {
     color: #c0c0c0 !important;
   }
   button, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -1858,7 +1866,8 @@
   .header-search-scope, .listgroup-item, .discussion-item-header,
   .discussion-sidebar-heading, .org-header-meta .meta-item .meta-link,
   .underline-nav-item, a.underline-nav-item, .boxed-group-inner, .lead,
-  .form-checkbox .note, .bot-identifier, .dashboard-notice .dismiss:hover {
+  .form-checkbox .note, .bot-identifier, .dashboard-notice .dismiss:hover,
+  .text-gray, a.text-gray {
     color: #949494 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon,
@@ -1899,8 +1908,10 @@
   .oauth-application-info .meta-link, .oauth-application-info .app-info,
   .repo-file-upload-file-wrap .remove-file, #footer .mega-octicon,
   .gcr-ext-editor-close svg, .commit-id, a.commit-id, .orghead .edit-org,
-  .text-gray, a.text-gray, .link-gray, a.link-gray, .signed-commit-badge,
-  .manage-member-meta-item .btn-link, .note {
+  .link-gray, a.link-gray, .signed-commit-badge,
+  .manage-member-meta-item .btn-link, .note, .delete-topic-button,
+  .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button,
+  .text-gray-light, a.text-gray-light {
     color: #7b7b7b !important;
   }
   .branch-infobar .lightweight-actions > li .octicon,
@@ -1908,7 +1919,7 @@
   .issue-meta-section .octicon, .thread-subscription-status .mega-octicon,
   .subnav-search-icon, .discussion-sidebar-toggle .octicon,
   .auto-search-group > .octicon, .page-gist-edit .octicon-gist,
-  .unselected-month, .pagination .disabled, .text-gray-light, a.text-gray-light,
+  .unselected-month, .pagination .disabled,
   .repohead h1 .octicon, .profile-rollup-toggle, .select-menu-item.disabled,
   .select-menu-item.disabled.selected, .select-menu-item.disabled .description,
   .dashboard-notice .dismiss, .blame-next-container .reblame-link {
@@ -1961,7 +1972,8 @@
   .majorproblem .pageheader_wrap, .error_box, .btn-close-issue, .closed-issues,
   .state-indicator.closed, .state-closed,
   .discussion-item-closed .discussion-item-icon,
-  .discussion-item-review.is-rejected.is-writer .discussion-item-icon {
+  .discussion-item-review.is-rejected.is-writer .discussion-item-icon,
+  .topic-tag-action .remove-topic-button:hover {
     background: #911 !important;
     border-color: #383838 !important;
   }
@@ -2101,7 +2113,7 @@
   .user-list li .actions .status-modified, #message.good, .bg-green,
   .discussion-item-reopened .discussion-item-icon,
   .discussion-item-review.is-approved.is-writer .discussion-item-icon,
-  .add-topic-button:hover {
+  .add-topic-button:hover, .topic-tag-action .add-topic-button:hover {
     background: #163 !important;
     border-color: #041 !important;
   }
