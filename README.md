@@ -51,6 +51,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 * [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
 * [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
 * [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
+* [npmhub](https://github.com/npmhub/npmhub)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
