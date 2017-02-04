@@ -223,7 +223,8 @@ module.exports = function(grunt) {
     },
     exec: {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/**/*.css --color',
-      authors: 'bash tools/authors',
+      authors: 'bash tools/authors.sh',
+      imagemin: 'bash tools/imagemin.sh',
       perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250',
       add: 'git add github-dark.css',
       patch: 'npm version -f patch',
@@ -363,6 +364,11 @@ module.exports = function(grunt) {
   // regenerate AUTHORS based on commits
   grunt.registerTask('authors', 'Regenerate AUTHORS', function() {
     grunt.task.run(['exec:authors']);
+  });
+
+  // minify all PNG and SVG images
+  grunt.registerTask('imagemin', 'Minify all PNG and SVG images', function() {
+    grunt.task.run(['exec:imagemin']);
   });
 
   // version bump tasks
