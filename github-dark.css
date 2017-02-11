@@ -199,9 +199,7 @@
     outline-color: /*[[base-color]]*/ #4183c4 !important;
   }
   input.focus[type="text"], #adv_code_search .focus.search-page-label,
-  .js-chromeless-input-container.focus,
-  /* below selector has a ton of weight,
-  better to override it with
+  /* below selector has a ton of weight. Better to override it with
      class selectors that unset box-shadow and rules here. Testable
      on the repo tag editor */
   input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
@@ -405,9 +403,14 @@
   .labels .label, .octotree_views .octotree_view .octotree_view_header,
   .fullscreen-overlay textarea, .avatar-child, .discussion-item .label-color,
   .coupons .coupon-form-body, .label-private, .repo-file-upload-progress,
-  .more-repos {
+  .more-repos, .header .header-search-wrapper.focus {
     box-shadow: none !important;
   }
+  .header .header-search-wrapper.focus {
+      background-color: rgba(255,255,255,0.175);
+      box-shadow: none;
+  }
+
   a, button, p, ul, li, dl.form label, .formbody label, .js-context-button,
   .footer-text, .octicon-mark-github, .minibutton span, span.name,
   .diff-line-code, .num, .user-list em, .diff-expander .octicon-unfold:hover,
@@ -2385,7 +2388,7 @@
   .issues-list, .pulls-list-group, .commit-tease, .branch-infobar,
   .pagehead.repohead h1 .repo-label span,
   .coupons .coupon-form-body .coupon-icon, .menu, .merge-pr-more-commits,
-  .api pre, .js-chromeless-input-container {
+  .api pre {
     border: 1px solid #484848 !important;
   }
   #graph-shots li > p, .select-menu-item, .logo-box, .branch-infobar {
