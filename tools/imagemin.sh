@@ -5,13 +5,11 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 
-repo="$(cd "$(dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd)"
-
-err=false
-if ! hash pngcrush 2>/dev/null; then err=true; fi
-if ! hash zopflipng 2>/dev/null; then err=true; fi
-if ! hash svgo 2>/dev/null; then err=true; fi
-if "$err"; then
+nodeps=false
+if ! hash pngcrush 2>/dev/null; then nodeps=true; fi
+if ! hash zopflipng 2>/dev/null; then nodeps=true; fi
+if ! hash svgo 2>/dev/null; then nodeps=true; fi
+if "$nodeps"; then
   echo "Missing dependencies. Install through: npm install -g pngcrush-bin zopflipng-bin svgo"
 fi
 
@@ -22,7 +20,5 @@ for f in $@;do
     zopflipng -y -m --splitting=3 "$f" "$f"
   elif echo "$@" | egrep -iq ".svg$"; then
     svgo --multipass -i "$f" -o "$f"
-  else
-    echo "no"
   fi
 done
