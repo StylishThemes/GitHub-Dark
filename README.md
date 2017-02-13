@@ -56,6 +56,8 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
+* **NEW**: In v1.17.0+, themes for GitHub, CodeMirror and Jupyter may be set separately.
+
 | Theme                      | GitHub | CodeMirror | Jupyter  |
 |----------------------------|:------:|:----------:|:--------:|
 | Ambiance                   |   *    |     *      |          |
@@ -85,7 +87,6 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | Vibrant Ink                |   *    |     *      |          |
 
 * Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes as listed above.
-* Each theme may be set separately as of GitHub Dark v1.17.0.
 * Please provide a pull request if you have or want to create a missing theme.
 
 ## Notes
