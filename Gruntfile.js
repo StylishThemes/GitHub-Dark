@@ -75,6 +75,10 @@ module.exports = function(grunt) {
     `${config.color.replace(/[^\d\w]/g, '')}.build.min.css`;
 
   // background options
+  config.image = /^url/.test(config.image) ?
+    config.image :
+    `url("${config.image}")`;
+
   config.bgOptions = config.tiled ? `
     background-repeat: repeat !important;
     background-size: auto !important;
@@ -105,8 +109,6 @@ module.exports = function(grunt) {
         display: table-cell !important;
       }
     ` : '';
-
-
 
   // get @-moz prefix
   file = grunt.file.read('github-dark.css')
