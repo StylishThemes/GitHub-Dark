@@ -1240,6 +1240,12 @@
             filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
     background: transparent !important;
   }
+  /* some emoji don't need to be inverted on Windows */
+  /* example: https://github.com/Dunedan/mbp-2016-linux */
+  body.windows [alias="heavy_check_mark"] {
+    -webkit-filter: none !important;
+            filter: none !important;
+  }
   /* Invert problematic emoji fallback images used on Windows */
   /* use tools/unicode-gen.js to generate */
   g-emoji[fallback-src$="2795.png"], g-emoji[fallback-src$="2796.png"],
