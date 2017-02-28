@@ -276,18 +276,18 @@
   div[id^="contribution-joined-github"] img {
     padding-bottom: 20px !important;
   }
-  /* HACK: Disable useless position:sticky on PR diffs */
+  /* PR toolbar tweaks */
   .pr-toolbar.is-stuck {
-    position: static !important;
-    margin-top: -20px !important;
+    padding-left: 100rem !important;
+    margin-left: -100rem !important;
+    padding-right: 100rem !important;
+    margin-right: -100rem !important;
+    border-bottom: 1px solid #343434 !important;
+    height: 40px !important;
   }
-  .pr-toolbar.is-stuck:after, .blame-commit .blame-commit-info {
-    box-shadow: none !important;
-    border: none !important;
-  }
-  /* .. and fix rare layout issue related to above hack */
-  .diffbar.details-collapse {
-    width: 980px !important;
+  .diffbar {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
   /* User profile: Make the border not cross into the years buttons */
   .profile-timeline-month-heading:after {
@@ -920,7 +920,8 @@
   .project-triage-pane, .user-profile-nav.is-stuck, body .bg-white,
   [data-filterable-for="projects-filter"] .container-lg,
   .review-summary-form-wrapper, #projects-results, .listgroup,
-  .protected-branch-orgs-and-repo-admins, .listgroup-overflow {
+  .protected-branch-orgs-and-repo-admins, .listgroup-overflow,
+  .pr-toolbar.is-stuck {
     background: #181818 !important;
   }
   .sidebar-module, .form-control,
