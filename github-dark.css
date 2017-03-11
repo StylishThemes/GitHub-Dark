@@ -2531,10 +2531,12 @@
     background: rgba(85, 85, 85, .3) !important;
     border-color: rgba(85, 85, 85, .3) !important;
   }
-  /* hover highlight in code and diffs */
+  /* custom hover highlight in code and diffs */
   .diff-table tr:hover > pre,
-  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not([style^="background-color: rgb(248, 238, 199)"]) {
-    background: none !important;
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+    background: rgba(78, 78, 78, .33) !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
@@ -2543,11 +2545,6 @@
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
     background: #481010 !important;
-  }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-  .highlight tr:not(.inline-comments):hover td[style^="background-color: rgb(248, 238, 199)"] {
-    background: rgba(128, 128, 128, .4) !important;
   }
   .prose-diff > .markdown-body th.changed,
   .prose-diff > .markdown-body td.changed {
