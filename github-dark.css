@@ -1670,9 +1670,7 @@
   #user-links > li * button, .timeline-commits .hidden-text-expander a:hover,
   .color-editor-input, .state .octicon, #user-links .sign-out-button,
   .table-list-item label, .audit-action-info .context, .token-scope,
-  .segmented-nav li.active a, .tabs > a.selected,
-  .highlight tr:hover .blob-num:not(.non-expandable),
-  .highlight tr:hover .blob-num:not(.non-expandable):before, .member-username,
+  .segmented-nav li.active a, .tabs > a.selected, .member-username,
   .invited-banner p, kbd, .kbd, .boxed-profile .profile-preview .vcard-fullname,
   .btn.btn-primary:hover, .minibutton.btn-primary:hover,
   .integrations .site-footer a, .add-line-comment, a.state,
@@ -2531,6 +2529,9 @@
     border-color: rgba(85, 85, 85, .3) !important;
   }
   /* custom hover highlight in code and diffs */
+  .highlight tr:hover .blob-num:not(.non-expandable) {
+    color: #e2e2e2 !important;
+  }
   .diff-table tr:hover > pre,
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
@@ -2545,6 +2546,7 @@
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
     background: #481010 !important;
   }
+  /* custom hover highlight end */
   .prose-diff > .markdown-body th.changed,
   .prose-diff > .markdown-body td.changed {
     background: #282818 !important;
