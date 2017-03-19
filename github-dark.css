@@ -1242,11 +1242,16 @@
   [alt=":ant:"], [alt=":musical_note:"], [alt=":loop:"], [alt=":feet:"],
   [alt=":paw_prints:"],
   /* unicode */
+  /* some emoji don't need to be inverted on Windows */
+  /* from https://github.com/Dunedan/mbp-2016-linux on Windows*/
+  /* <g-emoji alias="heavy_check_mark"
+    fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
+    ios-version="6.0">✔️</g-emoji> */
   [alias="soon"], [alias="on"],
   [alias="end"], [alias="heavy_dollar_sign"], [alias="registered"], [alias="tm"],
   [alias="heavy_multiplication_x"], [alias="heavy_plus_sign"],
   [alias="heavy_minus_sign"], [alias="heavy_division_sign"],
-  [alias="heavy_check_mark"], [alias="arrows_clockwise"], [alias="wavy_dash"],
+  [alias="arrows_clockwise"], [alias="wavy_dash"],
   [alias="curly_loop"], [alias="copyright"], [alias="currency_exchange"],
   [alias="top"], [alias="back"], [alias="zzz"], [alias="notes"],
   [alias="musical_score"], [alias="black_large_square"],
@@ -1255,12 +1260,6 @@
     -webkit-filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
             filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
     background: transparent !important;
-  }
-  /* some emoji don't need to be inverted on Windows */
-  /* example: https://github.com/Dunedan/mbp-2016-linux */
-  body.windows [alias="heavy_check_mark"] {
-    -webkit-filter: none !important;
-            filter: none !important;
   }
   /* Invert problematic emoji fallback images used on Windows */
   /* use tools/unicode-gen.js to generate */
