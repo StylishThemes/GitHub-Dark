@@ -7,8 +7,9 @@ const parseHtml = require("parse5").parseFragment;
 const perf      = require("perfectionist").process;
 
 const mappings = {
-  "color: #586069": "color: #999 !important",
-  "color: #6a737d": "color: #888 !important",
+  "color: #444d56": "color: #bbb !important",
+  "color: #586069": "color: #aaa !important",
+  "color: #6a737d": "color: #999 !important",
 };
 
 const perfOpts = {
