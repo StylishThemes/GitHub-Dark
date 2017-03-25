@@ -37,7 +37,13 @@ pullCss("https://github.com", function(css) {
   let output = "";
   Object.keys(decls).forEach(function(decl) {
     output += `/* auto-generated rule for "${decl}" */\n`;
-    output += String(perf(decls[decl].join(",") + "{" + mappings[decl] + "}", perfOpts));
+
+    // sort selectors
+    const selectors = decls[decl].sort((a, b) => {
+      return a.localeCompare(b);
+    }).join(",");
+
+    output += String(perf(selectors + "{" + mappings[decl] + "}", perfOpts));
   });
 
   process.stdout.write(output);
