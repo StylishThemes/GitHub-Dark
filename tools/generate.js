@@ -55,7 +55,7 @@ function pullCss(url, cb) {
       if (attrs.rel === "stylesheet" && attrs.href) {
         return attrs.href;
       }
-    }).filter(link => Boolean(link));
+    }).filter(link => !!link);
     async.map(links, (link, cb) => {
       got(link).then(res => cb(null, res.body));
     }, function(_, css) {

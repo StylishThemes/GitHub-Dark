@@ -27,7 +27,7 @@ function cssString(ranges) {
     str += padStart(range[1].toString(16).toUpperCase(), 5, "0");
     str += ",";
   });
-  return str.slice(0,-1);
+  return str.slice(0, -1);
 }
 
 console.log(cssString(getExcludeRanges(chars)) + "\n");

@@ -8,6 +8,7 @@
   "devDependencies": {
     "async": "^2.1.5",
     "css": "^2.2.1",
+    "eslint": "^3.18.0",
     "got": "^6.7.1",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
@@ -24,7 +25,8 @@
     "stylelint-config-standard": "^16.0.0"
   },
   "scripts": {
-    "stylelint": "stylelint",
+    "eslint": "eslint --quiet --color *.js tools/*.js",
+    "stylelint": "stylelint --silent --color -- github-dark.css themes/**/*.css",
     "perfectionist": "perfectionist",
     "test": "stylelint github-dark.css"
   }

@@ -3,20 +3,19 @@
 module.exports = function(grunt) {
   'use strict';
 
-  let config, file,
-    defaults = {
-      'theme'    : 'twilight',
-      'themeCM'  : 'twilight',
-      'themeJP'  : 'twilight',
-      'color'    : '#4183C4',
-      'font'     : 'Menlo',
-      'image'    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
-      'tiled'    : true,
-      'codeWrap' : false,
-      'attach'   : 'scroll',
-      'tab'      : 4,
-      'webkit'   : false
-    };
+  let config, file, defaults = {
+    theme    : 'twilight',
+    themeCM  : 'twilight',
+    themeJP  : 'twilight',
+    color    : '#4183C4',
+    font     : 'Menlo',
+    image    : 'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)',
+    tiled    : true,
+    codeWrap : false,
+    attach   : 'scroll',
+    tab      : 4,
+    webkit   : false
+  };
 
   try {
     config = Object.assign({}, defaults, grunt.file.readJSON('build.json'));
@@ -31,8 +30,7 @@ module.exports = function(grunt) {
   }
 
   function loadTheme(name, folder) {
-    let data,
-      theme = getTheme(name);
+    let data, theme = getTheme(name);
     if (grunt.file.exists(`themes/${folder}${theme}.min.css`)) {
       data = `<%= grunt.file.read("themes/${folder}${theme}.min.css") %>`;
     } else {
@@ -43,8 +41,8 @@ module.exports = function(grunt) {
   }
 
   function getVersion(level) {
-    const semver = require('semver'),
-      version = require('./package.json').version;
+    const semver = require('semver');
+    const version = require('./package.json').version;
     return semver.inc(version, level);
   }
 
@@ -206,7 +204,7 @@ module.exports = function(grunt) {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {
           replacements: [
-            {pattern: /\/\*\!\[\[/gm, replacement: '/*[['},
+            {pattern: /\/\*!\[\[/gm, replacement: '/*[['},
             {pattern: '/*! AGENT_SHEET */', replacement: '/* AGENT_SHEET */'}
           ]
         }
@@ -216,7 +214,7 @@ module.exports = function(grunt) {
         files: {'<%= config.buildFile %>' : '<%= config.buildFile %>'},
         options: {
           replacements: [{
-            pattern: /\;\:\/\*\[\[/gm,
+            pattern: /;:\/\*\[\[/gm,
             replacement: ';/*[['
           }]
         }
@@ -238,7 +236,7 @@ module.exports = function(grunt) {
         files: {'<%= config.sourceFile %>' : '<%= config.sourceFile %>'},
         options: {
           replacements: [
-            {pattern: /\{\/\*\!/g, replacement: '{\n /*!'},
+            {pattern: /\{\/\*!/g, replacement: '{\n /*!'},
             {pattern: /\/\* /g, replacement: '\n  /* '},
             {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: '\n'},
             {pattern: / {2}}\/\*/gm, replacement: '  }\n  /*'},
@@ -254,23 +252,23 @@ module.exports = function(grunt) {
       },
       patch: {
         files: {'github-dark.css': 'github-dark.css'},
-        options: { replacements: [{
-            pattern: /v[0-9\.]+ \(.+\)/,
-            replacement: 'v' + getVersion('patch') + ' (' + getDate() + ')'
+        options: {replacements: [{
+          pattern: /v[0-9.]+ \(.+\)/,
+          replacement: 'v' + getVersion('patch') + ' (' + getDate() + ')'
         }]}
       },
       minor: {
         files: {'github-dark.css': 'github-dark.css'},
-        options: { replacements: [{
-            pattern: /v[0-9\.]+ \(.+\)/,
-            replacement: 'v' + getVersion('minor') + ' (' + getDate() + ')'
+        options: {replacements: [{
+          pattern: /v[0-9.]+ \(.+\)/,
+          replacement: 'v' + getVersion('minor') + ' (' + getDate() + ')'
         }]}
       },
       major: {
         files: {'github-dark.css': 'github-dark.css'},
-        options: { replacements: [{
-            pattern: /v[0-9\.]+ \(.+\)/,
-            replacement: 'v' + getVersion('major') + ' (' + getDate() + ')'
+        options: {replacements: [{
+          pattern: /v[0-9.]+ \(.+\)/,
+          replacement: 'v' + getVersion('major') + ' (' + getDate() + ')'
         }]}
       }
     },
@@ -285,7 +283,8 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      stylelint: 'npm run stylelint --silent -- github-dark.css themes/**/*.css --color',
+      stylelint: 'npm -s run stylelint',
+      eslint: 'npm -s run eslint',
       authors: 'bash tools/authors.sh',
       imagemin: 'bash tools/imagemin.sh',
       generate: 'node tools/generate.js',
@@ -423,8 +422,11 @@ module.exports = function(grunt) {
   });
 
   // lint github-dark.css and themes for errors
-  grunt.registerTask('lint', 'Lint CSS for style errors', () => {
-    grunt.task.run(['exec:stylelint']);
+  grunt.registerTask('lint', 'Lint CSS and JS scripts for errors', () => {
+    grunt.task.run([
+      'exec:eslint',
+      'exec:stylelint'
+    ]);
   });
 
   // regenerate AUTHORS based on commits
