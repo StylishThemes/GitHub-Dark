@@ -288,6 +288,7 @@ module.exports = function(grunt) {
       stylelint: 'npm run stylelint --silent -- github-dark.css themes/**/*.css --color',
       authors: 'bash tools/authors.sh',
       imagemin: 'bash tools/imagemin.sh',
+      generate: 'node tools/generate.js',
       perfectionist: 'npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250',
       add: 'git add github-dark.css',
       patch: 'npm version -f patch',
@@ -434,6 +435,11 @@ module.exports = function(grunt) {
   // minify all PNG and SVG images
   grunt.registerTask('imagemin', 'Minify all PNG and SVG images', () => {
     grunt.task.run(['exec:imagemin']);
+  });
+
+  // Auto-generate styles based on GitHub's CSS
+  grunt.registerTask('generate', 'Auto-generate styles based on GitHub\'s CSS', () => {
+    grunt.task.run(['exec:generate']);
   });
 
   // version bump tasks
