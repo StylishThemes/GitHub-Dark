@@ -53,6 +53,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 * [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)
 * [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
 * [npmhub](https://github.com/npmhub/npmhub)
+* [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
