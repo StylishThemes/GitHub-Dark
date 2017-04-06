@@ -7,9 +7,9 @@ const parseHtml = require("parse5").parseFragment;
 const perf      = require("perfectionist").process;
 
 const mappings = {
-  "color: #444d56": "color: #bbb !important",
-  "color: #586069": "color: #aaa !important",
-  "color: #6a737d": "color: #999 !important",
+  "color: #444d56": "color: #ccc !important",
+  "color: #586069": "color: #bbb !important",
+  "color: #6a737d": "color: #aaa !important",
 };
 
 const perfOpts = {
@@ -34,7 +34,7 @@ pullCss("https://github.com", function(css) {
     });
   });
 
-  let output = "";
+  let output = "/* auto-generated rules - use tools/generate.js to generate them */\n";
   Object.keys(decls).forEach(function(decl) {
     output += `/* auto-generated rule for "${decl}" */\n`;
 
@@ -45,6 +45,7 @@ pullCss("https://github.com", function(css) {
 
     output += String(perf(selectors + "{" + mappings[decl] + "}", perfOpts));
   });
+  output += "/* end auto-generated rules */\n";
 
   process.stdout.write(output);
   exit(0);
