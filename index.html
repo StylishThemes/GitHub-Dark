@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>GitHub Dark Syntax Highlighting Themes</title>
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
 
   <!-- themes -->
   <link rel="stylesheet" title="Ambiance" href="themes/github/ambiance.min.css">
@@ -42,15 +43,20 @@
 
   <!-- Demo styling -->
   <style>
-  body {
-    font-family: Helvetica,arial,freesans,clean,sans-serif;
+  body, .plain {
+    font-family: 'Open Sans', sans-serif;
     background: #222;
     color: #ddd;
     width: 90%;
     text-align: center;
     margin: 20px auto;
   }
-  h1, h2 { }
+  h1 {
+    font-size: 2.5em;
+  }
+  h1, h2, h3 {
+    font-family: 'Arvo', serif;
+  }
   .github-btn { border: 0; }
   a { color: #4183c4; text-decoration: none; }
   a:hover { text-decoration: underline; }
@@ -58,7 +64,7 @@
   h3 + .highlight { border: #555 1px solid; text-align: left; height: 350px; overflow-y: auto; font-size: 10px; position: relative; z-index: -1; }
   h3 + .highlight table { width: 100%; }
   h3 + .highlight table.file-code, h3 + .highlight table.file-code td { line-height: 0; border-collapse: collapse; }
-  pre { padding: 0 5px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+  pre, .blob-code-inner { padding: 0 5px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
   .popup { display: none; }
   .popup:checked ~ .highlight {
     background: #222;
@@ -274,10 +280,10 @@
     <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=StylishThemes&amp;repo=GitHub-Dark&amp;type=fork&amp;count=true" width="90" height="20" title="Fork on GitHub"></iframe>
     <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=StylishThemes&amp;repo=GitHub-Dark&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
   </h3>
-  <h3>Select a syntax highlighting theme:
+  <h3 class="plain">Select a syntax highlighting theme:
     <select></select>
   </h3>
-  <h4>Note: CodeMirror themes are not available for all selections; it falls back to Twilight.</h4>
+  <h4>Note: Not all CodeMirror themes are available for each selection <em>in this demo</em>; it falls back to Twilight.</h4>
 
   <label class="wrapper type-diff file-data">
     <input type="checkbox" class="popup">
