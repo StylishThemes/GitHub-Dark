@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 
 const async     = require("async");
@@ -14,6 +15,7 @@ const mappings = {
 
 const perfOpts = {
   maxSelectorLength: 78, // -2 because of indentation
+  indentSize: 2,
 };
 
 pullCss("https://github.com", function(css) {
