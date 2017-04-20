@@ -246,7 +246,8 @@ module.exports = function(grunt) {
             {
               pattern: /(-025A9,|-02662,)/gim,
               replacement: '$&\n                   '
-            }
+            },
+            {pattern: /\/\*\[\[code-wrap/, replacement: '\n  /*[[code-wrap'}
           ]
         }
       },
