@@ -28,7 +28,10 @@ pullCss("https://github.com", function(css) {
         if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
           if (!decls[mapping]) decls[mapping] = [];
           rule.selectors.forEach(selector => {
-            if (selector[0] === ":") return; // skip pseudos
+            // TODO: create separate rules for each vendor-prefixed
+            // rule because putting them together with other rules
+            // would create invalid rules. Skipping them for now.
+            if (selector[0] === ":") return;
             decls[mapping].push(selector);
           });
         }
