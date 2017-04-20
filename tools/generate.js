@@ -11,6 +11,9 @@ const mappings = {
   "color: #444d56": "color: #ccc !important",
   "color: #586069": "color: #bbb !important",
   "color: #6a737d": "color: #aaa !important",
+  "background-color: #2cbe4e": "background: #163 !important",
+  "background-color: #6f42c1": "background: #6e5494 !important",
+  "background-color: #cb2431": "background: #911 !important",
 };
 
 const perfOpts = {
