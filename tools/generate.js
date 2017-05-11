@@ -8,13 +8,14 @@ const parseHtml = require("parse5").parseFragment;
 const perf      = require("perfectionist").process;
 
 const mappings = {
-  "color: #444d56": "color: #ccc !important",
-  "color: #586069": "color: #bbb !important",
-  "color: #6a737d": "color: #aaa !important",
-  "background-color: #2cbe4e": "background: #163 !important",
-  "background-color: #6f42c1": "background: #6e5494 !important",
-  "background-color: #cb2431": "background: #911 !important",
-  "border: 1px solid rgba(27,31,35,0.15)": "border: 1px solid rgba(225,225,225,0.2) !important",
+  "color: #444d56": "color: #ccc",
+  "color: #586069": "color: #bbb",
+  "color: #6a737d": "color: #aaa",
+  "background-color: #2cbe4e": "background: #163",
+  "background-color: #6f42c1": "background: #6e5494",
+  "background-color: #cb2431": "background: #911",
+  "border: 1px solid rgba(27,31,35,0.15)": "border: 1px solid rgba(225,225,225,0.2)",
+  "background-color: #fff5b1": "background-color: #261d08",
 };
 
 const perfOpts = {
@@ -29,6 +30,7 @@ pullCss("https://github.com", function(css) {
     rule.declarations.forEach(decl => {
       Object.keys(mappings).forEach(function(mapping) {
         const [prop, val] = mapping.split(": ");
+        decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
         if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
           if (!decls[mapping]) decls[mapping] = [];
           rule.selectors.forEach(selector => {
@@ -44,7 +46,7 @@ pullCss("https://github.com", function(css) {
   });
 
   let output = "/* auto-generated rules - use tools/generate.js to generate them */\n";
-  Object.keys(decls).forEach(function(decl) {
+  Object.keys(mappings).forEach(function(decl) {
     output += `/* auto-generated rule for "${decl}" */\n`;
 
     // sort selectors
@@ -52,7 +54,7 @@ pullCss("https://github.com", function(css) {
       return a.localeCompare(b);
     }).join(",");
 
-    output += String(perf(selectors + "{" + mappings[decl] + "}", perfOpts));
+    output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
   });
   output += "/* end auto-generated rules */\n";
 
