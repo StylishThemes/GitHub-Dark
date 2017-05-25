@@ -17,6 +17,11 @@ const mappings = {
   "border: 1px solid rgba(27,31,35,0.15)": "border: 1px solid rgba(225,225,225,0.2)",
   "background-color: #fff5b1": "background-color: #261d08",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
+  "border: 1px solid #e1e4e8" : "border: 1px solid #343434",
+  "border-top: 1px solid #e1e4e8" : "border-top: 1px solid #343434",
+  "border-bottom: 1px solid #e1e4e8" : "border-bottom: 1px solid #343434",
+  "border-left: 1px solid #e1e4e8" : "border-left: 1px solid #343434",
+  "border-right: 1px solid #e1e4e8" : "border-right: 1px solid #343434",
 };
 
 const perfOpts = {
