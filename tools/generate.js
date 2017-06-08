@@ -16,6 +16,10 @@ const mappings = {
   "border-left: 1px solid #e1e4e8" : "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8" : "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8" : "border-top: 1px solid #343434",
+  "border-bottom: 0": "border-bottom: 0",
+  "border-left: 0": "border-left: 0",
+  "border-right: 0": "border-right: 0",
+  "border-top: 0": "border-top: 0",
   "border: 1px solid #e1e4e8" : "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "color: #444d56": "color: #ccc",
@@ -54,12 +58,7 @@ pullCss("https://github.com", function(css) {
   let output = "/* auto-generated rules - use tools/generate.js to generate them */\n";
   Object.keys(mappings).forEach(function(decl) {
     output += `/* auto-generated rule for "${decl}" */\n`;
-
-    // sort selectors
-    const selectors = decls[decl].sort((a, b) => {
-      return a.localeCompare(b);
-    }).join(",");
-
+    const selectors = decls[decl].join(",");
     output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
   });
   output += "/* end auto-generated rules */\n";
