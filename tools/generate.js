@@ -11,6 +11,7 @@ const perf      = require("perfectionist").process;
 
 const mappings = {
   "background-color: #2cbe4e": "background: #163",
+  "background-color: #d1d5da": "background: #444",
   "background-color: #6f42c1": "background: #6e5494",
   "background-color: #cb2431": "background: #911",
   "background-color: #fff5b1": "background-color: #261d08",
