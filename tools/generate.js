@@ -9,12 +9,20 @@ const parseHtml = require("parse5").parseFragment;
 const path      = require("path");
 const perf      = require("perfectionist").process;
 
+// This list maps old declarations to new ones. Ordering is important for cases
+// where one declaration is meant to override another, like in the border cases
+// where GitHub for example overrides border-bottom with another bother-bottom
+// further below. Ideally these cases should be detected and the resulting rule
+// should not be merged but instead be inserted in the original ordering based
+// on GitHub's style.
 const mappings = {
   "background-color: #2cbe4e": "background: #163",
   "background-color: #d1d5da": "background: #444",
   "background-color: #6f42c1": "background: #6e5494",
   "background-color: #cb2431": "background: #911",
   "background-color: #fff5b1": "background-color: #261d08",
+  "border: 1px solid #e1e4e8" : "border-color: #343434",
+  "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
@@ -23,8 +31,6 @@ const mappings = {
   "border-left: 0": "border-left: 0",
   "border-right: 0": "border-right: 0",
   "border-top: 0": "border-top: 0",
-  "border: 1px solid #e1e4e8" : "border-color: #343434",
-  "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "color: #444d56": "color: #ccc",
   "color: #586069": "color: #bbb",
   "color: #6a737d": "color: #aaa",
@@ -36,7 +42,7 @@ const perfOpts = {
   indentSize: 2,
 };
 
-const unmergeableSelectors = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder)/;
+const unmergeableSelectorsRe = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder)/;
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
@@ -65,7 +71,7 @@ function generate() {
                 // TODO: create separate rules for problematic selectors
                 // as because putting them together with other rules
                 // would create invalid rules. Skipping them for now.
-                if (unmergeableSelectors.test(selector)) return;
+                if (unmergeableSelectorsRe.test(selector)) return;
 
                 // change :: to : for stylistic reasons
                 selector = selector.replace(/::/, ":");
