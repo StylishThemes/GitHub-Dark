@@ -64,10 +64,10 @@ function generate() {
         if (!rule.selectors || rule.selectors.length === 0) return;
         rule.declarations.forEach(decl => {
           Object.keys(mappings).forEach(function(mapping) {
+            if (!decls[mapping]) decls[mapping] = [];
             const [prop, val] = mapping.split(": ");
             decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
             if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
-              if (!decls[mapping]) decls[mapping] = [];
               rule.selectors.forEach(selector => {
                 // TODO: create separate rules for problematic selectors
                 // as because putting them together with other rules
@@ -86,9 +86,13 @@ function generate() {
 
       let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
       Object.keys(mappings).forEach(function(decl) {
-        output += `/* auto-generated rule for "${decl}" */\n`;
-        const selectors = decls[decl].join(",");
-        output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
+        if (decls[decl].length) {
+          output += `/* auto-generated rule for "${decl}" */\n`;
+          const selectors = decls[decl].join(",");
+          output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
+        } else {
+          console.error(`Warning: no declarations for ${decl} found!`);
+        }
       });
       output += "/* end auto-generated rules */";
 
