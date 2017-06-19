@@ -21,7 +21,8 @@ const mappings = {
   "background-color: #6f42c1": "background: #6e5494",
   "background-color: #cb2431": "background: #911",
   "background-color: #fff5b1": "background-color: #261d08",
-  "border: 1px solid #e1e4e8" : "border-color: #343434",
+  "border: 1px solid #e1e4e8": "border-color: #343434",
+  "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
@@ -34,7 +35,7 @@ const mappings = {
   "color: #444d56": "color: #ccc",
   "color: #586069": "color: #bbb",
   "color: #6a737d": "color: #aaa",
-  "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
+  "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)"
 };
 
 const perfOpts = {
