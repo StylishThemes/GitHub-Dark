@@ -2704,7 +2704,9 @@
   .zhc-selection-item:hover, .zhc-selection-item--is-active,
   .zhc-selection-item.zhc-selection-item--is-active:not(.zhc-selection-item--is-disabled),
   .zh-select-menu-item.navigation-focus, .zh-select-menu-item:hover,
-  .zh-tabs__nav-item:hover {
+  .zhc-dropdown-simple-item:hover, .zhc-checkbox-toggle--is-active:before,
+  .zhc-board-settings-item:hover, .zhc-tabs__nav-item:hover,
+  li.zhc-tabs__nav-item--active {
     background: /*[[base-color]]*/ #4183c4 !important;
     border-color: /*[[base-color]]*/ #4183c4 !important;
     color: #fff !important;
@@ -2718,36 +2720,41 @@
   }
   /* background */
   .zhc-pipeline, .zh-epic-creator-top, .zh-epic-creator-nav, input.zhc-icon,
-  .zhc-item-table__header, .zhc-item-table__cell {
+  .zhc-item-table__header, .zhc-item-table__cell, .zhc-search,
+  .zhc-selection-list__header, .zhc-burndown .zhc-menu-container__modal-content {
     background-color: transparent !important;
   }
   .zhc-pipeline__body, .zhc-board--is-fullscreen, .zh-epic-issue-progress-bar,
   .zhc-board-loading__message, .zhc-pipeline--is-collapsed, .zhc-issue-card,
   .zh-todo-item-placeholder, .zh-timeline-comment, .zh-epic-creator-tab,
-  .zh-issueviewer-content {
+  .zh-issueviewer-content, .zhc-chart-container, tr.zhc-item-table__row--closed {
     background: #111 !important;
     border-color: #484848 !important;
   }
-  .zhc-issue-card__main, .zhc-pipeline-header, .zh-burndown-chart-container,
+  .zhc-pipeline-header, .zh-burndown-chart-container,
   .zh-burndown-chart .stats-container, .zh-issue-list .table-list-item,
   .zh-todopage-main .zh-todolist-today, .zh-todo-item, .zh-todo-empty-inbox,
   .zh-todo-empty-today, .zh-todo-empty-list, .zh-epic-issue-list-container,
   .zh-epic-creator-tab.selected, .zh-epic-creator-issue-list, .popover,
   .zh-epic-issue-list-container li, .zh-epic-creator-issue-list li,
-  .full-screen-project-header, .dashboard-notice, .zhu-blankslate {
+  .full-screen-project-header, .dashboard-notice, .zhu-blankslate,
+  .zhc-dependency, .zhc-dependency-banner, .zhc-selection-list__body,
+  .zhc-selection-item, .zhc-issues-list-item, .zhc-tag, .zhc-item-table,
+  .zhc-item-table__row, .zhc-menu-container__modal-content,
+  .zhc-chart-info__wrapper {
     background: #181818 !important;
     border-color: #484848 !important;
   }
-  .zhc-issue-card__meta, .zhc-selection-list, .zhc-selection-list__header,
-  .zhc-selection-filter, .zhc-tooltip-action__item, .zh-milestone-dates,
-  .zh-epic-issue-list-footer, .zh-select-menu-header, .zh-todolist-box,
-  .zh-todopage-main .zh-todolist-today, .zh-issue-list .table-list-title,
-  .zh-epic-issue-list-container li:hover, .zh-epic-creator-issue-list li:hover,
-  .zh-epic-creator-progress-bar, .zhc-tooltip-action__content,
-  .zh-timeline-comment-header, .zh-issueviewer-title,
-  .zh-new-issue-suggester-input-container, .zhc-pr-issue-connector__info,
-  .zhu-tag-default, .zhc-chart-container__header, .zhc-dependency,
-  .zhc-dependency-banner {
+  .zhc-issue-card__meta, .zhc-selection-filter, .zhc-tooltip-action__item,
+  .zh-milestone-dates, .zh-epic-issue-list-footer, .zh-select-menu-header,
+  .zh-todolist-box, .zh-todopage-main .zh-todolist-today,
+  .zh-issue-list .table-list-title, .zh-epic-issue-list-container li:hover,
+  .zh-epic-creator-issue-list li:hover, .zh-epic-creator-progress-bar,
+  .zhc-tooltip-action__content, .zh-timeline-comment-header,
+  .zh-issueviewer-title, .zh-new-issue-suggester-input-container,
+  .zhc-pr-issue-connector__info, .zhu-tag-default, .zhc-chart-container__header,
+  .zhc-issues-list__header, .zhc-toggleable--is-disabled,
+  .zhc-item-table__row:hover {
     background: #202020 !important;
     border-color: #484848 !important;
   }
@@ -2755,8 +2762,9 @@
   .zhc-badge--issue-count, .zhc-tooltip-action__item:hover,
   .zh-todolist-completed-separator, .zh-todolist-today-separator,
   .zh-epic-issue-list-item-badge .zh-pipeline-badge, .zh-pipeline-badge-light,
-  .zhc-dropdown-simple-item:hover, .zhc-selection-item, .zhc-progress-bar,
-  .zhc-dependency-type-dropdown__list__item {
+  .zhc-progress-bar, .zhc-dependency-type-dropdown__list__item,
+  .zhc-chart-legend:after, .zhc-issues-list-item:hover, .zhc-btn--tint:hover,
+  .zh-reports .zhc-btn:hover {
     background: #333 !important;
   }
   .zh-epic-creator-tab.selected, .zh-pipeline-badge-light {
@@ -2792,7 +2800,8 @@
   .zh-epic-creator-filters, .zh-epic-issues-picker-new-issue, .merge-status-list,
   .zhc-dropdown-simple-item, .zhc-pipeline-body, .zhc-board-settings-head,
   .zhc-pipeline-sort-status, .zhc-chart-container, .zhc-burndown-chart__stats,
-  .zhc-chart-container__footer {
+  .zhc-chart-container__footer, .zhc-chart-legend__labels, .zhc-issues-list,
+  .zhc-tabs__nav-item, .zhc-menu-bar-item--search-bar, .zhc-menu-bar-item {
     border-color: #343434 !important;
   }
   .zhc-tooltip-action__content:before, .zhc-pr-issue-connector__info:before {
@@ -2802,7 +2811,9 @@
     border-left-color: #343434 !important;
   }
   .zhc-dependency-type-dropdown__control,
-  .zhc-dependency-type-dropdown__list__item {
+  .zhc-dependency-type-dropdown__list__item,
+  .zhc-pipeline--add-placeholder .zhc-pipeline__head,
+  .zhc-checkbox-toggle--is-active:before, .zhc-checkbox-toggle--is-active:after {
     border-color: #484848 !important;
   }
   /* text */
@@ -2811,10 +2822,10 @@
   .zh-epic-pipeline-selector.active .zh-epic-pipeline-selector-name,
   .zh-select-menu-title, .zhc-badge--issue-count, .zh-pipeline-badge,
   .zh-timeline-comment-header-text, .zh-epic-issue-header-title,
-  .zh-select-menu-item .description, .zh-pipeline-badge,
-  .zh-tabs__nav-item:not(.zh-tabs__nav-item--active), .zhc-issue-item__title,
+  .zh-select-menu-item .description, .zh-pipeline-badge, .zhc-issue-item__title,
   .zhc-item-table__cell__issue-number, .zhc-item-table__column-title,
-  .zhc-selection-button__title--active-filter, .zhc-item-table__row {
+  .zhc-selection-button__title--active-filter, .zhc-item-table__row,
+  .zhc-selection-list__header, .zhc-issues-list-item__issue_number {
     color: #ccc !important;
   }
   .zh-sidebar-icon {
@@ -2822,20 +2833,22 @@
     -webkit-filter: brightness(2) !important;
             filter: brightness(2) !important;
   }
-  .zhc-selection-item--is-active .zhc-dependency-issue-selector__issue-item-meta {
+  .zhc-dependency-issue-selector__issue-item-meta,
+  .zhc-selection-item--is-active span, .zhc-btn--tint {
     color: #fff !important;
   }
   .zhc-dependency .zhu-text-important, .zhc-dependency-banner,
-  .zhc-dependency-type-dropdown__control, .zhc-dependency-type-dropdown__list {
+  .zhc-dependency-type-dropdown__control, .zhc-dependency-type-dropdown__list,
+  .zhc-selection-item--is-disabled {
     color: #c0c0c0 !important;
   }
   .zhc-click-text-item {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* ZenHub buttons */
-  .zhc-toggle-button, .zhc-btn, .zh-todo-issue-dropdown .zh-split-button-icon,
-  .zh-todo-issue-button .zh-split-button-right-side, .zhu-blankslate,
-  .zh-tabs__nav-item:not(.zh-tabs__nav-item--active) {
+  .zhc-toggle-button:not(.zhc-btn--minimal), .zhc-selection-button,
+  .zh-todo-issue-dropdown .zh-split-button-icon, .zhc-btn--tint,
+  .zh-split-button-right-side, .zhu-blankslate, .zh-reports .zhc-btn {
     background: linear-gradient(#282828, #181818) !important;
     border-color: #383838 !important;
   }
@@ -2847,12 +2860,13 @@
     background: #b22 !important;
     border-color: #b00 !important;
   }
-  .zhc-toggle-button:hover, .zhc-btn:not(.zhc-toggleable--is-disabled):hover,
-  .zhc-selection-button__container:hover, .zhc-toggle-button--is-active,
-  .zhc-selection-button__container--is-active, .zh-burndown .btn .octicon,
+  .zhc-toggle-button:not(.zhc-btn--minimal):hover,
+  .zhc-selection-button:not(.zhc-toggleable--is-disabled):hover,
+  .zhc-toggle-button--is-active, .zhc-selection-button__container--is-active,
+  .zh-burndown .btn .octicon,
   .zh-todo-issue-dropdown.selected .zh-split-button-icon,
   .zh-board-menu-item .octicon, .zh-reports .btn .octicon,
-  .zh-tabs__nav-item:not(.zh-tabs__nav-item--active):hover {
+  .zh-split-button-right-side:hover, .zh-split-button-icon:hover {
     background: linear-gradient(#444, #333) !important;
     border-color: #484848 !important;
   }
@@ -2866,7 +2880,8 @@
   }
   /* popovers */
   .zhc-selection-list__header__text, .zhc-tooltip-action__content,
-  .zh-select-menu-title, .popover, .zhc-board-settings__items__header {
+  .zh-select-menu-title, .popover, .zhc-board-settings__items__header,
+  .zhc-selection-list__header {
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -2890,7 +2905,8 @@
   .zh-octicon-pencil, .zh-octicon-inbox, .zh-octicon-plus, .zh-octicon-info,
   .zh-octicon-milestone, .zh-octicon-chevron-down, .zh-epic-creator-tab-icon,
   .zh-board-menu-item .zh-octicon-grey, .zh-octicon-search,
-  .zhc-burndown-chart__placeholder {
+  .zhc-burndown-chart__placeholder, .zhc-selection-button__container:after,
+  .zhc-icon--grey-light {
     -webkit-filter: invert(100%) !important;
             filter: invert(100%) !important;
   }
@@ -2912,10 +2928,10 @@
   }
   a.notifications-dropdown-see-all {
     background: #242424 !important;
-    color: /*[[base-color]]*/ #6d8048 !important;
+    color: /*[[base-color]]*/ #4183c4 !important;
   }
   a.notifications-dropdown-see-all:hover {
-    background: /*[[base-color]]*/ #6d8048 !important;
+    background: /*[[base-color]]*/ #4183c4 !important;
     color: #e2e2e2 !important;
   }
   .notifications-dropdown-arrow {
