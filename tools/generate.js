@@ -109,7 +109,7 @@ function generate() {
 function pullCss(url) {
   return new Promise(function(resolve, reject) {
     got(url).then(res => {
-      var links = res.body.match(/<link.+>/g) || [];
+      let links = res.body.match(/<link.+>/g) || [];
       links = links.map(link => {
         const attrs = {};
         parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
