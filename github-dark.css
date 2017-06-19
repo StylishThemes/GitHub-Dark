@@ -2702,6 +2702,7 @@
   }
   /*** ZenHub styling ***/
   .zhc-selection-item:hover, .zhc-selection-item--is-active,
+  .zhc-selection-item.zhc-selection-item--is-active:not(.zhc-selection-item--is-disabled),
   .zh-select-menu-item.navigation-focus, .zh-select-menu-item:hover,
   .zh-tabs__nav-item:hover {
     background: /*[[base-color]]*/ #4183c4 !important;
@@ -2710,6 +2711,10 @@
   }
   .zhc-pipeline-sort-status__clear {
     color: /*[[base-color]]*/ #4183c4 !important;
+  }
+  .zhc-dependency-type-dropdown--is-open .zhc-dependency-type-dropdown__control {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
   }
   /* background */
   .zhc-pipeline, .zh-epic-creator-top, .zh-epic-creator-nav, input.zhc-icon,
@@ -2741,7 +2746,8 @@
   .zh-epic-creator-progress-bar, .zhc-tooltip-action__content,
   .zh-timeline-comment-header, .zh-issueviewer-title,
   .zh-new-issue-suggester-input-container, .zhc-pr-issue-connector__info,
-  .zhu-tag-default, .zhc-chart-container__header {
+  .zhu-tag-default, .zhc-chart-container__header, .zhc-dependency,
+  .zhc-dependency-banner {
     background: #202020 !important;
     border-color: #484848 !important;
   }
@@ -2749,7 +2755,8 @@
   .zhc-badge--issue-count, .zhc-tooltip-action__item:hover,
   .zh-todolist-completed-separator, .zh-todolist-today-separator,
   .zh-epic-issue-list-item-badge .zh-pipeline-badge, .zh-pipeline-badge-light,
-  .zhc-dropdown-simple-item:hover {
+  .zhc-dropdown-simple-item:hover, .zhc-selection-item, .zhc-progress-bar,
+  .zhc-dependency-type-dropdown__list__item {
     background: #333 !important;
   }
   .zh-epic-creator-tab.selected, .zh-pipeline-badge-light {
@@ -2765,11 +2772,14 @@
   .zhc-readonly-banner {
     background: #182030 !important;
   }
-  .zhc-progress-bar {
-    background: #333 !important;
-  }
   .zhc-progress-bar > .zhc-progress-bar--completed-issues {
     background: #163 !important;
+  }
+  .zhc-selection-item--is-active .zhc-icon--board-light {
+    background-image: url("https://user-images.githubusercontent.com/3282350/27267371-e0aace98-5475-11e7-8b2f-dc774eaf5fd3.png") !important;
+  }
+  .zhc-dependency-type-dropdown__list {
+    background: none !important;
   }
   /* border */
   .zhc-pr-issue-connector__info:after {
@@ -2791,6 +2801,10 @@
   .popover.left .arrow {
     border-left-color: #343434 !important;
   }
+  .zhc-dependency-type-dropdown__control,
+  .zhc-dependency-type-dropdown__list__item {
+    border-color: #484848 !important;
+  }
   /* text */
   .zhc-selection-list__header__text, .zhc-merge-repo-item__content,
   .zhc-repo-item, .zh-todolist-create:hover, .zh-todolist-name,
@@ -2807,6 +2821,16 @@
     opacity: 1 !important;
     -webkit-filter: brightness(2) !important;
             filter: brightness(2) !important;
+  }
+  .zhc-selection-item--is-active .zhc-dependency-issue-selector__issue-item-meta {
+    color: #fff !important;
+  }
+  .zhc-dependency .zhu-text-important, .zhc-dependency-banner,
+  .zhc-dependency-type-dropdown__control, .zhc-dependency-type-dropdown__list {
+    color: #c0c0c0 !important;
+  }
+  .zhc-click-text-item {
+    color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* ZenHub buttons */
   .zhc-toggle-button, .zhc-btn, .zh-todo-issue-dropdown .zh-split-button-icon,
