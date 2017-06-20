@@ -33,5 +33,5 @@ function cssString(ranges) {
 console.log(cssString(getExcludeRanges(chars)) + "\n");
 console.log(Array.from(emojis).map(char => {
   const hex = char.codePointAt(0).toString(16);
-  return 'g-emoji[fallback-src$="' + hex  + '.png"]';
+  return 'g-emoji[fallback-src$="' + hex + '.png"]';
 }).join(", "));
