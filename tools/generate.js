@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 
-const async     = require("async");
 const fs        = require("fs");
 const got       = require("got");
 const parseCss  = require("css").parse;
@@ -47,7 +46,9 @@ const unmergeableSelectorsRe = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-generate().then(function(generated) {
+pullCss("https://github.com").then(function(css) {
+  return buildOutput(parseDeclarations(css));
+}).then(function(generated) {
   fs.readFile(cssFile, "utf8", function(err, css) {
     if (err) return exit(err);
     fs.writeFile(cssFile, css.replace(replaceRe, generated), function(err) {
@@ -56,76 +57,69 @@ generate().then(function(generated) {
   });
 }).catch(exit);
 
-function generate() {
-  return new Promise(function(resolve, reject) {
-    pullCss("https://github.com").then(function(css) {
-      const decls = [];
-      parseCss(css).stylesheet.rules.forEach(function(rule) {
-        if (!rule.selectors || rule.selectors.length === 0) return;
-        rule.declarations.forEach(decl => {
-          Object.keys(mappings).forEach(function(mapping) {
-            if (!decls[mapping]) decls[mapping] = [];
-            const [prop, val] = mapping.split(": ");
-            decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
-            if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
-              rule.selectors.forEach(selector => {
-                // TODO: create separate rules for problematic selectors
-                // as because putting them together with other rules
-                // would create invalid rules. Skipping them for now.
-                if (unmergeableSelectorsRe.test(selector)) return;
-
-                // change :: to : for stylistic reasons
-                selector = selector.replace(/::/, ":");
-
-                decls[mapping].push(selector);
-              });
-            }
-          });
-        });
+function pullCss(url) {
+  return got(url).then(res => {
+    return (res.body.match(/<link.+>/g) || []).map(link => {
+      const attrs = {};
+      parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
+        attrs[attr.name] = attr.value;
       });
-
-      let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
-      Object.keys(mappings).forEach(function(decl) {
-        if (decls[decl].length) {
-          output += `/* auto-generated rule for "${decl}" */\n`;
-          const selectors = decls[decl].join(",");
-          output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
-        } else {
-          console.error(`Warning: no declarations for ${decl} found!`);
-        }
-      });
-      output += "/* end auto-generated rules */";
-
-      // indent by 2 spaces
-      output = output.split("\n").map(function(line) {
-        return "  " + line;
-      }).join("\n");
-
-      resolve(output);
-    }).catch(reject);
+      if (attrs.rel === "stylesheet" && attrs.href) {
+        return attrs.href;
+      }
+    }).filter(link => !!link);
+  }).then(links => {
+    return Promise.all(links.map(link => got(link)));
+  }).then(responses => {
+    return responses.map(res => res.body).join("\n");
   });
 }
 
-function pullCss(url) {
-  return new Promise(function(resolve, reject) {
-    got(url).then(res => {
-      let links = res.body.match(/<link.+>/g) || [];
-      links = links.map(link => {
-        const attrs = {};
-        parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
-          attrs[attr.name] = attr.value;
-        });
-        if (attrs.rel === "stylesheet" && attrs.href) {
-          return attrs.href;
+function parseDeclarations(css) {
+  const decls = [];
+  parseCss(css).stylesheet.rules.forEach(function(rule) {
+    if (!rule.selectors || rule.selectors.length === 0) return;
+    rule.declarations.forEach(decl => {
+      Object.keys(mappings).forEach(function(mapping) {
+        if (!decls[mapping]) decls[mapping] = [];
+        const [prop, val] = mapping.split(": ");
+        decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
+        if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
+          rule.selectors.forEach(selector => {
+            // TODO: create separate rules for problematic selectors
+            // as because putting them together with other rules
+            // would create invalid rules. Skipping them for now.
+            if (unmergeableSelectorsRe.test(selector)) return;
+
+            // change :: to : for stylistic reasons
+            selector = selector.replace(/::/, ":");
+
+            decls[mapping].push(selector);
+          });
         }
-      }).filter(link => !!link);
-      async.map(links, (link, cb) => {
-        got(link).then(res => cb(null, res.body));
-      }, function(_, css) {
-        resolve(css.join("\n"));
       });
-    }).catch(reject);
+    });
   });
+  return decls;
+}
+
+function buildOutput(decls) {
+  let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
+  Object.keys(mappings).forEach(function(decl) {
+    if (decls[decl].length) {
+      output += `/* auto-generated rule for "${decl}" */\n`;
+      const selectors = decls[decl].join(",");
+      output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
+    } else {
+      console.error(`Warning: no declarations for ${decl} found!`);
+    }
+  });
+  output += "/* end auto-generated rules */";
+
+  return output.split("\n").map(function(line) {
+    // indent by 2 spaces
+    return "  " + line;
+  }).join("\n");
 }
 
 function exit(err) {
