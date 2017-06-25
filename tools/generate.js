@@ -46,33 +46,34 @@ const unmergeableSelectorsRe = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-pullCss("https://github.com").then(function(css) {
-  return buildOutput(parseDeclarations(css));
-}).then(function(generated) {
+got("https://github.com")
+  .then(res => extractStyleHrefs(res.body))
+  .then(links => Promise.all(links.map(link => got(link))))
+  .then(responses => responses.map(res => res.body).join("\n"))
+  .then(css => parseDeclarations(css))
+  .then(decls => buildOutput(decls))
+  .then(css => writeOutput(css))
+  .catch(exit);
+
+function writeOutput(generatedCss) {
   fs.readFile(cssFile, "utf8", function(err, css) {
     if (err) return exit(err);
-    fs.writeFile(cssFile, css.replace(replaceRe, generated), function(err) {
+    fs.writeFile(cssFile, css.replace(replaceRe, generatedCss), function(err) {
       exit(err || null);
     });
   });
-}).catch(exit);
+}
 
-function pullCss(url) {
-  return got(url).then(res => {
-    return (res.body.match(/<link.+>/g) || []).map(link => {
-      const attrs = {};
-      parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
-        attrs[attr.name] = attr.value;
-      });
-      if (attrs.rel === "stylesheet" && attrs.href) {
-        return attrs.href;
-      }
-    }).filter(link => !!link);
-  }).then(links => {
-    return Promise.all(links.map(link => got(link)));
-  }).then(responses => {
-    return responses.map(res => res.body).join("\n");
-  });
+function extractStyleHrefs(html) {
+  return (html.match(/<link.+?>/g) || []).map(link => {
+    const attrs = {};
+    parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
+      attrs[attr.name] = attr.value;
+    });
+    if (attrs.rel === "stylesheet" && attrs.href) {
+      return attrs.href;
+    }
+  }).filter(link => !!link);
 }
 
 function parseDeclarations(css) {
