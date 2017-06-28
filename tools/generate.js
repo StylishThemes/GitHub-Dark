@@ -10,7 +10,7 @@ const perf      = require("perfectionist").process;
 
 // This list maps old declarations to new ones. Ordering is important for cases
 // where one declaration is meant to override another, like in the border cases
-// where GitHub for example overrides border-bottom with another bother-bottom
+// where GitHub for example overrides border-bottom with another border-bottom
 // further below. Ideally these cases should be detected and the resulting rule
 // should not be merged but instead be inserted in the original ordering based
 // on GitHub's style.
