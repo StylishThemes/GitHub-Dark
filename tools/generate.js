@@ -46,8 +46,9 @@ const unmergeableSelectorsRe = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-got("https://github.com")
-  .then(res => extractStyleHrefs(res.body))
+Promise.all([
+  got("https://github.com"),
+]).then(responses => extractStyleHrefs(responses.map(res => res.body).join("")))
   .then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
   .then(css => parseDeclarations(css))
