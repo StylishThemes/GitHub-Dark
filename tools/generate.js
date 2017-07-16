@@ -20,6 +20,7 @@ const mappings = {
   "background-color: #6f42c1": "background: #6e5494",
   "background-color: #cb2431": "background: #911",
   "background-color: #fff5b1": "background-color: #261d08",
+  "background-color: #fffbdd": "background-color: #261d08",
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
@@ -37,12 +38,23 @@ const mappings = {
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)"
 };
 
+// list of regexes matching selectors that should be ignored
+const ignoreSelectors = [
+  /\.CodeMirror/,
+];
+
+// list of regexes matching selectors that shouldn't be merged with other
+// selectors because they can generate invalid rules.
+const unmergeableSelectors = [
+  /(-moz-|-ms-|-o-|-webkit-).+/,
+  /:selection|:placeholder$/,
+];
+
 const perfOpts = {
   maxSelectorLength: 78, // -2 because of indentation
   indentSize: 2,
 };
 
-const unmergeableSelectorsRe = /(-moz-|-ms-|-o-|-webkit-|:selection|:placeholder)/;
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
@@ -88,10 +100,12 @@ function parseDeclarations(css) {
         decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
         if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
           rule.selectors.forEach(selector => {
-            // TODO: create separate rules for problematic selectors
-            // as because putting them together with other rules
-            // would create invalid rules. Skipping them for now.
-            if (unmergeableSelectorsRe.test(selector)) return;
+            // Skip potentially unmergeable selectors
+            // TODO: Use clean-css or similar to merge rules later instead
+            if (unmergeableSelectors.some(re => re.test(selector))) return;
+
+            // Skip ignored selectors
+            if (ignoreSelectors.some(re => re.test(selector))) return;
 
             // change :: to : for stylistic reasons
             selector = selector.replace(/::/, ":");
