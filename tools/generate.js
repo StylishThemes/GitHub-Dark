@@ -25,6 +25,7 @@ const mappings = {
   "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
+  "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #484848",
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
