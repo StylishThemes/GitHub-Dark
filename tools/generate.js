@@ -36,7 +36,7 @@ const mappings = {
   "color: #444d56": "color: #ccc",
   "color: #586069": "color: #bbb",
   "color: #6a737d": "color: #aaa",
-  "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)"
+  "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 };
 
 // list of regexes matching selectors that should be ignored
@@ -61,7 +61,7 @@ const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 Promise.all([
   got("https://github.com"),
-]).then(responses => extractStyleHrefs(responses.map(res => res.body).join("")))
+]).then(responses => extractStyleHrefs(responses.map(res => res.body).join("\n")))
   .then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
   .then(css => parseDeclarations(css))
@@ -70,18 +70,16 @@ Promise.all([
   .catch(exit);
 
 function writeOutput(generatedCss) {
-  fs.readFile(cssFile, "utf8", function(err, css) {
+  fs.readFile(cssFile, "utf8", (err, css) => {
     if (err) return exit(err);
-    fs.writeFile(cssFile, css.replace(replaceRe, generatedCss), function(err) {
-      exit(err || null);
-    });
+    fs.writeFile(cssFile, css.replace(replaceRe, generatedCss), exit);
   });
 }
 
 function extractStyleHrefs(html) {
   return (html.match(/<link.+?>/g) || []).map(link => {
     const attrs = {};
-    parseHtml(link).childNodes[0].attrs.forEach(function(attr) {
+    parseHtml(link).childNodes[0].attrs.forEach(attr => {
       attrs[attr.name] = attr.value;
     });
     if (attrs.rel === "stylesheet" && attrs.href) {
@@ -92,10 +90,10 @@ function extractStyleHrefs(html) {
 
 function parseDeclarations(css) {
   const decls = [];
-  parseCss(css).stylesheet.rules.forEach(function(rule) {
+  parseCss(css).stylesheet.rules.forEach(rule => {
     if (!rule.selectors || rule.selectors.length === 0) return;
     rule.declarations.forEach(decl => {
-      Object.keys(mappings).forEach(function(mapping) {
+      Object.keys(mappings).forEach(mapping => {
         if (!decls[mapping]) decls[mapping] = [];
         const [prop, val] = mapping.split(": ");
         decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
@@ -122,7 +120,7 @@ function parseDeclarations(css) {
 
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
-  Object.keys(mappings).forEach(function(decl) {
+  Object.keys(mappings).forEach(decl => {
     if (decls[decl].length) {
       output += `/* auto-generated rule for "${decl}" */\n`;
       const selectors = decls[decl].join(",");
@@ -132,11 +130,7 @@ function buildOutput(decls) {
     }
   });
   output += "/* end auto-generated rules */";
-
-  return output.split("\n").map(function(line) {
-    // indent by 2 spaces
-    return "  " + line;
-  }).join("\n");
+  return output.split("\n").map(line => "  " + line).join("\n");
 }
 
 function exit(err) {
