@@ -573,8 +573,8 @@
   }
   input.focus[type="text"], #adv_code_search .focus.search-page-label,
   /* below selector has a ton of weight. Better to override it with
-     class selectors that unset box-shadow and rules here. Testable
-     on the repo tag editor */
+   * class selectors that unset box-shadow and rules here. Testable
+   * on the repo tag editor */
   input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
   .focused .drag-and-drop, #adv_code_search .search-page-label:focus,
   input.focus[type="password"], input[type="password"]:focus,
@@ -599,7 +599,7 @@
     color: #eee !important;
   }
   /* custom checkbox and radio styles. We need a full set of styles here as
-     WebKit removes all of them when -webkit-appearance: none is set. */
+   * WebKit removes all of them when -webkit-appearance: none is set. */
   input[type="checkbox"], input[type="checkbox"]:focus, input[type="radio"],
   input[type="radio"]:focus, input[type="checkbox"]:hover:active,
   input[type="radio"]:hover:active, input[type="checkbox"]:disabled,
@@ -631,7 +631,7 @@
     overflow: visible !important;
   }
   pre, .highlight, .diff-table, .tab-size {
-         tab-size: /*[[tab-size]]*/ 2 !important;
+    tab-size: /*[[tab-size]]*/ 2 !important;
     -moz-tab-size: /*[[tab-size]]*/ 2 !important;
   }
   @supports (position: sticky) {
@@ -1605,14 +1605,12 @@
   img[src$="favicons.githubusercontent.com/github.com"],
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
   #footer .github img {
-    -webkit-filter: invert(100%) hue-rotate(180deg) !important;
-            filter: invert(100%) hue-rotate(180deg) !important;
+    filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* invert network graph; gh-polls (https://github.com/tj/gh-polls) */
   div#network.network > div > canvas, a[href*="prod/poll/"] img,
   img[data-canonical-src*="prod/timeseries/"] {
-    -webkit-filter: invert(90%) hue-rotate(180deg) !important;
-            filter: invert(90%) hue-rotate(180deg) !important;
+    filter: invert(90%) hue-rotate(180deg) !important;
   }
   /* invert problematic emoji */
   /* images */
@@ -1642,8 +1640,7 @@
   [alias="musical_score"], [alias="black_large_square"],
   [alias="black_medium_small_square"], [alias="ant"], [alias="musical_note"],
   [alias="loop"], [alias="feet"], [alias="paw_prints"] {
-    -webkit-filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
-            filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
+    filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
     background: transparent !important;
   }
   /* Invert problematic emoji fallback images used on Windows */
@@ -1658,27 +1655,22 @@
   g-emoji[fallback-src$="1f51c.png"], g-emoji[fallback-src$="1f51d.png"],
   g-emoji[fallback-src$="1f3b5.png"], g-emoji[fallback-src$="27bf.png"],
   g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="1f43e.png"] {
-    -webkit-filter: invert(83%) !important;
-            filter: invert(83%) !important;
+    filter: invert(83%) !important;
   }
   /* Exclude problematic non-emojis from Apple's emoji font on macOS */
   /* use tools/unicode-gen.js to generate. */
   @font-face {
     font-family: "Apple Color Emoji";
     src: local("Apple Color Emoji");
-    unicode-range: U+00000-000A8,U+000AA-000AD,U+000AF-02121,U+02123-025A9,
-                   U+025AB-025FB,U+025FD-025FD,U+025FF-0265F,U+02661-02662,
-                   U+02664-02713,U+02715-02715,U+02717-0302F,U+03031-10FFFF;
+    unicode-range: U+00000-000A8, U+000AA-000AD, U+000AF-02121, U+02123-025A9, U+025AB-025FB, U+025FD-025FD, U+025FF-0265F, U+02661-02662, U+02664-02713, U+02715-02715, U+02717-0302F, U+03031-10FFFF;
   }
   /* GeoJSON maps */
   /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson */
   .leaflet-tile-container img {
-    -webkit-filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
-            filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
+    filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
   }
   .leaflet-marker-pane img, .gundamcat {
-    -webkit-filter: brightness(.8) !important;
-            filter: brightness(.8) !important;
+    filter: brightness(.8) !important;
   }
   /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
@@ -1686,8 +1678,7 @@
   div[id^="contribution-joined-github"] img, div[id^="contribution-created"] img,
   .project-preview-img img, img[src$="bg-callout.svg"],
   img[data-canonical-src*="saucelabs.com/browser-matrix"] {
-    -webkit-filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
-            filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
+    filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
   }
   /* workaround filter creating a stacking context */
   .contribution-first-issue, .contribution-first-pull-request,
@@ -1696,8 +1687,7 @@
   }
   /* brighten language colors */
   .language-color {
-    -webkit-filter: brightness(150%) !important;
-            filter: brightness(150%) !important;
+    filter: brightness(150%) !important;
   }
   /* soft badges */
   .box-title-count {
@@ -2739,14 +2729,12 @@
   /* octotree icons */
   a.octotree_toggle:not(.octotree_loading) > span:after,
   .octotree_github_sidebar a.octotree_opts, .octotree_help > span {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    filter: invert(100%) !important;
   }
   a.octotree_toggle:not(.octotree_loading):hover > span:after,
   .octotree_github_sidebar a.octotree_opts:hover,
   .octotree_treeview .jstree-icon.tree {
-    -webkit-filter: grayscale(100%) !important;
-            filter: grayscale(100%) !important;
+    filter: grayscale(100%) !important;
   }
   /* front page: 'more' spinner */
   .ajax-pagination-form.loading .ajax-pagination-btn {
@@ -3205,8 +3193,7 @@
   }
   .zh-sidebar-icon {
     opacity: 1 !important;
-    -webkit-filter: brightness(2) !important;
-            filter: brightness(2) !important;
+    filter: brightness(2) !important;
   }
   .zhc-dependency-issue-selector__issue-item-meta,
   .zhc-selection-item--is-active span, .zhc-btn--tint {
@@ -3274,8 +3261,7 @@
   }
   /* invert image */
   .zh-icon-circled-bolt, .zh-icon-bolt, .zh-octicon-x {
-    -webkit-filter: invert(40%) brightness(120%) !important;
-            filter: invert(40%) brightness(120%) !important;
+    filter: invert(40%) brightness(120%) !important;
   }
   .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]),
   .zhc-board-loading, .zhc-board-loading__message, .zh-octicon-list-unordered,
@@ -3284,11 +3270,10 @@
   .zh-board-menu-item .zh-octicon-grey, .zh-octicon-search,
   .zhc-burndown-chart__placeholder, .zhc-selection-button__container:after,
   .zhc-icon--grey-light {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    filter: invert(100%) !important;
   }
   /* move expanded zenhub board toolbar when octotree exists
-     see https://github.com/buunguyen/octotree/issues/242 */
+   * see https://github.com/buunguyen/octotree/issues/242 */
   html.octotree:not(.octotree-show) .zhc-board--is-fullscreen .zhc-menu-bar {
     margin-left: 30px;
     margin-top: -8px;
@@ -3360,8 +3345,7 @@
     background-color: #181818 !important;
   }
   .awesome-autocomplete .icon-delete {
-    -webkit-filter: invert(100%) !important;
-            filter: invert(100%) !important;
+    filter: invert(100%) !important;
   }
   /*[[code-wrap]]*/
   /* inline code - single lines */
