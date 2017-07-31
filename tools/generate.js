@@ -55,7 +55,7 @@ const unmergeableSelectors = [
 ];
 
 const perfOpts = {
-  maxSelectorLength: 78, // -2 because of indentation
+  maxSelectorLength: 76, // -4 because of indentation and to accomodate ' {'
   indentSize: 2,
 };
 
