@@ -419,7 +419,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask("clean", "Perfectionist cleanup", () => {
     grunt.task.run([
-      "lint",
+      "exec:stylelint", // check linting first
+      "exec:perfectionist",
       "string-replace:afterPerfectionist"
     ]);
   });
