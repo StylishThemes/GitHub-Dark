@@ -419,8 +419,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask("clean", "Perfectionist cleanup", () => {
     grunt.task.run([
-      "exec:stylelint", // check linting first
-      "exec:perfectionist",
+      "lint",
       "string-replace:afterPerfectionist"
     ]);
   });
@@ -451,13 +450,31 @@ module.exports = function(grunt) {
 
   // version bump tasks
   grunt.registerTask("patch", "Bump patch version", () => {
-    grunt.task.run(["string-replace:patch", "exec:add", "exec:patch", "user"]);
+    grunt.task.run([
+      "lint",
+      "string-replace:patch",
+      "exec:add",
+      "exec:patch",
+      "user"
+    ]);
   });
   grunt.registerTask("minor", "Bump minor version", () => {
-    grunt.task.run(["string-replace:minor", "exec:add", "exec:minor", "user"]);
+    grunt.task.run([
+      "lint",
+      "string-replace:minor",
+      "exec:add",
+      "exec:minor",
+      "user"
+    ]);
   });
   grunt.registerTask("major", "Bump major version", () => {
-    grunt.task.run(["string-replace:major", "exec:add", "exec:major", "user"]);
+    grunt.task.run([
+      "lint",
+      "string-replace:major",
+      "exec:add",
+      "exec:major",
+      "user"
+    ]);
   });
 
   // watch thingy
