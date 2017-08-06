@@ -221,18 +221,6 @@ module.exports = function(grunt) {
           }]
         }
       },
-      // fix cleancss issue:
-      // https://github.com/jakubpawlowicz/clean-css/issues/628
-      // *** TODO: remove? ***
-      afterCleanCss: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
-        options: {
-          replacements: [{
-            pattern: /__ESCAPED_SOURCE_END_CLEAN_CSS__/g,
-            replacement: ""
-          }]
-        }
-      },
       // Tweak Perfectionist results
       afterPerfectionist: {
         files: {"<%= config.sourceFile %>" : "<%= config.sourceFile %>"},
@@ -302,8 +290,18 @@ module.exports = function(grunt) {
       minify: {
         files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
         options: {
-          keepSpecialComments: "*",
-          advanced: false
+          rebase: false,
+          level: {
+            1: {
+              specialComments : "all",
+            },
+            2: {
+              all: false,
+              mergeMedia: true,
+              removeDuplicateMediaBlocks: true,
+              removeDuplicateRules: true,
+            },
+          },
         }
       },
       codemirror: {
@@ -376,7 +374,7 @@ module.exports = function(grunt) {
   });
 
   // build custom minified GitHub-Dark style
-  grunt.registerTask("minify", "Building custom minified style", () => {
+  grunt.registerTask("min", "Building custom minified style", () => {
     grunt.task.run(["string-replace:inline", "cssmin:minify"]);
     if (!(config.chrome || config.webkit)) {
       grunt.task.run(["wrap"]);
@@ -400,7 +398,6 @@ module.exports = function(grunt) {
       "string-replace:inline",
       "string-replace:mark",
       "cssmin:minify",
-      "string-replace:afterCleanCss",
       "string-replace:unmark",
       "string-replace:fix",
       "wrap"
