@@ -67,6 +67,7 @@ const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 Promise.all([
   got("https://github.com"),
+  got("https://gist.github.com"),
 ]).then(responses => extractStyleHrefs(responses.map(res => res.body).join("\n")))
   .then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
@@ -115,7 +116,10 @@ function parseDeclarations(css) {
             // change :: to : for stylistic reasons
             selector = selector.replace(/::/, ":");
 
-            decls[mapping].push(selector);
+            // add the selector to our list, unless it's already on it
+            if (!decls[mapping].includes(selector)) {
+              decls[mapping].push(selector);
+            }
           });
         }
       });
