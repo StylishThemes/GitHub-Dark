@@ -45,6 +45,12 @@ const mappings = {
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 };
 
+// list of URLs to pull stylesheets from
+const urls = [
+  "https://github.com",
+  "https://gist.github.com",
+];
+
 // list of regexes matching selectors that should be ignored
 const ignoreSelectors = [
   /\.CodeMirror/,
@@ -65,10 +71,8 @@ const perfOpts = {
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-Promise.all([
-  got("https://github.com"),
-  got("https://gist.github.com"),
-]).then(responses => extractStyleHrefs(responses.map(res => res.body).join("\n")))
+Promise.all(urls.map(url => got(url)))
+  .then(responses => extractStyleHrefs(responses.map(res => res.body).join("\n")))
   .then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
   .then(css => parseDeclarations(css))
