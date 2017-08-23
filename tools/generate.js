@@ -38,11 +38,13 @@ const mappings = {
   "border-left: 0": "border-left: 0",
   "border-right: 0": "border-right: 0",
   "border-top: 0": "border-top: 0",
-  "color: #24292e": "color: #ddd",
-  "color: #444d56": "color: #ccc",
-  "color: #586069": "color: #bbb",
-  "color: #6a737d": "color: #aaa",
-  "color: #a3aab1": "color: #666",
+  "color: #24292e": "color: #e2e2e2",
+  "color: #444d56": "color: #c0c0c0",
+  "color: #586069": "color: #b5b5b5",
+  "color: #6a737d": "color: #949494",
+  "color: #959da5": "color: #7b7b7b",
+  "color: #a3aab1": "color: #606060",
+  "color: #c6cbd1": "color: #4d4d4d",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 };
 
