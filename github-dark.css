@@ -2,7 +2,6 @@
 /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /* Userstyle:  http://userstyles.org/styles/37035              */
 /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
-/* AGENT_SHEET */
 @-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com((?!generated_pages/preview).)*$"), domain("githubusercontent.com") {
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background-color: #2cbe4e" */
@@ -770,10 +769,13 @@
     -moz-appearance: none !important;
     background-color: #181818 !important;
     border-color: #343434 !important;
-    color: #eee !important;
+    color: #ccc !important;
   }
-  button {
-    -moz-appearance: none !important;
+  /* below style currently does not work in Firefox, see */
+  /* https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
+  optgroup, optgroup:before {
+    color: #888 !important;
+    background-color: #181818 !important;
   }
   /* custom checkbox and radio styles. We need a full set of styles here as
    * WebKit removes all of them when -webkit-appearance: none is set. */
