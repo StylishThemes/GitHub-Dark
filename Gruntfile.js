@@ -416,7 +416,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask("clean", "Perfectionist cleanup", () => {
     grunt.task.run([
-      "exec:stylelint", // check linting first
       "exec:perfectionist",
       "string-replace:afterPerfectionist"
     ]);
@@ -443,7 +442,7 @@ module.exports = function(grunt) {
 
   // Auto-generate styles based on GitHub's CSS
   grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
-    grunt.task.run(["exec:generate"]);
+    grunt.task.run(["exec:generate", "clean"]);
   });
 
   // version bump tasks
