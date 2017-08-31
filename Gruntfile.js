@@ -276,7 +276,6 @@ module.exports = function(grunt) {
     exec: {
       stylelint: "npm -s run stylelint",
       eslint: "npm -s run eslint",
-      eclint: "npm -s run eclint",
       authors: "bash tools/authors.sh",
       imagemin: "bash tools/imagemin.sh",
       perfectionist: "npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
@@ -425,8 +424,7 @@ module.exports = function(grunt) {
   grunt.registerTask("lint", "Lint CSS and JS scripts for errors", () => {
     grunt.task.run([
       "exec:eslint",
-      "exec:stylelint",
-      "exec:eclint"
+      "exec:stylelint"
     ]);
   });
 
