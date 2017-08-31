@@ -1783,6 +1783,9 @@
     background-color: /*[[base-color]]*/ #4183c4 !important;
     fill: /*[[base-color]]*/ #4183c4 !important;
   }
+  .blame-commit-date[data-heat] {
+    color: /*[[base-color]]*/ #4183c4 !important;
+  }
   .calendar-graph .days-selected rect.day.active {
     stroke: #ddd !important;
   }
@@ -1795,20 +1798,36 @@
     fill: #222 !important;
   }
   .heat[data-heat="1"], .heat[data-heat="2"],
-  .calendar-graph rect[fill="#c6e48b"], .contrib-legend li[style*="#c6e48b"] {
-    opacity: .25 !important;
+  .blame-commit-date[data-heat="1"], .blame-commit-date[data-heat="2"] {
+    opacity: 1 !important;
   }
   .heat[data-heat="3"], .heat[data-heat="4"],
-  .calendar-graph rect[fill="#7bc96f"], .contrib-legend li[style*="#7bc96f"] {
-    opacity: .5 !important;
+  .blame-commit-date[data-heat="3"], .blame-commit-date[data-heat="4"] {
+    opacity: .8 !important;
   }
   .heat[data-heat="5"], .heat[data-heat="6"],
+  .blame-commit-date[data-heat="5"], .blame-commit-date[data-heat="6"] {
+    opacity: .6 !important;
+  }
+  .heat[data-heat="7"], .heat[data-heat="8"],
+  .blame-commit-date[data-heat="7"], .blame-commit-date[data-heat="8"] {
+    opacity: .4 !important;
+  }
+  .heat[data-heat="9"], .heat[data-heat="10"],
+  .blame-commit-date[data-heat="9"], .blame-commit-date[data-heat="10"] {
+    opacity: .2 !important;
+  }
+  .calendar-graph rect[fill="#196127"], .contrib-legend li[style*="#196127"] {
+    opacity: 1 !important;
+  }
   .calendar-graph rect[fill="#239a3b"], .contrib-legend li[style*="#239a3b"] {
     opacity: .75 !important;
   }
-  .heat[data-heat="7"], .heat[data-heat="8"],
-  .calendar-graph rect[fill="#196127"], .contrib-legend li[style*="#196127"] {
-    opacity: 1 !important;
+  .calendar-graph rect[fill="#7bc96f"], .contrib-legend li[style*="#7bc96f"] {
+    opacity: .5 !important;
+  }
+  .calendar-graph rect[fill="#c6e48b"], .contrib-legend li[style*="#c6e48b"] {
+    opacity: .25 !important;
   }
   /* contribution calendar - halloween colors */
   .calendar-graph rect[fill="#FFEE4A"], .calendar-graph rect[fill="#FFC501"],
@@ -3598,7 +3617,6 @@
   .awesome-autocomplete .icon-delete {
     filter: invert(100%) !important;
   }
-  
   /*[[code-wrap]]*/
   /* inline code - single lines */
   .markdown-body code, .markdown-body tt, .protip code, .content dl code,
