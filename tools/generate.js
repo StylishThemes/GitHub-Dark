@@ -31,16 +31,32 @@ const mappings = {
   "border: 2px solid #fff": "border-color: #222",
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
+
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #d8d8d8": "border-bottom: 1px solid #484848",
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #484848",
+
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
+
   "border-bottom: 0": "border-bottom: 0",
   "border-left: 0": "border-left: 0",
   "border-right: 0": "border-right: 0",
   "border-top: 0": "border-top: 0",
+
+  "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
+  "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
+  "border-right-color: rgba(27,31,35,0.15)": "border-right-color: #343434",
+
+  "border-bottom-color: #fff" : "border-bottom-color: #181818",
+  "border-left-color: #fff" : "border-left-color: #181818",
+  "border-top-color: #fff" : "border-top-color: #181818",
+  "border-right-color: #fff" : "border-right-color: #181818",
+
+  "border-top: 7px solid #fff" : "border-top: 7px solid #181818",
+  "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
+
   "color: #24292e": "color: #e2e2e2",
   "color: #444d56": "color: #c0c0c0",
   "color: #586069": "color: #b5b5b5",
