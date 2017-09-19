@@ -23,7 +23,6 @@ const mappings = {
   "background-color: #fff5b1": "background-color: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #f6f8fa": "background-color: #181818",
-  "background-color: #f6f8fa": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
   "background: #fff": "background: #181818",
   "background-color: #fff": "background: #181818",
