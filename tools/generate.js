@@ -7,6 +7,7 @@ const parseCss  = require("css").parse;
 const parseHtml = require("parse5").parseFragment;
 const path      = require("path");
 const perf      = require("perfectionist").process;
+const url       = require("url");
 
 // This list maps old declarations to new ones. Ordering is important for cases
 // where one declaration is meant to override another, like in the border cases
@@ -22,6 +23,7 @@ const mappings = {
   "background-color: #fff5b1": "background-color: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #f6f8fa": "background-color: #181818",
+  "background-color: #f6f8fa": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
   "background: #fff": "background: #181818",
   "background-color: #fff": "background: #181818",
@@ -29,12 +31,14 @@ const mappings = {
   "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border: 2px solid #fff": "border-color: #222",
+  "border: solid #ddd": "border-color: #484848",
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
 
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
+  "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
+  "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #484848",
   "border-bottom: 1px solid #d8d8d8": "border-bottom: 1px solid #484848",
-  "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #484848",
 
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
@@ -60,6 +64,7 @@ const mappings = {
   "color: #24292e": "color: #e2e2e2",
   "color: #444d56": "color: #c0c0c0",
   "color: #586069": "color: #b5b5b5",
+  "color: #666"   : "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #7b7b7b",
   "color: #a3aab1": "color: #606060",
@@ -71,6 +76,7 @@ const mappings = {
 const urls = [
   "https://github.com",
   "https://gist.github.com",
+  "https://help.github.com",
 ];
 
 // list of regexes matching selectors that should be ignored
@@ -94,13 +100,44 @@ const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 Promise.all(urls.map(url => got(url)))
-  .then(responses => extractStyleHrefs(responses.map(res => res.body).join("\n")))
-  .then(links => Promise.all(links.map(link => got(link))))
+  .then(responses => {
+    const styleUrls = [];
+    responses.forEach(res => {
+      extractStyleHrefs(res.body).forEach(function(href) {
+        styleUrls.push(toAbsoluteUrl(res.requestUrl, href));
+      });
+    });
+    return styleUrls;
+  }).then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
   .then(css => parseDeclarations(css))
   .then(decls => buildOutput(decls))
   .then(css => writeOutput(css))
   .catch(exit);
+
+// turn relative links into absolute ones
+function toAbsoluteUrl(base, href) {
+  const uri = url.parse(href);
+  if (!uri.host) {
+    const baseUri = url.parse(base);
+    const hrefUri = url.parse(href);
+    const newUri = new url.Url();
+    newUri.protocol = baseUri.protocol;
+    newUri.slashes = baseUri.protocol;
+    newUri.auth = baseUri.auth;
+    newUri.host = baseUri.host;
+    newUri.port = baseUri.port;
+    newUri.hostname = baseUri.hostname;
+    newUri.hash = hrefUri.hash;
+    newUri.search = hrefUri.search;
+    newUri.query = hrefUri.query;
+    newUri.pathname = hrefUri.pathname;
+    newUri.path = hrefUri.path;
+    return newUri.format();
+  } else {
+    return href;
+  }
+}
 
 function writeOutput(generatedCss) {
   fs.readFile(cssFile, "utf8", (err, css) => {
