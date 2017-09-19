@@ -7,7 +7,7 @@ const parseCss  = require("css").parse;
 const parseHtml = require("parse5").parseFragment;
 const path      = require("path");
 const perf      = require("perfectionist").process;
-const url       = require("url");
+const utk       = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is important for cases
 // where one declaration is meant to override another, like in the border cases
@@ -103,7 +103,7 @@ Promise.all(urls.map(url => got(url)))
     const styleUrls = [];
     responses.forEach(res => {
       extractStyleHrefs(res.body).forEach(function(href) {
-        styleUrls.push(toAbsoluteUrl(res.requestUrl, href));
+        styleUrls.push(utk.buildAbsoluteURL(res.requestUrl, href));
       });
     });
     return styleUrls;
@@ -113,30 +113,6 @@ Promise.all(urls.map(url => got(url)))
   .then(decls => buildOutput(decls))
   .then(css => writeOutput(css))
   .catch(exit);
-
-// turn relative links into absolute ones
-function toAbsoluteUrl(base, href) {
-  const uri = url.parse(href);
-  if (!uri.host) {
-    const baseUri = url.parse(base);
-    const hrefUri = url.parse(href);
-    const newUri = new url.Url();
-    newUri.protocol = baseUri.protocol;
-    newUri.slashes = baseUri.protocol;
-    newUri.auth = baseUri.auth;
-    newUri.host = baseUri.host;
-    newUri.port = baseUri.port;
-    newUri.hostname = baseUri.hostname;
-    newUri.hash = hrefUri.hash;
-    newUri.search = hrefUri.search;
-    newUri.query = hrefUri.query;
-    newUri.pathname = hrefUri.pathname;
-    newUri.path = hrefUri.path;
-    return newUri.format();
-  } else {
-    return href;
-  }
-}
 
 function writeOutput(generatedCss) {
   fs.readFile(cssFile, "utf8", (err, css) => {
