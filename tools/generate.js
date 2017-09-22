@@ -81,6 +81,7 @@ const urls = [
 // list of regexes matching selectors that should be ignored
 const ignoreSelectors = [
   /\.CodeMirror/,
+  /\.Box$/
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
