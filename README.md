@@ -71,6 +71,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | GitHub Dark                |   *    |            |     *    |
 | Idle Fingers               |   *    |            |     *    |
 | Kr Theme                   |   *    |            |          |
+| Material                   |        |     *      |          |
 | Merbivore                  |   *    |            |          |
 | Merbivore Soft             |   *    |            |          |
 | Mono Industrial            |   *    |            |          |
