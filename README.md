@@ -50,6 +50,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 
 * [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
 * [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)
+* [Refined GitHub](https://github.com/sindresorhus/refined-github)
 * [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
 * [Octotree](https://github.com/buunguyen/octotree/#octotree)
 * [ZenHub](https://www.zenhub.io/)
