@@ -2,7 +2,7 @@
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
-@-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com((?!generated_pages/preview).)*$"), domain("githubusercontent.com") {
+@-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background-color: #2cbe4e" */
   .State--green, .block-diff-added, .block-diff-neutral,
@@ -3726,6 +3726,38 @@
   .refined-github-diff-signs .blob-code-addition:before,
   .refined-github-diff-signs .blob-code-deletion:before {
     color: #7b7b7b !important;
+  }
+  /* GraphQL API (https://developer.github.com/v4/explorer/) */
+  iframe#graphiql, .graphiql-ide, .graphiql-container .topBar,
+  .graphiql-container .docExplorerShow,
+  .graphiql-container .variable-editor-title,
+  .graphiql-container .resultWrap {
+    background: #222 !important;
+    border-color: #343434 !important;
+  }
+  .graphiql-container {
+    color: #ddd !important;
+  }
+  .graphiql-container .docExplorerShow:before {
+    border-left-color: /*[[base-color]]*/ #4183c4 !important;
+    border-top-color: /*[[base-color]]*/ #4183c4 !important;
+  }
+  .graphiql-container .toolbar-button,
+  .graphiql-container .execute-button {
+    background: linear-gradient(#303030, #282828) !important;
+    border-color: #484848 !important;
+    box-shadow: none !important;
+    color: #ddd !important;
+  }
+  .graphiql-container .toolbar-button:active,
+  .graphiql-container .execute-button:active {
+    background: #444 !important;
+  }
+  .graphiql-container .CodeMirror-foldmarker {
+    background: /*[[base-color]]*/ #4183c4 !important;
+  }
+  .graphiql-container .execute-button svg {
+    fill: currentColor !important;
   }
   /*[[code-wrap]]*/
   /* inline code - single lines */
