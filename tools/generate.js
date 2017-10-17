@@ -60,9 +60,9 @@ const mappings = {
   "border-top: 7px solid #fff" : "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
-  "color: #24292e": "color: #e2e2e2",
-  "color: #444d56": "color: #c0c0c0",
-  "color: #586069": "color: #b5b5b5",
+  "color: #24292e": "color: #c0c0c0",
+  "color: #444d56": "color: #b5b5b5",
+  "color: #586069": "color: #949494",
   "color: #666"   : "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #7b7b7b",
