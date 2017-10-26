@@ -265,9 +265,22 @@
       })
       .val(theme);
 
+    function bindLabels() {
+      $('.wrapper').on('keydown', function(e) {
+        if (e.key === " ") {
+          $(this).find('input[type="checkbox"]').click();
+          return false;
+        }
+      });
+      $(document).on('keydown', function(e) {
+        console.log(e.key, e.target);
+      });
+    }
+
     $(window).on('load', function(){
       $select.val(theme);
       selectTheme(theme);
+      bindLabels();
     });
 
   });
@@ -286,7 +299,7 @@
   </h3>
   <h4>Note: Not all CodeMirror themes are available for each selection <em>in this demo</em>; it falls back to Twilight.</h4>
 
-  <label class="wrapper type-diff file-data">
+  <label class="wrapper type-diff file-data" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Commit Diff</h3>
     <!-- example from https://github.com/StylishThemes/GitHub-Dark/commit/accc6c4a2349580f16fdf5d1542941a5ecb97ff5 -->
@@ -295,7 +308,7 @@
 
     <tbody><tr class="js-expandable-line" data-position="0">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1579&amp;next_line_num_right=1579&amp;path=github-dark.css&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-1578" data-right-range="1-1578">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1579&amp;next_line_num_right=1579&amp;path=github-dark.css&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-1578" data-right-range="1-1578" tabindex="-1" disabled>
           <span class="octicon octicon-unfold"></span>
         </a>
       </td>
@@ -432,7 +445,7 @@
 
     <tr class="js-expandable-line" data-position="9">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1595&amp;next_line_num_right=1595&amp;path=github-dark.css&amp;prev_line_num_left=1585&amp;prev_line_num_right=1585&amp;right_hunk_size=8" data-left-range="1586-1594" data-right-range="1586-1594">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1595&amp;next_line_num_right=1595&amp;path=github-dark.css&amp;prev_line_num_left=1585&amp;prev_line_num_right=1585&amp;right_hunk_size=8" data-left-range="1586-1594" data-right-range="1586-1594" tabindex="-1" disabled>
           <span class="octicon octicon-unfold"></span>
         </a>
       </td>
@@ -585,7 +598,7 @@
 
     <tr class="js-expandable-line" data-position="19">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=13&amp;mode=100644&amp;next_line_num_left=1603&amp;next_line_num_right=1604&amp;path=github-dark.css&amp;prev_line_num_left=1601&amp;prev_line_num_right=1602&amp;right_hunk_size=14" data-left-range="1602-1602" data-right-range="1603-1603">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=13&amp;mode=100644&amp;next_line_num_left=1603&amp;next_line_num_right=1604&amp;path=github-dark.css&amp;prev_line_num_left=1601&amp;prev_line_num_right=1602&amp;right_hunk_size=14" data-left-range="1602-1602" data-right-range="1603-1603" tabindex="-1" disabled>
           <span class="octicon octicon-unfold"></span>
         </a>
       </td>
@@ -850,7 +863,7 @@
 
     <tr class="js-expandable-line" data-position="36">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=6&amp;mode=100644&amp;next_line_num_left=1656&amp;next_line_num_right=1658&amp;path=github-dark.css&amp;prev_line_num_left=1615&amp;prev_line_num_right=1617&amp;right_hunk_size=10" data-left-range="1616-1655" data-right-range="1618-1657">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=6&amp;mode=100644&amp;next_line_num_left=1656&amp;next_line_num_right=1658&amp;path=github-dark.css&amp;prev_line_num_left=1615&amp;prev_line_num_right=1617&amp;right_hunk_size=10" data-left-range="1616-1655" data-right-range="1618-1657" tabindex="-1" disabled>
           <span class="octicon octicon-unfold"></span>
         </a>
       </td>
@@ -1019,7 +1032,7 @@
 
     <tr class="js-expandable-line">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;mode=100644&amp;path=github-dark.css&amp;prev_line_num_left=1661&amp;prev_line_num_right=1667" data-left-range="1662-1839" data-right-range="1668-1839">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;mode=100644&amp;path=github-dark.css&amp;prev_line_num_left=1661&amp;prev_line_num_right=1667" data-left-range="1662-1839" data-right-range="1668-1839" tabindex="-1" disabled>
           <span class="octicon octicon-unfold"></span>
         </a>
       </td>
@@ -1030,7 +1043,7 @@
 </div>
   </label>
 
-  <label class="wrapper gist">
+  <label class="wrapper gist" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Gist Diff</h3>
     <!-- example from https://gist.github.com/paulirish/5558557/revisions (gistfile1.md) -->
@@ -2130,12 +2143,12 @@
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>CodeMirror Editor (Javascript)</h3>
     <div class="highlight">
 <div class="commit-create">
-    <div class="CodeMirror cm-s-github" style="height: 487px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99149px; left: 57.6278px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 509px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 54px; margin-bottom: -10px; border-right-width: 20px; min-height: 509px; min-width: 831.651px; padding-right: 10px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>29</div></div></div><div class="CodeMirror-measure"><pre class="CodeMirror-line"><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">hexToRgb</span>(<span class="cm-def">hex</span>) {</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 3.63635px; top: 0px; height: 17.2727px;">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-comment">/* global module, console */</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">module</span>.<span class="cm-property">exports</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(<span class="cm-def">grunt</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-string">'use strict'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">var</span> <span class="cm-def">config</span>, <span class="cm-def">file</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">try</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable-2">config</span> <span class="cm-operator">=</span> <span class="cm-variable-2">grunt</span>.<span class="cm-property">file</span>.<span class="cm-property">readJSON</span>(<span class="cm-string">'build.json'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  } <span class="cm-keyword">catch</span> (<span class="cm-def">err</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable">console</span>.<span class="cm-property">info</span>(<span class="cm-string">'build.json not found - using defaults'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable-2">config</span> <span class="cm-operator">=</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'theme'</span>    : <span class="cm-string">'Twilight'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'color'</span>    : <span class="cm-string">'#4183C4'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'font'</span>     : <span class="cm-string">'Menlo'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'image'</span>    : <span class="cm-string">'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'tiled'</span>    : <span class="cm-atom">true</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'codeWrap'</span> : <span class="cm-atom">false</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'attach'</span>   : <span class="cm-string">'scroll'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'tab'</span>      : <span class="cm-number">4</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'webkit'</span>   : <span class="cm-atom">false</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    };</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">getTheme</span>() {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-keyword">return</span> (<span class="cm-variable-2">config</span>.<span class="cm-property">theme</span> <span class="cm-operator">||</span> <span class="cm-string">''</span>).<span class="cm-property">toLowerCase</span>().<span class="cm-property">replace</span>(<span class="cm-string-2">/\s+/g</span>, <span class="cm-string">'-'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-comment">// modified from http://stackoverflow.com/a/5624139/145346</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">hexToRgb</span>(<span class="cm-def">hex</span>) {</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 20px; width: 1px; border-bottom: 0px solid transparent; top: 509px;"></div><div class="CodeMirror-gutters" style="height: 529px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 53px;"></div></div></div></div><textarea id="blob_contents_gruntfile-js" class="form-control file-editor-textarea js-blob-contents js-code-textarea" rows="35" name="value" data-filename="Gruntfile.js" data-codemirror-mode="text/javascript" data-allow-unchanged="" placeholder="Enter file contents here" aria-label="Enter file contents here" spellcheck="false" autofocus="" style="display: none;">/* global module, console */
+    <div class="CodeMirror cm-s-github" style="height: 487px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 3.99149px; left: 57.6278px;"><textarea tabindex="-1" autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 509px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll"><div class="CodeMirror-sizer" style="margin-left: 54px; margin-bottom: -10px; border-right-width: 20px; min-height: 509px; min-width: 831.651px; padding-right: 10px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>29</div></div></div><div class="CodeMirror-measure"><pre class="CodeMirror-line"><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">hexToRgb</span>(<span class="cm-def">hex</span>) {</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 3.63635px; top: 0px; height: 17.2727px;">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-comment">/* global module, console */</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">module</span>.<span class="cm-property">exports</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>(<span class="cm-def">grunt</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-string">'use strict'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">var</span> <span class="cm-def">config</span>, <span class="cm-def">file</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">try</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable-2">config</span> <span class="cm-operator">=</span> <span class="cm-variable-2">grunt</span>.<span class="cm-property">file</span>.<span class="cm-property">readJSON</span>(<span class="cm-string">'build.json'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  } <span class="cm-keyword">catch</span> (<span class="cm-def">err</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable">console</span>.<span class="cm-property">info</span>(<span class="cm-string">'build.json not found - using defaults'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable-2">config</span> <span class="cm-operator">=</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'theme'</span>    : <span class="cm-string">'Twilight'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'color'</span>    : <span class="cm-string">'#4183C4'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'font'</span>     : <span class="cm-string">'Menlo'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'image'</span>    : <span class="cm-string">'url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'tiled'</span>    : <span class="cm-atom">true</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'codeWrap'</span> : <span class="cm-atom">false</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'attach'</span>   : <span class="cm-string">'scroll'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'tab'</span>      : <span class="cm-number">4</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-string cm-property">'webkit'</span>   : <span class="cm-atom">false</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    };</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">getTheme</span>() {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-keyword">return</span> (<span class="cm-variable-2">config</span>.<span class="cm-property">theme</span> <span class="cm-operator">||</span> <span class="cm-string">''</span>).<span class="cm-property">toLowerCase</span>().<span class="cm-property">replace</span>(<span class="cm-string-2">/\s+/g</span>, <span class="cm-string">'-'</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-comment">// modified from http://stackoverflow.com/a/5624139/145346</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -53.9915px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-keyword">function</span> <span class="cm-def">hexToRgb</span>(<span class="cm-def">hex</span>) {</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 20px; width: 1px; border-bottom: 0px solid transparent; top: 509px;"></div><div class="CodeMirror-gutters" style="height: 529px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 53px;"></div></div></div></div><textarea id="blob_contents_gruntfile-js" class="form-control file-editor-textarea js-blob-contents js-code-textarea" rows="35" name="value" data-filename="Gruntfile.js" data-codemirror-mode="text/javascript" data-allow-unchanged="" placeholder="Enter file contents here" aria-label="Enter file contents here" spellcheck="false" autofocus="" style="display: none;">/* global module, console */
 module.exports = function(grunt) {
   'use strict';
 
@@ -2471,7 +2484,7 @@ module.exports = function(grunt) {
     </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>CSS</h3>
 <div class="highlight markdown-body">
@@ -2526,7 +2539,7 @@ svg|svg<span class="pl-e">.viz</span> {
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>SCSS</h3>
 <div class="highlight markdown-body">
@@ -2559,7 +2572,7 @@ svg|svg<span class="pl-e">.viz</span> {
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>HTML</h3>
 <div class="highlight markdown-body">
@@ -2599,7 +2612,7 @@ svg|svg<span class="pl-e">.viz</span> {
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Javascript</h3>
 <div class="highlight markdown-body">
@@ -2649,7 +2662,7 @@ svg|svg<span class="pl-e">.viz</span> {
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>php</h3>
 <div class="highlight markdown-body">
@@ -2712,7 +2725,7 @@ svg|svg<span class="pl-e">.viz</span> {
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Python</h3>
 <div class="highlight markdown-body">
@@ -2752,7 +2765,7 @@ f1(<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Ruby</h3>
 <div class="highlight markdown-body">
@@ -2798,7 +2811,7 @@ f1(<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>C++</h3>
 <div class="highlight markdown-body">
@@ -2840,7 +2853,7 @@ f1(<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Haskell</h3>
 <div class="highlight markdown-body">
@@ -2886,7 +2899,7 @@ fractal !r !i !cr !ci !k
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>SQL</h3>
 <div class="highlight markdown-body">
@@ -2916,7 +2929,7 @@ fractal !r !i !cr !ci !k
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Java</h3>
 <div class="highlight markdown-body">
@@ -2965,7 +2978,7 @@ fractal !r !i !cr !ci !k
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Lua</h3>
 <div class="highlight markdown-body">
@@ -2992,7 +3005,7 @@ fractal !r !i !cr !ci !k
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Perl</h3>
 <div class="highlight markdown-body">
@@ -3031,7 +3044,7 @@ fractal !r !i !cr !ci !k
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Bash</h3>
 <div class="highlight markdown-body">
@@ -3099,7 +3112,7 @@ PS2=<span class="pl-s"><span class="pl-pds">"</span>\e[1;35m-&gt;\[\e[0m\]<span 
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>LaTex</h3>
 <div class="highlight markdown-body">
@@ -3126,7 +3139,7 @@ A display-style equation is shown below:
 </div>
   </label>
 
-  <label class="wrapper">
+  <label class="wrapper" tabindex="0">
     <input type="checkbox" class="popup">
     <h3>Fortran</h3>
 <div class="highlight markdown-body">
