@@ -52,6 +52,12 @@ const mappings = {
   "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
   "border-right-color: rgba(27,31,35,0.15)": "border-right-color: #343434",
 
+  "border-top-color: rgba(27,31,35,0.8)": "border-top-color: #343434",
+  "border-left-color: rgba(27,31,35,0.8)": "border-left-color: #343434",
+  "border-right-color: rgba(27,31,35,0.8)": "border-right-color: #343434",
+  "border-bottom-color: rgba(27,31,35,0.8)": "border-bottom-color: #343434",
+  "background: rgba(27,31,35,0.8)": "background: rgba(52,52,52,.8)",
+
   "border-bottom-color: #fff" : "border-bottom-color: #181818",
   "border-left-color: #fff" : "border-left-color: #181818",
   "border-top-color: #fff" : "border-top-color: #181818",
