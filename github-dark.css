@@ -674,8 +674,7 @@
   .select-menu-item.disabled.selected, .select-menu-item.disabled .description,
   .select-menu-item.disabled.selected .description, .credit-card.amex .title,
   .billing-addon-items .addon-cost, .payment-history .refunded .status,
-  .plan-choice-exp, .blame-commit-date[data-heat="10"],
-  .blame-hunk:hover .reblame-link, .blog-aside .rss, .blog-post-meta,
+  .plan-choice-exp, .blog-aside .rss, .blog-post-meta,
   .blog-post-meta a, ul.comparison-list>li.title, .branch-search .clear-search,
   .branch-meta, .code-list .full-path a,
   .layout-reorder-menu-list .is-hidden .module-title,
@@ -828,7 +827,7 @@
   .header-nav-link:focus, .header-navlink:hover, .header-navlink:focus,
   .HeaderNavlink:hover, .HeaderNavlink:focus, a.notification-indicator:hover,
   table.files td.message a:hover, .link-gray:hover, .news .link-gray-dark:hover,
-  .news a.link-gray-dark:hover {
+  .news a.link-gray-dark:hover, .reblame-link:hover {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* Base color panel */
@@ -858,7 +857,7 @@
   #com .dropdown-menu a:hover, .date-selector td.selected,
   .date-selector td.selectable-day:hover, .add-line-comment, .suggester .cur,
   .autocomplete-item.selected, .autocomplete-item.navigation-focus,
-  .select-menu-item.navigation-focus.selected, .reblame-link:hover,
+  .select-menu-item.navigation-focus.selected,
   .result.selected, .result:hover, .CommunityTemplate-highlight,
   .diff-table button.add-line-comment {
     background: /*[[base-color]]*/ #4183c4 !important;
@@ -1120,10 +1119,6 @@
   }
   .markdown-body strike code, .markdown-body strike tt {
     text-decoration: line-through !important;
-  }
-  .blame-commit + .blame-line {
-    border-top: 1px solid #484848 !important;
-    box-shadow: none !important;
   }
   .dropdown-menu, .word-upload-callout, .select-menu-modal {
     box-shadow: 0 3px 12px rgba(0, 0, 0, .4) !important;
@@ -1410,7 +1405,7 @@
   .gist-quicksearch-result, .gist-quicksearch-result-group, .listgroup,
   .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
   .progress-bar-inline .progress-bar, .menu-heading, body .border-gray-dark,
-  .discussion-item-review .blob-wrapper, .bot-identifier, .blame-commit,
+  .discussion-item-review .blob-wrapper, .bot-identifier,
   .counter, .Counter, div.marketplace-product-callout {
     border-color: #484848 !important;
   }
@@ -1910,15 +1905,12 @@
     background-color: #333 !important;
     border-color: #484848 !important;
   }
-  /* contribution calendar and blame heats */
+  /* contribution calendar  */
   .calendar-graph rect[fill="#c6e48b"], .calendar-graph rect[fill="#7bc96f"],
   .calendar-graph rect[fill="#239a3b"], .calendar-graph rect[fill="#196127"],
-  .heat, .contrib-legend li {
+  .contrib-legend li {
     background-color: /*[[base-color]]*/ #4183c4 !important;
     fill: /*[[base-color]]*/ #4183c4 !important;
-  }
-  .blame-commit-date[data-heat] {
-    color: /*[[base-color]]*/ #4183c4 !important;
   }
   .calendar-graph .days-selected rect.day.active {
     stroke: #ddd !important;
@@ -1930,26 +1922,6 @@
   .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#eee"] {
     background-color: #222 !important;
     fill: #222 !important;
-  }
-  .heat[data-heat="1"], .heat[data-heat="2"], .blame-commit-date[data-heat="1"],
-  .blame-commit-date[data-heat="2"] {
-    opacity: 1 !important;
-  }
-  .heat[data-heat="3"], .heat[data-heat="4"], .blame-commit-date[data-heat="3"],
-  .blame-commit-date[data-heat="4"] {
-    opacity: .8 !important;
-  }
-  .heat[data-heat="5"], .heat[data-heat="6"], .blame-commit-date[data-heat="5"],
-  .blame-commit-date[data-heat="6"] {
-    opacity: .6 !important;
-  }
-  .heat[data-heat="7"], .heat[data-heat="8"], .blame-commit-date[data-heat="7"],
-  .blame-commit-date[data-heat="8"], .blame-commit-date[data-heat="9"],
-  .blame-commit-date[data-heat="10"] {
-    opacity: .4 !important;
-  }
-  .heat[data-heat="9"], .heat[data-heat="10"] {
-    opacity: .2 !important;
   }
   .calendar-graph rect[fill="#196127"], .contrib-legend li[style*="#196127"] {
     opacity: 1 !important;
@@ -2402,8 +2374,8 @@
   .subnav-item:hover, .subnav-item:focus, .owner-select-target:hover,
   .owner-select-target:focus, .suggester li.navigation-focus,
   .suggester li.navigation-focus small, .intgrs-lstng-categories a:hover,
-  .text-white, a.text-white, .blame-next-container .reblame-link:hover,
-  .reblame-link:hover, .topic-tag-action .add-topic-button:hover,
+  .text-white, a.text-white,
+  .topic-tag-action .add-topic-button:hover,
   .topic-tag-action .remove-topic-button:hover,
   .discussion-item-changes-marker.is-unread .discussion-item-icon,
   .toc-select .navigation-focus *, .markdown-body strong {
@@ -2726,7 +2698,7 @@
   .unselected-month, .pagination .disabled, .repohead h1 .octicon,
   .profile-rollup-toggle, .select-menu-item.disabled,
   .select-menu-item.disabled.selected, .select-menu-item.disabled .description,
-  .dashboard-notice .dismiss, .blame-next-container .reblame-link {
+  .dashboard-notice .dismiss, .reblame-link, a.reblame-link {
     color: #606060 !important;
   }
   .context-pane .selector-item:hover a, .mega-icon:before,
