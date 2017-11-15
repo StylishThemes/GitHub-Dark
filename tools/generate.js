@@ -33,6 +33,7 @@ const mappings = {
   "border: solid #ddd": "border-color: #484848",
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
+  "border-bottom-color: #e36209" : "border-bottom-color: #eee",
 
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
