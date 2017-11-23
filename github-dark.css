@@ -821,7 +821,7 @@
   .lock-toggle-link:hover, a.lock-toggle-link:hover,
   .toolbar-item .menu-target:focus, .toolbar-item:focus, .sub-nav li a:hover,
   .site-header-menu .nav-item:hover,
-  .scoped-search .form-control.focus .header-search-scope, a.btn-link,
+  .scoped-search .form-control.focus .header-search-scope,
   .text-blue, a.text-blue, .orghead .edit-org:hover,
   .Box-body-row--highlight .Box-row-link:hover, td.selectable-day,
   .date-selector .date-button, .exploregrid-item:hover .exploregrid-item-title,
@@ -836,7 +836,7 @@
   .HeaderNavlink:hover, .HeaderNavlink:focus, a.notification-indicator:hover,
   table.files td.message a:hover, .link-gray:hover, .news .link-gray-dark:hover,
   .news a.link-gray-dark:hover, .reblame-link:hover,
-  .orgs-help-item-octicon .octicon, span.btn-link {
+  .orgs-help-item-octicon .octicon, span.btn-link, .btn-link, a.btn-link {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
   /* Base color panel */
@@ -1055,35 +1055,43 @@
   }
   /* HACK: Label colors */
   a.label[href*="/issues?"][style*=" color: #f"],
-  a.label[href*="/pulls?"][style*=" color: #f"] {
+  a.label[href*="/pulls?"][style*=" color: #f"],
+  .issue-card-label[style*=" color: #f"] {
     color: #e8e8e8 !important;
   }
   a.label[href*="/issues?"][style*=" color: #e"],
-  a.label[href*="/pulls?"][style*=" color: #e"] {
+  a.label[href*="/pulls?"][style*=" color: #e"],
+  .issue-card-label[style*=" color: #e"] {
     color: #e8e8e8 !important;
   }
   a.label[href*="/issues?"][style*=" color: #d"],
-  a.label[href*="/pulls?"][style*=" color: #d"] {
+  a.label[href*="/pulls?"][style*=" color: #d"],
+  .issue-card-label[style*=" color: #d"] {
     color: #e8e8e8 !important;
   }
   a.label[href*="/issues?"][style*=" color: #c"],
-  a.label[href*="/pulls?"][style*=" color: #c"] {
+  a.label[href*="/pulls?"][style*=" color: #c"],
+  .issue-card-label[style*=" color: #c"] {
     color: #e8e8e8 !important;
   }
   a.label[href*="/issues?"][style*=" color: #3"],
-  a.label[href*="/pulls?"][style*=" color: #3"] {
+  a.label[href*="/pulls?"][style*=" color: #3"],
+  .issue-card-label[style*=" color: #3"] {
     color: #181818 !important;
   }
   a.label[href*="/issues?"][style*=" color: #2"],
-  a.label[href*="/pulls?"][style*=" color: #2"] {
+  a.label[href*="/pulls?"][style*=" color: #2"],
+  .issue-card-label[style*=" color: #2"] {
     color: #181818 !important;
   }
   a.label[href*="/issues?"][style*=" color: #1"],
-  a.label[href*="/pulls?"][style*=" color: #1"] {
+  a.label[href*="/pulls?"][style*=" color: #1"],
+  .issue-card-label[style*=" color: #1"] {
     color: #181818 !important;
   }
   a.label[href*="/issues?"][style*=" color: #0"],
-  a.label[href*="/pulls?"][style*=" color: #0"] {
+  a.label[href*="/pulls?"][style*=" color: #0"],
+  .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
   .markdown-body pre code, .markdown-body pre tt {
@@ -1222,9 +1230,7 @@
   .toolbar-commenting .dropdown-item:hover, .CodeMirror-lines, .api table,
   .dashboard-notice .coupon, .release-label,
   .oauth-org-access-details .oauth-org-item.on, .MarketplaceSideNav,
-  .timeline-inline-comments,
-  .AvatarStack-body,
-  .btn-link:not(.js-new-label-color):not(.issue-card-label) {
+  .timeline-inline-comments, .AvatarStack-body {
     background: none !important;
   }
   /* remove background gradient */
@@ -2557,7 +2563,7 @@
   a.UnderlineNav-item:focus {
     color: #c0c0c0 !important;
   }
-  .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
+  button, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
   .marketing-nav a, .repository-meta, .gist-item .description, p.explain,
   .news .alert .simple .title, #network .graph-date, .tabnav-widget.text,
   .feature .intro, span.diffstat, span.diffstat a, .commit .commit-branches a,
@@ -2609,7 +2615,7 @@
   .rss-subscribe, a.rss-subscribe, table.capped-list .octicon,
   .site-header-menu .nav-item, .discussion-item-icon, .exploregrid-item,
   a.exploregrid-item, .markdown-body blockquote, .link-gray, a.link-gray,
-  button:not(.issue-card-label), .tabnav-tabs button.tabnav-tab {
+  .tabnav-tabs button.tabnav-tab {
     color: #b5b5b5 !important;
   }
   .calendar-graph .contrib-details div, .tabnav-tabs a, .time,
