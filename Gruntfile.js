@@ -4,19 +4,9 @@ module.exports = function(grunt) {
   "use strict";
 
   let config;
-  const defaults = {
-    theme    : "twilight",
-    themeCM  : "twilight",
-    themeJP  : "twilight",
-    color    : "#4183C4",
-    font     : "Menlo",
-    image    : "url(https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/images/backgrounds/bg-tile1.png)",
-    tiled    : true,
-    codeWrap : false,
-    attach   : "scroll",
-    tab      : 4,
-    webkit   : false
-  };
+  const defaults = require("./defaults.json");
+  const pkg = require("./package.json");
+  defaults.webkit = false;
 
   try {
     config = Object.assign({}, defaults, grunt.file.readJSON("build.json"));
@@ -44,7 +34,7 @@ module.exports = function(grunt) {
 
   function getVersion(level) {
     const semver = require("semver");
-    const version = require("./package.json").version;
+    const version = pkg.version;
     return semver.inc(version, level);
   }
 
@@ -184,7 +174,7 @@ module.exports = function(grunt) {
   }];
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON("package.json"),
+    pkg: pkg,
     config: config,
 
     "string-replace": {
@@ -241,25 +231,14 @@ module.exports = function(grunt) {
           ]
         }
       },
-      patch: {
-        files: {"github-dark.css": "github-dark.css"},
+      newVersion: {
+        files: {
+          "github-dark.css": "github-dark.css",
+          "github-dark-userstyle.build.css": "github-dark-userstyle.build.css"
+        },
         options: {replacements: [{
           pattern: /v[0-9.]+ \(.+\)/,
-          replacement: "v" + getVersion("patch") + " (" + getDate() + ")"
-        }]}
-      },
-      minor: {
-        files: {"github-dark.css": "github-dark.css"},
-        options: {replacements: [{
-          pattern: /v[0-9.]+ \(.+\)/,
-          replacement: "v" + getVersion("minor") + " (" + getDate() + ")"
-        }]}
-      },
-      major: {
-        files: {"github-dark.css": "github-dark.css"},
-        options: {replacements: [{
-          pattern: /v[0-9.]+ \(.+\)/,
-          replacement: "v" + getVersion("major") + " (" + getDate() + ")"
+          replacement: "v<%= config.version %> (" + getDate() + ")"
         }]}
       }
     },
@@ -279,11 +258,12 @@ module.exports = function(grunt) {
       authors: "bash tools/authors.sh",
       imagemin: "bash tools/imagemin.sh",
       perfectionist: "npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-      add: "git add github-dark.css",
+      add: "git add github*.css",
       patch: "npm version -f patch",
       minor: "npm version -f minor",
       major: "npm version -f major",
-      generate: "node tools/generate"
+      generate: "node tools/generate",
+      usercss: "node tools/build-usercss"
     },
     cssmin: {
       minify: {
@@ -445,30 +425,36 @@ module.exports = function(grunt) {
 
   // version bump tasks
   grunt.registerTask("patch", "Bump patch version", () => {
+    config.version = getVersion("patch");
     grunt.task.run([
       "lint",
-      "string-replace:patch",
+      "string-replace:newVersion",
+      "user",
+      "exec:usercss",
       "exec:add",
-      "exec:patch",
-      "user"
+      "exec:patch"
     ]);
   });
   grunt.registerTask("minor", "Bump minor version", () => {
+    config.version = getVersion("minor");
     grunt.task.run([
       "lint",
-      "string-replace:minor",
+      "string-replace:newVersion",
+      "user",
+      "exec:usercss",
       "exec:add",
-      "exec:minor",
-      "user"
+      "exec:minor"
     ]);
   });
   grunt.registerTask("major", "Bump major version", () => {
+    config.version = getVersion("major");
     grunt.task.run([
       "lint",
-      "string-replace:major",
+      "string-replace:newVersion",
+      "user",
+      "exec:usercss",
       "exec:add",
-      "exec:major",
-      "user"
+      "exec:major"
     ]);
   });
 

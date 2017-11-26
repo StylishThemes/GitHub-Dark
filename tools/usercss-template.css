@@ -1,0 +1,57 @@
+/* ==UserStyle==
+@name        GitHub Dark
+@namespace   StylishThemes
+@version     {{version}}
+@homepageURL https://github.com/StylishThemes/GitHub-Dark
+@updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
+@license     CC-BY-SA-4.0
+@author      StylishThemes
+@advanced color base-color "Base color scheme" {{color}}
+@advanced dropdown syntax-theme "Github syntax theme" {
+  {{Themes:GitHub}}
+}
+@advanced dropdown syntax-codemirror "CodeMirror syntax theme" {
+  {{Themes:CodeMirror}}
+}
+@advanced dropdown syntax-jupyter "Jupyter syntax theme" {
+  {{Themes:Jupyter}}
+}
+@advanced text bg-choice "Background image [wrap in url()]" "{{image}}"
+@advanced dropdown bg-options "Background image type" {
+  Tiled "Tiled" <<<EOT
+  background-repeat: repeat !important;
+  background-size: auto !important;
+  background-position: left top !important; EOT;
+  Fit window size "Fit window size" <<<EOT
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center top !important; EOT;
+}
+@advanced dropdown bg-attachment "Background image attachment" {
+  Scroll "Scroll" <<<EOT
+  scroll EOT;
+  Fixed "Fixed" <<<EOT
+  fixed EOT;
+}
+@advanced dropdown tab-size "Code Tab size" {
+  {{tab-sizes}}
+}
+@advanced text font-choice "Code Font" "{{font}}"
+@advanced dropdown code-wrap "Code Wrap" {
+  nowrap "No Wrap" <<<EOT
+  EOT;
+  wrap "Wrap" <<<EOT
+  /* GitHub Bug: Enable wrapping of long code lines *\/
+  body:not(.nowrap) .blob-code-inner,
+  body:not(.nowrap) .markdown-body pre > code,
+  body:not(.nowrap) .markdown-body .highlight > pre {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+    display: block !important;
+  }
+  body:not(.nowrap) td.blob-code-inner {
+    display: table-cell !important;
+  } EOT;
+}
+==/UserStyle== */
