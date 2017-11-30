@@ -383,6 +383,13 @@ module.exports = function(grunt) {
     ]);
   });
 
+  grunt.registerTask("usercss", "building usercss file", () => {
+    grunt.task.run([
+      "user",
+      "exec:usercss"
+    ]);
+  });
+
   // build custom minified GitHub-Dark style
   grunt.registerTask("themes", "Rebuild minified theme files", () => {
     grunt.task.run([
