@@ -123,7 +123,7 @@ To develop, first install [Node.js](https://nodejs.org), install dependencies vi
 - `grunt lint`: Run Stylelint on `github-dark.css`.
 - `grunt authors`: Regenerate the `AUTHORS` file based on git history.
 - `grunt imagemin`: Minify all images present in the `image` directory.
-- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. This should be regularily.
+- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. This should be ran regularily.
 - `grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
 - `grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
 - `grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
