@@ -330,14 +330,10 @@ module.exports = function(grunt) {
           wrapper: ["<%= config.prefix %>", "}"]
         }
       }
-    },
-    watch: {
-      css: {files: ["github-dark.css"]}
     }
   });
 
   grunt.loadNpmTasks("grunt-string-replace");
-  grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-wrap");
@@ -464,7 +460,4 @@ module.exports = function(grunt) {
       "exec:major"
     ]);
   });
-
-  // watch thingy
-  grunt.registerTask("dev", ["watch"]);
 };
