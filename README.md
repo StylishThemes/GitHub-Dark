@@ -109,7 +109,7 @@ If you would like to contribute to this repository, please...
 2. Make changes (please read the [contribution guidelines](./.github/CONTRIBUTING.md) and abide by them)
 3. Create a pull request!
 
-# Development
+## Development
 
 To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` and install grunt via `npm install -g grunt`. After that, you can use the various grunt tasks available:
 
