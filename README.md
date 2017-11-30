@@ -83,6 +83,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | Monokai                    |   *    |     *      |     *    |
 | Monokai Spacegray Eighties |   *    |     *      |     *    |
 | Obsidian                   |   *    |            |     *    |
+| One Dark                   |   *    |     *      |          |
 | Pastel on Dark             |   *    |     *      |     *    |
 | Solarized Dark             |   *    |     *      |     *    |
 | Terminal                   |   *    |            |          |
