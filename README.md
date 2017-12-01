@@ -113,17 +113,17 @@ If you would like to contribute to this repository, please...
 
 To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` and install grunt via `npm install -g grunt`. After that, you can use the various grunt tasks available:
 
-- `grunt`: The default task will build a custom them using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
+- `grunt`: The default task will build a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `grunt min`: Same as `grunt`, but outputs a minified style.
 - `grunt user`: Build a userstyle ready to be pasted on userstyles.org.
 - `grunt usermin`: Same as `grunt user`, but outputs a minified style.
-- `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style, to be used with modern userstyle engines.
+- `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style, to be used with modern userstyle engines like [stylus](https://github.com/stylus/stylus).
 - `grunt themes`: Parse all theme files and combine them into minfied styles in the `themes` directory.
 - `grunt clean`: Reformat `github-dark.css` to conform the style guide.
 - `grunt lint`: Run Stylelint on `github-dark.css`.
 - `grunt authors`: Regenerate the `AUTHORS` file based on git history.
 - `grunt imagemin`: Minify all images present in the `image` directory.
-- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. This should be ran regularily.
+- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. This should be ran regularly.
 - `grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
 - `grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
 - `grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
