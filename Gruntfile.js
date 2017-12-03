@@ -258,7 +258,7 @@ module.exports = function(grunt) {
       authors: "bash tools/authors.sh",
       imagemin: "bash tools/imagemin.sh",
       perfectionist: "npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-      add: "git add github*.css",
+      add: "git add github-dark.css github-dark.user.css",
       patch: "npm version -f patch",
       minor: "npm version -f minor",
       major: "npm version -f major",
