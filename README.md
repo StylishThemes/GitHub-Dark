@@ -128,5 +128,6 @@ To develop, first install [Node.js](https://nodejs.org), install dependencies vi
 - `grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
 - `grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
 - `grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
+- `grunt update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!

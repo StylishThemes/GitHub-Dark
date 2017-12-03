@@ -253,17 +253,18 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      stylelint: "npm -s run stylelint",
-      eslint: "npm -s run eslint",
-      authors: "bash tools/authors.sh",
-      imagemin: "bash tools/imagemin.sh",
-      perfectionist: "npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
       add: "git add github-dark.css github-dark.user.css",
-      patch: "npm version -f patch",
-      minor: "npm version -f minor",
-      major: "npm version -f major",
+      authors: "bash tools/authors.sh",
+      eslint: "npm -s run eslint",
       generate: "node tools/generate",
-      usercss: "node tools/build-usercss"
+      imagemin: "bash tools/imagemin.sh",
+      major: "npm version -f major",
+      minor: "npm version -f minor",
+      patch: "npm version -f patch",
+      perfectionist: "npm run perfectionist --silent -- github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
+      stylelint: "npm -s run stylelint",
+      update: "npm -s run update",
+      usercss: "node tools/build-usercss",
     },
     cssmin: {
       minify: {
@@ -424,6 +425,11 @@ module.exports = function(grunt) {
   // Auto-generate styles based on GitHub's CSS
   grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
     grunt.task.run(["exec:generate", "clean"]);
+  });
+
+  // Auto-generate styles based on GitHub's CSS
+  grunt.registerTask("update", "Update dependencies", () => {
+    grunt.task.run(["exec:update"]);
   });
 
   // version bump tasks
