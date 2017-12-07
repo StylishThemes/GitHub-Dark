@@ -2,7 +2,6 @@
 "use strict";
 
 const fs = require("fs");
-const pkg = require("../package.json");
 const userBase = require("../defaults.json");
 
 // make sure to run "grunt user" before grabbing this style
@@ -59,7 +58,11 @@ function replaceVars(css) {
   Object.keys(userBase).forEach(key => {
     css = css.replace(`{{${key}}}`, userBase[key]);
   });
-  return css.replace("{{version}}", pkg.version);
+  const version = css.match(/github\sdark\sv([\d.]+) \(/i);
+  if (version) {
+    css = css.replace("{{version}}", version[1]);
+  }
+  return css;
 }
 
 function makeTabs(css) {
