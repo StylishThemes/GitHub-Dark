@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.4
+@version     1.20.5
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.4 (2017-12-04) */
+/*! Github Dark v1.20.5 (2017-12-10) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -222,6 +222,11 @@
   .completeness-indicator-error,
   .saml-settings-form .test-status-indicator-error, .follow-list .flagged-banner {
     background: #911 !important;
+  }
+  /* auto-generated rule for "background-color: #dbedff" */
+  .flash, a.commit-ref:hover, .blob-num-hunk, .blob-num-expandable,
+  .add-reactions-options-item:active, .project-updated-message {
+    background: #273045 !important;
   }
   /* auto-generated rule for "background-color: #fff5b1" */
   .bg-yellow-light, .selected-line.blob-num, .network .current-repository,
@@ -345,9 +350,9 @@
   .review-thread-reply .inline-comment-form, .review-summary-form-wrapper,
   .readme .markdown-body, .readme .plain,
   .release-timeline-tags .expander-text:hover .expander-dots .expander-dot,
-  .release-label, .release-label.draft, .release-label.prerelease,
-  .is-failed .repo-file-upload-errors, .is-bad-file .repo-file-upload-errors,
-  .is-too-big .repo-file-upload-errors, .is-too-many .repo-file-upload-errors,
+  .Label--draft, .Label--prerelease, .is-failed .repo-file-upload-errors,
+  .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
+  .is-too-many .repo-file-upload-errors,
   .is-hidden-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .session-device.session-current, .setup-info-module, .orgs-help-item-octicon,
   .org-sso .org-sso-panel, .tree-browser tr.navigation-focus td,
@@ -676,7 +681,7 @@
   .repository-meta .edit-repository-meta label, .access-token .token-description,
   .access-token .credential-authorization-menu .status-heading, .token-scope,
   .shelf-dismiss .close-button:hover, .team-listing .is-open .expand-nested-team,
-  .subheader-nav .nav-item.selected {
+  .workspace-tree [aria-selected], .subheader-nav .nav-item.selected {
     color: #c0c0c0 !important;
   }
   /* auto-generated rule for "color: #444d56" */
@@ -774,7 +779,7 @@
   .projects-reset-query, .pinned-repo-item .pinned-repository-handle,
   .diffstat-summary, .summary-stats li, .summary-stats li a,
   .releases-tag-list td.date a, .releases-tag-list p, .tag-references>li a,
-  .release-timeline-tags .date, .release-authorship, .uploaded-files>li.delete,
+  .release-timeline-tags .date, .uploaded-files>li.delete,
   .uploaded-files .filesize, .uploaded-files .remove, .label-description,
   .labels-list-action, .mini-repo-list .no-repo,
   .mini-repo-list-item .repo-description, .timeout h3, .numbers-summary a,
@@ -812,7 +817,7 @@
   .repo-subscription-container .intro, .subscriptions-content .repo-icon,
   .orghead, .team-info-card .team-description, .vcard-username, .pulse-section,
   .releases-tag-list p a, .tag-info h3 a, .release-timeline-tags .expander-text,
-  .release-authorship a, .repo-file-upload-target, .repo-file-upload-tree-target,
+  .repo-file-upload-target, .repo-file-upload-tree-target,
   .repo-file-upload-file-wrap .remove-file:hover,
   .mini-repo-list-item .repo-icon, .edit-profile-avatar .drag-and-drop,
   .user-key-email-unverified, .email-preference-exceptions h5,
@@ -878,7 +883,7 @@
   .card-filter-autocomplete-dropdown .autocomplete-text .autocomplete-text-qualifier,
   .vcard-detail .octicon, .member-badge .octicon, .user-profile-bio,
   .profile-timeline-card .issue-meta-section .octicon, .profile-rollup-toggle,
-  .release-label, .mini-repo-list-item .stars, .numbers-summary .octicon,
+  .mini-repo-list-item .stars, .numbers-summary .octicon,
   table.files td .simplified-path, table.files td.message,
   table.files td.message a, table.files td.age,
   .settings-email .email-actions .settings-remove-email.settings-disabled-remove-email,
@@ -1881,9 +1886,8 @@
     background: #141414 !important;
   }
   .blame .blob-num, .blame-blob-num, .overall-summary, .repository-lang-stats,
-  .collection-card, .team-grid .team, .blob-num-hunk, .blob-code-hunk,
-  .blob-code-expandable, .code-list .divider .blob-num,
-  .code-list .divider .blob-code, .blob-num-expandable,
+  .collection-card, .team-grid .team, .blob-code-hunk, .blob-code-expandable,
+  .code-list .divider .blob-num, .code-list .divider .blob-code,
   .expandable-line-num .diff-expander:hover, .select-menu-filters,
   .select-menu-modal, .pagination a, .blob-num[colspan], .build-status-item,
   .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
@@ -2396,8 +2400,8 @@
   .new-user-avatar-cta, .jstree-wholerow-clicked, .commit-ref, .api .alert,
   .file-history-tease, .flash, .flash-global, .feature-banner,
   .recently-touched-branches, .pr-toolbar .subset-files-tab, article.full .alert,
-  .project-updated-message, .btn.btn-blue, .hook-delivery-guid, .topic-tag,
-  .topic-tag-action, .delete-topic-button, .topic-tag-action .add-topic-button,
+  .btn.btn-blue, .hook-delivery-guid, .topic-tag, .topic-tag-action,
+  .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .RecentBranches, .signup-prompt-bg,
   ul.search-results li .label {
     background: #182030 !important;
@@ -2571,7 +2575,7 @@
   .text-white, a.text-white, .topic-tag-action .add-topic-button:hover,
   .topic-tag-action .remove-topic-button:hover,
   .discussion-item-changes-marker.is-unread .discussion-item-icon,
-  .toc-select .navigation-focus *, .markdown-body strong {
+  .toc-select .navigation-focus * {
     color: #efefef !important;
   }
   .btn, a.btn, .btn.btn-primary, .button.primary, .minibutton.primary,
