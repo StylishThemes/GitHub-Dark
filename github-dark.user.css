@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.6
+@version     1.20.7
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.6 (2017-12-10) */
+/*! Github Dark v1.20.7 (2017-12-17) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -2291,7 +2291,7 @@
   g.dots circle {
     stroke: #222 !important;
   }
-  .traffic-graph g.axis:not(.views):not(.unique) g.tick:not(:nth-child(14)):not(:first-child) line,
+  .traffic-graph g.axis:not(.views):not(.unique) g.tick:not(:nth-child(15)):not(:first-of-type) line,
   g.axis path, line.axis, svg:not(.vis) g.axis line {
     stroke: #444 !important;
   }
@@ -2299,10 +2299,10 @@
     stroke: #aaa !important;
   }
   #commit-activity-detail path.path,
-  .traffic-graph g.x.axis g.tick:first-child line {
+  .traffic-graph g.x.axis g.tick:first-of-type line {
     stroke: #1db34f !important;
   }
-  .traffic-graph g.x.axis g.tick:nth-child(14) line {
+  .traffic-graph g.x.axis g.tick:nth-child(15) line {
     stroke: #1d7fb3 !important;
   }
   svg.tick {
@@ -2330,7 +2330,7 @@
     fill: #742d14 !important;
     stroke: #57210f !important;
   }
-  .graphs .selection rect {
+  .graphs .selection .selection {
     fill: #888 !important;
     stroke: #888 !important;
   }
@@ -3120,7 +3120,8 @@
     border-color: #083 !important;
   }
   /* original color */
-  .signed-commit-badge.verified:hover {
+  .signed-commit-badge.verified:hover, .release-label.latest,
+  .release .Label--latest {
     border-color: #6cc644 !important;
   }
   .signed-commit-verified-label, .signed-commit-badge.verified {
@@ -3135,15 +3136,12 @@
   ul.summary-stats li .octicon-issue-opened, #toc .octicon-diff-added,
   .setup-info-module .features-list .octicon, .setup-form-container .secure,
   .highlight .gi, .type-icon-state-open, a.type-icon-state-open, .text-green,
-  a.text-green, .release-label.latest a {
+  a.text-green, .release-label.latest a, .release .Label--latest a {
     color: #6cc644 !important;
   }
   /* bright green background */
   .block-diff-added, .text-diff-added .block-diff-neutral {
     background: #6cc644 !important;
-  }
-  .release-label.latest {
-    border-color: #6cc644 !important;
   }
   /* interactive button - bright border */
   .btn-primary:not(.compare-button), .button.primary, .btn-theme-green {
@@ -3175,10 +3173,11 @@
   #user-links .unread_count, .minorproblem .pageheader_wrap {
     background: rgba(203, 108, 0, .8) !important;
   }
-  .text-orange, a.text-orange, .release-label.prerelease {
+  .text-orange, a.text-orange, .release-label.prerelease,
+  .release .Label--prerelease {
     color: #f3582c !important;
   }
-  .release-label.prerelease {
+  .release-label.prerelease, .release .Label--prerelease {
     border-color: #f66a0a !important;
   }
   /* purple merge status icon, seen in merged issues with an existing branch */
