@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs        = require("fs");
-const got       = require("got");
-const parseCss  = require("css").parse;
-const parseHtml = require("parse5").parseFragment;
-const path      = require("path");
-const perf      = require("perfectionist").process;
-const utk       = require("url-toolkit");
+const css = require("css");
+const fs = require("fs");
+const got = require("got");
+const parse5 = require("parse5");
+const path = require("path");
+const perfectionist = require("perfectionist");
+const utk = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is important for cases
 // where one declaration is meant to override another, like in the border cases
@@ -138,7 +138,7 @@ function writeOutput(generatedCss) {
 function extractStyleHrefs(html) {
   return (html.match(/<link.+?>/g) || []).map(link => {
     const attrs = {};
-    parseHtml(link).childNodes[0].attrs.forEach(attr => {
+    parse5.parseFragment(link).childNodes[0].attrs.forEach(attr => {
       attrs[attr.name] = attr.value;
     });
     if (attrs.rel === "stylesheet" && attrs.href) {
@@ -147,9 +147,9 @@ function extractStyleHrefs(html) {
   }).filter(link => !!link);
 }
 
-function parseDeclarations(css) {
+function parseDeclarations(cssString) {
   const decls = [];
-  parseCss(css).stylesheet.rules.forEach(rule => {
+  css.parse(cssString).stylesheet.rules.forEach(rule => {
     if (!rule.selectors || rule.selectors.length === 0) return;
     rule.declarations.forEach(decl => {
       Object.keys(mappings).forEach(mapping => {
@@ -186,7 +186,7 @@ function buildOutput(decls) {
     if (decls[decl].length) {
       output += `/* auto-generated rule for "${decl}" */\n`;
       const selectors = decls[decl].join(",");
-      output += String(perf(selectors + "{" + mappings[decl] + " !important}", perfOpts));
+      output += String(perfectionist.process(selectors + "{" + mappings[decl] + " !important}", perfOpts));
     } else {
       console.error(`Warning: no declarations for ${decl} found!`);
     }
