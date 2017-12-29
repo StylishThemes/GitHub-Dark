@@ -293,8 +293,12 @@ module.exports = function(grunt) {
           ext : ".min.css"
         }],
         options: {
-          keepSpecialComments: "*",
-          advanced: false
+          level: {
+            2: {
+              all: true,
+              specialComments: "all",
+            }
+          }
         }
       },
       github: {
@@ -306,8 +310,12 @@ module.exports = function(grunt) {
           ext : ".min.css"
         }],
         options: {
-          keepSpecialComments: "*",
-          advanced: false
+          level: {
+            2: {
+              all: true,
+              specialComments: "all",
+            }
+          }
         }
       },
       jupyter: {
@@ -319,8 +327,12 @@ module.exports = function(grunt) {
           ext : ".min.css"
         }],
         options: {
-          keepSpecialComments: "*",
-          advanced: false
+          level: {
+            2: {
+              all: true,
+              specialComments: "all",
+            }
+          }
         }
       }
     },
