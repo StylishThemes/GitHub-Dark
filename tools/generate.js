@@ -25,14 +25,22 @@ const mappings = {
   "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #f6f8fa": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
-  "background: #fff": "background: #181818",
   "background-color: #fff": "background: #181818",
+
+  "background: #d1d5da": "background: #444",
+  "background: #dbedff": "background: #273045",
+  "background: #fffbdd": "background-color: #261d08",
+  "background: #f6f8fa": "background-color: #181818",
+  "background: #fafbfc": "background-color: #181818",
+  "background: #fff": "background: #181818",
+
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
   "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border: 2px solid #fff": "border-color: #222",
   "border: solid #ddd": "border-color: #484848",
+
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
   "border-bottom-color: #e36209" : "border-bottom-color: #eee",
