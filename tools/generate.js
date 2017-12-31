@@ -16,22 +16,22 @@ const utk = require("url-toolkit");
 // should not be merged but instead be inserted in the original ordering based
 // on GitHub's style.
 const mappings = {
-  "background-color: #2cbe4e": "background: #163",
-  "background-color: #d1d5da": "background: #444",
-  "background-color: #6f42c1": "background: #6e5494",
-  "background-color: #cb2431": "background: #911",
-  "background-color: #dbedff": "background: #273045",
+  "background-color: #2cbe4e": "background-color: #163",
+  "background-color: #d1d5da": "background-color: #444",
+  "background-color: #6f42c1": "background-color: #6e5494",
+  "background-color: #cb2431": "background-color: #911",
+  "background-color: #dbedff": "background-color: #273045",
   "background-color: #fff5b1": "background-color: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #f6f8fa": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
-  "background-color: #fff": "background: #181818",
+  "background-color: #fff": "background-color: #181818",
 
   "background: #d1d5da": "background: #444",
   "background: #dbedff": "background: #273045",
-  "background: #fffbdd": "background-color: #261d08",
-  "background: #f6f8fa": "background-color: #181818",
-  "background: #fafbfc": "background-color: #181818",
+  "background: #fffbdd": "background: #261d08",
+  "background: #f6f8fa": "background: #181818",
+  "background: #fafbfc": "background: #181818",
   "background: #fff": "background: #181818",
 
   "border: 1px solid #e1e4e8": "border-color: #343434",
