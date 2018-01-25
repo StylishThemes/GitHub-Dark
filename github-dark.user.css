@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.15
+@version     1.20.16
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|raw|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.15 (2018-01-20) */
+/*! Github Dark v1.20.16 (2018-01-25) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -318,9 +318,10 @@
   .orghead .edit-org:hover, .auto-search-group .spinner,
   .migration-jumbotron-btn, .org-settings-updating, .manage-repo-access-group,
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
-  .page-preview, .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar,
-  .diffbar, .review-thread-reply .inline-comment-form,
-  .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
+  .page-preview, .project-page-responsive.project-full-screen .project-header,
+  .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
+  .review-thread-reply .inline-comment-form, .review-summary-form-wrapper,
+  .readme .markdown-body, .readme .plain,
   .release-timeline-tags .expander-text:hover .expander-dots .expander-dot,
   .Label--draft, .Label--prerelease, .is-failed .repo-file-upload-errors,
   .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
@@ -452,7 +453,8 @@
   .tabnav-pr .tabnav-tab.selected, .gollum-editor-help-parent li a:hover,
   .gollum-editor-help-list li a:hover, .pagination a:hover, .pagination a:focus,
   .pagination span:hover, .pagination span:focus, .pagination em:hover,
-  .pagination em:focus, .progress-bar-inline .progress-bar, .plans-card-btn {
+  .pagination em:focus, .progress-bar-inline .progress-bar,
+  .project-page-responsive .project-card:focus, .plans-card-btn {
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border-color: #dfe2e5" */
@@ -804,7 +806,7 @@
   .summary-stats li, .summary-stats li a, .releases-tag-list td.date a,
   .releases-tag-list p, .tag-references>li a, .release-timeline-tags .date,
   .uploaded-files>li.delete, .uploaded-files .filesize, .uploaded-files .remove,
-  .labels-list-action, .mini-repo-list .no-repo,
+  .labels-list-action, .label-characters-remaining, .mini-repo-list .no-repo,
   .mini-repo-list-item .repo-description, .timeout h3, .numbers-summary a,
   .numbers-summary .nolink, .repository-meta, .branch-infobar,
   .avatar-upload .upload-state p, .email-actions span.label,
@@ -1256,43 +1258,43 @@
     background-color: rgba(/*[[base-color-rgb]]*/, .2) !important;
   }
   /* HACK: Label colors */
-  a.label[href*="/issues?"][style*=" color: #f"],
-  a.label[href*="/pulls?"][style*=" color: #f"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #f"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #f"],
   .issue-card-label[style*=" color: #f"] {
     color: #e8e8e8 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #e"],
-  a.label[href*="/pulls?"][style*=" color: #e"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #e"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #e"],
   .issue-card-label[style*=" color: #e"] {
     color: #e8e8e8 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #d"],
-  a.label[href*="/pulls?"][style*=" color: #d"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #d"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #d"],
   .issue-card-label[style*=" color: #d"] {
     color: #e8e8e8 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #c"],
-  a.label[href*="/pulls?"][style*=" color: #c"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #c"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #c"],
   .issue-card-label[style*=" color: #c"] {
     color: #e8e8e8 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #3"],
-  a.label[href*="/pulls?"][style*=" color: #3"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #3"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #3"],
   .issue-card-label[style*=" color: #3"] {
     color: #181818 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #2"],
-  a.label[href*="/pulls?"][style*=" color: #2"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #2"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #2"],
   .issue-card-label[style*=" color: #2"] {
     color: #181818 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #1"],
-  a.label[href*="/pulls?"][style*=" color: #1"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #1"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #1"],
   .issue-card-label[style*=" color: #1"] {
     color: #181818 !important;
   }
-  a.label[href*="/issues?"][style*=" color: #0"],
-  a.label[href*="/pulls?"][style*=" color: #0"],
+  a.IssueLabel[href*="/issues?"][style*=" color: #0"],
+  a.IssueLabel[href*="/pulls?"][style*=" color: #0"],
   .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
