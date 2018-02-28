@@ -40,6 +40,7 @@ const mappings = {
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border: 2px solid #fff": "border-color: #222",
   "border: solid #ddd": "border-color: #484848",
+  "border: solid 1px #e1e4e8": "border-color: #343434",
 
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
@@ -81,6 +82,15 @@ const mappings = {
   "color: #a3aab1": "color: #606060",
   "color: #c6cbd1": "color: #4d4d4d",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
+
+  // red
+  "color: #cb2431": "color: #f44",
+
+  // green
+  "color: #28a745": "color: #6cc644",
+
+  // yellow
+  "color: #b08800": "color: #cb4",
 };
 
 // list of URLs to pull stylesheets from
