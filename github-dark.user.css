@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.26
+@version     1.20.27
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.26 (2018-03-08) */
+/*! Github Dark v1.20.27 (2018-03-21) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -553,9 +553,9 @@
   .social-count, .border-left-0, .flash-banner, .steps li:first-child,
   .session-authentication .flash.is-signed-in,
   .session-authentication .flash.is-signed-out, .golden-ticket-button:last-child,
-  .check-annotation, .select-menu-item, .summary-stats li:first-child,
-  .url-box-clippy .zeroclipboard-button, .user-key-email-unverified,
-  .sso-modal.error .flash-error, .tree-browser {
+  .check-annotation, .select-menu-item, .MarketplaceEdit-body .menu,
+  .summary-stats li:first-child, .url-box-clippy .zeroclipboard-button,
+  .user-key-email-unverified, .sso-modal.error .flash-error, .tree-browser {
     border-left: 0 !important;
   }
   /* auto-generated rule for "border-right: 0" */
@@ -565,7 +565,8 @@
   .session-authentication .flash.is-signed-out, .select-menu-item,
   .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .ScreenshotCarousel-navitem:last-child,
-  .migrate-org-roles-item:last-child, .file-navigation .get-repo-btn.btn-block,
+  .MarketplaceEdit-body .menu, .migrate-org-roles-item:last-child,
+  .file-navigation .get-repo-btn.btn-block,
   .file-navigation .get-repo-btn:only-child, .sso-modal.error .flash-error,
   .tree-browser {
     border-right: 0 !important;
@@ -647,6 +648,20 @@
   .new-discussion-timeline .composer .timeline-comment:after,
   .dropdown-menu-e:after, .branch-action-body:after {
     border-right-color: #181818 !important;
+  }
+  /* auto-generated rule for "border-bottom-color: transparent" */
+  .Popover-message--bottom:before, .Popover-message--bottom:after,
+  .Popover-message--bottom-right:before, .Popover-message--bottom-right:after,
+  .Popover-message--bottom-left:before, .Popover-message--bottom-left:after,
+  .Popover-message--right:before, .Popover-message--right:after,
+  .Popover-message--right-top:before, .Popover-message--right-top:after,
+  .Popover-message--right-bottom:before, .Popover-message--right-bottom:after,
+  .Popover-message--left:before, .Popover-message--left:after,
+  .Popover-message--left-top:before, .Popover-message--left-top:after,
+  .Popover-message--left-bottom:before, .Popover-message--left-bottom:after,
+  .dropdown-signed-commit .dropdown-menu-w:after, .dropdown-caret,
+  .select-menu-button:after, .HeaderNavlink.selected.js-menu-target {
+    border-bottom-color: transparent !important;
   }
   /* auto-generated rule for "border-top: 7px solid #fff" */
   .dropdown-menu-ne:after {
@@ -799,7 +814,8 @@
   .integration-meta-head, .issues-reset-query,
   .table-list-milestones .stat-label, .task-progress,
   .marketplace-product-callout .branch-action-item-icon,
-  .marketplace-product-callout-close .octicon:hover, .merge-branch-description,
+  .marketplace-product-callout-close .octicon:hover,
+  .MarketplaceEdit-body .CircleIcon, .merge-branch-description,
   .owner-reponame .slash, .news blockquote, .news .alert .simple .title,
   .news .github-welcome .done, .news div.message, .news li blockquote,
   .notifications .read .type-icon, .notifications .read .list-group-item-name>a,
@@ -914,7 +930,8 @@
   .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .hook-item .description,
   .hook-item.pending .icon-for-pending, .hook-item.inactive .icon-for-inactive,
-  .hook-deliveries-list .item-status.pending, .hook-delivery-time,
+  .hook-item.mute .icon-for-mute, .hook-deliveries-list .item-status.pending,
+  .hook-delivery-time,
   .repository-lang-stats ol.repository-lang-stats-numbers li>a,
   .repository-lang-stats ol.repository-lang-stats-numbers li>span,
   .marketplace-plan-link-container .marketplace-plans-remaining,
@@ -1540,7 +1557,8 @@
   .dashboard-notice .coupon, .release-label,
   .oauth-org-access-details .oauth-org-item.on, .MarketplaceSideNav,
   .timeline-inline-comments, .AvatarStack-body, .team-left-column,
-  .team-discussions-container {
+  .team-discussions-container, .Collection ~ div[style*="linear-grad"],
+  .application-main > div[style*="background"] {
     background: none !important;
   }
   /* remove background gradient */
@@ -1964,8 +1982,7 @@
   .drag-and-drop, .octofication .broadcast-icon-mask, .file .image,
   .merge-pr-more-commits, .coupons .coupon-form-body, .manage-repo-access-group,
   .saved-reply-form, .orghead .edit-org:hover, .octotree_views, .simple-box,
-  .btn-link.timeline-progressive-disclosure-button,
-  .production a.border.rounded-1 {
+  .btn-link.timeline-progressive-disclosure-button, a.border.rounded-1 {
     background: #181818 !important;
     border-color: #484848 !important;
   }
@@ -2007,9 +2024,7 @@
   .protected-branch-orgs-and-repo-admins, .listgroup-overflow, .Header,
   .project-column, .btn.btn-outline, .js-notice > .border,
   .news .issues_labeled .border, table.pricing-table, .two-factor-steps,
-  .watch_started div.border.rounded-1, .public div.border.rounded-1,
-  .create div.border.rounded-1, .follow div.border.rounded-1, .bg-gray-dark,
-  .news div.border.rounded-1 {
+  div.border.rounded-1 {
     background: #181818 !important;
   }
   .sidebar-module, .form-control,
@@ -2146,7 +2161,8 @@
   /* hr to match border color */
   .markdown-body hr, .profile-timeline.discussion-timeline:before,
   .profile-timeline.discussion-timeline .profile-timeline-month-heading:after,
-  .discussion-post .reply-comments-holder:before {
+  .discussion-post .reply-comments-holder:before,
+  div[style*="background-color: #eaecef"] {
     background: #343434 !important;
   }
   #network .current-repository {
