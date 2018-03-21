@@ -69,6 +69,9 @@ const mappings = {
   "border-top-color: #fff" : "border-top-color: #181818",
   "border-right-color: #fff" : "border-right-color: #181818",
 
+  // Needed because Popover rules rely on ordering
+  "border-bottom-color: transparent": "border-bottom-color: transparent",
+
   "border-top: 7px solid #fff" : "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
