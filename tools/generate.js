@@ -108,7 +108,8 @@ const ignoreSelectors = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
   /\.Box$/,
-  /\.pl-/ // GitHub Pretty Lights Syntax highlighter
+  /\.pl-/, // GitHub Pretty Lights Syntax highlighter
+  /\spre$/
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
