@@ -279,7 +279,7 @@ module.exports = function(grunt) {
               all: false,
               mergeMedia: true,
               removeDuplicateMediaBlocks: true,
-              removeDuplicateRules: true,
+              removeDuplicateRules: true
             },
           },
         }
@@ -296,7 +296,7 @@ module.exports = function(grunt) {
           level: {
             2: {
               all: true,
-              specialComments: "all",
+              specialComments: "all"
             }
           }
         }
@@ -310,12 +310,9 @@ module.exports = function(grunt) {
           ext : ".min.css"
         }],
         options: {
-          level: {
-            2: {
-              all: true,
-              specialComments: "all",
-            }
-          }
+          // Don't use level 2; background *must* be the first entry; see #599
+          keepSpecialComments: "*",
+          advanced: false
         }
       },
       jupyter: {
@@ -330,7 +327,7 @@ module.exports = function(grunt) {
           level: {
             2: {
               all: true,
-              specialComments: "all",
+              specialComments: "all"
             }
           }
         }
