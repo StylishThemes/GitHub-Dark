@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   const defaults = require("./defaults.json");
   const pkg = require("./package.json");
   defaults.webkit = false;
+  grunt.file.defaultEncoding = "utf8";
 
   try {
     config = Object.assign({}, defaults, grunt.file.readJSON("build.json"));
@@ -30,6 +31,32 @@ module.exports = function(grunt) {
       data = `<%= grunt.file.read("themes/${folder}twilight.min.css") %>`;
     }
     return data;
+  }
+
+  function processJupyterFiles() {
+    const files = grunt.file.expand({
+      filter: "isFile",
+      cwd: "themes/jupyter"
+    }, ["*"]);
+    files.forEach(file => {
+      const theme = grunt.file.read(`themes/jupyter/${file}`);
+      grunt.file.write(`themes/jupyter/${file}`, replaceCSSMatches(theme));
+    });
+  }
+
+  // :any() has been deprecated, and :matches() is not fully supported
+  // this is a simple replace method.. it'll handle `:matches .selector`, but
+  // not `selector :matches()`
+  function replaceCSSMatches(theme) {
+    return theme.replace(/:matches\(([^)]+)\)\s([^,{]+)(,|{)/gm, function(_, matches, selector, separator) {
+      let result = "";
+      const m = matches.split(/\s*,\s*/);
+      const last = m.length - 1;
+      m.forEach((match, index) => {
+        result += `${match} ${selector.trim()}${index >= last && separator === "{" ? " {" : ", "}`;
+      });
+      return result;
+    });
   }
 
   function getVersion(level) {
@@ -402,8 +429,13 @@ module.exports = function(grunt) {
       "clean:cssmins",
       "cssmin:codemirror",
       "cssmin:github",
-      "cssmin:jupyter"
+      "cssmin:jupyter",
+      "jupyter"
     ]);
+  });
+
+  grunt.registerTask("jupyter", "Replacing :matches() in Jupyter files", () => {
+    processJupyterFiles();
   });
 
   grunt.registerTask("clean", "Perfectionist cleanup", () => {
