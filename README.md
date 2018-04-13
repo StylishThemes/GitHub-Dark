@@ -131,3 +131,5 @@ To develop, first install [Node.js](https://nodejs.org), install dependencies vi
 - `grunt update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
+
+And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
