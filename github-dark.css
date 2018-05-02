@@ -3633,7 +3633,8 @@
   .zhc-pipeline__body, .zhc-board--is-fullscreen, .zh-epic-issue-progress-bar,
   .zhc-board-loading__message, .zhc-pipeline--is-collapsed, .zhc-issue-card,
   .zh-todo-item-placeholder, .zh-timeline-comment, .zh-epic-creator-tab,
-  .zh-issueviewer-content, .zhc-chart-container, tr.zhc-item-table__row--closed {
+  .zh-issueviewer-content, .zhc-chart-container, tr.zhc-item-table__row--closed,
+  .zhc-sidebar__container, .zhc-sidebar__container__inner {
     background: #111 !important;
     border-color: #484848 !important;
   }
@@ -3660,9 +3661,14 @@
   .zh-issueviewer-title, .zh-new-issue-suggester-input-container,
   .zhc-pr-issue-connector__info, .zhu-tag-default, .zhc-chart-container__header,
   .zhc-issues-list__header, .zhc-toggleable--is-disabled,
-  .zhc-item-table__row:hover, .zh-collapse-control__main-icon {
+  .zhc-item-table__row:hover, .zh-collapse-control__main-icon,
+  .zhc-sidebar-profile {
     background: #202020 !important;
     border-color: #484848 !important;
+  }
+  .zhc-sidebar-nav-item--is-active, .zhc-sidebar-nav-item:hover,
+  .zhc-sidebar-profile__toggle:hover {
+    background: #202020 !important;
   }
   .zhc-merge-repo-item:hover, .zhc-merge-repo-item--is-active,
   .zhc-badge--issue-count, .zhc-tooltip-action__item:hover,
@@ -3671,7 +3677,10 @@
   .zhc-progress-bar, .zhc-dependency-type-dropdown__list__item,
   .zhc-chart-legend:after, .zhc-issues-list-item:hover, .zhc-btn--tint:hover,
   .zh-reports .zhc-btn:hover, .zhc-issue-selector .zhc-btn:hover,
-  .zhc-dependency-header__status__controls .zhc-btn:hover {
+  .zhc-dependency-header__status__controls .zhc-btn:hover,
+  .zhc-sidebar-nav-item__action:hover, .zhc-sidebar-nav-item__action--is-active,
+  .zhc-reports-nav-item__sub-item:hover, .zhc-sidebar-profile__item:hover,
+  .zhc-sidebar-divider__bar {
     background: #333 !important;
   }
   .zh-epic-creator-tab.selected, .zh-pipeline-badge-light {
@@ -3710,7 +3719,7 @@
   .zhc-chart-container__footer, .zhc-chart-legend__labels, .zhc-issues-list,
   .zhc-tabs__nav-item, .zhc-menu-bar-item--search-bar, .zhc-menu-bar-item,
   .zh-collapse-manager-container--isExpanded .discussion-item:last-child,
-  .zhc-selection-list__header {
+  .zhc-selection-list__header, .zhc-sidebar-profile__item:hover {
     border-color: #343434 !important;
   }
   .zhc-tooltip-action__content:before, .zhc-pr-issue-connector__info:before {
@@ -3723,7 +3732,10 @@
   .zhc-dependency-type-dropdown__list__item,
   .zhc-pipeline--add-placeholder .zhc-pipeline__head,
   .zhc-checkbox-toggle--is-active:before, .zhc-checkbox-toggle--is-active:after,
-  .zhc-pipeline--add-placeholder .zhc-pipeline-header__main {
+  .zhc-pipeline--add-placeholder .zhc-pipeline-header__main,
+  .zhc-sidebar-nav-item__action:hover, .zhc-sidebar-nav-item__action--is-active,
+  .zhc-sidebar:not(.zhc-sidebar--is-wide-screen):hover .zhc-sidebar__footer,
+  .zhc-sidebar--is-wide-screen .zhc-sidebar__footer, .zhc-sidebar__footer-left {
     border-color: #484848 !important;
   }
   /* text */
@@ -3739,7 +3751,8 @@
   .zh-discussion-item .zh-pipeline-is, .zh-discussion-item .zh-pipeline-was,
   .zh-discussion-item .zh-estimate-is, .zh-discussion-item .zh-estimate-was,
   .zh-discussion-item .zh-issue, .zh-discussion-item .zh-release,
-  .zh-collapse-control {
+  .zh-collapse-control, .zhc-sidebar-nav-item, .zhc-sidebar-profile,
+  .zhc-sidebar-profile__name, .zhc-sidebar-profile__item {
     color: #ccc !important;
   }
   .zh-sidebar-icon, .zh-icon-plus, .zh-icon-dash {
@@ -3781,7 +3794,8 @@
   .zh-burndown .btn .octicon,
   .zh-todo-issue-dropdown.selected .zh-split-button-icon,
   .zh-board-menu-item .octicon, .zh-reports .btn .octicon,
-  .zh-split-button-right-side:hover, .zh-split-button-icon:hover {
+  .zh-split-button-right-side:hover, .zh-split-button-icon:hover,
+  .zhc-collapse-toggle--is-active:hover {
     background: linear-gradient(#444, #333) !important;
     border-color: #484848 !important;
   }
@@ -3811,7 +3825,8 @@
     height: 14px !important;
   }
   /* invert image */
-  .zh-icon-circled-bolt, .zh-icon-bolt, .zh-octicon-x {
+  .zh-icon-circled-bolt, .zh-icon-bolt, .zh-octicon-x,
+  a.zh-topbar-item.selected .zh-icon-zenhub {
     filter: invert(40%) brightness(120%) !important;
   }
   .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]),
