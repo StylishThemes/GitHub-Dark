@@ -2200,8 +2200,13 @@
   g-emoji[fallback-src$="1f51c.png"], g-emoji[fallback-src$="1f51d.png"],
   g-emoji[fallback-src$="1f3b5.png"], g-emoji[fallback-src$="27bf.png"],
   g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="1f43e.png"],
-  img[src*="resources-logo"] {
+  img[src*="resources-logo"],
+  /* https://github.com/ten */
+  .container-xl[id] svg {
     filter: invert(83%) !important;
+  }
+  .container-xl[id] img {
+    z-index: 100 !important;
   }
   /* Exclude problematic non-emojis from Apple's emoji font on macOS */
   /* use tools/unicode-gen.js to generate. */
@@ -3214,7 +3219,7 @@
     opacity: .1 !important;
     z-index: 0 !important;
   }
-  .inbox-zero-octocat, .network-graph-container {
+  .inbox-zero-octocat, .network-graph-container, img.TenYears-hero {
     opacity: .6 !important;
   }
   .search .minibutton span {
