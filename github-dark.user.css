@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.36
+@version     1.20.37
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.36 (2018-05-02) */
+/*! Github Dark v1.20.37 (2018-05-04) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -2392,8 +2392,14 @@
   g-emoji[fallback-src$="1f51c.png"], g-emoji[fallback-src$="1f51d.png"],
   g-emoji[fallback-src$="1f3b5.png"], g-emoji[fallback-src$="27bf.png"],
   g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="1f43e.png"],
-  img[src*="resources-logo"] {
+  img[src*="resources-logo"],
+  svg.IconNav-img,
+  /* https://github.com/ten */
+  .container-xl[id] svg {
     filter: invert(83%) !important;
+  }
+  .container-xl[id] img {
+    z-index: 100 !important;
   }
   /* Exclude problematic non-emojis from Apple's emoji font on macOS */
   /* use tools/unicode-gen.js to generate. */
@@ -3097,7 +3103,9 @@
   .list-tip:before, .selector-item .mini-icon:before,
   .browser .mini-icon-arr-right, .selected .select-menu-checkmark,
   .octicon-person-team:before, .issues-reset-query .octicon-x,
-  a.darkertooltipped, #subscribeButton, .js-new-label-color svg.text-gray-dark {
+  a.darkertooltipped, #subscribeButton, .js-new-label-color svg.text-gray-dark,
+  a[style*="background"] .text-gray-dark,
+  a[style*="background"] .text-gray-dark h1 {
     color: #373737 !important;
   }
   .timeline-comment-header .timestamp, .vcard-stat:hover .text-muted,
@@ -3378,7 +3386,7 @@
     background-position: -18px 0 !important;
   }
   /* Repo list (https://github.com/{user}?tab=repositories) */
-  .repo-list-item p, .repo-list-item .repo-list-stats {
+  .repo-list-item p, .repo-list-item .repo-list-stats, .review-thread-reply {
     position: relative !important;
     z-index: 1 !important;
   }
@@ -3406,7 +3414,7 @@
     opacity: .1 !important;
     z-index: 0 !important;
   }
-  .inbox-zero-octocat, .network-graph-container {
+  .inbox-zero-octocat, .network-graph-container, img.TenYears-hero {
     opacity: .6 !important;
   }
   .search .minibutton span {
