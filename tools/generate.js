@@ -47,14 +47,19 @@ const mappings = {
   "border-color: #dfe2e5": "border-color: #484848",
   "border-bottom-color: #e36209" : "border-bottom-color: #eee",
 
-  "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #484848",
   "border-bottom: 1px solid #d8d8d8": "border-bottom: 1px solid #484848",
 
+  "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
+
+  "border-bottom: 1px #e1e4e8 solid": "border-bottom: 1px solid #343434",
+  "border-left: 1px #e1e4e8 solid": "border-left: 1px solid #343434",
+  "border-right: 1px #e1e4e8 solid": "border-right: 1px solid #343434",
+  "border-top: 1px #e1e4e8 solid": "border-top: 1px solid #343434",
 
   "border-bottom: 0": "border-bottom: 0",
   "border-left: 0": "border-left: 0",
