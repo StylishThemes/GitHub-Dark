@@ -58,7 +58,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 * [ZenHub](https://www.zenhub.io/)
 * [npmhub](https://github.com/npmhub/npmhub)
 * [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it) (deprecated; extension no longer maintained)
-* [GitHub Polls](https://github.com/tj/gh-polls)
+* [GitHub Polls](https://github.com/apex/gh-polls)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
