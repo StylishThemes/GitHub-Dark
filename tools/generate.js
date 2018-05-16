@@ -18,6 +18,8 @@ const utk = require("url-toolkit");
 const mappings = {
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #d1d5da": "background-color: #444",
+  "background-color: #eaecef": "background-color: #343434",
+  "background-color: #6a737d": "background-color: #222",
   "background-color: #6f42c1": "background-color: #6e5494",
   "background-color: #cb2431": "background-color: #911",
   "background-color: #d73a49": "background-color: #911",
