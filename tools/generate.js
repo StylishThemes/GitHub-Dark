@@ -44,15 +44,13 @@ const mappings = {
 
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
-  "border: 1px #e1e4e8 solid": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
   "border: 2px solid #fff": "border-color: #222",
   "border: solid #ddd": "border-color: #484848",
-  "border: solid 1px #e1e4e8": "border-color: #343434",
 
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
-  "border-bottom-color: #e36209" : "border-bottom-color: #eee",
+  "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #484848",
@@ -77,19 +75,19 @@ const mappings = {
   "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
   "border-right-color: rgba(27,31,35,0.15)": "border-right-color: #343434",
 
-  "border-left-color: #f6f8fa" : "border-left-color: #222",
+  "border-left-color: #f6f8fa": "border-left-color: #222",
 
-  "border-bottom-color: #fff" : "border-bottom-color: #181818",
-  "border-left-color: #fff" : "border-left-color: #181818",
-  "border-top-color: #fff" : "border-top-color: #181818",
-  "border-right-color: #fff" : "border-right-color: #181818",
+  "border-bottom-color: #fff": "border-bottom-color: #181818",
+  "border-left-color: #fff": "border-left-color: #181818",
+  "border-top-color: #fff": "border-top-color: #181818",
+  "border-right-color: #fff": "border-right-color: #181818",
 
   "border-bottom-color: transparent": "border-bottom-color: transparent",
   "border-left-color: transparent": "border-left-color: transparent",
   "border-top-color: transparent": "border-top-color: transparent",
   "border-right-color: transparent": "border-right-color: transparent",
 
-  "border-top: 7px solid #fff" : "border-top: 7px solid #181818",
+  "border-top: 7px solid #fff": "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
   "color: #24292e": "color: #c0c0c0",
@@ -189,7 +187,7 @@ function parseDeclarations(cssString) {
         if (!decls[mapping]) decls[mapping] = [];
         const [prop, val] = mapping.split(": ");
         decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
-        if (decl.property === prop && decl.value.toLowerCase() === val.toLowerCase()) {
+        if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
           rule.selectors.forEach(selector => {
             // Skip potentially unmergeable selectors
             // TODO: Use clean-css or similar to merge rules later instead
@@ -226,6 +224,18 @@ function buildOutput(decls) {
   });
   output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
+}
+
+function isEqualValue(prop, a, b) {
+  a = a.trim().toLowerCase();
+  b = b.trim().toLowerCase();
+
+  // try to ignore order in shorthands
+  if (["border", "background", "font"].includes(prop)) {
+    return a.split(" ").sort().join(" ") === b.split(" ").sort().join(" ");
+  } else {
+    return a === b;
+  }
 }
 
 function exit(err) {
