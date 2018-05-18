@@ -61,11 +61,6 @@ const mappings = {
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
 
-  "border-bottom: 1px #e1e4e8 solid": "border-bottom: 1px solid #343434",
-  "border-left: 1px #e1e4e8 solid": "border-left: 1px solid #343434",
-  "border-right: 1px #e1e4e8 solid": "border-right: 1px solid #343434",
-  "border-top: 1px #e1e4e8 solid": "border-top: 1px solid #343434",
-
   "border-bottom: 0": "border-bottom: 0",
   "border-left: 0": "border-left: 0",
   "border-right: 0": "border-right: 0",
@@ -133,6 +128,18 @@ const ignoreSelectors = [
 const unmergeableSelectors = [
   /(-moz-|-ms-|-o-|-webkit-).+/,
   /:selection|:placeholder$/,
+];
+
+// list of shorthand properties where values are compared insensitively
+// to their order, e.g. "1px solid red" is equal to "1px red solid".
+const shorthands = [
+  "border",
+  "border-left",
+  "border-right",
+  "border-top",
+  "border-bottom",
+  "background",
+  "font"
 ];
 
 const perfOpts = {
@@ -231,7 +238,7 @@ function isEqualValue(prop, a, b) {
   b = b.trim().toLowerCase();
 
   // try to ignore order in shorthands
-  if (["border", "background", "font"].includes(prop)) {
+  if (shorthands.includes(prop)) {
     return a.split(" ").sort().join(" ") === b.split(" ").sort().join(" ");
   } else {
     return a === b;
