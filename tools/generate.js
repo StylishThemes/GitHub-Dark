@@ -7,7 +7,7 @@ const got = require("got");
 const parse5 = require("parse5");
 const path = require("path");
 const perfectionist = require("perfectionist");
-const utk = require("url-toolkit");
+const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is important for cases
 // where one declaration is meant to override another, like in the border cases
@@ -154,8 +154,8 @@ Promise.all(urls.map(url => got(url)))
   .then(responses => {
     const styleUrls = [];
     responses.forEach(res => {
-      extractStyleHrefs(res.body).forEach(function(href) {
-        styleUrls.push(utk.buildAbsoluteURL(res.requestUrl, href));
+      extractStyleHrefs(res.body).forEach(href => {
+        styleUrls.push(urlToolkit.buildAbsoluteURL(res.requestUrl, href));
       });
     });
     return styleUrls;
