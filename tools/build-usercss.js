@@ -24,6 +24,13 @@ function getThemesInFolder(folder) {
   return new Promise((resolve, reject) => {
     const path = "./themes/" + folder;
     fs.readdir(path, (err, files) => {
+      // put the default theme (twilight) first
+      files = files.sort((a, b) => {
+        if (/twilight/i.exec(a)) return -1;
+        if (/twilight/i.exec(b)) return 1;
+        return a.localeCompare(b);
+      });
+
       if (err) {
         console.log(`Error reading folder ${folder}`, err);
         reject(err);
