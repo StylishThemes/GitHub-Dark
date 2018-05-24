@@ -1938,7 +1938,8 @@
   .pagination .disabled, .pagination .gap:hover, .pagination .disabled:hover,
   .listgroup-header, .merge-status-item,
   .previewable-comment-form .comment-form-head.tabnav,
-  .bg-gray:not(body):not(.team-discussions-container) {
+  .bg-gray:not(body):not(.team-discussions-container),
+  .Header .header-search-wrapper {
     background: #202020 !important;
   }
   /* Navigation focus */
@@ -2186,6 +2187,9 @@
   }
   .progress-bar.anim-grow-x, .dev-hero, .header-search-key-slash {
     filter: brightness(75%) !important;
+  }
+  .header-search-key-slash {
+    filter: grayscale(100%) contrast(1.5) !important;
   }
   /* invert (rgb) */
   #network .repo img:not(.gravatar), #header .logo,
@@ -2589,6 +2593,9 @@
   /* commits page - committer icon */
   .commits-list-item .committer-avatar {
     box-shadow: -2px -2px 0 rgba(0, 0, 0, .4) !important;
+  }
+  .Header .header-search-wrapper.focus {
+    box-shadow: none !important;
   }
   /* text color */
   /* Bright text */
@@ -3457,8 +3464,7 @@
   #user-content-toc {
     border-collapse: separate !important;
   }
-  #facebox pre, #contributors-master svg.viz, #com .dropdown-menu,
-  .header-search-wrapper {
+  #facebox pre, #contributors-master svg.viz, #com .dropdown-menu {
     border: 1px solid #343434 !important;
   }
   /* orange rss icon */
