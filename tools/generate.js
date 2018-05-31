@@ -108,9 +108,9 @@ const mappings = {
 
 // list of URLs to pull stylesheets from
 const urls = [
-  {url: "https://github.com", opts: {}},
-  {url: "https://gist.github.com", opts: {}},
-  {url: "https://help.github.com", opts: {}},
+  {url: "https://github.com"},
+  {url: "https://gist.github.com"},
+  {url: "https://help.github.com"},
 ];
 
 // list of regexes matching selectors that should be ignored
