@@ -108,9 +108,9 @@ const mappings = {
 
 // list of URLs to pull stylesheets from
 const urls = [
-  "https://github.com",
-  "https://gist.github.com",
-  "https://help.github.com",
+  {url: "https://github.com", opts: {}},
+  {url: "https://gist.github.com", opts: {}},
+  {url: "https://help.github.com", opts: {}},
 ];
 
 // list of regexes matching selectors that should be ignored
@@ -150,7 +150,7 @@ const perfOpts = {
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-Promise.all(urls.map(url => got(url)))
+Promise.all(urls.map(u => got(u.url, u.opts)))
   .then(responses => {
     const styleUrls = [];
     responses.forEach(res => {
