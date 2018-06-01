@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.43
+@version     1.20.44
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.43 (2018-05-30) */
+/*! Github Dark v1.20.44 (2018-06-01) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -263,7 +263,7 @@
   .layout-reorder-menu-list .is-hidden:hover,
   .team-discussion-new-post .review-thread-reply-button:disabled,
   .MarketplaceSideNav, .ScreenshotCarousel-navitem.selected, .sortable-ghost,
-  .review-comment-contents:after, .review-comment-loader:after,
+  .review-comment:after, .review-comment-loader:after,
   .review-comment.is-comment-editing:after, .review-thread-reply {
     background-color: #181818 !important;
   }
@@ -320,8 +320,9 @@
   .migration-jumbotron-btn, .org-settings-updating, .manage-repo-access-group,
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
   .page-preview, .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar,
-  .diffbar, .review-thread-reply .inline-comment-form,
-  .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
+  .diffbar, .review-comment .is-comment-editing,
+  .review-thread-reply .inline-comment-form, .review-summary-form-wrapper,
+  .readme .markdown-body, .readme .plain,
   .release-timeline-tags .expander-text:hover .expander-dots .expander-dot,
   .Label--draft, .Label--prerelease, .is-failed .repo-file-upload-errors,
   .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
@@ -413,7 +414,7 @@
   /* auto-generated rule for "background-color: #dbedff" */
   .flash, a.commit-ref:hover, .blob-num-hunk, .blob-num-expandable,
   .add-reactions-options-item:active {
-    background-color: #273045 !important;
+    background-color: #182030 !important;
   }
   /* auto-generated rule for "background-color: #f1f8ff" */
   .Box-row--focus-blue.navigation-focus, .Box-row--hover-blue:hover,
@@ -431,7 +432,7 @@
   .pinned-repo-item.sortable-ghost,
   .diffbar-range-menu .in-range:not(.navigation-focus):not(.is-range-selected),
   .setup-form .setup-plans tr.selected {
-    background-color: #273045 !important;
+    background-color: #182030 !important;
   }
   /* auto-generated rule for "background-color: #fff5b1" */
   .bg-yellow-light, .selected-line.blob-num, .network .current-repository,
@@ -458,9 +459,9 @@
   .blankslate, .table-list-header, .ajax-pagination-form .ajax-pagination-btn,
   .signed-commit-badge, .deployment-status-label, .list-group-item,
   .range-editor, .code-list .file-box, .ScreenshotCarousel,
-  .conflict-resolver.loading, .review-thread, .review-comment.is-comment-editing,
-  .review-summary-form-wrapper, .orgs-help-item-octicon, .org-sso .org-sso-panel,
-  .data-table {
+  .conflict-resolver.loading, .review-thread,
+  .review-comment .is-comment-editing, .review-summary-form-wrapper,
+  .orgs-help-item-octicon, .org-sso .org-sso-panel, .data-table {
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border: 1px solid #eee" */
@@ -562,6 +563,7 @@
   .branch-action-item+.branch-action-item,
   .branch-action-item+.mergeability-details,
   .codesearch-results .repo-list-item+.repo-list-item,
+  .dashboard-rollup-items>.dashboard-rollup-item,
   .topic-list .topic-list-item+.topic-list-item,
   .discussion-post .reply-comment:first-child, .issue-list-item+.issue-list-item,
   .last-review-thread, .review-thread-reply, .file-navigation .get-repo-btn,
@@ -1249,7 +1251,8 @@
   .autocomplete-item.selected, .autocomplete-item.navigation-focus,
   .select-menu-item.navigation-focus.selected, .result.selected, .result:hover,
   .CommunityTemplate-highlight, .diff-table button.add-line-comment,
-  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
+  .dropdown-menu a:hover, .version-picker a:hover {
     background: /*[[base-color]]*/ !important;
   }
   .context-button:after {
@@ -1322,6 +1325,10 @@
   }
   .select-menu-text-filter input::placeholder {
     color: #555 !important;
+  }
+  /* Remove dotted borders on already otherwise higlighted elements (Firefox) */
+  .dropdown-item:focus, details-dialog:focus {
+    outline: none;
   }
   /* focus hightlight */
   a:focus, button:focus, [tabindex] {
@@ -2261,6 +2268,9 @@
   .blob-expanded .blob-num, .blob-expanded .blob-code, .migration-section-grey {
     background: rgba(50, 50, 50, .5) !important;
   }
+  .details-expanded-dark[open] > summary:before {
+    background: rgba(0, 0, 0, .5) !important;
+  }
   .svg-tip {
     background: rgba(12, 12, 12, .8) !important;
   }
@@ -2330,7 +2340,7 @@
   /* contribution calendar  */
   .calendar-graph rect[fill="#c6e48b"], .calendar-graph rect[fill="#7bc96f"],
   .calendar-graph rect[fill="#239a3b"], .calendar-graph rect[fill="#196127"],
-  .contrib-legend li {
+  .contrib-legend li, .contribution-activity-listing .progress-bar {
     background-color: /*[[base-color]]*/ !important;
     fill: /*[[base-color]]*/ !important;
   }
@@ -2339,6 +2349,13 @@
   }
   .calendar-graph rect.day:hover {
     stroke: #fff !important;
+  }
+  /* contribution progress bars on user page */
+  .contribution-activity-listing .progress-bar[style*="7bc96f"] {
+    opacity: 1 !important;
+  }
+  .contribution-activity-listing .progress-bar[style*="c6e48b"] {
+    opacity: .75 !important;
   }
   /* contribution calendar - regular colors */
   .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#eee"] {
@@ -2906,7 +2923,8 @@
   .markdown-format .octicon-link, .Box-row--hover-blue.link-gray:hover,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-octicon,
-  .jump-to-suggestions-results-container mark {
+  .jump-to-suggestions-results-container mark, .dropdown-menu a:hover,
+  .version-picker a:hover {
     color: #e2e2e2 !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -3183,7 +3201,7 @@
   .text-inherit, a.text-inherit, .table-list-milestones .stat a,
   .review-comment-contents .timestamp,
   .discussion-item-ref-title .title-link:hover .issue-num,
-  .timeline-comment-header .text-gray {
+  .timeline-comment-header .text-gray, .timeline-comment-header .text-gray-light {
     color: inherit !important;
   }
   /* Alerts and activity, remove background gradient */
@@ -3204,7 +3222,9 @@
   .state-indicator.closed, .state-closed,
   .discussion-item-closed .discussion-item-icon,
   .discussion-item-review.is-rejected.is-writer .discussion-item-icon,
-  .topic-tag-action .remove-topic-button:hover {
+  .topic-tag-action .remove-topic-button:hover, .menu-item-danger:hover,
+  .menu-item-danger.navigation-focus, .menu-item-danger.selected:hover,
+  .menu-item-danger.selected.navigation-focus {
     background: #911 !important;
     border-color: #383838 !important;
   }
@@ -3464,6 +3484,10 @@
     background: #181818 !important;
     box-shadow: 0 0 0 4px #181818 !important;
   }
+  /* Hide annoying Issue/Pull Request banners */
+  .repository-content > .issues-listing > .js-notice {
+    display: none !important;
+  }
   .reponav-item, .pagehead-tabs-item {
     position: relative !important;
     top: 2px !important;
@@ -3505,6 +3529,8 @@
   .profile-picture-spinner, .more-repos-link.is-loading {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTM2NCAyOC42QzQyMC43IDU3IDQ1OS42IDk0LjQgNDg1IDE1MWwtMzEuNCAxNWMtMjAtNDEtNjMtODQtMTA0LjYtMTA0LjUiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0iIzMzMzsjZWVlOyMzMzM7IzMzMyIgYmVnaW49IjBzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPjwvcGF0aD48cGF0aCBmaWxsPSIjMzMzIiBkPSJNNDk0IDE2OWMyMCA2MCAyMSAxMTQtMSAxNzJsLTMyLjgtMTEuNGMxNS00My4zIDE1LTEwNCAwLTE0OCI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjMzMzOyNlZWU7IzMzMzsjMzMzIiBiZWdpbj0iMC4xMjVzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPjwvcGF0aD48cGF0aCBmaWxsPSIjMzMzIiBkPSJNNDg1LjQgMzU5LjJjLTI4LjMgNTYuNi02NS44IDk1LjUtMTIyLjQgMTIxbC0xNS4yLTMxLjRjNDEuMy0yMCA4NC4yLTYzIDEwNC43LTEwNC42Ij48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9IiMzMzM7I2VlZTsjMzMzOyMzMzMiIGJlZ2luPSIwLjI1MHMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9wYXRoPjxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik0zNDQuNSA0ODguNWMtNjAgMjAtMTE0IDIxLTE3Mi0xbDExLjQtMzNjNDMuMiAxNSAxMDQgMTUgMTQ4IDAiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0iIzMzMzsjZWVlOyMzMzM7IzMzMyIgYmVnaW49IjAuMzc1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3BhdGg+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTE1NC4zIDQ4Mi44Yy01Ni42LTI4LjQtOTUuNS02NS44LTEyMS0xMjIuNGwzMS40LTE1LjJjMjAgNDEuMyA2MyA4NC4yIDEwNC42IDEwNC43Ij48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9IiMzMzM7I2VlZTsjMzMzOyMzMzMiIGJlZ2luPSIwLjUwMHMiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9wYXRoPjxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik0yMy43IDM0Mi43Yy0yMC02MC0yMS0xMTQgMS0xNzJsMzMgMTEuNGMtMTUgNDMuNS0xNSAxMDQgMCAxNDgiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0iIzMzMzsjZWVlOyMzMzM7IzMzMyIgYmVnaW49IjAuNjI1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3BhdGg+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTMxLjggMTUxQzYwIDk0LjIgOTcuNSA1NS4zIDE1NCAzMGwxNS4zIDMxLjNjLTQxLjIgMjAtODQgNjMtMTA0LjYgMTA0LjYiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0iIzMzMzsjZWVlOyMzMzM7IzMzMyIgYmVnaW49IjAuNzUwcyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3BhdGg+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTE3MyAyMWM2MC0yMCAxMTQtMjEgMTcyIDFsLTExLjUgMzIuOGMtNDMuMy0xNS0xMDQtMTUtMTQ4IDAiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0iIzMzMzsjZWVlOyMzMzM7IzMzMyIgYmVnaW49IjAuODc1cyIgZHVyPSIxcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz48L3BhdGg+PHBhdGggZmlsbD0iI2VlZSIgZD0iTTE5NyA0NTl2LTQ4cy00LTQtMzMtMWMtMjggMy02Mi02Ni02NS02OSAyNC0xMCA0MyAyNiA2NSAzOGgzMXMzLTQ0IDIwLTM3YzE3IDYtNzIgMS05Ny02MXMxOS0xMjYgMjAtMTE1YzAgOS0xNy0zNS0xMC00NiAyMC0yNCA1MCAxMSA2OSAxNSA1IDAgMTgtOCA1OS03IDQxIDAgNTUgOCA2MCA2IDIyLTEwIDUxLTMyIDY1LTE3IDEwIDEyLTEgNjEtMSA0OXM0MyA4MSA2IDEzMmMtMjkgNDYtOTUgNDMtODQgNDYgMjEgMTUgMTQgOTEgMTQgMTE1bC0yMiA0di03NGMwLTktOS0xMC05LTl2ODVsLTIxIDF2LTg2aC0xMHY4NmwtMjAtMXYtODNzLTgtMS04IDEwdjcyIi8+PC9zdmc+") !important;
     background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
   }
   .more-repos-link.is-loading {
     background-repeat: no-repeat !important;
