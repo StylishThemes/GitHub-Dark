@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.44
+@version     1.20.45
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.44 (2018-06-01) */
+/*! Github Dark v1.20.45 (2018-06-05) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -319,10 +319,10 @@
   .orghead .edit-org:hover, .auto-search-group .spinner,
   .migration-jumbotron-btn, .org-settings-updating, .manage-repo-access-group,
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
-  .page-preview, .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar,
-  .diffbar, .review-comment .is-comment-editing,
-  .review-thread-reply .inline-comment-form, .review-summary-form-wrapper,
-  .readme .markdown-body, .readme .plain,
+  .page-preview, .projects-comment-form .comment-form-head .toolbar-commenting,
+  .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
+  .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
+  .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
   .release-timeline-tags .expander-text:hover .expander-dots .expander-dot,
   .Label--draft, .Label--prerelease, .is-failed .repo-file-upload-errors,
   .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
@@ -538,6 +538,7 @@
   .facebox-header, .select-menu-header, .select-menu-divider, .merge-status-item,
   body.full-width-p-0 .new-discussion-timeline, .file-header,
   .jump-to-suggestions-results-container .navigation-item,
+  .projects-comment-form,
   .discussion-item-body .outdated-comment.open .file-header, .data-table td,
   .data-table th, .data-table tbody tr:last-child th,
   .data-table tbody tr:last-child td, .pricing-table thead th {
@@ -564,6 +565,7 @@
   .branch-action-item+.mergeability-details,
   .codesearch-results .repo-list-item+.repo-list-item,
   .dashboard-rollup-items>.dashboard-rollup-item,
+  .dashboard-saved-notifications+.dashboard-saved-notifications,
   .topic-list .topic-list-item+.topic-list-item,
   .discussion-post .reply-comment:first-child, .issue-list-item+.issue-list-item,
   .last-review-thread, .review-thread-reply, .file-navigation .get-repo-btn,
@@ -594,6 +596,7 @@
   .repository-lang-stats ol.repository-lang-stats-numbers li, .news .alert .body,
   .member-row:last-child, .org-migration-settings-section:last-child,
   .manage-repo-access-list-item:last-child,
+  .projects-comment-form .comment-form-head,
   .discussion-item-body .outdated-comment .file-header,
   .repo-file-upload-target.is-progress-bar,
   .repo-file-upload-target.is-uploading, .overall-summary-bottomless,
@@ -1631,7 +1634,7 @@
   .oauth-org-access-details .oauth-org-item.on, .MarketplaceSideNav,
   .timeline-inline-comments, .AvatarStack-body, .team-left-column,
   .team-discussions-container, .Collection ~ div[style*="linear-grad"],
-  .application-main > div[style*="background"] {
+  .application-main > div[style*="background"], .AvatarStack-body .avatar {
     background: none !important;
   }
   /* remove background gradient */
@@ -1823,7 +1826,7 @@
   .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
   .progress-bar-inline .progress-bar, .menu-heading, body .border-gray-dark,
   .discussion-item-review .blob-wrapper, .bot-identifier, .counter, .Counter,
-  div.marketplace-product-callout {
+  div.marketplace-product-callout, .CodeMirror-dialog-top {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, .header, table, table tr, table td, table th, blockquote,
@@ -2661,7 +2664,7 @@
   .btn.btn-blue, .hook-delivery-guid, .topic-tag, .topic-tag-action,
   .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .RecentBranches, .signup-prompt-bg,
-  ul.search-results li .label {
+  ul.search-results li .label, div[style*="background-color: #044d6e"] {
     background: #182030 !important;
   }
   .repo-file-upload-progress .repo-file-upload-meter, .btn.btn-blue:hover,
@@ -2678,7 +2681,8 @@
   article.full .alert a, .commit-ref, .project-updated-message,
   .timeline-comment-label.collaborator-comment, .hook-delivery-guid .octicon,
   .hook-delivery-guid a, a.topic-tag, .RecentBranches, .RecentBranches-item-link,
-  ul.search-results li .label, .markdown-format table th {
+  ul.search-results li .label, .markdown-format table th,
+  div[style*="background-color: #044d6e"] {
     color: #9daccc !important;
   }
   .RecentBranches-item, .commit-ref .user {
