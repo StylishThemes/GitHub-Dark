@@ -27,9 +27,9 @@ If you don't know CSS very well and have found a missing style, please include a
 ## GitHub Dark Style Guide
 
 * Use the provided `.editorconfig` file with your code editor. Don't know what that is? Then check out http://editorconfig.org/.
-* Limit to the [K&R Style](https://en.wikipedia.org/wiki/Indentation_style#K.26R), and **2 SPACE INDENTATION** (no tabs, and not more, and not less than 2 spaces).
+* Limit to the [K&R (KNF variation style)](https://en.wikipedia.org/wiki/Indentation_style#Variant:_BSD_KNF), and **2 SPACE INDENTATION** (no tabs, and not more, and not less than 2 spaces).
 
-  * K&R Example:
+  * K&R - KNF Variation Example:
     ```css
     element[attr='value'] {
     ··property: value;
