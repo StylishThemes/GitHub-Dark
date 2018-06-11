@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.45
+@version     1.20.46
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.45 (2018-06-05) */
+/*! Github Dark v1.20.46 (2018-06-11) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -1417,7 +1417,7 @@
     z-index: 6 !important;
   }
   /* User time line firsts */
-  div[id^="contribution-joined-github"] img {
+  img[src$="profile-joined-github.png"] {
     padding-bottom: 20px !important;
   }
   table.pricing-table td:first-child {
@@ -2256,7 +2256,7 @@
     box-shadow: inset 0 1px 0 #343434 !important;
   }
   kbd {
-    box-shadow: inset 0 -1px 0 #343434 !important;
+    box-shadow: inset 0 -2px 0 #343434 !important;
   }
   /* semi-transparent */
   .context-loader.large-format-loader, #graphs .loader, .org-header,
@@ -2496,11 +2496,11 @@
   }
   /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
-  .output_area img, div[id^="contribution-first"] img,
-  div[id^="contribution-joined-github"] img, div[id^="contribution-created"] img,
-  .project-preview-img img, img[src$="bg-callout.svg"],
+  .output_area img, .project-preview-img img, img[src$="bg-callout.svg"],
   img[data-canonical-src*="saucelabs.com/browser-matrix"],
-  img[src*="images/modules/checks"] {
+  img[src*="images/modules/checks"], img[src$="profile-first-pr.png"],
+  img[src$="profile-joined-github.png"], img[src$="profile-first-repo.png"],
+  img[src$="profile-first-issue.png"] {
     filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
   }
   /* workaround filter creating a stacking context */
@@ -3057,7 +3057,7 @@
   .select-menu-header .octicon:hover, .repo-list-description, .file .meta,
   .email-format .email-hidden-toggle a, .file-diffstat,
   .program-info-column .mega-octicon, .octofication .notice-dismiss:hover,
-  .timeline-commits .commit-message a, .markdown-format .intro, .label-admin,
+  .markdown-format .intro, .label-admin,
   .program-info-column p, .file-history-tease, .blob-num:hover,
   .gist-snippet-meta .gist-count-links > li > a, .commit-tease .message,
   .commit-author-section, .manage-repo-access-not-active, .milestone-name,
