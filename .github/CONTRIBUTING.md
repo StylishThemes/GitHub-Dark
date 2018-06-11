@@ -77,7 +77,7 @@ If you don't know CSS very well and have found a missing style, please include a
 
 ## Getting Started
 
-* Download, fork or clone this repository.
+* [Download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip), [fork](https://github.com/StylishThemes/GitHub-Dark/fork) or clone this repository.
 * Use [node.js](http://nodejs.org/) to run `npm install`.
 * Make any changes to the `github-dark.css` file and save.
 
