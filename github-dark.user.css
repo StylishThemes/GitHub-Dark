@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.46
+@version     1.20.47
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.46 (2018-06-11) */
+/*! Github Dark v1.20.47 (2018-06-17) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -1222,7 +1222,8 @@
   .HeaderNavlink:hover, .HeaderNavlink:focus, a.notification-indicator:hover,
   table.files td.message a:hover, .link-gray:hover, .news .link-gray-dark:hover,
   .news a.link-gray-dark:hover, .reblame-link:hover,
-  .orgs-help-item-octicon .octicon, span.btn-link, .btn-link, a.btn-link {
+  .orgs-help-item-octicon .octicon, span.btn-link, .btn-link, a.btn-link,
+  .merge-status-list .status-actions:hover {
     color: /*[[base-color]]*/ !important;
   }
   /* Base color panel */
@@ -1774,7 +1775,7 @@
   /* darken border */
   .wiki-wrapper .wiki-empty-box:hover, .render-shell .slider .slider-track,
   .render-shell .slider-bar, .about-menu-link:hover, .about-menu-link.selected,
-  .pricing-table, .project-card:hover {
+  .pricing-table {
     border-color: #777 !important;
   }
   img, #browser table, #browser table th, #issues .menu ul li,
@@ -1826,7 +1827,7 @@
   .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
   .progress-bar-inline .progress-bar, .menu-heading, body .border-gray-dark,
   .discussion-item-review .blob-wrapper, .bot-identifier, .counter, .Counter,
-  div.marketplace-product-callout, .CodeMirror-dialog-top {
+  div.marketplace-product-callout, .CodeMirror-dialog-top, .project-card:hover {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, .header, table, table tr, table td, table th, blockquote,
@@ -2354,10 +2355,12 @@
     stroke: #fff !important;
   }
   /* contribution progress bars on user page */
-  .contribution-activity-listing .progress-bar[style*="7bc96f"] {
+  .contribution-activity-listing .progress-bar[style*="7bc96f"],
+  .facebox-close:hover {
     opacity: 1 !important;
   }
-  .contribution-activity-listing .progress-bar[style*="c6e48b"] {
+  .contribution-activity-listing .progress-bar[style*="c6e48b"],
+  .facebox-close {
     opacity: .75 !important;
   }
   /* contribution calendar - regular colors */
@@ -2642,15 +2645,11 @@
     background: #999 !important;
   }
   /* actions in issues - this style needs to be after .bubble */
-  .action-bubble .bubble, .suggester {
-    background: transparent !important;
-  }
+  .action-bubble .bubble, .suggester,
   /* https://github.com/StylishThemes/GitHub-Dark/community/license/new?branch=master&template=mit */
-  body .CommunityTemplate-header {
-    background: transparent !important;
-  }
-  /* https://github.com/StylishThemes/GitHub-Dark/issues/587 */
-  [data-url$="recently_touched_branches_list"] {
+  body .CommunityTemplate-header,
+  [data-url$="recently_touched_branches_list"],
+  .drag-and-drop .error, .merge-status-list .status-actions:hover {
     background: transparent !important;
   }
   /* blue box */
@@ -2788,6 +2787,9 @@
   .timeline-commits-header, .usage-bar dd, .render-bar {
     background: linear-gradient(#181818, #202020) !important;
     border-color: #383838 !important;
+  }
+  .project-issue-body-blur {
+    background: linear-gradient(to top, #181818, rgba(0, 0, 0, 0)) !important;
   }
   .bg-custom-gradient {
     background-image: linear-gradient(180deg, #1c1c1c, rgba(0, 0, 0, 0)) !important;
@@ -3012,7 +3014,7 @@
   .Header .header-search-scope, a.notification-indicator, .news .link-gray-dark,
   .news a.link-gray-dark, .HeaderNavlink, a.HeaderNavlink, a.text-gray-dark,
   .UnderlineNav-item:hover, .UnderlineNav-item:focus, a.UnderlineNav-item:hover,
-  a.UnderlineNav-item:focus {
+  a.UnderlineNav-item:focus, .project-pane-close:hover {
     color: #c0c0c0 !important;
   }
   button, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -3115,7 +3117,8 @@
   .bot-identifier, .dashboard-notice .dismiss:hover, .text-gray, a.text-gray,
   td.icon .octicon-file-text, td.icon .octicon-file-symlink-file,
   .UnderlineNav-item, a.UnderlineNav-item, .project-header-link,
-  a.project-header-link, button.project-header-link, td.icon {
+  a.project-header-link, button.project-header-link, td.icon,
+  .project-pane-close, .facebox-close {
     color: #949494 !important;
   }
   .vcard-detail .octicon, .member-badge .octicon,
