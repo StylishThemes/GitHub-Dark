@@ -29,13 +29,15 @@ const mappings = {
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #d1d5da": "background-color: #444",
 
+  // some navigation focuses use this, like notifications
+  "background-color: #f1f8ff": "background-color: #242424",
+
   // Colors *after* grey scale
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #6f42c1": "background-color: #6e5494",
   "background-color: #cb2431": "background-color: #911",
   "background-color: #d73a49": "background-color: #911",
   "background-color: #dbedff": "background-color: #182030",
-  "background-color: #f1f8ff": "background-color: #182030",
   "background-color: #fff5b1": "background-color: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "background: #0366d6": "background: /*[[base-color]]*/",
