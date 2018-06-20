@@ -208,8 +208,12 @@ function parseDeclarations(cssString) {
             // Skip ignored selectors
             if (ignoreSelectors.some(re => re.test(selector))) return;
 
-            // change :: to : for stylistic reasons
+            // stylistic tweaks
             selector = selector.replace(/::/, ":");
+            selector = selector.replace(/\+/, " + ");
+            selector = selector.replace(/~/, " ~ ");
+            selector = selector.replace(/>/, " > ");
+            selector = selector.replace(/ {2,}/, " ");
 
             // add the selector to our list, unless it's already on it
             if (!decls[mapping].includes(selector)) {
