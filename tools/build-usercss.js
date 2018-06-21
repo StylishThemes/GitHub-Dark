@@ -9,6 +9,7 @@ const files = {
   defaults: path.join(__dirname, "..", "defaults.json"),
   userstyle: path.join(__dirname, "..", "github-dark-userstyle.build.css"),
   usercss: path.join(__dirname, "..", "github-dark.user.css"),
+  template: path.join(__dirname, "usercss-template.css"),
 };
 
 const userBase = require(files.defaults);
@@ -83,7 +84,7 @@ function exit(err) {
 }
 
 fs.unlink(files.usercss).catch(noop)
-  .then(() => fs.readFile("./tools/usercss-template.css", "utf8"))
+  .then(() => fs.readFile(files.template, "utf8"))
   .then(css => processGroup(css, "GitHub"))
   .then(css => processGroup(css, "CodeMirror"))
   .then(css => processGroup(css, "Jupyter"))
