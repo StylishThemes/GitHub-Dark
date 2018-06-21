@@ -2,7 +2,7 @@
 "use strict";
 
 const css = require("css");
-const fs = require("fs");
+const fs = require("fs-extra");
 const got = require("got");
 const parse5 = require("parse5");
 const path = require("path");
@@ -156,26 +156,27 @@ const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 Promise.all(urls.map(u => got(u.url, u.opts)))
-  .then(responses => {
-    const styleUrls = [];
-    responses.forEach(res => {
-      extractStyleHrefs(res.body).forEach(href => {
-        styleUrls.push(urlToolkit.buildAbsoluteURL(res.requestUrl, href));
-      });
-    });
-    return styleUrls;
-  }).then(links => Promise.all(links.map(link => got(link))))
+  .then(responses => extractStyleLinks(responses))
+  .then(links => Promise.all(links.map(link => got(link))))
   .then(responses => responses.map(res => res.body).join("\n"))
   .then(css => parseDeclarations(css))
   .then(decls => buildOutput(decls))
   .then(css => writeOutput(css))
   .catch(exit);
 
-function writeOutput(generatedCss) {
-  fs.readFile(cssFile, "utf8", (err, css) => {
-    if (err) return exit(err);
-    fs.writeFile(cssFile, css.replace(replaceRe, generatedCss), exit);
+async function writeOutput(generatedCss) {
+  const css = await fs.readFile(cssFile, "utf8");
+  await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
+}
+
+function extractStyleLinks(responses) {
+  const styleUrls = [];
+  responses.forEach(res => {
+    extractStyleHrefs(res.body).forEach(href => {
+      styleUrls.push(urlToolkit.buildAbsoluteURL(res.requestUrl, href));
+    });
   });
+  return styleUrls;
 }
 
 function extractStyleHrefs(html) {
