@@ -1,45 +1,38 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require("fs");
-const userBase = require("../defaults.json");
+const fs = require("fs-extra");
+const path = require("path");
 
 // make sure to run "grunt user" before grabbing this style
-const cleanedCss = "./github-dark-userstyle.build.css";
-const usercssName = "github-dark.user.css";
+const files = {
+  defaults: path.join(__dirname, "..", "defaults.json"),
+  userstyle: path.join(__dirname, "..", "github-dark-userstyle.build.css"),
+  usercss: path.join(__dirname, "..", "github-dark.user.css"),
+};
 
-function processGroup(css, name) {
-  return new Promise(resolve => {
-    getThemesInFolder(name.toLowerCase())
-      .then(themes => {
-        // {{Themes:GitHub}} {{Themes:CodeMirror}} {{Themes:Jupyter}}
-        css = css.replace(`  {{Themes:${name}}}`, buildThemeGroup(themes));
-        resolve(css);
-      })
-      .catch(exit);
-  });
+const userBase = require(files.defaults);
+const noop = () => {};
+
+async function processGroup(css, name) {
+  const themes = await getThemesInFolder(name.toLowerCase());
+
+  // {{Themes:GitHub}} {{Themes:CodeMirror}} {{Themes:Jupyter}}
+  return css.replace(`  {{Themes:${name}}}`, buildThemeGroup(themes));
 }
 
-function getThemesInFolder(folder) {
-  return new Promise((resolve, reject) => {
-    const path = "./themes/" + folder;
-    fs.readdir(path, (err, files) => {
-      // put the default theme (twilight) first
-      files = files.sort((a, b) => {
-        if (/twilight/i.exec(a)) return -1;
-        if (/twilight/i.exec(b)) return 1;
-        return a.localeCompare(b);
-      });
+async function getThemesInFolder(folder) {
+  const path = "./themes/" + folder;
+  let files = await fs.readdir(path);
 
-      if (err) {
-        console.log(`Error reading folder ${folder}`, err);
-        reject(err);
-      }
-      return Promise.all(files.map(file => readFile(path + "/" + file)))
-        .then(resolve)
-        .catch(exit);
-    });
+  // put the default theme (twilight) first
+  files = files.sort((a, b) => {
+    if (/twilight/i.exec(a)) return -1;
+    if (/twilight/i.exec(b)) return 1;
+    return a.localeCompare(b);
   });
+
+  return await Promise.all(files.map(file => fs.readFile(path + "/" + file, "utf8")));
 }
 
 function extractThemeName(css) {
@@ -84,51 +77,17 @@ function makeTabs(css) {
   return css.replace("  {{tab-sizes}}", tabs.join("\n"));
 }
 
-function readFile(name) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(name, "utf8", (err, file) => {
-      if (err) {
-        return reject(err);
-      }
-      resolve(file);
-    });
-  });
-}
-
-function writeFile(name, obj) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(name, obj, "utf8", err => {
-      if (err) {
-        console.log(`Error writing ${name}`, err);
-        return reject(err);
-      }
-      resolve();
-    });
-  });
-}
-
-function del(name) {
-  return new Promise((resolve, reject) => {
-    fs.unlink(name, err => {
-      // ignore if file doesn't exist
-      if (err && err.code !== "ENOENT") {
-        return reject(err);
-      }
-      resolve();
-    });
-  });
-}
-
 function exit(err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
 }
 
-del("./" + usercssName)
-  .then(() => readFile("./tools/usercss-template.css"))
+fs.unlink(files.usercss).catch(noop)
+  .then(() => fs.readFile("./tools/usercss-template.css", "utf8"))
   .then(css => processGroup(css, "GitHub"))
   .then(css => processGroup(css, "CodeMirror"))
   .then(css => processGroup(css, "Jupyter"))
-  .then(css => readFile(cleanedCss).then(style => css + style))
-  .then(css => writeFile("./" + usercssName, replaceVars(css)))
-  .then(() => console.log("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete"));
+  .then(css => fs.readFile(files.userstyle, "utf8").then(style => css + style))
+  .then(css => fs.writeFile(files.usercss, replaceVars(css)))
+  .then(() => console.log("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete"))
+  .catch(exit);

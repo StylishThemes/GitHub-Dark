@@ -48,7 +48,7 @@ module.exports = function(grunt) {
   // this is a simple replace method.. it'll handle `:matches .selector`, but
   // not `selector :matches()`
   function replaceCSSMatches(theme) {
-    return theme.replace(/:matches\(([^)]+)\)\s([^,{]+)(,|{)/gm, function(_, matches, selector, separator) {
+    return theme.replace(/:matches\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
       let result = "";
       const m = matches.split(/\s*,\s*/);
       const last = m.length - 1;
