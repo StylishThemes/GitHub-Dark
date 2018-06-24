@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.50
+@version     1.20.51
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.50 (2018-06-20) */
+/*! Github Dark v1.20.51 (2018-06-24) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -224,7 +224,7 @@
   .ajax-pagination-form .ajax-pagination-btn, .autocomplete-results, .suggester,
   .boxed-group-inner, .commit-group-title .octicon-git-commit,
   .full-commit .commit-meta, .conversation-list-heading .inner,
-  .details-expanded[open] > .dropdown-item:hover,
+  .details-overlay[open] > .dropdown-item:hover,
   .discussion-timeline.team-discussion-timeline .blankslate,
   .gollum-editor-help-parent li a:hover, .gollum-editor-help-list li a:hover,
   .gollum-editor-help-parent li a.selected,
@@ -1234,13 +1234,12 @@
   button.discussion-item-toggle-closed:hover, .task-list a,
   .full-commit .btn-outline:hover:not(:disabled), .zeroclipboard-link,
   .stats-group-stat:hover, .stats-group-stat:hover .stat-number,
-  .tag-references > li a:hover,
-  #header ul.top-nav > li > a:hover, #header ul.top-nav > li > button:hover,
-  .new-file-form, .date_selector td, .pagination a, .pagination span,
-  .pagination em, .timeline-comment-actions .octicon:hover, a.org-link:hover,
-  a.commit-link, .team-grid .team-name:focus, .team-grid .team-name:hover,
-  a.tabnav-extra:hover, .tabnav .tabnav-extras:hover,
-  .milestone-title-link a:hover,
+  .tag-references > li a:hover, #header ul.top-nav > li > a:hover,
+  #header ul.top-nav > li > button:hover, .new-file-form, .date_selector td,
+  .pagination a, .pagination span, .pagination em,
+  .timeline-comment-actions .octicon:hover, a.org-link:hover, a.commit-link,
+  .team-grid .team-name:focus, .team-grid .team-name:hover, a.tabnav-extra:hover,
+  .tabnav .tabnav-extras:hover, .milestone-title-link a:hover,
   .application-authorizations .oauth-app-owner:hover, .expand-more,
   .participation a:hover, .commit .commit-title .issue-link,
   .gist-snippet-meta .gist-count-links>li>a:hover,
@@ -1300,7 +1299,8 @@
   .date-selector td.selectable-day:hover, .add-line-comment, .suggester .cur,
   .result.selected, .result:hover, .CommunityTemplate-highlight,
   .diff-table button.add-line-comment, .dropdown-menu a:hover,
-  .version-picker a:hover, .discussion-item-changes-marker.is-unread .discussion-item-icon {
+  .version-picker a:hover,
+  .discussion-item-changes-marker.is-unread .discussion-item-icon {
     background: /*[[base-color]]*/ !important;
   }
   .context-button:after {
@@ -1874,19 +1874,19 @@
   div.marketplace-product-callout, .CodeMirror-dialog-top, .project-card:hover {
     border-color: #484848 !important;
   }
-  pre, h1, h2, h3, .header, table, table tr, table td, table th, blockquote,
-  .pulse-graph, .btn:not(img), .minibutton, .social-count,
-  .discusion-topic-infobar, .box-body, .timeline-comment-label, .logo-box,
-  .developer-program-badge, .vcard-details, .vcard-stats, .auth-form-header,
-  .nav-bar-tabs .section-title, .pagination a:last-child,
-  .pagination span:first-child, .boxed-group-list > li, .toolbar-bordered,
-  .new-issue-form, .pagination span:last-child, .dashboard-tabs, .graphs, .graph,
-  .sub-nav, .audit-search-clear, .repo-list-item, .email-signature-reply, footer,
-  .bubble .bubble-expand, .grid .col, .composer-infobar, .email-quoted-reply,
-  .summary-stats li, .columns.equacols.bordered, .file-diffstat, ul.filter-list,
-  .news .alert, table.files td, .explore-section, .repolist > li,
-  .featured-grid-outer, .gh-header-meta, .theme-picker-thumbs, .team,
-  .billing-section, .sidebar-module ul h3, .headlines li,
+  .btn, pre, h1, h2, h3, .header, table, table tr, table td, table th,
+  blockquote, .pulse-graph, .minibutton, .social-count, .discusion-topic-infobar,
+  .box-body, .timeline-comment-label, .logo-box, .developer-program-badge,
+  .vcard-details, .vcard-stats, .auth-form-header, .nav-bar-tabs .section-title,
+  .pagination a:last-child, .pagination span:first-child, .boxed-group-list > li,
+  .toolbar-bordered, .new-issue-form, .pagination span:last-child,
+  .dashboard-tabs, .graphs, .graph, .sub-nav, .audit-search-clear,
+  .repo-list-item, .email-signature-reply, footer, .bubble .bubble-expand,
+  .grid .col, .composer-infobar, .email-quoted-reply, .summary-stats li,
+  .columns.equacols.bordered, .file-diffstat, ul.filter-list, .news .alert,
+  table.files td, .explore-section, .repolist > li, .featured-grid-outer,
+  .gh-header-meta, .theme-picker-thumbs, .team, .billing-section,
+  .sidebar-module ul h3, .headlines li,
   .discussion-sidebar-item + .discussion-sidebar-item, .markdown-format img,
   div#common-issues ul li, .about-facts, .starred-repo, .markdown-example,
   .traffic-graph-stats, .discussion-item + .discussion-item, .bubble,
@@ -2652,7 +2652,8 @@
   .issue.active, .orgs-nav .count, .filter-item:not(.selected):hover,
   .task-progress .progress-bar .progress,
   .oauth-connection-illustration .oauth-image,
-  .manage-repo-access-wrapper:before, .counter, .Counter {
+  .manage-repo-access-wrapper:before, .counter, .Counter,
+  .block-diff-neutral {
     background: #444 !important;
   }
   .hidden-text-expander a, .ellipsis-expander,
@@ -2962,9 +2963,9 @@
   .audit-results-header-title, .session-authentication .auth-form-header,
   .org-settings-team-type, .org-settings-team-count, .intgrs-lstng-item-header,
   .api h1, .api h2, .octokit-language span, .blog .text-alpha, .blog .text-beta,
-  .blog .text-delta, .blog h1, .blog h2, .blog h3, .blog h4,
-  .blog h5, .site-header-nav a, .menu-item.selected, .overview .text-beta,
-  article h2, #message-list h1, #message-list h3, .graph-page h1, .graph-page h3,
+  .blog .text-delta, .blog h1, .blog h2, .blog h3, .blog h4, .blog h5,
+  .site-header-nav a, .menu-item.selected, .overview .text-beta, article h2,
+  #message-list h1, #message-list h3, .graph-page h1, .graph-page h3,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon,
   .counter, .Counter, .state, .State, a.state, a.State, .dashboard-notice h2,
   .site-header-dark .site-header .site-header-link, .version-picker a:hover,
@@ -2974,7 +2975,9 @@
   .jump-to-suggestions-results-container mark, .dropdown-menu a:hover,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-suggestions-path,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-octicon,
-  .markdown-body strong, .markdown-format strong, .text-gamma {
+  .markdown-body strong, .markdown-format strong, .text-gamma,
+  .select-menu-item[aria-selected="true"],
+  .select-menu-item[aria-selected="true"].selected {
     color: #e2e2e2 !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -3045,10 +3048,9 @@
   #message.major, .boxed-group-success, .suggester li, .alert.warning p,
   ul#bootcamp li a h4, .menu-heading, .text-black, .diffstat-summary strong,
   .markdown-format h4, .access-token .token-description,
-  .oauth-org-access-details .boxed-group-list > li.on strong,
-  .content h1, .api .text-alpha, .api .text-beta, .api .text-delta,
-  .api h1, .api h2, .api h3, .api h4, .api h5,
-  .octokit-language span, .lead, .merge-branch-heading,
+  .oauth-org-access-details .boxed-group-list > li.on strong, .content h1,
+  .api .text-alpha, .api .text-beta, .api .text-delta, .api h1, .api h2, .api h3,
+  .api h4, .api h5, .octokit-language span, .lead, .merge-branch-heading,
   .org-user-notice-content strong, .timeline-comment-label.owner-comment,
   .Box-row-link, a.Box-row-link, .form-control, .form-select,
   .header .header-search-scope, .discussion-item-private,
@@ -3323,12 +3325,33 @@
   a.text-red, .flash-error, .error, .release-label.draft {
     color: #f44 !important;
   }
+  /* blue purple */
+  .btn-blurple {
+    background: linear-gradient(to bottom, #427, #215) !important;
+    border: 1px solid #538 !important;
+  }
+  .btn-blurple:hover, .btn-blurple.hover {
+    background: linear-gradient(to bottom, #538, #326) !important;
+  }
+  .btn-blurple:active, .btn-blurple.selected, [open] > .btn-blurple {
+    background: linear-gradient(to bottom, #649, #437) !important;
+  }
   /* purple */
+  .btn-purple {
+    background: linear-gradient(to bottom, #525, #313) !important;
+    border: 1px solid #636 !important;
+  }
+  .btn-purple:hover, .btn-purple.hover {
+    background: linear-gradient(to bottom, #636, #424) !important;
+  }
+  .btn-purple:active, .btn-purple.selected, [open] > .btn-blurple {
+    background: linear-gradient(to bottom, #747, #535) !important;
+  }
   .illflow-item.selected {
-    background: #30182b !important;
+    background: #323 !important;
   }
   .illflow-item.selected:after {
-    border-bottom-color: #30182b !important;
+    border-bottom-color: #323 !important;
   }
   /* brown */
   #feedHeaderContainer, .feedBackground, .infotip, .form-actions .tip,
