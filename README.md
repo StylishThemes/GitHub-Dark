@@ -92,7 +92,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | Tomorrow Night             |   *    |            |     *    |
 | Tomorrow Night Blue        |   *    |            |     *    |
 | Tomorrow Night Bright      |   *    |     *      |     *    |
-| Tomorrow Night Eigthies    |   *    |     *      |     *    |
+| Tomorrow Night Eighties    |   *    |     *      |     *    |
 | Twilight                   |   *    |     *      |     *    |
 | Vibrant Ink                |   *    |     *      |          |
 
@@ -121,7 +121,7 @@ To develop, first install [Node.js](https://nodejs.org), install dependencies vi
 - `grunt user`: Build a userstyle ready to be pasted on userstyles.org.
 - `grunt usermin`: Same as `grunt user`, but outputs a minified style.
 - `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style, to be used with modern userstyle engines like [stylus](https://github.com/stylus/stylus).
-- `grunt themes`: Parse all theme files and combine them into minfied styles in the `themes` directory.
+- `grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
 - `grunt clean`: Reformat `github-dark.css` to conform the style guide.
 - `grunt lint`: Run Stylelint on `github-dark.css`.
 - `grunt authors`: Regenerate the `AUTHORS` file based on git history.
