@@ -2,19 +2,19 @@
   <img alt="githubdark-logo" src="https://rawgit.com/StylishThemes/logos/master/github.dark/githubdark-mini.svg" width="580">
   <br>
   <a href="https://github.com/StylishThemes/GitHub-Dark/tags">
-    <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=tag" alt="Tag">
+    <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=version&style=flat" alt="Version">
   </a>
   <a href="https://github.com/StylishThemes/GitHub-Dark/stargazers">
-    <img src="http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Star">
+    <img src="http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Stars">
   </a>
-  <a href="http://github.com/StylishThemes/GitHub-Dark/fork">
-    <img src="http://github-svg-buttons.herokuapp.com/fork.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Fork">
+  <a href="https://github.com/StylishThemes/GitHub-Dark/network">
+    <img src="https://img.shields.io/github/forks/StylishThemes/GitHub-Dark.svg?style=flat" alt="Forks">
   </a>
   <a href="https://david-dm.org/StylishThemes/GitHub-Dark?type=dev">
-    <img src="https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg?label=%20devDependencies%20" alt="devDependencies">
+    <img src="https://img.shields.io/david/dev/StylishThemes/GitHub-Dark.svg?label=devDependencies&style=flat" alt="devDependencies">
   </a>
   <a href="https://gitter.im/StylishThemes/GitHub-Dark">
-    <img src="https://img.shields.io/gitter/room/StylishThemes/Github-Dark.js.svg?maxAge=2592000" alt="Gitter">
+    <img src="https://img.shields.io/gitter/room/StylishThemes/Github-Dark.js.svg?maxAge=2592000&style=flat" alt="Gitter">
   </a>
 </p>
 <h2 align="center">Your eyes will&nbsp;:heart:&nbsp;you.</h2>
