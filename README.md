@@ -32,14 +32,14 @@ A userstyle extension is required, common ones include:
 
 Then install using one of these methods:
 
-* [Install the usercss version](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which works in Stylus and FreeStyler and supports automatic updates (see the [documentation](https://github.com/openstyles/stylus/wiki/Usercss)).
-* [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.
-* [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.
-* [Install via custom grunt build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) which allows to customize the style using a configuration file. Also refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
+* 📦 [Install the usercss version](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which works in Stylus and FreeStyler and supports automatic updates.
+* 📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.
+* 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.
+* 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Also refer[here](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
-Also, there is a self-updating userscript version available:
+Alternatively, there is a self-updating userscript version available:
 
-* [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which features automatic updates and live customization. Refer to [README.md](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md) for more information.
+* 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which features automatic updates and live customization. Refer to [README.md](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md) for more information.
 
 ## Additional GitHub Customization
 
