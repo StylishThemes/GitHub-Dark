@@ -44,7 +44,7 @@ Then install using one of these methods:
 * ⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code
 * ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
 * ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message
-* ⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)
+* ⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors
 
 ## Supported GitHub Addons
 
