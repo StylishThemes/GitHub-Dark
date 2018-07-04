@@ -22,25 +22,24 @@
 ## Preview
 ![](./images/screenshots/after_blue.png)
 
-## Installing
+## Installation
 
-#### If you're using a browser extension:
-* Stylus - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
-* Stylish - get the addon for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
-* FreeStyler is available for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).<br>
+A userstyle extension is required, common ones include:
 
-#### Then install this style using:
-* [userstyles.org](http://userstyles.org/styles/37035) (with customization options)
-* or, add it [manually](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) into the editor.
-  * Use the [grunt build process](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) to customize your GitHub Dark theme.
-    > Please refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install) for more details.
-* Or, use our [GitHub-Dark Script](https://github.com/StylishThemes/GitHub-Dark-Script) which requires a [user script addon](https://github.com/StylishThemes/GitHub-Dark-Script/wiki/Install), but allows dynamic style changes & updates:bangbang:
-* Or, **[click here](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css)** to install directly from this repository by opening the user.css as a raw file.
-     > Only available using Stylus or FreeStyler (see the [documentation](https://github.com/openstyles/stylus/wiki/Usercss)). :tada:
+* Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
+* Stylish for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
+* FreeStyler for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).
 
-## Updating
+Then install using one of these methods:
 
-If a recent change by GitHub broke the style, chances are that we already fixed it. Make sure to reinstall from [userstyles.org](https://userstyles.org/styles/37035/github-dark) or [GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) before opening an issue. Note that only Stylish for Firefox performs automatic style updates.
+* [Install the usercss version](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which works in Stylus and FreeStyler and supports automatic updates (see the [documentation](https://github.com/openstyles/stylus/wiki/Usercss)).
+* [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.
+* [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.
+* [Install via custom grunt build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) which allows to customize the style using a configuration file. Also refer to the [installation documentation](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
+
+Also, there is a self-updating userscript version available:
+
+* [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which features automatic updates and live customization. Refer to [README.md](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md) for more information.
 
 ## Additional GitHub Customization
 
@@ -93,7 +92,7 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 | Tomorrow Night Blue        |   *    |            |     *    |
 | Tomorrow Night Bright      |   *    |     *      |     *    |
 | Tomorrow Night Eighties    |   *    |     *      |     *    |
-| Twilight                   |   *    |     *      |     *    |
+| Twilight (**default**)     |   *    |     *      |     *    |
 | Vibrant Ink                |   *    |     *      |          |
 
 * Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes as listed above.
@@ -102,14 +101,13 @@ If a recent change by GitHub broke the style, chances are that we already fixed 
 ## Notes
 
 * If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
-* If you want GitHub commit messages to use a monospaced font, and have a background color indicating the width limits, check out [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit).
 
 ## Contributions
 
 If you would like to contribute to this repository, please...
 
-1. [Download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip), [fork](https://github.com/StylishThemes/GitHub-Dark/fork) or clone this repository.
-2. Make changes (please read the [contribution guidelines](./.github/CONTRIBUTING.md) and abide by them)
+1. Read the [contribution guidelines](./.github/CONTRIBUTING.md).
+1. [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
 3. Create a pull request!
 
 ## Development
