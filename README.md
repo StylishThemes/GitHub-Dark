@@ -41,22 +41,23 @@ Then install using one of these methods:
 ## Additional Userstyles
 
 * ⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes
-* ⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code
-* ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
 * ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message
+* ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
 * ⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors
+* ⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code
 
 ## Supported GitHub Addons
 
 * 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
-* 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)
-* 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)
-* 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
-* 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)
-* 💾 [ZenHub](https://www.zenhub.io/)
-* 💾 [npmhub](https://github.com/npmhub/npmhub)
 * 💾 [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it) (deprecated; extension no longer maintained)
+* 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)
 * 💾 [GitHub Polls](https://github.com/apex/gh-polls)
+* 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
+* 💾 [npmhub](https://github.com/npmhub/npmhub)
+* 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)
+* 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)
+* 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)
+* 💾 [ZenHub](https://www.zenhub.io/)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
