@@ -32,14 +32,11 @@ A userstyle extension is required, common ones include:
 
 Then install using one of these methods:
 
-* 📦 [Install the usercss version](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which works in Stylus and FreeStyler and supports automatic updates.
+* 📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) with Stylus or FreeStyler. Supports automatic updates.
 * 📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.
 * 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.
 * 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Also refer[here](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
-
-Alternatively, there is a self-updating userscript version available:
-
-* 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which features automatic updates and live customization. Refer to [README.md](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md) for more information.
+* 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer [here](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).
 
 ## Additional Userstyles
 
