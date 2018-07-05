@@ -26,38 +26,38 @@
 
 A userstyle extension is required, common ones include:
 
-* 🎨 Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).
-* 🎨 Stylish for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).
-* 🎨 FreeStyler for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).
+🎨 Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).  
+🎨 Stylish for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/2108/), [Chrome](https://chrome.google.com/extensions/detail/fjnbnpbmkenffdnngjfgmeleoegfcffe), [Opera](https://addons.opera.com/en/extensions/details/stylish/), [Safari](http://sobolev.us/stylish/) and [Firefox Mobile](https://addons.mozilla.org/en-US/firefox/addon/2108/).  
+🎨 FreeStyler for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).
 
 Then install using one of these methods:
 
-* 📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) with Stylus or FreeStyler. Supports automatic updates.
-* 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer [here](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).
-* 📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.
-* 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.
-* 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer [here](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
+📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) with Stylus or FreeStyler. Supports automatic updates.  
+📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer to [here](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).  
+📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.  
+📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.  
+📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
 ## Additional Userstyles
 
-* ⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes
-* ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message
-* ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header
-* ⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors
-* ⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code
+⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes.  
+⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message.  
+⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header.  
+⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors.  
+⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code.
 
 ## Supported GitHub Addons
 
-* 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)
-* 💾 [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it) (deprecated; extension no longer maintained)
-* 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)
-* 💾 [GitHub Polls](https://github.com/apex/gh-polls)
-* 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)
-* 💾 [npmhub](https://github.com/npmhub/npmhub)
-* 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)
-* 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)
-* 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)
-* 💾 [ZenHub](https://www.zenhub.io/)
+💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)  
+💾 [GitHub canned responses](https://github.com/notwaldorf/github-canned-responses#how-to-get-it)   (deprecated; extension no longer maintained)  
+💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)  
+💾 [GitHub Polls](https://github.com/apex/gh-polls)  
+💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)  
+💾 [npmhub](https://github.com/npmhub/npmhub)  
+💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)  
+💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)  
+💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)  
+💾 [ZenHub](https://www.zenhub.io/)
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
