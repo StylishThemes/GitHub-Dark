@@ -108,6 +108,9 @@ const mappings = {
 
   // yellow
   "color: #b08800": "color: #cb4",
+
+  // purple
+  "color: #6f42c1": "color: #8368aa",
 };
 
 // list of URLs to pull stylesheets from
