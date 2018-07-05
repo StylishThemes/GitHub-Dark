@@ -61,8 +61,6 @@ Then install using one of these methods:
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
-
-* Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes as listed above.
 | Theme                      |       GitHub       |     CodeMirror     |      Jupyter       |
 |----------------------------| :----------------: | :----------------: | :----------------: |
 | Ambiance                   | :heavy_check_mark: | :heavy_check_mark: |                    |
@@ -92,11 +90,14 @@ Then install using one of these methods:
 | Tomorrow Night Eighties    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Twilight (**default**)     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Vibrant Ink                | :heavy_check_mark: | :heavy_check_mark: |                    |
-* Please provide a pull request if you have or want to create a missing theme.
+
+> Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) syntax highlighting themes as listed above.
+
+:eight_spoked_asterisk: Please provide a pull request if you have or want to create a missing theme.
 
 ## Notes
 
-* If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
+> If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
 
 ## Contributions
 
@@ -104,7 +105,7 @@ If you would like to contribute to this repository, please...
 
 1. Read the [contribution guidelines](./.github/CONTRIBUTING.md).
 1. [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
-3. Create a pull request!
+1. Create a pull request!
 
 ## Development
 
