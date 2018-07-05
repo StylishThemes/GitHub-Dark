@@ -61,37 +61,37 @@ Then install using one of these methods:
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
-| Theme                      | GitHub | CodeMirror | Jupyter  |
-|----------------------------|:------:|:----------:|:--------:|
-| Ambiance                   |   ◻️    |     🔹      |          |
-| Base16 Ocean Dark          |        |     🔹      |     🔸    |
-| Chaos                      |   ◻️    |            |          |
-| Clouds Midnight            |   ◻️    |            |          |
-| Cobalt                     |   ◻️    |     🔹      |          |
-| Dracula                    |        |     🔹      |     🔸    |
-| GitHub Dark                |   ◻️    |            |     🔸    |
-| Idle Fingers               |   ◻️    |            |     🔸    |
-| Kr Theme                   |   ◻️    |            |          |
-| Material                   |        |     🔹      |          |
-| Merbivore                  |   ◻️    |            |          |
-| Merbivore Soft             |   ◻️    |            |          |
-| Mono Industrial            |   ◻️    |            |          |
-| Mono Industrial Clear      |   ◻️    |            |          |
-| Monokai                    |   ◻️    |     🔹      |     🔸    |
-| Monokai Spacegray Eighties |   ◻️    |     🔹      |     🔸    |
-| Obsidian                   |   ◻️    |            |     🔸    |
-| One Dark                   |   ◻️    |     🔹      |          |
-| Pastel on Dark             |   ◻️    |     🔹      |     🔸    |
-| Solarized Dark             |   ◻️    |     🔹      |     🔸    |
-| Terminal                   |   ◻️    |            |          |
-| Tomorrow Night             |   ◻️    |            |     🔸    |
-| Tomorrow Night Blue        |   ◻️    |            |     🔸    |
-| Tomorrow Night Bright      |   ◻️    |     🔹      |     🔸    |
-| Tomorrow Night Eighties    |   ◻️    |     🔹      |     🔸    |
-| Twilight (**default**)     |   ◻️    |     🔹      |     🔸    |
-| Vibrant Ink                |   ◻️    |     🔹      |          |
 
 * Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook syntax highlighting](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) themes as listed above.
+| Theme                      |       GitHub       |     CodeMirror     |      Jupyter       |
+|----------------------------| :----------------: | :----------------: | :----------------: |
+| Ambiance                   | :heavy_check_mark: | :heavy_check_mark: |                    |
+| Base16 Ocean Dark          |                    | :heavy_check_mark: | :heavy_check_mark: |
+| Chaos                      | :heavy_check_mark: |                    |                    |
+| Clouds Midnight            | :heavy_check_mark: |                    |                    |
+| Cobalt                     | :heavy_check_mark: | :heavy_check_mark: |                    |
+| Dracula                                         | :heavy_check_mark: | :heavy_check_mark: |
+| GitHub Dark                | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Idle Fingers               | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Kr Theme                   | :heavy_check_mark: |                    |                    |
+| Material                   |                    | :heavy_check_mark: |                    |
+| Merbivore                  | :heavy_check_mark: |                    |                    |
+| Merbivore Soft             | :heavy_check_mark: |                    |                    |
+| Mono Industrial            | :heavy_check_mark: |                    |                    |
+| Mono Industrial Clear      | :heavy_check_mark: |                    |                    |
+| Monokai                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Monokai Spacegray Eighties | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Obsidian                   | :heavy_check_mark: |                    | :heavy_check_mark: |
+| One Dark                   | :heavy_check_mark: | :heavy_check_mark: |                    |
+| Pastel on Dark             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Solarized Dark             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Terminal                   | :heavy_check_mark: |                    |                    |
+| Tomorrow Night             | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Tomorrow Night Blue        | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Tomorrow Night Bright      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Tomorrow Night Eighties    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Twilight (**default**)     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Vibrant Ink                | :heavy_check_mark: | :heavy_check_mark: |                    |
 * Please provide a pull request if you have or want to create a missing theme.
 
 ## Notes
