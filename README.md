@@ -103,9 +103,9 @@ Then install using one of these methods:
 
 If you would like to contribute to this repository, please...
 
-1. Read the [contribution guidelines](./.github/CONTRIBUTING.md).
-1. [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
-1. Create a pull request!
+1. :eyeglasses:  Read the [contribution guidelines](./.github/CONTRIBUTING.md).
+1. :fork_and_knife:  [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or :arrow_down:  [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
+1. :ok_hand:  Create a pull request!
 
 ## Development
 
