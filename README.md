@@ -91,13 +91,13 @@ Then install using one of these methods:
 | Twilight (**default**)     |      ✔️     |      ✔️     |      ✔️      |
 | Vibrant Ink                |      ✔️     |      ✔️     |      ❌      |
 
-> Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) syntax highlighting themes as listed above.
+- Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) syntax highlighting themes as listed above.
 
 - Please provide a pull request if you have or want to create a missing theme.
 
 ## Notes
 
-> If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
+- If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
 
 ## Contributions
 
