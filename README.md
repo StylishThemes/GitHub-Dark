@@ -63,33 +63,33 @@ Then install using one of these methods:
 
 | Theme                      |    GitHub    |  CodeMirror  |   Jupyter    |
 |----------------------------| :----------: | :----------: | :----------: |
-| Ambiance                   |      ✔️     |      ✔️     |               |
-| Base16 Ocean Dark          |              |     ✔️     |       ✔️     |
-| Chaos                      |      ✔️     |              |              |
-| Clouds Midnight            |      ✔️     |              |              |
-| Cobalt                     |      ✔️     |      ✔️     |              |
-| Dracula                    |              |      ✔️     |       ✔️     |
-| GitHub Dark                |      ✔️     |              |       ✔️     |
-| Idle Fingers               |      ✔️     |              |       ✔️     |
-| Kr Theme                   |      ✔️     |              |              |
-| Material                   |              |       ✔️     |              |
-| Merbivore                  |      ✔️     |              |              |
-| Merbivore Soft             |      ✔️     |              |              |
-| Mono Industrial            |      ✔️     |              |              |
-| Mono Industrial Clear      |      ✔️     |              |              |
-| Monokai                    |      ✔️     |       ✔️     |       ✔️     |
-| Monokai Spacegray Eighties |      ✔️     |       ✔️     |       ✔️     |
-| Obsidian                   |      ✔️     |              |       ✔️     |
-| One Dark                   |      ✔️     |       ✔️     |              |
-| Pastel on Dark             |      ✔️     |       ✔️     |       ✔️     |
-| Solarized Dark             |      ✔️     |       ✔️     |       ✔️     |
-| Terminal                   |      ✔️     |              |              |
-| Tomorrow Night             |      ✔️     |              |       ✔️     |
-| Tomorrow Night Blue        |      ✔️     |              |       ✔️     |
-| Tomorrow Night Bright      |      ✔️     |       ✔️     |       ✔️     |
-| Tomorrow Night Eighties    |      ✔️     |       ✔️     |       ✔️     |
-| Twilight (**default**)     |      ✔️     |       ✔️     |       ✔️     |
-| Vibrant Ink                |      ✔️     |       ✔️     |              |
+| Ambiance                   |      ✔️     |      ✔️     |      ❌      |
+| Base16 Ocean Dark          |      ❌     |      ✔️     |      ✔️      |
+| Chaos                      |      ✔️     |      ❌     |      ❌      |
+| Clouds Midnight            |      ✔️     |      ❌     |      ❌      |
+| Cobalt                     |      ✔️     |      ✔️     |      ❌      |
+| Dracula                    |      ❌     |      ✔️     |      ✔️      |
+| GitHub Dark                |      ✔️     |      ❌     |      ✔️      |
+| Idle Fingers               |      ✔️     |      ❌     |      ✔️      |
+| Kr Theme                   |      ✔️     |      ❌     |      ❌      |
+| Material                   |      ❌     |      ✔️     |      ❌      |
+| Merbivore                  |      ✔️     |      ❌     |      ❌      |
+| Merbivore Soft             |      ✔️     |      ❌     |      ❌      |
+| Mono Industrial            |      ✔️     |      ❌     |      ❌      |
+| Mono Industrial Clear      |      ✔️     |      ❌     |      ❌      |
+| Monokai                    |      ✔️     |      ✔️     |      ✔️      |
+| Monokai Spacegray Eighties |      ✔️     |      ✔️     |      ✔️      |
+| Obsidian                   |      ✔️     |      ❌     |      ✔️      |
+| One Dark                   |      ✔️     |      ✔️     |      ❌      |
+| Pastel on Dark             |      ✔️     |      ✔️     |      ✔️      |
+| Solarized Dark             |      ✔️     |      ✔️     |      ✔️      |
+| Terminal                   |      ✔️     |      ❌     |      ❌      |
+| Tomorrow Night             |      ✔️     |      ❌     |      ✔️      |
+| Tomorrow Night Blue        |      ✔️     |      ❌     |      ✔️      |
+| Tomorrow Night Bright      |      ✔️     |      ✔️     |      ✔️      |
+| Tomorrow Night Eighties    |      ✔️     |      ✔️     |      ✔️      |
+| Twilight (**default**)     |      ✔️     |      ✔️     |      ✔️      |
+| Vibrant Ink                |      ✔️     |      ✔️     |      ❌      |
 
 > Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) syntax highlighting themes as listed above.
 
@@ -103,9 +103,9 @@ Then install using one of these methods:
 
 If you would like to contribute to this repository, please...
 
-1. :eyeglasses: Read the [contribution guidelines](./.github/CONTRIBUTING.md).
-1. :fork_and_knife: [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or :arrow_down:  [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
-1. :ok_hand: Create a pull request!
+1. 👓 Read the [contribution guidelines](./.github/CONTRIBUTING.md).
+1. ⛕ [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or ⬇️  [download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
+1. 👌 Create a pull request!
 
 ## Development
 
