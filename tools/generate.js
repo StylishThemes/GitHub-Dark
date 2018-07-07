@@ -70,6 +70,7 @@ const mappings = {
   "border-right: 0": "border-right: 0",
   "border-top: 0": "border-top: 0",
 
+  "border-top-color: rgba(27,31,35,0.15)": "border-top-color: #343434",
   "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
   "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
   "border-right-color: rgba(27,31,35,0.15)": "border-right-color: #343434",
