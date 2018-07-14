@@ -24,16 +24,10 @@
 
 ## Installation
 
-A userstyle extension is required, common ones include:
+Install Stylus for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style using one of these methods:
 
-🎨 Stylus for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) and [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/).<br>
-🎨 Stylish for [Safari](http://sobolev.us/stylish/).<br>
-🎨 FreeStyler for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).
-
-Then install using one of these methods:
-
-📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) with Stylus or FreeStyler. Supports automatic updates.<br>
-📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer to [here](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
+📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which supports automatic updates.<br>
+📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer to its [README](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
 📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.<br>
 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.<br>
 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
