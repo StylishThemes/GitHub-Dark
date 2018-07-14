@@ -24,7 +24,7 @@
 
 ## Installation
 
-Install Stylus for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style using one of these methods:
+Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style using one of these methods:
 
 📦 [Install the usercss](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.user.css) which supports automatic updates.<br>
 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and live customization. Refer to its [README](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
