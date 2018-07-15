@@ -1295,12 +1295,20 @@
     position: -webkit-sticky !important;
     top: 8px !important;
   }
-  /* copied from Refined GitHub extension */
-  .pull-request-tab-content .diff-view .file-header {
-    position: sticky !important;
-    position: -webkit-sticky !important;
-    top: 39px !important;
-    z-index: 6 !important;
+  @supports (position: sticky) or (position: -webkit-sticky) {
+    .pull-request-tab-content .diff-view .file-header {
+      position: sticky !important;
+      position: -webkit-sticky !important;
+      top: 39px !important;
+      z-index: 6 !important;
+    }
+    .pull-request-tab-content .file-header {
+      height: 39px !important;
+    }
+    .pull-request-tab-content .diff-view .file-actions,
+    .pull-request-tab-content .diff-view .file-info {
+      margin-top: -2px !important;
+    }
   }
   /* User time line firsts */
   img[src$="profile-joined-github.png"] {
