@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.53
+@version     1.20.54
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.53 (2018-07-08) */
+/*! Github Dark v1.20.54 (2018-07-16) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -308,11 +308,12 @@
   .checks-index-item.selected, .documentation-results a, .select-menu-item,
   .logged-out.enter-coupon .header-logged-out, .coupons .coupon-form-body,
   .dashboards-overview-cards .blankslate, .file .image .border-wrap,
-  .news .alert .gravatar, .news .commits li img, .thread-subscription-status,
-  .orghead .edit-org:hover, .auto-search-group .spinner,
-  .migration-jumbotron-btn, .org-settings-updating, .manage-repo-access-group,
-  .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
-  .page-preview, .projects-comment-form .comment-form-head .toolbar-commenting,
+  .page-responsive .HeaderMenu--experiment, .news .alert .gravatar,
+  .news .commits li img, .thread-subscription-status, .orghead .edit-org:hover,
+  .auto-search-group .spinner, .migration-jumbotron-btn, .org-settings-updating,
+  .manage-repo-access-group, .manage-memberships-tabs-item.selected,
+  .theme-picker, .theme-picker-spinner, .page-preview,
+  .projects-comment-form .comment-form-head .toolbar-commenting,
   .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
   .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
   .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
@@ -462,8 +463,8 @@
   .email-format .email-hidden-toggle a:active,
   .timeline-commits .hidden-text-expander .ellipsis-expander:hover,
   .blob-num-expandable .diff-expander:hover, .add-line-comment,
-  .discussion-item-changes-marker .discussion-item-icon, .dropdown-item:hover,
-  .dropdown-item.zeroclipboard-is-hover,
+  .discussion-item-changes-marker .discussion-item-icon, .dropdown-item:focus,
+  .dropdown-item:hover, .dropdown-item.zeroclipboard-is-hover,
   .gollum-editor .collapsed a.button:hover,
   .gollum-editor .expanded a.button:hover, a.gollum-minibutton:hover,
   a.gollum-minibutton:visited:hover, .select-menu-item:hover,
@@ -695,8 +696,10 @@
   ul.comparison-list > li.title, body.full-width-p-0 .footer .mt-6,
   .select-menu-item, .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button,
-  .discussion-post .comment .comment-reactions, .repository-lang-stats-graph,
-  .news .alert:first-child, .org-profile .member-badge,
+  .discussion-post .comment .comment-reactions,
+  .page-responsive .HeaderMenu--experiment .header-search,
+  .repository-lang-stats-graph, .news .alert:first-child,
+  .org-profile .member-badge,
   .org-repos-mini .org-repo-mini-item:first-child .org-repo-mini-cell,
   .invite-team-member-list .team:first-child .table-list-cell,
   .migrate-ability-list-item:first-child, .confirm-removal-list-item:first-child,
@@ -749,7 +752,6 @@
   /* auto-generated rule for "border-top-color: #fff" */
   .Popover-message--bottom:after, .Popover-message--bottom-right:after,
   .Popover-message--bottom-left:after, .select-menu-button.primary:after,
-  .HeaderNavlink:hover .dropdown-caret, .HeaderNavlink:focus .dropdown-caret,
   .rename-owners-error span, .ldap-import-groups-container .team-name-exists,
   .session-device.session-current .sessions-more-info:after,
   .enterprise-mode .dropdown-caret {
@@ -936,8 +938,10 @@
   .code-list .full-path .octicon-repo, ul.simple-conversation-list a.meta,
   li.contribution .num, .dashboard-notice .dismiss:hover, .ghe-license-status p,
   .repo-snipit .octicon, .repo-snipit-description, .file .data.empty,
-  .graph-filter .info, .header-search-scope, .integration-meta-head,
-  .issues-reset-query, .table-list-milestones .stat-label, .task-progress,
+  .graph-filter .info, .header-search-scope,
+  .page-responsive .HeaderMenu--experiment .HeaderMenu-target,
+  .integration-meta-head, .issues-reset-query,
+  .table-list-milestones .stat-label, .task-progress,
   .marketplace-product-callout .branch-action-item-icon,
   .MarketplaceEdit-body .CircleIcon, .merge-branch-description,
   .owner-reponame .slash, .news blockquote, .news .alert .simple .title,
@@ -1417,6 +1421,9 @@
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 2px /*[[base-color]]*/ !important;
     outline-color: /*[[base-color]]*/ !important;
   }
+  .dragover textarea, .dragover .drag-and-drop {
+    box-shadow: 0 0 1px 1px /*[[base-color]]*/ !important;
+  }
   /* inputs */
   select, input:not(.btn-link), textarea {
     -moz-appearance: none !important;
@@ -1508,6 +1515,10 @@
   .comment-reactions button.btn-link.user-has-reacted {
     background-color: rgba(65, 131, 196, .2) !important;
     background-color: rgba(/*[[base-color-rgb]]*/, .2) !important;
+  }
+  /* fix borders in repo tag editor */
+  .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button {
+    width: auto !important;
   }
   /* HACK: Label colors */
   a.IssueLabel[href*="/issues?"][style*=" color: #f"],
@@ -1956,8 +1967,7 @@
   .discussion-item-deployed, .branch-action-body .merge-message,
   .new-project-column, .confirm-removal-list-container,
   .confirm-removal-list-item, .user-profile-nav, .border-gray-light,
-  .review-thread-reply,
-  .feature-callout-octicon, .feature-callout,
+  .review-thread-reply, .feature-callout-octicon, .feature-callout,
   .discussion-item + .discussion-item,
   .discussion-item-review + .discussion-item, .libraries-jumbotron,
   .last-review-thread, .menu-item, .review-comment.is-comment-editing, .Box,
@@ -2122,16 +2132,16 @@
   .thread-subscription-status, .branch-action-body .merge-branch-form,
   .pull-info, .branch-link,
   .discussion-item-merged.open .discussion-item-details, .word-upload-callout,
-  .commit-tease-contributors,
-  .access-form-wrapper, .session-authentication .create-account-callout,
-  .intgrs-lstng-item, .intgr-install-callout,
-  .is-failed .repo-file-upload-errors, .is-bad-file .repo-file-upload-errors,
-  .is-too-big .repo-file-upload-errors, .is-too-many .repo-file-upload-errors,
-  .is-empty .repo-file-upload-errors, .site-header, .site-subheader,
-  .pricing-card, .explore-signup-entice, .price-box, .cvv-hint-tooltip,
-  .plan-choice, .date-selector td, .user-profile-sticky-bar:after,
-  .review-thread, .card, .tutorial, .overview .card > div[style*="background"],
-  .Box:not([style*="background"]), .Box-footer, .ScreenshotCarousel,
+  .commit-tease-contributors, .access-form-wrapper,
+  .session-authentication .create-account-callout, .intgrs-lstng-item,
+  .intgr-install-callout, .is-failed .repo-file-upload-errors,
+  .is-bad-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
+  .is-too-many .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
+  .site-header, .site-subheader, .pricing-card, .explore-signup-entice,
+  .price-box, .cvv-hint-tooltip, .plan-choice, .date-selector td,
+  .user-profile-sticky-bar:after, .review-thread, .card, .tutorial,
+  .overview .card > div[style*="background"], .Box:not([style*="background"]),
+  .Box-footer, .ScreenshotCarousel,
   .card-filter-autocomplete-dropdown .autocomplete-keyword-only, .inbox-zero,
   .tag-input .suggester {
     background: #181818 !important;
@@ -2275,8 +2285,7 @@
   .markdown-body .csv-data th, h3.conversation-list-heading strong,
   .file-commit-form .commit-form, .blog-feedback, .facebox-footer,
   .invited-banner, .gcr-ext-editor-close, .gcr-ext-editor-header,
-  .logos-download-link,
-  .ajax-pagination-form .ajax-pagination-btn:hover,
+  .logos-download-link, .ajax-pagination-form .ajax-pagination-btn:hover,
   .ajax-pagination-form .ajax-pagination-btn:focus,
   .ajax-pagination-form .ajax-pagination-btn:active {
     background: #222 !important;
@@ -2439,8 +2448,8 @@
   .contribution-activity-listing .progress-bar[style*="c6e48b"], .facebox-close {
     opacity: .75 !important;
   }
-  /* contribution calendar - regular colors */
-  .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#eee"] {
+  /* contribution calendar/legend - regular colors */
+  .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#ebedf0"] {
     background-color: #222 !important;
     fill: #222 !important;
   }
@@ -2771,7 +2780,8 @@
   .file-history-tease, .flash, .flash-global, .feature-banner,
   .recently-touched-branches, .timeline-progressive-disclosure-items button,
   .pr-toolbar .subset-files-tab, article.full .alert, .btn.btn-blue, .topic-tag,
-  .RecentBranches, .js-tag-input-tag, ul.search-results li .label {
+  .RecentBranches, .js-tag-input-tag, ul.search-results li .label,
+  .topic-tag-action {
     border: 1px solid #246 !important;
   }
   .repo-file-upload-progress, .project-updated-message, .delete-topic-button,
@@ -3097,7 +3107,7 @@
   a.UnderlineNav-item:focus, .project-pane-close:hover {
     color: #c0c0c0 !important;
   }
-  button, .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
+  .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
   .marketing-nav a, .repository-meta, .gist-item .description, p.explain,
   .news .alert .simple .title, #network .graph-date, .tabnav-widget.text,
   .feature .intro, span.diffstat, span.diffstat a, .commit .commit-branches a,
