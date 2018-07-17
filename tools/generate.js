@@ -17,17 +17,19 @@ const urlToolkit = require("url-toolkit");
 // on GitHub's style.
 const mappings = {
   // Grey scale
-  "background: #f6f8fa": "background: #181818",
-  "background: #fafbfc": "background: #181818",
   "background: #fff": "background: #181818",
+  "background: #fafbfc": "background: #181818",
+  "background: #f6f8fa": "background: #202020",
+  "background: #eaecef": "background: #343434",
   "background: #d1d5da": "background: #444",
 
-  "background-color: #f6f8fa": "background-color: #181818",
-  "background-color: #fafbfc": "background-color: #181818",
   "background-color: #fff": "background-color: #181818",
-  "background-color: #6a737d": "background-color: #222",
+  "background-color: #fafbfc": "background-color: #181818",
+  "background-color: #f6f8fa": "background-color: #202020",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #d1d5da": "background-color: #444",
+
+  "background-color: #6a737d": "background-color: #222",
 
   // some navigation focuses use this, like notifications
   "background-color: #f1f8ff": "background-color: #242424",
