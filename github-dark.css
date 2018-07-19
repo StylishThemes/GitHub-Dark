@@ -1295,13 +1295,6 @@
     position: -webkit-sticky !important;
     top: 8px !important;
   }
-  /* copied from Refined GitHub extension */
-  .pull-request-tab-content .diff-view .file-header {
-    position: sticky !important;
-    position: -webkit-sticky !important;
-    top: 39px !important;
-    z-index: 6 !important;
-  }
   /* User time line firsts */
   img[src$="profile-joined-github.png"] {
     padding-bottom: 20px !important;
@@ -1313,15 +1306,22 @@
   .pr-toolbar.is-stuck {
     pointer-events: none !important;
   }
-  .pr-toolbar.is-stuck+.pr-toolbar-shadow {
+  .pr-toolbar.is-stuck + .pr-toolbar-shadow {
     background: #181818 !important;
     top: 0 !important;
     height: 40px !important;
     border-bottom: 1px solid #343434 !important;
   }
+  .refined-github .pr-toolbar.is-stuck + .pr-toolbar-shadow {
+    height: 60px !important;
+  }
   .diffbar {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+  }
+  .refined-github .diffbar {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
   .is-stuck .diffbar {
     background: #181818 !important;
