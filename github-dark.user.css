@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.57
+@version     1.20.58
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,10 +191,14 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.57 (2018-07-21) */
+/*! Github Dark v1.20.58 (2018-07-24) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
+  /* Override default browser styles */
+  button {
+    color: #b5b5b5 !important;
+  }
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background: #fff" */
   image-crop .handle:before, .pagination a, .pagination span, .pagination em,
@@ -915,12 +919,12 @@
   .commits-list-item .commit-author, .full-commit .sha-block,
   .signed-commit-badge, .blob-num-expandable .diff-expander, .diffstat,
   .discussion-sidebar-item, .discussion-sidebar-heading, .milestone-name,
-  .sidebar-assignee .assignee, .participation a, .lock-toggle-link,
-  .gh-header-meta, .gh-header-meta .author, .tabnav-pr .tabnav-tab,
-  .timeline-comment-header, .timeline-comment-header .author,
-  .timeline-comment-header-text code a, .discussion-item .author,
-  .discussion-item-icon, .discussion-item-header, .discussion-item-link,
-  .discussion-item-ref-title .issue-num, .discussion-item-help,
+  .sidebar-assignee .assignee, .participation a, .gh-header-meta,
+  .gh-header-meta .author, .tabnav-pr .tabnav-tab, .timeline-comment-header,
+  .timeline-comment-header .author, .timeline-comment-header-text code a,
+  .discussion-item .author, .discussion-item-icon, .discussion-item-header,
+  .discussion-item-link, .discussion-item-ref-title .issue-num,
+  .discussion-item-help,
   .discussion-item-integrations-callout .pull-request-integrations-dismiss,
   .pull-request-integrations-body, .environment-name, .deployment-meta,
   .dropdown-header, .facebox .facebox-staff-links li, .facebox-footer .help,
@@ -2161,9 +2165,14 @@
   .overview .card > div[style*="background"], .Box:not([style*="background"]),
   .Box-footer, .ScreenshotCarousel,
   .card-filter-autocomplete-dropdown .autocomplete-keyword-only, .inbox-zero,
-  .tag-input .suggester {
+  .tag-input .suggester, .review-comment:target .timeline-comment-label,
+  .review-comment:target button.reaction-summary-item {
     background: #181818 !important;
     border-color: #343434 !important;
+  }
+  .review-comment:target {
+    background-color: #181818 !important;
+    box-shadow: inset 0 0 0 1px /*[[base-color]]*/ !important;
   }
   #readme .plain, .readme .markdown-body, .readme .plain, .pull-request-composer,
   .drag-and-drop, .octofication .broadcast-icon-mask, .file .image,
@@ -2268,7 +2277,7 @@
   .Box-row--focus-gray.navigation-focus, .team-listing .is-open.root-team,
   .Box-row--hover-gray:hover, table.files tr[aria-selected="true"] td,
   .label-select-menu .select-menu-item[aria-selected="true"],
-  .label-select-menu .select-menu-item.navigation-focus, .review-comment:target {
+  .label-select-menu .select-menu-item.navigation-focus {
     background: #242424 !important;
   }
   #main, .capped-box, .unread_count, #browser table th,
@@ -2756,7 +2765,9 @@
   /* https://github.com/StylishThemes/GitHub-Dark/community/license/new?branch=master&template=mit */
   body .CommunityTemplate-header,
   [data-url$="recently_touched_branches_list"], .drag-and-drop .error,
-  .merge-status-list .status-actions:hover {
+  .merge-status-list .status-actions:hover, .full-commit .btn-outline,
+  .full-commit .btn-outline:disabled, .full-commit .btn-outline:disabled:hover,
+  body > .application-main > .bg-gray {
     background: transparent !important;
   }
   /* blue box */
@@ -2785,7 +2796,8 @@
   .timeline-comment-label.collaborator-comment, .hook-delivery-guid .octicon,
   .hook-delivery-guid a, a.topic-tag, .RecentBranches, .RecentBranches-item-link,
   ul.search-results li .label, .markdown-format table th,
-  div[style*="background-color: #044d6e"] {
+  div[style*="background-color: #044d6e"],
+  .subset-files-tab .stale-files-tab-link {
     color: #9daccc !important;
   }
   .RecentBranches-item, .commit-ref .user {
