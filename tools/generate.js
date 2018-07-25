@@ -138,6 +138,7 @@ const ignoreSelectors = [
   /\.Box$/,
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
+  /^a$/,
   /:not\(li\.moved\)/
 ];
 
@@ -218,7 +219,6 @@ function parseDeclarations(cssString) {
             // Skip potentially unmergeable selectors
             // TODO: Use clean-css or similar to merge rules later instead
             if (unmergeableSelectors.some(re => re.test(selector))) return;
-
             // Skip ignored selectors
             if (ignoreSelectors.some(re => re.test(selector))) return;
 
