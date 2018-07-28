@@ -6,6 +6,7 @@ const fs = require("fs-extra");
 const got = require("got");
 const parse5 = require("parse5");
 const path = require("path");
+const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is not significant.
@@ -253,7 +254,8 @@ function buildOutput(decls) {
     }
 
     const selectors = decl.selector.join(",");
-    output += String(selectors + "{" + mappings[decl.mapping] + " !important}");
+    const rule = String(selectors + "{" + mappings[decl.mapping] + " !important}");
+    output += perfectionist.process(rule, perfOpts);
   });
 
   seen.forEach(decl => {
