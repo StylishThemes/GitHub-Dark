@@ -92,6 +92,10 @@ const mappings = {
   "border-top: 7px solid #fff": "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
+  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
+
+  "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": "box-shadow: 0 0 0 .2em rgba(65,131,196,.4)",
+
   "color: #24292e": "color: #c0c0c0",
   "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
