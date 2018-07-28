@@ -11,7 +11,9 @@ const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is not significant.
 const mappings = {
-  // Grey scale
+  // ==========================================================================
+  // Background
+  // ==========================================================================
   "background: #fff": "background: #181818",
   "background: #fafbfc": "background: #181818",
   "background: #f6f8fa": "background: #202020",
@@ -43,11 +45,15 @@ const mappings = {
   "background: #dbedff": "background: #273045",
   "background: #fffbdd": "background: #261d08",
 
-  "border: 1px solid #e1e4e8": "border-color: #343434",
-  "border: 1px solid #eee": "border-color: #343434",
-  "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
-  "border: 2px solid #fff": "border-color: #222",
-  "border: solid #ddd": "border-color: #484848",
+  // ==========================================================================
+  // Border
+  // ==========================================================================
+
+  "border: 1px solid #e1e4e8": "border: 1px solid #343434",
+  "border: 1px solid #eee": "border: 1px solid #343434",
+  "border: 1px solid rgba(27,31,35,0.15)": "border: 1px solid rgba(225,225,225,0.2)",
+  "border: 2px solid #fff": "border: 2px solid #222",
+  "border: solid #ddd": "border: solid #484848",
 
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
@@ -62,11 +68,6 @@ const mappings = {
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
 
-  "border-bottom: 0": "border-bottom: 0",
-  "border-left: 0": "border-left: 0",
-  "border-right: 0": "border-right: 0",
-  "border-top: 0": "border-top: 0",
-
   "border-top-color: rgba(27,31,35,0.15)": "border-top-color: #343434",
   "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
   "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
@@ -79,17 +80,20 @@ const mappings = {
   "border-top-color: #fff": "border-top-color: #181818",
   "border-right-color: #fff": "border-right-color: #181818",
 
-  "border-bottom-color: transparent": "border-bottom-color: transparent",
-  "border-left-color: transparent": "border-left-color: transparent",
-  "border-top-color: transparent": "border-top-color: transparent",
-  "border-right-color: transparent": "border-right-color: transparent",
-
   "border-top: 7px solid #fff": "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
 
+  // ==========================================================================
+  // Box-Shadow
+  // ==========================================================================
+
   "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": "box-shadow: 0 0 0 .2em rgba(65,131,196,.4)",
+
+  // ==========================================================================
+  // Color
+  // ==========================================================================
 
   "color: #24292e": "color: #c0c0c0",
   "color: #333"   : "color: #c0c0c0",
@@ -137,7 +141,9 @@ const ignoreSelectors = [
   /\.Box$/,
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
-  /:not\(li\.moved\)/
+  /:not\(li\.moved\)/,
+  /^.Popover-message::before$/,
+  /^.Popover-message::after$/,
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
