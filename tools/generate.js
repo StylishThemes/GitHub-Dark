@@ -246,6 +246,7 @@ function parseDeclarations(cssString) {
     });
   });
 
+  // merge adjacant rules with same properties
   decls.forEach((_, i) => {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
       decls[i].selector.push(decls[i + 1].selector[0]);
@@ -253,6 +254,7 @@ function parseDeclarations(cssString) {
     }
   });
 
+  // merge adjacant rules with same selectors
   decls.forEach((_, i) => {
     while (decls[i + 1] && decls[i].selector[0] === decls[i + 1].selector[0]) {
       decls[i].mapping += "; " + decls[i + 1].mapping;
