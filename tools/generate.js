@@ -92,8 +92,6 @@ const mappings = {
   "border-top: 7px solid #fff": "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
 
-  "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
-
   "color: #24292e": "color: #c0c0c0",
   "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
@@ -104,6 +102,9 @@ const mappings = {
   "color: #a3aab1": "color: #606060",
   "color: #c6cbd1": "color: #4d4d4d",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
+
+  // needs to be after #333 for .btn vs .btn-outline
+  "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
 
   // red
   "color: #cb2431": "color: #f44",
@@ -138,7 +139,6 @@ const ignoreSelectors = [
   /\.Box$/,
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
-  /^a$/,
   /:not\(li\.moved\)/
 ];
 
