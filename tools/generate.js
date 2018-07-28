@@ -172,7 +172,7 @@ const perfOpts = {
 
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
-const seen = Object.assign(Object.keys(mappings));
+const notSeen = Object.assign(Object.keys(mappings));
 
 Promise.all(urls.map(u => got(u.url, u.opts)))
   .then(responses => extractStyleLinks(responses))
@@ -234,12 +234,12 @@ function parseDeclarations(cssString) {
             selector = selector.replace(/ {2,}/, " ");
 
             const foundDecl = decl.property + ": " + decl.value;
-            if (seen.includes(foundDecl)) {
-              seen.splice(seen.indexOf(foundDecl), 1);
+            if (notSeen.includes(foundDecl)) {
+              notSeen.splice(notSeen.indexOf(foundDecl), 1);
             }
 
             // add the new rule to our list
-            decls.push({selector: [selector], mapping: mappings[mapping]});
+            decls.push({selectors: [selector], mapping: mappings[mapping]});
           });
         }
       });
@@ -262,7 +262,7 @@ function parseDeclarations(cssString) {
 function mergeSameProperties(decls) {
   for (const i of decls.keys()) {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
-      decls[i + 1].selector.forEach(selector => decls[i].selector.push(selector));
+      decls[i + 1].selectors.forEach(selector => decls[i].selectors.push(selector));
       decls.splice(i + 1, 1);
     }
   }
@@ -271,7 +271,7 @@ function mergeSameProperties(decls) {
 // merge adjacant rules with same selectors
 function mergeSameSelectors(decls) {
   for (const i of decls.keys()) {
-    while (decls[i + 1] && decls[i].selector[0] === decls[i + 1].selector[0]) {
+    while (decls[i + 1] && decls[i].selectors.join(", ") === decls[i + 1].selectors.join(", ")) {
       decls[i].mapping += "; " + decls[i + 1].mapping;
       decls.splice(i + 1, 1);
     }
@@ -281,13 +281,12 @@ function mergeSameSelectors(decls) {
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
   decls.forEach(decl => {
-    const selectors = decl.selector.join(",");
-    const rule = String(selectors + "{" + decl.mapping + " !important}");
+    const rule = String(decl.selectors.join(",") + "{" + decl.mapping + " !important}");
     output += perfectionist.process(rule, perfOpts);
   });
   output += "/* end auto-generated rules */";
 
-  seen.forEach(decl => {
+  notSeen.forEach(decl => {
     console.error(`Warning: no declarations for ${decl} found!`);
   });
 
