@@ -96,7 +96,7 @@ const mappings = {
 
   "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": "box-shadow: 0 0 0 .2em rgba(65,131,196,.4)",
 
-  "color: #24292e": "color: #c0c0c0",
+
   "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
   "color: #666"   : "color: #949494",
@@ -111,6 +111,9 @@ const mappings = {
 
   // needs to be after #0366d3 for .btn-link vs .text-gray
   "color: #586069": "color: #949494",
+
+  // needs to be after #0366d3 for .btn-link vs .text-gray-dark
+  "color: #24292e": "color: #c0c0c0",
 
   // red
   "color: #cb2431": "color: #f44",
