@@ -250,26 +250,22 @@ function parseDeclarations(cssString) {
   let len, newLen;
   while (len !== newLen || len === undefined) {
     len = decls.length;
-    mergeSameProperties(decls);
-    mergeSameSelectors(decls);
+    mergeRules(decls);
     newLen = decls.length;
   }
 
   return decls;
 }
 
-// merge adjacant rules with same properties
-function mergeSameProperties(decls) {
+function mergeRules(decls) {
+  // merge adjacant rules with same properties
   for (const i of decls.keys()) {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
       decls[i + 1].selectors.forEach(selector => decls[i].selectors.push(selector));
       decls.splice(i + 1, 1);
     }
   }
-}
-
-// merge adjacant rules with same selectors
-function mergeSameSelectors(decls) {
+  // merge adjacant rules with same selectors
   for (const i of decls.keys()) {
     while (decls[i + 1] && decls[i].selectors.join(", ") === decls[i + 1].selectors.join(", ")) {
       decls[i].mapping += "; " + decls[i + 1].mapping;
