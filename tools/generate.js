@@ -166,6 +166,7 @@ const perfOpts = {
 
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
+const seen = Object.assign(Object.keys(mappings));
 
 Promise.all(urls.map(u => got(u.url, u.opts)))
   .then(responses => extractStyleLinks(responses))
@@ -226,8 +227,13 @@ function parseDeclarations(cssString) {
             selector = selector.replace(/>/, " > ");
             selector = selector.replace(/ {2,}/, " ");
 
+            const foundDecl = decl.property + ": " + decl.value;
+            if (seen.includes(foundDecl)) {
+              seen.splice(seen.indexOf(foundDecl), 1);
+            }
+
             // add the new rule to our list
-            decls.push({selector: [selector], mapping});
+            decls.push({selector: [selector], mapping: mappings[mapping]});
           });
         }
       });
@@ -241,28 +247,29 @@ function parseDeclarations(cssString) {
     }
   });
 
+  decls.forEach((_, i) => {
+    while (decls[i + 1] && decls[i].selector[0] === decls[i + 1].selector[0]) {
+      decls[i].mapping += "; " + decls[i + 1].mapping;
+      decls.splice(i + 1, 1);
+    }
+  });
+
   return decls;
 }
 
 function buildOutput(decls) {
-  const seen = Object.assign(Object.keys(mappings));
-
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
   decls.forEach(decl => {
-    if (seen.includes(decl.mapping)) {
-      seen.splice(seen.indexOf(decl.mapping));
-    }
-
     const selectors = decl.selector.join(",");
-    const rule = String(selectors + "{" + mappings[decl.mapping] + " !important}");
+    const rule = String(selectors + "{" + decl.mapping + " !important}");
     output += perfectionist.process(rule, perfOpts);
   });
+  output += "/* end auto-generated rules */";
 
   seen.forEach(decl => {
     console.error(`Warning: no declarations for ${decl} found!`);
   });
 
-  output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
 }
 
