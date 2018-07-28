@@ -9,7 +9,7 @@ const path = require("path");
 const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 
-// This list maps old declarations to new ones. Ordering is not significant.
+// This list maps old declarations to new ones. Ordering is significant.
 const mappings = {
   // ==========================================================================
   // Background
@@ -97,10 +97,7 @@ const mappings = {
   // Color
   // ==========================================================================
 
-  "color: #24292e": "color: #c0c0c0",
-  "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
-  "color: #586069": "color: #949494",
   "color: #666"   : "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #7b7b7b",
@@ -108,7 +105,12 @@ const mappings = {
   "color: #c6cbd1": "color: #4d4d4d",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 
+  // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
+  // needs to be after #0366d3 for .btn-link vs .text-gray
+  "color: #586069": "color: #949494",
+  // needs to be after #0366d3 for .btn-link vs .text-gray-dark
+  "color: #24292e": "color: #c0c0c0",
 
   // red
   "color: #cb2431": "color: #f44",
@@ -174,7 +176,6 @@ const perfOpts = {
 
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
-const notSeen = Object.assign(Object.keys(mappings));
 
 (async () => {
   try {
@@ -215,11 +216,12 @@ function extractStyleHrefs(html) {
 }
 
 function parseDeclarations(cssString) {
-  const decls = [];
+  const decls = {};
   css.parse(cssString).stylesheet.rules.forEach(rule => {
     if (!rule.selectors || rule.selectors.length === 0) return;
     rule.declarations.forEach(decl => {
       Object.keys(mappings).forEach(mapping => {
+        if (!decls[mapping]) decls[mapping] = [];
         const [prop, val] = mapping.split(": ");
         decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
         if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
@@ -237,59 +239,32 @@ function parseDeclarations(cssString) {
             selector = selector.replace(/>/, " > ");
             selector = selector.replace(/ {2,}/, " ");
 
-            const foundDecl = decl.property + ": " + decl.value;
-            if (notSeen.includes(foundDecl)) {
-              notSeen.splice(notSeen.indexOf(foundDecl), 1);
+            // add the new rule to our list, unless it's already on it
+            if (!decls[mapping].includes(selector)) {
+              decls[mapping].push(selector);
             }
-
-            // add the new rule to our list
-            decls.push({selectors: [selector], mapping: mappings[mapping]});
           });
         }
       });
     });
   });
 
-  // merge and keep merging until no changes are done
-  let len, newLen;
-  while (len !== newLen || len === undefined) {
-    len = decls.length;
-    mergeRules(decls);
-    newLen = decls.length;
-  }
-
   return decls;
-}
-
-function mergeRules(decls) {
-  // merge adjacant rules with same properties
-  for (const i of decls.keys()) {
-    while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
-      decls[i + 1].selectors.forEach(selector => decls[i].selectors.push(selector));
-      decls.splice(i + 1, 1);
-    }
-  }
-  // merge adjacant rules with same selectors
-  for (const i of decls.keys()) {
-    while (decls[i + 1] && decls[i].selectors.join(", ") === decls[i + 1].selectors.join(", ")) {
-      decls[i].mapping += "; " + decls[i + 1].mapping;
-      decls.splice(i + 1, 1);
-    }
-  }
 }
 
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
-  decls.forEach(decl => {
-    const rule = String(decl.selectors.join(",") + "{" + decl.mapping + " !important}");
-    output += perfectionist.process(rule, perfOpts);
+
+  Object.keys(mappings).forEach(decl => {
+    if (decls[decl].length) {
+      output += `/* auto-generated rule for "${decl}" */\n`;
+      const selectors = decls[decl].join(",");
+      output += String(perfectionist.process(selectors + "{" + mappings[decl] + " !important}", perfOpts));
+    } else {
+      console.error(`Warning: no declarations for ${decl} found!`);
+    }
   });
   output += "/* end auto-generated rules */";
-
-  notSeen.forEach(decl => {
-    console.error(`Warning: no declarations for ${decl} found!`);
-  });
-
   return output.split("\n").map(line => "  " + line).join("\n");
 }
 
