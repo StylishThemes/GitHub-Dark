@@ -364,7 +364,7 @@ module.exports = function(grunt) {
       mozrule: {
         files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
         options: {
-          wrapper: ["<%= config.prefix %>", "}"]
+          wrapper: ["<%= config.prefix %>", "}\n"]
         }
       }
     }
