@@ -260,22 +260,22 @@ function parseDeclarations(cssString) {
 
 // merge adjacant rules with same properties
 function mergeSameProperties(decls) {
-  decls.forEach((_, i) => {
+  for (const i of decls.keys()) {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
       decls[i + 1].selector.forEach(selector => decls[i].selector.push(selector));
       decls.splice(i + 1, 1);
     }
-  });
+  }
 }
 
 // merge adjacant rules with same selectors
 function mergeSameSelectors(decls) {
-  decls.forEach((_, i) => {
+  for (const i of decls.keys()) {
     while (decls[i + 1] && decls[i].selector[0] === decls[i + 1].selector[0]) {
       decls[i].mapping += "; " + decls[i + 1].mapping;
       decls.splice(i + 1, 1);
     }
-  });
+  }
 }
 
 function buildOutput(decls) {
