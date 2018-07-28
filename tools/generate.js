@@ -96,7 +96,6 @@ const mappings = {
 
   "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": "box-shadow: 0 0 0 .2em rgba(65,131,196,.4)",
 
-
   "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
   "color: #666"   : "color: #949494",
