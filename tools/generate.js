@@ -262,7 +262,7 @@ function parseDeclarations(cssString) {
 function mergeSameProperties(decls) {
   decls.forEach((_, i) => {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
-      decls[i].selector.push(decls[i + 1].selector[0]);
+      decls[i + 1].selector.forEach(selector => decls[i].selector.push(selector));
       decls.splice(i + 1, 1);
     }
   });
