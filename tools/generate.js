@@ -6,15 +6,9 @@ const fs = require("fs-extra");
 const got = require("got");
 const parse5 = require("parse5");
 const path = require("path");
-const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 
-// This list maps old declarations to new ones. Ordering is important for cases
-// where one declaration is meant to override another, like in the border cases
-// where GitHub for example overrides border-bottom with another border-bottom
-// further below. Ideally these cases should be detected and the resulting rule
-// should not be merged but instead be inserted in the original ordering based
-// on GitHub's style.
+// This list maps old declarations to new ones. Ordering is not significant.
 const mappings = {
   // Grey scale
   "background: #fff": "background: #181818",
@@ -96,8 +90,10 @@ const mappings = {
 
   "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": "box-shadow: 0 0 0 .2em rgba(65,131,196,.4)",
 
+  "color: #24292e": "color: #c0c0c0",
   "color: #333"   : "color: #c0c0c0",
   "color: #444d56": "color: #b5b5b5",
+  "color: #586069": "color: #949494",
   "color: #666"   : "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #7b7b7b",
@@ -105,14 +101,7 @@ const mappings = {
   "color: #c6cbd1": "color: #4d4d4d",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 
-  // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
-
-  // needs to be after #0366d3 for .btn-link vs .text-gray
-  "color: #586069": "color: #949494",
-
-  // needs to be after #0366d3 for .btn-link vs .text-gray-dark
-  "color: #24292e": "color: #c0c0c0",
 
   // red
   "color: #cb2431": "color: #f44",
@@ -219,7 +208,6 @@ function parseDeclarations(cssString) {
     if (!rule.selectors || rule.selectors.length === 0) return;
     rule.declarations.forEach(decl => {
       Object.keys(mappings).forEach(mapping => {
-        if (!decls[mapping]) decls[mapping] = [];
         const [prop, val] = mapping.split(": ");
         decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
         if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
@@ -237,29 +225,41 @@ function parseDeclarations(cssString) {
             selector = selector.replace(/>/, " > ");
             selector = selector.replace(/ {2,}/, " ");
 
-            // add the selector to our list, unless it's already on it
-            if (!decls[mapping].includes(selector)) {
-              decls[mapping].push(selector);
-            }
+            // add the new rule to our list
+            decls.push({selector: [selector], mapping});
           });
         }
       });
     });
   });
+
+  decls.forEach((_, i) => {
+    while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
+      decls[i].selector.push(decls[i + 1].selector[0]);
+      decls.splice(i + 1, 1);
+    }
+  });
+
   return decls;
 }
 
 function buildOutput(decls) {
+  const seen = Object.assign(Object.keys(mappings));
+
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
-  Object.keys(mappings).forEach(decl => {
-    if (decls[decl].length) {
-      output += `/* auto-generated rule for "${decl}" */\n`;
-      const selectors = decls[decl].join(",");
-      output += String(perfectionist.process(selectors + "{" + mappings[decl] + " !important}", perfOpts));
-    } else {
-      console.error(`Warning: no declarations for ${decl} found!`);
+  decls.forEach(decl => {
+    if (seen.includes(decl.mapping)) {
+      seen.splice(seen.indexOf(decl.mapping));
     }
+
+    const selectors = decl.selector.join(",");
+    output += String(selectors + "{" + mappings[decl.mapping] + " !important}");
   });
+
+  seen.forEach(decl => {
+    console.error(`Warning: no declarations for ${decl} found!`);
+  });
+
   output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
 }
