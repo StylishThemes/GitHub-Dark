@@ -246,23 +246,36 @@ function parseDeclarations(cssString) {
     });
   });
 
-  // merge adjacant rules with same properties
+  // merge and keep merging until no changes are done
+  let len, newLen;
+  while (len !== newLen || len === undefined) {
+    len = decls.length;
+    mergeSameProperties(decls);
+    mergeSameSelectors(decls);
+    newLen = decls.length;
+  }
+
+  return decls;
+}
+
+// merge adjacant rules with same properties
+function mergeSameProperties(decls) {
   decls.forEach((_, i) => {
     while (decls[i + 1] && decls[i].mapping === decls[i + 1].mapping) {
       decls[i].selector.push(decls[i + 1].selector[0]);
       decls.splice(i + 1, 1);
     }
   });
+}
 
-  // merge adjacant rules with same selectors
+// merge adjacant rules with same selectors
+function mergeSameSelectors(decls) {
   decls.forEach((_, i) => {
     while (decls[i + 1] && decls[i].selector[0] === decls[i + 1].selector[0]) {
       decls[i].mapping += "; " + decls[i + 1].mapping;
       decls.splice(i + 1, 1);
     }
   });
-
-  return decls;
 }
 
 function buildOutput(decls) {
