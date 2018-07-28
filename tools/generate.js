@@ -174,14 +174,16 @@ const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 const notSeen = Object.assign(Object.keys(mappings));
 
-Promise.all(urls.map(u => got(u.url, u.opts)))
-  .then(responses => extractStyleLinks(responses))
-  .then(links => Promise.all(links.map(link => got(link))))
-  .then(responses => responses.map(res => res.body).join("\n"))
-  .then(css => parseDeclarations(css))
-  .then(decls => buildOutput(decls))
-  .then(css => writeOutput(css))
-  .catch(exit);
+(async () => {
+  try {
+    const links = extractStyleLinks(await Promise.all(urls.map(u => got(u.url, u.opts))));
+    const responses = await Promise.all(links.map(link => got(link)));
+    const decls = parseDeclarations(responses.map(res => res.body).join("\n"));
+    writeOutput(buildOutput(decls));
+  } catch (err) {
+    exit(err);
+  }
+})();
 
 async function writeOutput(generatedCss) {
   const css = await fs.readFile(cssFile, "utf8");
