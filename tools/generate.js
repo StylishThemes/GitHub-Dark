@@ -49,11 +49,11 @@ const mappings = {
   // Border
   // ==========================================================================
 
-  "border: 1px solid #e1e4e8": "border: 1px solid #343434",
-  "border: 1px solid #eee": "border: 1px solid #343434",
-  "border: 1px solid rgba(27,31,35,0.15)": "border: 1px solid rgba(225,225,225,0.2)",
-  "border: 2px solid #fff": "border: 2px solid #222",
-  "border: solid #ddd": "border: 1px solid #484848",
+  "border: 1px solid #e1e4e8": "border-color: #343434",
+  "border: 1px solid #eee": "border-color: #343434",
+  "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
+  "border: 2px solid #fff": "border-color: #222",
+  "border: solid #ddd": "border-color: #484848",
 
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #dfe2e5": "border-color: #484848",
@@ -85,8 +85,6 @@ const mappings = {
 
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
 
-  "border: 0": "border: 0",
-  "border: none": "border: none",
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
