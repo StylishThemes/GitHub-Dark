@@ -1884,9 +1884,23 @@
     background: #181818 !important;
     border-color: #343434 !important;
   }
-  .review-comment:target {
+  .review-comment:target, .timeline-comment:target .review-summary {
     background-color: #181818 !important;
-    box-shadow: inset 0 0 0 1px /*[[base-color]]*/ #4183c4 !important;
+    box-shadow: 0 0 0 .2em /*[[base-color]]*/ !important;
+  }
+  .timeline-comment-group:target .timeline-comment:before {
+    border-right-color: /*[[base-color]]*/ !important;
+    left: -17px !important;
+    filter: none !important;
+  }
+  .timeline-comment:target .review-summary:after {
+    top: -16px !important;
+    filter: none !important;
+  }
+  .timeline-comment:target .review-summary:before {
+    border-bottom-color: /*[[base-color]]*/ !important;
+    top: -20px !important;
+    filter: none !important;
   }
   #readme .plain, .readme .markdown-body, .readme .plain, .pull-request-composer,
   .drag-and-drop, .octofication .broadcast-icon-mask, .file .image,
@@ -3462,7 +3476,8 @@
   .file .image .border-wrap, .site-search .chromeless-input,
   .profile-timeline-card-wrapper, .render-shell img, img.asset,
   .AvatarStack--right .avatar, .AvatarStack-body .avatar,
-  .sidebar-notifications .thread-subscription-status {
+  .sidebar-notifications .thread-subscription-status,
+  .timeline-comment:target .review-summary .comment-body {
     border: 0 !important;
   }
   .dashboard-tabs a {
