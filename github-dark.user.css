@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.60
+@version     1.20.61
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.60 (2018-07-31) */
+/*! Github Dark v1.20.61 (2018-08-02) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -242,7 +242,8 @@
   .MarketplaceEdit-body .menu-item:hover,
   table.files tr[aria-selected="true"] td, table.files tr.navigation-focus td,
   .team-member-ellipsis:hover, table.capped-list th,
-  .workspace-tree [aria-selected] {
+  .workspace-tree [aria-selected], .gistsearch-aside .filter-list li span.bar,
+  .gist-quicksearch-results .gist-quicksearch-result-header {
     background: #202020 !important;
   }
   /* auto-generated rule for "background: #eaecef" */
@@ -334,8 +335,9 @@
   .listgroup-item.disabled, .billing-addon-items tr:nth-child(even),
   .plan-choice, .merge-status-item, .branch-action-body .merge-message,
   .branch-action-body .merge-branch-form, .range-editor, .dashboard-notice,
-  .newsletter-frequency-choice h3, .file-header, .jump-to-field-active, .orghead,
-  .manage-repo-access-not-active, .new-label, .filter-bar, .branch-infobar,
+  .newsletter-frequency-choice h3, .file-header, .label-truncate-file-list:hover,
+  .jump-to-field-active, .orghead, .manage-repo-access-not-active, .new-label,
+  .filter-bar, .branch-infobar,
   .access-token .credential-authorization-status-item,
   .oauth-pending-deletion-list-item, .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
@@ -795,7 +797,9 @@
   .task-run.pending .icon-for-pending, .task-run.inactive .icon-for-inactive,
   .team-listing .expand-nested-team, .home-hero-signup .form-control-note,
   .icon-cta > .octicon, .gist-snippet-meta .gist-count-links > li .octicon,
-  .gist-snippet-meta .extra-info, .gist-quicksearch-results .select-menu-item h4,
+  .gist-snippet-meta .extra-info,
+  .gist-quicksearch-results .gist-quicksearch-result-header,
+  .gist-quicksearch-results .select-menu-item h4,
   .gist-quicksearch-results .select-menu-item span {
     color: #949494 !important;
   }
@@ -809,7 +813,8 @@
   .team-member-list .invite-icon, .team-member-list-avatar .octicon,
   .pinned-repos-selection-list-item .stars, .branch-infobar .muted-link .octicon,
   .shelf-dismiss, .email-suggestion .octicon-mail, .Tile-date,
-  .home-hero-signup .form-control-note .notice-highlight {
+  .home-hero-signup .form-control-note .notice-highlight,
+  .gist-quicksearch-results .gist-quicksearch-no-results {
     color: #7b7b7b !important;
   }
   /* auto-generated rule for "color: #a3aab1" */
@@ -2071,9 +2076,23 @@
     background: #181818 !important;
     border-color: #343434 !important;
   }
-  .review-comment:target {
+  .review-comment:target, .timeline-comment:target .review-summary {
     background-color: #181818 !important;
-    box-shadow: inset 0 0 0 1px /*[[base-color]]*/ !important;
+    box-shadow: 0 0 0 .2em /*[[base-color]]*/ !important;
+  }
+  .timeline-comment-group:target .timeline-comment:before {
+    border-right-color: /*[[base-color]]*/ !important;
+    left: -17px !important;
+    filter: none !important;
+  }
+  .timeline-comment:target .review-summary:after {
+    top: -16px !important;
+    filter: none !important;
+  }
+  .timeline-comment:target .review-summary:before {
+    border-bottom-color: /*[[base-color]]*/ !important;
+    top: -20px !important;
+    filter: none !important;
   }
   #readme .plain, .readme .markdown-body, .readme .plain, .pull-request-composer,
   .drag-and-drop, .octofication .broadcast-icon-mask, .file .image,
@@ -2140,7 +2159,7 @@
   .select-menu-modal, .pagination a, .blob-num[colspan], .build-status-item,
   .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
   .more-repos, .billing-per-seat-callout:after, .code-list-item .blob-num,
-  .blob-num.js-line-number, .blob-num-hunk {
+  .blob-num.js-line-number, .blob-num-hunk, .bg-gray-light.disabled {
     background: #1c1c1c !important;
   }
   /* headers */
@@ -2413,7 +2432,7 @@
   img[src$="favicons.githubusercontent.com/gist.github.com"],
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
   #footer .github img, img[data-canonical-src^="https://codecov.io"],
-  #com span.octicon {
+  #com span.octicon:not(.octicon-comment-discussion) {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* invert network graph; gh-polls (https://github.com/apex/gh-polls) */
@@ -3649,7 +3668,8 @@
   .file .image .border-wrap, .site-search .chromeless-input,
   .profile-timeline-card-wrapper, .render-shell img, img.asset,
   .AvatarStack--right .avatar, .AvatarStack-body .avatar,
-  .sidebar-notifications .thread-subscription-status {
+  .sidebar-notifications .thread-subscription-status,
+  .timeline-comment:target .review-summary .comment-body {
     border: 0 !important;
   }
   .dashboard-tabs a {
@@ -3690,6 +3710,15 @@
   .file-commit-form .commit-form:after, .ScreenshotCarousel-navitem,
   .new-discussion-timeline .composer .timeline-comment:after {
     border-right-color: #222 !important;
+  }
+  #com .dropdown-menu:after {
+    border: 9px solid;
+    border-color: transparent transparent #181818;
+    content: " ";
+    left: 50%;
+    top: -17px;
+    position: absolute;
+    margin-left: -9px;
   }
   .dropdown-menu-w:before {
     border-bottom-color: transparent !important;
@@ -4174,6 +4203,13 @@
   .octotree_treeview .jstree-icon.tree {
     filter: grayscale(100%) !important;
   }
+  html.octotree .Header {
+    padding-left: 30px !important;
+  }
+  /* Octotree resizable handle */
+  html.octotree:not(.octotree-show) .octotree_sidebar .ui-resizable-handle {
+    display: none !important;
+  }
   /* Github User Info userscript - see #481 */
   .GithubUserInfo, .GithubUserInfo > div {
     background: #202020 !important;
@@ -4188,7 +4224,7 @@
     background: #242424 !important;
     color: /*[[base-color]]*/ !important;
   }
-  a.notifications-dropdown-see-all:hover {
+  a.notifications-dropdown-see-all:hover, .dropdown-menu a:hover {
     background: /*[[base-color]]*/ !important;
     color: #e2e2e2 !important;
   }
