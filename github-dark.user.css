@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.61
+@version     1.20.62
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.61 (2018-08-02) */
+/*! Github Dark v1.20.62 (2018-08-03) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -701,8 +701,13 @@
     border-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)" */
-  .btn:focus, .btn.focus, .timeline-comment-group:target .timeline-comment,
-  .project-column.moving, .project-card.moving {
+  .btn:focus, .btn.focus, .project-column.moving, .project-card.moving {
+    box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
+  }
+  /* auto-generated rule for "box-shadow: 0 0 0 0.2em #c8e1ff" */
+  .timeline-comment-group:target .timeline-comment, .review-comment:target,
+  .timeline-comment:target .review-summary {
     box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
@@ -1049,7 +1054,7 @@
   .selected .checks-index-label, .code-list em,
   .search-autocomplete-dropdown .autocomplete-text, .CommunityTemplate-highlight,
   .dashboard-notice h2, .exploregrid-item-title, .getting-started .link-text,
-  .jump-to-field-active,
+  .jump-to-field-active, .header-nav-current-user .user-profile-link,
   .select-menu-item[aria-selected="true"] > .octicon.label-options-icon,
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
@@ -1414,7 +1419,6 @@
       z-index: 6 !important;
     }
     .pull-request-tab-content .file-header {
-      height: 32px !important;
       padding: 1px 10px !important;
     }
     .pull-request-tab-content .diff-view .file-actions,
@@ -1926,17 +1930,16 @@
   }
   /* discussion timeline tweaks */
   .closed-banner {
-    border-top: 2px solid #444 !important;
-    border-bottom-color: transparent !important;
+    display: none !important;
   }
-  .discussion-timeline-actions, .closed-banner {
-    background: transparent !important;
+  .discussion-timeline-actions {
     border-top: 2px solid #444 !important;
+    background: none !important;
   }
   .discussion-timeline:before {
     margin-top: 2px !important;
     background: #383838 !important;
-    height: calc(100% - 250px) !important;
+    height: calc(100% - 259px) !important;
   }
   .profile-timeline.discussion-timeline:before {
     height: 100% !important;
@@ -2078,7 +2081,8 @@
   }
   .review-comment:target, .timeline-comment:target .review-summary {
     background-color: #181818 !important;
-    box-shadow: 0 0 0 .2em /*[[base-color]]*/ !important;
+    box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
   .timeline-comment-group:target .timeline-comment:before {
     border-right-color: /*[[base-color]]*/ !important;
@@ -4065,9 +4069,6 @@
   .zhc-tooltip-action__content:before, .zhc-pr-issue-connector__info:before {
     border-right-color: #343434 !important;
   }
-  .popover.left .arrow {
-    border-left-color: #343434 !important;
-  }
   .zhc-dependency-type-dropdown__control,
   .zhc-dependency-type-dropdown__list__item,
   .zhc-pipeline--add-placeholder .zhc-pipeline__head,
@@ -4153,6 +4154,15 @@
   .zhc-selection-list__header {
     box-shadow: none !important;
     text-shadow: none !important;
+  }
+  .popover.left .arrow {
+    border-left-color: #343434 !important;
+  }
+  .Popover-message:after {
+    border-bottom-color: #181818 !important;
+  }
+  .Popover-message:before {
+    border-bottom-color: #343434 !important;
   }
   /* button tweaks */
   .zh-repo-switcher .select-menu-button {
