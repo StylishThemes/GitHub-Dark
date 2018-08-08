@@ -15,17 +15,14 @@
   .boxed-group-inner, .commit-group-title .octicon-git-commit,
   .full-commit .commit-meta, .conversation-list-heading .inner,
   .details-overlay[open] > .dropdown-item:hover,
-  .discussion-timeline.team-discussion-timeline .blankslate,
-  .gollum-editor-help-parent li a:hover, .gollum-editor-help-list li a:hover,
-  .gollum-editor-help-parent li a.selected,
-  .gollum-editor-help-list li a.selected, .gollum-editor-help-wrapper,
-  ul.comparison-list, .tint-box.transparent, .dashboard-notice .coupon,
+  .discussion-timeline.team-discussion-timeline .blankslate, ul.comparison-list,
+  .tint-box.transparent, .dashboard-notice .coupon,
   .getting-started .list-group-item, .MarketplaceEdit-body .menu-item.selected,
   .oauth-org-access-details .oauth-org-item.on,
   .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
   .uploaded-files, .upload-progress, table.files, .qr-code-table .white,
-  .wiki-wrapper .wiki-auxiliary-content-no-bg, .btn-outline-transparent:hover,
-  .btn-outline-transparent:active, .TenYearNav-year.selected .TenYearNav-digits,
+  .btn-outline-transparent:hover, .btn-outline-transparent:active,
+  .TenYearNav-year.selected .TenYearNav-digits,
   .TenYearNav-year:hover .TenYearNav-digits,
   .gist-snippet-meta .gist-count-links > li>a:hover, .gist-quicksearch-results,
   div#common-issues ul, .markdown-format img, .dropdown-menu {
@@ -44,8 +41,8 @@
   .avatar.avatar-more, .AvatarStack--right .avatar.avatar-more:after,
   .markdown-body .csv-data th, .capped-card-content,
   .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav,
-  .gollum-editor-help-list, .select-menu-header, .select-menu-divider,
-  .payment-history .refunded, .payment-history .failed, .branch-group-heading,
+  .select-menu-header, .select-menu-divider, .payment-history .refunded,
+  .payment-history .failed, .branch-group-heading,
   .search-autocomplete-dropdown .autocomplete-keyword-only, .tint-box,
   .MarketplaceEdit-body .menu-item:hover,
   table.files tr[aria-selected="true"] td, table.files tr.navigation-focus td,
@@ -208,7 +205,7 @@
   .select-menu-item-parent[aria-selected="true"].selected, .topic-tag,
   .delete-topic-button, .topic-tag-action, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .reaction-sort-item.selected,
-  .pinned-repos-selection-list-item.selected, .project-column.moving,
+  .pinned-repo-checkbox:checked + .pinned-repo-name, .project-column.moving,
   .project-card.moving, .pinned-repo-item.is-dragging,
   .pinned-repo-item.sortable-ghost,
   .diffbar-range-menu .in-range:not([aria-selected="true"]):not(.is-range-selected),
@@ -265,8 +262,6 @@
   }
   /* auto-generated rule for "background: #0366d6" */
   .suggester li[aria-selected="true"], .suggester li.navigation-focus,
-  .gollum-editor a.gollum-minibutton:hover,
-  .gollum-editor a.gollum-minibutton:visited:hover,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-suggestions-path,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
     background: /*[[base-color]]*/ #4183c4 !important;
@@ -283,10 +278,8 @@
   .blob-num-expandable .diff-expander:hover, .add-line-comment,
   .discussion-item-changes-marker .discussion-item-icon, .dropdown-item:focus,
   .dropdown-item:hover, .dropdown-item.zeroclipboard-is-hover,
-  .gollum-editor .collapsed a.button:hover,
-  .gollum-editor .expanded a.button:hover, a.gollum-minibutton:hover,
-  a.gollum-minibutton:visited:hover, .select-menu-item:hover,
-  .select-menu-item:hover.selected, .select-menu-item:hover.select-menu-action,
+  .select-menu-item:hover, .select-menu-item:hover.selected,
+  .select-menu-item:hover.select-menu-action,
   .select-menu-item:hover .description-inline, .select-menu-item:focus,
   .select-menu-item:focus.selected, .select-menu-item:focus.select-menu-action,
   .select-menu-item:focus .description-inline,
@@ -366,8 +359,7 @@
   .pagination span:focus, .pagination em:hover, .pagination em:focus,
   .semantic-toc-symbol:not(.last-visible):after,
   .select-menu-item + .semantic-toc-file:after, .tabnav-pr,
-  .tabnav-pr .tabnav-tab.selected, .gollum-editor-help-parent li a:hover,
-  .gollum-editor-help-list li a:hover, .progress-bar-inline .progress-bar,
+  .tabnav-pr .tabnav-tab.selected, .progress-bar-inline .progress-bar,
   .plans-card-btn {
     border-color: #343434 !important;
   }
@@ -381,8 +373,6 @@
   }
   /* auto-generated rule for "border-bottom: 1px solid #dfe2e5" */
   hr, .rule, .suggester li, .conversation-list-heading,
-  .gollum-editor .collapsed, .gollum-editor .expanded,
-  .gollum-editor-function-bar, .gollum-dialog-dialog h4,
   .select-menu-text-filter:first-child:last-child, .select-menu-tabs,
   .branch-summary:last-child, table.capped-list th {
     border-bottom: 1px solid #343434 !important;
@@ -395,10 +385,6 @@
   div#common-issues h3, div#common-issues ul li, ul#categories li h5,
   ul.search-results li, form#new_category, div#article-form-container .preview,
   .markdown-format h3, div.content-header, .index-list h4 {
-    border-bottom: 1px solid #484848 !important;
-  }
-  /* auto-generated rule for "border-bottom: 1px solid #d8d8d8" */
-  .wiki-rightbar .boxed-group.collapsed > h3 {
     border-bottom: 1px solid #484848 !important;
   }
   /* auto-generated rule for "border-bottom: 1px solid #e1e4e8" */
@@ -599,10 +585,9 @@
   .oauth-application-whitelist .edit-link, .oauth-application-info .app-info,
   .developer-app-item .developer-app-list-meta, .export-actions a,
   .owner-select-target.disabled, .owner-select-target.disabled .user-mention,
-  .pinned-repos-selection-list-item, .vcard-detail .octicon,
-  .member-badge .octicon, .user-profile-bio,
-  .profile-timeline-card .issue-meta-section .octicon, .profile-rollup-toggle,
-  .mini-repo-list-item .stars, .numbers-summary .octicon,
+  .pinned-repo-name, .vcard-detail .octicon, .member-badge .octicon,
+  .user-profile-bio, .profile-timeline-card .issue-meta-section .octicon,
+  .profile-rollup-toggle, .mini-repo-list-item .stars, .numbers-summary .octicon,
   table.files td .simplified-path, table.files td.message,
   table.files td.message a, table.files td.age,
   .settings-email .email-actions .settings-remove-email.settings-disabled-remove-email,
@@ -624,8 +609,8 @@
   .dashboard-notice .dismiss, .svg-tip, .page-new-repo .octicon-repo,
   .news .alert .octicon, .news .alert .time, .news .alert .title .subtle,
   .team-member-list .invite-icon, .team-member-list-avatar .octicon,
-  .pinned-repos-selection-list-item .stars, .branch-infobar .muted-link .octicon,
-  .shelf-dismiss, .email-suggestion .octicon-mail, .Tile-date,
+  .branch-infobar .muted-link .octicon, .shelf-dismiss,
+  .email-suggestion .octicon-mail, .Tile-date,
   .home-hero-signup .form-control-note .notice-highlight,
   .gist-quicksearch-results .gist-quicksearch-no-results {
     color: #7b7b7b !important;
@@ -665,10 +650,9 @@
   .timeline-comment-action:hover, .timeline-comment-action:focus,
   .discussion-item-link:hover, .discussion-item-entity:hover,
   .discussion-item-ref-title .title-link:hover, .discussion-item-help:hover,
-  .gollum-editor .collapsed a.button, .gollum-editor .expanded a.button,
-  a.gollum-minibutton, a.gollum-minibutton:visited, .steps li.current .octicon,
-  .prose-diff .show-rich-diff, .select-menu-action:hover,
-  .select-menu-new-item-form .octicon, .marketing-hero-octicon .octicon,
+  .steps li.current .octicon, .prose-diff .show-rich-diff,
+  .select-menu-action:hover, .select-menu-new-item-form .octicon,
+  .marketing-hero-octicon .octicon,
   .intgrs-lstng-item-link:hover .intgrs-lstng-item-header,
   .intgr-admin-link:hover .octicon, .listgroup-item:hover .link-small,
   .rule-type-conditions, .more-branches, .code-list .blob-num a:hover,
@@ -704,9 +688,7 @@
   .tree-browser-result mark, .toolbar-commenting .dropdown-item:hover,
   .toolbar-commenting .dropdown-item:focus, .toolbar-item .menu-target:hover,
   .toolbar-item:hover, .toolbar-item .menu-target:focus, .toolbar-item:focus,
-  .wiki-wrapper .wiki-history .commit-id:hover,
-  .wiki-pages-box .wiki-more-pages-link a:hover, .link-mktg:hover,
-  .btn-outline-mktg:hover, .btn-outline-transparent:hover,
+  .link-mktg:hover, .btn-outline-mktg:hover, .btn-outline-transparent:hover,
   .btn-outline-transparent:active {
     color: /*[[base-color]]*/ #4183c4 !important;
   }
@@ -737,8 +719,6 @@
   .pull-request-integrations-body, .environment-name, .deployment-meta,
   .dropdown-header, .facebox .facebox-staff-links li, .facebox-footer .help,
   .keyboard-mappings .keys, .org-privileges-tour-dismiss,
-  .gollum-editor-function-bar .gollum-editor-format-selector label,
-  .gollum-dialog-dialog-body fieldset label,
   .list-group-item .list-group-item-summary a, .pagehead-tabs-item, .repohead h1,
   .reponav-item, .steps .complete, .select-menu-modal,
   .select-menu-item.selected .description, .select-menu-no-results,
@@ -784,15 +764,14 @@
   .confirm-removal-repo .octicon, .manage-member-meta-item,
   .manage-member-meta-item .btn-link, .manage-member-meta-item > .octicon,
   .org-user-notice-content .octicon, .manage-repo-access-lead,
-  .manage-memberships-tabs-item, .pages-composer p,
-  .pinned-repo-item .pinned-repository-handle, .diffstat-summary,
-  .summary-stats li, .summary-stats li a, .releases-tag-list td.date a,
-  .releases-tag-list p, .tag-references > li a, .release-timeline-tags .date,
-  .uploaded-files > li.delete, .uploaded-files .filesize,
-  .uploaded-files .remove, .labels-list-action, .label-characters-remaining,
-  .mini-repo-list-item .repo-description, .timeout h3, .numbers-summary a,
-  .numbers-summary .nolink, .repository-meta, .branch-infobar,
-  .avatar-upload .upload-state p, .email-actions span.label,
+  .manage-memberships-tabs-item, .pinned-repo-item .pinned-repository-handle,
+  .diffstat-summary, .summary-stats li, .summary-stats li a,
+  .releases-tag-list td.date a, .releases-tag-list p, .tag-references > li a,
+  .release-timeline-tags .date, .uploaded-files > li.delete,
+  .uploaded-files .filesize, .uploaded-files .remove, .labels-list-action,
+  .label-characters-remaining, .mini-repo-list-item .repo-description,
+  .timeout h3, .numbers-summary a, .numbers-summary .nolink, .repository-meta,
+  .branch-infobar, .avatar-upload .upload-state p, .email-actions span.label,
   .boxed-group .fork-flag, .oauth-app-info-container dl.keys dt,
   .oauth-app-info-container .user-count, .logo-upload-container .upload-state p,
   .logo-placeholder, .security-history .security-history-timestamp,
@@ -810,10 +789,7 @@
   .member-suggestion .non-member-action, .team-suggestion .team-size,
   .team-suggestion .team-description, .repo-access-add-team .team-size,
   .repo-access-add-team .team-description, .follow-list .follow-list-info,
-  .wiki-wrapper .wiki-empty-box, .wiki-wrapper .wiki-empty-box:hover,
-  .wiki-wrapper .wiki-auxiliary-content .wiki-edit-link,
-  .wiki-wrapper .wiki-custom-sidebar .octicon-pencil, .pullquote,
-  .MarketingBody > p, .MarketingBody blockquote, .MarketingBody ul,
+  .pullquote, .MarketingBody > p, .MarketingBody blockquote, .MarketingBody ul,
   .MarketingBody ol, .gist-snippet-meta .gist-count-links > li>a,
   .gist-revisions-list .gist-revision-meta {
     color: #949494 !important;
@@ -837,13 +813,10 @@
   .tabnav-pr .tabnav-tab.selected, .discussion-item-entity,
   .discussion-item-ref-title .title-link, .pull-request-integrations-title,
   .discussion-item .renamed-was, .discussion-item .renamed-is, .dropdown-item,
-  .keyboard-mappings th, .gollum-editor a.gollum-minibutton,
-  .gollum-editor a.gollum-minibutton:visited, .gollum-editor-page-title.ph,
-  .gollum-editor-help-parent li a.selected,
-  .gollum-editor-help-list li a.selected, .gollum-dialog-dialog h4,
-  .list-group-item-link, .user-mention, .team-mention, .pagehead-actions > li,
-  .pagehead-tabs-item:hover, .pagehead-tabs-item.selected, .reponav-item:hover,
-  .reponav-item:focus, .reponav-item.selected, .steps li.current,
+  .keyboard-mappings th, .list-group-item-link, .user-mention, .team-mention,
+  .pagehead-actions > li, .pagehead-tabs-item:hover,
+  .pagehead-tabs-item.selected, .reponav-item:hover, .reponav-item:focus,
+  .reponav-item.selected, .steps li.current,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:only-child:hover:before,
   .radio-label, .select-menu-header .select-menu-title, .select-menu-divider,
@@ -872,7 +845,7 @@
   .oauth-application-info .application-title,
   .developer-app-item .developer-app-name, .manage-repo-access-not-active,
   .manage-memberships-tabs-item.selected,
-  .pinned-repos-selection-list-item.selected,
+  .pinned-repo-checkbox:checked + .pinned-repo-name,
   .repository-meta .edit-repository-meta label, .access-token .token-description,
   .access-token .credential-authorization-menu .status-heading, .token-scope,
   .shelf-dismiss .close-button:hover, .team-listing .is-open .expand-nested-team,
@@ -996,6 +969,7 @@
   .reponav-wrapper .reponav-item .Counter,
   .select-menu .select-menu-clear-item .octicon, .select-menu-item,
   .select-menu-item[aria-checked="true"] .octicon-check,
+  .select-menu-item input:checked + .octicon-check,
   .select-menu-item.selected .octicon-check,
   .select-menu-item.selected .select-menu-item-text .octicon-x,
   .select-menu-item a, .select-menu-action > .octicon,
@@ -1012,8 +986,7 @@
   .review-comment-contents .timestamp, .numbers-summary a:hover .num,
   .branch-infobar .muted-link:hover .octicon,
   .repository-merge-features .form-group.errored label,
-  .follow-list .follow-list-name a, .wiki-wrapper a.history,
-  .wiki-wrapper.edit h1, .Bump-link--hover .Bump-link-symbol,
+  .follow-list .follow-list-name a, .Bump-link--hover .Bump-link-symbol,
   .page-gist-edit .btn-toggle-visibility .octicon-gist-secret, select {
     color: inherit !important;
   }
@@ -1233,8 +1206,8 @@
     .pull-request-tab-content .diff-view .file-info {
       margin-top: -1px !important;
     }
-    /* below element is queried from GitHub's js for the scroll offset */
-    /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
+  /* below element is queried from GitHub's js for the scroll offset */
+  /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
     .js-sticky-offset-scroll {
       height: 72px !important;
     }
@@ -1928,7 +1901,7 @@
   #contributors-master svg.viz, .diff-table .line-comments, .menu, svg.spark,
   svg.capped-card-content, body.api .content tbody,
   .markdown-format img:not(.emoji), .mini-repo-list, #common-issues,
-  .full-commit .commit-meta, .setup-wrapper .oauth-permissions-details,
+  .setup-wrapper .oauth-permissions-details,
   .milestone-list, .setup-form .setup-plans, .prose-diff > .markdown-body,
   .revision .gu, .tree-browser td, .tree-browser .alt td,
   .branches .branch-summary, .branches .no-results-message, .simple-box-footer,
@@ -4044,7 +4017,7 @@
     background: #242424 !important;
     color: /*[[base-color]]*/ #4183c4 !important;
   }
-  a.notifications-dropdown-see-all:hover, .dropdown-menu a:hover {
+  a.notifications-dropdown-see-all:hover {
     background: /*[[base-color]]*/ #4183c4 !important;
     color: #e2e2e2 !important;
   }
