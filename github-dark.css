@@ -1196,20 +1196,30 @@
     .pull-request-tab-content .diff-view .file-header {
       position: sticky !important;
       position: -webkit-sticky !important;
-      top: 40px !important;
+      top: 39px !important;
       z-index: 6 !important;
     }
-    .pull-request-tab-content .file-header {
-      padding: 1px 10px !important;
+    [id^=diff-].selected-line {
+      position: relative !important;
+      top: -120px !important;
+      left: -10000px !important;
     }
-    .pull-request-tab-content .diff-view .file-actions,
-    .pull-request-tab-content .diff-view .file-info {
-      margin-top: -1px !important;
+    [id^=diff-].selected-line:before {
+      content: attr(data-line-number) !important;
+      position: absolute !important;
+      top: 120px !important;
+      left: 10000px !important;
+      background-color: inherit !important;
+      color: inherit !important;
+      box-sizing: border-box !important;
+      display: block !important;
+      padding: .04em 10px !important;
+      width: 100% !important;
     }
-  /* below element is queried from GitHub's js for the scroll offset */
-  /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
+    /* Queried from GitHub's js for the scroll offset - keep at 60px not more */
+    /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
     .js-sticky-offset-scroll {
-      height: 72px !important;
+      height: 60px !important;
     }
   }
   /* User time line firsts */
