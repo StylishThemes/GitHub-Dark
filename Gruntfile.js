@@ -201,9 +201,7 @@ module.exports = function(grunt) {
   }];
 
   grunt.initConfig({
-    pkg: pkg,
-    config: config,
-
+    pkg, config,
     "string-replace": {
       inline: {
         files: {"<%= config.buildFile %>" : "<%= config.sourceFile %>"},
