@@ -2,6 +2,7 @@
 "use strict";
 
 const css = require("css");
+const cssMediaQuery = require("css-mediaquery");
 const fs = require("fs-extra");
 const got = require("got");
 const parse5 = require("parse5");
@@ -61,12 +62,13 @@ const mappings = {
 
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #484848",
-  "border-bottom: 1px solid #d8d8d8": "border-bottom: 1px solid #484848",
 
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
   "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
+
+  "border-left: 2px solid #e1e4e8": "border-left: 2px solid #343434",
 
   "border-top-color: rgba(27,31,35,0.15)": "border-top-color: #343434",
   "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
@@ -85,6 +87,7 @@ const mappings = {
 
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
 
+  "border-bottom: 0": "border-bottom: 0",
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
@@ -175,6 +178,12 @@ const shorthands = [
   "font"
 ];
 
+// a device we optimize for, used to remove mobile-only media queries
+const device = {
+  type: "screen",
+  width: "1024px",
+};
+
 const perfOpts = {
   maxSelectorLength: 76, // -4 because of indentation and to accomodate ' {'
   indentSize: 2,
@@ -223,39 +232,49 @@ function extractStyleHrefs(html) {
 
 function parseDeclarations(cssString) {
   const decls = {};
-  css.parse(cssString).stylesheet.rules.forEach(rule => {
+  const stylesheet = css.parse(cssString).stylesheet;
+
+  stylesheet.rules.forEach(rule => {
+    if (rule.type === "media" && mediaMatches(rule.media)) {
+      rule.rules.forEach(rule => parseRule(decls, rule));
+    }
+
     if (!rule.selectors || rule.selectors.length === 0) return;
-    rule.declarations.forEach(decl => {
-      Object.keys(mappings).forEach(mapping => {
-        if (!decls[mapping]) decls[mapping] = [];
-        const [prop, val] = mapping.split(": ");
-        decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
-        if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
-          rule.selectors.forEach(selector => {
-            // Skip potentially unmergeable selectors
-            // TODO: Use clean-css or similar to merge rules later instead
-            if (unmergeableSelectors.some(re => re.test(selector))) return;
-            // Skip ignored selectors
-            if (ignoreSelectors.some(re => re.test(selector))) return;
-
-            // stylistic tweaks
-            selector = selector.replace(/::/, ":");
-            selector = selector.replace(/\+/, " + ");
-            selector = selector.replace(/~/, " ~ ");
-            selector = selector.replace(/>/, " > ");
-            selector = selector.replace(/ {2,}/, " ");
-
-            // add the new rule to our list, unless it's already on it
-            if (!decls[mapping].includes(selector)) {
-              decls[mapping].push(selector);
-            }
-          });
-        }
-      });
-    });
+    parseRule(decls, rule);
   });
 
   return decls;
+}
+
+function parseRule(decls, rule) {
+  rule.declarations.forEach(decl => {
+    Object.keys(mappings).forEach(mapping => {
+      if (!decls[mapping]) decls[mapping] = [];
+      const [prop, val] = mapping.split(": ");
+      decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
+      if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
+        rule.selectors.forEach(selector => {
+          // Skip potentially unmergeable selectors
+          // TODO: Use clean-css or similar to merge rules later instead
+          if (unmergeableSelectors.some(re => re.test(selector))) return;
+          // Skip ignored selectors
+          if (ignoreSelectors.some(re => re.test(selector))) return;
+
+          // stylistic tweaks
+          selector = selector.replace(/::/, ":");
+          selector = selector.replace(/\+/, " + ");
+          selector = selector.replace(/~/, " ~ ");
+          selector = selector.replace(/>/, " > ");
+          selector = selector.replace(/ {2,}/, " ");
+
+          // add the new rule to our list, unless it's already on it
+          if (!decls[mapping].includes(selector)) {
+            decls[mapping].push(selector);
+          }
+        });
+      }
+    });
+  });
 }
 
 function buildOutput(decls) {
@@ -283,6 +302,15 @@ function isEqualValue(prop, a, b) {
     return a.split(" ").sort().join(" ") === b.split(" ").sort().join(" ");
   } else {
     return a === b;
+  }
+}
+
+function mediaMatches(query) {
+  try {
+    return cssMediaQuery.match(query, device);
+  } catch (err) {
+    // this libary has a few bugs, in case of error, we include the rule
+    return true;
   }
 }
 
