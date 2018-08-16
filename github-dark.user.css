@@ -686,7 +686,8 @@
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus, .timeline-comment-group:target .timeline-comment,
-  .project-column:focus, .project-card:focus, .TenYearNav-year.blue {
+  .project-column:focus, .project-card:focus, .TenYearNav-year.blue,
+  .review-comment:target {
     border-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)" */
@@ -1389,30 +1390,20 @@
     .pull-request-tab-content .diff-view .file-header {
       position: sticky !important;
       position: -webkit-sticky !important;
-      top: 39px !important;
+      top: 40px !important;
       z-index: 6 !important;
     }
-    [id^=diff-].selected-line {
-      position: relative !important;
-      top: -120px !important;
-      left: -10000px !important;
+    .pull-request-tab-content .file-header {
+      padding: 1px 10px !important;
     }
-    [id^=diff-].selected-line:before {
-      content: attr(data-line-number) !important;
-      position: absolute !important;
-      top: 120px !important;
-      left: 10000px !important;
-      background-color: inherit !important;
-      color: inherit !important;
-      box-sizing: border-box !important;
-      display: block !important;
-      padding: .04em 10px !important;
-      width: 100% !important;
+    .pull-request-tab-content .diff-view .file-actions,
+    .pull-request-tab-content .diff-view .file-info {
+      margin-top: -1px !important;
     }
-    /* Queried from GitHub's js for the scroll offset - keep at 60px not more */
-    /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
+  /* below element is queried from GitHub's js for the scroll offset */
+  /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
     .js-sticky-offset-scroll {
-      height: 60px !important;
+      height: 72px !important;
     }
   }
   /* User time line firsts */
@@ -2147,7 +2138,7 @@
   .select-menu-filters, .select-menu-modal, .pagination a, .build-status-item,
   .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
   .more-repos, .billing-per-seat-callout:after, .code-list-item .blob-num,
-  .blob-num.js-line-number, .blob-num-hunk, .bg-gray-light.disabled {
+  .blob-num.js-line-number, .bg-gray-light.disabled {
     background: #1c1c1c !important;
   }
   /* headers */
@@ -2185,8 +2176,7 @@
   .Box-row--focus-gray.navigation-focus, .team-listing .is-open.root-team,
   .Box-row--hover-gray:hover, table.files tr[aria-selected="true"] td,
   .label-select-menu .select-menu-item[aria-selected="true"],
-  .label-select-menu .select-menu-item.navigation-focus, .blob-num[colspan],
-  .blob-code-hunk, .blob-code-expandable {
+  .label-select-menu .select-menu-item.navigation-focus {
     background: #242424 !important;
   }
   #main, .capped-box, .unread_count, #browser table th,
@@ -2314,7 +2304,7 @@
   .credit-card.normal .signature, .credit-card.amex .gladiator,
   .subnav-item:hover, .subnav-item:focus, .wiki-list em,
   .progress-bar:not(.anim-grow-x), .header-search-scope:hover,
-  .CommunityTemplate-highlight--focus {
+  .CommunityTemplate-highlight--focus, .blob-num-hunk, .blob-num[colspan] {
     background: #333 !important;
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -3423,8 +3413,7 @@
     border-color: #083 !important;
   }
   /* original color */
-  .signed-commit-badge.verified:hover, .release-label.latest,
-  .release .Label--latest {
+  .signed-commit-badge.verified:hover, .Label--outline-green {
     border-color: #6cc644 !important;
   }
   .signed-commit-verified-label, .signed-commit-badge.verified {
@@ -3754,8 +3743,8 @@
   #header-wrapper, .menu li + li {
     border-bottom: 1px solid #333 !important;
   }
-  .js-release-form .drag-and-drop {
-    border-top: none !important;
+  .js-release-form .drag-and-drop, .review-comment .comment-reactions {
+    border-top: 0 !important;
   }
   /* light grey - breaks in diff (with line numbers) */
   .highlight .expandable-line-num, .highlight .diff-line-num-hunk,
@@ -3804,7 +3793,8 @@
   .diff-table tr:hover > pre,
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age) {
+  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not(.blob-num-hunk):not(.non-expandable),
+	.blob-code-hunk, .blob-code-expandable {
     background: rgba(78, 78, 78, .33) !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
