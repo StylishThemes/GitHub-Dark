@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.63
+@version     1.20.64
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.63 (2018-08-15) */
+/*! Github Dark v1.20.64 (2018-08-17) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -663,7 +663,7 @@
   /* auto-generated rule for "border-top-color: #fff" */
   .Popover-message--bottom:after, .Popover-message--bottom-right:after,
   .Popover-message--bottom-left:after, .select-menu-button.primary:after,
-  .rename-owners-error span, .ldap-import-groups-container .team-name-exists,
+  .ldap-import-groups-container .team-name-exists,
   .session-device.session-current .sessions-more-info:after,
   .enterprise-mode .dropdown-caret {
     border-top-color: #181818 !important;
@@ -686,8 +686,7 @@
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus, .timeline-comment-group:target .timeline-comment,
-  .project-column:focus, .project-card:focus, .TenYearNav-year.blue,
-  .review-comment:target {
+  .project-column:focus, .project-card:focus, .TenYearNav-year.blue {
     border-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)" */
@@ -720,9 +719,8 @@
   .billing-addon-items .discounted-original-price, .sort-bar .sort-label,
   .developer-thanks .hook, .repo-snipit-name, .notifications-list .confirmation,
   .repo-subscription-container .intro, .subscriptions-content .repo-icon,
-  .orghead, .team-info-card .team-description, .vcard-username, .pulse-section,
-  .repo-file-upload-target, .repo-file-upload-tree-target,
-  .repo-file-upload-file-wrap .remove-file:hover,
+  .orghead, .vcard-username, .pulse-section, .repo-file-upload-target,
+  .repo-file-upload-tree-target, .repo-file-upload-file-wrap .remove-file:hover,
   .mini-repo-list-item .repo-icon, .edit-profile-avatar .drag-and-drop,
   .user-key-email-unverified, .email-preference-exceptions h5,
   .collaborators .collab-info, .gist-snippet-meta .extra-info .text,
@@ -950,11 +948,9 @@
   .add-member-wrapper .available-seats, .add-member-team-list .team-meta,
   .team-list-footer .show-all-link .octicon, .migration-feature-list,
   .migration-feature-list .octicon, .org-migration-settings-info,
-  .delete-owners-button, .rename-owners-team-form .note,
-  .migrate-ability-not-possible, .migrate-org-roles-lead,
+  .delete-owners-button, .migrate-ability-not-possible, .migrate-org-roles-lead,
   .migrate-org-roles-count, .migrate-org-avatar-list .migrate-org-more-ellipsis,
-  .migrate-org-avatar-list .migrate-org-zero,
-  .team-info-card .team-description .link, .stats-group-stat,
+  .migrate-org-avatar-list .migrate-org-zero, .stats-group-stat,
   .stats-group-stat.no-link:hover,
   .confirm-removal-container .private-fork-count, .confirm-removal-team .octicon,
   .confirm-removal-repo .octicon, .manage-member-meta-item,
@@ -1618,7 +1614,8 @@
   .timeline-inline-comments, .AvatarStack-body, .team-left-column,
   .team-discussions-container, .Collection ~ div[style*="linear-grad"],
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
-  .dropdown-toggle, .repohead.experiment-repo-nav {
+  .dropdown-toggle, .repohead.experiment-repo-nav,
+  ul.add-member-team-list.table-list {
     background: none !important;
   }
   /* remove background gradient */
@@ -2864,7 +2861,8 @@
   .select-menu-item[aria-selected="true"] .select-menu-item-text,
   .owner-select-target, a.filter-item.selected, .filter-item.selected h4,
   .filter-item.selected .f3, .filter-item.selected .Label--outline-white,
-  ul.filter-list .filter-item.selected {
+  ul.filter-list .filter-item.selected,
+  .select-menu-item:hover .octicon-link-external {
     color: #efefef !important;
   }
   .btn.btn-primary, .button.primary, .minibutton.primary,
@@ -3217,7 +3215,8 @@
     color: inherit !important;
   }
   /* Alerts and activity, remove background gradient */
-  .metabox .editable-text:hover, #inbox .list .item .title span {
+  .metabox .editable-text:hover, #inbox .list .item .title span,
+  .Subhead.border-bottom-0 {
     background-color: transparent !important;
     border: 0 !important;
   }
@@ -3259,8 +3258,11 @@
     border-color: #f44 !important;
     background: #300 !important;
   }
-  .release-label.draft {
+  .release-label.draft, .Box.Box--danger {
     border-color: #f44 !important;
+  }
+  .Box--danger ul {
+    border-top: 1px solid #f44 !important;
   }
   .error:after {
     border-bottom-color: #f44 !important;
@@ -3347,6 +3349,14 @@
   .warning, .commits-list-item em, .unsupported-browser, .prereceive-feedback {
     background: rgba(51, 34, 17, .4) !important;
     border: 1px solid #542 !important;
+    color: #ddd !important;
+  }
+  .edit-comment-hide .flash.flash-warn {
+    background: rgba(51, 34, 17, .4) !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #542 !important;
     color: #ddd !important;
   }
   .warning {
@@ -3794,7 +3804,7 @@
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not(.blob-num-hunk):not(.non-expandable),
-	.blob-code-hunk, .blob-code-expandable {
+  .blob-code-hunk, .blob-code-expandable {
     background: rgba(78, 78, 78, .33) !important;
   }
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age),
