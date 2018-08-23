@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.64
+@version     1.20.65
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.64 (2018-08-17) */
+/*! Github Dark v1.20.65 (2018-08-23) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -212,7 +212,8 @@
   .getting-started .list-group-item, .MarketplaceEdit-body .menu-item.selected,
   .oauth-org-access-details .oauth-org-item.on,
   .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
-  table.files, .qr-code-table .white, .btn-outline-transparent:hover,
+  .details-truncate-file-list .btn-truncate-file-list, table.files,
+  .qr-code-table .white, .btn-outline-transparent:hover,
   .btn-outline-transparent:active, .TenYearNav-year.selected .TenYearNav-digits,
   .TenYearNav-year:hover .TenYearNav-digits,
   .gist-snippet-meta .gist-count-links > li>a:hover, .gist-quicksearch-results,
@@ -236,6 +237,7 @@
   .payment-history .failed, .branch-group-heading,
   .search-autocomplete-dropdown .autocomplete-keyword-only, .tint-box,
   .MarketplaceEdit-body .menu-item:hover,
+  .details-truncate-file-list .btn-truncate-file-list:hover,
   table.files tr[aria-selected="true"] td, table.files tr.navigation-focus td,
   .team-member-ellipsis:hover, table.capped-list th,
   .gistsearch-aside .filter-list li span.bar,
@@ -266,8 +268,8 @@
   .facebox-popup, .pagehead-tabs-item.selected, .reponav-item.selected,
   .steps li.current, .select-menu-modal, .select-menu-tabs a.selected,
   .select-menu-tabs .select-menu-tab-nav.selected, .btn-blurple .Counter,
-  .integration-settings-callout, .auth-form-body, .cvv-hint-tooltip,
-  .credit-card.normal .signature, .billing-addon-items tr.total-row,
+  .auth-form-body, .cvv-hint-tooltip, .credit-card.normal .signature,
+  .billing-addon-items tr.total-row,
   .billing-credit-card .javascript-disabled-overlay, .plan-choice.open,
   .plan-choice.selected, .branch-action-body, .checks-index-item:hover,
   .checks-index-item.selected, .documentation-results a, .select-menu-item,
@@ -330,9 +332,8 @@
   .listgroup-item.disabled, .billing-addon-items tr:nth-child(even),
   .plan-choice, .merge-status-item, .branch-action-body .merge-message,
   .branch-action-body .merge-branch-form, .range-editor, .dashboard-notice,
-  .newsletter-frequency-choice h3, .file-header, .label-truncate-file-list:hover,
-  .jump-to-field-active, .orghead, .manage-repo-access-not-active, .new-label,
-  .filter-bar, .branch-infobar,
+  .newsletter-frequency-choice h3, .file-header, .jump-to-field-active, .orghead,
+  .manage-repo-access-not-active, .new-label, .filter-bar, .branch-infobar,
   .access-token .credential-authorization-status-item,
   .oauth-pending-deletion-list-item, .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
@@ -351,8 +352,8 @@
   .boxed-group .heading, .commit-sha, .signed-commit-header,
   .semantic-toc-symbol:not(.last-visible):after,
   .select-menu-item + .semantic-toc-file:after, .copyable-terminal,
-  .timeline-comment-header, .facebox .facebox-staff-links, .protip code,
-  .render-notice, .select-menu-filters, .community-checklist .progress,
+  .timeline-comment-header, .protip code, .render-notice, .select-menu-filters,
+  .community-checklist .progress,
   .team-discussion-new-post .review-thread-reply-button:disabled,
   .MarketplaceSideNav, .ScreenshotCarousel-navitem.selected, .sortable-ghost,
   .review-comment:after, .review-comment-loader:after,
@@ -412,6 +413,8 @@
   }
   /* auto-generated rule for "background-color: #6f42c1" */
   .bg-purple, .State--purple, .discussion-item-merged .discussion-item-icon,
+  .plan-choice--experiment.plan-choice--purple.open .plan-choice-icon,
+  .plan-choice--experiment.plan-choice--purple.selected .plan-choice-icon,
   .branch-action-state-merged .branch-action-icon, .btn-outline-purple:hover,
   .btn-outline-purple:active, .btn-outline-purple.selected,
   [open] > .btn-outline-purple {
@@ -480,6 +483,8 @@
   .select-menu-item[aria-selected="true"].selected,
   .select-menu-item[aria-selected="true"].select-menu-action,
   .select-menu-item[aria-selected="true"] .description-inline,
+  .plan-choice--experiment.plan-choice--blue.open .plan-choice-icon,
+  .plan-choice--experiment.plan-choice--blue.selected .plan-choice-icon,
   .search-autocomplete-dropdown .navigation-item[aria-selected="true"],
   .search-autocomplete-dropdown .navigation-item.navigation-focus,
   .comment-apps-container .comment-app-details[open] > .comment-app,
@@ -583,9 +588,9 @@
   .diff-table tr:not(:last-child) .line-comments,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .new-discussion-timeline .previewable-comment-form .comment-body,
-  .discussion-item-review-comment, .facebox .facebox-staff-links,
-  .facebox-header, .pagehead, .select-menu-header, .select-menu-divider,
-  .merge-status-item, body.full-width-p-0 .new-discussion-timeline, .file-header,
+  .discussion-item-review-comment, .facebox-header, .pagehead,
+  .select-menu-header, .select-menu-divider, .merge-status-item,
+  body.full-width-p-0 .new-discussion-timeline, .file-header,
   .jump-to-suggestions-results-container .navigation-item,
   .discussion-item-body .outdated-comment[open] .file-header, .release-entry,
   .data-table td, .data-table th, .data-table tbody tr:last-child th,
@@ -663,7 +668,6 @@
   /* auto-generated rule for "border-top-color: #fff" */
   .Popover-message--bottom:after, .Popover-message--bottom-right:after,
   .Popover-message--bottom-left:after, .select-menu-button.primary:after,
-  .ldap-import-groups-container .team-name-exists,
   .session-device.session-current .sessions-more-info:after,
   .enterprise-mode .dropdown-caret {
     border-top-color: #181818 !important;
@@ -686,7 +690,9 @@
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus, .timeline-comment-group:target .timeline-comment,
-  .project-column:focus, .project-card:focus, .TenYearNav-year.blue {
+  .plan-choice--experiment.plan-choice--blue.open,
+  .plan-choice--experiment.plan-choice--blue.selected, .project-column:focus,
+  .project-card:focus, .TenYearNav-year.blue {
     border-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)" */
@@ -711,8 +717,8 @@
   .keyboard-mappings, kbd, .pagehead-tabs-item .Counter, .reponav-item .Counter,
   .protip-callout, .render-notice, .select-menu-header .close-button:hover,
   .select-menu-header .octicon:hover, .select-menu-action,
-  table.capped-list .octicon, table.capped-list.mini-icons .mini-icon,
-  .illflow-item .illflow-item-heading, .markdown-format kbd {
+  table.capped-list .octicon, .illflow-item .illflow-item-heading,
+  .markdown-format kbd {
     color: #b5b5b5 !important;
   }
   /* auto-generated rule for "color: #666" */
@@ -787,8 +793,9 @@
   .settings-email .email-actions .settings-remove-email.settings-disabled-remove-email,
   .setup-creditcard-form .form-group select:invalid,
   .task-run.pending .icon-for-pending, .task-run.inactive .icon-for-inactive,
-  .team-listing .expand-nested-team, .home-hero-signup .form-control-note,
-  .icon-cta > .octicon, .gist-snippet-meta .gist-count-links > li .octicon,
+  .team-listing .expand-nested-team, .subheader-nav-business .nav-item,
+  .home-hero-signup .form-control-note, .icon-cta > .octicon,
+  .gist-snippet-meta .gist-count-links > li .octicon,
   .gist-snippet-meta .extra-info,
   .gist-quicksearch-results .gist-quicksearch-result-header,
   .gist-quicksearch-results .select-menu-item h4,
@@ -911,20 +918,19 @@
   .discussion-item-help,
   .discussion-item-integrations-callout .pull-request-integrations-dismiss,
   .pull-request-integrations-body, .environment-name, .deployment-meta,
-  .dropdown-header, .facebox .facebox-staff-links li, .facebox-footer .help,
-  .keyboard-mappings .keys, .org-privileges-tour-dismiss,
-  .list-group-item .list-group-item-summary a, .pagehead-tabs-item, .repohead h1,
-  .reponav-item, .steps .complete, .select-menu-modal,
-  .select-menu-item.selected .description, .select-menu-no-results,
-  .select-menu-item-text .description,
+  .dropdown-header, .facebox-footer .help, .keyboard-mappings .keys,
+  .org-privileges-tour-dismiss, .list-group-item .list-group-item-summary a,
+  .pagehead-tabs-item, .repohead h1, .reponav-item, .steps .complete,
+  .select-menu-modal, .select-menu-item.selected .description,
+  .select-menu-no-results, .select-menu-item-text .description,
   .select-menu-item-text .description-inline, .marketing .pagehead p,
   .hanging-icon-list .octicon, .intgrs-lstng-item-description,
-  .intgr-admin-link .octicon, .integration-settings-callout p,
-  .credit-card .cvv span, .billing-section .section-label, .lfs-data-icon,
-  .payment-history .currency, .payment-history .status,
-  .discounted-original-price, .billing-manager-banner-title,
-  .blob-interaction-bar .octicon-search, .status-meta, .merge-pr-more-commits,
-  .range-editor-icon, ul.comparison-list > li em, .branch-group-name,
+  .intgr-admin-link .octicon, .credit-card .cvv span,
+  .billing-section .section-label, .lfs-data-icon, .payment-history .currency,
+  .payment-history .status, .discounted-original-price,
+  .billing-manager-banner-title, .blob-interaction-bar .octicon-search,
+  .status-meta, .merge-pr-more-commits, .range-editor-icon,
+  ul.comparison-list > li em, .branch-group-name,
   .code-list .full-path .octicon-repo, ul.simple-conversation-list a.meta,
   li.contribution .num, .dashboard-notice .dismiss:hover, .ghe-license-status p,
   .repo-snipit .octicon, .repo-snipit-description, .file .data.empty,
@@ -978,8 +984,9 @@
   .member-suggestion .non-member-action, .team-suggestion .team-size,
   .team-suggestion .team-description, .repo-access-add-team .team-size,
   .repo-access-add-team .team-description, .follow-list .follow-list-info,
-  .pullquote, .MarketingBody > p, .MarketingBody blockquote, .MarketingBody ul,
-  .MarketingBody ol, .gist-snippet-meta .gist-count-links > li>a,
+  .pullquote, .subheader-nav-business .nav-item:hover, .MarketingBody > p,
+  .MarketingBody blockquote, .MarketingBody ul, .MarketingBody ol,
+  .gist-snippet-meta .gist-count-links > li>a,
   .gist-revisions-list .gist-revision-meta {
     color: #949494 !important;
   }
@@ -1071,13 +1078,10 @@
   .oauth-org-access-details .octicon-x.org-access-denied,
   .oauth-application-whitelist .denied-request, .audit-type .oauth_access,
   .delete-owners-button:hover, .menu-item-danger, .menu-item-danger.selected,
-  .org-validate-group .octicon-alert,
   .confirm-removal-container .deleting-private-forks-warning .octicon,
-  .member-two-factor-disabled,
-  .ldap-import-groups-container .is-exists .ldap-mention-as,
-  .blocked-user-notice, .authors-and-code .deletions,
-  .summary-stats li .octicon-issue-closed, .Label--draft,
-  .uploaded-files .remove:hover, .unverified-user-key,
+  .member-two-factor-disabled, .blocked-user-notice,
+  .authors-and-code .deletions, .summary-stats li .octicon-issue-closed,
+  .Label--draft, .uploaded-files .remove:hover, .unverified-user-key,
   .unverified-user-key-notice, .logo-upload a.delete:hover,
   .logo-upload span.delete:hover,
   .settings-email .email-actions .settings-remove-email,
@@ -1115,14 +1119,13 @@
   .oauth-application-whitelist .approved-request,
   .oauth-application-info .app-approved, .oauth-application-info .octicon-check,
   .audit-type .team, .permission-level-cell .permission-success-icon,
-  .migrate-ability-list-item .octicon-check, .org-validate-group .octicon-check,
-  .authors-and-code .insertions, .summary-stats li .octicon-git-branch,
-  .summary-stats li .octicon-issue-opened, .recent-user-key,
-  .access-token.new-token .octicon-check, .two-factor-steps .sent-message,
-  .setup-form .octicon-check, .task-run.success .icon-for-success,
-  .btn-outline-green, .btn-outline-green:hover .Counter,
-  .btn-outline-green:active .Counter, .btn-outline-green.selected .Counter,
-  [open] > .btn-outline-green .Counter {
+  .migrate-ability-list-item .octicon-check, .authors-and-code .insertions,
+  .summary-stats li .octicon-git-branch, .summary-stats li .octicon-issue-opened,
+  .recent-user-key, .access-token.new-token .octicon-check,
+  .two-factor-steps .sent-message, .setup-form .octicon-check,
+  .task-run.success .icon-for-success, .btn-outline-green,
+  .btn-outline-green:hover .Counter, .btn-outline-green:active .Counter,
+  .btn-outline-green.selected .Counter, [open] > .btn-outline-green .Counter {
     color: #6cc644 !important;
   }
   /* auto-generated rule for "color: #b08800" */
@@ -1138,7 +1141,7 @@
   .migration-jumbotron-btn:hover, .summary-stats li .octicon-git-pull-request,
   .btn-outline-purple, .btn-outline-purple:hover .Counter,
   .btn-outline-purple:active .Counter, .btn-outline-purple.selected .Counter,
-  [open] > .btn-outline-purple .Counter, .subheader-nav-business .nav-item,
+  [open] > .btn-outline-purple .Counter,
   .illflow-purple .illflow-item .illflow-item-heading,
   .Story-link--customer:hover .Story-title {
     color: #8368aa !important;
@@ -3803,7 +3806,7 @@
   .diff-table tr:hover > pre,
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not(.blob-num-hunk):not(.non-expandable),
+  .highlight:not(.lines) tr:not(.inline-comments):hover td:not(.line-age):not(.blob-num-hunk):not(.non-expandable):not(.blob-num-expandable),
   .blob-code-hunk, .blob-code-expandable {
     background: rgba(78, 78, 78, .33) !important;
   }
