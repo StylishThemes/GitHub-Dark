@@ -3,8 +3,8 @@
 
 const css = require("css");
 const cssMediaQuery = require("css-mediaquery");
+const fetch = require("make-fetch-happen");
 const fs = require("fs-extra");
-const got = require("got");
 const parse5 = require("parse5");
 const path = require("path");
 const perfectionist = require("perfectionist");
@@ -191,9 +191,9 @@ const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 (async () => {
   try {
-    const links = extractStyleLinks(await Promise.all(urls.map(u => got(u.url, u.opts))));
-    const responses = await Promise.all(links.map(link => got(link)));
-    const decls = parseDeclarations(responses.map(res => res.body).join("\n"));
+    const links = await extractStyleLinks(await Promise.all(urls.map(u => fetch(u.url, u.opts))));
+    const responses = await Promise.all(links.map(link => fetch(link).then(res => res.text())));
+    const decls = parseDeclarations(responses.join("\n"));
     writeOutput(buildOutput(decls));
   } catch (err) {
     exit(err);
@@ -205,13 +205,13 @@ async function writeOutput(generatedCss) {
   await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
 }
 
-function extractStyleLinks(responses) {
+async function extractStyleLinks(responses) {
   const styleUrls = [];
-  responses.forEach(res => {
-    extractStyleHrefs(res.body).forEach(href => {
-      styleUrls.push(urlToolkit.buildAbsoluteURL(res.requestUrl, href));
+  for (const res of responses) {
+    extractStyleHrefs(await res.text()).forEach(href => {
+      styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
     });
-  });
+  }
   return styleUrls;
 }
 
