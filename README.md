@@ -66,7 +66,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 | GitHub Dark                |      ✔️     |      ❌     |      ✔️      |
 | Idle Fingers               |      ✔️     |      ❌     |      ✔️      |
 | Kr Theme                   |      ✔️     |      ❌     |      ❌      |
-| Material                   |      🚧     |      ✔️     |      ❌      |
+| Material                   |   [🚧][1]   |      ✔️     |      ❌      |
 | Merbivore                  |      ✔️     |      ❌     |      ❌      |
 | Merbivore Soft             |      ✔️     |      ❌     |      ❌      |
 | Mono Industrial            |      ✔️     |      ❌     |      ❌      |
@@ -87,6 +87,8 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 - Support for [Codemirror](https://codemirror.net/demo/theme.html) and [Jupyter notebook](https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb) syntax highlighting themes as listed above.
 - Please provide a pull request if you have or want to create a missing theme, or help complete the theme(s) designated with a construction symbol (🚧).
+
+[1]:https://github.com/StylishThemes/GitHub-Dark/pull/568
 
 ## Notes
 
