@@ -311,7 +311,7 @@ async function main() {
   const links = await extractStyleLinks(await Promise.all(urls.map(u => fetch(u.url, u.opts))));
   const responses = await Promise.all(links.map(link => fetch(link).then(res => res.text())));
   const decls = parseDeclarations(responses.join("\n"));
-  writeOutput(buildOutput(decls));
+  await writeOutput(buildOutput(decls));
 }
 
 main().then(exit).catch(exit);
