@@ -191,17 +191,6 @@ const perfOpts = {
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-(async () => {
-  try {
-    const links = await extractStyleLinks(await Promise.all(urls.map(u => fetch(u.url, u.opts))));
-    const responses = await Promise.all(links.map(link => fetch(link).then(res => res.text())));
-    const decls = parseDeclarations(responses.join("\n"));
-    writeOutput(buildOutput(decls));
-  } catch (err) {
-    exit(err);
-  }
-})();
-
 async function writeOutput(generatedCss) {
   const css = await fs.readFile(cssFile, "utf8");
   await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
@@ -308,7 +297,7 @@ function mediaMatches(query) {
   try {
     return cssMediaQuery.match(query, device);
   } catch (err) {
-    // this libary has a few bugs, in case of error, we include the rule
+    // this library has a few bugs. In case of error, we include the rule.
     return true;
   }
 }
@@ -317,3 +306,12 @@ function exit(err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
 }
+
+async function main() {
+  const links = await extractStyleLinks(await Promise.all(urls.map(u => fetch(u.url, u.opts))));
+  const responses = await Promise.all(links.map(link => fetch(link).then(res => res.text())));
+  const decls = parseDeclarations(responses.join("\n"));
+  writeOutput(buildOutput(decls));
+}
+
+main().then(exit).catch(exit);
