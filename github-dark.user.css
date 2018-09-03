@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.66
+@version     1.20.67
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.66 (2018-08-28) */
+/*! Github Dark v1.20.67 (2018-09-03) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -303,8 +303,8 @@
   .btn-outline-green.selected .Counter, [open] > .btn-outline-green .Counter,
   .btn-outline-green:disabled, .btn-outline-green.disabled,
   .btn-transparent:hover, .btn-transparent:active, .Tile:hover,
-  .site-subheader-sticky.is-stuck, a.button.classy.danger.disabled,
-  a.button.classy.danger:disabled,
+  .site-subheader-sticky.is-stuck, .callout-permalink-big-figcaption,
+  a.button.classy.danger.disabled, a.button.classy.danger:disabled,
   a.button.classy.disabled:hover.danger.disabled,
   a.button.classy.disabled:hover.danger:disabled,
   a.button.classy:disabled:hover.danger.disabled,
@@ -366,7 +366,15 @@
   .team-discussion-new-post .review-thread-reply-button:disabled,
   .MarketplaceSideNav, .ScreenshotCarousel-navitem.selected, .sortable-ghost,
   .review-comment:after, .review-comment-loader:after,
-  .review-comment.is-comment-editing:after, .review-thread-reply, .Tile {
+  .review-comment.is-comment-editing:after, .review-thread-reply, .Tile,
+  .callout-permalink-stacked-image.webcasts,
+  .callout-permalink-stacked-image.case-studies,
+  .callout-permalink-stacked-image.videos,
+  .callout-permalink-stacked-image.events:before,
+  .webcasts .callout-permalink-big-image,
+  .events .callout-permalink-big-image:before,
+  .videos .callout-permalink-big-image,
+  .case-studies .callout-permalink-big-image {
     background-color: #202020 !important;
   }
   /* auto-generated rule for "background-color: #eaecef" */
@@ -636,7 +644,7 @@
   .issue-list-item + .issue-list-item, .last-review-thread, .review-thread-reply,
   .file-navigation .get-repo-btn, .user-list-item + .user-list-item,
   .wiki-list .wiki-list-item + .wiki-list-item, .border-sm-top, .border-md-top,
-  .border-lg-top, .library-resource-border {
+  .border-lg-top {
     border-top: 1px solid #343434 !important;
   }
   /* auto-generated rule for "border-top-color: rgba(27,31,35,0.15)" */
@@ -1265,7 +1273,8 @@
   .gist-snippet .file-box:hover .file, .octofication .message,
   .reaction-sort-item.selected, .pull-request-link, div.project-card:focus,
   .timeline-progressive-disclosure-button:hover,
-  .release-timeline-tags .expander-text:hover .expander-dots {
+  .release-timeline-tags .expander-text:hover .expander-dots,
+  .review-comment:target {
     border-color: /*[[base-color]]*/ !important;
   }
   #com #header .top-nav .dropdown-button:hover .dropdown-caret,
@@ -1754,11 +1763,6 @@
     .discussion-sidebar .is-placeholder {
       display: none !important;
     }
-  }
-  /* GitHub Bug: Fix org layout issue */
-  /* https://github.com/isaacs/github/issues/934 */
-  .user-profile-repo-filter {
-    width: 100% !important;
   }
   /* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
@@ -2963,8 +2967,7 @@
   .underline-nav-item:focus, .content > h2, .content > h3,
   .audit-results-header-title, .session-authentication .auth-form-header,
   .org-settings-team-type, .org-settings-team-count, .intgrs-lstng-item-header,
-  .octokit-language span,
-  .site-header-nav a, .menu-item.selected, article h2,
+  .octokit-language span, .site-header-nav a, .menu-item.selected, article h2,
   #message-list h1, #message-list h3, .graph-page h1, .graph-page h3,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon,
   .counter, .Counter, .state, .State, .dashboard-notice h2,
@@ -3471,7 +3474,7 @@
   }
   /* interactive button - bright border */
   .btn-primary:not(.compare-button):not(.btn-outline):not([disabled]):not(.disabled),
-  .button.primary, .btn-theme-green {
+  .button.primary, .btn-theme-green, .btn-primary-mktg {
     background: linear-gradient(#407045, #305530) !important;
     border-color: #083 !important;
   }
@@ -3493,7 +3496,8 @@
     background: #373 !important;
   }
   .btn-primary:not(:disabled):not(.disabled):not(.compare-button):not(.btn-outline):hover,
-  .button.primary:not(:disabled):hover, .btn-theme-green:hover {
+  .button.primary:not(:disabled):hover, .btn-theme-green:hover,
+  .btn-primary-mktg:hover {
     background: linear-gradient(#508055, #407045) !important;
   }
   /* orange */
