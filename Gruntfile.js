@@ -261,10 +261,12 @@ module.exports = function(grunt) {
           "github-dark.css": "github-dark.css",
           "github-dark-userstyle.build.css": "github-dark-userstyle.build.css"
         },
-        options: {replacements: [{
-          pattern: /v[0-9.]+ \(.+\)/,
-          replacement: "v<%= config.version %> (" + getDate() + ")"
-        }]}
+        options: {
+          replacements: [{
+            pattern: /v[0-9.]+ \(.+\)/,
+            replacement: "v<%= config.version %> (" + getDate() + ")"
+          }],
+        }
       }
     },
     clean: {
@@ -299,6 +301,7 @@ module.exports = function(grunt) {
           level: {
             1: {
               specialComments : "all",
+              removeEmpty: false,
             },
             2: {
               all: false,
