@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.67
+@version     1.20.68
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.67 (2018-09-03) */
+/*! Github Dark v1.20.68 (2018-09-11) */
   /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
   /* Userstyle:  http://userstyles.org/styles/37035              */
   /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -796,10 +796,11 @@
   .billing-addon-items .addon-cost, .payment-history .refunded .status,
   .plan-choice-exp, .blame-commit-date[data-heat="10"],
   .blame-hunk:hover .reblame-link, ul.comparison-list > li.title,
-  .branch-search .clear-search, .branch-meta,
+  .branch-search .clear-search, .branch-meta, .admin-options-block .disabled,
+  .admin-options-block .disabled .note,
   .check-annotation-notice .annotation-title, .code-list .full-path a,
-  .graphs .dir, .delete-topic-button, .topic-tag-action .add-topic-button,
-  .topic-tag-action .remove-topic-button,
+  .deployments-timeline-icon.is-inactive, .graphs .dir, .delete-topic-button,
+  .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button,
   .jump-to-suggestions-path .jump-to-octicon, .hook-item .description,
   .hook-item.pending .icon-for-pending, .hook-item.inactive .icon-for-inactive,
   .hook-item.mute .icon-for-mute, .hook-deliveries-list .item-status.pending,
@@ -887,8 +888,7 @@
   .intgr-admin-link:hover .octicon, .listgroup-item:hover .link-small,
   .rule-type-conditions, .more-branches, .code-list .blob-num a:hover,
   .coupon-icon, .dashboard-notice .octicon-organization,
-  .dashboards-overview-cards .summary-stats .closed_at,
-  .dashboards-overview-cards .summary-stats .merged_at,
+  .dashboards-overview-cards .summary-stats .metric-2,
   .repo-snipit:hover .repo-snipit-name,
   .repo-snipit:hover .repo-snipit-description,
   .exploregrid-item:hover .exploregrid-item-title,
@@ -960,10 +960,11 @@
   .billing-manager-banner-title, .blob-interaction-bar .octicon-search,
   .status-meta, .merge-pr-more-commits, .range-editor-icon,
   ul.comparison-list > li em, .branch-group-name,
-  .code-list .full-path .octicon-repo, ul.simple-conversation-list a.meta,
-  li.contribution .num, .dashboard-notice .dismiss:hover, .ghe-license-status p,
-  .repo-snipit .octicon, .repo-snipit-description, .file .data.empty,
-  .graph-filter .info, .header-search-scope,
+  .admin-options-block .policy-enforcement, .code-list .full-path .octicon-repo,
+  ul.simple-conversation-list a.meta, li.contribution .num,
+  .dashboard-notice .dismiss:hover, .ghe-license-status p, .repo-snipit .octicon,
+  .repo-snipit-description, .file .data.empty, .graph-filter .info,
+  .header-search-scope,
   .page-responsive .HeaderMenu--experiment .HeaderMenu-target,
   .integration-meta-head, .issues-reset-query,
   .table-list-milestones .stat-label, .task-progress,
@@ -1100,6 +1101,7 @@
   .billing-addon-items tr.total-row, .payment-history .failed .status,
   .branch-delete, .cdel, span.no-nl-marker,
   .dashboards-overview-cards .octicon-arrow-down,
+  .deployments-timeline-icon.is-error, .deployments-timeline-icon.is-failure,
   .hook-item.failure .icon-for-failure, .hook-item .hook-error-message,
   .hook-deliveries-list .item-status.failure, .issue-list .title .closed.octicon,
   .new-label-color-input:invalid, .type-icon-state-closed,
@@ -1140,8 +1142,8 @@
   .open.octicon, .steps .complete .octicon, .marketing h2 .secure,
   .hanging-icon-list .octicon-check, .payment-history .succeeded .status,
   .rule-type-permissions, .cadd, .developer-next-steps .octicon,
-  .newsletter-frequency-choice .notice, .hook-item.success .icon-for-success,
-  .hook-item.enabled .icon-for-enabled,
+  .deployments-timeline-icon.is-active, .newsletter-frequency-choice .notice,
+  .hook-item.success .icon-for-success, .hook-item.enabled .icon-for-enabled,
   .hook-deliveries-list .item-status.success, .issue-list .title .open.octicon,
   .type-icon-state-open, .notifications-list .boxed-group .notification-success,
   .oauth-org-access-details .octicon-check,
@@ -1161,7 +1163,9 @@
   /* auto-generated rule for "color: #b08800" */
   .text-pending, .deployment-status-label.is-pending,
   .deployment-status-label.is-queued, .deployment-status-label.is-in_progress,
-  .check-annotation-warning .annotation-title, .prereceive-feedback-heading,
+  .check-annotation-warning .annotation-title,
+  .deployments-timeline-icon.is-pending, .deployments-timeline-icon.is-queued,
+  .deployments-timeline-icon.is-in_progress, .prereceive-feedback-heading,
   .text-yellow-800 {
     color: #cb4 !important;
   }
@@ -1203,6 +1207,8 @@
   .Header .header-search-input, .table-list-milestones .stat a,
   a.task-progress:hover .octicon, .milestone-link:hover .octicon,
   .label-select-menu .selected .select-menu-item-icon,
+  .label-select-menu .select-menu-item:hover,
+  .label-select-menu .select-menu-item:focus,
   .label-select-menu .select-menu-item[aria-selected="true"],
   .label-select-menu .select-menu-item.navigation-focus,
   .pr-toolbar .stale-files-tab-link,
@@ -2076,8 +2082,7 @@
   .site-header, .site-subheader, .pricing-card, .explore-signup-entice,
   .price-box, .cvv-hint-tooltip, .plan-choice, .date-selector td,
   .user-profile-sticky-bar:after, .review-thread, .card, .tutorial,
-  .overview .card > div[style*="background"], .Box:not([style*="background"]),
-  .Box-footer, .ScreenshotCarousel,
+  .overview .card > div[style*="background"], .Box-footer, .ScreenshotCarousel,
   .card-filter-autocomplete-dropdown .autocomplete-keyword-only, .inbox-zero,
   .tag-input .suggester, .review-comment:target .timeline-comment-label,
   .review-comment:target button.reaction-summary-item {
@@ -2107,7 +2112,8 @@
   .drag-and-drop, .octofication .broadcast-icon-mask, .file .image,
   .merge-pr-more-commits, .coupons .coupon-form-body, .manage-repo-access-group,
   .saved-reply-form, .orghead .edit-org:hover, .octotree_views, .simple-box,
-  .btn-link.timeline-progressive-disclosure-button, a.border.rounded-1 {
+  .btn-link.timeline-progressive-disclosure-button, a.border.rounded-1,
+  .Box:not([style*="background"]) {
     background: #181818 !important;
     border-color: #484848 !important;
   }
@@ -2149,7 +2155,8 @@
   .project-column, .btn.btn-outline, .js-notice > .border,
   .news .issues_labeled .border, table.pricing-table, .two-factor-steps,
   div.border.rounded-1, article.border.rounded-1,
-  .issues-listing .border-right.border-bottom.border-left {
+  .issues-listing .border-right.border-bottom.border-left,
+  .graph-before-activity-overview {
     background: #181818 !important;
   }
   .sidebar-module, .form-control,
@@ -2382,7 +2389,8 @@
     opacity: .75 !important;
   }
   /* contribution calendar/legend - regular colors */
-  .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#ebedf0"] {
+  .calendar-graph rect[fill="#ebedf0"], .contrib-legend li[style*="#ebedf0"],
+  .js-activity-overview-graph-container [fill="white"] {
     background-color: #222 !important;
     fill: #222 !important;
   }
@@ -3194,9 +3202,9 @@
   .oauth-application-info .meta-link, .oauth-application-info .app-info,
   .repo-file-upload-file-wrap .remove-file, .gcr-ext-editor-close svg,
   .commit-id, .orghead .edit-org, .signed-commit-badge,
-  .manage-member-meta-item .btn-link, .note, .delete-topic-button,
-  .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button,
-  .text-gray-light, .js-notice .octicon-x, a.footer-octicon:hover,
+  .manage-member-meta-item .btn-link, .note, .topic-tag-action .add-topic-button,
+  .topic-tag-action .remove-topic-button, .text-gray-light,
+  .js-notice .octicon-x, a.footer-octicon:hover,
   .table-of-contents .toc-diff-stats .octicon {
     color: #7b7b7b !important;
   }
@@ -3239,7 +3247,8 @@
   a.pagehead-heading, a.text-inherit, .boxed-group > h3 a,
   .boxed-group .heading a, .list-heading a, .table-list-milestones .stat a,
   .timeline-comment-header .js-comment-edit-history summary.text-gray,
-  .timeline-comment-header .js-comment-edit-history > .text-gray-light {
+  .timeline-comment-header .js-comment-edit-history > .text-gray-light,
+  .delete-topic-button {
     color: inherit !important;
   }
   /* Alerts and activity, remove background gradient */
