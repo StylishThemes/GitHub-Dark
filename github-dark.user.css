@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.68
+@version     1.20.69
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,10 +191,10 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.68 (2018-09-11) */
-  /* Repository: https://github.com/StylishThemes/GitHub-Dark    */
-  /* Userstyle:  http://userstyles.org/styles/37035              */
-  /* License:    https://creativecommons.org/licenses/by-sa/4.0/ */
+/*! Github Dark v1.20.69 (2018-09-16) */
+/*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
+/*! Userstyle:  http://userstyles.org/styles/37035              */
+/*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   /* Override default browser styles */
   button {
     color: #b5b5b5 !important;
@@ -995,8 +995,8 @@
   .manage-memberships-tabs-item, .pinned-repo-item .pinned-repository-handle,
   .diffstat-summary, .summary-stats li, .summary-stats li a, .labels-list-action,
   .label-characters-remaining, .mini-repo-list-item .repo-description,
-  .timeout h3, .numbers-summary a, .numbers-summary .nolink, .repository-meta,
-  .branch-infobar, .avatar-upload .upload-state p, .email-actions span.label,
+  .timeout h3, .numbers-summary a, .numbers-summary .nolink, .branch-infobar,
+  .avatar-upload .upload-state p, .email-actions span.label,
   .boxed-group .fork-flag, .oauth-app-info-container dl.keys dt,
   .oauth-app-info-container .user-count, .logo-upload-container .upload-state p,
   .logo-placeholder, .security-history .security-history-timestamp,
@@ -1016,7 +1016,7 @@
   .repo-access-add-team .team-description, .follow-list .follow-list-info,
   .pullquote, .subheader-nav-business .nav-item:hover, .MarketingBody > p,
   .MarketingBody blockquote, .MarketingBody ul, .MarketingBody ol,
-  .gist-snippet-meta .gist-count-links > li>a,
+  .DateNav .selected, .gist-snippet-meta .gist-count-links > li>a,
   .gist-revisions-list .gist-revision-meta {
     color: #949494 !important;
   }
@@ -1073,7 +1073,7 @@
   .developer-app-item .developer-app-name, .manage-repo-access-not-active,
   .manage-memberships-tabs-item.selected,
   .pinned-repo-checkbox:checked + .pinned-repo-name,
-  .repository-meta .edit-repository-meta label, .access-token .token-description,
+  .access-token .token-description,
   .access-token .credential-authorization-menu .status-heading, .token-scope,
   .shelf-dismiss .close-button:hover, .team-listing .is-open .expand-nested-team,
   .subheader-nav .nav-item.selected,
@@ -1609,7 +1609,7 @@
     text-shadow: none !important;
   }
   /* transparent background only */
-  body > pre, .textographic a.repo, .stars-browser .filter-bar,
+  table, body > pre, .textographic a.repo, .stars-browser .filter-bar,
   .highlight .file-diff-line:hover pre, .gravatar, .topsearch span.search-input,
   p.meta, .sidebar .milestone, .commit-desc pre, #facebox,
   .profilecols .filter-bar, .btn-group, div.content-header .search-form,
@@ -2432,6 +2432,15 @@
   }
   .header-search-key-slash {
     filter: grayscale(100%) contrast(1.5) !important;
+  }
+  /* Activity Overview on userpage */
+  .activity-overview-axis, .activity-overview-point {
+    stroke: /*[[base-color]]*/ !important;
+  }
+  #user-activity-overview .js-highlight-blob {
+    stroke: /*[[base-color]]*/ !important;
+    fill: /*[[base-color]]*/ !important;
+    opacity: .4 !important;
   }
   /* invert (rgb) */
   #header .logo, img[src="/images/logo@2x.png"], .site-logo a,
