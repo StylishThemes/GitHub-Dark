@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.69
+@version     1.20.70
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.69 (2018-09-16) */
+/*! Github Dark v1.20.70 (2018-09-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -213,10 +213,9 @@
   .oauth-org-access-details .oauth-org-item.on,
   .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
   .details-truncate-file-list .btn-truncate-file-list, table.files,
-  .qr-code-table .white, .btn-outline-transparent:hover,
-  .btn-outline-transparent:active, .TenYearNav-year.selected .TenYearNav-digits,
+  .qr-code-table .white, .TenYearNav-year.selected .TenYearNav-digits,
   .TenYearNav-year:hover .TenYearNav-digits,
-  .gist-snippet-meta .gist-count-links > li>a:hover, .gist-quicksearch-results,
+  .gist-snippet-meta .gist-count-links > li > a:hover, .gist-quicksearch-results,
   div#common-issues ul, .markdown-format img, .dropdown-menu,
   .btn-primary .counter, .bg-white, .card, .pagination > span {
     background: #181818 !important;
@@ -278,10 +277,10 @@
   .dashboards-overview-cards .blankslate, .file .image .border-wrap,
   .page-responsive .HeaderMenu--experiment, .MarketplaceSideNav,
   .news .alert .gravatar, .news .commits li img, .thread-subscription-status,
-  .orghead .edit-org:hover, .auto-search-group .spinner,
-  .migration-jumbotron-btn, .org-settings-updating, .manage-repo-access-group,
-  .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
-  .page-preview, .project-header,
+  .org-insights-cards .blankslate, .orghead .edit-org:hover,
+  .auto-search-group .spinner, .migration-jumbotron-btn, .org-settings-updating,
+  .manage-repo-access-group, .manage-memberships-tabs-item.selected,
+  .theme-picker, .theme-picker-spinner, .page-preview, .project-header,
   .projects-comment-form .comment-form-head .toolbar-commenting,
   .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
   .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
@@ -432,7 +431,10 @@
   .bg-purple, .State--purple, .discussion-item-merged .discussion-item-icon,
   .plan-choice--experiment.plan-choice--purple.open .plan-choice-icon,
   .plan-choice--experiment.plan-choice--purple.selected .plan-choice-icon,
-  .branch-action-state-merged .branch-action-icon, .btn-outline-purple:hover,
+  .branch-action-state-merged .branch-action-icon,
+  .org-insights-svg-tip .metric-3 .legend,
+  .org-insights-graph-canvas path.metric-3,
+  .org-insights-graph-canvas .metric-3 circle, .btn-outline-purple:hover,
   .btn-outline-purple:active, .btn-outline-purple.selected,
   [open] > .btn-outline-purple {
     background-color: #6e5494 !important;
@@ -470,7 +472,8 @@
     background-color: #261d08 !important;
   }
   /* auto-generated rule for "background: #0366d6" */
-  .suggester li[aria-selected="true"], .suggester li.navigation-focus,
+  .suggester li:hover, .suggester li[aria-selected="true"],
+  .suggester li.navigation-focus,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-suggestions-path,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
     background: /*[[base-color]]*/ !important;
@@ -511,7 +514,9 @@
   .issues-reset-query:hover .issues-reset-query-icon,
   a.task-progress:hover .progress-bar .progress, .reaction-sort-item:hover,
   .reaction-sort-item.selected:hover, .reaction-sort-item[aria-selected="true"],
-  .reaction-sort-item.navigation-focus, .audit-log-map,
+  .reaction-sort-item.navigation-focus, .org-insights-svg-tip .metric-0 .legend,
+  .org-insights-graph-canvas path.metric-0,
+  .org-insights-graph-canvas .metric-0 circle, .audit-log-map,
   .owner-select-target:hover, .owner-select-target:focus,
   .theme-selector-thumbnail.selected,
   .card-filter-autocomplete-dropdown [aria-selected="true"],
@@ -687,6 +692,7 @@
   /* auto-generated rule for "border-top-color: #fff" */
   .Popover-message--bottom:after, .Popover-message--bottom-right:after,
   .Popover-message--bottom-left:after, .select-menu-button.primary:after,
+  .org-insights-svg-tip:after,
   .session-device.session-current .sessions-more-info:after,
   .enterprise-mode .dropdown-caret {
     border-top-color: #181818 !important;
@@ -888,7 +894,7 @@
   .intgr-admin-link:hover .octicon, .listgroup-item:hover .link-small,
   .rule-type-conditions, .more-branches, .code-list .blob-num a:hover,
   .coupon-icon, .dashboard-notice .octicon-organization,
-  .dashboards-overview-cards .summary-stats .metric-2,
+  .dashboards-overview-cards .summary-stats .metric-1,
   .repo-snipit:hover .repo-snipit-name,
   .repo-snipit:hover .repo-snipit-description,
   .exploregrid-item:hover .exploregrid-item-title,
@@ -918,8 +924,7 @@
   .toolbar-commenting .dropdown-item:focus, .toolbar-item .menu-target:hover,
   .toolbar-item:hover, .toolbar-item .menu-target:focus, .toolbar-item:focus,
   .link-mktg:hover, .btn-outline-mktg:hover,
-  .illflow-blue .illflow-item .illflow-item-heading, .MarketingBody-lead a:hover,
-  .btn-outline-transparent:hover, .btn-outline-transparent:active {
+  .illflow-blue .illflow-item .illflow-item-heading, .MarketingBody-lead a:hover {
     color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "color: #586069" */
@@ -1016,7 +1021,7 @@
   .repo-access-add-team .team-description, .follow-list .follow-list-info,
   .pullquote, .subheader-nav-business .nav-item:hover, .MarketingBody > p,
   .MarketingBody blockquote, .MarketingBody ul, .MarketingBody ol,
-  .DateNav .selected, .gist-snippet-meta .gist-count-links > li>a,
+  .DateNav .selected, .gist-snippet-meta .gist-count-links > li > a,
   .gist-revisions-list .gist-revision-meta {
     color: #949494 !important;
   }
@@ -1530,6 +1535,9 @@
   }
   .marketplace-product-callout-bg {
     background-image: linear-gradient(to right, rgba(24, 24, 24, 0), #181818) !important;
+  }
+  .Box-body {
+    border-radius: inherit !important;
   }
   .markdown-body a:hover * {
     text-decoration: inherit !important;
@@ -3399,11 +3407,13 @@
   }
   .edit-comment-hide .flash.flash-warn {
     background: rgba(51, 34, 17, .4) !important;
+    border: 1px solid #542 !important;
+    color: #ddd !important;
+  }
+  .timeline-comment-group .edit-comment-hide .flash.flash-warn {
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
-    border-bottom: 1px solid #542 !important;
-    color: #ddd !important;
   }
   .warning {
     background: #321 !important;
