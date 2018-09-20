@@ -249,11 +249,11 @@ function parseRule(decls, rule) {
           if (ignoreSelectors.some(re => re.test(selector))) return;
 
           // stylistic tweaks
-          selector = selector.replace(/::/, ":");
-          selector = selector.replace(/\+/, " + ");
-          selector = selector.replace(/~/, " ~ ");
-          selector = selector.replace(/>/, " > ");
-          selector = selector.replace(/ {2,}/, " ");
+          selector = selector.replace(/::/g, ":");
+          selector = selector.replace(/\+/g, " + ");
+          selector = selector.replace(/~/g, " ~ ");
+          selector = selector.replace(/>/g, " > ");
+          selector = selector.replace(/ {2,}/g, " ");
 
           // add the new rule to our list, unless it's already on it
           if (!decls[mapping].includes(selector)) {
