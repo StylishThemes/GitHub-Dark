@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.70
+@version     1.20.71
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.70 (2018-09-20) */
+/*! Github Dark v1.20.71 (2018-09-26) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -212,8 +212,8 @@
   .getting-started .list-group-item, .MarketplaceEdit-body .menu-item.selected,
   .oauth-org-access-details .oauth-org-item.on,
   .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
-  .details-truncate-file-list .btn-truncate-file-list, table.files,
-  .qr-code-table .white, .TenYearNav-year.selected .TenYearNav-digits,
+  table.files, .qr-code-table .white,
+  .TenYearNav-year.selected .TenYearNav-digits,
   .TenYearNav-year:hover .TenYearNav-digits,
   .gist-snippet-meta .gist-count-links > li > a:hover, .gist-quicksearch-results,
   div#common-issues ul, .markdown-format img, .dropdown-menu,
@@ -237,7 +237,6 @@
   .payment-history .failed, .branch-group-heading,
   .search-autocomplete-dropdown .autocomplete-keyword-only, .tint-box,
   .MarketplaceEdit-body .menu-item:hover,
-  .details-truncate-file-list .btn-truncate-file-list:hover,
   table.files tr[aria-selected="true"] td, table.files tr.navigation-focus td,
   .team-member-ellipsis:hover, table.capped-list th,
   .gistsearch-aside .filter-list li span.bar,
@@ -266,7 +265,9 @@
   .new-discussion-timeline .composer .comment-form-head.tabnav,
   .discussion-timeline-actions, .pagination-loader-container, .dropdown-menu,
   .facebox-popup, .pagehead-tabs-item.selected, .reponav-item.selected,
-  .steps li.current, .select-menu-modal, .select-menu-tabs a.selected,
+  .steps li.current, .select-menu-modal,
+  .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tabs .select-menu-tab-nav.selected, .btn-blurple .Counter,
   .auth-form-body, .cvv-hint-tooltip, .credit-card.normal .signature,
   .billing-addon-items tr.total-row,
@@ -410,7 +411,8 @@
   .select-menu-item-parent[aria-selected="true"],
   .select-menu-item-parent[aria-selected="true"].selected, .topic-tag,
   .delete-topic-button, .topic-tag-action, .topic-tag-action .add-topic-button,
-  .topic-tag-action .remove-topic-button, .reaction-sort-item.selected,
+  .topic-tag-action .remove-topic-button,
+  .reaction-sort-item[aria-checked="true"],
   .pinned-repo-checkbox:checked + .pinned-repo-name, .project-column.moving,
   .project-card.moving, .pinned-repo-item.is-dragging,
   .pinned-repo-item.sortable-ghost,
@@ -499,6 +501,8 @@
   .select-menu-item.navigation-focus.selected,
   .select-menu-item.navigation-focus.select-menu-action,
   .select-menu-item.navigation-focus .description-inline,
+  .select-menu-item[aria-checked="true"]:focus,
+  .select-menu-item[aria-checked="true"]:hover,
   .select-menu-item[aria-selected="true"],
   .select-menu-item[aria-selected="true"].selected,
   .select-menu-item[aria-selected="true"].select-menu-action,
@@ -512,9 +516,8 @@
   .CommunityTemplate-highlight--focus, .newsletter-frequency-choice:hover h3,
   .notification-indicator:hover .mail-status,
   .issues-reset-query:hover .issues-reset-query-icon,
-  a.task-progress:hover .progress-bar .progress, .reaction-sort-item:hover,
-  .reaction-sort-item.selected:hover, .reaction-sort-item[aria-selected="true"],
-  .reaction-sort-item.navigation-focus, .org-insights-svg-tip .metric-0 .legend,
+  a.task-progress:hover .progress-bar .progress, .reaction-sort-item:focus,
+  .reaction-sort-item:hover, .org-insights-svg-tip .metric-0 .legend,
   .org-insights-graph-canvas path.metric-0,
   .org-insights-graph-canvas .metric-0 circle, .audit-log-map,
   .owner-select-target:hover, .owner-select-target:focus,
@@ -556,7 +559,7 @@
   .comment-form-error, .comment-form-stale, .full-commit, .dropdown-menu,
   .select-menu-modal, .RecentBranches,
   .page-responsive .HeaderMenu--experiment .dropdown-menu,
-  .shelf-dismiss .close-button {
+  .pull-request-review-menu, .shelf-dismiss .close-button {
     border-color: rgba(225, 225, 225, .2) !important;
   }
   /* auto-generated rule for "border: 2px solid #fff" */
@@ -581,7 +584,9 @@
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border-color: #dfe2e5" */
-  .select-menu-tabs a.selected, .select-menu-tabs .select-menu-tab-nav.selected {
+  .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs .select-menu-tab-nav.selected {
     border-color: #484848 !important;
   }
   /* auto-generated rule for "border-bottom-color: #e36209" */
@@ -678,7 +683,9 @@
     border-left-color: #222 !important;
   }
   /* auto-generated rule for "border-bottom-color: #fff" */
-  .review-summary:after, .dropdown-menu:after, .select-menu-tabs a.selected,
+  .review-summary:after, .dropdown-menu:after,
+  .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tabs .select-menu-tab-nav.selected, .gist-banner,
   .version-picker:after {
     border-bottom-color: #181818 !important;
@@ -955,8 +962,9 @@
   .dropdown-header, .facebox-footer .help, .keyboard-mappings .keys,
   .org-privileges-tour-dismiss, .list-group-item .list-group-item-summary a,
   .pagehead-tabs-item, .repohead h1, .reponav-item, .steps .complete,
-  .select-menu-modal, .select-menu-item.selected .description,
-  .select-menu-no-results, .select-menu-item-text .description,
+  .select-menu-modal, .select-menu-item[aria-checked="true"] .description,
+  .select-menu-item.selected .description, .select-menu-no-results,
+  .select-menu-item-text .description,
   .select-menu-item-text .description-inline, .marketing .pagehead p,
   .hanging-icon-list .octicon, .intgrs-lstng-item-description,
   .intgr-admin-link .octicon, .credit-card .cvv span,
@@ -1053,8 +1061,11 @@
   .prose-diff.collapsed .rich-diff-level-zero.expandable:only-child:hover:before,
   .radio-label, .select-menu-header .select-menu-title, .select-menu-divider,
   .select-menu-tabs a:hover, .select-menu-tabs .select-menu-tab-nav:hover,
-  .select-menu-tabs a.selected, .select-menu-tabs .select-menu-tab-nav.selected,
-  .select-menu-blankslate h3, .select-menu-item.selected,
+  .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
+  .select-menu-tabs .select-menu-tab-nav.selected, .select-menu-blankslate h3,
+  .select-menu-item[aria-checked="true"], .select-menu-item.selected,
+  .select-menu-item[aria-checked="true"] > .octicon,
   .select-menu-item.selected > .octicon,
   .select-menu-item-parent.navigation-focus,
   .select-menu-item-parent.navigation-focus.selected,
@@ -1201,9 +1212,10 @@
   .pagehead-tabs-item.selected > .octicon, .reponav-item.selected > .octicon,
   .reponav-wrapper .reponav-item .Counter,
   .select-menu .select-menu-clear-item .octicon, .select-menu-item,
-  .select-menu-item[aria-checked="true"] .octicon-check,
   .select-menu-item input:checked + .octicon-check,
+  .select-menu-item[aria-checked="true"] .octicon-check,
   .select-menu-item.selected .octicon-check,
+  .select-menu-item[aria-checked="true"] .select-menu-item-text .octicon-x,
   .select-menu-item.selected .select-menu-item-text .octicon-x,
   .select-menu-item a, .select-menu-action > .octicon,
   .integrations-install-target [aria-selected="true"].octicon-lock,
@@ -2112,8 +2124,9 @@
     filter: none !important;
   }
   .timeline-comment:target .review-summary:before {
-    border-bottom-color: /*[[base-color]]*/ !important;
-    top: -20px !important;
+    border-bottom-color: rgba(65, 131, 196, .4) !important;
+    border-bottom-color: rgba(/*[[base-color-rgb]]*/, .4) !important;
+    top: -19.75px !important;
     filter: none !important;
   }
   #readme .plain, .readme .markdown-body, .readme .plain, .pull-request-composer,
@@ -2121,7 +2134,7 @@
   .merge-pr-more-commits, .coupons .coupon-form-body, .manage-repo-access-group,
   .saved-reply-form, .orghead .edit-org:hover, .octotree_views, .simple-box,
   .btn-link.timeline-progressive-disclosure-button, a.border.rounded-1,
-  .Box:not([style*="background"]) {
+  .Box:not([style*="background"]), .octotree_sidebar .octotree_bottom {
     background: #181818 !important;
     border-color: #484848 !important;
   }
