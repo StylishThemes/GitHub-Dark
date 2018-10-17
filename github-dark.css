@@ -17,10 +17,12 @@
   .details-overlay[open] > .dropdown-item:hover,
   .discussion-timeline.team-discussion-timeline .blankslate, ul.comparison-list,
   .tint-box.transparent, .dashboard-notice .coupon,
-  .getting-started .list-group-item, .MarketplaceEdit-body .menu-item.selected,
+  .getting-started .list-group-item, .topic-tag-outline,
+  .MarketplaceEdit-body .menu-item.selected,
   .oauth-org-access-details .oauth-org-item.on,
   .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
-  table.files, .qr-code-table .white,
+  table.files, .qr-code-table .white, .action-card:after,
+  .action-card-controls:before, .actions-bg-mask,
   .TenYearNav-year.selected .TenYearNav-digits,
   .TenYearNav-year:hover .TenYearNav-digits,
   .gist-snippet-meta .gist-count-links > li > a:hover, .gist-quicksearch-results,
@@ -46,7 +48,8 @@
   .search-autocomplete-dropdown .autocomplete-keyword-only, .tint-box,
   .MarketplaceEdit-body .menu-item:hover,
   table.files tr[aria-selected="true"] td, table.files tr.navigation-focus td,
-  .team-member-ellipsis:hover, table.capped-list th,
+  .team-member-ellipsis:hover, table.capped-list th, .action-card:before,
+  .action-card:after, .action-card-header:before,
   .gistsearch-aside .filter-list li span.bar,
   .gist-quicksearch-results .gist-quicksearch-result-header {
     background: #202020 !important;
@@ -132,7 +135,7 @@
   .btn-outline:disabled:hover, .card, table, [class*=btn-outline].disabled,
   [class*=btn-outline].disabled:hover, [class*=btn-outline]:disabled,
   [class*=btn-outline]:disabled:hover, .btn-outline-white:active,
-  .btn-outline-white:hover, .version-picker, .homepage-jumbotron,
+  .btn-outline-white:hover, .site-header-nav .dropdown-menu, .homepage-jumbotron,
   .libraries-jumbotron, .sidebar-menu, .content table tr {
     background-color: #181818 !important;
   }
@@ -284,7 +287,8 @@
   .suggester li:hover, .suggester li[aria-selected="true"],
   .suggester li.navigation-focus,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-suggestions-path,
-  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path {
+  .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
+  .action-card-icon, .action-card-controls:after {
     background: /*[[base-color]]*/ #4183c4 !important;
   }
   /* auto-generated rule for "background-color: #0366d6" */
@@ -318,8 +322,6 @@
   .plan-choice--experiment.plan-choice--blue.selected .plan-choice-icon,
   .search-autocomplete-dropdown .navigation-item[aria-selected="true"],
   .search-autocomplete-dropdown .navigation-item.navigation-focus,
-  .comment-apps-container .comment-app-details[open] > .comment-app,
-  .comment-apps .select-menu .select-menu-button.selected,
   .CommunityTemplate-highlight--focus, .newsletter-frequency-choice:hover h3,
   .notification-indicator:hover .mail-status,
   .issues-reset-query:hover .issues-reset-query-icon,
@@ -369,8 +371,9 @@
     border-color: rgba(225, 225, 225, .2) !important;
   }
   /* auto-generated rule for "border: 2px solid #fff" */
-  .discussion-item-icon, .pending-cards-status,
-  .release-timeline-tags .tag-timeline-date:after {
+  .discussion-item-icon,
+  .org-insights-cards .repository-lang-stats-graph .language-color,
+  .pending-cards-status, .release-timeline-tags .tag-timeline-date:after {
     border-color: #222 !important;
   }
   /* auto-generated rule for "border: solid #ddd" */
@@ -526,7 +529,7 @@
   .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
   .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tabs .select-menu-tab-nav.selected, .gist-banner,
-  .version-picker:after {
+  .site-header-nav .dropdown-menu:after {
     border-bottom-color: #181818 !important;
   }
   /* auto-generated rule for "border-left-color: #fff" */
@@ -540,7 +543,8 @@
   .Popover-message--bottom-left:after, .select-menu-button.primary:after,
   .org-insights-svg-tip:after,
   .session-device.session-current .sessions-more-info:after,
-  .enterprise-mode .dropdown-caret {
+  .enterprise-mode .dropdown-caret,
+  .site-header-nav .dropdown-button .enterprise-mode .dropdown-caret {
     border-top-color: #181818 !important;
   }
   /* auto-generated rule for "border-right-color: #fff" */
@@ -599,7 +603,7 @@
   .protip-callout, .render-notice, .select-menu-header .close-button:hover,
   .select-menu-header .octicon:hover, .select-menu-action,
   table.capped-list .octicon, .illflow-item .illflow-item-heading,
-  .markdown-format kbd {
+  .action-card-syntax, .markdown-format kbd {
     color: #b5b5b5 !important;
   }
   /* auto-generated rule for "color: #666" */
@@ -936,8 +940,7 @@
   .shelf-dismiss .close-button:hover, .team-listing .is-open .expand-nested-team,
   .subheader-nav .nav-item.selected,
   .illflow-item.selected .illflow-item-heading,
-  .MarketingBody-lead > p:first-child, .dropdown-menu a.active,
-  .version-picker a.active {
+  .MarketingBody-lead > p:first-child, .site-header-nav .dropdown-menu a.active {
     color: #c0c0c0 !important;
   }
   /* auto-generated rule for "color: #cb2431" */
@@ -2765,8 +2768,7 @@
   .date-selector td.selectable-day:hover, .subnav-item:hover, .subnav-item:focus,
   .owner-select-target:hover, .owner-select-target:focus,
   .suggester li.navigation-focus, .suggester li.navigation-focus small,
-  .intgrs-lstng-categories a:hover,
-  .topic-tag-action .add-topic-button:hover,
+  .intgrs-lstng-categories a:hover, .topic-tag-action .add-topic-button:hover,
   .topic-tag-action .remove-topic-button:hover,
   .discussion-item-changes-marker.is-unread .discussion-item-icon,
   .toc-select .navigation-focus *, .suggester li[aria-selected="true"],
@@ -2778,8 +2780,8 @@
   ul.filter-list .filter-item.selected,
   .select-menu-item:hover .octicon-link-external,
   .select-menu-item.navigation-focus > .octicon,
-  .select-menu-item[aria-selected="true"] > .octicon,
-  .text-white, .octicon.text-white {
+  .select-menu-item[aria-selected="true"] > .octicon, .text-white,
+  .octicon.text-white {
     color: #efefef !important;
   }
   .btn.btn-primary, .button.primary, .minibutton.primary,
@@ -3682,8 +3684,7 @@
     color: #888 !important;
   }
   /* git diff line additions (dark green) */
-  .blob-code-addition,
-  .prose-diff .changed ins, .prose-diff .changed ins code,
+  .blob-code-addition, .prose-diff .changed ins, .prose-diff .changed ins code,
   .prose-diff .changed ins pre, .prose-diff .changed .added,
   .prose-diff > .markdown-body ins pre, .prose-diff > .markdown-body ins code,
   .prose-diff > .markdown-body ins > div, .prose-diff > .markdown-body ins > p {
@@ -3694,8 +3695,7 @@
     background: #0a320a !important;
   }
   /* git diff line deletions (dark red) */
-  .blob-code-deletion,
-  .prose-diff > .markdown-body .changed del,
+  .blob-code-deletion, .prose-diff > .markdown-body .changed del,
   .prose-diff > .markdown-body .changed del pre,
   .prose-diff > .markdown-body .changed del code,
   .prose-diff > .markdown-body .changed del > div,
