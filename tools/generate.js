@@ -81,6 +81,9 @@ const mappings = {
 
   "border-left-color: #f6f8fa": "border-left-color: #222",
 
+  "border-left: solid 2px #e6ebf1": "border-left: solid 2px #343434",
+  "border-bottom: solid 2px #e6ebf1": "border-bottom: solid 2px #343434",
+
   "border-bottom-color: #fff": "border-bottom-color: #181818",
   "border-left-color: #fff": "border-left-color: #181818",
   "border-top-color: #fff": "border-top-color: #181818",
