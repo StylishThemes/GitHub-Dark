@@ -110,13 +110,13 @@ const mappings = {
   // Color / Background
   // ==========================================================================
 
-  "color: #3c4146": "color: #c0c0c0",
-  "color: #444d56": "color: #b5b5b5",
-  "color: #666"   : "color: #949494",
-  "color: #6a737d": "color: #949494",
-  "color: #959da5": "color: #7b7b7b",
-  "color: #a3aab1": "color: #606060",
-  "color: #c6cbd1": "color: #4d4d4d",
+  "color: #3c4146": "color: #bababa",
+  "color: #444d56": "color: #afafaf",
+  "color: #666"   : "color: #8e8e8e",
+  "color: #6a737d": "color: #8e8e8e",
+  "color: #959da5": "color: #757575",
+  "color: #a3aab1": "color: #5a5a5a",
+  "color: #c6cbd1": "color: #474747",
   "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
 
   // needs to be after #333 for .btn vs .btn-outline
