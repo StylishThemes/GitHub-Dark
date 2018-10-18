@@ -34,11 +34,7 @@ const mappings = {
 
   // Colors *after* grey scale
   "background-color: #2cbe4e": "background-color: #163",
-  "background-color: #6f42c1": "background-color: #6e5494",
-  "background-color: #cb2431": "background-color: #911",
-  "background-color: #d73a49": "background-color: #911",
   "background-color: #dbedff": "background-color: #182030",
-  "background-color: #fff5b1": "background-color: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "background: #0366d6": "background: /*[[base-color]]*/ #4183c4",
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4183c4 !important; color: #fff",
@@ -111,7 +107,7 @@ const mappings = {
   "box-shadow: 0 0 0 0.2em rgba(203,36,49,0.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   // ==========================================================================
-  // Color
+  // Color / Background
   // ==========================================================================
 
   "color: #3c4146": "color: #c0c0c0",
@@ -132,18 +128,27 @@ const mappings = {
 
   // red
   "color: #cb2431": "color: #f44",
+  "background-color: #d73a49": "background-color: #f44",
+  "background-color: #cb2431": "background-color: #911",
 
   // orange
   "color: #a04100": "color: #f3582c",
+  "background-color: #d15704": "background-color: #f3582c",
 
   // green
   "color: #28a745": "color: #6cc644",
+  "background-color: #28a745": "background-color: #6cc644",
 
   // yellow
   "color: #b08800": "color: #cb4",
+  "background-color: #ffd33d": "background-color: #cb4",
+
+  // light yellow
+  "background-color: #fff5b1": "background-color: #651",
 
   // purple
   "color: #6f42c1": "color: #8368aa",
+  "background-color: #6f42c1": "background-color: #8368aa",
 
   "color: inherit": "color: inherit",
 };
