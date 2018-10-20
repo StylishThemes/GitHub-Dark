@@ -87,8 +87,7 @@
   .checks-index-item.selected, .documentation-results a, .select-menu-item,
   .coupons .coupon-form-body, .dashboards-overview-cards .blankslate,
   .file .image .border-wrap, .MarketplaceSideNav, .news .alert .gravatar,
-  .news .commits li img, .thread-subscription-status,
-  .org-insights-cards .blankslate, .orghead .edit-org:hover,
+  .news .commits li img, .thread-subscription-status, .orghead .edit-org:hover,
   .auto-search-group .spinner, .migration-jumbotron-btn, .org-settings-updating,
   .manage-repo-access-group, .manage-memberships-tabs-item.selected,
   .theme-picker, .theme-picker-spinner, .page-preview, .project-header,
@@ -297,7 +296,6 @@
   .reaction-sort-item:hover, .org-insights-svg-tip .metric-0 .legend,
   .org-insights-graph-canvas path.metric-0,
   .org-insights-graph-canvas .metric-0 circle, .audit-log-map,
-  .owner-select-target:hover, .owner-select-target:focus,
   .theme-selector-thumbnail.selected,
   .card-filter-autocomplete-dropdown [aria-selected="true"],
   .card-filter-autocomplete-dropdown .navigation-focus,
@@ -371,7 +369,8 @@
     border-color: #484848 !important;
   }
   /* auto-generated rule for "border-bottom-color: #e36209" */
-  .UnderlineNav-item.selected {
+  .UnderlineNav-item.selected,
+  .org-insights-cards [role=tab][aria-selected=true] {
     border-bottom-color: #eee !important;
   }
   /* auto-generated rule for "border-bottom: 1px solid #dfe2e5" */
@@ -540,7 +539,9 @@
   }
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
-  .form-select:focus, .timeline-comment-group:target .timeline-comment,
+  .form-select:focus,
+  .timeline-comment-group[aria-selected="true"] .timeline-comment,
+  .targetable-comment-container-nojs.timeline-comment-group:target .timeline-comment,
   .plan-choice--experiment.plan-choice--blue.open,
   .plan-choice--experiment.plan-choice--blue.selected, .project-column:focus,
   .project-card:focus, .TenYearNav-year.blue {
@@ -553,8 +554,12 @@
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 0.2em #c8e1ff" */
-  .timeline-comment-group:target .timeline-comment, .review-comment:target,
-  .timeline-comment:target .review-summary {
+  .timeline-comment-group[aria-selected="true"] .timeline-comment,
+  .targetable-comment-container-nojs.timeline-comment-group:target .timeline-comment,
+  .review-comment[aria-selected="true"],
+  .targetable-comment-container-nojs.review-comment:target,
+  .timeline-comment[aria-selected="true"] .review-summary,
+  .targetable-comment-container-nojs.timeline-comment:target .review-summary {
     box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
@@ -649,11 +654,12 @@
   .oauth-permissions-details.none .access-details,
   .oauth-permissions-details.none .permission-title,
   .oauth-application-whitelist .edit-link, .oauth-application-info .app-info,
-  .developer-app-item .developer-app-list-meta, .export-actions a,
-  .owner-select-target.disabled, .owner-select-target.disabled .user-mention,
-  .pinned-repo-name, .vcard-detail .octicon, .member-badge .octicon,
-  .user-profile-bio, .profile-timeline-card .issue-meta-section .octicon,
-  .profile-rollup-toggle, .mini-repo-list-item .stars, .numbers-summary .octicon,
+  .developer-app-item .developer-app-list-meta,
+  .org-insights-cards [role=tab][aria-selected=true] .UnderlineNav-octicon,
+  .export-actions a, .pinned-repo-name, .vcard-detail .octicon,
+  .member-badge .octicon, .user-profile-bio,
+  .profile-timeline-card .issue-meta-section .octicon, .profile-rollup-toggle,
+  .mini-repo-list-item .stars, .numbers-summary .octicon,
   table.files td .simplified-path, table.files td.message,
   table.files td.message a, table.files td.age,
   .settings-email .email-actions .settings-remove-email.settings-disabled-remove-email,
@@ -786,8 +792,9 @@
   .dropdown-header, .facebox-footer .help, .keyboard-mappings .keys,
   .org-privileges-tour-dismiss, .list-group-item .list-group-item-summary a,
   .pagehead-tabs-item, .repohead h1, .reponav-item, .steps .complete,
-  .select-menu-modal, .select-menu-item[aria-checked="true"] .description,
-  .select-menu-item[aria-selected="true"] .description,
+  .select-menu-modal,
+  details-menu .select-menu-item[aria-checked="true"] .description,
+  details-menu .select-menu-item[aria-selected="true"] .description,
   .select-menu-item.selected .description, .select-menu-no-results,
   .select-menu-item-text .description,
   .select-menu-item-text .description-inline, .marketing .pagehead p,
@@ -887,10 +894,11 @@
   .select-menu-tabs a[aria-selected="true"], .select-menu-tabs a.selected,
   .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
   .select-menu-tabs .select-menu-tab-nav.selected, .select-menu-blankslate h3,
-  .select-menu-item[aria-checked="true"],
-  .select-menu-item[aria-selected="true"], .select-menu-item.selected,
-  .select-menu-item[aria-checked="true"] > .octicon,
-  .select-menu-item[aria-selected="true"] > .octicon,
+  details-menu .select-menu-item[aria-checked="true"],
+  details-menu .select-menu-item[aria-selected="true"],
+  .select-menu-item.selected,
+  details-menu .select-menu-item[aria-checked="true"] > .octicon,
+  details-menu .select-menu-item[aria-selected="true"] > .octicon,
   .select-menu-item.selected > .octicon,
   .select-menu-item-parent.navigation-focus,
   .select-menu-item-parent.navigation-focus.selected,
@@ -911,8 +919,9 @@
   .oauth-org-access-details .oauth-org-item.on strong,
   .oauth-application-whitelist .request-info strong,
   .oauth-application-info .application-title,
-  .developer-app-item .developer-app-name, .manage-repo-access-not-active,
-  .manage-memberships-tabs-item.selected,
+  .developer-app-item .developer-app-name,
+  .org-insights-cards [role=tab][aria-selected=true],
+  .manage-repo-access-not-active, .manage-memberships-tabs-item.selected,
   .pinned-repo-checkbox:checked + .pinned-repo-name,
   .access-token .token-description,
   .access-token .credential-authorization-menu .status-heading, .token-scope,
@@ -1097,11 +1106,11 @@
   .reponav-wrapper .reponav-item .Counter,
   .select-menu .select-menu-clear-item .octicon, .select-menu-item,
   .select-menu-item input:checked + .octicon-check,
-  .select-menu-item[aria-checked="true"] .octicon-check,
-  .select-menu-item[aria-selected="true"] .octicon-check,
+  details-menu .select-menu-item[aria-checked="true"] .octicon-check,
+  details-menu .select-menu-item[aria-selected="true"] .octicon-check,
   .select-menu-item.selected .octicon-check,
-  .select-menu-item[aria-checked="true"] .select-menu-item-text .octicon-x,
-  .select-menu-item[aria-selected="true"] .select-menu-item-text .octicon-x,
+  details-menu .select-menu-item[aria-checked="true"] .select-menu-item-text .octicon-x,
+  details-menu .select-menu-item[aria-selected="true"] .select-menu-item-text .octicon-x,
   .select-menu-item.selected .select-menu-item-text .octicon-x,
   .select-menu-item a, .select-menu-action > .octicon,
   .integrations-install-target [aria-selected="true"].octicon-lock,
