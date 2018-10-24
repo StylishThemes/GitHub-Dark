@@ -57,8 +57,8 @@ const mappings = {
   "border-color: #dfe2e5": "border-color: #484848",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
+  "border-bottom: 1px solid #f8f8f8": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
-  "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #484848",
 
   "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
   "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
@@ -69,6 +69,11 @@ const mappings = {
   "border-bottom: 1px solid #eaecef": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #eaecef": "border-left: 1px solid #343434",
   "border-right: 1px solid #eaecef": "border-right: 1px solid #343434",
+
+  "border-top: 1px solid #ddd": "border-top: 1px solid #343434",
+  "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #343434",
+  "border-left: 1px solid #ddd": "border-left: 1px solid #343434",
+  "border-right: 1px solid #ddd": "border-right: 1px solid #343434",
 
   "border-top-color: rgba(27,31,35,0.15)": "border-top-color: #343434",
   "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
@@ -140,6 +145,7 @@ const mappings = {
   "background-color: #28a745": "background-color: #6cc644",
 
   // yellow
+  "color: rgba(47,38,6,0.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "background-color: #ffd33d": "background-color: #cb4",
 
