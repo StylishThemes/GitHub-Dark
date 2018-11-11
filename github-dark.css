@@ -3320,13 +3320,20 @@
   .state-indicator.renamed, .discussion-topic .branch-status.status-pending,
   .discussion-item-review.is-pending .file-header,
   .discussion-item-review.is-pending .comment-form-head.tabnav,
-  .stale-session-flash.flash.flash-warn {
+  .stale-session-flash.flash.flash-warn,
+  .timeline-comment.unread-item .timeline-comment-header {
     background-color: #261d08 !important;
     border-color: #542 !important;
     color: #ddd !important;
   }
-  .discussion-item-review.is-pending .file {
+  .discussion-item-review.is-pending .file, .timeline-comment.unread-item {
     border-color: #542 !important;
+  }
+  .timeline-comment-wrapper .timeline-comment.unread-item:before {
+    border-right-color: #542 !important;
+  }
+  .timeline-comment-wrapper .timeline-comment.unread-item:after {
+    border-right-color: #261d08 !important;
   }
   #toc .octicon-diff-modified, .secret .repo-label span, .api .s2 {
     color: #b74 !important;
