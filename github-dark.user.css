@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.79
+@version     1.20.80
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.79 (2018-11-02) */
+/*! Github Dark v1.20.80 (2018-11-11) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -3352,7 +3352,7 @@
   .manage-member-meta-item .btn-link, .note, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .text-gray-light,
   .js-notice .octicon-x, a.footer-octicon:hover,
-  .table-of-contents .toc-diff-stats .octicon, .octicon.unsaved-notification {
+  .table-of-contents .toc-diff-stats .octicon {
     color: #757575 !important;
   }
   .branch-infobar .lightweight-actions > li .octicon,
@@ -3378,6 +3378,9 @@
   .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon,
   a.footer-octicon {
     color: #474747 !important;
+  }
+  .notification-actions .unsaved-notification {
+    color: #404040 !important;
   }
   .list-tip:before, .selector-item .mini-icon:before,
   .browser .mini-icon-arr-right, .selected .select-menu-checkmark,
@@ -3509,13 +3512,20 @@
   .state-indicator.renamed, .discussion-topic .branch-status.status-pending,
   .discussion-item-review.is-pending .file-header,
   .discussion-item-review.is-pending .comment-form-head.tabnav,
-  .stale-session-flash.flash.flash-warn {
+  .stale-session-flash.flash.flash-warn,
+  .timeline-comment.unread-item .timeline-comment-header, .Label.bg-yellow {
     background-color: #261d08 !important;
     border-color: #542 !important;
     color: #ddd !important;
   }
-  .discussion-item-review.is-pending .file {
+  .discussion-item-review.is-pending .file, .timeline-comment.unread-item {
     border-color: #542 !important;
+  }
+  .timeline-comment-wrapper .timeline-comment.unread-item:before {
+    border-right-color: #542 !important;
+  }
+  .timeline-comment-wrapper .timeline-comment.unread-item:after {
+    border-right-color: #261d08 !important;
   }
   #toc .octicon-diff-modified, .secret .repo-label span, .api .s2 {
     color: #b74 !important;
