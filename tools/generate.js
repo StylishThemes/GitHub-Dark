@@ -176,8 +176,8 @@ const ignoreSelectors = [
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
   /:not\(li\.moved\)/,
-  /^.Popover-message::before$/,
-  /^.Popover-message::after$/,
+  /^.Popover-message:before$/,
+  /^.Popover-message:after$/,
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
