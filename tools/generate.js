@@ -48,7 +48,7 @@ const mappings = {
 
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
-  "border: 1px solid rgba(27,31,35,0.15)": "border-color: rgba(225,225,225,0.2)",
+  "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(225,225,225,0.2)",
   "border: 2px solid #fff": "border-color: #222",
   "border: solid #ddd": "border-color: #484848",
 
@@ -75,10 +75,10 @@ const mappings = {
   "border-left: 1px solid #ddd": "border-left: 1px solid #343434",
   "border-right: 1px solid #ddd": "border-right: 1px solid #343434",
 
-  "border-top-color: rgba(27,31,35,0.15)": "border-top-color: #343434",
-  "border-bottom-color: rgba(27,31,35,0.15)": "border-bottom-color: #343434",
-  "border-left-color: rgba(27,31,35,0.15)": "border-left-color: #343434",
-  "border-right-color: rgba(27,31,35,0.15)": "border-right-color: #343434",
+  "border-top-color: rgba(27,31,35,.15)": "border-top-color: #343434",
+  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: #343434",
+  "border-left-color: rgba(27,31,35,.15)": "border-left-color: #343434",
+  "border-right-color: rgba(27,31,35,.15)": "border-right-color: #343434",
 
   "border-left-color: #f6f8fa": "border-left-color: #222",
 
@@ -91,7 +91,7 @@ const mappings = {
   "border-right-color: #fff": "border-right-color: #181818",
 
   "border-top: 7px solid #fff": "border-top: 7px solid #181818",
-  "border-top: 8px solid rgba(27,31,35,0.15)": "border-top: 8px solid #343434",
+  "border-top: 8px solid rgba(27,31,35,.15)": "border-top: 8px solid #343434",
 
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
 
@@ -99,17 +99,17 @@ const mappings = {
   // Box-Shadow
   // ==========================================================================
 
-  "box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3)": `
+  "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
      box-shadow: 0 0 0 .2em rgba(65,131,196,.4) !important;
      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
   `,
 
-  "box-shadow: 0 0 0 0.2em #c8e1ff": `
+  "box-shadow: 0 0 0 .2em #c8e1ff": `
      box-shadow: 0 0 0 .2em rgba(65,131,196,.4) !important;
      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
   `,
 
-  "box-shadow: 0 0 0 0.2em rgba(203,36,49,0.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
+  "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   // ==========================================================================
   // Color / Background
@@ -122,7 +122,7 @@ const mappings = {
   "color: #959da5": "color: #757575",
   "color: #a3aab1": "color: #5a5a5a",
   "color: #c6cbd1": "color: #474747",
-  "color: rgba(27,31,35,0.85)": "color: rgba(230,230,230,.85)",
+  "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
 
   // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
@@ -145,7 +145,7 @@ const mappings = {
   "background-color: #28a745": "background-color: #6cc644",
 
   // yellow
-  "color: rgba(47,38,6,0.5)": "color: #cb4",
+  "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "background-color: #ffd33d": "background-color: #cb4",
 
