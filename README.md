@@ -28,7 +28,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 📦 [Install the usercss](https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css) which supports automatic updates.<br>
 📦 [Install GitHub-Dark Script](https://stylishthemes.github.io/GitHub-Dark-Script/github-dark-script.user.js) which supports automatic updates and live customization. Refer to its [README](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
-📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates.<br>
+📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates (**Updates not processing** for an unknown reason).<br>
 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.<br>
 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
