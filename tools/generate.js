@@ -36,8 +36,8 @@ const mappings = {
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #dbedff": "background-color: #182030",
   "background-color: #fffbdd": "background-color: #261d08",
-  "background: #0366d6": "background: /*[[base-color]]*/ #4183c4",
-  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4183c4 !important; color: #fff",
+  "background: #0366d6": "background: /*[[base-color]]*/ #538fca",
+  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #538fca !important; color: #fff",
 
   "background: #dbedff": "background: #273045",
   "background: #fffbdd": "background: #261d08",
@@ -92,7 +92,7 @@ const mappings = {
   "border-top: 7px solid #fff": "border-top: 7px solid #181818",
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top: 8px solid #343434",
 
-  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4183c4",
+  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #538fca",
 
   // ==========================================================================
   // Box-Shadow
@@ -124,7 +124,7 @@ const mappings = {
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
 
   // needs to be after #333 for .btn vs .btn-outline
-  "color: #0366d6": "color: /*[[base-color]]*/ #4183c4",
+  "color: #0366d6": "color: /*[[base-color]]*/ #538fca",
   // needs to be after #0366d3 for .btn-link vs .text-gray
   "color: #586069": "color: #949494",
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
