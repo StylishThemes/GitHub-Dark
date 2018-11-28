@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.84
+@version     1.20.85
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.84 (2018-11-19) */
+/*! Github Dark v1.20.85 (2018-11-28) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -524,10 +524,9 @@
   /* auto-generated rule for "border: 1px solid rgba(27,31,35,.15)" */
   .flash, .Label--outline, .boxed-group .heading, .boxed-group > h3,
   .comment-form-error, .comment-form-stale, .full-commit, .dropdown-menu,
-  .select-menu-modal, .RecentBranches,
-  .page-responsive .HeaderMenu--logged-out .dropdown-menu,
-  .pull-request-review-menu, .pull-request-suggested-changes-menu,
-  .shelf-dismiss .close-button, .site-header-nav .dropdown-menu {
+  .select-menu-modal, .RecentBranches, .pull-request-review-menu,
+  .pull-request-suggested-changes-menu, .shelf-dismiss .close-button,
+  .site-header-nav .dropdown-menu {
     border-color: rgba(225, 225, 225, .2) !important;
   }
   /* auto-generated rule for "border: 2px solid #fff" */
@@ -1353,7 +1352,7 @@
   table.files .octicon-file-submodule, .header-logo-invertocat:hover,
   .notification-indicator:hover, .btn.btn-outline,
   .full-commit .btn-outline:not(:disabled):hover, .markdown-body a strong,
-  .markdown-format a strong {
+  .markdown-format a strong, .notifications.list-group a:hover {
     color: /*[[base-color]]*/ !important;
   }
   /* Base color panel */
@@ -1472,8 +1471,8 @@
   input.focus[type="email"], input[type="email"]:focus,
   input.focus[type="number"], input[type="number"]:focus,
   input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
-  input[type="url"]:focus, textarea.focus, textarea:focus, #q:focus ~ button,
-  input.color-editor-input:focus, #ghd-settings select:focus,
+  input.form-control[type="url"]:focus, textarea.focus, textarea:focus,
+  #q:focus ~ button, input.color-editor-input:focus, #ghd-settings select:focus,
   #ghd-settings input:focus, .intgrs-lstng-item:hover,
   .ajax-pagination-btn:focus, .form-control.focus, .form-select.focus,
   .form-select:focus, input[type="checkbox"]:focus, .upload-enabled.focused,
@@ -2728,10 +2727,12 @@
     fill: #444 !important;
   }
   .features-branch-diagram path[stroke="#c6d9ed"],
-  .features-branch-diagram path[stroke="#4182C4"] {
+  .features-branch-diagram path[stroke="#4182C4"],
+  .features-branch-diagram div:not(.active) .mega-octicon {
     stroke: /*[[base-color]]*/ !important;
+    color: /*[[base-color]]*/ !important;
   }
-  .features-branch-diagram circle[fill="#4f8cc9"],
+  .features-branch-diagram circle[fill="#4183c4"],
   .repo-list-stats a.issues:hover svg {
     fill: /*[[base-color]]*/ !important;
   }
@@ -3025,8 +3026,7 @@
   .intgrs-lstng-categories a:hover, .topic-tag-action .add-topic-button:hover,
   .topic-tag-action .remove-topic-button:hover,
   .discussion-item-changes-marker.is-unread .discussion-item-icon,
-  .toc-select .navigation-focus *, .suggester li[aria-selected="true"],
-  .suggester li[aria-selected="true"] small,
+  .toc-select .navigation-focus *,
   .select-menu-item[aria-selected="true"] .description,
   .select-menu-item[aria-selected="true"] .select-menu-item-text,
   .owner-select-target, a.filter-item.selected, .filter-item.selected h4,
@@ -3036,8 +3036,10 @@
   .select-menu-item.navigation-focus > .octicon,
   .select-menu-item[aria-selected="true"] > .octicon, .text-white,
   .octicon.text-white,
-  .select-menu-item.selected.navigation-focus .description-warning {
-    color: #e9e9e9 !important;
+  .select-menu-item.selected.navigation-focus .description-warning,
+  .suggester li.navigation-focus, .suggester li:hover, .suggester li:hover *,
+  .suggester li[aria-selected="true"], .suggester li[aria-selected="true"] * {
+    color: #f0f0f0 !important;
   }
   .btn.btn-primary, .button.primary, .minibutton.primary,
   ul.repo-stats li a:hover, .text-emphasized, .minibutton.danger:hover,
