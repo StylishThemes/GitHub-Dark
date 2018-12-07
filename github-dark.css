@@ -1276,34 +1276,21 @@
     outline-color: /*[[base-color]]*/ #4f8cc9 !important;
   }
   input.focus[type="text"], #adv_code_search .focus.search-page-label,
-  /* below selector has a ton of weight. Better to override it with
-   * class selectors that unset box-shadow and rules here. Testable
-   * on the repo tag editor */
-  input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
   .focused .drag-and-drop, #adv_code_search .search-page-label:focus,
-  input.focus[type="password"], input.form-control[type="password"]:focus,
-  input.focus[type="email"], input.form-control[type="email"]:focus,
-  input.focus[type="number"], input.form-control[type="number"]:focus,
-  input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
-  input.form-control[type="url"]:focus, textarea.focus, textarea:focus,
+  .form-control:focus, .form-select:focus,
   #q:focus ~ button, input.color-editor-input:focus, #ghd-settings select:focus,
   #ghd-settings input:focus, .intgrs-lstng-item:hover,
   .ajax-pagination-btn:focus, .form-control.focus, .form-select.focus,
   .form-select:focus, input[type="checkbox"]:focus, .upload-enabled.focused,
-  .project-column:focus, .project-card:focus {
+  .project-column:focus, .project-card:focus,
+  .octotree_github_sidebar input[type="text"]:focus,
+  .octotree_github_sidebar textarea:focus {
     border-color: /*[[base-color]]*/ #4f8cc9 !important;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 2px /*[[base-color]]*/ #4f8cc9 !important;
     outline-color: /*[[base-color]]*/ #4f8cc9 !important;
   }
   .dragover textarea, .dragover .drag-and-drop {
     box-shadow: 0 0 1px 1px /*[[base-color]]*/ #4f8cc9 !important;
-  }
-  /* inputs */
-  select, input:not(.btn):not(.btn-link):not(.btn-danger), textarea {
-    -moz-appearance: none !important;
-    background-color: #181818 !important;
-    border-color: #343434 !important;
-    color: #ccc !important;
   }
   /* below style currently does not work in Firefox, see */
   /* https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
@@ -2091,8 +2078,9 @@
   .access-form-wrapper {
     background: #181818 !important;
   }
-  .sidebar-module, .form-control,
-  input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
+  .sidebar-module, .form-control, .form-select,
+  .octotree_github_sidebar input[type="text"],
+  .octotree_github_sidebar textarea {
     background-color: #181818 !important;
     border-color: #343434 !important;
   }
@@ -3018,7 +3006,8 @@
   .discussion-item-private, .label-select-menu div.labelstyle-000000.selected,
   .marketplace-plan-emphasis, .header-nav-link, .header-navlink,
   .Header .header-search-scope, a.notification-indicator, .HeaderNavlink,
-  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .project-pane-close:hover {
+  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .project-pane-close:hover,
+  .octotree_github_sidebar input[type="text"], .octotree_github_sidebar textarea {
     color: #bababa !important;
   }
   .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
