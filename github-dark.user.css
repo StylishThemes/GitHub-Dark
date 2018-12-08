@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.86
+@version     1.20.87
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.86 (2018-12-06) */
+/*! Github Dark v1.20.87 (2018-12-08) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -1357,7 +1357,8 @@
   table.files .octicon-file-submodule, .header-logo-invertocat:hover,
   .notification-indicator:hover, .btn.btn-outline,
   .full-commit .btn-outline:not(:disabled):hover, .markdown-body a strong,
-  .markdown-format a strong, .notifications.list-group a:hover {
+  .markdown-format a strong, .notifications.list-group a:hover,
+  .octotree_sidebar .octotree_bottom a:hover i:before {
     color: /*[[base-color]]*/ !important;
   }
   /* Base color panel */
@@ -1472,9 +1473,9 @@
    * on the repo tag editor */
   input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
   .focused .drag-and-drop, #adv_code_search .search-page-label:focus,
-  input.focus[type="password"], input[type="password"]:focus,
-  input.focus[type="email"], input[type="email"]:focus,
-  input.focus[type="number"], input[type="number"]:focus,
+  input.focus[type="password"], input.form-control[type="password"]:focus,
+  input.focus[type="email"], input.form-control[type="email"]:focus,
+  input.focus[type="number"], input.form-control[type="number"]:focus,
   input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
   input.form-control[type="url"]:focus, textarea.focus, textarea:focus,
   #q:focus ~ button, input.color-editor-input:focus, #ghd-settings select:focus,
@@ -1490,7 +1491,7 @@
     box-shadow: 0 0 1px 1px /*[[base-color]]*/ !important;
   }
   /* inputs */
-  select, input:not(.btn-link):not(.btn-danger), textarea {
+  select, input:not(.btn):not(.btn-link):not(.btn-danger), textarea {
     -moz-appearance: none !important;
     background-color: #181818 !important;
     border-color: #343434 !important;
@@ -2040,7 +2041,7 @@
   .pending-team-invitations-link, .discussion-item + .discussion-item-review,
   .profile-timeline-card-wrapper,
   .profile-rollup-wrapper + .profile-rollup-wrapper,
-  .email-preference-exceptions .exception {
+  .email-preference-exceptions .exception, .user-key-email-unverified {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, ul.color-label-list .color,
@@ -2314,7 +2315,8 @@
   .listgroup-header, .merge-status-item,
   .previewable-comment-form .comment-form-head.tabnav,
   .bg-gray:not(body):not(.team-discussions-container),
-  .Header .header-search-wrapper, .Header .header-search-wrapper input {
+  .Header .header-search-wrapper, .Header .header-search-wrapper input,
+  .user-key-email-unverified {
     background: #202020 !important;
   }
   /* Navigation focus */
@@ -3133,7 +3135,7 @@
   .select-menu-item[aria-selected="true"],
   .select-menu-item[aria-selected="true"].selected, .btn-danger:hover,
   .btn-danger:active, .btn-danger.selected, [open] > .btn-danger,
-  .discussion-item-icon {
+  .discussion-item-icon, a.octotree_toggle:not(.octotree_loading):hover > span:after {
     color: #dcdcdc !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -3184,7 +3186,7 @@
   .completeness-indicator-problem, .article-meta,
   .timeline-comment-header-text code a, .commit-tease-sha,
   .reponav-item.selected, .stats-group-stat.no-link:hover .stat-number,
-  .octotree_github_sidebar a.octotree_opts, .octotree_help > span,
+  .octotree_github_sidebar a.octotree_opts .settings:before, .octotree_help > span:before,
   .application-authorizations .oauth-app-access-name, .dropdown-item,
   .header-logo-invertocat, a.header-logo-wordmark,
   .pull-request-integrations-title, .intgrs-dir-intro .directory-header-back,
@@ -3886,7 +3888,8 @@
   .pull-head, .capped-box {
     border-bottom: #484848 1px solid !important;
   }
-  .tutorial-e:after, .file-commit-form .commit-form:before {
+  .tutorial-e:after, .file-commit-form .commit-form:before,
+  .merge-branch-form .commit-form:before {
     border-right-color: #343434 !important;
     border-bottom-color: transparent !important;
   }
@@ -4512,24 +4515,11 @@
   /* octotree */
   .octotree_views .octotree_treeview .jstree-anchor .jstree-icon.tree:before,
   .octotree_github_sidebar a.octotree_toggle:hover,
-  .octotree_github_sidebar a.octotree_opts:hover,
-  .octotree_github_sidebar a.octotree_opts.selected,
+  .octotree_github_sidebar a.octotree_opts:hover .settings:before,
+  .octotree_github_sidebar a.octotree_opts.selected:hover .settings:before,
   html .octotree_github_sidebar .octotree_views .octotree_treeview .jstree-anchor,
   .octotree_github_sidebar a.octotree_toggle:not(.octotree_loading):hover {
     color: /*[[base-color]]*/ !important;
-  }
-  /* octotree icons */
-  a.octotree_toggle:not(.octotree_loading) > span:after,
-  .octotree_github_sidebar a.octotree_opts, .octotree_help > span {
-    filter: invert(100%) !important;
-  }
-  a.octotree_toggle:not(.octotree_loading):hover > span:after,
-  .octotree_github_sidebar a.octotree_opts:hover,
-  .octotree_treeview .jstree-icon.tree {
-    filter: grayscale(100%) !important;
-  }
-  html.octotree .Header {
-    padding-left: 30px !important;
   }
   /* Octotree resizable handle */
   html.octotree:not(.octotree-show) .octotree_sidebar .ui-resizable-handle {
