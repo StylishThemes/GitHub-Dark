@@ -168,6 +168,12 @@ const urls = [
   // {url: "https://github.com/login", opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}}},
 ];
 
+// list of additional style URLs to pull
+const additionalStyleUrls = [
+  "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
+  "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css",
+];
+
 // list of regexes matching selectors that should be ignored
 const ignoreSelectors = [
   /\.CodeMirror/,
@@ -221,11 +227,11 @@ async function writeOutput(generatedCss) {
 async function extractStyleLinks(responses) {
   const styleUrls = [];
   for (const res of responses) {
-    extractStyleHrefs(await res.text()).forEach(href => {
+    for (const href of extractStyleHrefs(await res.text())) {
       styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
-    });
+    }
   }
-  return styleUrls;
+  return styleUrls.concat(additionalStyleUrls);
 }
 
 function extractStyleHrefs(html) {
@@ -257,8 +263,9 @@ function parseDeclarations(cssString) {
 }
 
 function parseRule(decls, rule) {
-  rule.declarations.forEach(decl => {
-    Object.keys(mappings).forEach(mapping => {
+  for (const decl of rule.declarations) {
+    for (const mapping of Object.keys(mappings)) {
+      if (!decl.value) continue;
       if (!decls[mapping]) decls[mapping] = [];
       const [prop, val] = mapping.split(": ");
       decl.value = decl.value.replace(/!important/g, "").trim(); // remove !important
@@ -283,8 +290,8 @@ function parseRule(decls, rule) {
           }
         });
       }
-    });
-  });
+    }
+  }
 }
 
 function buildOutput(decls) {
