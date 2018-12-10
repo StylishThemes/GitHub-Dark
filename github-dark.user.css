@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.87
+@version     1.20.88
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.87 (2018-12-08) */
+/*! Github Dark v1.20.88 (2018-12-10) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -199,10 +199,10 @@
     color: #b5b5b5 !important;
   }
   .Popover-message:before {
-      border-bottom-color: #343434;
+    border-bottom-color: #343434;
   }
   .Popover-message:after {
-      border-bottom-color: #181818;
+    border-bottom-color: #181818;
   }
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background: #fff" */
@@ -224,7 +224,8 @@
   .TenYearNav-year:hover .TenYearNav-digits,
   .gist-snippet-meta .gist-count-links > li > a:hover, .gist-quicksearch-results,
   div#common-issues ul, .markdown-format img, .dropdown-menu,
-  .btn-primary .counter, .bg-white, .card, .pagination > span {
+  .btn-primary .counter, .bg-white, .card, .pagination > span,
+  .rgh-reactions-near-limit {
     background: #181818 !important;
   }
   /* auto-generated rule for "background: #fafbfc" */
@@ -295,16 +296,17 @@
   .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .is-failed .repo-file-upload-errors, .is-hidden-file .repo-file-upload-errors,
   .is-too-big .repo-file-upload-errors, .is-too-many .repo-file-upload-errors,
-  .setup-info-module, .orgs-help-item-octicon, .org-sso .org-sso-panel,
-  .tree-browser tr.navigation-focus td, .tree-browser tr[aria-selected=true] td,
-  .btn-orange .Counter, .btn-outline-purple,
-  .btn-outline-purple.selected .Counter, .btn-outline-purple:active .Counter,
-  .btn-outline-purple:hover .Counter, [open] > .btn-outline-purple .Counter,
-  .btn-outline-purple.disabled, .btn-outline-purple:disabled,
-  .btn-outline-orange, .btn-outline-orange.selected .Counter,
-  .btn-outline-orange:active .Counter, .btn-outline-orange:hover .Counter,
-  [open] > .btn-outline-orange .Counter, .btn-outline-orange.disabled,
-  .btn-outline-orange:disabled, .btn-outline-green,
+  .setup-info-module, .orgs-help-item-octicon, .business-sso .business-sso-panel,
+  .business-sso .org-sso-panel, .org-sso .business-sso-panel,
+  .org-sso .org-sso-panel, .tree-browser tr.navigation-focus td,
+  .tree-browser tr[aria-selected=true] td, .btn-orange .Counter,
+  .btn-outline-purple, .btn-outline-purple.selected .Counter,
+  .btn-outline-purple:active .Counter, .btn-outline-purple:hover .Counter,
+  [open] > .btn-outline-purple .Counter, .btn-outline-purple.disabled,
+  .btn-outline-purple:disabled, .btn-outline-orange,
+  .btn-outline-orange.selected .Counter, .btn-outline-orange:active .Counter,
+  .btn-outline-orange:hover .Counter, [open] > .btn-outline-orange .Counter,
+  .btn-outline-orange.disabled, .btn-outline-orange:disabled, .btn-outline-green,
   .btn-outline-green.selected .Counter, .btn-outline-green:active .Counter,
   .btn-outline-green:hover .Counter, [open] > .btn-outline-green .Counter,
   .btn-outline-green.disabled, .btn-outline-green:disabled,
@@ -455,7 +457,8 @@
   .suggester li[aria-selected=true],
   .jump-to-suggestions-results-container .navigation-focus .jump-to-suggestions-path,
   .jump-to-suggestions-results-container [aria-selected=true] .jump-to-suggestions-path,
-  .action-card-icon, .action-card-controls:after {
+  .action-card-icon, .action-card-controls:after,
+  .js-expandable-line:hover .diff-expander, .js-expandable-line:hover .blob-code {
     background: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "background-color: #0366d6" */
@@ -515,7 +518,9 @@
   .progress-bar-inline .progress-bar, .range-editor, .code-list .file-box,
   .ScreenshotCarousel, .conflict-resolver.loading, .review-thread,
   .review-comment .is-comment-editing, .review-summary-form-wrapper,
-  .orgs-help-item-octicon, .org-sso .org-sso-panel, .data-table {
+  .orgs-help-item-octicon, .business-sso .business-sso-panel,
+  .business-sso .org-sso-panel, .org-sso .business-sso-panel,
+  .org-sso .org-sso-panel, .data-table {
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border: 1px solid #eee" */
@@ -769,6 +774,33 @@
   .btn-danger:focus {
     box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4) !important;
   }
+  /* auto-generated rule for "color: #333" */
+  .intgrs-lstng-item-header, .listgroup-item.disabled .listgroup-item-title,
+  .billing-plans .name, .session-authentication .header-logo,
+  .session-authentication .auth-form-header, .billing-section .section-content,
+  .lfs-data-icon.dark, .documentation-results a, .milestone-title-link a,
+  .org-name, .member-row, .reinstate-org-member .reinstate-title,
+  .stats-group-stat.no-link:hover .stat-number, .stat-number,
+  .org-user-notice-content strong, .manage-memberships-tabs-item:hover,
+  .diffstat-summary strong, .clone-url-button > .clone-url-link,
+  .clone-url-button.selected > .clone-url-link,
+  .clone-url-button.selected > .clone-url-link:hover,
+  .oauth-app-info-container dl.keys dd, .protected-branch-pusher,
+  .typeahead-result, div.article #article-platform-nav ul li.selected a,
+  ul.search-results li span.search-term, .minibutton, .btn, input, textarea,
+  input:focus, textarea:focus, div.search-form input:focus,
+  div.search-form button span, div.search-form .autocomplete-results a,
+  .markdown-format h1, .markdown-format h4, body, .button-nav, .button-nav li a,
+  div.content-header h6 span, h1, h1 span, h2, h2 span, .guide-section a p,
+  .text-gray-dark, .link-gray-dark, .text-emphasized, .Box-row-link,
+  .social-count, .form-control, .form-select, p.explain strong,
+  .Counter--gray-light, .menu-item .octicon, .tabnav-tab.selected,
+  .markdown-body span.frame span span, .site-header-nav-item:hover,
+  .site-header-nav-item.active, .sub-nav h2 a, .highlight-module .mega-octicon,
+  .octokit-language span, .headlines > li > a, .js-current .standalone a,
+  .sidebar-module .disable > a, .content .anchor, #markdown-toc li a {
+    color: #bababa !important;
+  }
   /* auto-generated rule for "color: #3c4146" */
   .text-alpha, .text-beta, .text-delta, .text-gamma, h1, h2, h3, h4, h5,
   .link-muted:hover, .text-black, .menu-item.selected,
@@ -817,7 +849,8 @@
   .form-checkbox .note, .hfields .form-group dt label, h2.account, p.explain,
   .counter, .tabnav-tab, .tabnav-extra, .subnav-item, .headlines > li,
   .sidebar-module ul h3, .sidebar-module ul ul li, h2 span.step, .content dt,
-  .content .full-image:hover .octicon, .full-image:hover .mini-icon {
+  .content .full-image:hover .octicon, .full-image:hover .mini-icon,
+  body > .footer li a {
     color: #8e8e8e !important;
   }
   /* auto-generated rule for "color: #6a737d" */
@@ -873,7 +906,7 @@
   .gist-snippet-meta .extra-info,
   .gist-quicksearch-results .gist-quicksearch-result-header,
   .gist-quicksearch-results .select-menu-item h4,
-  .gist-quicksearch-results .select-menu-item span {
+  .gist-quicksearch-results .select-menu-item span, .markdown-body del {
     color: #8e8e8e !important;
   }
   /* auto-generated rule for "color: #959da5" */
@@ -1059,7 +1092,8 @@
   .MarketingBody > p, .MarketingBody blockquote, .MarketingBody ol,
   .MarketingBody ul, .DateNav .selected,
   .gist-snippet-meta .gist-count-links > li > a,
-  .gist-revisions-list .gist-revision-meta {
+  .gist-revisions-list .gist-revision-meta,
+  .notifications-list .boxed-group-action button, .rgh-useless-comments-note {
     color: #949494 !important;
   }
   /* auto-generated rule for "color: #24292e" */
@@ -1333,7 +1367,9 @@
   .repository-merge-features .form-group.errored label,
   .follow-list .follow-list-name a, .Bump-link--hover .Bump-link-symbol,
   .page-gist-edit .btn-toggle-visibility .octicon-gist-secret, select,
-  .link-no-style, .link-no-style:hover {
+  .link-no-style, .link-no-style:hover,
+  .mergeability-details .js-details-container .status-meta,
+  :root .repohead h1 .commit-build-statuses .octicon {
     color: inherit !important;
   }
   /* end auto-generated rules */
@@ -1468,21 +1504,15 @@
     outline-color: /*[[base-color]]*/ !important;
   }
   input.focus[type="text"], #adv_code_search .focus.search-page-label,
-  /* below selector has a ton of weight. Better to override it with
-   * class selectors that unset box-shadow and rules here. Testable
-   * on the repo tag editor */
-  input[type="text"]:focus:not(.js-color-editor-input):not(.tree-finder-input):not(.js-site-search-focus):not(.tag-input-inner),
   .focused .drag-and-drop, #adv_code_search .search-page-label:focus,
-  input.focus[type="password"], input.form-control[type="password"]:focus,
-  input.focus[type="email"], input.form-control[type="email"]:focus,
-  input.focus[type="number"], input.form-control[type="number"]:focus,
-  input.focus[type="tel"], input[type="tel"]:focus, input.focus[type="url"],
-  input.form-control[type="url"]:focus, textarea.focus, textarea:focus,
-  #q:focus ~ button, input.color-editor-input:focus, #ghd-settings select:focus,
+  .form-control:focus, .form-select:focus, #q:focus ~ button,
+  input.color-editor-input:focus, #ghd-settings select:focus,
   #ghd-settings input:focus, .intgrs-lstng-item:hover,
   .ajax-pagination-btn:focus, .form-control.focus, .form-select.focus,
   .form-select:focus, input[type="checkbox"]:focus, .upload-enabled.focused,
-  .project-column:focus, .project-card:focus {
+  .project-column:focus, .project-card:focus,
+  .octotree_github_sidebar input[type="text"]:focus,
+  .octotree_github_sidebar textarea:focus, div.search-form input:focus {
     border-color: /*[[base-color]]*/ !important;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 2px /*[[base-color]]*/ !important;
     outline-color: /*[[base-color]]*/ !important;
@@ -1490,26 +1520,20 @@
   .dragover textarea, .dragover .drag-and-drop {
     box-shadow: 0 0 1px 1px /*[[base-color]]*/ !important;
   }
-  /* inputs */
-  select, input:not(.btn):not(.btn-link):not(.btn-danger), textarea {
-    -moz-appearance: none !important;
-    background-color: #181818 !important;
-    border-color: #343434 !important;
-    color: #ccc !important;
-  }
   /* below style currently does not work in Firefox, see */
   /* https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
   optgroup, optgroup:before {
     color: #888 !important;
     background-color: #181818 !important;
   }
-  /* custom checkbox and radio styles. We need a full set of styles here as
-   * WebKit removes all of them when -webkit-appearance: none is set. */
+  /* custom checkboxes and radios */
   input[type="checkbox"], input[type="checkbox"]:focus, input[type="radio"],
   input[type="radio"]:focus, input[type="checkbox"]:hover:active,
   input[type="radio"]:hover:active, input[type="checkbox"]:disabled,
   input[type="checkbox"]:hover:disabled,
   input[type="checkbox"]:hover:active:disabled {
+            appearance: none !important;
+       -moz-appearance: none !important;
     -webkit-appearance: none !important;
     background-color: #181818 !important;
     border: 1px solid #484848 !important;
@@ -1517,7 +1541,7 @@
     height: 1em !important;
     width: 1em !important;
   }
-  input[type=radio] {
+  input[type="radio"] {
     border-radius: 100% !important;
   }
   input[type="checkbox"]:checked {
@@ -1528,8 +1552,8 @@
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23000"/><rect x="64" y="192" width="384" height="128" fill="%23ddd"/></svg>') !important;
     background-size: cover !important;
   }
-  input[type=radio]:checked {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23000"/><circle cx="256" cy="256" r="128" fill="%23ddd"/></svg>') !important;
+  input[type="radio"]:checked {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23000"/><circle cx="256" cy="256" r="96" fill="%23ddd"/></svg>') !important;
     background-size: cover !important;
   }
   code {
@@ -2283,8 +2307,9 @@
   .access-form-wrapper {
     background: #181818 !important;
   }
-  .sidebar-module, .form-control,
-  input[type="text"]:not(.tree-finder-input):not(.js-site-search-focus) {
+  .sidebar-module, .form-control, .form-select,
+  .octotree_github_sidebar input[type="text"], .octotree_github_sidebar textarea,
+  div.search-form input {
     background-color: #181818 !important;
     border-color: #343434 !important;
   }
@@ -3095,7 +3120,6 @@
   .tabs > a.selected, .member-username, .invited-banner p, kbd, .kbd,
   .boxed-profile .profile-preview .vcard-fullname, .btn.btn-primary:hover,
   .minibutton.btn-primary:hover, .integrations .site-footer a, .add-line-comment,
-  .blob-num-expandable .diff-expander:hover,
   .email-format .email-hidden-toggle a:hover,
   #gollum-editor-help-parent li a.selected,
   #gollum-editor-help-list li a.selected, a.gollum-minibutton,
@@ -3135,7 +3159,10 @@
   .select-menu-item[aria-selected="true"],
   .select-menu-item[aria-selected="true"].selected, .btn-danger:hover,
   .btn-danger:active, .btn-danger.selected, [open] > .btn-danger,
-  .discussion-item-icon, a.octotree_toggle:not(.octotree_loading):hover > span:after {
+  .discussion-item-icon,
+  a.octotree_toggle:not(.octotree_loading):hover > span:after,
+  .blob-num-expandable .diff-expander:hover,
+  .js-expandable-line:hover .diff-expander {
     color: #dcdcdc !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -3186,7 +3213,8 @@
   .completeness-indicator-problem, .article-meta,
   .timeline-comment-header-text code a, .commit-tease-sha,
   .reponav-item.selected, .stats-group-stat.no-link:hover .stat-number,
-  .octotree_github_sidebar a.octotree_opts .settings:before, .octotree_help > span:before,
+  .octotree_github_sidebar a.octotree_opts .settings:before,
+  .octotree_help > span:before,
   .application-authorizations .oauth-app-access-name, .dropdown-item,
   .header-logo-invertocat, a.header-logo-wordmark,
   .pull-request-integrations-title, .intgrs-dir-intro .directory-header-back,
@@ -3210,7 +3238,8 @@
   .discussion-item-private, .label-select-menu div.labelstyle-000000.selected,
   .marketplace-plan-emphasis, .header-nav-link, .header-navlink,
   .Header .header-search-scope, a.notification-indicator, .HeaderNavlink,
-  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .project-pane-close:hover {
+  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .project-pane-close:hover,
+  .octotree_github_sidebar input[type="text"], .octotree_github_sidebar textarea {
     color: #bababa !important;
   }
   .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
