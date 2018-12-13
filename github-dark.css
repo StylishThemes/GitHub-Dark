@@ -77,6 +77,7 @@
   .avatar-stack .avatar, .AvatarStack-body .avatar, .CircleBadge,
   .markdown-body table tr, .markdown-body img, .Box--overlay, .btn-invisible,
   .commit-tease-contributors, .commit-icon .octicon, .gh-header,
+  .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
   .gh-header-edit .edit-issue-title:focus, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
   .discussion-timeline-actions, .pagination-loader-container, .dropdown-menu,
@@ -181,7 +182,8 @@
   .timeline-comment-header, .protip code, .render-notice, .select-menu-filters,
   .community-checklist .progress,
   .team-discussion-new-post .review-thread-reply-button:disabled,
-  .MarketplaceSideNav, .ScreenshotCarousel-navitem.selected, .sortable-ghost,
+  .related-issue-item.navigation-focus, .MarketplaceSideNav,
+  .ScreenshotCarousel-navitem.selected, .sortable-ghost,
   .review-comment-loader:after, .review-comment.is-comment-editing:after,
   .review-comment:after, .review-thread-reply, .Tile,
   .callout-permalink-stacked-image.webcasts,
@@ -254,9 +256,7 @@
   /* auto-generated rule for "background-color: #fffbdd" */
   .conflict-gutter-marker, .Box-row--yellow, .form-group.warn .warning,
   .flash-warn, .warning, .boxed-group-warning, .blob-code-inner.highlighted,
-  .selected-line.blob-code, .review-comment.targeted-comment,
-  .timeline-comment-group.targeted-comment .timeline-comment,
-  .timeline-comment.targeted-comment .review-summary, .RecentBranches,
+  .selected-line.blob-code, .RecentBranches,
   .diffbar-range-menu .is-range-selected {
     background-color: #261d08 !important;
   }
@@ -554,7 +554,10 @@
   }
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
-  .form-select:focus, .timeline-comment-group:target .timeline-comment,
+  .form-select:focus,
+  .targetable-comment-container-nojs.timeline-comment-group:target .timeline-comment,
+  .timeline-comment-group[aria-selected=true] .timeline-comment,
+  .timeline-comment[aria-selected=true] + .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment,
   .plan-choice--experiment.plan-choice--blue.open,
   .plan-choice--experiment.plan-choice--blue.selected, .project-column:focus,
   .project-card:focus, .TenYearNav-year.blue {
@@ -573,8 +576,13 @@
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
-  .timeline-comment-group:target .timeline-comment, .review-comment:target,
-  .timeline-comment:target .review-summary {
+  .targetable-comment-container-nojs.timeline-comment-group:target .timeline-comment,
+  .timeline-comment-group[aria-selected=true] .timeline-comment,
+  .review-comment[aria-selected=true],
+  .targetable-comment-container-nojs.review-comment:target,
+  .targetable-comment-container-nojs.timeline-comment:target .review-summary,
+  .timeline-comment[aria-selected=true] .review-summary,
+  .timeline-comment[aria-selected=true] + .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment {
     box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
@@ -896,7 +904,8 @@
   .member-suggestion .already-member-note, .member-suggestion .non-member-action,
   .member-suggestion .non-member-note, .team-suggestion .team-description,
   .team-suggestion .team-size, .repo-access-add-team .team-description,
-  .repo-access-add-team .team-size, .follow-list .follow-list-info, .pullquote,
+  .repo-access-add-team .team-size, .follow-list .follow-list-info,
+  .user-status-org-button .user-status-org-detail, .pullquote,
   .MarketingBody > p, .MarketingBody blockquote, .MarketingBody ol,
   .MarketingBody ul, .DateNav .selected,
   .gist-snippet-meta .gist-count-links > li > a,
