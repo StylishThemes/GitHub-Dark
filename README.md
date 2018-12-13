@@ -37,7 +37,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header.<br>
 ⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors.<br>
 ⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes.<br>
-⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code.
+⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code.<br>
 ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message.<br>
 ⚙️ [GitHub-Community-Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
 ⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
@@ -46,7 +46,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ## Supported GitHub Addons
 
 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)<br>
-💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown) (userscript)<br>
+💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)<br>
 💾 [npmhub](https://github.com/npmhub/npmhub)<br>
