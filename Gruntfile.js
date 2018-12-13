@@ -207,35 +207,6 @@ module.exports = function(grunt) {
         files: {"<%= config.buildFile %>" : "<%= config.sourceFile %>"},
         options: {replacements: "<%= config.replacements %>"}
       },
-      // prevent cssmin from removing the AGENT_SHEET comment for Firefox
-      mark: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
-        options: {
-          replacements: [
-            {pattern: /\/\*\[\[/gm, replacement: "/*![["},
-            {pattern: "/* AGENT_SHEET */", replacement: "/*! AGENT_SHEET */"}
-          ]
-        }
-      },
-      unmark: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
-        options: {
-          replacements: [
-            {pattern: /\/\*!\[\[/gm, replacement: "/*[["},
-            {pattern: "/*! AGENT_SHEET */", replacement: "/* AGENT_SHEET */"}
-          ]
-        }
-      },
-      // prevent cssmin from removing userstyles.org placeholders
-      fix: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
-        options: {
-          replacements: [{
-            pattern: /;:\/\*\[\[/gm,
-            replacement: ";/*[["
-          }]
-        }
-      },
       // Tweak Perfectionist results
       afterPerfectionist: {
         files: {"<%= config.sourceFile %>" : "<%= config.sourceFile %>"},
@@ -392,29 +363,6 @@ module.exports = function(grunt) {
     if (!(config.chrome || config.webkit)) {
       grunt.task.run(["wrap"]);
     }
-  });
-
-  // build userstyle for pasting into
-  // https://userstyles.org/styles/37035/github-dark
-  grunt.registerTask("user", "building userstyles.org file", () => {
-    config.buildFile = "github-dark-userstyle.build.css";
-    config.replacements = config.replacements_user;
-    grunt.task.run([
-      "string-replace:inline",
-      "wrap"
-    ]);
-  });
-  grunt.registerTask("usermin", "building userstyles.org file", () => {
-    config.buildFile = "github-dark-userstyle.build.css";
-    config.replacements = config.replacements_user;
-    grunt.task.run([
-      "string-replace:inline",
-      "string-replace:mark",
-      "cssmin:minify",
-      "string-replace:unmark",
-      "string-replace:fix",
-      "wrap"
-    ]);
   });
 
   grunt.registerTask("usercss", "building usercss file", () => {

@@ -28,7 +28,6 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 📦 [Install the usercss](https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css) which supports automatic updates.<br>
 📦 [Install GitHub-Dark Script](https://stylishthemes.github.io/GitHub-Dark-Script/github-dark-script.user.js) which supports automatic updates and live customization. Refer to its [README](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
-📦 [Install from userstyles.org](http://userstyles.org/styles/37035) with customization, does not support automatic updates (**Updates not processing** for an unknown reason).<br>
 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.<br>
 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
@@ -108,17 +107,15 @@ If you would like to contribute to this repository, please...
 
 To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` and install grunt via `npm install -g grunt`. After that, you can use the various grunt tasks available:
 
-- `grunt`: The default task will build a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
+- `grunt`: The default task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `grunt min`: Same as `grunt`, but outputs a minified style.
-- `grunt user`: Build a userstyle ready to be pasted on userstyles.org.
-- `grunt usermin`: Same as `grunt user`, but outputs a minified style.
-- `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style, to be used with modern userstyle engines like [stylus](https://github.com/stylus/stylus).
+- `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
 - `grunt clean`: Reformat `github-dark.css` to conform the style guide.
 - `grunt lint`: Run Stylelint on `github-dark.css`.
 - `grunt authors`: Regenerate the `AUTHORS` file based on git history.
 - `grunt imagemin`: Minify all images present in the `image` directory.
-- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. This should be ran regularly.
+- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
 - `grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
 - `grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
 - `grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
