@@ -99,12 +99,12 @@ const mappings = {
   // ==========================================================================
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
-     box-shadow: 0 0 0 .2em rgba(65,131,196,.4) !important;
+     box-shadow: 0 0 0 .2em rgba(79,140,201,.4) !important;
      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
   `,
 
   "box-shadow: 0 0 0 .2em #c8e1ff": `
-     box-shadow: 0 0 0 .2em rgba(65,131,196,.4) !important;
+     box-shadow: 0 0 0 .2em rgba(79,140,201,.4) !important;
      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
   `,
 
