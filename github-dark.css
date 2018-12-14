@@ -1250,7 +1250,8 @@
   .reaction-sort-item.selected, .pull-request-link, div.project-card:focus,
   .timeline-progressive-disclosure-button:hover,
   .release-timeline-tags .expander-text:hover .expander-dots,
-  .review-comment:target {
+  .review-comment[aria-selected=true],
+  .timeline-comment[aria-selected=true] .review-summary .comment-body {
     border-color: /*[[base-color]]*/ #4f8cc9 !important;
   }
   #com #header .top-nav .dropdown-button:hover .dropdown-caret,
@@ -2059,12 +2060,13 @@
     background: #181818 !important;
     border-color: #343434 !important;
   }
-  .review-comment:target, .timeline-comment:target .review-summary {
+  .review-comment[aria-selected=true],
+  .timeline-comment[aria-selected=true] .review-summary {
     background-color: #181818 !important;
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .4) !important;
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
   }
-  .timeline-comment-group:target .timeline-comment:before {
+  .timeline-comment-group[aria-selected=true] .timeline-comment:before {
     border-right-color: /*[[base-color]]*/ #4f8cc9 !important;
     left: -17px !important;
     filter: none !important;
@@ -2073,7 +2075,7 @@
     top: -16px !important;
     filter: none !important;
   }
-  .timeline-comment:target .review-summary:before {
+  .timeline-comment[aria-selected=true] .review-summary:before {
     border-bottom-color: rgba(79, 140, 201, .4) !important;
     border-bottom-color: rgba(/*[[base-color-rgb]]*/, .4) !important;
     top: -19.75px !important;
@@ -3705,8 +3707,7 @@
   .file .image .border-wrap, .site-search .chromeless-input,
   .profile-timeline-card-wrapper, .render-shell img, img.asset,
   .AvatarStack--right .avatar, .AvatarStack-body .avatar,
-  .sidebar-notifications .thread-subscription-status,
-  .timeline-comment:target .review-summary .comment-body {
+  .sidebar-notifications .thread-subscription-status {
     border: 0 !important;
   }
   .dashboard-tabs a {
