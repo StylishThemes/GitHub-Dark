@@ -123,6 +123,8 @@ const mappings = {
   "color: #a3aab1": "color: #5a5a5a",
   "color: #c6cbd1": "color: #474747",
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
+  "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
+  "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
 
   // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
