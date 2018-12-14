@@ -365,9 +365,13 @@ module.exports = function(grunt) {
     }
   });
 
+  // build usercss
   grunt.registerTask("usercss", "building usercss file", () => {
+    config.buildFile = "github-dark-userstyle.build.css";
+    config.replacements = config.replacements_user;
     grunt.task.run([
-      "user",
+      "string-replace:inline",
+      "wrap",
       "exec:usercss"
     ]);
   });
