@@ -432,8 +432,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       "lint",
       "string-replace:newVersion",
-      "user",
-      "exec:usercss",
+      "usercss",
       "exec:add",
       "exec:patch"
     ]);
@@ -443,8 +442,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       "lint",
       "string-replace:newVersion",
-      "user",
-      "exec:usercss",
+      "usercss",
       "exec:add",
       "exec:minor"
     ]);
@@ -454,8 +452,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       "lint",
       "string-replace:newVersion",
-      "user",
-      "exec:usercss",
+      "usercss",
       "exec:add",
       "exec:major"
     ]);
