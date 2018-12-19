@@ -5247,3 +5247,94 @@
   }
   /* Literal.Number.Integer.Long */
 }
+
+@-moz-document domain("github.com") {
+  /* ui when there are no workflows setup */
+  .deployments-timeline-item + div:not(.deployments-timeline-item) {
+    background-image: linear-gradient( rgba(28, 28, 28, 0), rgba(28, 28, 28, 1)) !important;
+  }
+  [style*="background-color: #e1e4e8"] {
+    background-color: #8e8e8e !important;
+  }
+  [style*="color: #e1e4e8"] {
+    color: #8e8e8e !important;
+  }
+  /**
+   * this is the same form as when you're committing from the site
+   * this means there's a small arrow on the left (which points at
+   * the user's avatar) and this ends up showing in the dropdown too
+   */
+  .file-commit-form .dropdown-menu .commit-form:after {
+    content: none !important;
+  }
+  .file-commit-form .commit-form {
+    background: #181818 !important;
+  }
+}
+
+@-moz-document domain("launch-editor.github.com") {
+  body {
+    background: #181818 !important;
+  }
+  .editor-node[style*="background-color: rgb(68, 77, 85)"] {
+    background: #343434 !important;
+  }
+  .editor-node {
+    background: #1c1c1c !important;
+  }
+  .blankslate-box {
+    background: #242424 !important;
+  }
+  .overlay {
+    background: rgba(27, 31, 35, .5) !important;
+  }
+  .blankslate-box, .editor-node, .editor-node > div {
+    border-color: #484848 !important;
+  }
+  .input, .output {
+    background-image: none !important;
+    background-color: #484848 !important;
+  }
+  .input:before, .output:before {
+    background: transparent !important;
+  }
+  .circle.live:after {
+    background-color: /*[[base-color]]*/ !important;
+  }
+  .arrow-icon-container {
+    color: /*[[base-color]]*/ !important;
+  }
+  [stroke="#959da5"] {
+    stroke: #484848 !important;
+  }
+  [stroke="#2188ff"] {
+    stroke: /*[[base-color]]*/ !important;
+  }
+  .blankslate-box.is-hovering,
+  .editor-node[style*="box-shadow: rgba(3, 102, 214, 0.3)"] {
+      border-color: /*[[base-color]]*/ !important;
+      box-shadow: 0 0 0 .2em rgba(65, 131, 196, .4) !important;
+      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
+  }
+  .svg-icon > svg {
+    color: currentColor !important;
+  }
+  input.form-control:focus {
+    border-color: /*[[base-color]]*/ !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 2px /*[[base-color]]*/ !important;
+    outline-color: /*[[base-color]]*/ !important;
+  }
+  /* These rules need to be auto generated since the class names are dynamic */
+  /* rgb(239, 241, 245) */
+  .jsx-434284492 {
+    background: #202020 !important;
+  }
+  /* removes the background color from the dot when creating a new action */
+  svg + .jsx-434284492 {
+    background: transparent !important;
+  }
+  /* rgb(21, 133, 255) */
+  .jsx-3726811500 {
+    background: /*[[base-color]]*/ !important;
+  }
+}
