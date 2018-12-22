@@ -17,29 +17,24 @@ const mappings = {
   // ==========================================================================
   "background: #fff": "background: #181818",
   "background: #fafbfc": "background: #181818",
-  "background: #f6f8fa": "background: #202020",
   "background: #eaecef": "background: #343434",
   "background: #d1d5da": "background: #444",
+  "background: #fffbdd": "background: #261d08",
+  "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
   "background-color: #fff": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
-  "background-color: #f6f8fa": "background-color: #202020",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #d1d5da": "background-color: #444",
-
   "background-color: #6a737d": "background-color: #222",
-
-  // some navigation focuses use this, like notifications
   "background-color: #f1f8ff": "background-color: #242424",
-
-  // Colors *after* grey scale
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #dbedff": "background-color: #182030",
   "background-color: #fffbdd": "background-color: #261d08",
-  "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9 !important; color: #fff",
 
-  "background: #fffbdd": "background: #261d08",
+  // needs to be after ##2cbe4e for .community-checklist .progress vs .progress-bar .progress
+  "background-color: #f6f8fa": "background-color: #202020",
 
   // ==========================================================================
   // Border
