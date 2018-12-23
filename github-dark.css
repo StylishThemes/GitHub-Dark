@@ -3912,20 +3912,28 @@
     border-color: #500 !important;
   }
   /* scroll bar */
-  ::-webkit-scrollbar {
-    max-width: 10px !important;
-    max-height: 10px !important;
-    background: #1d1d1d !important;
+  @supports (scrollbar-color: rgba(140, 140, 140, .5) transparent) and (scrollbar-width: thin) {
+    * {
+      scrollbar-color: rgba(140, 140, 140, .5) transparent !important;
+      scrollbar-width: thin !important;
+    }
   }
-  ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-    background: #1d1d1d !important;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(175, 175, 175, .5) !important;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(79, 140, 201, .8) !important;
-    background: rgba(/*[[base-color-rgb]]*/, .8) !important;
+  @supports (not (scrollbar-color: rgba(140, 140, 140, .5) transparent)) and (not (scrollbar-width: thin)) {
+    ::-webkit-scrollbar {
+      max-width: 5px !important;
+      max-height: 5px !important;
+      background: #1d1d1d !important;
+    }
+    ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+      background: transparent !important;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(140, 140, 140, .5) !important;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(79, 140, 201, .8) !important;
+      background: rgba(/*[[base-color-rgb]]*/, .8) !important;
+    }
   }
   .CodeMirror-scrollbar-filler {
     background: #1d1d1d !important;
