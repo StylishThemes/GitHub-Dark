@@ -109,8 +109,8 @@ const mappings = {
   // Color / Background
   // ==========================================================================
 
-  "color: #333": "color: #bababa",
-  "color: #3c4146": "color: #bababa",
+  "color: #333": "color: #bebebe",
+  "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #666"   : "color: #8e8e8e",
   "color: #6a737d": "color: #8e8e8e",
