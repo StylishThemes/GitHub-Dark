@@ -260,7 +260,7 @@ module.exports = function(grunt) {
       minor: "npx ver minor",
       major: "npx ver major",
       perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-      stylelint: "npx stylelint github-dark.css themes/**/*.css",
+      stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       update: "npx updates -cu && npm install",
       usercss: "node tools/build-usercss",
     },
