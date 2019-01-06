@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.94
+@version     1.20.95
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -191,7 +191,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((blog|gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.94 (2019-01-03) */
+/*! Github Dark v1.20.95 (2019-01-06) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! Userstyle:  http://userstyles.org/styles/37035              */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -1582,32 +1582,6 @@
     position: -webkit-sticky !important;
     top: 8px !important;
   }
-  @supports (position: sticky) or (position: -webkit-sticky) {
-    .pull-request-tab-content .diff-view .file-header {
-      position: sticky !important;
-      position: -webkit-sticky !important;
-      top: 40px !important;
-      z-index: 6 !important;
-    }
-    .pull-request-tab-content .file-header {
-      padding: 1px 10px !important;
-    }
-    .pull-request-tab-content .diff-view .file-actions,
-    .pull-request-tab-content .diff-view .file-info {
-      margin-top: -1px !important;
-    }
-  /* below element is queried from GitHub's js for the scroll offset */
-  /* see https://github.com/StylishThemes/GitHub-Dark/issues/598 */
-    .js-sticky-offset-scroll {
-      height: 72px !important;
-    }
-    .gh-header-sticky.is-stuck .sticky-content .mt-3 {
-      margin: 5px !important;
-    }
-    .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
-      height: 40px !important;
-    }
-  }
   /* User time line firsts */
   img[src$="profile-joined-github.png"] {
     padding-bottom: 20px !important;
@@ -1631,8 +1605,14 @@
   }
   .is-stuck .diffbar {
     background: #181818 !important;
-    height: 2.5em;
+    border-top: 1px solid #181818 !important;
+    height: 2.8em;
     pointer-events: all !important;
+  }
+  .is-stuck+.toolbar-shadow {
+    top: 0 !important;
+    height: 40px !important;
+    background: #181818 !important;
   }
   .comment-reactions button.btn-link.user-has-reacted {
     background-color: rgba(79, 140, 201, .2) !important;
@@ -3957,7 +3937,8 @@
     position: absolute;
     margin-left: -9px;
   }
-  .dropdown-menu-w:before {
+  .dropdown-menu-w:before,
+  .select-menu-tabs .select-menu-tab-nav[aria-selected="true"] {
     border-bottom-color: transparent !important;
   }
   /* inline code - add border */
