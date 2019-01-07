@@ -137,6 +137,7 @@ const mappings = {
   // orange
   "color: #a04100": "color: #f3582c",
   "background-color: #d15704": "background-color: #f3582c",
+  "background: #fb8532": "background: #f3582c",
 
   // green
   "color: #28a745": "color: #6cc644",
