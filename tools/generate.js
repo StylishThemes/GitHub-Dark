@@ -124,6 +124,7 @@ const mappings = {
 
   // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #1277eb": "color: /*[[base-color]]*/ #4f8cc9",
   // needs to be after #0366d3 for .btn-link vs .text-gray
   "color: #586069": "color: #949494",
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
