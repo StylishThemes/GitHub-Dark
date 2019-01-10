@@ -121,6 +121,7 @@ const mappings = {
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
+  "fill: #959da5": "fill: #757575",
 
   // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
@@ -133,6 +134,7 @@ const mappings = {
   "color: #cb2431": "color: #f44",
   "background-color: #d73a49": "background-color: #f44",
   "background-color: #cb2431": "background-color: #911",
+  "fill: #cb2431": "fill: #f44",
 
   // orange
   "color: #a04100": "color: #f3582c",
@@ -142,12 +144,14 @@ const mappings = {
   // green
   "color: #28a745": "color: #6cc644",
   "background-color: #28a745": "background-color: #6cc644",
+  "fill: #2cbe4e": "color: #6cc644",
 
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "background-color: #ffd33d": "background-color: #cb4",
   "background-color: #ffdf5d": "background-color: #cb4",
+  "fill: #dbab09": "fill: #cb4",
 
   // light yellow
   "background-color: #fff5b1": "background-color: #651",
