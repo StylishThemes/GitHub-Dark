@@ -155,6 +155,9 @@ module.exports = function(grunt) {
     pattern: "/*[[font-choice]]*/",
     replacement: config.font
   }, {
+    pattern: "/*[[font-size-choice]]*/",
+    replacement: config.fontSize
+  }, {
     pattern: "/*[[code-wrap]]*/",
     replacement: config.codeWrapCss
   }, {
