@@ -422,7 +422,7 @@
   /* auto-generated rule for "background-color: #fffbdd" */
   .conflict-gutter-marker, .Box-row--yellow, .form-group.warn .warning,
   .flash-warn, .warning, .boxed-group-warning, .blob-code-inner.highlighted,
-  .selected-line.blob-code, .RecentBranches,
+  .blob-code-inner .highlighted, .selected-line.blob-code, .RecentBranches,
   .diffbar-range-menu .is-range-selected {
     background-color: #261d08 !important;
   }
@@ -513,8 +513,8 @@
   .review-comment .is-comment-editing, .review-summary-form-wrapper,
   .orgs-help-item-octicon, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
-  .org-sso .org-sso-panel, .data-table, .pricing-matrix-table td,
-  .pricing-matrix-table th {
+  .org-sso .org-sso-panel, .avatar-before-user-status, .data-table,
+  .pricing-matrix-table td, .pricing-matrix-table th {
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border: 1px solid #eee" */
@@ -1784,7 +1784,7 @@
     text-shadow: none !important;
   }
   /* transparent background only */
-  table, body > pre, .textographic a.repo, .stars-browser .filter-bar,
+  body > pre, .textographic a.repo, .stars-browser .filter-bar,
   .highlight .file-diff-line:hover pre, .gravatar, .topsearch span.search-input,
   p.meta, .sidebar .milestone, .commit-desc pre, #facebox,
   .profilecols .filter-bar, .btn-group, div.content-header .search-form,
@@ -1832,7 +1832,8 @@
   .team-discussions-container, .Collection ~ div[style*="linear-grad"],
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, .repohead.experiment-repo-nav,
-  ul.add-member-team-list.table-list, .gh-header, .container .bg-white {
+  ul.add-member-team-list.table-list, .gh-header, .container .bg-white,
+  table:not(.d-block), iframe[src*="zuora.com"] {
     background: none !important;
   }
   /* remove background gradient */
@@ -2146,15 +2147,25 @@
   .plans-card-text:first-child {
     border-right-color: #484848 !important;
   }
-  .Popover-message--top-left:after {
+  .Popover-message--top-left:after,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after {
     border-bottom-color: #181818 !important;
   }
   .word-upload-callout:before, .word-upload-callout:after,
   .select-menu-modal-arrow:after, .Popover-message--top-left:before {
     border-bottom-color: #343434 !important;
   }
-  .repo-filterer .repo-filter:hover, .review-summary:before {
+  .repo-filterer .repo-filter:hover, .review-summary:before,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
     border-bottom-color: #484848 !important;
+  }
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
+    border-right-color: transparent !important;
+  }
+  .timeline-comment[aria-selected="true"] .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
+    border-bottom-color: /*[[base-color]]*/ !important;
+    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .4)) !important;
   }
   .issue-head {
     border-bottom-width: 1px !important;
@@ -2649,8 +2660,8 @@
   /* invert network graph; gh-polls (https://github.com/apex/gh-polls) */
   div#network.network > div > canvas, img[alt="FOSSA Status"],
   img[data-canonical-src*="prod/timeseries/"],
-  a[href$="vote"] img[data-canonical-src*="/poll/"], #parallax_field,
-  #parallax_illustration *:not(#parallax_octocat) {
+  a[href$="vote"] img[data-canonical-src*="/poll/"],
+  #parallax_illustration *:not(#parallax_octocat), #parallax_error_text {
     filter: invert(90%) hue-rotate(180deg) contrast(90%) !important;
   }
   /* invert problematic emoji */

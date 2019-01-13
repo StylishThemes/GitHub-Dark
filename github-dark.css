@@ -1641,7 +1641,7 @@
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, .repohead.experiment-repo-nav,
   ul.add-member-team-list.table-list, .gh-header, .container .bg-white,
-  table:not(.d-block) {
+  table:not(.d-block), iframe[src*="zuora.com"] {
     background: none !important;
   }
   /* remove background gradient */
@@ -5278,4 +5278,22 @@
     color: #099 !important;
   }
   /* Literal.Number.Integer.Long */
+}
+@-moz-document domain("zuora.com") {
+  body, label, .popup {
+    background: transparent !important;
+    color: #ddd !important;
+  }
+  input, select {
+    background: #111 !important;
+    color: #ddd !important;
+    border-color: #484848 !important;
+  }
+  .btn-submit {
+    background: linear-gradient(#407045, #305530) !important;
+    border-color: #083 !important;
+  }
+  .btn-submit:hover {
+    background: linear-gradient(#508055, #407045) !important;
+  }
 }
