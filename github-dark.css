@@ -1954,15 +1954,25 @@
   .plans-card-text:first-child {
     border-right-color: #484848 !important;
   }
-  .Popover-message--top-left:after {
+  .Popover-message--top-left:after,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after {
     border-bottom-color: #181818 !important;
   }
   .word-upload-callout:before, .word-upload-callout:after,
   .select-menu-modal-arrow:after, .Popover-message--top-left:before {
     border-bottom-color: #343434 !important;
   }
-  .repo-filterer .repo-filter:hover, .review-summary:before {
+  .repo-filterer .repo-filter:hover, .review-summary:before,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
     border-bottom-color: #484848 !important;
+  }
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
+    border-right-color: transparent !important;
+  }
+  .timeline-comment[aria-selected="true"] .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before {
+    border-bottom-color: /*[[base-color]]*/ !important;
+    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .4)) !important;
   }
   .issue-head {
     border-bottom-width: 1px !important;
