@@ -93,7 +93,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 ## Notes
 
-- If you're using a custom domain for GitHub Enterprise, be sure to include it though a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
+- If you're using a custom domain for GitHub Enterprise, be sure to include it through a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
 
 ## Contributions
 
