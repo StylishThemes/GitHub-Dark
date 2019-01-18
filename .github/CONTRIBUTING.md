@@ -12,7 +12,7 @@ There are a number of ways to get involved with the development of this GitHub D
 ## How to Report Style issues
 
 ### I don't know CSS
-If you don't know CSS very well and have found a missing style, please include as much as possible of following information when opening an issue:
+If you don't know CSS very well and have found a missing style, please include as much as possible of the following information when opening an issue:
 
 * Screenshot of the problem; include the element(s) in the console if at all possible
   * To select an element, target it with your mouse then right-click and choose "Inspect Element"
