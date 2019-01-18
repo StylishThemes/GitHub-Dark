@@ -191,7 +191,7 @@
   } EOT;
 }
 ==/UserStyle== */
-@-moz-document regexp("^https?://((blog|gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
+@-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
 /*! Github Dark v1.20.98 (2019-01-13) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -2349,7 +2349,7 @@
   .news .issues_labeled .border, table.pricing-table, .two-factor-steps,
   div.border.rounded-1, article.border.rounded-1,
   .border-right.border-bottom.border-left, .graph-before-activity-overview,
-  .access-form-wrapper, .user-status-container {
+  .access-form-wrapper, .user-status-container, .timeline-comment-group {
     background: #181818 !important;
   }
   .sidebar-module, .form-control, .form-select,
@@ -2627,7 +2627,8 @@
     fill: #fc3 !important;
   }
   .progress-bar.anim-grow-x, .dev-hero, .header-search-key-slash,
-  input[src$="with-facebook.png"] {
+  input[src$="with-facebook.png"], #parallax_field,
+  #parallax_illustration *:not(#parallax_error_text) {
     filter: brightness(75%) !important;
   }
   .header-search-key-slash {
@@ -2662,8 +2663,7 @@
   /* invert network graph; gh-polls (https://github.com/apex/gh-polls) */
   div#network.network > div > canvas, img[alt="FOSSA Status"],
   img[data-canonical-src*="prod/timeseries/"],
-  a[href$="vote"] img[data-canonical-src*="/poll/"],
-  #parallax_illustration *:not(#parallax_octocat), #parallax_error_text {
+  a[href$="vote"] img[data-canonical-src*="/poll/"], #parallax_error_text {
     filter: invert(90%) hue-rotate(180deg) contrast(90%) !important;
   }
   /* invert problematic emoji */
@@ -2750,8 +2750,8 @@
     opacity: .999 !important;
   }
   /* brighten language colors */
-  .language-color {
-    filter: brightness(150%) !important;
+  .language-color, .repo-language-color {
+    filter: brightness(125%) !important;
   }
   /* soft badges */
   .box-title-count {
@@ -4125,30 +4125,6 @@
   .gd .diff-line-num, .highlight .err, .gd .diff-line-code, .gd .diff-line-pre {
     background: #300 !important;
     border-color: #500 !important;
-  }
-  /* scroll bar */
-  @supports (scrollbar-color: rgba(140, 140, 140, .5) transparent) and (scrollbar-width: thin) {
-    * {
-      scrollbar-color: rgba(140, 140, 140, .5) transparent !important;
-      scrollbar-width: thin !important;
-    }
-  }
-  @supports (not (scrollbar-color: rgba(140, 140, 140, .5) transparent)) and (not (scrollbar-width: thin)) {
-    ::-webkit-scrollbar {
-      max-width: 5px !important;
-      max-height: 5px !important;
-      background: #1d1d1d !important;
-    }
-    ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-      background: transparent !important;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(140, 140, 140, .5) !important;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgba(79, 140, 201, .8) !important;
-      background: rgba(/*[[base-color-rgb]]*/, .8) !important;
-    }
   }
   .CodeMirror-scrollbar-filler {
     background: #1d1d1d !important;
