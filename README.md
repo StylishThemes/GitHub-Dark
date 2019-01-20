@@ -105,21 +105,21 @@ If you would like to contribute to this repository, please...
 
 ## Development
 
-To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` and install grunt via `npm install -g grunt`. After that, you can use the various grunt tasks available:
+To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` after which you can use the various grunt tasks available:
 
-- `grunt`: The default task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
-- `grunt min`: Same as `grunt`, but outputs a minified style.
-- `grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
-- `grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
-- `grunt clean`: Reformat `github-dark.css` to conform the style guide.
-- `grunt lint`: Run Stylelint on `github-dark.css`.
-- `grunt authors`: Regenerate the `AUTHORS` file based on git history.
-- `grunt imagemin`: Minify all images present in the `image` directory.
-- `grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
-- `grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
-- `grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
-- `grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
-- `grunt update`: Update and install dependencies.
+- `npx grunt`: The default task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
+- `npx grunt min`: Same as `grunt`, but outputs a minified style.
+- `npx grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
+- `npx grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
+- `npx grunt clean`: Reformat `github-dark.css` to conform the style guide.
+- `npx grunt lint`: Run Stylelint on `github-dark.css`.
+- `npx grunt authors`: Regenerate the `AUTHORS` file based on git history.
+- `npx grunt imagemin`: Minify all images present in the `image` directory.
+- `npx grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
+- `npx grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
+- `npx grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
+- `npx grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
+- `npx grunt update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 
