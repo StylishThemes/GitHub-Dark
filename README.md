@@ -116,9 +116,9 @@ To develop, first install [Node.js](https://nodejs.org), install dependencies vi
 - `npx grunt authors`: Regenerate the `AUTHORS` file based on git history.
 - `npx grunt imagemin`: Minify all images present in the `image` directory.
 - `npx grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
-- `npx grunt patch`: Increment the version on the patch version number. Also updates headers and creates a commit.
-- `npx grunt minor`: Increment the version on the minor version number. Also updates headers and creates a commit.
-- `npx grunt major`: Increment the version on the major version number. Also updates headers and creates a commit.
+- `npx grunt patch`: Increment the version on the patch version number, update headers and create a commit.
+- `npx grunt minor`: Increment the version on the minor version number, update headers and create a commit.
+- `npx grunt major`: Increment the version on the major version number, update headers and create a commit.
 - `npx grunt update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
