@@ -88,5 +88,5 @@ If you don't know CSS very well and have found a missing style, please include a
 * Copy & paste the css from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylish editor to test your changes.
 * Once you are satisfied with the changes, run `grunt clean` to reindent &amp; clean up the css.
 * Now you can push the changes of the `github-dark.css` file to your fork and submit a pull request.
-* If you haven't already contributed, then also run `npm run authors` to add your name to our list of contributors :smile:
+* If you haven't already contributed, then also run `npx grunt authors` to add your name to our list of contributors :smile:
 * And thanks again for contributing!
