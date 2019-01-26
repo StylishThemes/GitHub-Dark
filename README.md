@@ -33,11 +33,11 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 ## Additional Userstyles
 
-⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader) to have a fixed header.<br>
-⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color) to customize tab colors.<br>
-⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap) to wrap long lines in code boxes.<br>
-⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size) to set a fixed tab size in code.<br>
-⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit) to show line length limits when editing a commit message.<br>
+⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
+⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
+⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
+⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size)<br>
+⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
 ⚙️ [GitHub-Community-Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
 ⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub-Feed-Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
