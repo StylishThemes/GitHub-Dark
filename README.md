@@ -42,6 +42,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub-Feed-Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
 ⚙️ [Overlay-Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
+⚙️ [GitHub-Sticky-Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 
 ## Supported GitHub Addons
 
