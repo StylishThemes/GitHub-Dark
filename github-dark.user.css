@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.103
+@version     1.20.104
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -192,7 +192,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.103 (2019-02-03) */
+/*! Github Dark v1.20.104 (2019-02-03) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -288,7 +288,7 @@
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
   .page-preview, .project-header,
   .projects-comment-form .comment-form-head .toolbar-commenting,
-  .user-profile-sticky-bar:after, .user-profile-nav, .diffbar,
+  .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
   .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
   .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
   .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
@@ -398,8 +398,7 @@
   .pinned-repo-checkbox:checked + .pinned-repo-name, .project-column.moving,
   .project-card.moving, .pinned-repo-item.is-dragging,
   .pinned-repo-item.sortable-ghost,
-  .diffbar-range-menu .in-range:not(.navigation-focus):not(.is-range-selected),
-  .diffbar-range-menu .in-range:not([aria-selected=true]):not(.is-range-selected),
+  .diffbar-range-menu .in-range:not(.is-range-selected),
   .setup-form .setup-plans tr.selected, .illflow-blue .selected {
     background-color: #242424 !important;
   }
@@ -468,6 +467,8 @@
   .card-filter-autocomplete-dropdown .navigation-focus,
   .card-filter-autocomplete-dropdown [aria-selected=true],
   .projects-reset-query:hover .projects-reset-query-icon,
+  .diffbar-range-menu .in-range:focus:not(.is-range-selected),
+  .diffbar-range-menu .in-range:hover:not(.is-range-selected),
   .typeahead-result.navigation-focus, .typeahead-result:hover,
   .typeahead-result[aria-selected=true], .selected-emoji,
   .user-status-org-button.selected, .btn-mktg:hover,
@@ -679,9 +680,7 @@
     border-top-color: #343434 !important;
   }
   /* auto-generated rule for "border-bottom-color: rgba(27,31,35,.15)" */
-  .dropdown-menu:before,
-  .diffbar-range-menu .in-range:not(.navigation-focus):not(.is-range-selected),
-  .diffbar-range-menu .in-range:not([aria-selected=true]):not(.is-range-selected),
+  .dropdown-menu:before, .diffbar-range-menu .in-range:not(.is-range-selected),
   .site-header-nav .dropdown-menu:before {
     border-bottom-color: #343434 !important;
   }
@@ -978,6 +977,7 @@
   .btn-invisible:focus, .btn-invisible:hover, .btn-octicon:hover,
   .commit .commit-title .issue-link, .commit-link,
   .timeline-commits .commit-message > code a:hover, .commit-id:hover,
+  .discussion-sidebar-item .re-request-icon:hover,
   .discussion-sidebar-toggle:hover, .milestone-name:hover,
   .sidebar-assignee .assignee:hover, .participation a:hover,
   .timeline-comment-action:focus, .timeline-comment-action:hover,
@@ -1045,7 +1045,7 @@
   .blob-num-expandable .directional-expander, .diffstat,
   .discussion-sidebar-item, .discussion-sidebar-heading, .milestone-name,
   .sidebar-assignee .assignee, .participation a, .gh-header-meta,
-  .gh-header-meta .author, .tabnav-pr .tabnav-tab, .timeline-comment-header,
+  .tabnav-pr .tabnav-tab, .timeline-comment-header,
   .timeline-comment-header .author, .timeline-comment-header-text code a,
   .discussion-item .author, .discussion-item-icon, .discussion-item-header,
   .discussion-item-link, .discussion-item-ref-title .issue-num,
@@ -1059,19 +1059,20 @@
   details-menu .select-menu-item[aria-checked=true] .description,
   details-menu .select-menu-item[aria-selected=true] .description,
   .select-menu-no-results, .select-menu-item-text .description,
-  .select-menu-item-text .description-inline, .marketing .pagehead p,
-  .hanging-icon-list .octicon, .intgrs-lstng-item-description,
-  .intgr-admin-link .octicon, .credit-card .cvv span,
-  .billing-section .section-label, .lfs-data-icon, .payment-history .currency,
-  .payment-history .status, .discounted-original-price,
-  .billing-manager-banner-title, .blob-interaction-bar .octicon-search,
-  .status-meta, .merge-pr-more-commits, .range-editor-icon,
-  ul.comparison-list > li em, .admin-options-block .policy-enforcement,
-  .code-list .full-path .octicon-repo, ul.simple-conversation-list a.meta,
-  li.contribution .num, .dashboard-notice .dismiss:hover, .ghe-license-status p,
-  .repo-snipit .octicon, .repo-snipit-description, .file .data.empty,
-  .graph-filter .info, .header-search-scope, .integration-meta-head,
-  .issues-reset-query, .table-list-milestones .stat-label, .task-progress,
+  .select-menu-item-text .description-inline, .subject-author-highlight,
+  .marketing .pagehead p, .hanging-icon-list .octicon,
+  .intgrs-lstng-item-description, .intgr-admin-link .octicon,
+  .credit-card .cvv span, .billing-section .section-label, .lfs-data-icon,
+  .payment-history .currency, .payment-history .status,
+  .discounted-original-price, .billing-manager-banner-title,
+  .blob-interaction-bar .octicon-search, .status-meta, .merge-pr-more-commits,
+  .range-editor-icon, ul.comparison-list > li em,
+  .admin-options-block .policy-enforcement, .code-list .full-path .octicon-repo,
+  ul.simple-conversation-list a.meta, li.contribution .num,
+  .dashboard-notice .dismiss:hover, .ghe-license-status p, .repo-snipit .octicon,
+  .repo-snipit-description, .file .data.empty, .graph-filter .info,
+  .header-search-scope, .integration-meta-head, .issues-reset-query,
+  .table-list-milestones .stat-label, .task-progress,
   .marketplace-product-callout .branch-action-item-icon,
   .MarketplaceEdit-body .CircleIcon, .merge-branch-description,
   .owner-reponame .slash, .news blockquote, .news .alert .simple .title,
@@ -1794,10 +1795,10 @@
   .delete-owners-button:hover, .avatar-child,
   .session-authentication .header-logged-out,
   .session-authentication .auth-form-header,
-  .timeline-progressive-disclosure-items, #com #footer,
-  .shade-gradient, #categories .list, .gist-banner, .main-content,
-  .showcase-page-header, .showcase-page-pattern:after, .description-inline,
-  .result-group a, .border-wrap, a.feed-icon, .session-device,
+  .timeline-progressive-disclosure-items, #com #footer, .shade-gradient,
+  #categories .list, .gist-banner, .main-content, .showcase-page-header,
+  .showcase-page-pattern:after, .description-inline, .result-group a,
+  .border-wrap, a.feed-icon, .session-device,
   .boxed-group-list > li.session-device:hover, #message-list .pagination a,
   #message-list .pagination .disabled, .merge-status-item .merge-status-icon,
   .js-release-form .comment-form-head.tabnav, .project-columns, .project-header,
@@ -1814,7 +1815,7 @@
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, .repohead.experiment-repo-nav,
   ul.add-member-team-list.table-list, .gh-header, .container .bg-white,
-  table:not(.d-block), iframe[src*="zuora.com"] {
+  table:not(.d-block), iframe[src*="zuora.com"], .pr-toolbar, .diffbar {
     background: none !important;
   }
   /* remove background gradient */
@@ -2064,8 +2065,7 @@
   .pending-team-invitations-link, .discussion-item + .discussion-item-review,
   .profile-timeline-card-wrapper,
   .profile-rollup-wrapper + .profile-rollup-wrapper,
-  .email-preference-exceptions .exception, .user-key-email-unverified,
-  .diffbar {
+  .email-preference-exceptions .exception, .user-key-email-unverified, .diffbar {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, ul.color-label-list .color,
@@ -2388,8 +2388,8 @@
   .manage-repo-access-not-active, .header-search-scope, .reverse-progress-bar,
   .featurette.py-5, .payment-history .refunded, .payment-history .failed,
   .profile-timeline-month-heading.bg-white, .project-card,
-  .gh-header .gh-header-sticky.is-stuck+.gh-header-shadow,
-  .pr-toolbar {
+  .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
+  .pr-toolbar.is-stuck {
     background: #222 !important;
   }
   #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar,
@@ -3753,6 +3753,14 @@
     z-index: 1 !important;
     background: #181818 !important;
     box-shadow: 0 0 0 4px #181818 !important;
+  }
+  /* Make sticky PR toolbar extend to full width. GitHub uses a fake
+     effect here that does not work on transparent backgrounds */
+  .pr-toolbar.is-stuck {
+    margin-left: -100vw !important;
+    padding-left: 100vw !important;
+    margin-right: -100vw !important;
+    padding-right: 100vw !important;
   }
   /* Hide annoying Issue/Pull Request banners */
   .repository-content > .issues-listing > .js-notice {
