@@ -95,7 +95,7 @@
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
   .page-preview, .project-header,
   .projects-comment-form .comment-form-head .toolbar-commenting,
-  .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
+  .user-profile-sticky-bar:after, .user-profile-nav, .diffbar,
   .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
   .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
   .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
@@ -2194,9 +2194,7 @@
   .leaflet-control-zoom, .pagehead-tabs-item.selected, .reponav-item.selected,
   .manage-repo-access-not-active, .header-search-scope, .reverse-progress-bar,
   .featurette.py-5, .payment-history .refunded, .payment-history .failed,
-  .profile-timeline-month-heading.bg-white, .project-card,
-  .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
-  .pr-toolbar.is-stuck {
+  .profile-timeline-month-heading.bg-white, .project-card {
     background: #222 !important;
   }
   #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar,
@@ -3561,13 +3559,17 @@
     background: #181818 !important;
     box-shadow: 0 0 0 4px #181818 !important;
   }
-  /* Make sticky PR toolbar extend to full width. GitHub uses a fake
-     effect here that does not work on transparent backgrounds */
-  .pr-toolbar.is-stuck {
-    margin-left: -100vw !important;
-    padding-left: 100vw !important;
-    margin-right: -100vw !important;
-    padding-right: 100vw !important;
+  /* sticky header tweaks */
+  .pr-toolbar.is-stuck + .toolbar-shadow {
+    background: #181818 !important;
+    top: 0 !important;
+    height: 60px !important;
+    border: none !important;
+    box-shadow: 0 0 .75rem rgba(0,0,0,.7) !important;
+  }
+  .gh-header-shadow {
+    border: none !important;
+    box-shadow: 0 0 .75rem rgba(0,0,0,.7) !important;
   }
   /* Hide annoying Issue/Pull Request banners */
   .repository-content > .issues-listing > .js-notice {
