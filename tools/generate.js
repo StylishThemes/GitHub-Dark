@@ -28,6 +28,7 @@ const mappings = {
   "background-color: #d1d5da": "background-color: #444",
   "background-color: #6a737d": "background-color: #222",
   "background-color: #f1f8ff": "background-color: #242424",
+  "background-color: #24292e": "background-color: #222",
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #032f62": "background-color: #182030",
   "background-color: #dbedff": "background-color: #182030",
@@ -47,8 +48,10 @@ const mappings = {
   "border: 2px solid #fff": "border-color: #222",
   "border: solid #ddd": "border-color: #484848",
 
+  "border-color: #d1d5da": "border-color: #343434",
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #eaecef": "border-color: #343434",
+
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border-bottom: 1px solid #f8f8f8": "border-bottom: 1px solid #343434",
