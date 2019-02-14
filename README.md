@@ -31,6 +31,8 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.<br>
 📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
+For Safari, the only alternative is to install [Cascadea](https://cascadea.app/) along with our [non-usercss version of GitHub-Dark](https://github.com/StylishThemes/GitHub-Dark/raw/master/github-dark.css); but you'll be stuck with no customization options unless you make a [custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) of our style. Also see [issue #808](https://github.com/StylishThemes/GitHub-Dark/issues/808).
+
 ## Additional Userstyles
 
 ⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
