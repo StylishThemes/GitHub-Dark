@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.113
+@version     1.20.114
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -192,7 +192,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.113 (2019-02-21) */
+/*! Github Dark v1.20.114 (2019-02-22) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -242,6 +242,10 @@
   /* auto-generated rule for "background: #d1d5da" */
   .avatar.avatar-more:after, .AvatarStack--right .avatar.avatar-more {
     background: #444 !important;
+  }
+  /* auto-generated rule for "background: #f1f8ff" */
+  .commit-tease .AvatarStack-body, .ais-Hits-item:hover, .ais-Hits-item.active {
+    background: #242424 !important;
   }
   /* auto-generated rule for "background: #fffbdd" */
   .form-checkbox label em.highlight, .form-warning {
@@ -906,6 +910,11 @@
   /* auto-generated rule for "color: #a3aab1" */
   .blankslate-icon, .gh-header-number, ul.comparison-list > li .octicon,
   .team-project-suggestion-number {
+    color: #757575 !important;
+  }
+  /* auto-generated rule for "color: #c3c8cf" */
+  .discussion-sidebar-item .re-request-icon, .discussion-sidebar-toggle .octicon,
+  .deployment-meta .octicon {
     color: #5a5a5a !important;
   }
   /* auto-generated rule for "color: #c6cbd1" */
@@ -913,7 +922,7 @@
   .locked-conversation .write-tab, .commit-group-title .octicon-git-commit,
   .table-of-contents .toc-diff-stats .octicon, .footer-octicon, .steps li,
   .select-menu-header .close-button, .select-menu-header .octicon {
-    color: #474747 !important;
+    color: #5a5a5a !important;
   }
   /* auto-generated rule for "color: rgba(27,31,35,.85)" */
   .boxed-group-warning, .intro-shelf {
@@ -1991,7 +2000,7 @@
     border: 1px solid #444 !important;
     border-bottom: 1px solid #343434 !important;
   }
-  .header, .summary-stats, .follow-list .follow-list-item {
+  .summary-stats, .follow-list .follow-list-item {
     border-bottom: 1px solid #343434 !important;
   }
   .simple-conversation-list > li, .site-footer, .blame .section-first td,
@@ -2471,11 +2480,10 @@
   .team-discussions-container, .Collection ~ div[style*="linear-grad"],
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, .repohead.experiment-repo-nav,
-  ul.add-member-team-list.table-list, .gh-header,
-  iframe[src*="zuora.com"], .pr-toolbar, .blankslate.blankslate-clean-background,
-  .enterprise-prompt, .enterprise-prompt *, .diffbar,
-  [style*="background:#fafbfc"], [style*="background-color: #fafbfc"],
-  .footer .bg-gray-light {
+  ul.add-member-team-list.table-list, .gh-header, iframe[src*="zuora.com"],
+  .pr-toolbar, .blankslate.blankslate-clean-background, .enterprise-prompt,
+  .enterprise-prompt *, .diffbar, [style*="background:#fafbfc"],
+  [style*="background-color: #fafbfc"], .footer .bg-gray-light {
     background: none !important;
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -3060,7 +3068,10 @@
   details-menu .select-menu-item[aria-checked=true]:hover .description,
   .user-status-org-button:hover .user-status-org-detail,
   .user-status-org-button.selected .user-status-org-detail,
-  .member-suggestion:hover .octicon, .member-suggestion:hover .member-name,
+  .member-suggestion[aria-selected=true] .octicon,
+  .member-suggestion:hover .octicon,
+  .member-suggestion[aria-selected=true] .member-name,
+  .member-suggestion:hover .member-name,
   .gist-quicksearch-results .select-menu-item.navigation-focus h4,
   .gist-quicksearch-results .select-menu-item.navigation-focus span,
   .gist-quicksearch-results .select-menu-item[aria-selected=true] h4,
@@ -3434,7 +3445,7 @@
   .metabox .editable-text:hover, #inbox .list .item .title span,
   .Subhead.border-bottom-0 {
     background-color: transparent !important;
-    border: 0 !important;
+    border: none !important;
   }
   /* Panels */
   #posts #rss, .signup-button, .hero h1, .plan.personal, .caption,
@@ -3899,8 +3910,9 @@
   .file .image .border-wrap, .site-search .chromeless-input,
   .profile-timeline-card-wrapper, .render-shell img, img.asset,
   .AvatarStack--right .avatar, .AvatarStack-body .avatar,
-  .sidebar-notifications .thread-subscription-status {
-    border: 0 !important;
+  .sidebar-notifications .thread-subscription-status,
+  .repository-lang-stats-graph .language-color:not(:first-child) {
+    border: none !important;
   }
   .dashboard-tabs a {
     border-left: 0 !important;
@@ -4124,6 +4136,13 @@
     .Header {
       border-bottom: 1px solid #343434 !important;
     }
+  }
+  /* rules for help pages */
+  .search-result-title .ais-Highlight-highlighted {
+    color: /*[[base-color]]*/ !important;
+  }
+  .search-result-intro .ais-Highlight-highlighted {
+    border-color: /*[[base-color]]*/ !important;
   }
   /* https://github.com/musically-ut/lovely-forks */
   .lovely-forks-addon {
@@ -4514,8 +4533,7 @@
   .awesome-autocomplete .tt-suggestion .octicon {
     color: /*[[base-color]]*/ !important;
   }
-  .awesome-autocomplete .tt-suggestion .octicon-star,
-  .dotcom a .octicon-mark-github {
+  .awesome-autocomplete .tt-suggestion .octicon-star, .octicon[fill="#24292E"] {
     fill: #c0c0c0 !important;
   }
   .awesome-autocomplete .aa-category {
