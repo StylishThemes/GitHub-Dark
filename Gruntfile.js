@@ -165,7 +165,7 @@ module.exports = function(grunt) {
     replacement: config.tab
   }, {
     // remove default syntax themes AND closing bracket
-    pattern: /(\s+\/\* grunt build - remove start \*\/)(.*)(\s+\/\* grunt build - remove end \*\/)$/sm,
+    pattern: /\s+\/\* grunt build - remove start \*\/.*\s+\/\* grunt build - remove end \*\/$/sm,
     replacement: ""
   }, {
     // add selected theme
@@ -199,7 +199,7 @@ module.exports = function(grunt) {
     replacement: "/*[[tab-size]]*/"
   }, {
     // remove default syntax theme AND closing bracket
-    pattern: /(\s+\/\* grunt build - remove start \*\/)(.*)(\s+\/\* grunt build - remove end \*\/)$/sm,
+    pattern: /\s+\/\* grunt build - remove start \*\/.*\s+\/\* grunt build - remove end \*\/$/sm,
     replacement: ""
   }];
 
