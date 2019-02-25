@@ -139,6 +139,9 @@ const mappings = {
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
   "color: #24292e": "color: #c0c0c0",
 
+  // blue
+  "color: #264c72": "color: #9daccc",
+
   // red
   "color: #cb2431": "color: #f44",
   "background-color: #d73a49": "background-color: #f44",
@@ -168,6 +171,8 @@ const mappings = {
   // purple
   "color: #6f42c1": "color: #8368aa",
   "background-color: #6f42c1": "background-color: #8368aa",
+  "background-color: #f8f4ff": "background-color: #213",
+  "border: 1px solid #6f42c1": "border: 1px solid #8368aa",
 
   "color: inherit": "color: inherit",
 };
