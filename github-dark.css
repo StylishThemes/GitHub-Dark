@@ -4448,6 +4448,23 @@
   .graphiql-container .execute-button svg {
     fill: currentColor !important;
   }
+  /* Actions visual editor */
+  .deployments-timeline-item + div[style*=background-image] {
+    background: linear-gradient(rgba(28, 28, 28, 0), rgba(28, 28, 28, 1)) !important;
+  }
+  [style*="background-color: #e1e4e8"] {
+    background: #8e8e8e !important;
+  }
+  [style*="color: #e1e4e8"] {
+    color: #8e8e8e !important;
+  }
+  /* Hides popup arrow due to reused ui element */
+  .file-commit-form .dropdown-menu .commit-form:after {
+    content: none !important;
+  }
+  .file-commit-form .commit-form {
+    background: #181818 !important;
+  }
   /*[[code-wrap]]*/
   /* inline code - single lines */
   .markdown-body code, .markdown-body tt, .protip code, .content dl code,
@@ -5214,5 +5231,71 @@
   }
   .btn-submit:hover {
     background: linear-gradient(#508055, #407045) !important;
+  }
+}
+@-moz-document domain("launch-editor.github.com") {
+  /* Styles the actions visual editor */
+  body, .ActionsTimeline-item.selected {
+    background: #181818 !important;
+  }
+  .editor-node.bg-white, .editor-node.bg-white table {
+    background: #1c1c1c !important;
+  }
+  .blankslate-box, .editor-node {
+    background: #242424 !important;
+  }
+  .input, .output {
+    background: #484848 !important;
+  }
+  .overlay {
+    background: rgba(27, 31, 35, .5) !important;
+  }
+  svg + div .circle, .port .circle, .circle.live:after {
+    background: /*[[base-color]]*/ #4f8cc9 !important;
+  }
+  .input:before, .output:before {
+    background: transparent !important;
+  }
+  .ActionsTimeline-item {
+    border-color: #333 !important;
+  }
+  .blankslate-box, .editor-node, .editor-node > div {
+    border-color: #484848 !important;
+  }
+  .blankslate-box.is-hovering,
+  .editor-node[style*="box-shadow: rgba(3, 102, 214, 0.3)"] {
+      border-color: /*[[base-color]]*/ #4f8cc9 !important;
+      box-shadow: 0 0 0 .2em rgba(79, 140, 201, .4) !important;
+      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
+  }
+  .ActionsTimeline-item--failure.selected {
+    border-left-color: #f44 !important;
+  }
+  .editor-node.border-red {
+    border-color: #f44 !important;
+    box-shadow: 0 0 0 .2em rgba(255, 68, 68, .3) !important;
+  }
+  .ActionsTimeline-item--success.selected {
+    border-left-color: #6cc644 !important;
+  }
+  .arrow-icon-container {
+    color: /*[[base-color]]*/ #4f8cc9 !important;
+  }
+  /* Line between actions */
+  [stroke="#959da5"] {
+    stroke: #484848 !important;
+  }
+  /* Active line between actions */
+  [stroke="#2188ff"] {
+    stroke: /*[[base-color]]*/ #4f8cc9 !important;
+  }
+  /* These class names are dynamic and will change frequently 😢 */
+  .jsx-1812009678, /* read-only bg */
+  .jsx-2157058810 /* editor & run history bg */ {
+    background-color: #202020 !important;
+  }
+  /* The dot when creating a new action */
+  svg + .jsx-1812009678 {
+    background: none !important;
   }
 }
