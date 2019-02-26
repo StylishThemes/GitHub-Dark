@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.20.115
+@version     1.20.116
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -192,7 +192,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.20.115 (2019-02-22) */
+/*! Github Dark v1.20.116 (2019-02-26) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -203,6 +203,10 @@
   }
   .Popover-message:after {
     border-bottom-color: #181818;
+  }
+  .alert {
+    background: #182030 !important;
+    border: 1px solid #246 !important;
   }
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background: #fff" */
@@ -537,7 +541,7 @@
   /* auto-generated rule for "border-color: #e1e4e8" */
   .pagination a:focus, .pagination a:hover, .pagination em:focus,
   .pagination em:hover, .pagination span:focus, .pagination span:hover,
-  .select-menu-item + .semantic-toc-file:after,
+  .subnav-link:hover, .select-menu-item + .semantic-toc-file:after,
   .semantic-toc-symbol:not(.last-visible):after, .tabnav-pr,
   .tabnav-pr .tabnav-tab.selected {
     border-color: #343434 !important;
@@ -1012,9 +1016,8 @@
   .menu-heading, .tabnav-tab, .tabnav-extra,
   .filter-list.pjax-active .filter-item, .filter-item, .subnav-item,
   .subnav-search-input, .UnderlineNav-item, .text-gray, .link-gray, .muted-link,
-  .lead, .header-search-scope, .pullquote, .MarketingBody > p,
-  .MarketingBody blockquote, .MarketingBody ol, .MarketingBody ul,
-  .DateNav .selected, .Label--gray, .Label--outline, .Counter,
+  .lead, .header-search-scope, .pullquote, .MarketingBody > p, .MarketingBody ol,
+  .MarketingBody ul, .DateNav .selected, .Label--gray, .Label--outline, .Counter,
   .Subhead-description, .table-list-header-meta,
   .table-list-header-toggle .btn-link, .suggester li small, .Box-body .help,
   .boxed-group .heading a.boxed-group-breadcrumb,
@@ -1118,9 +1121,9 @@
   .link-gray-dark, .text-emphasized, .page-responsive .HeaderMenu-link:hover,
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
   .header-nav-current-user .user-profile-link, .jump-to-field-active,
-  .subheader-nav .nav-item.selected,
-  .illflow-item.selected .illflow-item-heading,
-  .MarketingBody-lead > p:first-child, .Counter--gray-light,
+  .subheader-nav .nav-item.selected, .subnav-link:hover,
+  .subnav-link.subnav-link-selected,
+  .illflow-item.selected .illflow-item-heading, .Counter--gray-light,
   .markdown-body span.frame span span, .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
@@ -1180,6 +1183,10 @@
   .directory-toc h3 a, .markdown-body .lead-mktg p,
   .site-header-nav .dropdown-menu a.active {
     color: #c0c0c0 !important;
+  }
+  /* auto-generated rule for "color: #264c72" */
+  .alert, .preview-notice {
+    color: #9daccc !important;
   }
   /* auto-generated rule for "color: #cb2431" */
   .btn-danger, .form-group dd h4.is-error, .form-group.required dt label:after,
@@ -1360,6 +1367,14 @@
   .org-insights-graph-canvas path.metric-3,
   .org-insights-svg-tip .metric-3 .legend {
     background-color: #8368aa !important;
+  }
+  /* auto-generated rule for "background-color: #f8f4ff" */
+  .product {
+    background-color: #213 !important;
+  }
+  /* auto-generated rule for "border: 1px solid #6f42c1" */
+  .product {
+    border: 1px solid #8368aa !important;
   }
   /* auto-generated rule for "color: inherit" */
   legend, .subnav-search-context .select-menu-item-icon, .text-inherit,
@@ -2242,7 +2257,7 @@
   .border-right.border-bottom.border-left, .graph-before-activity-overview,
   .access-form-wrapper, .timeline-comment-group, .summarylink-btn,
   .pinned-item-list-item, .avatar-before-user-status, .user-status-container,
-  .profile-timeline-card, table.files tr {
+  .profile-timeline-card, table.files tr, .blog pre {
     background: #181818 !important;
   }
   .bg-white {
@@ -2487,7 +2502,9 @@
   ul.add-member-team-list.table-list, .gh-header, iframe[src*="zuora.com"],
   .pr-toolbar, .blankslate.blankslate-clean-background, .enterprise-prompt,
   .enterprise-prompt *, .diffbar, [style*="background:#fafbfc"],
-  [style*="background-color: #fafbfc"], .footer .bg-gray-light {
+  [style*="background-color: #fafbfc"], .footer .bg-gray-light,
+  button.btn-invisible, button.btn-invisible:hover, .btn.btn-invisible,
+  .btn.btn-invisible:hover {
     background: none !important;
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -2609,7 +2626,8 @@
   img[src$="favicons.githubusercontent.com/gist.github.com"],
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
   #footer .github img, img[data-canonical-src^="https://codecov.io"],
-  #com span.octicon:not(.octicon-comment-discussion) {
+  #com span.octicon:not(.octicon-comment-discussion),
+  .developer-thanks-image img {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* invert network graph; gh-polls (https://github.com/apex/gh-polls) */
@@ -2875,12 +2893,12 @@
   .github-jobs-promotion p, .octotip, .markdown-format .alert:not(.warning),
   .full-commit.commit, .flash, .bootcamp h1, .bootcamp-body, .owners-notice,
   .full-commit .browse-button, .blob-history, .branch-name, .new-user-avatar-cta,
-  .jstree-wholerow-clicked, .commit-ref, .api .alert, .file-history-tease,
-  .flash, .flash-global, .feature-banner, .recently-touched-branches,
+  .jstree-wholerow-clicked, .commit-ref, .file-history-tease, .flash,
+  .flash-global, .feature-banner, .recently-touched-branches,
   article.full .alert, .btn.btn-blue, .hook-delivery-guid, .topic-tag,
   .topic-tag-action, .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .RecentBranches, .signup-prompt-bg,
-  ul.search-results li .label, div[style*="background-color: #044d6e"], .alert,
+  ul.search-results li .label, div[style*="background-color: #044d6e"],
   .btn-mktg, .topic-tag-contrast .delete-topic-link {
     background: #182030 !important;
   }
@@ -2911,7 +2929,7 @@
   .file-history-tease, .flash, .flash-global, .feature-banner,
   .recently-touched-branches, .timeline-progressive-disclosure-items button,
   article.full .alert, .btn.btn-blue, .topic-tag, .RecentBranches,
-  .js-tag-input-tag, ul.search-results li .label, .topic-tag-action, .alert {
+  .js-tag-input-tag, ul.search-results li .label, .topic-tag-action {
     border: 1px solid #246 !important;
   }
   .repo-file-upload-progress, .project-updated-message, .delete-topic-button,
@@ -2934,8 +2952,7 @@
   .timeline-comment.current-user:after {
     border-right-color: #182030 !important;
   }
-  .flash, .markdown-format .alert a, .api .alert, .branch-name,
-  article.full .alert {
+  .flash, .markdown-format .alert a, .branch-name, article.full .alert {
     border-color: #264c72 !important;
     color: #c8d0e1 !important;
   }
@@ -3179,7 +3196,9 @@
   .select-menu-item .select-menu-item-text:hover .description,
   .select-menu-item-text:hover .description,
   .select-menu-item[aria-selected="false"] .select-menu-item-text,
-  .select-menu-list .select-menu-item-text .filename {
+  .select-menu-list .select-menu-item-text .filename,
+  .site-header-nav .dropdown-menu a.active,
+  .site-header-nav .dropdown-menu a .octicon-check {
     color: #dcdcdc !important;
   }
   pre, body, a.social-count, span.social-count, #languages a.bar, .lineoption p,
@@ -4621,6 +4640,23 @@
   .graphiql-container .execute-button svg {
     fill: currentColor !important;
   }
+  /* Actions visual editor */
+  .deployments-timeline-item + div[style*=background-image] {
+    background: linear-gradient(rgba(28, 28, 28, 0), rgba(28, 28, 28, 1)) !important;
+  }
+  [style*="background-color: #e1e4e8"] {
+    background: #8e8e8e !important;
+  }
+  [style*="color: #e1e4e8"] {
+    color: #8e8e8e !important;
+  }
+  /* Hides popup arrow due to reused ui element */
+  .file-commit-form .dropdown-menu .commit-form:after {
+    content: none !important;
+  }
+  .file-commit-form .commit-form {
+    background: #181818 !important;
+  }
   /*[[code-wrap]]*/
   /* inline code - single lines */
   .markdown-body code, .markdown-body tt, .protip code, .content dl code,
@@ -4657,6 +4693,72 @@
   }
   .btn-submit:hover {
     background: linear-gradient(#508055, #407045) !important;
+  }
+}
+@-moz-document domain("launch-editor.github.com") {
+  /* Styles the actions visual editor */
+  body, .ActionsTimeline-item.selected {
+    background: #181818 !important;
+  }
+  .editor-node.bg-white, .editor-node.bg-white table {
+    background: #1c1c1c !important;
+  }
+  .blankslate-box, .editor-node {
+    background: #242424 !important;
+  }
+  .input, .output {
+    background: #484848 !important;
+  }
+  .overlay {
+    background: rgba(27, 31, 35, .5) !important;
+  }
+  svg + div .circle, .port .circle, .circle.live:after {
+    background: /*[[base-color]]*/ !important;
+  }
+  .input:before, .output:before {
+    background: transparent !important;
+  }
+  .ActionsTimeline-item {
+    border-color: #333 !important;
+  }
+  .blankslate-box, .editor-node, .editor-node > div {
+    border-color: #484848 !important;
+  }
+  .blankslate-box.is-hovering,
+  .editor-node[style*="box-shadow: rgba(3, 102, 214, 0.3)"] {
+    border-color: /*[[base-color]]*/ !important;
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .4) !important;
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4) !important;
+  }
+  .ActionsTimeline-item--failure.selected {
+    border-left-color: #f44 !important;
+  }
+  .editor-node.border-red {
+    border-color: #f44 !important;
+    box-shadow: 0 0 0 .2em rgba(255, 68, 68, .3) !important;
+  }
+  .ActionsTimeline-item--success.selected {
+    border-left-color: #6cc644 !important;
+  }
+  .arrow-icon-container {
+    color: /*[[base-color]]*/ !important;
+  }
+  /* Line between actions */
+  [stroke="#959da5"] {
+    stroke: #484848 !important;
+  }
+  /* Active line between actions */
+  [stroke="#2188ff"] {
+    stroke: /*[[base-color]]*/ !important;
+  }
+  /* These class names are dynamic and will change frequently 😢 */
+  /* read-only bg, editor & run history bg */
+  .jsx-1812009678, .jsx-2157058810 {
+    background-color: #202020 !important;
+  }
+  /* The dot when creating a new action */
+  svg + .jsx-1812009678 {
+    background: none !important;
   }
 }
 
