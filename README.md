@@ -81,6 +81,7 @@ For Safari, the only alternative is to install [Cascadea](https://cascadea.app/)
 | Obsidian                   |      ✔️     |      ❌     |      ✔️      |
 | One Dark                   |      ✔️     |      ✔️     |      ❌      |
 | Pastel on Dark             |      ✔️     |      ✔️     |      ✔️      |
+| Railscasts                 |      ✔️     |      ✔️     |      ✔️      |
 | Solarized Dark             |      ✔️     |      ✔️     |      ✔️      |
 | Terminal                   |      ✔️     |      ❌     |      ❌      |
 | Tomorrow Night             |      ✔️     |      ❌     |      ✔️      |
