@@ -206,6 +206,7 @@ const ignoreSelectors = [
   /^h[1-6] a$/, // weird styles from help.github.com
   /\.bg-white/,
   /\.CircleBadge/,
+  /^table$/,
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
