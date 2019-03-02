@@ -190,12 +190,8 @@ const sources = [
   {url: "https://developer.github.com"},
   {
     url: "https://github.com/login",
-    opts: {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"
-      }
-    },
     prefix: ".page-responsive",
+    opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}},
   },
   {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css"},
   {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css"},
@@ -313,7 +309,7 @@ function parseRule(decls, rule, opts) {
           selector = selector.replace(/>/g, " > ");
           selector = selector.replace(/ {2,}/g, " ");
 
-          if (opts.prefix) {
+          if (opts.prefix && !selector.startsWith(opts.prefix)) {
             selector = `${opts.prefix} ${selector}`;
           }
 
@@ -374,7 +370,7 @@ async function main() {
     return source.url.endsWith(".css") ? null : fetch(source.url, source.opts);
   }));
 
-  for (const [index, response] of sourceResponses.entries()) {
+  for (const [index, response] of Object.entries(sourceResponses)) {
     const source = sources[index];
     if (response) {
       source.styles = await extractStyleLinks(response);
@@ -387,7 +383,7 @@ async function main() {
     return Promise.all(source.styles.map(url => fetch(url).then(res => res.text())));
   }));
 
-  for (const [index, responses] of cssResponses.entries()) {
+  for (const [index, responses] of Object.entries(cssResponses)) {
     const source = sources[index];
     source.css = responses.join("\n");
   }
