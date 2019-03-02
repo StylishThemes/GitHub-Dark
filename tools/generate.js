@@ -309,7 +309,7 @@ function parseRule(decls, rule, opts) {
           selector = selector.replace(/>/g, " > ");
           selector = selector.replace(/ {2,}/g, " ");
 
-          if (opts.prefix && !selector.startsWith(opts.prefix)) {
+          if (opts.prefix && !selector.split(/\s+/)[0].includes(opts.prefix)) {
             selector = `${opts.prefix} ${selector}`;
           }
 
