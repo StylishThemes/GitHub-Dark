@@ -180,19 +180,25 @@ const mappings = {
   "color: inherit": "color: inherit",
 };
 
-// list of URLs to pull stylesheets from
-const urls = [
+// list of sites to pull stylesheets from. Accepts fetch options. If `prefix` is
+// set, will prefix all selectors obtained from this source. If `url` ends with
+// .css, will directly load that stylesheet.
+const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://developer.github.com"},
-  // {url: "https://github.com/login", opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}}},
-];
-
-// list of additional style URLs to pull
-const additionalStyleUrls = [
-  "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
-  "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css",
+  // {
+  //   url: "https://github.com/login",
+  //   opts: {
+  //     headers: {
+  //       "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"
+  //     }
+  //   },
+  //   prefix: ".page-responsive",
+  // },
+  {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css"},
+  {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css"},
 ];
 
 // list of regexes matching selectors that should be ignored
@@ -249,14 +255,12 @@ async function writeOutput(generatedCss) {
   await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
 }
 
-async function extractStyleLinks(responses) {
+async function extractStyleLinks(res) {
   const styleUrls = [];
-  for (const res of responses) {
-    for (const href of extractStyleHrefs(await res.text())) {
-      styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
-    }
+  for (const href of extractStyleHrefs(await res.text())) {
+    styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
   }
-  return styleUrls.concat(additionalStyleUrls);
+  return styleUrls;
 }
 
 function extractStyleHrefs(html) {
@@ -271,23 +275,23 @@ function extractStyleHrefs(html) {
   }).filter(link => !!link);
 }
 
-function parseDeclarations(cssString) {
+function parseDeclarations(cssString, opts) {
   const decls = {};
   const stylesheet = css.parse(cssString).stylesheet;
 
   stylesheet.rules.forEach(rule => {
     if (rule.type === "media" && mediaMatches(rule.media)) {
-      rule.rules.forEach(rule => parseRule(decls, rule));
+      rule.rules.forEach(rule => parseRule(decls, rule, opts));
     }
 
     if (!rule.selectors || rule.selectors.length === 0) return;
-    parseRule(decls, rule);
+    parseRule(decls, rule, opts);
   });
 
   return decls;
 }
 
-function parseRule(decls, rule) {
+function parseRule(decls, rule, opts) {
   for (const decl of rule.declarations) {
     for (const mapping of Object.keys(mappings)) {
       if (!decl.value) continue;
@@ -308,6 +312,10 @@ function parseRule(decls, rule) {
           selector = selector.replace(/~/g, " ~ ");
           selector = selector.replace(/>/g, " > ");
           selector = selector.replace(/ {2,}/g, " ");
+
+          if (opts.prefix) {
+            selector = `${opts.prefix} ${selector}`;
+          }
 
           // add the new rule to our list, unless it's already on it
           if (!decls[mapping].includes(selector)) {
@@ -362,9 +370,37 @@ function exit(err) {
 }
 
 async function main() {
-  const links = await extractStyleLinks(await Promise.all(urls.map(u => fetch(u.url, u.opts))));
-  const responses = await Promise.all(links.map(link => fetch(link).then(res => res.text())));
-  const decls = parseDeclarations(responses.join("\n"));
+  const sourceResponses = await Promise.all(sources.map(source => {
+    return source.url.endsWith(".css") ? null : fetch(source.url, source.opts);
+  }));
+
+  for (const [index, response] of sourceResponses.entries()) {
+    const source = sources[index];
+    if (response) {
+      source.styles = await extractStyleLinks(response);
+    } else {
+      source.styles = [source.url];
+    }
+  }
+
+  const cssResponses = await Promise.all(sources.map(source => {
+    return Promise.all(source.styles.map(url => fetch(url).then(res => res.text())));
+  }));
+
+  for (const [index, responses] of cssResponses.entries()) {
+    const source = sources[index];
+    source.css = responses.join("\n");
+  }
+
+  const decls = {};
+  for (const source of sources) {
+    for (const [key, values] of Object.entries(parseDeclarations(source.css, {prefix: source.prefix}))) {
+      if (!decls[key]) decls[key] = [];
+      decls[key].push(...values);
+      decls[key] = Array.from(new Set(decls[key]));
+    }
+  }
+
   await writeOutput(buildOutput(decls));
 }
 
