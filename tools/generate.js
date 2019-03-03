@@ -44,6 +44,7 @@ const mappings = {
   // ==========================================================================
 
   "border: 1px solid #e1e4e8": "border-color: #343434",
+  "border: 1px solid #d1d5da": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(225,225,225,.2)",
   "border: 2px solid #fff": "border-color: #222",
@@ -204,7 +205,6 @@ const sources = [
 const ignoreSelectors = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
-  /\.Box$/,
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
   /:not\(li\.moved\)/,
