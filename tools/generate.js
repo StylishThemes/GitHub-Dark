@@ -146,6 +146,7 @@ const mappings = {
 
   // blue
   "color: #264c72": "color: #9daccc",
+  "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
 
   // red
   "color: #cb2431": "color: #f44",
