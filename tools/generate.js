@@ -164,6 +164,7 @@ const mappings = {
   "color: #28a745": "color: #6cc644",
   "background-color: #28a745": "background-color: #6cc644",
   "fill: #2cbe4e": "color: #6cc644",
+  "border-color: #34d058": "border-color: #34d058",
 
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
@@ -215,7 +216,6 @@ const ignoreSelectors = [
   /^\.bg-gray$/,
   /^\.CircleBadge$/,
   /^table$/,
-
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
