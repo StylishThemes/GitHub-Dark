@@ -320,7 +320,7 @@ function parseRule(decls, rule, opts) {
             selector = `${opts.prefix} ${selector}`;
           }
 
-          // emulate !important in original rule by increasinging specificity
+          // emulate !important in original rule via fake specificity
           if (hasImportant) {
             selector = `html:not(#X) ${selector}`;
           }
