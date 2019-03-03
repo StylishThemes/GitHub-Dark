@@ -210,9 +210,11 @@ const ignoreSelectors = [
   /^.Popover-message:before$/,
   /^.Popover-message:after$/,
   /^h[1-6] a$/, // weird styles from help.github.com
-  /\.bg-white/,
-  /\.CircleBadge/,
+  /^\.bg-white$/,
+  /^\.bg-gray$/,
+  /^\.CircleBadge$/,
   /^table$/,
+
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
