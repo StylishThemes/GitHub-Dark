@@ -291,13 +291,13 @@ function parseDeclarations(cssString, opts) {
 
 function parseRule(decls, rule, opts) {
   for (const decl of rule.declarations) {
-    const hasImportant = /!important/.test(decl.value);
+    const hasImportant = /!important$/.test((decl.value || "").trim());
     for (const mapping of Object.keys(mappings)) {
       if (!decl.value) continue;
       if (!decls[mapping]) decls[mapping] = [];
       let [prop, val] = mapping.split(": ");
-      decl.value = decl.value.replace(/!important/g, "").trim();
-      val = val.replace(/!important/g, "").trim();
+      decl.value = decl.value.trim().replace(/!important$/g, "").trim();
+      val = val.trim().replace(/!important$/g, "").trim();
       if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
         rule.selectors.forEach(selector => {
           // Skip potentially unmergeable selectors
