@@ -186,9 +186,10 @@ const mappings = {
   "color: inherit": "color: inherit",
 };
 
-// list of sites to pull stylesheets from. Accepts fetch options. If `prefix` is
-// set, will prefix all selectors obtained from this source. If `url` ends with
-// .css, will directly load that stylesheet.
+// list of sites to pull stylesheets from. Accepts fetch options. If `prefix`
+// is  set, will prefix all selectors obtained from this source, unless they
+// start with one of the selectors in `match`. If `url` ends with .css, will
+// directly load that stylesheet.
 const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
@@ -196,7 +197,8 @@ const sources = [
   {url: "https://developer.github.com"},
   {
     url: "https://github.com/login",
-    prefix: `[class="page-responsive"]`,
+    prefix: `body[class="page-responsive"]`,
+    match: ["body", ".page-responsive"],
     opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}},
   },
   {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css"},
@@ -317,8 +319,22 @@ function parseRule(decls, rule, opts) {
           selector = selector.replace(/>/g, " > ");
           selector = selector.replace(/ {2,}/g, " ");
 
-          if (opts.prefix && !selector.split(/\s+/)[0].includes(opts.prefix)) {
-            selector = `${opts.prefix} ${selector}`;
+          // add prefix
+          if (opts.prefix) {
+            // skip adding a prefix if it matches a selector in `match`
+            let skip = false;
+            if (opts.match) {
+              for (const matchSelector of opts.match) {
+                if (selector.split(/\s+/)[0].includes(matchSelector)) {
+                  skip = true;
+                  break;
+                }
+              }
+            }
+
+            if (!skip) {
+              selector = `${opts.prefix} ${selector}`;
+            }
           }
 
           // emulate !important in original rule via fake specificity
@@ -402,7 +418,8 @@ async function main() {
 
   const decls = {};
   for (const source of sources) {
-    for (const [key, values] of Object.entries(parseDeclarations(source.css, {prefix: source.prefix}))) {
+    const opts = {prefix: source.prefix, match: source.match};
+    for (const [key, values] of Object.entries(parseDeclarations(source.css, opts))) {
       if (!decls[key]) decls[key] = [];
       decls[key].push(...values);
       decls[key] = Array.from(new Set(decls[key]));
