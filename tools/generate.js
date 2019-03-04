@@ -181,6 +181,7 @@ const mappings = {
   "background-color: #6f42c1": "background-color: #8368aa",
   "background-color: #f8f4ff": "background-color: #213",
   "border: 1px solid #6f42c1": "border: 1px solid #8368aa",
+  "border-color: #8a63d2": "border-color: #8368aa",
 
   "color: inherit": "color: inherit",
 };
