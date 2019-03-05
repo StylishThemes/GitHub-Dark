@@ -144,7 +144,7 @@ const mappings = {
   "color: #586069": "color: #949494",
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
-  "color: #24292e": "color: #c0c0c0",
+  "color: #24292e": "color: #bebebe",
 
   // blue
   "color: #264c72": "color: #9daccc",
