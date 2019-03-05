@@ -92,12 +92,11 @@
   .btn-outline.disabled, .btn-outline:disabled, .social-count, .form-control,
   .form-select, .input-contrast:focus, .form-group .form-control:focus, .menu,
   .menu-item.selected, .tabnav-tab.selected, .auth-form-body,
-  .page-responsive .HeaderMenu--logged-out, .btn-transparent:active,
-  .btn-transparent:hover, .Tile:hover, .btn-outline-mktg,
-  .btn-outline-mktg:hover, .callout-permalink-big-figcaption, .avatar-child,
-  .AvatarStack-body .avatar, .markdown-body table tr, .markdown-body img,
-  .Box--overlay, .btn-invisible, .commit-tease-contributors,
-  .commit-icon .octicon, .gh-header,
+  .page-responsive .HeaderMenu--logged-out, .Tile:hover, .btn-outline-mktg,
+  .btn-outline-mktg:hover, .btn-transparent:active, .btn-transparent:hover,
+  .callout-permalink-big-figcaption, .avatar-child, .AvatarStack-body .avatar,
+  .markdown-body table tr, .markdown-body img, .Box--overlay, .btn-invisible,
+  .commit-tease-contributors, .commit-icon .octicon, .gh-header,
   .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
   .gh-header-edit .edit-issue-title:focus, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
@@ -478,7 +477,7 @@
   /* auto-generated rule for "border-color: #e1e4e8" */
   .pagination a:focus, .pagination a:hover, .pagination em:focus,
   .pagination em:hover, .pagination span:focus, .pagination span:hover,
-  .subnav-link:hover, .select-menu-item + .semantic-toc-file:after,
+  .select-menu-item + .semantic-toc-file:after,
   .semantic-toc-symbol:not(.last-visible):after, .tabnav-pr,
   .tabnav-pr .tabnav-tab.selected {
     border-color: #343434 !important;
@@ -554,7 +553,7 @@
   .Box-body, .menu-item, .menu-heading, .UnderlineNav, html:not(#X) .border-y,
   html:not(#X) .border-bottom, html:not(#X) .border-sm-bottom,
   html:not(#X) .border-md-bottom, html:not(#X) .border-lg-bottom,
-  .jump-to-suggestions-results-container .navigation-item,
+  .jump-to-suggestions-results-container .navigation-item, .subnav-link,
   .pricing-table thead th, .Subhead, .table-list, .boxed-group-list > li,
   .signed-commit-header, .diff-table tr:not(:last-child) .line-comments,
   .timeline-new-comment .previewable-comment-form .comment-body,
@@ -809,6 +808,11 @@
   .topic-tag-outline {
     box-shadow: inset 0 0 0 1px #6d7c9c !important;
   }
+  /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
+  html:not(#X) .box-shadow-medium,
+  html:not(#X) body[class="page-responsive"] .box-shadow-medium {
+    box-shadow: 0 1px 5px #000 !important;
+  }
   /* auto-generated rule for "color: #333" */
   .session-authentication .header-logo,
   .session-authentication .auth-form-header, .intgrs-lstng-item-header,
@@ -893,7 +897,7 @@
   .UnderlineNav-item:hover .UnderlineNav-octicon,
   .UnderlineNav-item.selected .UnderlineNav-octicon,
   html:not(#X) .text-gray-light, .jump-to-suggestions-path .jump-to-octicon,
-  .home-hero-signup .form-control-note, .markdown-body blockquote,
+  .subnav-link, .home-hero-signup .form-control-note, .markdown-body blockquote,
   .markdown-body h6, .table-list, .autocomplete-item .organization-member,
   .full-commit .branches-list li.loading,
   .full-commit .branches-list li.pull-request, .branches-tag-list li.loading,
@@ -1106,8 +1110,8 @@
   }
   /* auto-generated rule for "color: #1277eb" */
   html:not(#X) .text-blue-mktg, .link-mktg, .btn-outline-mktg,
-  html:not(#X) .casestudy-link:hover .casestudy-title, .MarketingBody blockquote,
-  .MarketingBody-lead a, .search-result-title .ais-Highlight-highlighted {
+  .MarketingBody blockquote, .MarketingBody-lead a,
+  .search-result-title .ais-Highlight-highlighted {
     color: /*[[base-color]]*/ #4f8cc9 !important;
   }
   /* auto-generated rule for "color: #586069" */
@@ -1311,9 +1315,9 @@
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
   .header-nav-current-user .user-profile-link,
   html:not(#X) .jump-to-field-active, .subheader-nav .nav-item.selected,
-  .subnav-link:hover, .subnav-link.subnav-link-selected,
-  .illflow-item.selected .illflow-item-heading, .Counter--gray-light,
-  .markdown-body span.frame span span, .table-list-header-toggle .btn-link:hover,
+  .subnav-link:hover, .illflow-item.selected .illflow-item-heading,
+  .Counter--gray-light, .markdown-body span.frame span span,
+  .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
   .table-list-header-toggle .select-menu-button.selected,
@@ -1489,6 +1493,7 @@
   /* auto-generated rule for "background-color: #cb2431" */
   .btn-danger:hover, .State--red, .block-diff-deleted,
   .text-red .block-diff-neutral, .discussion-item-closed .discussion-item-icon,
+  .discussion-item-rejected .discussion-item-icon,
   .discussion-item-review.is-rejected.is-writer .discussion-item-icon,
   .alert-label--high, .completeness-indicator-error,
   .saml-settings-form .test-status-indicator-error, .follow-list .flagged-banner,
@@ -3152,7 +3157,8 @@
   .markdown-body hr, .profile-timeline.discussion-timeline:before,
   .profile-timeline.discussion-timeline .profile-timeline-month-heading:after,
   .discussion-post .reply-comments-holder:before,
-  div[style*="background-color: #eaecef"] {
+  div[style*="background-color: #eaecef"],
+  .CircleBadge[style*="background-color: #ffffff"] {
     background: #343434 !important;
   }
   .hidden-text-expander a, .ellipsis-expander,

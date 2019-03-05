@@ -118,6 +118,7 @@ const mappings = {
   "box-shadow: 0 1px 0 0 #1277eb": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
 
   "box-shadow: inset 0 0 0 1px #c8e1ff": "box-shadow: inset 0 0 0 1px #6d7c9c",
+  "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
   // ==========================================================================
   // Color / Background
   // ==========================================================================
