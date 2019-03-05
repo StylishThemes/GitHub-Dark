@@ -220,6 +220,7 @@ const ignoreSelectors = [
   /^\.bg-gray$/,
   /^\.CircleBadge$/,
   /^table$/,
+  /^.text-gray-dark$/,
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
