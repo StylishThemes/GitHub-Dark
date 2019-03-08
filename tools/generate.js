@@ -299,13 +299,17 @@ function parseDeclarations(cssString, opts) {
 
 function parseRule(decls, rule, opts) {
   for (const decl of rule.declarations) {
-    const hasImportant = /!important$/.test((decl.value || "").trim());
     for (const mapping of Object.keys(mappings)) {
       if (!decl.value) continue;
-      if (!decls[mapping]) decls[mapping] = [];
-      let [prop, val] = mapping.split(": ");
-      decl.value = decl.value.trim().replace(/!important$/g, "").trim();
-      val = val.trim().replace(/!important$/g, "").trim();
+
+      let name = mapping;
+      if (/!important$/.test((decl.value || "").trim())) {
+        name = `${mapping} !important`;
+      }
+
+      if (!decls[name]) decls[name] = [];
+
+      const [prop, val] = mapping.split(": ");
       if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
         rule.selectors.forEach(selector => {
           // Skip potentially unmergeable selectors
@@ -339,14 +343,9 @@ function parseRule(decls, rule, opts) {
             }
           }
 
-          // emulate !important in original rule via fake specificity
-          if (hasImportant) {
-            selector = `html:not(#X) ${selector}`;
-          }
-
           // add the new rule to our list, unless it's already on it
-          if (!decls[mapping].includes(selector)) {
-            decls[mapping].push(selector);
+          if (!decls[name].includes(selector)) {
+            decls[name].push(selector);
           }
         });
       }
@@ -354,25 +353,38 @@ function parseRule(decls, rule, opts) {
   }
 }
 
+function format(css) {
+  return String(perfectionist.process(css, perfOpts));
+}
+
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
-  Object.keys(mappings).forEach(decl => {
-    if (decls[decl].length) {
-      output += `/* auto-generated rule for "${decl}" */\n`;
-      const selectors = decls[decl].join(",");
-      output += String(perfectionist.process(selectors + "{" + mappings[decl] + " !important}", perfOpts));
-    } else {
-      console.error(`Warning: no declarations for ${decl} found!`);
+  for (const [fromValue, toValue] of Object.entries(mappings)) {
+    const normalSelectors = decls[fromValue];
+    const importantSelectors = decls[`${fromValue} !important`];
+
+    if (normalSelectors.length) {
+      output += `/* auto-generated rule for "${fromValue}" */\n`;
+      output += format(`${normalSelectors.join(",")} {${toValue}}`);
     }
-  });
+
+    if (importantSelectors.length) {
+      output += `/* auto-generated rule for "${fromValue} !important" */\n`;
+      output += format(`${importantSelectors.join(",")} {${toValue} !important}`);
+    }
+
+    if (!normalSelectors.length && !importantSelectors.length) {
+      console.error(`Warning: no declarations for ${fromValue} found!`);
+    }
+  }
   output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
 }
 
 function isEqualValue(prop, a, b) {
-  a = a.trim().toLowerCase();
-  b = b.trim().toLowerCase();
+  a = a.replace(/!important$/g, "").trim().toLowerCase();
+  b = b.replace(/!important$/g, "").trim().toLowerCase();
 
   // try to ignore order in shorthands
   if (shorthands.includes(prop)) {
