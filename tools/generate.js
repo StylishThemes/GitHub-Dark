@@ -217,7 +217,6 @@ const ignoreSelectors = [
   /^.Popover-message:after$/,
   /^h[1-6] a$/, // weird styles from help.github.com
   /^\.bg-white$/,
-  /^\.bg-gray$/,
   /^\.CircleBadge$/,
   /^table$/,
   /^.text-gray-dark$/,
