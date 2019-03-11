@@ -68,6 +68,11 @@ const mappings = {
   "border-left: 1px solid #eaecef": "border-left: 1px solid #343434",
   "border-right: 1px solid #eaecef": "border-right: 1px solid #343434",
 
+  "border-top: 1px solid #d1d5da": "border-top: 1px solid #343434",
+  "border-bottom: 1px solid #d1d5da": "border-bottom: 1px solid #343434",
+  "border-left: 1px solid #d1d5da": "border-left: 1px solid #343434",
+  "border-right: 1px solid #d1d5da": "border-right: 1px solid #343434",
+
   "border-top: 1px solid #ddd": "border-top: 1px solid #343434",
   "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #343434",
   "border-left: 1px solid #ddd": "border-left: 1px solid #343434",
