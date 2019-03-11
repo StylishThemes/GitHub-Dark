@@ -365,12 +365,12 @@ function buildOutput(decls) {
 
     if (normalSelectors.length) {
       output += `/* auto-generated rule for "${fromValue}" */\n`;
-      output += format(`${normalSelectors.join(",")} {${toValue}}`);
+      output += format(`${normalSelectors.join(",")} {${toValue};}`);
     }
 
     if (importantSelectors.length) {
       output += `/* auto-generated rule for "${fromValue} !important" */\n`;
-      output += format(`${importantSelectors.join(",")} {${toValue} !important}`);
+      output += format(`${importantSelectors.join(",")} {${toValue} !important;}`);
     }
 
     if (!normalSelectors.length && !importantSelectors.length) {
