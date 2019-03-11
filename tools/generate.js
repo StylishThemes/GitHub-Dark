@@ -155,6 +155,7 @@ const mappings = {
 
   // blue
   "color: #264c72": "color: #9daccc",
+  "color: #05264c": "color: #bebebe", // big commit title
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
 
   // red
