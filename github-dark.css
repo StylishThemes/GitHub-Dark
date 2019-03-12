@@ -3171,12 +3171,18 @@
   }
   /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
-  .output_area img, .project-preview-img img, img[src$="bg-callout.svg"],
+  .project-preview-img img, img[src$="bg-callout.svg"],
   img[data-canonical-src*="saucelabs.com/browser-matrix"],
   img[src*="images/modules/checks"], img[src$="profile-first-pr.png"],
   img[src$="profile-joined-github.png"], img[src$="profile-first-repo.png"],
   img[src$="profile-first-issue.png"], .github-jobs-logo strong {
     filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
+  }
+  .render-shell .output_area .output_png img {
+    filter: invert(90.5%) hue-rotate(180deg) saturate(200%) brightness(85%) !important;
+  }
+  .render-shell .output_area .output_png:hover img {
+    filter: none !important;
   }
   /* workaround filter creating a stacking context */
   .contribution-first-issue, .contribution-first-pull-request,
