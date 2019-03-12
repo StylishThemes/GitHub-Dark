@@ -133,6 +133,7 @@ const mappings = {
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
+  "color: #1b1f23": "color: #afafaf",
   "color: #666"   : "color: #8e8e8e",
   "color: #6a737d": "color: #8e8e8e",
   "color: #959da5": "color: #757575",
