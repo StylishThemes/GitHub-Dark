@@ -37,7 +37,7 @@ const mappings = {
   "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9 !important; color: #fff",
 
-  // needs to be after ##2cbe4e for .community-checklist .progress vs .progress-bar .progress
+  // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
   "background-color: #f6f8fa": "background-color: #202020",
 
   // ==========================================================================
@@ -127,6 +127,10 @@ const mappings = {
 
   "box-shadow: inset 0 0 0 1px #c8e1ff": "box-shadow: inset 0 0 0 1px #6d7c9c",
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
+
+  "box-shadow: inset 0 0 0 1px #e1e4e8,0 2px 4px rgba(0,0,0,.15)": "box-shadow: inset 0 0 0 1px #555",
+  "box-shadow: inset 0 0 0 1px #e1e4e8": "box-shadow: inset 0 0 0 1px #555",
+  "box-shadow: inset 0 1px 0 0 #e1e4e8": "box-shadow: inset 0 1px 0 0 #555",
   // ==========================================================================
   // Color / Background
   // ==========================================================================
