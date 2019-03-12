@@ -234,6 +234,7 @@ const ignoreSelectors = [
   /^\.CircleBadge$/,
   /^table$/,
   /^.text-gray-dark$/,
+  /^.markdown-body del$/ // this in not main page style
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
