@@ -234,7 +234,8 @@ const ignoreSelectors = [
   /^\.CircleBadge$/,
   /^table$/,
   /^.text-gray-dark$/,
-  /^.markdown-body del$/ // this in not main page style
+  /^.markdown-body del$/, // this in not main page style
+  /^.dashboard .border-gray.flex-items-baseline.py-3$/, // weird style affecting some frontpage entries
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
