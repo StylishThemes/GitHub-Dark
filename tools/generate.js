@@ -58,6 +58,13 @@ const mappings = {
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #d1d5da": "border-color: #484848",
 
+  "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(200,200,200,.15)",
+  "border-top-color: rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
+  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: rgba(200,200,200,.15)",
+  "border-left-color: rgba(27,31,35,.15)": "border-left-color: rgba(200,200,200,.15)",
+  "border-right-color: rgba(27,31,35,.15)": "border-right-color: rgba(200,200,200,.15)",
+  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
+
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border-bottom: 1px solid #f8f8f8": "border-bottom: 1px solid #343434",
@@ -157,12 +164,6 @@ const mappings = {
   "color: #032f62": "color: #9daccc",
   "color: #05264c": "color: #bebebe", // big commit title
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
-  "border: 1px solid rgba(27,31,35,.15)": "border-color: #246",
-  "border-top-color: rgba(27,31,35,.15)": "border-top-color: #246",
-  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: #246",
-  "border-left-color: rgba(27,31,35,.15)": "border-left-color: #246",
-  "border-right-color: rgba(27,31,35,.15)": "border-right-color: #246",
-  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: #246",
 
   // red
   "color: #cb2431": "color: #f44",
@@ -188,7 +189,7 @@ const mappings = {
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
-  "color: #735c0f": "color: #cb4",
+  "color: #735c0f": "color: #874",
   "background-color: #ffd33d": "background-color: #cb4",
   "background-color: #ffdf5d": "background-color: #cb4",
   "fill: #dbab09": "fill: #cb4",
