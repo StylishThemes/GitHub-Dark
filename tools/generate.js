@@ -47,7 +47,6 @@ const mappings = {
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
   "border: 1px solid #d1d5da": "border-color: #484848",
-  "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(225,225,225,.2)",
   "border: 2px solid #fff": "border-color: #222",
 
   // needs to come before the color variants so they take priority
@@ -64,44 +63,38 @@ const mappings = {
   "border-bottom: 1px solid #f8f8f8": "border-bottom: 1px solid #343434",
   "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
 
-  "border-top: 1px solid #e1e4e8": "border-top: 1px solid #343434",
-  "border-bottom: 1px solid #e1e4e8": "border-bottom: 1px solid #343434",
-  "border-left: 1px solid #e1e4e8": "border-left: 1px solid #343434",
-  "border-right: 1px solid #e1e4e8": "border-right: 1px solid #343434",
+  "border-top: 1px solid #e1e4e8": "border-top-color: #343434",
+  "border-bottom: 1px solid #e1e4e8": "border-bottom-color: #343434",
+  "border-left: 1px solid #e1e4e8": "border-left-color: #343434",
+  "border-right: 1px solid #e1e4e8": "border-right-color: #343434",
 
-  "border-top: 1px solid #eaecef": "border-top: 1px solid #343434",
-  "border-bottom: 1px solid #eaecef": "border-bottom: 1px solid #343434",
-  "border-left: 1px solid #eaecef": "border-left: 1px solid #343434",
-  "border-right: 1px solid #eaecef": "border-right: 1px solid #343434",
+  "border-top: 1px solid #eaecef": "border-top-color: #343434",
+  "border-bottom: 1px solid #eaecef": "border-bottom-color: #343434",
+  "border-left: 1px solid #eaecef": "border-left-color: #343434",
+  "border-right: 1px solid #eaecef": "border-right-color: #343434",
 
-  "border-top: 1px solid #d1d5da": "border-top: 1px solid #484848",
-  "border-bottom: 1px solid #d1d5da": "border-bottom: 1px solid #484848",
-  "border-left: 1px solid #d1d5da": "border-left: 1px solid #484848",
-  "border-right: 1px solid #d1d5da": "border-right: 1px solid #484848",
+  "border-top: 1px solid #d1d5da": "border-top-color: #484848",
+  "border-bottom: 1px solid #d1d5da": "border-bottom-color: #484848",
+  "border-left: 1px solid #d1d5da": "border-left-color: #484848",
+  "border-right: 1px solid #d1d5da": "border-right-color: #484848",
 
-  "border-top: 1px solid #ddd": "border-top: 1px solid #343434",
-  "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #343434",
-  "border-left: 1px solid #ddd": "border-left: 1px solid #343434",
-  "border-right: 1px solid #ddd": "border-right: 1px solid #343434",
-
-  "border-top-color: rgba(27,31,35,.15)": "border-top-color: #343434",
-  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: #343434",
-  "border-left-color: rgba(27,31,35,.15)": "border-left-color: #343434",
-  "border-right-color: rgba(27,31,35,.15)": "border-right-color: #343434",
+  "border-top: 1px solid #ddd": "border-top-color: #343434",
+  "border-bottom: 1px solid #ddd": "border-bottom-color: #343434",
+  "border-left: 1px solid #ddd": "border-left-color: #343434",
+  "border-right: 1px solid #ddd": "border-right-color: #343434",
 
   "border-left-color: #f6f8fa": "border-left-color: #222",
   "border-bottom-color: #f6f8fa": "border-bottom-color: #222",
 
-  "border-left: solid 2px #e6ebf1": "border-left: solid 2px #343434",
-  "border-bottom: solid 2px #e6ebf1": "border-bottom: solid 2px #343434",
+  "border-left: solid 2px #e6ebf1": "border-left-color: #343434",
+  "border-bottom: solid 2px #e6ebf1": "border-bottom-color: #343434",
 
   "border-bottom-color: #fff": "border-bottom-color: #181818",
   "border-left-color: #fff": "border-left-color: #181818",
   "border-top-color: #fff": "border-top-color: #181818",
   "border-right-color: #fff": "border-right-color: #181818",
 
-  "border-top: 7px solid #fff": "border-top: 7px solid #181818",
-  "border-top: 8px solid rgba(27,31,35,.15)": "border-top: 8px solid #343434",
+  "border-top: 7px solid #fff": "border-top-color: #181818",
 
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #484848",
@@ -161,13 +154,22 @@ const mappings = {
 
   // blue
   "color: #264c72": "color: #9daccc",
+  "color: #032f62": "color: #9daccc",
   "color: #05264c": "color: #bebebe", // big commit title
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
+  "border: 1px solid rgba(27,31,35,.15)": "border-color: #246",
+  "border-top-color: rgba(27,31,35,.15)": "border-top-color: #246",
+  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: #246",
+  "border-left-color: rgba(27,31,35,.15)": "border-left-color: #246",
+  "border-right-color: rgba(27,31,35,.15)": "border-right-color: #246",
+  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: #246",
 
   // red
   "color: #cb2431": "color: #f44",
+  "color: #86181d": "color: #f44",
   "background-color: #d73a49": "background-color: #f44",
   "background-color: #cb2431": "background-color: #911",
+  "background-color: #ffdce0": "background-color: #300",
   "fill: #cb2431": "fill: #f44",
 
   // orange
@@ -177,13 +179,16 @@ const mappings = {
 
   // green
   "color: #28a745": "color: #6cc644",
+  "color: #165c26": "color: #6cc644",
   "background-color: #28a745": "background-color: #6cc644",
+  "background-color: #dcffe4": "background-color: #002800",
   "fill: #2cbe4e": "color: #6cc644",
   "border-color: #34d058": "border-color: #34d058",
 
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
+  "color: #735c0f": "color: #cb4",
   "background-color: #ffd33d": "background-color: #cb4",
   "background-color: #ffdf5d": "background-color: #cb4",
   "fill: #dbab09": "fill: #cb4",
