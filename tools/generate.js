@@ -45,8 +45,8 @@ const mappings = {
   // ==========================================================================
 
   "border: 1px solid #e1e4e8": "border-color: #343434",
-  "border: 1px solid #d1d5da": "border-color: #343434",
   "border: 1px solid #eee": "border-color: #343434",
+  "border: 1px solid #d1d5da": "border-color: #484848",
   "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(225,225,225,.2)",
   "border: 2px solid #fff": "border-color: #222",
 
@@ -55,9 +55,9 @@ const mappings = {
   "border-bottom-color: transparent": "border-bottom-color: transparent",
   "border-right-color: transparent": "border-right-color: transparent",
 
-  "border-color: #d1d5da": "border-color: #343434",
-  "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #eaecef": "border-color: #343434",
+  "border-color: #e1e4e8": "border-color: #343434",
+  "border-color: #d1d5da": "border-color: #484848",
 
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
@@ -74,10 +74,10 @@ const mappings = {
   "border-left: 1px solid #eaecef": "border-left: 1px solid #343434",
   "border-right: 1px solid #eaecef": "border-right: 1px solid #343434",
 
-  "border-top: 1px solid #d1d5da": "border-top: 1px solid #343434",
-  "border-bottom: 1px solid #d1d5da": "border-bottom: 1px solid #343434",
-  "border-left: 1px solid #d1d5da": "border-left: 1px solid #343434",
-  "border-right: 1px solid #d1d5da": "border-right: 1px solid #343434",
+  "border-top: 1px solid #d1d5da": "border-top: 1px solid #484848",
+  "border-bottom: 1px solid #d1d5da": "border-bottom: 1px solid #484848",
+  "border-left: 1px solid #d1d5da": "border-left: 1px solid #484848",
+  "border-right: 1px solid #d1d5da": "border-right: 1px solid #484848",
 
   "border-top: 1px solid #ddd": "border-top: 1px solid #343434",
   "border-bottom: 1px solid #ddd": "border-bottom: 1px solid #343434",
