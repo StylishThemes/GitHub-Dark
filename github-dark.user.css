@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.21.11
+@version     1.21.12
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.21.11 (2019-03-13) */
+/*! Github Dark v1.21.12 (2019-03-14) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -1070,11 +1070,11 @@
   .btn-danger:focus, body[class="page-responsive"] .btn-danger:focus {
     box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4);
   }
-  /* auto-generated rule for "box-shadow: 0 1px 0 0 rgba(18,119,235,.5)" */
+  /* auto-generated rule for "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)" */
   .link-mktg {
     box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
   }
-  /* auto-generated rule for "box-shadow: 0 1px 0 0 #1277eb" */
+  /* auto-generated rule for "box-shadow: 0 1px 0 0 #1074e7" */
   .link-mktg:hover {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
   }
@@ -1412,9 +1412,17 @@
   body[class="page-responsive"] .muted-link:hover {
     color: /*[[base-color]]*/ !important;
   }
-  /* auto-generated rule for "color: #1277eb" */
+  /* auto-generated rule for "color: #1074e7" */
   .btn-outline-mktg, .link-mktg, .MarketingBody blockquote,
-  .MarketingBody-lead a, .search-result-title .ais-Highlight-highlighted {
+  .MarketingBody-lead a {
+    color: /*[[base-color]]*/;
+  }
+  /* auto-generated rule for "color: #1074e7 !important" */
+  .text-blue-mktg {
+    color: /*[[base-color]]*/ !important;
+  }
+  /* auto-generated rule for "color: #1277eb" */
+  .btn-outline-mktg, .search-result-title .ais-Highlight-highlighted {
     color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "color: #1277eb !important" */
@@ -2987,7 +2995,8 @@
   .select-menu-filters, .select-menu-modal, .pagination a, .build-status-item,
   .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
   .more-repos, .billing-per-seat-callout:after, .code-list-item .blob-num,
-  .blob-num.js-line-number, .bg-gray-light.disabled {
+  .blob-num.js-line-number, .bg-gray-light.disabled,
+  .MarketplaceBackground-buffer {
     background: #1c1c1c !important;
   }
   .action-card:after, .action-card:before {
@@ -4186,7 +4195,8 @@
   .issues-reset-query-icon, .issues-reset-query:hover .issues-reset-query-icon,
   .projects-reset-query-icon.text-white,
   .projects-reset-query:hover .projects-reset-query-icon,
-  .user-status-header.user-status-limited-availability .text-gray-dark {
+  .user-status-header.user-status-limited-availability .text-gray-dark,
+  .MarketplaceFeature-link .text-gray-dark {
     color: #1c1c1c !important;
   }
   a.timeline-comment-action, a.comment-type-icon, a.select-menu-item,
@@ -4197,7 +4207,7 @@
   .delete-topic-button {
     color: inherit !important;
   }
-  svg:not(.octicon) {
+  svg:not(.octicon):not([fill="none"]) {
     fill: currentColor !important;
   }
   .donut-chart [style*="fill: none"], .workflow-string svg,
@@ -4865,6 +4875,12 @@
   }
   /* rules for the new responsive layout */
   @media (max-width: 767px) {
+    .nav-mobile-dropdown.js-open {
+      background: #222;
+      box-shadow: 0 1px 15px rgba(27, 31, 35, .15);
+    }
+  }
+  @media (max-width: 767px) {
     .release-entry {
       border-bottom: 1px solid #343434 !important;
     }
@@ -5325,13 +5341,17 @@
     filter: invert(100%) !important;
   }
   /* Refined GitHub - https://github.com/sindresorhus/refined-github
-   * See #540 */
+   * See #540
+   * See #881 */
   .refined-github-diff-signs .blob-code-addition:before,
   .refined-github-diff-signs .blob-code-deletion:before {
     color: #7b7b7b !important;
   }
   .repohead h1 .rgh-ci-link .octicon {
     color: inherit !important;
+  }
+  .refined-github .dashboard .border-gray.flex-items-baseline.py-3 {
+    background: #181818 !important;
   }
   /* GraphQL API (https://developer.github.com/v4/explorer/) */
   iframe#graphiql, .graphiql-ide, .graphiql-container .topBar,
@@ -5432,17 +5452,17 @@
 }
 @-moz-document domain("launch-editor.github.com") {
   /* Styles the actions visual editor */
-  body, .ActionsTimeline-item.selected {
-    background: #181818 !important;
-  }
-  .editor-node.bg-white {
+  .editor-node.bg-white, .editor-node.bg-gray-light {
     background: #1c1c1c !important;
+  }
+  body {
+    background: #222 !important;
+  }
+  .ActionsTimeline-item.selected {
+    background: #202020 !important;
   }
   .blankslate-box, .editor-node {
     background: #242424 !important;
-  }
-  .input, .output {
-    background: #484848 !important;
   }
   .overlay {
     background: rgba(27, 31, 35, .5) !important;
@@ -5450,8 +5470,48 @@
   svg + div .circle, .port .circle, .circle.live:after {
     background: /*[[base-color]]*/ !important;
   }
-  .input:before, .output:before, .editor-node p code {
+  .editor-node p code {
     background: none !important;
+  }
+  /* the order of these matters */
+  .input {
+    background-image: linear-gradient(#343434 0%, #343434 50%, #202020 50%, #202020 100%) !important;
+  }
+  .input.small {
+    background-image: linear-gradient(#343434 0%, #343434 50%, #1c1c1c 50%, #1c1c1c 100%) !important;
+  }
+  .input.isEditing {
+    background-image: linear-gradient(/*[[base-color]]*/ 0%, /*[[base-color]]*/ 50%, #202020 50%, #202020 100%) !important;
+  }
+  .input.hasErrors {
+    background-image: linear-gradient(#f44 0%, #f44 50%, #1c1c1c 50%, #1c1c1c 100%) !important;
+  }
+  .port:before {
+    background-color: #1c1c1c !important;
+  }
+  .input:before, .port.isEditing:before {
+    background-color: #202020 !important;
+  }
+  .event:before {
+    background-color: #242424 !important;
+  }
+  .output {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #343434 50%, #343434 100%) !important;
+  }
+  .output.small {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #343434 50%, #343434 100%) !important;
+  }
+  .output.event {
+    background-image: linear-gradient(#242424 0%, #242424 50%, #484848 50%, #484848 100%) !important;
+  }
+  .border-blue .output.event.live {
+    background-image: linear-gradient(#242424 0%, #242424 50%, /*[[base-color]]*/ 50%, /*[[base-color]]*/ 100%) !important;
+  }
+  .output.isEditing {
+    background-image: linear-gradient(#202020 0%, #202020 50%, /*[[base-color]]*/ 50%, /*[[base-color]]*/ 100%) !important;
+  }
+  .output.hasErrors {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #f44 50%, #f44 100%) !important;
   }
   .ActionsTimeline-item {
     border-color: #333 !important;
@@ -5493,9 +5553,13 @@
     stroke: /*[[base-color]]*/ !important;
   }
   /* These class names are dynamic and will change frequently 😢 */
-  /* read-only bg, editor & run history bg */
-  .jsx-1812009678, .jsx-2157058810 {
-    background-color: #202020 !important;
+  /* editor & read-only bg */
+  .jsx-1812009678 {
+    background-color: #181818 !important;
+  }
+  /* run history bg */
+  .jsx-2157058810 {
+    background-color: #222 !important;
   }
   /* The dot when creating a new action */
   svg + .jsx-1812009678 {
@@ -5505,6 +5569,9 @@
 @-moz-document domain("help.github.com") {
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #bebebe;
+  }
+  .nav-mobile-burgerIcon {
+    filter: invert(100%) hue-rotate(180deg) !important;
   }
 }
 
