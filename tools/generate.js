@@ -122,7 +122,9 @@ const mappings = {
 
   "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
+  "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": "box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5)",
   "box-shadow: 0 1px 0 0 rgba(18,119,235,.5)": "box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5)",
+  "box-shadow: 0 1px 0 0 #1074e7": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
   "box-shadow: 0 1px 0 0 #1277eb": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
 
   "box-shadow: inset 0 0 0 1px #c8e1ff": "box-shadow: inset 0 0 0 1px #6d7c9c",
@@ -152,6 +154,7 @@ const mappings = {
 
   // needs to be after #333 for .btn vs .btn-outline
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1277eb": "color: /*[[base-color]]*/ #4f8cc9",
   // needs to be after #0366d3 for .btn-link vs .text-gray
   "color: #586069": "color: #949494",
