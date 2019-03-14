@@ -5983,7 +5983,7 @@
 }
 @-moz-document domain("launch-editor.github.com") {
   /* Styles the actions visual editor */
-  .editor-node.bg-white {
+  .editor-node.bg-white, .editor-node.bg-gray-light {
     background: #1c1c1c !important;
   }
   body {
@@ -5995,17 +5995,54 @@
   .blankslate-box, .editor-node {
     background: #242424 !important;
   }
-  .input, .output {
-    background: #484848 !important;
-  }
   .overlay {
     background: rgba(27, 31, 35, .5) !important;
   }
   svg + div .circle, .port .circle, .circle.live:after {
     background: /*[[base-color]]*/ #4f8cc9 !important;
   }
-  .input:before, .output:before, .editor-node p code {
+  .editor-node p code {
     background: none !important;
+  }
+  /* the order of these matters */
+  .input {
+    background-image: linear-gradient(#343434 0%, #343434 50%, #202020 50%, #202020 100%) !important;
+  }
+  .input.small {
+    background-image: linear-gradient(#343434 0%, #343434 50%, #1c1c1c 50%, #1c1c1c 100%) !important;
+  }
+  .input.isEditing {
+    background-image: linear-gradient(/*[[base-color]]*/ #4f8cc9 0%, /*[[base-color]]*/ #4f8cc9 50%, #202020 50%, #202020 100%) !important;
+  }
+  .input.hasErrors {
+    background-image: linear-gradient(#f44 0%, #f44 50%, #1c1c1c 50%, #1c1c1c 100%) !important;
+  }
+  .port:before {
+    background-color: #1c1c1c !important;
+  }
+  .input:before, .port.isEditing:before {
+    background-color: #202020 !important;
+  }
+  .event:before {
+    background-color: #242424 !important;
+  }
+  .output {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #343434 50%, #343434 100%) !important;
+  }
+  .output.small {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #343434 50%, #343434 100%) !important;
+  }
+  .output.event {
+    background-image: linear-gradient(#242424 0%, #242424 50%, #484848 50%, #484848 100%) !important;
+  }
+  .border-blue .output.event.live {
+    background-image: linear-gradient(#242424 0%, #242424 50%, /*[[base-color]]*/ #4f8cc9 50%, /*[[base-color]]*/ #4f8cc9 100%) !important;
+  }
+  .output.isEditing {
+    background-image: linear-gradient(#202020 0%, #202020 50%, /*[[base-color]]*/ #4f8cc9 50%, /*[[base-color]]*/ #4f8cc9 100%) !important;
+  }
+  .output.hasErrors {
+    background-image: linear-gradient(#1c1c1c 0%, #1c1c1c 50%, #f44 50%, #f44 100%) !important;
   }
   .ActionsTimeline-item {
     border-color: #333 !important;
