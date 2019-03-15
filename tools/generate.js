@@ -18,23 +18,27 @@ const mappings = {
   "background: #fff": "background: #181818",
   "background: #fafbfc": "background: #181818",
   "background: #eaecef": "background: #343434",
+  "background: #dfe2e5": "background: #444",
   "background: #d1d5da": "background: #444",
   "background: #f1f8ff": "background: #242424",
   "background: #fffbdd": "background: #261d08",
   "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
   "background-color: #fff": "background-color: #181818",
+  "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #fafbfc": "background-color: #181818",
+  "background-color: #f1f8ff": "background-color: #242424",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #e6ebf1": "background-color: #444",
-  "background-color: #d1d5da": "background-color: #444",
-  "background-color: #6a737d": "background-color: #444",
-  "background-color: #f1f8ff": "background-color: #242424",
+  "background-color: #d1d5da": "background-color: #383838",
+  "background-color: #c6cbd1": "background-color: #383838",
+  "background-color: #6a737d": "background-color: #383838",
   "background-color: #24292e": "background-color: #222",
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #032f62": "background-color: #182030",
+
   "background-color: #dbedff": "background-color: #182030",
-  "background-color: #fffbdd": "background-color: #261d08",
+
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
 
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
