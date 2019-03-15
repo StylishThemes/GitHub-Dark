@@ -35,7 +35,7 @@ const mappings = {
   "background-color: #032f62": "background-color: #182030",
   "background-color: #dbedff": "background-color: #182030",
   "background-color: #fffbdd": "background-color: #261d08",
-  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9 !important; color: #fff",
+  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
 
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
   "background-color: #f6f8fa": "background-color: #202020",
