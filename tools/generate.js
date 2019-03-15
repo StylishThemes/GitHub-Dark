@@ -255,7 +255,7 @@ const ignoreSelectors = [
   /^table$/,
   /^.text-gray-dark$/,
   /^.markdown-body del$/, // this in not main page style
-  /^.dashboard .border-gray.flex-items-baseline.py-3$/, // weird style affecting some frontpage entries
+  /^.dashboard .js-all-activity-header \+ div$/, // weird background style from refined-github
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
@@ -350,6 +350,7 @@ function parseRule(decls, rule, opts) {
           // Skip potentially unmergeable selectors
           // TODO: Use clean-css or similar to merge rules later instead
           if (unmergeableSelectors.some(re => re.test(selector))) return;
+
           // Skip ignored selectors
           if (ignoreSelectors.some(re => re.test(selector))) return;
 
