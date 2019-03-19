@@ -21,11 +21,9 @@ const mappings = {
   "background: #dfe2e5": "background: #444",
   "background: #d1d5da": "background: #444",
   "background: #f1f8ff": "background: #242424",
-  "background: #fffbdd": "background: #261d08",
   "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
   "background-color: #fff": "background-color: #181818",
-  "background-color: #fffbdd": "background-color: #261d08",
   "background-color: #fafbfc": "background-color: #181818",
   "background-color: #f1f8ff": "background-color: #242424",
   "background-color: #eaecef": "background-color: #343434",
@@ -34,12 +32,6 @@ const mappings = {
   "background-color: #c6cbd1": "background-color: #383838",
   "background-color: #6a737d": "background-color: #383838",
   "background-color: #24292e": "background-color: #222",
-  "background-color: #2cbe4e": "background-color: #163",
-  "background-color: #032f62": "background-color: #182030",
-
-  "background-color: #dbedff": "background-color: #182030",
-
-  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
 
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
   "background-color: #f6f8fa": "background-color: #202020",
@@ -172,6 +164,10 @@ const mappings = {
   // blue
   "color: #264c72": "color: #9daccc",
   "color: #032f62": "color: #9daccc",
+  "background-color: #032f62": "background-color: #182030",
+  "background-color: #2cbe4e": "background-color: #163",
+  "background-color: #dbedff": "background-color: #182030",
+  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
   "color: #05264c": "color: #bebebe", // big commit title
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
@@ -206,6 +202,8 @@ const mappings = {
   "color: #735c0f": "color: #874",
   "background-color: #ffd33d": "background-color: #cb4",
   "background-color: #ffdf5d": "background-color: #cb4",
+  "background: #fffbdd": "background: #261d08",
+  "background-color: #fffbdd": "background-color: #261d08",
   "fill: #dbab09": "fill: #cb4",
 
   // light yellow
