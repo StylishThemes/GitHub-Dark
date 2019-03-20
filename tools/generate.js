@@ -118,13 +118,18 @@ const mappings = {
   // ==========================================================================
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.4) !important;
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
+     box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
+     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
   "box-shadow: 0 0 0 .2em #c8e1ff": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.4) !important;
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .4)
+     box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
+     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
+  `,
+
+  "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)": `
+    box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
   "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
@@ -192,12 +197,12 @@ const mappings = {
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
-    filter: drop-shadow(-.25em 0 0 rgba(79, 140, 201, .4));
-    filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .4))
+    filter: drop-shadow(-.25em 0 0 rgba(79,140,201,.3));
+    filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
   "filter: drop-shadow(0 -.28em 0 #c8e1ff)": `
-    filter: drop-shadow(0 -.28em 0 rgba(79, 140, 201, .4));
-    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .4))
+    filter: drop-shadow(0 -.28em 0 rgba(79,140,201,.3));
+    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
   "border-bottom-color: #2188ff": "border-bottom-color: /*[[base-color]]*/ #4f8cc9",
@@ -424,9 +429,10 @@ function format(css) {
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
-  for (const [fromValue, toValue] of Object.entries(mappings)) {
+  for (let [fromValue, toValue] of Object.entries(mappings)) {
     const normalSelectors = decls[fromValue];
     const importantSelectors = decls[`${fromValue} !important`];
+    toValue = toValue.trim().replace(/;$/, "");
 
     if (normalSelectors.length) {
       output += `/* auto-generated rule for "${fromValue}" */\n`;
