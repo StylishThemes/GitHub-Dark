@@ -248,10 +248,6 @@ const sources = [
     url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
     prefix: "html.refined-github",
   },
-  {
-    url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css",
-    prefix: "html.refined-github",
-  },
 ];
 
 // list of regexes matching selectors that should be ignored
