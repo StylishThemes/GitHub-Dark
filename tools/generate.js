@@ -429,19 +429,20 @@ function format(css) {
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
-  for (let [fromValue, toValue] of Object.entries(mappings)) {
+  for (const [fromValue, toValue] of Object.entries(mappings)) {
     const normalSelectors = decls[fromValue];
     const importantSelectors = decls[`${fromValue} !important`];
-    toValue = toValue.trim().replace(/;$/, "");
 
     if (normalSelectors.length) {
+      const newValue = toValue.trim().replace(/;$/, "");
       output += `/* auto-generated rule for "${fromValue}" */\n`;
-      output += format(`${normalSelectors.join(",")} {${toValue};}`);
+      output += format(`${normalSelectors.join(",")} {${newValue};}`);
     }
 
     if (importantSelectors.length) {
+      const newValue = toValue.trim().replace(/;$/, "").split(";").map(v => `${v} !important`).join(";");
       output += `/* auto-generated rule for "${fromValue} !important" */\n`;
-      output += format(`${importantSelectors.join(",")} {${toValue} !important;}`);
+      output += format(`${importantSelectors.join(",")} {${newValue};}`);
     }
 
     if (!normalSelectors.length && !importantSelectors.length) {
