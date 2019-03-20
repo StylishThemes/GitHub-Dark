@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.21.16
+@version     1.21.17
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.21.16 (2019-03-20) */
+/*! Github Dark v1.21.17 (2019-03-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -517,7 +517,12 @@
   /* auto-generated rule for "background-color: hsla(0,0%,100%,.125)" */
   .header-search-wrapper, .project-full-screen .card-filter-input,
   body[class="page-responsive"] .header-search-wrapper {
-    background-color: hsla(0, 0%, 100%, .125);
+    background-color: hsla(0, 0%, 100%, .05);
+  }
+  /* auto-generated rule for "background-color: hsla(0,0%,100%,.175)" */
+  .header-search-wrapper.focus, .project-full-screen .card-filter-input:focus,
+  body[class="page-responsive"] .header-search-wrapper.focus {
+    background-color: hsla(0, 0%, 100%, .1);
   }
   /* auto-generated rule for "border: 2px solid #fff" */
   .discussion-item-icon,
@@ -624,6 +629,14 @@
   .border-gray-dark, .marketplace-product-callout, .project-card:hover,
   body[class="page-responsive"] .border-gray-dark {
     border-color: #484848 !important;
+  }
+  /* auto-generated rule for "border: 1px solid #dfe2e5" */
+  .markdown-body table td, .markdown-body table th,
+  .markdown-body span.frame > span, .suggester, .capped-card, .commit-form,
+  .inline-comment-form, .gollum-editor .comment-form-head.tabnav, .steps,
+  .select-menu-text-filter input, ul.comparison-list, .overall-summary,
+  .file-wrap, .prereceive-feedback {
+    border-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 1px dashed #dfe2e5" */
   .upload-enabled textarea {
@@ -858,6 +871,28 @@
   body[class="page-responsive"] .diff-view .inline-comment-form-container {
     border-right-color: #484848;
   }
+  /* auto-generated rule for "border-top-color: #d1d5da" */
+  .discussion-item-merged.open .merge-status-list,
+  .discussion-item-published.open .merge-status-list {
+    border-top-color: #484848;
+  }
+  /* auto-generated rule for "border-bottom-color: #d1d5da" */
+  .UnderlineNav-item:focus, .UnderlineNav-item:hover,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before,
+  .review-summary:before {
+    border-bottom-color: #484848;
+  }
+  /* auto-generated rule for "border-right-color: #d1d5da" */
+  .timeline-comment-wrapper > .timeline-comment:before,
+  .timeline-new-comment .timeline-comment:before,
+  .composer.composer-responsive .timeline-comment:before,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:before,
+  .branch-action-body:before,
+  .branch-action-state-closed-dirty .branch-action-body:before,
+  .branch-action-state-dirty .branch-action-body:before,
+  .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body:before {
+    border-right-color: #484848;
+  }
   /* auto-generated rule for "border-top: 1px solid #ddd" */
   .new-issue-form, .merge-branch-manually, .migration-feature-list:before,
   .migrate-org-roles-count, .manage-access-remove-footer, .url-box, .sms-or-app,
@@ -880,14 +915,21 @@
   .migrate-org-roles-item, ol > li:before {
     border-right-color: #343434;
   }
-  /* auto-generated rule for "border-left-color: #f6f8fa" */
-  .dropdown-signed-commit .dropdown-menu-w:after {
-    border-left-color: #222;
-  }
   /* auto-generated rule for "border-bottom-color: #f6f8fa" */
   .dropdown-signed-commit .dropdown-menu:after,
   .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after {
-    border-bottom-color: #222;
+    border-bottom-color: #202020;
+  }
+  /* auto-generated rule for "border-left-color: #f6f8fa" */
+  .dropdown-signed-commit .dropdown-menu-w:after {
+    border-left-color: #202020;
+  }
+  /* auto-generated rule for "border-right-color: #f6f8fa" */
+  .timeline-comment-wrapper > .timeline-comment:after,
+  .timeline-new-comment .timeline-comment:after,
+  .composer.composer-responsive .timeline-comment:after,
+  .pull-request-review-body-wrapper .timeline-comment-group .timeline-comment:after {
+    border-right-color: #202020;
   }
   /* auto-generated rule for "border-left: solid 2px #e6ebf1" */
   .deployments-timeline-item {
@@ -2890,12 +2932,7 @@
     border-left: 1px solid #333 !important;
     border-right: 1px solid #333 !important;
   }
-  .timeline-comment-wrapper > .timeline-comment:after,
-  .timeline-new-comment .timeline-comment:after {
-    border-right-color: #1d1d1d !important;
-  }
-  .timeline-comment:before, .branch-action-body:before, .MarketplaceSideNav,
-  .plans-card-text:first-child {
+  .branch-action-body:before, .MarketplaceSideNav, .plans-card-text:first-child {
     border-right-color: #484848 !important;
   }
   .Popover-message--top-left:after {
@@ -3789,7 +3826,7 @@
   .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button,
   .commit-desc + .commit-branches, .full-commit .btn-outline,
   .pricing-matrix-table .pricing-matrix-table-dark,
-  .topic-tag-contrast .delete-topic-link {
+  .topic-tag-contrast .delete-topic-link, .repository-content > .Box--condensed {
     border-color: #246 !important;
   }
   .blob-history, .recently-touched-branches li {
@@ -4798,7 +4835,8 @@
     border: 1px solid #484848 !important;
   }
   #graph-shots li > p, .select-menu-item, .logo-box, .branch-infobar, #com hr,
-  .discussion-item-body .outdated-comment .file-header {
+  .discussion-item-body .outdated-comment .file-header,
+  .repository-content > .Box--condensed > .Box-body.bg-blue-light {
     border-bottom: none !important;
   }
   .pull-info, .branch-link, .milestone-list .progress-bar {
