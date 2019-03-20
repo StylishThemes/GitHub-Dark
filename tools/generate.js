@@ -20,12 +20,10 @@ const mappings = {
   "background: #eaecef": "background: #343434",
   "background: #dfe2e5": "background: #444",
   "background: #d1d5da": "background: #444",
-  "background: #f1f8ff": "background: #242424",
   "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
   "background-color: #fff": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
-  "background-color: #f1f8ff": "background-color: #242424",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #e6ebf1": "background-color: #444",
   "background-color: #d1d5da": "background-color: #383838",
@@ -35,6 +33,7 @@ const mappings = {
 
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
   "background-color: #f6f8fa": "background-color: #202020",
+  "background: #f6f8fa": "background-color: #202020",
 
   "background-color: hsla(0,0%,100%,.125)": "background-color: hsla(0,0%,100%,.125)",
 
@@ -139,6 +138,7 @@ const mappings = {
   // Color / Background
   // ==========================================================================
 
+  "color: #05264c": "color: #bebebe", // big commit title
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
@@ -168,11 +168,16 @@ const mappings = {
   // blue
   "color: #264c72": "color: #9daccc",
   "color: #032f62": "color: #9daccc",
+  "color: #c0d3eb": "color: #163",
+  "border-bottom-color: #c0d3eb": "border-color: #163",
+  "background: #f1f8ff": "background: #182030",
+  "background-color: #f1f8ff": "background-color: #182030",
   "background-color: #032f62": "background-color: #182030",
   "background-color: #2cbe4e": "background-color: #163",
   "background-color: #dbedff": "background-color: #182030",
+
+  // blue (base-color)
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
-  "color: #05264c": "color: #bebebe", // big commit title
   "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
     filter: drop-shadow(-.25em 0 0 rgba(79, 140, 201, .4));
