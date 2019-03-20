@@ -42,10 +42,11 @@ const mappings = {
   // Border
   // ==========================================================================
 
-  "border: 1px solid #e1e4e8": "border-color: #343434",
-  "border: 1px solid #eee": "border-color: #343434",
-  "border: 1px solid #d1d5da": "border-color: #484848",
   "border: 2px solid #fff": "border-color: #222",
+  "border: 1px solid #eee": "border-color: #343434",
+  "border: 1px solid #e1e4e8": "border-color: #343434",
+  "border: 1px solid #d1d5da": "border-color: #484848",
+  "border: 1px solid #c3c8cf": "border-color: #484848",
 
   // needs to come before the color variants so they take priority
   "border-top-color: transparent": "border-top-color: transparent",
@@ -56,6 +57,7 @@ const mappings = {
   "border-color: #e1e4e8": "border-color: #343434",
   "border-color: #d1d5da": "border-color: #484848",
 
+  "border-bottom: 1px dashed #dfe2e5": "border-color: #343434",
   "border: 1px solid rgba(27,31,35,.1)": "border-color: rgba(200,200,200,.1)",
 
   "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(200,200,200,.15)",
