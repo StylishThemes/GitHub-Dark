@@ -35,7 +35,8 @@ const mappings = {
   "background-color: #f6f8fa": "background-color: #202020",
   "background: #f6f8fa": "background-color: #202020",
 
-  "background-color: hsla(0,0%,100%,.125)": "background-color: hsla(0,0%,100%,.125)",
+  "background-color: hsla(0,0%,100%,.125)": "background-color: hsla(0,0%,100%,.05)",
+  "background-color: hsla(0,0%,100%,.175)": "background-color: hsla(0,0%,100%,.1)",
 
   // ==========================================================================
   // Border
