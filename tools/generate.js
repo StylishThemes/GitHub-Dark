@@ -36,6 +36,8 @@ const mappings = {
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
   "background-color: #f6f8fa": "background-color: #202020",
 
+  "background-color: hsla(0,0%,100%,.125)": "background-color: hsla(0,0%,100%,.125)",
+
   // ==========================================================================
   // Border
   // ==========================================================================
@@ -217,6 +219,7 @@ const mappings = {
   "border-color: #8a63d2": "border-color: #8368aa",
 
   "color: inherit": "color: inherit",
+  "background: none": "background: none",
 };
 
 // list of sites to pull stylesheets from. Accepts fetch options. If `prefix`
@@ -260,7 +263,6 @@ const ignoreSelectors = [
 // selectors because they can generate invalid rules.
 const unmergeableSelectors = [
   /(-moz-|-ms-|-o-|-webkit-).+/,
-  /:selection|:placeholder$/,
 ];
 
 // list of shorthand properties where values are compared insensitively
@@ -353,7 +355,6 @@ function parseRule(decls, rule, opts) {
           if (ignoreSelectors.some(re => re.test(selector))) return;
 
           // stylistic tweaks
-          selector = selector.replace(/::/g, ":");
           selector = selector.replace(/\+/g, " + ");
           selector = selector.replace(/~/g, " ~ ");
           selector = selector.replace(/>/g, " > ");
