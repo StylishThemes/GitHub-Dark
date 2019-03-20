@@ -88,13 +88,18 @@ const mappings = {
   "border-left: 1px solid #d1d5da": "border-left-color: #484848",
   "border-right: 1px solid #d1d5da": "border-right-color: #484848",
 
+  "border-top-color: #d1d5da": "border-top-color: #484848",
+  "border-bottom-color: #d1d5da": "border-bottom-color: #484848",
+  "border-right-color: #d1d5da": "border-right-color: #484848",
+
   "border-top: 1px solid #ddd": "border-top-color: #343434",
   "border-bottom: 1px solid #ddd": "border-bottom-color: #343434",
   "border-left: 1px solid #ddd": "border-left-color: #343434",
   "border-right: 1px solid #ddd": "border-right-color: #343434",
 
-  "border-left-color: #f6f8fa": "border-left-color: #222",
-  "border-bottom-color: #f6f8fa": "border-bottom-color: #222",
+  "border-bottom-color: #f6f8fa": "border-bottom-color: #202020",
+  "border-left-color: #f6f8fa": "border-left-color: #202020",
+  "border-right-color: #f6f8fa": "border-right-color: #202020",
 
   "border-left: solid 2px #e6ebf1": "border-left-color: #343434",
   "border-bottom: solid 2px #e6ebf1": "border-bottom-color: #343434",
