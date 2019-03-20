@@ -246,11 +246,11 @@ const sources = [
   },
   {
     url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
-    prefix: ".refined-github",
+    prefix: "html.refined-github",
   },
   {
     url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css",
-    prefix: ".refined-github",
+    prefix: "html.refined-github",
   },
 ];
 
