@@ -93,7 +93,7 @@
   .page-responsive .HeaderMenu--logged-out, .btn-transparent:active,
   .btn-transparent:hover, .Tile:hover, .avatar-child, .AvatarStack-body .avatar,
   .markdown-body table tr, .markdown-body img, .Box--overlay, .btn-invisible,
-  .commit-tease-contributors, .commit-icon .octicon, .gh-header,
+  .commit-icon .octicon, .gh-header,
   .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
   .gh-header-edit .edit-issue-title:focus, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
@@ -116,11 +116,11 @@
   .projects-comment-form .comment-form-head .toolbar-commenting,
   .user-profile-sticky-bar:after, .user-profile-nav, .pr-toolbar, .diffbar,
   .review-comment .is-comment-editing, .review-thread-reply .inline-comment-form,
-  .review-summary-form-wrapper, .readme .markdown-body, .readme .plain,
-  .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
-  .is-failed .repo-file-upload-errors, .is-hidden-file .repo-file-upload-errors,
-  .is-too-big .repo-file-upload-errors, .is-too-many .repo-file-upload-errors,
-  .setup-info-module, .orgs-help-item-octicon, .business-sso .business-sso-panel,
+  .review-summary-form-wrapper, .is-bad-file .repo-file-upload-errors,
+  .is-empty .repo-file-upload-errors, .is-failed .repo-file-upload-errors,
+  .is-hidden-file .repo-file-upload-errors, .is-too-big .repo-file-upload-errors,
+  .is-too-many .repo-file-upload-errors, .setup-info-module,
+  .orgs-help-item-octicon, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
   .org-sso .org-sso-panel, .tree-browser tr.navigation-focus td,
   .tree-browser tr[aria-selected=true] td, .user-status-header,
@@ -275,9 +275,10 @@
     background-color: #383838;
   }
   /* auto-generated rule for "background-color: #24292e" */
-  .Header, .discussion-item-locked .discussion-item-icon,
+  .Header-old, .Header, .discussion-item-locked .discussion-item-icon,
   .discussion-item-unlocked .discussion-item-icon, .reponav-wrapper,
-  .project-full-screen .project-header, body[class="page-responsive"] .Header,
+  .project-full-screen .project-header,
+  body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper {
     background-color: #222;
   }
@@ -618,9 +619,7 @@
     border-left-color: #343434;
   }
   /* auto-generated rule for "border-right: 1px solid #eaecef" */
-  .header-search-scope, .pricing-table td + td,
-  .table-list-bordered .table-list-cell:last-child,
-  body[class="page-responsive"] .header-search-scope {
+  .pricing-table td + td, .table-list-bordered .table-list-cell:last-child {
     border-right-color: #343434;
   }
   /* auto-generated rule for "border-top: 1px solid #d1d5da" */
@@ -1047,9 +1046,7 @@
   .btn-outline:active .Counter, .btn-outline:hover .Counter,
   [open] > .btn-outline .Counter, .social-count:hover, .btn-link,
   .drag-and-drop-error-info a, a.tabnav-extra:hover, .pagination a,
-  .pagination em, .pagination span,
-  .scoped-search .form-control.focus .header-search-scope,
-  .btn-outline-mktg:hover, .link-mktg:hover,
+  .pagination em, .pagination span, .btn-outline-mktg:hover, .link-mktg:hover,
   .illflow-blue .illflow-item .illflow-item-heading, .MarketingBody-lead a:hover,
   a.branch-name, .ajax-pagination-form .ajax-pagination-btn, .btn-invisible,
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
@@ -1101,7 +1098,6 @@
   .toggle-user-status-edit:hover .user-status-message-wrapper,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
   body[class="page-responsive"] .selected .Counter--blue,
-  body[class="page-responsive"] .scoped-search .form-control.focus .header-search-scope,
   body[class="page-responsive"] a, body[class="page-responsive"] .bubble-action,
   body[class="page-responsive"] .list-item-title,
   body[class="page-responsive"] .btn-link,
@@ -1143,11 +1139,11 @@
   .drag-and-drop, .drag-and-drop-error-info, h2.account, p.explain,
   .menu-heading, .tabnav-tab, .tabnav-extra,
   .filter-list.pjax-active .filter-item, .filter-item, .subnav-item,
-  .subnav-search-input, .UnderlineNav-item, .lead, .header-search-scope,
-  .pullquote, .MarketingBody > p, .MarketingBody ol, .MarketingBody ul,
-  .DateNav .selected, .Label--gray, .Label--outline, .Counter,
-  .Subhead-description, .table-list-header-meta,
-  .table-list-header-toggle .btn-link, .suggester li small, .Box-body .help,
+  .subnav-search-input, .UnderlineNav-item, .lead, .pullquote,
+  .MarketingBody > p, .MarketingBody ol, .MarketingBody ul, .DateNav .selected,
+  .Label--gray, .Label--outline, .Counter, .Subhead-description,
+  .table-list-header-meta, .table-list-header-toggle .btn-link,
+  .suggester li small, .Box-body .help,
   .boxed-group .heading a.boxed-group-breadcrumb,
   .boxed-group > h3 a.boxed-group-breadcrumb, .boxed-group-inner,
   .boxed-group-inner .help, .breadcrumb, .btn-octicon, .capped-card > p,
@@ -1243,7 +1239,6 @@
   body[class="page-responsive"] .subnav-search-input,
   body[class="page-responsive"] .diffstat,
   body[class="page-responsive"] .dropdown-header,
-  body[class="page-responsive"] .header-search-scope,
   body[class="page-responsive"] .color-icons .octicon-git-commit,
   body[class="page-responsive"] .color-icons .draft,
   body[class="page-responsive"] .protip,
@@ -1334,12 +1329,12 @@
   .menu-item.selected, .menu-item .octicon, .tabnav-tab.selected,
   .tabnav-tab:focus, .tabnav-tab:hover, .UnderlineNav-item:focus,
   .UnderlineNav-item:hover, .UnderlineNav-item.selected, .text-emphasized,
-  .Header .header-search-input, .page-responsive .HeaderMenu-link:hover,
+  .page-responsive .HeaderMenu-link:hover,
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
-  .header-nav-current-user .user-profile-link, .subheader-nav .nav-item.selected,
-  .subnav-link:hover, .illflow-item.selected .illflow-item-heading,
-  .Counter--gray-light, .markdown-body span.frame span span,
-  .table-list-header-toggle .btn-link:hover,
+  .header-nav-current-user .user-profile-link, .header-search-input,
+  .subheader-nav .nav-item.selected, .subnav-link:hover,
+  .illflow-item.selected .illflow-item-heading, .Counter--gray-light,
+  .markdown-body span.frame span span, .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
   .table-list-header-toggle .select-menu-button.selected,
@@ -1402,8 +1397,8 @@
   body[class="page-responsive"] .form-select,
   body[class="page-responsive"] .Counter--gray-light,
   body[class="page-responsive"] .dropdown-item,
-  body[class="page-responsive"] .Header .header-search-input,
   body[class="page-responsive"] .header-nav-current-user .user-profile-link,
+  body[class="page-responsive"] .header-search-input,
   body[class="page-responsive"] .color-icons .octicon-comment-discussion,
   body[class="page-responsive"] .list-options .selected .list-item-title,
   body[class="page-responsive"] .bubble.auth-form-container .bubble-title,
@@ -1909,10 +1904,10 @@
     border-color: #8368aa;
   }
   /* auto-generated rule for "color: inherit" */
-  legend, .subnav-search-context .select-menu-item-icon,
-  .Header .header-search-input, .Bump-link--hover .Bump-link-symbol,
-  .flash-close, .markdown-body a:not([href]), .boxed-group .heading a,
-  .boxed-group > h3 a, .commit-tease .muted-link, .commit-tease .message,
+  legend, .subnav-search-context .select-menu-item-icon, .header-search-input,
+  .Bump-link--hover .Bump-link-symbol, .flash-close,
+  .markdown-body a:not([href]), .boxed-group .heading a, .boxed-group > h3 a,
+  .commit-tease .muted-link, .commit-tease .message,
   .full-commit .branches-list li a, .branches-tag-list li .ellipsis-expander,
   .branches-tag-list li a, .details-overlay[open] > .dropdown-item:hover,
   .discussion-sidebar-toggle:hover .octicon, .timeline-comment-header .timestamp,
@@ -1955,7 +1950,7 @@
   body[class="page-responsive"] .dropdown-item.zeroclipboard-is-hover > .octicon,
   body[class="page-responsive"] .dropdown-item:focus > .octicon,
   body[class="page-responsive"] .dropdown-item:hover > .octicon,
-  body[class="page-responsive"] .Header .header-search-input,
+  body[class="page-responsive"] .header-search-input,
   body[class="page-responsive"] a:active,
   body[class="page-responsive"] footer li a,
   body[class="page-responsive"] footer .switch-to-desktop,
