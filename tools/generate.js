@@ -104,7 +104,6 @@ const mappings = {
 
   "border-top: 7px solid #fff": "border-top-color: #181818",
 
-  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #484848",
 
   // ==========================================================================
@@ -168,13 +167,19 @@ const mappings = {
   // blue
   "color: #264c72": "color: #9daccc",
   "color: #032f62": "color: #9daccc",
-  "color: #c0d3eb": "color: #163",
-  "border-bottom-color: #c0d3eb": "border-color: #163",
+
   "background: #f1f8ff": "background: #182030",
   "background-color: #f1f8ff": "background-color: #182030",
   "background-color: #032f62": "background-color: #182030",
-  "background-color: #2cbe4e": "background-color: #163",
   "background-color: #dbedff": "background-color: #182030",
+  "border-bottom-color: #f1f8ff": "border-bottom-color: #182030",
+  "border-right-color: #f1f8ff": "border-right-color: #182030",
+
+  "color: #c0d3eb": "color: #224466",
+  "background-color: #2cbe4e": "background-color: #224466",
+  "border-color: #c0d3eb": "border-color: #224466",
+  "border-bottom-color: #c0d3eb": "border-bottom-color: #224466",
+  "border-right-color: #c0d3eb": "border-right-color: #224466",
 
   // blue (base-color)
   "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
@@ -183,6 +188,13 @@ const mappings = {
     filter: drop-shadow(-.25em 0 0 rgba(79, 140, 201, .4));
     filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .4))
   `,
+  "filter: drop-shadow(0 -.28em 0 #c8e1ff)": `
+    filter: drop-shadow(0 -.28em 0 rgba(79, 140, 201, .4));
+    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .4))
+  `,
+  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
+  "border-bottom-color: #2188ff": "border-bottom-color: /*[[base-color]]*/ #4f8cc9",
+  "border-right-color: #2188ff": "border-right-color: /*[[base-color]]*/ #4f8cc9",
 
   // red
   "color: #cb2431": "color: #f44",
