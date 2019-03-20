@@ -244,8 +244,14 @@ const sources = [
     match: ["body", ".page-responsive"],
     opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}},
   },
-  {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css"},
-  {url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css"},
+  {
+    url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
+    prefix: ".refined-github",
+  },
+  {
+    url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/options.css",
+    prefix: ".refined-github",
+  },
 ];
 
 // list of regexes matching selectors that should be ignored
