@@ -120,22 +120,22 @@ const mappings = {
   // ==========================================================================
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
+     box-shadow: 0 0 0 2px rgba(79,140,201,.3);
+     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
   "box-shadow: 0 0 0 .2em #c8e1ff": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
+     box-shadow: 0 0 0 2px rgba(79,140,201,.3);
+     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
   "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)": `
-    box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
-    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
+    box-shadow: 0 0 0 2px rgba(79,140,201,.3);
+    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
   "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": `
-    box-shadow: 0 0 0 .2em rgba(79,140,201,.5);
+    box-shadow: 0 1px 0 0 rgba(79,140,201,.5);
     box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
   `,
 
@@ -258,6 +258,7 @@ const mappings = {
   "border-color: #8a63d2": "border-color: #8368aa",
 
   "color: inherit": "color: inherit",
+  "box-shadow: none": "box-shadow: none",
   "background: none": "background: none",
 };
 
