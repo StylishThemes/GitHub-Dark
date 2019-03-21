@@ -211,6 +211,7 @@ const mappings = {
     filter: drop-shadow(0 -.28em 0 rgba(79,140,201,.3));
     filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
+  "border: 1px solid #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
   "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
   "border-bottom-color: #2188ff": "border-bottom-color: /*[[base-color]]*/ #4f8cc9",
   "border-right-color: #2188ff": "border-right-color: /*[[base-color]]*/ #4f8cc9",
