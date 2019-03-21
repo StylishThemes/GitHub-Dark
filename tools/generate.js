@@ -18,7 +18,7 @@ const mappings = {
   "background: #fff": "background: #181818",
   "background: #fafbfc": "background: #181818",
   "background: #eaecef": "background: #343434",
-  "background: #dfe2e5": "background: #444",
+  "background: #dfe2e5": "background: #383838",
   "background: #d1d5da": "background: #444",
   "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
@@ -26,9 +26,11 @@ const mappings = {
   "background-color: #fafbfc": "background-color: #181818",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #e6ebf1": "background-color: #444",
+  "background-color: #d6e2f1": "background-color: #444",
+  "background-color: #d3e2f4": "background-color: #383838",
   "background-color: #d1d5da": "background-color: #383838",
-  "background-color: #c6cbd1": "background-color: #383838",
-  "background-color: #6a737d": "background-color: #383838",
+  "background-color: #c6cbd1": "background-color: #484848",
+  "background-color: #6a737d": "background-color: #303030",
   "background-color: #24292e": "background-color: #181818",
 
   // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
@@ -132,12 +134,17 @@ const mappings = {
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
-  "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
+  "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": `
+    box-shadow: 0 0 0 .2em rgba(79,140,201,.5);
+    box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
+  `,
 
-  "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": "box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5)",
-  "box-shadow: 0 1px 0 0 rgba(18,119,235,.5)": "box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5)",
-  "box-shadow: 0 1px 0 0 #1074e7": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
-  "box-shadow: 0 1px 0 0 #1277eb": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
+  "box-shadow: 0 1px 0 0 #1074e7": `
+    box-shadow: 0 1px 0 0 #4f8cc9;
+    box-shadow: 0 1px 0 0 /*[[base-color]]*/;
+  `,
+
+  "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   "box-shadow: inset 0 0 0 1px #c8e1ff": "box-shadow: inset 0 0 0 1px #6d7c9c",
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
