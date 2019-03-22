@@ -19,7 +19,7 @@ const mappings = {
   "background: #fafbfc": "background: #181818",
   "background: #eaecef": "background: #343434",
   "background: #dfe2e5": "background: #383838",
-  "background: #d1d5da": "background: #444",
+  "background: #d1d5da": "background: #404040",
   "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
 
   "background-color: #fff": "background-color: #181818",
@@ -28,7 +28,7 @@ const mappings = {
   "background-color: #e6ebf1": "background-color: #444",
   "background-color: #d6e2f1": "background-color: #444",
   "background-color: #d3e2f4": "background-color: #383838",
-  "background-color: #d1d5da": "background-color: #383838",
+  "background-color: #d1d5da": "background-color: #404040",
   "background-color: #c6cbd1": "background-color: #484848",
   "background-color: #6a737d": "background-color: #303030",
   "background-color: #24292e": "background-color: #181818",
@@ -47,7 +47,7 @@ const mappings = {
   "border: 2px solid #fff": "border-color: #222",
   "border: 1px solid #eee": "border-color: #343434",
   "border: 1px solid #e1e4e8": "border-color: #343434",
-  "border: 1px solid #d1d5da": "border-color: #484848",
+  "border: 1px solid #d1d5da": "border-color: #404040",
   "border: 1px solid #c3c8cf": "border-color: #484848",
 
   // needs to come before the color variants so they take priority
@@ -57,7 +57,7 @@ const mappings = {
 
   "border-color: #eaecef": "border-color: #343434",
   "border-color: #e1e4e8": "border-color: #343434",
-  "border-color: #d1d5da": "border-color: #484848",
+  "border-color: #d1d5da": "border-color: #404040",
 
   "border: 1px solid #dfe2e5": "border-color: #343434",
   "border-bottom: 1px dashed #dfe2e5": "border-color: #343434",
@@ -85,14 +85,14 @@ const mappings = {
   "border-left: 1px solid #eaecef": "border-left-color: #343434",
   "border-right: 1px solid #eaecef": "border-right-color: #343434",
 
-  "border-top: 1px solid #d1d5da": "border-top-color: #484848",
-  "border-bottom: 1px solid #d1d5da": "border-bottom-color: #484848",
-  "border-left: 1px solid #d1d5da": "border-left-color: #484848",
-  "border-right: 1px solid #d1d5da": "border-right-color: #484848",
+  "border-top: 1px solid #d1d5da": "border-top-color: #404040",
+  "border-bottom: 1px solid #d1d5da": "border-bottom-color: #404040",
+  "border-left: 1px solid #d1d5da": "border-left-color: #404040",
+  "border-right: 1px solid #d1d5da": "border-right-color: #404040",
 
-  "border-top-color: #d1d5da": "border-top-color: #484848",
-  "border-bottom-color: #d1d5da": "border-bottom-color: #484848",
-  "border-right-color: #d1d5da": "border-right-color: #484848",
+  "border-top-color: #d1d5da": "border-top-color: #404040",
+  "border-bottom-color: #d1d5da": "border-bottom-color: #404040",
+  "border-right-color: #d1d5da": "border-right-color: #404040",
 
   "border-top: 1px solid #ddd": "border-top-color: #343434",
   "border-bottom: 1px solid #ddd": "border-bottom-color: #343434",
