@@ -275,7 +275,10 @@ const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
-  {url: "https://developer.github.com"},
+  {
+    url: "https://developer.github.com",
+    prefix: "html[prefix]",
+  },
   {
     url: "https://github.com/login",
     prefix: `body[class="page-responsive"]`,
