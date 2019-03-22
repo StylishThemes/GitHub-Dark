@@ -115,8 +115,10 @@ const mappings = {
 
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #484848",
 
-  "border: 1px solid #1277eb": "border-color: rgba(/*[[base-color-rgb]]*/, .8)",
-
+  "border: 1px solid #1277eb": `
+     border-color: rgba(79,140,201,.8);
+     border-color: rgba(/*[[base-color-rgb]]*/, .8);
+  `,
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
