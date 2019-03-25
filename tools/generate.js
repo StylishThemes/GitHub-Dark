@@ -180,7 +180,7 @@ const mappings = {
   "color: #586069": "color: #949494",
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
-  "color: #24292e": "color: #bebebe",
+  "color: #24292e": "color: #c2c2c2",
   "color: #2f363d": "color: #bebebe",
 
   // blue
