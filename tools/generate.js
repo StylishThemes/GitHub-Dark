@@ -50,6 +50,7 @@ const mappings = {
   "border: 1px solid #eee": "border-color: #343434",
   "border: 1px solid #e1e4e8": "border-color: #343434",
   "border: 1px solid #d1d5da": "border-color: #404040",
+  "border: 1px solid #959da5": "border-color: #484848",
   "border: 1px solid #c3c8cf": "border-color: #484848",
 
   // needs to come before the color variants so they take priority
