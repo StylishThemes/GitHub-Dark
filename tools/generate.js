@@ -25,6 +25,7 @@ const mappings = {
   "background-color: #fff": "background-color: #181818",
   "background-color: #fafbfc": "background-color: #181818",
   "background-color: #f4f4f4": "background-color: #242424",
+  "background-color: #eff3f6": "background-color: #343434",
   "background-color: #eaecef": "background-color: #343434",
   "background-color: #e6ebf1": "background-color: #444",
   "background-color: #d6e2f1": "background-color: #444",
@@ -173,6 +174,7 @@ const mappings = {
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
+  "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
   "fill: #959da5": "fill: #757575",
 
   // needs to be after #333 for .btn vs .btn-outline
@@ -182,7 +184,7 @@ const mappings = {
   "color: #586069": "color: #949494",
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
   // needs to be after #0366d3 for .btn-link vs .text-gray-dark
-  "color: #24292e": "color: #c2c2c2",
+  "color: #24292e": "color: #d2d2d2",
   "color: #2f363d": "color: #bebebe",
 
   // blue
