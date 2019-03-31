@@ -252,6 +252,9 @@ const mappings = {
   "background: #fffbdd": "background: #261d08",
   "background-color: #fffbdd": "background-color: #261d08",
   "fill: #dbab09": "fill: #cb4",
+  "border-bottom-color: #fffbdd": "border-bottom-color: #321",
+  "border-bottom-color: #d9d0a5": "border-bottom-color: #542",
+  "border-color: #d9d0a5": "border-color: #542",
 
   // light yellow
   "background-color: #fff5b1": "background-color: #651",
