@@ -88,7 +88,31 @@
   .file-data .line-numbers span {
     display:block;
   }
-
+  /* diff stuff */
+  .add-line-comment:focus, .is-hovered .add-line-comment { opacity: 1; }
+  .add-line-comment:hover { transform: scale(1); }
+  .soft-wrap .add-line-comment { margin-left: -28px; }
+  .add-line-comment {
+    background-color: #0366d6;
+    background-image: linear-gradient(#0372ef,#0366d6);
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(27,31,35,.15);
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    line-height: 21px;
+    margin: -2px -10px -2px -20px;
+    opacity: 0;
+    position: relative;
+    text-align: center;
+    text-indent: 0;
+    transform: scale(.8);
+    transition: transform .1s ease-in-out;
+    width: 22px;
+    z-index: 5;
+  }
   /* styles from github-dark.css; slightly tweaked to match GitHub */
   .blame .blob-num, .blame-blob-num, .overall-summary, .repository-lang-stats,
   .collection-card, .team-grid .team, .blob-num-hunk, .blob-code-hunk,
@@ -193,6 +217,14 @@
     text-align: center;
     color: #fff;
   }
+  .blob-num-expandable .directional-expander {
+    color: #586069;
+    cursor: pointer;
+    display: block;
+    height: auto;
+    margin-right: -1px;
+    width: auto;
+  }
   .octicon-unfold {
     display: block;
     margin: 0 auto;
@@ -279,6 +311,9 @@
       $(document).on('keydown', function(e) {
         console.log(e.key, e.target);
       });
+      $('#rst-diff')
+        .on('mouseenter', 'tr', function() { $(this).find('.blob-code').addClass('is-hovered'); })
+        .on('mouseleave', 'tr', function() { $(this).find('.blob-code').removeClass('is-hovered'); });
     }
 
     $(window).on('load', function(){
@@ -308,305 +343,265 @@
     <h3>Commit Diff</h3>
     <!-- example from https://github.com/StylishThemes/GitHub-Dark/commit/accc6c4a2349580f16fdf5d1542941a5ecb97ff5 -->
 <div class="data highlight blob-wrapper">
-  <table class="diff-table tab-size  " data-tab-size="2">
-
+  <table class="diff-table js-diff-table tab-size  " data-tab-size="2" data-diff-anchor="diff-64ae9f3acdf5e1c48548adca960457b1">
     <tbody><tr class="js-expandable-line" data-position="0">
-      <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1579&amp;next_line_num_right=1579&amp;path=github-dark.css&amp;prev_line_num_left=&amp;prev_line_num_right=&amp;right_hunk_size=7" data-left-range="1-1578" data-right-range="1-1578" tabindex="-1" disabled>
-          <span class="octicon octicon-unfold"></span>
+      <td class="blob-num blob-num-expandable is-hovered" colspan="2">
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="js-expand directional-expander single-expander" title="Expand Up" aria-label="Expand Up" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;direction=up&amp;in_wiki_context=&amp;last_left=&amp;last_right=&amp;left=1579&amp;left_hunk_size=7&amp;mode=100644&amp;path=github-dark.css&amp;right=1579&amp;right_hunk_size=7" data-left-range="1-1578" data-right-range="1-1578">
+          <svg class="octicon octicon-fold-up" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 6L7 3 4 6h2v6h2V6h2zm4 0c0-.55-.45-1-1-1h-2.5l1 1h1l-2 2H9v1h1.5l2 2H9v1h4c.55 0 1-.45 1-1l-2.5-2.5L14 6zM3.5 8H5v1H3.5l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 6c0-.55.45-1 1-1h2.5l-1 1h-1l2 2z"></path></svg>
         </a>
       </td>
-      <td class="blob-code blob-code-inner blob-code-hunk">@@ -1579,7 +1579,7 @@</td>
+      <td class="blob-code blob-code-inner blob-code-hunk is-hovered" colspan="2">@@ -1579,7 +1579,7 @@</td>
     </tr>
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1579" data-line-number="1579" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1579" data-line-number="1579" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="1" data-side="right" data-line="1579" data-original-line="     border-color: /*[[base-color]]*/ #4183C4 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="1" data-line="1579" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: /*[[base-color]]*/ <span class="pl-c1">#4f8cc9</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c"><span class="pl-c">/*</span>[[base-color]]<span class="pl-c">*/</span></span> <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(65, 131, 196);"></span>#4183C4</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1580" data-line-number="1580" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1580" data-line-number="1580" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="2" data-side="right" data-line="1580" data-original-line="     color: #fff !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="2" data-line="1580" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#fff</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(255, 255, 255);"></span>#fff</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1581" data-line-number="1581" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1581" data-line-number="1581" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="3" data-side="right" data-line="1581" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="3" data-line="1581" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1582" data-line-number="1582" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
       <td class="blob-num blob-num-deletion empty-cell"></td>
-
+      <td class="blob-code blob-code-deletion blob-code-marker-cell" data-code-marker="-">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="4" data-side="left" data-line="1582" data-original-line="-  .zh-pipeline-issue-toggler:hover {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-deletion">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="4" data-line="1582" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">-  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span> {</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td class="blob-num blob-num-addition empty-cell"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1582" data-line-number="1582" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="5" data-side="right" data-line="1582" data-original-line="+  .zh-pipeline-issue-toggler:hover, .date_selector .date-button {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="5" data-line="1582" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span><span class="x x-first">, </span><span class="pl-e x">.date_selector</span><span class="x"> </span><span class="pl-e x x-last">.date-button</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-pipeline-issue-toggler</span><span class="pl-e">:hover</span><span class="x x-first">, </span><span class="pl-e x">.date_selector</span><span class="x"> </span><span class="pl-e x x-last">.date-button</span> {</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1583" data-line-number="1583" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1583" data-line-number="1583" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="6" data-side="right" data-line="1583" data-original-line="     color: /*[[base-color]]*/ #4183C4 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="6" data-line="1583" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">color</span></span>: /*[[base-color]]*/ <span class="pl-c1">#4f8cc9</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c"><span class="pl-c">/*</span>[[base-color]]<span class="pl-c">*/</span></span> <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(65, 131, 196);"></span>#4183C4</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1584" data-line-number="1584" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1584" data-line-number="1584" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="7" data-side="right" data-line="1584" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="7" data-line="1584" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1585" data-line-number="1585" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1585" data-line-number="1585" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="8" data-side="right" data-line="1585" data-original-line="   /* background */" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="8" data-line="1585" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-c">/* background */</span></span>
-
+        <span class="blob-code-inner">  <span class="pl-c"><span class="pl-c">/*</span> background <span class="pl-c">*/</span></span></span>
       </td>
     </tr>
-
 
     <tr class="js-expandable-line" data-position="9">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=7&amp;mode=100644&amp;next_line_num_left=1595&amp;next_line_num_right=1595&amp;path=github-dark.css&amp;prev_line_num_left=1585&amp;prev_line_num_right=1585&amp;right_hunk_size=8" data-left-range="1586-1594" data-right-range="1586-1594" tabindex="-1" disabled>
-          <span class="octicon octicon-unfold"></span>
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="js-expand directional-expander single-expander" title="Expand All" aria-label="Expand All" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;in_wiki_context=&amp;last_left=1585&amp;last_right=1585&amp;left=1595&amp;left_hunk_size=21&amp;mode=100644&amp;path=github-dark.css&amp;right=1595&amp;right_hunk_size=23" data-left-range="1586-1589" data-right-range="1586-1589">
+          <svg class="octicon octicon-unfold" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7.5L14 10c0 .55-.45 1-1 1H9v-1h3.5l-2-2h-7l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 5c0-.55.45-1 1-1h4v1H1.5l2 2h7l2-2H9V4h4c.55 0 1 .45 1 1l-2.5 2.5zM6 6h2V3h2L7 0 4 3h2v3zm2 3H6v3H4l3 3 3-3H8V9z"></path></svg>
         </a>
       </td>
-      <td class="blob-code blob-code-inner blob-code-hunk">@@ -1595,7 +1595,8 @@</td>
+      <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -1595,21 +1595,23 @@</td>
     </tr>
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1595" data-line-number="1595" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1595" data-line-number="1595" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="10" data-side="right" data-line="1595" data-original-line="     border-color: #484848 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="10" data-line="1595" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(72, 72, 72);"></span>#484848</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1596" data-line-number="1596" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1596" data-line-number="1596" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="11" data-side="right" data-line="1596" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="11" data-line="1596" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1597" data-line-number="1597" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1597" data-line-number="1597" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="12" data-side="right" data-line="1597" data-original-line="   li.zh-pipeline-issue, .zh-pipeline-issue-content, .zh-issue-meta, .zh-pipeline-issue-action," type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="12" data-line="1597" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-ent">li</span><span class="pl-e">.zh-pipeline-issue</span>, <span class="pl-e">.zh-pipeline-issue-content</span>, <span class="pl-e">.zh-issue-meta</span>, <span class="pl-e">.zh-pipeline-issue-action</span>,</span>
-
+        <span class="blob-code-inner">  <span class="pl-ent">li</span><span class="pl-e">.zh-pipeline-issue</span>, <span class="pl-e">.zh-pipeline-issue-content</span>, <span class="pl-e">.zh-issue-meta</span>, <span class="pl-e">.zh-pipeline-issue-action</span>,</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1598" data-line-number="1598" class="blob-num blob-num-deletion js-linkable-line-number"></td>
-
       <td class="blob-num blob-num-deletion empty-cell"></td>
-
+      <td class="blob-code blob-code-deletion blob-code-marker-cell" data-code-marker="-">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="13" data-side="left" data-line="1598" data-original-line="-  .zh-pipeline-heading-container, .zh-button-grey, .zh-board-menu, .zh-schema-title {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-deletion">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="13" data-line="1598" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">-  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span> {</span>
       </td>
     </tr>
 
-
-
-
     <tr>
       <td class="blob-num blob-num-addition empty-cell"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1598" data-line-number="1598" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="14" data-side="right" data-line="1598" data-original-line="+  .zh-pipeline-heading-container, .zh-button-grey, .zh-board-menu, .zh-schema-title," type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="14" data-line="1598" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span>,</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-pipeline-heading-container</span>, <span class="pl-e">.zh-button-grey</span>, <span class="pl-e">.zh-board-menu</span>, <span class="pl-e">.zh-schema-title</span>,</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td class="blob-num blob-num-addition empty-cell"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1599" data-line-number="1599" class="blob-num blob-num-addition js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="15" data-side="right" data-line="1599" data-original-line="+  .zh-burndown-chart .milestone-start-calendar-container {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="15" data-line="1599" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.milestone-start-calendar-container</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.milestone-start-calendar-container</span> {</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1599" data-line-number="1599" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1600" data-line-number="1600" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="16" data-side="right" data-line="1600" data-original-line="     background-color: #222 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="16" data-line="1600" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1">#222</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">background-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(34, 34, 34);"></span>#222</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1600" data-line-number="1600" class="blob-num blob-num-context js-linkable-line-number"></td>
-
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1601" data-line-number="1601" class="blob-num blob-num-context js-linkable-line-number"></td>
-
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="17" data-side="right" data-line="1601" data-original-line="     border-color: #484848 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="17" data-line="1601" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(72, 72, 72);"></span>#484848</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1601" data-line-number="1601" class="blob-num blob-num-context js-linkable-line-number"></td>
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1602" data-line-number="1602" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="18" data-side="right" data-line="1602" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="18" data-line="1602" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
 
 
-    <tr class="js-expandable-line" data-position="19">
-      <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=13&amp;mode=100644&amp;next_line_num_left=1603&amp;next_line_num_right=1604&amp;path=github-dark.css&amp;prev_line_num_left=1601&amp;prev_line_num_right=1602&amp;right_hunk_size=14" data-left-range="1602-1602" data-right-range="1603-1603" tabindex="-1" disabled>
-          <span class="octicon octicon-unfold"></span>
-        </a>
+
+    <tr>
+      <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1602" data-line-number="1602" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+      <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1603" data-line-number="1603" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="19" data-side="right" data-line="1603" data-original-line="   .zh-uploader-drop, .zh-button-grey.selected, .zh-button-grey:hover {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
       </td>
-      <td class="blob-code blob-code-inner blob-code-hunk">@@ -1603,13 +1604,14 @@</td>
+
+      <td class="blob-code blob-code-context">
+        <span class="blob-code-inner">  <span class="pl-e">.zh-uploader-drop</span>, <span class="pl-e">.zh-button-grey.selected</span>, <span class="pl-e">.zh-button-grey</span><span class="pl-e">:hover</span> {</span>
+      </td>
     </tr>
 
 
@@ -616,14 +611,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1604" data-line-number="1604" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="20" data-side="right" data-line="1604" data-original-line="     background: #333 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="20" data-line="1604" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#333</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(51, 51, 51);"></span>#333</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -632,14 +629,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1605" data-line-number="1605" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="21" data-side="right" data-line="1605" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="21" data-line="1605" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -648,14 +647,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1606" data-line-number="1606" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="22" data-side="right" data-line="1606" data-original-line="   /* border */" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="22" data-line="1606" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-c">/* border */</span></span>
-
+        <span class="blob-code-inner">  <span class="pl-c"><span class="pl-c">/*</span> border <span class="pl-c">*/</span></span></span>
       </td>
     </tr>
-
 
 
 
@@ -664,14 +665,16 @@
 
       <td class="blob-num blob-num-deletion empty-cell"></td>
 
+      <td class="blob-code blob-code-deletion blob-code-marker-cell" data-code-marker="-">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="23" data-side="left" data-line="1606" data-original-line="-  .zh-paw-btn-inner, .zh-schema, .zh-schema-pipeline-name, .popover, .zh-uploader-drop {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-deletion">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="23" data-line="1606" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">-  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -680,14 +683,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1607" data-line-number="1607" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="24" data-side="right" data-line="1607" data-original-line="+  .zh-paw-btn-inner, .zh-schema, .zh-schema-pipeline-name, .popover, .zh-uploader-drop," type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="24" data-line="1607" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span>,</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-paw-btn-inner</span>, <span class="pl-e">.zh-schema</span>, <span class="pl-e">.zh-schema-pipeline-name</span>, <span class="pl-e">.popover</span>, <span class="pl-e">.zh-uploader-drop</span>,</span>
       </td>
     </tr>
-
 
 
 
@@ -696,14 +701,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1608" data-line-number="1608" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="25" data-side="right" data-line="1608" data-original-line="+  .zh-milestone-dates, .zh-burndown-chart-container, .zh-burndown-chart .stats-container {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="25" data-line="1608" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-milestone-dates</span>, <span class="pl-e">.zh-burndown-chart-container</span>, <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.stats-container</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-milestone-dates</span>, <span class="pl-e">.zh-burndown-chart-container</span>, <span class="pl-e">.zh-burndown-chart</span> <span class="pl-e">.stats-container</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -712,14 +719,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1609" data-line-number="1609" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="26" data-side="right" data-line="1609" data-original-line="     border-color: #484848 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="26" data-line="1609" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(72, 72, 72);"></span>#484848</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -728,14 +737,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1610" data-line-number="1610" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="27" data-side="right" data-line="1610" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="27" data-line="1610" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -744,14 +755,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1611" data-line-number="1611" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="28" data-side="right" data-line="1611" data-original-line="   .popover.right .arrow {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="28" data-line="1611" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-e">.popover.right</span> <span class="pl-e">.arrow</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.popover.right</span> <span class="pl-e">.arrow</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -760,14 +773,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1612" data-line-number="1612" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="29" data-side="right" data-line="1612" data-original-line="     border-right-color: #484848 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="29" data-line="1612" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1">#484848</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(72, 72, 72);"></span>#484848</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -776,14 +791,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1613" data-line-number="1613" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="30" data-side="right" data-line="1613" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="30" data-line="1613" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -792,14 +809,16 @@
 
       <td class="blob-num blob-num-deletion empty-cell"></td>
 
+      <td class="blob-code blob-code-deletion blob-code-marker-cell" data-code-marker="-">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="31" data-side="left" data-line="1612" data-original-line="-  .file-commit-form .commit-form:before, .file-commit-form .commit-form:after {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-deletion">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="31" data-line="1612" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">-  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -808,14 +827,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1614" data-line-number="1614" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="32" data-side="right" data-line="1614" data-original-line="+  .file-commit-form .commit-form:before, .file-commit-form .commit-form:after, .zh-burndown .stats-item {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="32" data-line="1614" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span><span class="x x-first">, </span><span class="pl-e x">.zh-burndown</span><span class="x"> </span><span class="pl-e x x-last">.stats-item</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:before</span>, <span class="pl-e">.file-commit-form</span> <span class="pl-e">.commit-form</span><span class="pl-e">:after</span><span class="x x-first">, </span><span class="pl-e x">.zh-burndown</span><span class="x"> </span><span class="pl-e x x-last">.stats-item</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -824,14 +845,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1615" data-line-number="1615" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="33" data-side="right" data-line="1615" data-original-line="     border-right-color: #343434 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="33" data-line="1615" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1">#343434</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">border-right-color</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(52, 52, 52);"></span>#343434</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -840,14 +863,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1616" data-line-number="1616" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="34" data-side="right" data-line="1616" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="34" data-line="1616" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -856,39 +881,46 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1617" data-line-number="1617" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="35" data-side="right" data-line="1617" data-original-line="   /* text */" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="35" data-line="1617" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-c">/* text */</span></span>
-
+        <span class="blob-code-inner">  <span class="pl-c"><span class="pl-c">/*</span> text <span class="pl-c">*/</span></span></span>
       </td>
     </tr>
+
 
 
     <tr class="js-expandable-line" data-position="36">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;left_hunk_size=6&amp;mode=100644&amp;next_line_num_left=1656&amp;next_line_num_right=1658&amp;path=github-dark.css&amp;prev_line_num_left=1615&amp;prev_line_num_right=1617&amp;right_hunk_size=10" data-left-range="1616-1655" data-right-range="1618-1657" tabindex="-1" disabled>
-          <span class="octicon octicon-unfold"></span>
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="js-expand directional-expander" title="Expand Down" aria-label="Expand Down" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;direction=down&amp;in_wiki_context=&amp;last_left=1615&amp;last_right=1617&amp;left=1656&amp;left_hunk_size=6&amp;mode=100644&amp;path=github-dark.css&amp;right=1658&amp;right_hunk_size=10" data-left-range="1616-1634" data-right-range="1618-1636">
+          <svg class="octicon octicon-fold-down" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 11l3 3 3-3H8V5H6v6H4zm-4 0c0 .55.45 1 1 1h2.5l-1-1h-1l2-2H5V8H3.5l-2-2H5V5H1c-.55 0-1 .45-1 1l2.5 2.5L0 11zm10.5-2H9V8h1.5l2-2H9V5h4c.55 0 1 .45 1 1l-2.5 2.5L14 11c0 .55-.45 1-1 1h-2.5l1-1h1l-2-2z"></path></svg>
+        </a>
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="js-expand directional-expander" title="Expand Up" aria-label="Expand Up" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;direction=up&amp;in_wiki_context=&amp;last_left=1615&amp;last_right=1617&amp;left=1656&amp;left_hunk_size=6&amp;mode=100644&amp;path=github-dark.css&amp;right=1658&amp;right_hunk_size=10" data-left-range="1635-1655" data-right-range="1637-1657">
+          <svg class="octicon octicon-fold-up" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 6L7 3 4 6h2v6h2V6h2zm4 0c0-.55-.45-1-1-1h-2.5l1 1h1l-2 2H9v1h1.5l2 2H9v1h4c.55 0 1-.45 1-1l-2.5-2.5L14 6zM3.5 8H5v1H3.5l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 6c0-.55.45-1 1-1h2.5l-1 1h-1l2 2z"></path></svg>
         </a>
       </td>
-      <td class="blob-code blob-code-inner blob-code-hunk">@@ -1656,6 +1658,10 @@</td>
+      <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -1656,6 +1658,10 @@</td>
     </tr>
-
-
 
     <tr>
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1L1656" data-line-number="1656" class="blob-num blob-num-context js-linkable-line-number"></td>
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1658" data-line-number="1658" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="37" data-side="right" data-line="1658" data-original-line="     -webkit-filter: invert(40%) !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="37" data-line="1658" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1">-webkit-<span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">-webkit-filter</span></span>: <span class="pl-c1">invert</span>(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -897,14 +929,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1659" data-line-number="1659" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="38" data-side="right" data-line="1659" data-original-line="             filter: invert(40%) !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="38" data-line="1659" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">             <span class="pl-c1"><span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">            <span class="pl-c1"><span class="pl-c1">filter</span></span>: <span class="pl-c1">invert</span>(<span class="pl-c1">40<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -913,14 +947,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1660" data-line-number="1660" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="39" data-side="right" data-line="1660" data-original-line="   }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="39" data-line="1660" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -929,14 +965,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1661" data-line-number="1661" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="40" data-side="right" data-line="1661" data-original-line="+  .zh-icon-burndown {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="40" data-line="1661" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  <span class="pl-e">.zh-icon-burndown</span> {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-icon-burndown</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -945,14 +983,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1662" data-line-number="1662" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="41" data-side="right" data-line="1662" data-original-line="+    -webkit-filter: invert(100%) !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="41" data-line="1662" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+    <span class="pl-c1">-webkit-<span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">-webkit-filter</span></span>: <span class="pl-c1">invert</span>(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -961,14 +1001,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1663" data-line-number="1663" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="42" data-side="right" data-line="1663" data-original-line="+            filter: invert(100%) !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="42" data-line="1663" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+            <span class="pl-c1"><span class="pl-c1">filter</span></span>: invert(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">            <span class="pl-c1"><span class="pl-c1">filter</span></span>: <span class="pl-c1">invert</span>(<span class="pl-c1">100<span class="pl-k">%</span></span>) <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
-
 
 
 
@@ -977,14 +1019,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1664" data-line-number="1664" class="blob-num blob-num-addition js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="43" data-side="right" data-line="1664" data-original-line="+  }" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-addition">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="43" data-line="1664" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">+  }</span>
-
+        <span class="blob-code-inner">  }</span>
       </td>
     </tr>
-
 
 
 
@@ -993,14 +1037,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1665" data-line-number="1665" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="44" data-side="right" data-line="1665" data-original-line="   /* webkit scrollbars */" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="44" data-line="1665" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-c">/* webkit scrollbars */</span></span>
-
+        <span class="blob-code-inner">  <span class="pl-c"><span class="pl-c">/*</span> webkit scrollbars <span class="pl-c">*/</span></span></span>
       </td>
     </tr>
-
 
 
 
@@ -1009,14 +1055,16 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1666" data-line-number="1666" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="45" data-side="right" data-line="1666" data-original-line="   .zh-pipeline-issues-wrapper::-webkit-scrollbar-track {" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="45" data-line="1666" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">   <span class="pl-e">.zh-pipeline-issues-wrapper</span>::-webkit-scrollbar-track {</span>
-
+        <span class="blob-code-inner">  <span class="pl-e">.zh-pipeline-issues-wrapper</span><span class="pl-e">::-webkit-scrollbar-track</span> {</span>
       </td>
     </tr>
-
 
 
 
@@ -1025,22 +1073,161 @@
 
       <td id="diff-64ae9f3acdf5e1c48548adca960457b1R1667" data-line-number="1667" class="blob-num blob-num-context js-linkable-line-number"></td>
 
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="46" data-side="right" data-line="1667" data-original-line="     background: #181818 !important;" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
       <td class="blob-code blob-code-context">
-        <span class="add-line-comment octicon octicon-plus js-add-line-comment js-add-single-line-comment" data-path="github-dark.css" data-anchor="diff-64ae9f3acdf5e1c48548adca960457b1" data-position="46" data-line="1667" role="button" aria-label="Add line comment"></span>
-
-        <span class="blob-code-inner">     <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#181818</span> <span class="pl-k">!important</span>;</span>
-
+        <span class="blob-code-inner">    <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1"><span class="ghcc-block" style="background-color: rgb(24, 24, 24);"></span>#181818</span> <span class="pl-k">!important</span>;</span>
       </td>
     </tr>
 
 
-    <tr class="js-expandable-line">
+
+    <tr class="js-expandable-line" data-position="">
       <td class="blob-num blob-num-expandable" colspan="2">
-        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="diff-expander js-expand" title="Expand" aria-label="Expand" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;mode=100644&amp;path=github-dark.css&amp;prev_line_num_left=1661&amp;prev_line_num_right=1667" data-left-range="1662-1839" data-right-range="1668-1839" tabindex="-1" disabled>
-          <span class="octicon octicon-unfold"></span>
+        <a href="#diff-64ae9f3acdf5e1c48548adca960457b1" class="js-expand directional-expander single-expander" title="Expand Down" aria-label="Expand Down" data-url="/StylishThemes/GitHub-Dark/blob_excerpt/89e7b35dc27940c66fdddc00f58020e6720b3c3d?diff=unified&amp;direction=down&amp;in_wiki_context=&amp;last_left=1661&amp;last_right=1667&amp;left=1840&amp;left_hunk_size=&amp;mode=100644&amp;path=github-dark.css&amp;right=1840&amp;right_hunk_size=" data-left-range="1662-1839" data-right-range="1668-1839">
+          <svg class="octicon octicon-fold-down" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 11l3 3 3-3H8V5H6v6H4zm-4 0c0 .55.45 1 1 1h2.5l-1-1h-1l2-2H5V8H3.5l-2-2H5V5H1c-.55 0-1 .45-1 1l2.5 2.5L0 11zm10.5-2H9V8h1.5l2-2H9V5h4c.55 0 1 .45 1 1l-2.5 2.5L14 11c0 .55-.45 1-1 1h-2.5l1-1h1l-2-2z"></path></svg>
         </a>
       </td>
-      <td class="blob-code blob-code-expandable"></td>
+      <td class="blob-code blob-code-inner blob-code-hunk" colspan="2"></td>
+    </tr>
+
+  </tbody></table>
+</div>
+  </label>
+
+  <label class="wrapper type-diff file-data" tabindex="0">
+    <input type="checkbox" class="popup">
+    <h3>Commit (rst) Diff</h3>
+    <!-- example from https://github.com/iXit/wine-nine-standalone/commit/e9cfdd9d2ebdbca7b757adf15c6779e2b0e728e3 -->
+<div id="rst-diff" class="data highlight blob-wrapper">
+  <table class="diff-table js-diff-table tab-size  " data-tab-size="8" data-diff-anchor="diff-88b99bb28683bd5b7e3a204826ead112">
+    <colgroup>
+      <col width="40">
+      <col width="40">
+      <col width="20">
+      <col>
+    </colgroup>
+
+    <tbody><tr class="js-expandable-line" data-position="0">
+      <td class="blob-num blob-num-expandable" colspan="2">
+        <a href="#diff-88b99bb28683bd5b7e3a204826ead112" class="js-expand directional-expander single-expander" title="Expand Up" aria-label="Expand Up" data-url="/iXit/wine-nine-standalone/blob_excerpt/bc3785ab39d6e484322c4ec58843f5999f6d333e?diff=unified&amp;direction=up&amp;in_wiki_context=&amp;last_left=&amp;last_right=&amp;left=39&amp;left_hunk_size=7&amp;mode=100644&amp;path=README.rst&amp;right=39&amp;right_hunk_size=7" data-left-range="1-38" data-right-range="1-38">
+          <svg class="octicon octicon-fold-up" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 6L7 3 4 6h2v6h2V6h2zm4 0c0-.55-.45-1-1-1h-2.5l1 1h1l-2 2H9v1h1.5l2 2H9v1h4c.55 0 1-.45 1-1l-2.5-2.5L14 6zM3.5 8H5v1H3.5l-2 2H5v1H1c-.55 0-1-.45-1-1l2.5-2.5L0 6c0-.55.45-1 1-1h2.5l-1 1h-1l2 2z"></path></svg>
+        </a>
+      </td>
+      <td class="blob-code blob-code-inner blob-code-hunk" colspan="2">@@ -39,7 +39,7 @@ Packages</td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L39" data-line-number="39" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R39" data-line-number="39" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="1" data-side="right" data-line="39" data-original-line=" --------" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-context"><span class="blob-code-inner"><span class="pl-mh">--------</span></span></td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R40" data-line-number="40" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="2" data-side="right" data-line="40" data-original-line=" Your distribution may provide a package, avoiding the need to compile the code yourself. The exact usage instructions may vary in this case so check your distribution for the details. The currently known packages are:" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-context">
+        <span class="blob-code-inner">Your distribution may provide a package, avoiding the need to compile the code yourself. The exact usage instructions may vary in this case so check your distribution for the details. The currently known packages are:</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L41" data-line-number="41" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R41" data-line-number="41" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="3" data-side="right" data-line="41" data-original-line=" " type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-context"><span class="blob-code-inner"><br></span></td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L42" data-line-number="42" class="blob-num blob-num-deletion js-linkable-line-number"></td>
+      <td class="blob-num blob-num-deletion empty-cell"></td>
+      <td class="blob-code blob-code-deletion blob-code-marker-cell" data-code-marker="-">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="4" data-side="left" data-line="42" data-original-line="-* Arch Linux - releases: `gallium-nine (AUR) <https://aur.archlinux.org/packages/gallium-nine>`_, snapshots: `gallium-nine-git (AUR) <https://aur.archlinux.org/packages/gallium-nine-git>`_" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-deletion">
+        <span class="blob-code-inner">* Arch Linux - releases: `<span class="pl-corl">gallium-nine <span class="x x-first x-last">(AUR) </span>&lt;https://<span class="x x-first x-last">aur</span>.archlinux.org/packages/<span class="x x-first x-last">gallium</span>-nine&gt;</span>`_, snapshots: `<span class="pl-corl">gallium-nine-git (AUR) &lt;https://aur.archlinux.org/packages/gallium-nine-git&gt;</span>`_</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="blob-num blob-num-addition empty-cell"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R42" data-line-number="42" class="blob-num blob-num-addition js-linkable-line-number"></td>
+      <td class="blob-code blob-code-addition blob-code-marker-cell" data-code-marker="+">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="5" data-side="right" data-line="42" data-original-line="+* Arch Linux - releases: `gallium-nine <https://www.archlinux.org/packages/multilib/x86_64/wine-nine/>`_, snapshots: `gallium-nine-git (AUR) <https://aur.archlinux.org/packages/gallium-nine-git>`_" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-addition">
+        <span class="blob-code-inner">* Arch Linux - releases: `<span class="pl-corl">gallium-nine &lt;https://<span class="x x-first x-last">www</span>.archlinux.org/packages/<span class="x x-first x-last">multilib/x86_64/wine</span>-nine<span class="x x-first x-last">/</span>&gt;</span>`_, snapshots: `<span class="pl-corl">gallium-nine-git (AUR) &lt;https://aur.archlinux.org/packages/gallium-nine-git&gt;</span>`_</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L43" data-line-number="43" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R43" data-line-number="43" class="blob-num blob-num-context js-linkable-line-number"></td>
+
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="6" data-side="right" data-line="43" data-original-line=" * Fedora - releases: `wine-nine (Copr) <https://copr.fedorainfracloud.org/coprs/siro/wine-nine/>`_, snapshots: `wine-nine-unstable (Copr) <https://copr.fedorainfracloud.org/coprs/siro/wine-nine-unstable/>`_" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+
+      <td class="blob-code blob-code-context">
+      <span class="blob-code-inner">* Fedora - releases: `<span class="pl-corl">wine-nine (Copr) &lt;https://copr.fedorainfracloud.org/coprs/siro/wine-nine/&gt;</span>`_, snapshots: `<span class="pl-corl">wine-nine-unstable (Copr) &lt;https://copr.fedorainfracloud.org/coprs/siro/wine-nine-unstable/&gt;</span>`_</span></td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L44" data-line-number="44" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R44" data-line-number="44" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="7" data-side="right" data-line="44" data-original-line=" * Gentoo Linux - `app-emulation/gallium-nine-standalone <https://packages.gentoo.org/packages/app-emulation/gallium-nine-standalone>`_" type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-context">
+        <span class="blob-code-inner">* Gentoo Linux - `<span class="pl-corl">app-emulation/gallium-nine-standalone &lt;https://packages.gentoo.org/packages/app-emulation/gallium-nine-standalone&gt;</span>`_</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112L45" data-line-number="45" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td id="diff-88b99bb28683bd5b7e3a204826ead112R45" data-line-number="45" class="blob-num blob-num-context js-linkable-line-number"></td>
+      <td class="blob-code blob-code-context blob-code-marker-cell" data-code-marker=" ">
+        <button class="btn-link add-line-comment js-add-line-comment js-add-single-line-comment" data-path="README.rst" data-anchor="diff-88b99bb28683bd5b7e3a204826ead112" data-position="8" data-side="right" data-line="45" data-original-line=" " type="button" aria-label="Add line comment">
+          <svg class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+        </button>
+      </td>
+      <td class="blob-code blob-code-context"><span class="blob-code-inner"><br></span></td>
+    </tr>
+
+    <tr class="js-expandable-line" data-position="">
+      <td class="blob-num blob-num-expandable" colspan="2">
+        <a href="#diff-88b99bb28683bd5b7e3a204826ead112" class="js-expand directional-expander single-expander" title="Expand Down" aria-label="Expand Down" data-url="/iXit/wine-nine-standalone/blob_excerpt/bc3785ab39d6e484322c4ec58843f5999f6d333e?diff=unified&amp;direction=down&amp;in_wiki_context=&amp;last_left=45&amp;last_right=45&amp;left=81&amp;left_hunk_size=&amp;mode=100644&amp;path=README.rst&amp;right=81&amp;right_hunk_size=" data-left-range="46-80" data-right-range="46-80">
+          <svg class="octicon octicon-fold-down" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 11l3 3 3-3H8V5H6v6H4zm-4 0c0 .55.45 1 1 1h2.5l-1-1h-1l2-2H5V8H3.5l-2-2H5V5H1c-.55 0-1 .45-1 1l2.5 2.5L0 11zm10.5-2H9V8h1.5l2-2H9V5h4c.55 0 1 .45 1 1l-2.5 2.5L14 11c0 .55-.45 1-1 1h-2.5l1-1h1l-2-2z"></path></svg>
+        </a>
+      </td>
+      <td class="blob-code blob-code-inner blob-code-hunk" colspan="2"></td>
     </tr>
 
   </tbody></table>
