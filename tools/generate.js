@@ -297,6 +297,9 @@ const sources = [
     url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
     prefix: "html.refined-github",
   },
+  {
+    url: "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
+  }
 ];
 
 // list of regexes matching selectors that should be ignored
