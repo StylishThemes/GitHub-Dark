@@ -250,7 +250,7 @@ const mappings = {
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
-  "color: #735c0f": "color: #a58f4c",
+  "color: #735c0f": "color: #fc9",
   "background-color: #ffd33d": "background-color: #cb4",
   "background-color: #ffdf5d": "background-color: #cb4",
   "background: #fffbdd": "background: #261d08",
