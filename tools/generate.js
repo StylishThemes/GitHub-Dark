@@ -118,7 +118,8 @@ const mappings = {
 
   "border-top: 7px solid #fff": "border-top-color: #181818",
 
-  "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #484848",
+  "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
+
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
