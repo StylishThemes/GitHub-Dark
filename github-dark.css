@@ -3741,6 +3741,10 @@
   .CircleBadge[style*="background-color: #ffffff"] {
     background: #343434 !important;
   }
+  /* Exclude problematic CircleBadge-icon issue #852 */
+  .CircleBadge[style*="background-color: #ffffff"] img[src*="3919?s=62&v=4"] {
+    filter: brightness(250%) !important;
+  }
   .hidden-text-expander a, .profile-timeline-month-heading:after,
   .review-comment-contents:after, .review-comment.is-comment-editing:after,
   .release-timeline-tags .expander-dots {
