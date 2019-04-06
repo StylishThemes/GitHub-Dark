@@ -5532,24 +5532,15 @@
   .markdown-format p > code, .markdown-format pre {
     background: #222 !important;
   }
-  /* inline code - big blocks */
-  .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
-  .markdown-body .highlight pre, #facebox pre, .blob-expanded, .terminal,
-  .copyable-terminal, #notebook .input_area, .blob-code-context,
-  .markdown-format code, .api pre, .api code, .hook-delivery-details pre,
-  .hook-delivery-container pre, .code-list .file-box,
   /*[[syntax-theme]]*/
   /*[[syntax-codemirror]]*/
   /*[[syntax-jupyter]]*/
   /* grunt build - remove start */
+  :root {
+    --ghd-code-background: #141414;
+    --ghd-code-color: #ccc;
+  }
   /* Syntax Theme - Twilight */
-  .CodeMirror {
-    background: #141414 !important;
-    color: #ccc !important;
-  }
-  .blob-code, .blob-code-inner {
-    color: #ccc !important;
-  }
   .pl-c, .pl-c span {
     color: #5f5a60 !important;
     font-style: italic !important;
@@ -6270,6 +6261,20 @@
   }
   /* Literal.Number.Integer.Long */
   /* grunt build - remove end */
+
+  /* inline code - big blocks */
+  .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
+  .markdown-body .highlight pre, #facebox pre, .blob-expanded, .terminal,
+  .copyable-terminal, #notebook .input_area, .blob-code-context,
+  .markdown-format code, .api pre, .api code, .hook-delivery-details pre,
+  .hook-delivery-container pre, .code-list .file-box,
+  .highlight, .CodeMirror {
+    background-color: var(--ghd-code-background) !important;
+    color: var(--ghd-code-color) !important;
+  }
+  .blob-code, .blob-code-inner {
+    color: var(--ghd-code-color) !important;
+  }
 }
 @-moz-document regexp("^https://www\.zuora\.com.*github\.com.*$") {
   /* Styles the payment form iframe */
