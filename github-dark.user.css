@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.21.30
+@version     1.21.31
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.21.30 (2019-04-07) */
+/*! Github Dark v1.21.31 (2019-04-08) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -2940,11 +2940,10 @@
   .swipe .swipe-frame .swipe-bar .bottom-handle {
     left: -6px !important;
   }
-  /* GitHub Bug: Fix text selection not working on inline <code> bug in Firefox */
-  .markdown-body code, .markdown-body tt {
-    padding: 0 .3em !important;
-    display: inline-block !important;
-    max-width: 100% !important;
+  /* GitHub Bug: Center color preview in inline code tags  */
+  .markdown-body code .v-align-middle {
+    position: relative;
+    top: -1px;
   }
   /* GitHub Bug: Stop commit message field from resizing horizontally */
   #commit-description-textarea {
@@ -3067,10 +3066,9 @@
   a.gollum-minibutton:visited, .two-factor-toggle .two-factor-status,
   .two-factor-settings-group, .member-badge, ul.comparison-list > li,
   .release-downloads, .release-downloads li, .blob-interaction-bar,
-  input.subnav-search-input, #gist-form .file .meta, .file .meta,
-  .file-box .meta, .capped-card, .audit-results-header, .pagination a,
-  .pagination span, .pagination em, .input_area,
-  .output_area .rendered_html table, .render-info .message,
+  #gist-form .file .meta, .file .meta, .file-box .meta, .capped-card,
+  .audit-results-header, .pagination a, .pagination span, .pagination em,
+  .input_area, .output_area .rendered_html table, .render-info .message,
   .subnav .btn + .issues-search,
   .branch-action-body .branch-action-item + .branch-action-item,
   .discussion-item-merged.open .discussion-item-details-header,
