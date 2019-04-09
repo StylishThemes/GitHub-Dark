@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.21.31
+@version     1.21.32
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.21.31 (2019-04-08) */
+/*! Github Dark v1.21.32 (2019-04-09) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -293,9 +293,8 @@
   .gh-header-edit .edit-issue-title:focus, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
   .discussion-timeline-actions, .pagination-loader-container, .dropdown-menu,
-  .selected .Counter--blue, .pagehead-tabs-item.selected, .reponav-item.selected,
-  .steps li.current, .select-menu-modal,
-  .select-menu-tabs .select-menu-tab-nav.selected,
+  .pagehead-tabs-item.selected, .reponav-item.selected, .steps li.current,
+  .select-menu-modal, .select-menu-tabs .select-menu-tab-nav.selected,
   .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
   .select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true],
   .btn-blurple .Counter, .cvv-hint-tooltip, .credit-card.normal .signature,
@@ -317,11 +316,9 @@
   .is-too-many .repo-file-upload-errors, .setup-info-module,
   .orgs-help-item-octicon, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
-  .org-sso .org-sso-panel, .tree-browser tr.navigation-focus td,
-  .tree-browser tr[aria-selected=true] td, .user-status-header,
-  .ais-SearchBox-input, .form-group .ais-SearchBox-input:focus,
-  html[prefix] .Box, html[prefix] .btn-outline,
-  html[prefix] .btn-outline.selected .counter,
+  .org-sso .org-sso-panel, .user-status-header, .ais-SearchBox-input,
+  .form-group .ais-SearchBox-input:focus, html[prefix] .Box,
+  html[prefix] .btn-outline, html[prefix] .btn-outline.selected .counter,
   html[prefix] .btn-outline.zeroclipboard-is-active .counter,
   html[prefix] .btn-outline.zeroclipboard-is-hover .counter,
   html[prefix] .btn-outline:active .counter,
@@ -348,7 +345,6 @@
   body[class="page-responsive"] .form-group .form-control:focus,
   body[class="page-responsive"] .avatar-child,
   body[class="page-responsive"] .Box--overlay,
-  body[class="page-responsive"] .selected .Counter--blue,
   body[class="page-responsive"] .dropdown-menu,
   body[class="page-responsive"] .list,
   body[class="page-responsive"] .btn-primary .Counter,
@@ -373,7 +369,9 @@
     background-color: #181818;
   }
   /* auto-generated rule for "background-color: #fff !important" */
-  .checks-index-item:hover, .checks-index-item.selected {
+  .checks-index-item:hover, .checks-index-item.selected,
+  .tree-browser-result.navigation-focus,
+  .tree-browser-result[aria-selected=true] {
     background-color: #181818 !important;
   }
   /* auto-generated rule for "background-color: #fafbfc" */
@@ -1417,9 +1415,9 @@
   .timeline-comment-action:focus, .timeline-comment-action:hover,
   .discussion-item-link:hover, .discussion-item-entity:hover,
   .discussion-item-ref-title .title-link:hover, .discussion-item-help:hover,
-  .selected .Counter--blue, .steps li.current .octicon,
-  .prose-diff .show-rich-diff, .select-menu-action:hover,
-  .select-menu-new-item-form .octicon, .marketing-hero-octicon .octicon,
+  .steps li.current .octicon, .prose-diff .show-rich-diff,
+  .select-menu-action:hover, .select-menu-new-item-form .octicon,
+  .marketing-hero-octicon .octicon,
   .intgrs-lstng-item-link:hover .intgrs-lstng-item-header,
   .intgr-admin-link:hover .octicon, .listgroup-item:hover .link-small,
   .rule-type-conditions, .code-list .blob-num a:hover, .coupon-icon,
@@ -1445,8 +1443,8 @@
   .setup-header .lead a:hover, .shelf-dismiss:hover,
   .orgs-help-item-octicon .octicon, .orgs-help-dismiss:hover,
   .team-member-ellipsis:hover,
-  .tree-browser tr.navigation-focus td .octicon-chevron-right,
-  .tree-browser tr[aria-selected=true] td .octicon-chevron-right,
+  .tree-browser-result.navigation-focus .octicon-chevron-right,
+  .tree-browser-result[aria-selected=true] .octicon-chevron-right,
   .tree-browser-result mark, .toolbar-commenting .dropdown-item:hover,
   .toolbar-commenting .dropdown-item:focus, .toolbar-item .menu-target:hover,
   .toolbar-item:hover, .toolbar-item .menu-target:focus, .toolbar-item:focus,
@@ -1454,7 +1452,6 @@
   .toggle-user-status-edit:hover .user-status-message-wrapper,
   .search-result-title .ais-Highlight-highlighted,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
-  body[class="page-responsive"] .selected .Counter--blue,
   body[class="page-responsive"] a, body[class="page-responsive"] .bubble-action,
   body[class="page-responsive"] .list-item-title,
   body[class="page-responsive"] .btn-link,
@@ -1568,13 +1565,12 @@
   .boxed-group-list .access-level, .listgroup-item, .setup-header .lead a,
   .setup-secondary .info, .setup-info-module h2 .price,
   .setup-creditcard-form .help-text, .shelf-lead, .orgs-help-lead,
-  .orgs-help-item-content, .orgs-help-dismiss, .team-label-ldap,
-  .tree-browser .octicon-file, .toolbar-item, .toolbar-item .menu-target,
-  .member-suggestion .member-name, .member-suggestion .already-member-note,
-  .member-suggestion .non-member-action, .member-suggestion .non-member-note,
-  .team-suggestion .team-description, .team-suggestion .team-size,
-  .repo-access-add-team .team-description, .repo-access-add-team .team-size,
-  .follow-list .follow-list-info,
+  .orgs-help-item-content, .orgs-help-dismiss, .team-label-ldap, .toolbar-item,
+  .toolbar-item .menu-target, .member-suggestion .member-name,
+  .member-suggestion .already-member-note, .member-suggestion .non-member-action,
+  .member-suggestion .non-member-note, .team-suggestion .team-description,
+  .team-suggestion .team-size, .repo-access-add-team .team-description,
+  .repo-access-add-team .team-size, .follow-list .follow-list-info,
   .user-status-org-button .user-status-org-detail,
   .gist-revisions-list .gist-revision-meta, .keyboard-mappings .keys,
   body[class="page-responsive"] .lead,
@@ -2519,9 +2515,9 @@
   .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   .search-form-fluid .search-page-input, .file .empty,
   .notifications-sso-prompt a, .theme-toggle, .tag-input input,
-  .toolbar-commenting .dropdown-item, .toolbar-item, .toolbar-item .menu-target,
-  .wiki-footer .markdown-body img, .user-list li em, .ais-SearchBox-reset,
-  .ais-Highlight-highlighted,
+  .tree-browser-result mark, .toolbar-commenting .dropdown-item, .toolbar-item,
+  .toolbar-item .menu-target, .wiki-footer .markdown-body img, .user-list li em,
+  .ais-SearchBox-reset, .ais-Highlight-highlighted,
   body[class="page-responsive"] .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   body[class="page-responsive"] .dropdown-signout,
   body[class="page-responsive"] .header-search-input,
@@ -3343,7 +3339,8 @@
   .access-form-wrapper, .timeline-comment-group, .summarylink-btn,
   .pinned-item-list-item, .avatar-before-user-status, .user-status-container,
   .profile-timeline-card, table.files tr, .blog pre,
-  .Box:not([style*="background"]), .pinned-issue-item {
+  .Box:not([style*="background"]), .pinned-issue-item,
+  #wiki-footer .border-dashed, #wiki-rightbar .border-dashed {
     background: #181818 !important;
   }
   .bg-white, .radio-label {
