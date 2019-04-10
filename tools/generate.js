@@ -11,37 +11,28 @@ const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is significant.
-// $border is a special value that will generate a set of border rules.
+// $ indicates a special value that will generate a set of rules.
 let mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
-  "background: #fff": "background: #181818",
-  "background: #fafbfc": "background: #181818",
-  "background: #eaecef": "background: #343434",
-  "background: #dfe2e5": "background: #383838",
-  "background: #d1d5da": "background: #404040",
-  "background: #0366d6": "background: /*[[base-color]]*/ #4f8cc9",
-
-  "background-color: #fff": "background-color: #181818",
-  "background-color: #fafbfc": "background-color: #181818",
-  "background-color: #f4f4f4": "background-color: #242424",
-  "background-color: #eff3f6": "background-color: #343434",
-  "background-color: #eaecef": "background-color: #343434",
-  "background-color: #e6ebf1": "background-color: #444",
-  "background-color: #d6e2f1": "background-color: #444",
-  "background-color: #d3e2f4": "background-color: #383838",
-  "background-color: #d1d5da": "background-color: #404040",
-  "background-color: #c6cbd1": "background-color: #484848",
-  "background-color: #6a737d": "background-color: #303030",
-  "background-color: #24292e": "background-color: #181818",
-
-  // needs to be after #2cbe4e for .community-checklist .progress vs .progress-bar .progress
-  "background-color: #f6f8fa": "background-color: #202020",
-  "background: #f6f8fa": "background-color: #202020",
-
-  "background-color: hsla(0,0%,100%,.125)": "background-color: hsla(0,0%,100%,.05)",
-  "background-color: hsla(0,0%,100%,.175)": "background-color: hsla(0,0%,100%,.1)",
+  "$background: #fff":    "#181818",
+  "$background: #fafbfc": "#181818",
+  "$background: #f6f8fa": "#202020",
+  "$background: #f4f4f4": "#242424",
+  "$background: #eff3f6": "#343434",
+  "$background: #eaecef": "#343434",
+  "$background: #e6ebf1": "#444",
+  "$background: #dfe2e5": "#383838",
+  "$background: #d6e2f1": "#444",
+  "$background: #d3e2f4": "#383838",
+  "$background: #d1d5da": "#404040",
+  "$background: #c6cbd1": "#484848",
+  "$background: #6a737d": "#303030",
+  "$background: #24292e": "#181818",
+  "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
+  "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
+  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9",
 
   // ==========================================================================
   // Border
@@ -424,9 +415,9 @@ function buildOutput(decls) {
       output += format(`${importantSelectors.join(",")} {${newValue};}`);
     }
 
-    if (!normalSelectors.length && !importantSelectors.length && !fromValue.startsWith("border")) {
-      console.error(`Warning: no declarations for ${fromValue} found!`);
-    }
+    // if (!normalSelectors.length && !importantSelectors.length && !fromValue.startsWith("border")) {
+    //   console.error(`Warning: no declarations for ${fromValue} found!`);
+    // }
   }
   output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
@@ -461,8 +452,8 @@ function exit(err) {
 function prepareMappings(mappings) {
   const newMappings = {};
   for (const [key, value] of Object.entries(mappings)) {
-    if (key.startsWith("$border")) {
-      const oldValue = key.substring(9);
+    if (key.startsWith("$border: ")) {
+      const oldValue = key.substring("$border: ".length);
       newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
@@ -478,6 +469,10 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right-color: ${oldValue}`] = `border-right-color: ${value}`;
+    } else if (key.startsWith("$background: ")) {
+      const oldValue = key.substring("$background: ".length);
+      newMappings[`background: ${oldValue}`] = `background: ${value}`;
+      newMappings[`background-color: ${oldValue}`] = `background-color: ${value}`;
     } else {
       newMappings[key] = value;
     }
