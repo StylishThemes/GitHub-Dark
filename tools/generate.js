@@ -11,7 +11,8 @@ const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is significant.
-const mappings = {
+// $border is a special value that will generate a set of border rules.
+let mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
@@ -48,8 +49,6 @@ const mappings = {
 
   "border: 2px solid #fff": "border-color: #222",
   "border: 1px solid #eee": "border-color: #343434",
-  "border: 1px solid #e1e4e8": "border-color: #343434",
-  "border: 1px solid #d1d5da": "border-color: #404040",
   "border: 1px solid #959da5": "border-color: #484848",
   "border: 1px solid #c3c8cf": "border-color: #484848",
 
@@ -58,57 +57,28 @@ const mappings = {
   "border-bottom-color: transparent": "border-bottom-color: transparent",
   "border-right-color: transparent": "border-right-color: transparent",
 
-  "border-color: #eaecef": "border-color: #343434",
-  "border-color: #e1e4e8": "border-color: #343434",
-  "border-color: #d1d5da": "border-color: #404040",
-
-  "border: 1px solid #dfe2e5": "border-color: #343434",
-  "border-bottom: 1px dashed #dfe2e5": "border-color: #343434",
-  "border: 1px solid rgba(27,31,35,.1)": "border-color: rgba(200,200,200,.1)",
-
-  "border: 1px solid rgba(27,31,35,.15)": "border-color: rgba(200,200,200,.15)",
-  "border-top-color: rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
-  "border-bottom-color: rgba(27,31,35,.15)": "border-bottom-color: rgba(200,200,200,.15)",
-  "border-left-color: rgba(27,31,35,.15)": "border-left-color: rgba(200,200,200,.15)",
-  "border-right-color: rgba(27,31,35,.15)": "border-right-color: rgba(200,200,200,.15)",
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
 
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
-
   "border-bottom: 1px solid #f8f8f8": "border-bottom: 1px solid #343434",
-  "border-bottom: 1px solid #dfe2e5": "border-bottom: 1px solid #343434",
 
-  "border-top: 1px solid #e1e4e8": "border-top-color: #343434",
-  "border-bottom: 1px solid #e1e4e8": "border-bottom-color: #343434",
-  "border-left: 1px solid #e1e4e8": "border-left-color: #343434",
-  "border-right: 1px solid #e1e4e8": "border-right-color: #343434",
+  "border-bottom: 1px dashed #dfe2e5": "border-color: #343434",
 
-  "border-top: 1px solid #eaecef": "border-top-color: #343434",
-  "border-bottom: 1px solid #eaecef": "border-bottom-color: #343434",
-  "border-left: 1px solid #eaecef": "border-left-color: #343434",
-  "border-right: 1px solid #eaecef": "border-right-color: #343434",
+  "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.1)",
+  "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
 
-  "border-top: 1px solid #d1d5da": "border-top-color: #404040",
-  "border-bottom: 1px solid #d1d5da": "border-bottom-color: #404040",
-  "border-left: 1px solid #d1d5da": "border-left-color: #404040",
-  "border-right: 1px solid #d1d5da": "border-right-color: #404040",
-
-  "border-top-color: #d1d5da": "border-top-color: #404040",
-  "border-bottom-color: #d1d5da": "border-bottom-color: #404040",
-  "border-right-color: #d1d5da": "border-right-color: #404040",
-
-  "border-top: 1px solid #ddd": "border-top-color: #343434",
-  "border-bottom: 1px solid #ddd": "border-bottom-color: #343434",
-  "border-left: 1px solid #ddd": "border-left-color: #343434",
-  "border-right: 1px solid #ddd": "border-right-color: #343434",
-
-  "border-bottom-color: #f6f8fa": "border-bottom-color: #202020",
-  "border-left-color: #f6f8fa": "border-left-color: #202020",
-  "border-right-color: #f6f8fa": "border-right-color: #202020",
+  "$border: #dfe2e5": "#343434",
+  "$border: #e1e4e8": "#343434",
+  "$border: #eaecef": "#343434",
+  "$border: #d1d5da": "#404040",
+  "$border: #ddd": "#343434",
+  "$border: #f6f8fa": "#202020",
 
   "border-left: solid 2px #e6ebf1": "border-left-color: #343434",
   "border-bottom: solid 2px #e6ebf1": "border-bottom-color: #343434",
 
+  "border: 1px solid": "border-color: #181818",
+  "border-color: #fff": "border-color: #181818",
   "border-bottom-color: #fff": "border-bottom-color: #181818",
   "border-left-color: #fff": "border-left-color: #181818",
   "border-top-color: #fff": "border-top-color: #181818",
@@ -470,7 +440,7 @@ function buildOutput(decls) {
       output += format(`${importantSelectors.join(",")} {${newValue};}`);
     }
 
-    if (!normalSelectors.length && !importantSelectors.length) {
+    if (!normalSelectors.length && !importantSelectors.length && !fromValue.startsWith("border")) {
       console.error(`Warning: no declarations for ${fromValue} found!`);
     }
   }
@@ -504,7 +474,31 @@ function exit(err) {
   process.exit(err ? 1 : 0);
 }
 
+function prepareMappings(mappings) {
+  const newMappings = {};
+  for (const [key, value] of Object.entries(mappings)) {
+    if (key.startsWith("$border")) {
+      const oldValue = key.substring(9);
+      newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border-top: 1px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 1px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 1px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 1px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top-color: ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right-color: ${oldValue}`] = `border-right-color: ${value}`;
+    } else {
+      newMappings[key] = value;
+    }
+  }
+  return newMappings;
+}
+
 async function main() {
+  mappings = prepareMappings(mappings);
+
   const sourceResponses = await Promise.all(sources.map(source => {
     return source.url.endsWith(".css") ? null : fetch(source.url, source.opts);
   }));
