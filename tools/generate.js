@@ -32,7 +32,6 @@ let mappings = {
   "$background: #24292e": "#181818",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
-  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9",
 
   // ==========================================================================
   // Border
@@ -99,6 +98,7 @@ let mappings = {
   "box-shadow: inset 0 0 0 1px #e1e4e8": "box-shadow: inset 0 0 0 1px #555",
   "box-shadow: inset 0 1px 0 0 #e1e4e8": "box-shadow: inset 0 1px 0 0 #555",
   "box-shadow: inset 0 -1px 0 #c6cbd1": "box-shadow: inset 0 -2px 0 #343434",
+
   // ==========================================================================
   // Color / Background
   // ==========================================================================
@@ -137,23 +137,18 @@ let mappings = {
   // blue
   "color: #264c72": "color: #9daccc",
   "color: #032f62": "color: #9daccc",
-
-  "background: #f1f8ff": "background: #182030",
-  "background-color: #f1f8ff": "background-color: #182030",
-  "background-color: #032f62": "background-color: #182030",
-  "background-color: #dbedff": "background-color: #182030",
-  "border-bottom-color: #f1f8ff": "border-bottom-color: #182030",
-  "border-right-color: #f1f8ff": "border-right-color: #182030",
+  "$background: #f1f8ff": "#182030",
+  "$background: #032f62": "#182030",
+  "$background: #dbedff": "#182030",
+  "$border: #f1f8ff": "#182030",
 
   "color: #c0d3eb": "color: #224466",
-  "border-color: #c8e1ff": "border-color: #224466",
-  "border-color: #c0d3eb": "border-color: #224466",
-  "border-bottom-color: #c0d3eb": "border-bottom-color: #224466",
-  "border-right-color: #c0d3eb": "border-right-color: #224466",
+  "$border: #c8e1ff": "#224466",
+  "$border: #c0d3eb": "#224466",
 
   // blue (base-color)
-  "background-color: #0366d6": "background-color: /*[[base-color]]*/ #4f8cc9; color: #fff",
-  "border-color: #0366d6": "border-color: /*[[base-color]]*/ #4f8cc9",
+  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff",
+  "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
     filter: drop-shadow(-.25em 0 0 rgba(79,140,201,.3));
     filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .3))
@@ -162,60 +157,55 @@ let mappings = {
     filter: drop-shadow(0 -.28em 0 rgba(79,140,201,.3));
     filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
-  "border: 1px solid #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
-  "border-color: #2188ff": "border-color: /*[[base-color]]*/ #4f8cc9",
-  "border-bottom-color: #2188ff": "border-bottom-color: /*[[base-color]]*/ #4f8cc9",
-  "border-right-color: #2188ff": "border-right-color: /*[[base-color]]*/ #4f8cc9",
+  "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
 
   // red
   "color: #cb2431": "color: #f44",
   "color: #86181d": "color: #f44",
-  "background-color: #d73a49": "background-color: #f44",
-  "background-color: #cb2431": "background-color: #911",
-  "background-color: #ffdce0": "background-color: #300",
+  "$background: #d73a49": "#f44",
+  "$background: #cb2431": "#911",
+  "$background: #ffdce0": "#300",
   "fill: #cb2431": "fill: #f44",
-  "border-color: #d73a49": "border-color: #b00",
+  "$border: #d73a49": "#b00",
 
   // orange
   "color: #a04100": "color: #f3582c",
-  "background-color: #d15704": "background-color: #f3582c",
-  "background: #fb8532": "background: #f3582c",
+  "$background: #d15704": "#f3582c",
+  "$background: #fb8532": "#f3582c",
 
   // green
   "color: #28a745": "color: #6cc644",
   "color: #165c26": "color: #6cc644",
-  "background-color: #28a745": "background-color: #6cc644",
-  "background-color: #2cbe4e": "background-color: #163",
-  "background-color: #dcffe4": "background-color: #002800",
+  "$background: #28a745": "#6cc644",
+  "$background: #2cbe4e": "#163",
+  "$background: #dcffe4": "#002800",
   "fill: #2cbe4e": "fill: #6cc644",
-  "border-color: #34d058": "border-color: #34d058",
+  "$border: #34d058": "#34d058",
 
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "color: #735c0f": "color: #bba257",
-  "background-color: #ffd33d": "background-color: #cb4",
-  "background-color: #ffdf5d": "background-color: #cb4",
-  "background: #fffbdd": "background: #261d08",
-  "background-color: #fffbdd": "background-color: #261d08",
+  "$background: #ffd33d": "#cb4",
+  "$background: #ffdf5d": "#cb4",
+  "$background: #fffbdd": "#261d08",
   "fill: #dbab09": "fill: #cb4",
-  "border-bottom-color: #fffbdd": "border-bottom-color: #321",
-  "border-bottom-color: #d9d0a5": "border-bottom-color: #542",
-  "border-color: #d9d0a5": "border-color: #542",
+  "$border: #fffbdd": "#321",
+  "$border: #d9d0a5": "#542",
 
   // light yellow
-  "background-color: #fff5b1": "background-color: #651",
+  "$background: #fff5b1": "#651",
 
   // purple
   "color: #6f42c1": "color: #8368aa",
-  "background-color: #6f42c1": "background-color: #8368aa",
-  "background-color: #f8f4ff": "background-color: #213",
-  "border: 1px solid #6f42c1": "border: 1px solid #8368aa",
-  "border-color: #8a63d2": "border-color: #8368aa",
+  "$background: #6f42c1": "#8368aa",
+  "$background: #f8f4ff": "#213",
+  "$border: #6f42c1": "#8368aa",
+  "$border: #8a63d2": "#8368aa",
 
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
-  "background: none": "background: none",
+  "$background: none": "none",
 };
 
 // list of sites to pull stylesheets from. Accepts fetch options. If `prefix`
