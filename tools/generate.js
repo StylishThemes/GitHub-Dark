@@ -175,6 +175,7 @@ let mappings = {
   "background-color: #cb2431": "background-color: #911",
   "background-color: #ffdce0": "background-color: #300",
   "fill: #cb2431": "fill: #f44",
+  "border-color: #d73a49": "border-color: #b00",
 
   // orange
   "color: #a04100": "color: #f3582c",
