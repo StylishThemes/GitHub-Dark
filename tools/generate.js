@@ -48,17 +48,16 @@ let mappings = {
   "$border: #d1d5da": "#404040",
   "$border: #ddd":    "#343434",
   "$border: #e1e4e8": "#343434",
+  "$border: #e6ebf1": "#343434",
   "$border: #eaecef": "#343434",
   "$border: #eee":    "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #fff":    "#181818",
 
-  "border: 2px solid #fff": "border-color: #222",
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
-  "border-left: solid 2px #e6ebf1": "border-left-color: #343434",
-  "border-bottom: solid 2px #e6ebf1": "border-bottom-color: #343434",
+
   "border: 1px solid": "border-color: #181818",
   "border-top: 7px solid #fff": "border-top-color: #181818",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
@@ -457,6 +456,8 @@ function prepareMappings(mappings) {
       const oldValue = key.substring("$border: ".length);
       newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 2px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 2px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-top: 1px solid ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom: 1px solid ${oldValue}`] = `border-bottom-color: ${value}`;
@@ -466,6 +467,14 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom: 1px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 1px dashed ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right: 1px dashed ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 2px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 2px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 2px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 2px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 2px dashed ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 2px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 2px dashed ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 2px dashed ${oldValue}`] = `border-right-color: ${value}`;
       newMappings[`border-top-color: ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
