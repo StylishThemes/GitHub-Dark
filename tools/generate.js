@@ -187,6 +187,7 @@ let mappings = {
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "color: #735c0f": "color: #bba257",
+  "color: #613A00": "color: #bba257",
   "$background: #ffd33d": "#cb4",
   "$background: #ffdf5d": "#cb4",
   "$background: #fffbdd": "#261d08",
