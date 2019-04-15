@@ -179,6 +179,7 @@ let mappings = {
   "$background: #28a745": "#6cc644",
   "$background: #2cbe4e": "#163",
   "$background: #dcffe4": "#002800",
+  "$background: rgba(108,198,68,.1)": "#002800",
   "fill: #2cbe4e": "fill: #6cc644",
   "$border: #34d058": "#34d058",
 
