@@ -193,6 +193,7 @@ let mappings = {
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
   "$border: #d9d0a5": "#542",
+  "$border: #dca874": "#542",
 
   // light yellow
   "$background: #fff5b1": "#651",
