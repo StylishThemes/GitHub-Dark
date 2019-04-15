@@ -201,6 +201,7 @@ let mappings = {
   "color: #6f42c1": "color: #8368aa",
   "$background: #6f42c1": "#8368aa",
   "$background: #f8f4ff": "#213",
+  "$background: #f5f0ff": "#213",
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
 
