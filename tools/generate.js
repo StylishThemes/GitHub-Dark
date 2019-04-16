@@ -303,6 +303,8 @@ const perfOpts = {
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
+let mappingKeys;
+
 async function writeOutput(generatedCss) {
   const css = await fs.readFile(cssFile, "utf8");
   await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
@@ -346,56 +348,56 @@ function parseDeclarations(cssString, opts) {
 
 function parseRule(decls, rule, opts) {
   for (const decl of rule.declarations) {
-    for (const mapping of Object.keys(mappings)) {
-      if (!decl.value) continue;
+    if (!decl.value) continue;
+    for (const mapping of mappingKeys) {
+      const [prop, val] = mapping.split(": ");
+      if (decl.property !== prop) continue;
+      if (!isEqualValue(prop, decl.value, val)) continue;
 
       let name = mapping;
-      if (/!important$/.test((decl.value || "").trim())) {
+      if (decl.value.trim().endsWith("!important")) {
         name = `${mapping} !important`;
       }
 
       if (!decls[name]) decls[name] = [];
 
-      const [prop, val] = mapping.split(": ");
-      if (decl.property === prop && isEqualValue(prop, decl.value, val)) {
-        rule.selectors.forEach(selector => {
-          // Skip potentially unmergeable selectors
-          // TODO: Use clean-css or similar to merge rules later instead
-          if (unmergeableSelectors.some(re => re.test(selector))) return;
+      rule.selectors.forEach(selector => {
+        // Skip potentially unmergeable selectors
+        // TODO: Use clean-css or similar to merge rules later instead
+        if (unmergeableSelectors.some(re => re.test(selector))) return;
 
-          // Skip ignored selectors
-          if (ignoreSelectors.some(re => re.test(selector))) return;
+        // Skip ignored selectors
+        if (ignoreSelectors.some(re => re.test(selector))) return;
 
-          // stylistic tweaks
-          selector = selector.replace(/\+/g, " + ");
-          selector = selector.replace(/~/g, " ~ ");
-          selector = selector.replace(/>/g, " > ");
-          selector = selector.replace(/ {2,}/g, " ");
+        // stylistic tweaks
+        selector = selector.replace(/\+/g, " + ");
+        selector = selector.replace(/~/g, " ~ ");
+        selector = selector.replace(/>/g, " > ");
+        selector = selector.replace(/ {2,}/g, " ");
 
-          // add prefix
-          if (opts.prefix) {
-            // skip adding a prefix if it matches a selector in `match`
-            let skip = false;
-            if (opts.match) {
-              for (const matchSelector of opts.match) {
-                if (selector.split(/\s+/)[0].includes(matchSelector)) {
-                  skip = true;
-                  break;
-                }
+        // add prefix
+        if (opts.prefix) {
+          // skip adding a prefix if it matches a selector in `match`
+          let skip = false;
+          if (opts.match) {
+            for (const matchSelector of opts.match) {
+              if (selector.split(/\s+/)[0].includes(matchSelector)) {
+                skip = true;
+                break;
               }
             }
-
-            if (!skip) {
-              selector = `${opts.prefix} ${selector}`;
-            }
           }
 
-          // add the new rule to our list, unless it's already on it
-          if (!decls[name].includes(selector)) {
-            decls[name].push(selector);
+          if (!skip) {
+            selector = `${opts.prefix} ${selector}`;
           }
-        });
-      }
+        }
+
+        // add the new rule to our list, unless it's already on it
+        if (!decls[name].includes(selector)) {
+          decls[name].push(selector);
+        }
+      });
     }
   }
 }
@@ -411,21 +413,17 @@ function buildOutput(decls) {
     const normalSelectors = decls[fromValue];
     const importantSelectors = decls[`${fromValue} !important`];
 
-    if (normalSelectors.length) {
+    if (normalSelectors && normalSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "");
       output += `/* auto-generated rule for "${fromValue}" */\n`;
       output += format(`${normalSelectors.join(",")} {${newValue};}`);
     }
 
-    if (importantSelectors.length) {
+    if (importantSelectors && importantSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "").split(";").map(v => `${v} !important`).join(";");
       output += `/* auto-generated rule for "${fromValue} !important" */\n`;
       output += format(`${importantSelectors.join(",")} {${newValue};}`);
     }
-
-    // if (!normalSelectors.length && !importantSelectors.length && !fromValue.startsWith("border")) {
-    //   console.error(`Warning: no declarations for ${fromValue} found!`);
-    // }
   }
   output += "/* end auto-generated rules */";
   return output.split("\n").map(line => "  " + line).join("\n");
@@ -500,6 +498,7 @@ function prepareMappings(mappings) {
 
 async function main() {
   mappings = prepareMappings(mappings);
+  mappingKeys = Object.keys(mappings);
 
   const sourceResponses = await Promise.all(sources.map(source => {
     return source.url.endsWith(".css") ? null : fetch(source.url, source.opts);
