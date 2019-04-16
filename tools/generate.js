@@ -115,7 +115,14 @@ let mappings = {
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
   "color: #d1d5da": "color: #404040",
-  "color: #005b9e": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #4183C4": `
+    color: rgba(79,140,201,.9);
+    color: rgba(/*[[base-color-rgb]]*/,.9);
+  `,
+  "color: #005b9e": `
+    color: rgba(79,140,201,1);
+    color: rgba(/*[[base-color-rgb]]*/,1);
+  `,
   "color: rgba(27,31,35,.6)": "color: #9daccc",
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
