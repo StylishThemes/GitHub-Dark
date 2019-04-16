@@ -2766,6 +2766,14 @@
   a.octolinker-link, .discussion-sidebar-toggle:hover, .commit-id:hover {
     color: /*[[base-color]]*/ #4f8cc9 !important;
   }
+  body.api li a code {
+    color: rgba(79, 140, 201, .9) !important;
+    color: rgba(/*[[base-color-rgb]]*/, .9) !important;
+  }
+  body.api li a:active code, body.api li a:hover code {
+    color: rgba(79, 140, 201, 1) !important;
+    color: rgba(/*[[base-color-rgb]]*/, 1) !important;
+  }
   /* Base color panel */
   .btn:active, option:hover, .listings-layout .nav li a:hover, .state-merged,
   #fork-select .target:not(.disabled):hover, table.upgrades tr:hover td,
@@ -6683,8 +6691,9 @@
   .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
   .markdown-body .highlight pre, #facebox pre, .blob-expanded, .terminal,
   .copyable-terminal, #notebook .input_area, .blob-code-context,
-  .markdown-format code, .api pre, .api code, .hook-delivery-details pre,
-  .hook-delivery-container pre, .code-list .file-box, .highlight, .CodeMirror {
+  .markdown-format code, .api pre, .api li:not(a) code,
+  .hook-delivery-details pre, .hook-delivery-container pre, .code-list .file-box,
+  .highlight, .CodeMirror {
     background-color: var(--ghd-code-background, #141414) !important;
     color: var(--ghd-code-color, #ccc) !important;
   }
