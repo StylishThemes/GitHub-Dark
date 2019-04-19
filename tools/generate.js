@@ -207,6 +207,7 @@ let mappings = {
   "$background: #fffbdd": "#261d08",
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
+  "$border: #ffdf5d": "#321",
   "$border: #d9d0a5": "#542",
   "$border: #dca874": "#542",
 
