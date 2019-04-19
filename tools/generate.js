@@ -39,7 +39,6 @@ let mappings = {
   // ==========================================================================
   // Border
   // ==========================================================================
-  "border-bottom-color: transparent": "border-bottom-color: transparent",
   "$border: transparent": "transparent", // needs to come before the color variants
   "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.1)",
   "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
