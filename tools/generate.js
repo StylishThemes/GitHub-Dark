@@ -92,6 +92,11 @@ let mappings = {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
   `,
 
+  "box-shadow: inset 0 1px 2px rgba(27,31,35,0.075),0 0 0 0.2em rgba(3,102,214,0.3)": `
+    box-shadow: inset 0 1px 2px 0 rgba(27,31,35,.04),0 0 0 0.1em rgba(79, 140, 201, 6);
+    box-shadow: inset 0 1px 2px 0 rgba(27,31,35,.04),0 0 0 0.1em rgba(/*[[base-color-rgb]]*/, .6);
+  `,
+
   "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
