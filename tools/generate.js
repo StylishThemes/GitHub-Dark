@@ -471,6 +471,7 @@ function prepareMappings(mappings) {
       newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 2px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 2px dashed ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 5px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-top: 1px solid ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom: 1px solid ${oldValue}`] = `border-bottom-color: ${value}`;
@@ -488,6 +489,10 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom: 2px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 2px dashed ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right: 2px dashed ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 5px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 5px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 5px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 5px solid ${oldValue}`] = `border-right-color: ${value}`;
       newMappings[`border-top-color: ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
