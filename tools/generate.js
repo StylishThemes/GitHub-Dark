@@ -396,7 +396,12 @@ function parseRule(decls, rule, opts) {
           }
 
           if (!skip) {
-            selector = `${opts.prefix} ${selector}`;
+            // incomplete check to avoid generating invalid "html :root" selectors
+            if (selector.startsWith(":root ") && opts.prefix.startsWith("html")) {
+              selector = `${opts.prefix} ${selector.substring(":root ".length)}`;
+            } else {
+              selector = `${opts.prefix} ${selector}`;
+            }
           }
         }
 
