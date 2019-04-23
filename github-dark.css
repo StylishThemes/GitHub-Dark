@@ -4006,7 +4006,7 @@
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
   #footer .github img, img[data-canonical-src^="https://codecov.io"],
   #com span.octicon:not(.octicon-comment-discussion),
-  .developer-thanks-image img, .markdown-body span.octicon svg {
+  .developer-thanks-image img {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* marketplace + help img invert */
@@ -4813,9 +4813,6 @@
   .timeline-comment-header .js-comment-edit-history > .text-gray-light,
   .delete-topic-button {
     color: inherit !important;
-  }
-  svg:not(.octicon):not([fill="none"]) {
-    fill: currentColor !important;
   }
   .donut-chart [style*="fill: none"], .workflow-string svg,
   .workflow-success circle, .workflow-success path {
@@ -6959,5 +6956,9 @@
   }
   .nav-mobile-burgerIcon {
     filter: invert(100%) hue-rotate(180deg) !important;
+  }
+  /* Using #fff over currentColor because GH relies on browser default #000 */
+  svg {
+    fill: #fff;
   }
 }
