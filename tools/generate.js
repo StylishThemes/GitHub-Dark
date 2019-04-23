@@ -226,6 +226,7 @@ let mappings = {
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
 
+  "fill: currentColor": "fill: currentColor",
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
