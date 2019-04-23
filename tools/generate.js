@@ -24,6 +24,7 @@ let mappings = {
   "$background: #eff3f6": "#343434",
   "$background: #eaecef": "#343434",
   "$background: #e6ebf1": "#444",
+  "$background: #e1e4e8": "#343434",
   "$background: #dfe2e5": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
