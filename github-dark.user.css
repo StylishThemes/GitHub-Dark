@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.21.44
+@version     1.21.45
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.21.44 (2019-04-23) */
+/*! Github Dark v1.21.45 (2019-04-24) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   button {
@@ -572,6 +572,7 @@
   .project-full-screen .project-header,
   body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
+  body[class="page-responsive"] .Header,
   html.refined-github .rgh-recently-pushed-branches .RecentBranches {
     background-color: #181818;
   }
@@ -1380,8 +1381,8 @@
   }
   /* auto-generated rule for "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)" */
   .form-control.focus, .form-control:focus, .form-select.focus,
-  .form-select:focus, .upload-enabled.focused,
-  body[class="page-responsive"] .form-control.focus,
+  .form-select:focus, .upload-enabled.focused, .focus.ais-SearchBox-input,
+  .ais-SearchBox-input:focus, body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
   body[class="page-responsive"] .form-select:focus {
@@ -1397,14 +1398,6 @@
   .link-mktg:hover {
     box-shadow: 0 1px 0 0 #4f8cc9;
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
-  }
-  /* auto-generated rule for "box-shadow: inset 0 1px 2px rgba(27,31,35,0.075),0 0 0 0.2em rgba(3,102,214,0.3)" */
-  .form-control.focus, .focus.ais-SearchBox-input, .form-control:focus,
-  .ais-SearchBox-input:focus, .form-select.focus, .form-select:focus,
-  .upload-enabled.focused {
-    box-shadow: inset 0 1px 2px 0 rgba(27, 31, 35, .04), 0 0 0 .1em rgba(79, 140, 201, 6);
-    box-shadow: inset 0 1px 2px 0 rgba(27, 31, 35, .04),
-                    0 0 0 .1em rgba(/*[[base-color-rgb]]*/, .6);
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)" */
   .btn-danger:focus, body[class="page-responsive"] .btn-danger:focus {
@@ -2842,7 +2835,8 @@
     background-color: #213;
   }
   /* auto-generated rule for "background-color: #f5f0ff" */
-  .illflow-purple .selected,
+  .illflow-purple .selected, .btn-sponsor,
+  body[class="page-responsive"] .btn-sponsor,
   body[class="page-responsive"] .diff-view .file .blob-num-hunk {
     background-color: #213;
   }
@@ -2859,6 +2853,7 @@
     border-color: #8368aa !important;
   }
   /* auto-generated rule for "border-color: #8a63d2" */
+  .btn-sponsor:focus, .btn-sponsor:hover,
   .plan-choice--experiment.plan-choice--purple.open,
   .plan-choice--experiment.plan-choice--purple.selected {
     border-color: #8368aa;
@@ -3048,7 +3043,8 @@
   .notification-indicator:hover, .btn.btn-outline,
   .full-commit .btn-outline:not(:disabled):hover, .markdown-body a strong,
   .markdown-format a strong, .notifications.list-group a:hover,
-  a.octolinker-link, .discussion-sidebar-toggle:hover, .commit-id:hover {
+  a.octolinker-link, .discussion-sidebar-toggle:hover, .commit-id:hover,
+  body[class="page-responsive"] .files-list .octicon {
     color: /*[[base-color]]*/ !important;
   }
   body.api li a code {
@@ -3454,17 +3450,14 @@
   .topic-tag.topic-tag-outline {
     box-shadow: inset 0 0 0 1px #6d7c9c !important;
   }
-  @media screen and (max-width: 3840px) {
-    .site-subnav .subnav-primary.selected, .site-subnav .subnav-primary:hover {
-      border-bottom-color: #eee !important;
-    }
-  }
-  @media screen and (max-width: 512px) {
-    .site-subnav .subnav-primary.selected, .site-subnav .subnav-primary:hover {
-      border-bottom-color: transparent !important;
-    }
+  .site-subnav .subnav-primary.selected, .site-subnav .subnav-primary:hover {
+    border-bottom-color: #eee !important;
   }
   /* invisible border */
+  body[class="page-responsive"] .site-subnav .subnav-primary.selected,
+  body[class="page-responsive"] .site-subnav .subnav-primary:hover {
+    border-bottom-color: transparent !important;
+  }
   .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover,
   .timeline-comment-wrapper, .avatar-stack .avatar, .full-commit .commit-meta,
   .breadcrumb, .tabs > a, .header .divider-vertical, .about-menu-link {
