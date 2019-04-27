@@ -65,7 +65,8 @@ If you don't know CSS very well and have found a missing style, please include a
     ```
 
 * Try to wrap lines at around 80 characters. If at all possible, use "grunt clean" to do the wrapping for you.
-  * Still, don't add any image URI's to the CSS; instead add the image into the `/images` directory; then point to using the following URL: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
+* This style does not have a size limit, but:
+  * Don't add any image URI's to the CSS; instead add the image into the `/images` directory; then point to using the following URL: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
   * If possible, reduce any added selectors. Remember that Stylish requires an `!important` flag to override default styling, so a selector starting from the body isn't always necessary.
   * Don't add any inline comments. If you want to make a comment, add it as a note in the commit message.
   * If your CSS definition already exists within the style, do not add it again! Add your selector to the existing definition.
