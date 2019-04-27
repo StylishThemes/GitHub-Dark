@@ -22,7 +22,7 @@ If you don't know CSS very well and have found a missing style, please include a
 ### I rock at CSS & GitHub!
 * Follow the style guide below
 * Make any needed changes, then send us a pull request
-* Please include a url to the page (if public)
+* Please include a URL to the page (if public)
 
 ## GitHub Dark Style Guide
 
@@ -65,15 +65,15 @@ If you don't know CSS very well and have found a missing style, please include a
     ```
 
 * Try to wrap lines at around 80 characters. If at all possible, use "grunt clean" to do the wrapping for you.
-* This style has a size limit:
-  * We're doing okay for now since the author of Stylish gave us more room to work; I'm not sure what the value is of the current limit.
-  * <del>I'm not sure if it is [64kb](https://github.com/JasonBarnabe/stylish/wiki/Embedding-images-in-styles) (which I think we've already passed), or [100,000 bytes](http://userstyles.org/help/coding)</del>.
-  * Still, don't add any image URI's to the css; instead add the image into the `/images` directory; then point to using the following url: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
+  * Still, don't add any image URI's to the CSS; instead add the image into the `/images` directory; then point to using the following URL: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
   * If possible, reduce any added selectors. Remember that Stylish requires an `!important` flag to override default styling, so a selector starting from the body isn't always necessary.
-  * Don't add any inline comments. If you want to make a comment, add it as a note in the commit.
-  * If your css definition already exists within the style, do not add it again! Add your selector to the existing definition.
-* Insert any new css selectors in any available slot before the style definition, or on a new line as needed.
+  * Don't add any inline comments. If you want to make a comment, add it as a note in the commit message.
+  * If your CSS definition already exists within the style, do not add it again! Add your selector to the existing definition.
+* Insert any new CSS selectors in any available slot before the style definition, or on a new line as needed.
 * If you want to add a new userstyle variable, please open an issue and discuss it with us first.
+* Don't include version bumps with your contribution, all releases are handled internally.
+* If your PR fixes an open issue or replaces another PR, include fixes/closes #issue-nr in your commit message title. [Read more on this](https://help.github.com/en/articles/closing-issues-using-keywords).
+
 
 ## Getting Started
 
@@ -85,8 +85,8 @@ If you don't know CSS very well and have found a missing style, please include a
 
 * Create or edit your `build.json` file to include any customizations to the style, see the [build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more details.
 * Run `grunt` to create your custom theme.
-* Copy & paste the css from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylish editor to test your changes.
-* Once you are satisfied with the changes, run `grunt clean` to reindent &amp; clean up the css.
+* Copy & paste the CSS from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylish editor to test your changes.
+* Once you are satisfied with the changes, run `grunt clean` to reindent &amp; clean up the CSS.
 * Now you can push the changes of the `github-dark.css` file to your fork and submit a pull request.
 * If you haven't already contributed, then also run `npx grunt authors` to add your name to our list of contributors :smile:
 * And thanks again for contributing!
