@@ -112,6 +112,8 @@ let mappings = {
   // Color / Background
   // ==========================================================================
 
+  "fill: currentColor": "fill: currentColor", // nees to come before color variants
+
   "color: #05264c": "color: #bebebe", // big commit title
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
@@ -227,7 +229,6 @@ let mappings = {
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
 
-  "fill: currentColor": "fill: currentColor",
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
