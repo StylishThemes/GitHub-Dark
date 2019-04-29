@@ -115,7 +115,7 @@ let mappings = {
   "fill: currentColor": "fill: currentColor", // needs to come before color variants
 
   "color: #05264c": "color: #bebebe", // big commit title
-  "color: #333": "color: #bebebe",
+  "color: #333"   : "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #1b1f23": "color: #afafaf",
@@ -143,13 +143,9 @@ let mappings = {
   "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
   "fill: #959da5": "fill: #757575",
 
-  // needs to be after #333 for .btn vs .btn-outline
-  "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
-  // needs to be after #0366d3 for .btn-link vs .text-gray
-  "color: #586069": "color: #949494",
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
-  // needs to be after #0366d3 for .btn-link vs .text-gray-dark
   "color: #24292e": "color: #d2d2d2",
   "color: #2f363d": "color: #bebebe",
 
@@ -228,6 +224,8 @@ let mappings = {
   "$background: #f5f0ff": "#213",
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
+
+  "color: #586069": "color: #949494", // needs to be after #28a745 for mobile draft PRs
 
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
