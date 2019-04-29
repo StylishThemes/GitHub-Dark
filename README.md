@@ -17,10 +17,12 @@
     <img src="https://img.shields.io/gitter/room/StylishThemes/Github-Dark.js.svg?maxAge=2592000&style=flat" alt="Gitter">
   </a>
 </p>
+
 <h2 align="center">Your eyes will&nbsp;:heart:&nbsp;you.</h2>
 
 ## Preview
-![](./images/screenshots/after_blue.png)
+
+![Preview](./images/screenshots/after_blue.png)
 
 ## Installation
 
