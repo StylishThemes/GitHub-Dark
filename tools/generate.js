@@ -112,7 +112,7 @@ let mappings = {
   // Color / Background
   // ==========================================================================
 
-  "fill: currentColor": "fill: currentColor", // nees to come before color variants
+  "fill: currentColor": "fill: currentColor", // needs to come before color variants
 
   "color: #05264c": "color: #bebebe", // big commit title
   "color: #333": "color: #bebebe",
