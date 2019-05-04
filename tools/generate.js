@@ -292,7 +292,8 @@ const shorthands = [
   "border-top",
   "border-bottom",
   "background",
-  "font"
+  "font",
+  "box-shadow"
 ];
 
 // a device we optimize for, used to remove mobile-only media queries
