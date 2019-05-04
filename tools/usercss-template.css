@@ -16,7 +16,19 @@
 @advanced dropdown syntax-jupyter "Jupyter syntax theme" {
   {{Themes:Jupyter}}
 }
-@advanced text bg-choice "Background image [wrap in url()]" "{{image}}"
+@advanced dropdown bg-choice "Background" {
+  crosshatch "Cross-Hatch" <<<EOT
+  url(https://camo.githubusercontent.com/5b8e4cd1a5ce69b6affa17ebd8e4aee00c147618/68747470733a2f2f7374796c6973687468656d65732e6769746875622e696f2f4769744875622d4461726b2f696d616765732f6261636b67726f756e64732f62672d63726f737368617463682e706e67) EOT;
+  uniform "Uniform Tile" <<<EOT
+  url(https://camo.githubusercontent.com/f83a9a60a2c64be0c88833ccb436e32a458cd2ce/68747470733a2f2f7374796c6973687468656d65732e6769746875622e696f2f4769744875622d4461726b2f696d616765732f6261636b67726f756e64732f62672d74696c652d756e69666f726d2e706e67) EOT;
+  random "Random Tile" <<<EOT
+  url(https://camo.githubusercontent.com/3beb850d8069e424480199a09899030c9e58e85f/68747470733a2f2f7374796c6973687468656d65732e6769746875622e696f2f4769744875622d4461726b2f696d616765732f6261636b67726f756e64732f62672d74696c65312e706e67) EOT;
+  custom "Custom" <<<EOT
+  var(--bg-custom) EOT;
+  none "None" <<<EOT
+  none EOT;
+}
+@advanced text bg-custom "Background image" "{{image}}"
 @advanced dropdown bg-options "Background image type" {
   Tiled "Tiled" <<<EOT
   background-repeat: repeat !important;
