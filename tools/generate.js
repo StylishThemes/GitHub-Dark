@@ -40,6 +40,7 @@ let mappings = {
   // ==========================================================================
   // Border
   // ==========================================================================
+  "$border: transparent": "transparent", // needs to come before the color variants
 
   "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.1)",
   "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
@@ -56,8 +57,6 @@ let mappings = {
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #fff":    "#181818",
-
-  "$border: transparent": "transparent", // needs to come before the color variants
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
