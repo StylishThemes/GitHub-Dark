@@ -3336,7 +3336,18 @@
   .topic-tag.topic-tag-outline {
     box-shadow: inset 0 0 0 1px #6d7c9c !important;
   }
+  @media screen and (min-width: 1024px) {
+    .site-subnav .subnav-primary.selected, .site-subnav .subnav-primary:hover {
+      border-bottom-color: #eee !important;
+    }
+  }
   /* invisible border */
+  @media screen and (max-width: 768px) {
+    body.page-responsive .site-subnav .subnav-primary.selected,
+    body.page-responsive .site-subnav .subnav-primary:hover {
+      border-bottom-color: transparent !important;
+    }
+  }
   .gisttabs a:not(.selected), .gisttabs a:not(.selected):hover,
   .timeline-comment-wrapper, .avatar-stack .avatar, .full-commit .commit-meta,
   .tabs > a, .header .divider-vertical, .about-menu-link {
@@ -4434,8 +4445,8 @@
   .commit-desc + .commit-branches, .full-commit .btn-outline,
   .pricing-matrix-table .pricing-matrix-table-dark,
   .topic-tag-contrast .delete-topic-link,
-  .repository-content > .Box--condensed:not(#readme),
-  .border-blue, body[class="page-responsive"] .border-blue {
+  .repository-content > .Box--condensed:not(#readme), .border-blue,
+  body[class="page-responsive"] .border-blue {
     border-color: #246 !important;
   }
   .blob-history, .recently-touched-branches li {
