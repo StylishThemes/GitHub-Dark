@@ -17,6 +17,7 @@ let mappings = {
   // Background
   // ==========================================================================
   "$background: #fff":    "#181818",
+  "$background: #ffe":    "#242424",
   "$background: #fdfdfd": "#1c1c1c",
   "$background: #fafbfc": "#181818",
   "$background: #f6f8fa": "#202020",
