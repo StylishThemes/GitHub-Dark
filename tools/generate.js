@@ -281,6 +281,7 @@ const ignoreSelectors = [
 // selectors because they can generate invalid rules.
 const unmergeableSelectors = [
   /(-moz-|-ms-|-o-|-webkit-).+/,
+  /:(before|after).+/, // pseudo-elements must come last
 ];
 
 // list of shorthand properties where values are compared insensitively
