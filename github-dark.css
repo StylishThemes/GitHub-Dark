@@ -396,7 +396,7 @@
   }
   /* auto-generated rule for "background-color: #24292e" */
   .Header-old, .Header, .discussion-item-locked .discussion-item-icon,
-  .discussion-item-unlocked .discussion-item-icon, .reponav-wrapper,
+  .discussion-item-unlocked .discussion-item-icon, .reponav-wrapper, .CheckRun,
   .project-full-screen .project-header,
   body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
@@ -442,9 +442,10 @@
     background-color: hsla(0, 0%, 100%, .1);
   }
   /* auto-generated rule for "border: 1px solid transparent" */
-  .tabnav-tab, .summarylink-btn, .pagehead-tabs-item, .reponav-item,
-  .select-menu-loading-overlay, .select-menu-tabs .select-menu-tab-nav,
-  .select-menu-tabs a, .reaction-sort-item, .manage-memberships-tabs-item,
+  .tabnav-tab, .gpr-cli-tab-nav, .summarylink-btn, .pagehead-tabs-item,
+  .reponav-item, .select-menu-loading-overlay,
+  .select-menu-tabs .select-menu-tab-nav, .select-menu-tabs a,
+  .reaction-sort-item, .manage-memberships-tabs-item,
   .protected-branch-admin-permission,
   .reorderable-task-lists .markdown-body .task-list-item,
   html[prefix] .tabnav-tab,
@@ -462,6 +463,8 @@
   .timeline-new-comment .timeline-comment:before,
   .timeline-comment-wrapper .timeline-comment.current-user:after,
   .timeline-comment-wrapper .timeline-comment.current-user:before,
+  .timeline-comment-wrapper .timeline-comment.is-internal:after,
+  .timeline-comment-wrapper .timeline-comment.is-internal:before,
   .timeline-comment-wrapper .timeline-comment.unread-item:after,
   .timeline-comment-wrapper .timeline-comment.unread-item:before,
   .composer.composer-responsive .timeline-comment:after,
@@ -647,8 +650,7 @@
   /* auto-generated rule for "border: 1px solid #d1d5da" */
   .Box, .Box-header, .form-control, .form-select, .menu, .boxed-group-inner,
   .timeline-comment, .composer.composer-responsive .timeline-comment,
-  .discussion-item-merged.open .discussion-item-details,
-  .discussion-item-published.open .discussion-item-details, kbd, .radio-label,
+  .discussion-item-merged.open .discussion-item-details, kbd, .radio-label,
   .branch-action-body, .dashboard-notice, .setup-form .setup-plans,
   .business-sso .sso-recovery-callout, .org-sso .sso-recovery-callout,
   .gist-quicksearch-results, .ais-SearchBox-input,
@@ -684,8 +686,7 @@
     border-color: #404040 !important;
   }
   /* auto-generated rule for "border-top: 1px solid #d1d5da" */
-  .discussion-item-merged.open .discussion-item-details-header,
-  .discussion-item-published.open .discussion-item-details-header, .merge-pr,
+  .discussion-item-merged.open .discussion-item-details-header, .merge-pr,
   .notification-thread-subscription:first-child,
   .projects-comment-form .comment-form-head .toolbar-commenting,
   .projects-comment-form .preview-content, .mini-repo-list-item,
@@ -720,8 +721,7 @@
     border-right-color: #404040;
   }
   /* auto-generated rule for "border-top-color: #d1d5da" */
-  .discussion-item-merged.open .merge-status-list,
-  .discussion-item-published.open .merge-status-list {
+  .discussion-item-merged.open .merge-status-list {
     border-top-color: #404040;
   }
   /* auto-generated rule for "border-bottom-color: #d1d5da" */
@@ -1315,7 +1315,8 @@
   /* auto-generated rule for "color: #444d56" */
   .ellipsis-expander, .hidden-text-expander a, .subnav-search-context .btn,
   .page-responsive .HeaderMenu-link, .illflow-item .illflow-item-heading,
-  .action-card-syntax, .markdown-body kbd, .email-format .email-hidden-toggle a,
+  .action-card-syntax, .SegmentedNav .gpr-testimonial-nav-link.selected,
+  .markdown-body kbd, .email-format .email-hidden-toggle a,
   .commit .commit-title, .commit .commit-title a, .commit-tease-sha,
   .timeline-commits .author, .timeline-commits .commit-message > code a,
   .full-commit .branches-list li, .full-commit .sha-block > .sha,
@@ -1387,7 +1388,8 @@
   .UnderlineNav-item:hover .UnderlineNav-octicon,
   .UnderlineNav-item.selected .UnderlineNav-octicon,
   .jump-to-suggestions-path .jump-to-octicon, .subnav-link,
-  .home-hero-signup .form-control-note, .markdown-body blockquote,
+  .home-hero-signup .form-control-note,
+  .SegmentedNav .gpr-testimonial-nav-link:hover, .markdown-body blockquote,
   .markdown-body h6, .table-list, .autocomplete-item .organization-member,
   .full-commit .branches-list li.loading,
   .full-commit .branches-list li.pull-request, .branches-tag-list li.loading,
@@ -1464,11 +1466,12 @@
   .btn-octicon.disabled:hover, .commit-id,
   .signed-commit-header .octicon-unverified, .footer-octicon:hover,
   .repohead h1 .octicon, .license-summary-octicon, .neutral-check,
-  .dashboard-notice .dismiss, .svg-tip, .page-new-repo .octicon-repo,
-  .news .alert .octicon, .news .alert .time, .news .alert .title .subtle,
-  .org-insights-cards .org-insights-card-legend, .team-member-list .invite-icon,
-  .team-member-list-avatar .octicon, .branch-infobar .muted-link .octicon,
-  .shelf-dismiss, .email-suggestion .octicon-mail,
+  .CheckStep-line:before, .dashboard-notice .dismiss, .svg-tip,
+  .page-new-repo .octicon-repo, .news .alert .octicon, .news .alert .time,
+  .news .alert .title .subtle, .org-insights-cards .org-insights-card-legend,
+  .team-member-list .invite-icon, .team-member-list-avatar .octicon,
+  .branch-infobar .muted-link .octicon, .shelf-dismiss,
+  .email-suggestion .octicon-mail,
   .gist-quicksearch-results .gist-quicksearch-no-results,
   body[class="page-responsive"] footer li,
   body[class="page-responsive"] .discussion-header .branches,
@@ -1529,7 +1532,8 @@
   }
   /* auto-generated rule for "color: #d1d5da" */
   .pagination .disabled, .pagination .disabled:hover, .pagination .gap,
-  .pagination .gap:hover, .action-card-syntax:before, .commit-icon,
+  .pagination .gap:hover, .action-card-syntax:before,
+  .SegmentedNav .gpr-testimonial-nav-link, .commit-icon,
   .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:only-child:before,
   .prose-diff > .markdown-body li.added.moved-down .octicon,
@@ -1871,6 +1875,10 @@
   body[class="page-responsive"] .bg-blue-light,
   body[class="page-responsive"] .bg-blue-0 {
     background-color: #182030 !important;
+  }
+  /* auto-generated rule for "background: #032f62" */
+  .gpr-cli-tab.selected {
+    background: #182030;
   }
   /* auto-generated rule for "background-color: #032f62" */
   .pricing-matrix-table .pricing-matrix-table-dark {
@@ -2276,6 +2284,10 @@
   .bg-orange-7, body[class="page-responsive"] .bg-orange-7 {
     background-color: #f3582c !important;
   }
+  /* auto-generated rule for "background: #fb8532" */
+  .gpr-circle-orange, .gpr-circle-orange-2 {
+    background: #f3582c;
+  }
   /* auto-generated rule for "background: #fb8532 !important" */
   .bg-orange {
     background: #f3582c !important;
@@ -2459,6 +2471,10 @@
   body[class="page-responsive"] .bg-yellow-5 {
     background-color: #cb4 !important;
   }
+  /* auto-generated rule for "background: #ffdf5d" */
+  .gpr-square-yellow, .gpr-square-yellow-2 {
+    background: #cb4;
+  }
   /* auto-generated rule for "background-color: #ffdf5d" */
   body[class="page-responsive"] .user-status-limited-availability-compact {
     background-color: #cb4;
@@ -2567,7 +2583,6 @@
   }
   /* auto-generated rule for "background-color: #6f42c1" */
   .State--purple, .discussion-item-merged .discussion-item-icon,
-  .discussion-item-published .discussion-item-icon,
   .plan-choice--experiment.plan-choice--purple.open .plan-choice-icon,
   .plan-choice--experiment.plan-choice--purple.selected .plan-choice-icon,
   .branch-action-state-merged .branch-action-icon,
@@ -2731,8 +2746,6 @@
   body[class="page-responsive"] .user-list .follow-list-info,
   body[class="page-responsive"] .login-note p,
   body[class="page-responsive"] .login-note .octicon,
-  body[class="page-responsive"] .section-title button,
-  body[class="page-responsive"] .section-title button .octicon,
   body[class="page-responsive"] .commit-authorship,
   body[class="page-responsive"] .diff-view .file .blob-code-hunk,
   body[class="page-responsive"] .discussion-header .branches .branch-name,
@@ -2896,8 +2909,7 @@
   body[class="page-responsive"] .btn-primary.disabled,
   body[class="page-responsive"] .btn-primary:disabled,
   body[class="page-responsive"] .btn-danger.disabled,
-  body[class="page-responsive"] .btn-danger:disabled,
-  body[class="page-responsive"] .section-title button {
+  body[class="page-responsive"] .btn-danger:disabled {
     box-shadow: none;
   }
   /* auto-generated rule for "box-shadow: none !important" */
