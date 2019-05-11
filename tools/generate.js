@@ -137,6 +137,7 @@ let mappings = {
   `,
   "color: rgba(27,31,35,.6)": "color: #9daccc",
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
+  "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
