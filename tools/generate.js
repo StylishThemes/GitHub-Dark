@@ -157,10 +157,11 @@ let mappings = {
   "$background: #032f62": "#182030",
   "$background: #dbedff": "#182030",
   "$border: #f1f8ff": "#182030",
-
   "color: #c0d3eb": "color: #224466",
   "$border: #c8e1ff": "#224466",
   "$border: #c0d3eb": "#224466",
+  "$background: #0361cc": "#182030",
+  "$background: linear-gradient(-180deg,#0679fc,#0361cc 90%)": "linear-gradient(to bottom,#283040,#182030)",
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
@@ -443,19 +444,22 @@ function buildOutput(decls) {
   return output.split("\n").map(line => "  " + line).join("\n");
 }
 
+function normalize(value) {
+  return value
+    // remove !important and trim whitespace
+    .replace(/!important$/g, "").trim().toLowerCase()
+    // remove leading zeroes on values like 'rgba(27,31,35,0.075)'
+    .replace(/0(\.[0-9])/g, (_, val) => val)
+    // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
+    .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
+}
+
 function isEqualValue(prop, a, b) {
-  a = a.replace(/!important$/g, "").trim().toLowerCase();
-  b = b.replace(/!important$/g, "").trim().toLowerCase();
-
-  // remove leading zeroes on values like 'rgba(27,31,35,0.075)'
-  a = a.replace(/0(\.[0-9])/g, (_, val) => val);
-  b = b.replace(/0(\.[0-9])/g, (_, val) => val);
-
   // try to ignore order in shorthands
   if (shorthands.includes(prop)) {
-    return a.split(" ").sort().join(" ") === b.split(" ").sort().join(" ");
+    return normalize(a).split(" ").sort().join(" ") === normalize(b).split(" ").sort().join(" ");
   } else {
-    return a === b;
+    return normalize(a) === normalize(b);
   }
 }
 
@@ -512,6 +516,7 @@ function prepareMappings(mappings) {
       const oldValue = key.substring("$background: ".length);
       newMappings[`background: ${oldValue}`] = `background: ${value}`;
       newMappings[`background-color: ${oldValue}`] = `background-color: ${value}`;
+      newMappings[`background-image: ${oldValue}`] = `background-image: ${value}`;
     } else {
       newMappings[key] = value;
     }
