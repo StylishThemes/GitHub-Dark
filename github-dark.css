@@ -4235,10 +4235,14 @@
   img[src$="favicons.githubusercontent.com/github.com"],
   img[src$="favicons.githubusercontent.com/gist.github.com"],
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
-  #footer .github img, img[data-canonical-src^="https://codecov.io"],
-  #com span.octicon:not(.octicon-comment-discussion),
+  #footer .github img, #com span.octicon:not(.octicon-comment-discussion),
   .developer-thanks-image img {
     filter: invert(100%) hue-rotate(180deg) !important;
+  }
+  /* code coverage */
+  /* example: https://github.com/go-gitea/gitea/pull/6969 */
+  img[data-canonical-src^="https://codecov.io"] {
+      filter: invert(92%) hue-rotate(180deg) saturate(500%) !important;
   }
   /* marketplace + help img invert */
   img[src*="marketplace-illustration-01.svg"],
