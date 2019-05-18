@@ -492,6 +492,7 @@ function prepareMappings(mappings) {
   for (const [key, value] of Object.entries(mappings)) {
     if (key.startsWith("$border: ")) {
       const oldValue = key.substring("$border: ".length);
+      newMappings[`border: solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 2px solid ${oldValue}`] = `border-color: ${value}`;
