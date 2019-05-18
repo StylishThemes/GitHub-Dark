@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
+const {join} = require("path");
+const {promisify} = require("util");
 const css = require("css");
 const cssMediaQuery = require("css-mediaquery");
 const fetch = require("make-fetch-happen");
@@ -8,6 +10,9 @@ const fs = require("fs-extra");
 const parse5 = require("parse5");
 const path = require("path");
 const perfectionist = require("perfectionist");
+const rimraf = promisify(require("rimraf"));
+const tempy = require("tempy");
+const unzipCrx = require("unzip-crx");
 const urlToolkit = require("url-toolkit");
 
 // This list maps old declarations to new ones. Ordering is significant.
@@ -20,12 +25,15 @@ let mappings = {
   "$background: #ffe":    "#242424",
   "$background: #fdfdfd": "#1c1c1c",
   "$background: #fafbfc": "#181818",
+  "$background: #f8f8f8": "#202020", // zenhub
   "$background: #f6f8fa": "#202020",
+  "$background: #f4f5f5": "#242424", // zenhub
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#343434",
   "$background: #eaecef": "#343434",
   "$background: #e6ebf1": "#444",
   "$background: #e1e4e8": "#343434",
+  "$background: #e9e9e9": "#343434", // zenhub
   "$background: #dfe2e5": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
@@ -53,6 +61,7 @@ let mappings = {
   "$border: #ddd":    "#343434",
   "$border: #e1e4e8": "#343434",
   "$border: #e6ebf1": "#343434",
+  "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaecef": "#343434",
   "$border: #eee":    "#343434",
   "$border: #f6f8fa": "#202020",
@@ -226,26 +235,28 @@ let mappings = {
   "$background: #f5f0ff": "#213",
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
+  "$border: #5e60ba": "#8368aa", // zenhub
 
   "color: #586069": "color: #949494", // needs to be after #28a745 for mobile draft PRs
+
+  "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
 
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
+  "$background: transparent": "transparent",
 };
 
-// list of sites to pull stylesheets from. Accepts fetch options. If `prefix`
+// list of sources to pull stylesheets from. Accepts fetch options. If `prefix`
 // is  set, will prefix all selectors obtained from this source, unless they
 // start with one of the selectors in `match`. If `url` ends with .css, will
-// directly load that stylesheet.
+// directly load that stylesheet. `crx` refers so a Chrome extension id and can
+// be used in place of `url`.
 const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
-  {
-    url: "https://developer.github.com",
-    prefix: "html[prefix]",
-  },
+  {url: "https://developer.github.com", prefix: "html[prefix]"},
   {
     url: "https://github.com/login",
     prefix: `body[class="page-responsive"]`,
@@ -253,12 +264,10 @@ const sources = [
     opts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"}},
   },
   {
-    url: "https://raw.githubusercontent.com/sindresorhus/refined-github/master/source/content.css",
-    prefix: "html.refined-github",
-  },
-  {
     url: "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
-  }
+  },
+  {crx: "hlepfoohegkhhmjieoechaddaejaokhf", prefix: "html.refined-github"}, // refined-github
+  {crx: "ogcgkffhplmphkaahpmffcafajaocjbd", prefix: "body.zhio"}, // zenhub
 ];
 
 // list of regexes matching selectors that should be ignored
@@ -289,14 +298,15 @@ const unmergeableSelectors = [
 // list of shorthand properties where values are compared insensitively
 // to their order, e.g. "1px solid red" is equal to "1px red solid".
 const shorthands = [
+  "background",
   "border",
+  "border-bottom",
   "border-left",
   "border-right",
   "border-top",
-  "border-bottom",
-  "background",
+  "box-shadow",
   "font",
-  "box-shadow"
+  "text-shadow",
 ];
 
 // a device we optimize for, used to remove mobile-only media queries
@@ -524,11 +534,40 @@ function prepareMappings(mappings) {
   return newMappings;
 }
 
+async function extensionCss(id) {
+  const dir = tempy.directory();
+  let css = "";
+
+  try {
+    const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=74.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
+    if (!res.ok) throw new Error(res.statusText);
+
+    const buf = await res.buffer();
+    const file = join(dir, `${id}.crx`);
+    await fs.writeFile(file, buf);
+    await unzipCrx(file);
+    const manifest = require(join(dir, id, "manifest.json"));
+
+    for (const script of manifest.content_scripts) {
+      if (!Array.isArray(script.css)) continue;
+      for (const cssFile of script.css) {
+        css += await fs.readFile(join(dir, id, cssFile), "utf8");
+      }
+    }
+  } catch (err) {
+    console.error(err);
+  }
+
+  await rimraf(dir);
+  return css;
+}
+
 async function main() {
   mappings = prepareMappings(mappings);
   mappingKeys = Object.keys(mappings);
 
   const sourceResponses = await Promise.all(sources.map(source => {
+    if (!source.url) return null;
     return source.url.endsWith(".css") ? null : fetch(source.url, source.opts);
   }));
 
@@ -536,17 +575,22 @@ async function main() {
     const source = sources[index];
     if (response) {
       source.styles = await extractStyleLinks(response);
-    } else {
+    } else if (source.url) {
       source.styles = [source.url];
     }
   }
 
   const cssResponses = await Promise.all(sources.map(source => {
+    if (!source.url) return null;
     return Promise.all(source.styles.map(url => fetch(url).then(res => res.text())));
   }));
 
   for (const [index, responses] of Object.entries(cssResponses)) {
-    sources[index].css = responses.join("\n");
+    if (sources[index].crx) {
+      sources[index].css = await extensionCss(sources[index].crx);
+    } else {
+      sources[index].css = responses.join("\n");
+    }
   }
 
   const decls = {};
