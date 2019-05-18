@@ -394,6 +394,7 @@ function parseRule(decls, rule, opts) {
         selector = selector.replace(/~/g, " ~ ");
         selector = selector.replace(/>/g, " > ");
         selector = selector.replace(/ {2,}/g, " ");
+        selector = selector.replace(/'/g, `"`);
 
         // add prefix
         if (opts.prefix) {
