@@ -276,23 +276,21 @@ const ignoreSelectors = [
   /\.cm-/, // CodeMirror
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
   /\spre$/,
-  /:not\(li\.moved\)/,
   /^.Popover-message:before$/,
   /^.Popover-message:after$/,
-  /^h[1-6] a$/, // weird styles from help.github.com
+  /^h[1-6] a$/, // conflicting styles from help.github.com
   /^\.bg-white$/,
   /^\.CircleBadge$/,
   /^table$/,
   /^.text-gray-dark$/,
   /^.markdown-body del$/, // this in not main page style
-  /^.dashboard .js-all-activity-header \+ div$/, // weird background style from refined-github
+  /:(before|after).+/, // pseudo-elements must come last so these selectors are invalid
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
 // selectors because they can generate invalid rules.
 const unmergeableSelectors = [
   /(-moz-|-ms-|-webkit-).+/,
-  /:(before|after).+/, // pseudo-elements must come last
 ];
 
 // list of shorthand properties where values are compared insensitively
