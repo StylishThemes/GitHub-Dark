@@ -291,7 +291,7 @@ const ignoreSelectors = [
 // list of regexes matching selectors that shouldn't be merged with other
 // selectors because they can generate invalid rules.
 const unmergeableSelectors = [
-  /(-moz-|-ms-|-o-|-webkit-).+/,
+  /(-moz-|-ms-|-webkit-).+/,
   /:(before|after).+/, // pseudo-elements must come last
 ];
 
@@ -382,10 +382,6 @@ function parseRule(decls, rule, opts) {
       if (!decls[name]) decls[name] = [];
 
       rule.selectors.forEach(selector => {
-        // Skip potentially unmergeable selectors
-        // TODO: Use clean-css or similar to merge rules later instead
-        if (unmergeableSelectors.some(re => re.test(selector))) return;
-
         // Skip ignored selectors
         if (ignoreSelectors.some(re => re.test(selector))) return;
 
@@ -432,23 +428,70 @@ function format(css) {
   return String(perfectionist.process(css, perfOpts));
 }
 
+function unmergeables(selectors) {
+  return selectors.filter(selector => {
+    for (const re of unmergeableSelectors) {
+      if (re.test(selector)) return true;
+    }
+    return false;
+  });
+}
+
+function unmergeableRules(selectors, value) {
+  let ret = "";
+  const moz = [];
+  const webkit = [];
+  const ms = [];
+  const other = [];
+
+  for (const selector of selectors) {
+    if (selector.includes("-moz-")) moz.push(selector);
+    else if (selector.includes("-webkit-")) webkit.push(selector);
+    else if (selector.includes("-ms-")) ms.push(selector);
+    else other.push(selector);
+  }
+
+  if (moz.length) ret += format(`${moz.join(", ")} {${value};}`);
+  if (webkit.length) ret += format(`${webkit.join(", ")} {${value};}`);
+  if (ms.length) ret += format(`${ms.join(", ")} {${value};}`);
+  if (other.length) ret += format(`${other.join(", ")} {${value};}`);
+
+  return ret;
+}
+
 function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
   for (const [fromValue, toValue] of Object.entries(mappings)) {
-    const normalSelectors = decls[fromValue];
-    const importantSelectors = decls[`${fromValue} !important`];
+    let normalSelectors = decls[fromValue];
+    let importantSelectors = decls[`${fromValue} !important`];
 
     if (normalSelectors && normalSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "");
-      output += `/* auto-generated rule for "${fromValue}" */\n`;
-      output += format(`${normalSelectors.join(",")} {${newValue};}`);
+      const normalUnmergeables = unmergeables(normalSelectors);
+
+      if (normalUnmergeables.length) {
+        normalSelectors = normalSelectors.filter(selector => !normalUnmergeables.includes(selector));
+      }
+      if (normalSelectors.length || normalUnmergeables.length) {
+        output += `/* auto-generated rule for "${fromValue}" */\n`;
+      }
+      if (normalSelectors.length) output += format(`${normalSelectors.join(",")} {${newValue};}`);
+      if (normalUnmergeables.length) output += unmergeableRules(normalUnmergeables, newValue);
     }
 
     if (importantSelectors && importantSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "").split(";").map(v => `${v} !important`).join(";");
-      output += `/* auto-generated rule for "${fromValue} !important" */\n`;
-      output += format(`${importantSelectors.join(",")} {${newValue};}`);
+      const importantUnmergeables = unmergeables(importantSelectors);
+
+      if (importantUnmergeables.length) {
+        importantSelectors = importantSelectors.filter(selector => !importantUnmergeables.includes(selector));
+      }
+      if (importantSelectors.length || importantUnmergeables.length) {
+        output += `/* auto-generated rule for "${fromValue} !important" */\n`;
+      }
+      if (importantSelectors.length) output += format(`${importantSelectors.join(",")} {${newValue};}`);
+      if (importantUnmergeables.length) output += unmergeableRules(importantUnmergeables, newValue);
     }
   }
   output += "/* end auto-generated rules */";
@@ -553,7 +596,7 @@ async function extensionCss(id) {
     for (const script of manifest.content_scripts) {
       if (!Array.isArray(script.css)) continue;
       for (const cssFile of script.css) {
-        css += await fs.readFile(join(dir, id, cssFile), "utf8");
+        css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
       }
     }
   } catch (err) {
