@@ -285,7 +285,7 @@ const ignoreSelectors = [
   /^table$/,
   /^.text-gray-dark$/,
   /^.markdown-body del$/, // this in not main page style
-  /:(before|after).+/, // invalid pseudo-elementss, they must come last in a chain of
+  /:(before|after).+/, // invalid pseudo-elements, they must come last in a chain of
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
