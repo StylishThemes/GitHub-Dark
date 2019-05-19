@@ -572,24 +572,20 @@ async function extensionCss(id) {
   const dir = tempy.directory();
   let css = "";
 
-  try {
-    const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=74.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
-    if (!res.ok) throw new Error(res.statusText);
+  const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=74.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
+  if (!res.ok) throw new Error(res.statusText);
 
-    const buf = await res.buffer();
-    const file = join(dir, `${id}.crx`);
-    await fs.writeFile(file, buf);
-    await unzipCrx(file);
-    const manifest = require(join(dir, id, "manifest.json"));
+  const buf = await res.buffer();
+  const file = join(dir, `${id}.crx`);
+  await fs.writeFile(file, buf);
+  await unzipCrx(file);
+  const manifest = require(join(dir, id, "manifest.json"));
 
-    for (const script of manifest.content_scripts) {
-      if (!Array.isArray(script.css)) continue;
-      for (const cssFile of script.css) {
-        css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
-      }
+  for (const script of manifest.content_scripts) {
+    if (!Array.isArray(script.css)) continue;
+    for (const cssFile of script.css) {
+      css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
     }
-  } catch (err) {
-    console.error(err);
   }
 
   await rimraf(dir);
