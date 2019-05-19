@@ -289,12 +289,6 @@ const ignoreSelectors = [
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
-// list of regexes matching selectors that shouldn't be merged with other
-// selectors because they can generate invalid rules.
-const unmergeableSelectors = [
-  /(-moz-|-ms-|-webkit-).+/,
-];
-
 // list of shorthand properties where values are compared insensitively
 // to their order, e.g. "1px solid red" is equal to "1px red solid".
 const shorthands = [
@@ -429,12 +423,7 @@ function format(css) {
 }
 
 function unmergeables(selectors) {
-  return selectors.filter(selector => {
-    for (const re of unmergeableSelectors) {
-      if (re.test(selector)) return true;
-    }
-    return false;
-  });
+  return selectors.filter(selector => /-(moz|ms|webkit)-.+/.test(selector));
 }
 
 function unmergeableRules(selectors, value) {
