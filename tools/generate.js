@@ -271,6 +271,7 @@ const sources = [
 ];
 
 // list of regexes matching selectors that should be ignored
+// TODO: every selector should be validated against W3C rules
 const ignoreSelectors = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
@@ -284,7 +285,8 @@ const ignoreSelectors = [
   /^table$/,
   /^.text-gray-dark$/,
   /^.markdown-body del$/, // this in not main page style
-  /:(before|after).+/, // pseudo-elements must come last so these selectors are invalid
+  /:(before|after).+/, // invalid pseudo-elementss, they must come last in a chain of
+  /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
 // list of regexes matching selectors that shouldn't be merged with other
