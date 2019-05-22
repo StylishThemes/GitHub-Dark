@@ -174,6 +174,7 @@ let mappings = {
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
   "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff",
   "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
@@ -242,6 +243,9 @@ let mappings = {
 
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
 
+  "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
+  "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
+
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
@@ -267,8 +271,20 @@ const sources = [
   {
     url: "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
   },
-  {crx: "hlepfoohegkhhmjieoechaddaejaokhf", prefix: "html.refined-github"}, // refined-github
-  {crx: "ogcgkffhplmphkaahpmffcafajaocjbd", prefix: "body.zhio"}, // zenhub
+  {
+    crx: "hlepfoohegkhhmjieoechaddaejaokhf", // refined-github
+    prefix: `html.refined-github`
+  },
+  {
+    crx: "ogcgkffhplmphkaahpmffcafajaocjbd", // zenhub
+    prefix: `body.zhio`
+  },
+  {
+    crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
+    prefix: `html.ghh-theme-classic`,
+    match: ["html", ".ghh-theme-classic"],
+    files: ["hovercard.css", "tooltipster.css"]
+  },
 ];
 
 // list of regexes matching selectors that should be ignored
@@ -569,7 +585,8 @@ function prepareMappings(mappings) {
   return newMappings;
 }
 
-async function extensionCss(id) {
+async function extensionCss(source) {
+  const id = source.crx;
   const dir = tempy.directory();
   let css = "";
 
@@ -582,11 +599,15 @@ async function extensionCss(id) {
   await unzipCrx(file);
   const manifest = require(join(dir, id, "manifest.json"));
 
-  for (const script of manifest.content_scripts) {
+  for (const script of manifest.content_scripts || []) {
     if (!Array.isArray(script.css)) continue;
     for (const cssFile of script.css) {
       css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
     }
+  }
+
+  for (const cssFile of source.files || []) {
+    css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
   }
 
   await rimraf(dir);
@@ -618,7 +639,7 @@ async function main() {
 
   for (const [index, responses] of Object.entries(cssResponses)) {
     if (sources[index].crx) {
-      sources[index].css = await extensionCss(sources[index].crx);
+      sources[index].css = await extensionCss(sources[index]);
     } else {
       sources[index].css = responses.join("\n");
     }
