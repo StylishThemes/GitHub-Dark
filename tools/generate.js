@@ -412,7 +412,7 @@ function parseRule(decls, rule, opts) {
           if (opts.match) {
             for (const match of opts.match) {
               const first = selector.split(/\s+/)[0];
-              if ((/^\.#+/.test(first) && first === match) || first.startsWith(match)) {
+              if ((/^[.#]+/.test(first) && first === match) || first.startsWith(match)) {
                 skip = true;
                 break;
               }
