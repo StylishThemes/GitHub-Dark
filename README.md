@@ -56,7 +56,7 @@ For Safari, the only alternative is to install [Cascadea](https://cascadea.app/)
 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
-💾 [ZenHub](https://www.zenhub.io/)
+💾 [ZenHub](https://www.zenhub.io/)<br>
 💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard) (set it to dark theme)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
