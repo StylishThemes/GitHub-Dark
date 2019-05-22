@@ -46,6 +46,7 @@
   html[prefix] .markdown-body .csv-data .blob-num, html[prefix] .card,
   html[prefix] .pagination a, html[prefix] .pagination em,
   html[prefix] .pagination > span,
+  body[class="page-responsive"] .markdown-body .csv-data .blob-num,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
   body[class="page-responsive"] .details-overlay[open] > .dropdown-item:hover,
   body[class="page-responsive"] .bubble,
@@ -146,6 +147,8 @@
   body[class="page-responsive"] .input-contrast:focus,
   body[class="page-responsive"] .form-group .form-control:focus,
   body[class="page-responsive"] .avatar-child,
+  body[class="page-responsive"] .markdown-body table tr,
+  body[class="page-responsive"] .markdown-body img,
   body[class="page-responsive"] .Box,
   body[class="page-responsive"] .Box--overlay,
   body[class="page-responsive"] .dropdown-menu,
@@ -393,6 +396,7 @@
   table.capped-list tr:nth-child(2n), .form-group .ais-SearchBox-input,
   body[class="page-responsive"] .input-contrast,
   body[class="page-responsive"] .form-group .form-control,
+  body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] .Box-row.navigation-focus.sortable-chosen,
   body[class="page-responsive"] kbd,
   body[class="page-responsive"] .jump-to-field-active, body,
@@ -464,6 +468,7 @@
   table.files tr[aria-selected=true] td, .team-member-ellipsis:hover,
   table.capped-list th, .gistsearch-aside .filter-list li span.bar,
   .gist-quicksearch-results .gist-quicksearch-result-header,
+  body[class="page-responsive"] .markdown-body .csv-data th,
   body[class="page-responsive"] .bubble-disabled,
   body[class="page-responsive"] .diff-view .file .meta span.icon,
   body[class="page-responsive"] .y-axis-bar {
@@ -492,6 +497,7 @@
   .review-comment:after, .review-thread-reply,
   body[class="page-responsive"] .subnav-item:focus,
   body[class="page-responsive"] .subnav-item:hover,
+  body[class="page-responsive"] .markdown-body table tr:nth-child(2n),
   body[class="page-responsive"] .Box-header,
   body[class="page-responsive"] .Box-row.navigation-focus.sortable-ghost,
   body[class="page-responsive"] .Box-row--focus-gray.navigation-focus,
@@ -663,6 +669,7 @@
   .discussion-post .reply-comments-holder:before,
   .marketplace-product-callout .branch-action-item-icon,
   .release-timeline-tags .tag-timeline-date:after,
+  body[class="page-responsive"] .markdown-body hr,
   body[class="page-responsive"] .reverse-progress-container,
   body[class="page-responsive"] .reverse-progress-bar {
     background-color: #343434;
@@ -1082,7 +1089,8 @@
     border-left-color: #484848;
   }
   /* auto-generated rule for "border-bottom-color: #959da5" */
-  .markdown-body kbd, body.zhio .zhc-markdown kbd {
+  .markdown-body kbd, body[class="page-responsive"] .markdown-body kbd,
+  body.zhio .zhc-markdown kbd {
     border-bottom-color: #484848;
   }
   /* auto-generated rule for "border: 1px solid #c3c8cf" */
@@ -1099,6 +1107,9 @@
   .inline-comment-form, .gollum-editor .comment-form-head.tabnav, .steps,
   .select-menu-text-filter input, ul.comparison-list, .overall-summary,
   .file-wrap, .prereceive-feedback,
+  body[class="page-responsive"] .markdown-body table td,
+  body[class="page-responsive"] .markdown-body table th,
+  body[class="page-responsive"] .markdown-body span.frame > span,
   html.ghh-theme-classic .ghh-theme-github .ghh-readme th,
   html.ghh-theme-classic .ghh-theme-github .ghh-issue-body th,
   html.ghh-theme-classic .ghh-theme-github .ghh-readme td,
@@ -1427,6 +1438,7 @@
   .select-menu-header, .merge-status-item,
   body.full-width-p-0 .new-discussion-timeline, .file-header,
   .discussion-item-body .outdated-comment[open] .file-header, .release-entry,
+  body[class="page-responsive"] .Box-body,
   body[class="page-responsive"] .jump-to-suggestions-results-container .navigation-item,
   body[class="page-responsive"] .discussion-block-title,
   body[class="page-responsive"] .cross-reference .bubble-title,
@@ -1817,6 +1829,8 @@
   .boxed-group-table th, .boxed-group-table td, .capped-card h3,
   .capped-card > p, .select-menu-item, table.files tr.up-tree,
   table.capped-list td, body[class="page-responsive"] .subnav-bordered,
+  body[class="page-responsive"] .markdown-body h1,
+  body[class="page-responsive"] .markdown-body h2,
   body[class="page-responsive"] .discussion-item-review-comment,
   html.ghh-theme-classic .ghh-theme-github .ghh-readme h1,
   html.ghh-theme-classic .ghh-theme-github .ghh-issue-body h1,
@@ -2109,7 +2123,8 @@
     box-shadow: inset 0 -2px 0 #343434;
   }
   /* auto-generated rule for "box-shadow: inset 0 -1px 0 #959da5" */
-  .markdown-body kbd, body.zhio .zhc-markdown kbd {
+  .markdown-body kbd, body[class="page-responsive"] .markdown-body kbd,
+  body.zhio .zhc-markdown kbd {
     box-shadow: inset 0 -2px 0 #343434;
   }
   /* auto-generated rule for "box-shadow: 0 1px 0 0 #0058a2" */
@@ -2291,6 +2306,7 @@
   .select-menu-header .octicon:hover, .select-menu-action,
   table.capped-list .octicon, .keyboard-mappings,
   body[class="page-responsive"] .subnav-search-context .btn,
+  body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] kbd,
   body[class="page-responsive"] .list-item .byline strong,
   body[class="page-responsive"] .list-options .selected > .octicon,
@@ -2321,6 +2337,12 @@
   .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link,
   .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link,
   .markdown-body h6 .octicon-link, .tooltipped::before,
+  body[class="page-responsive"] .markdown-body h1 .octicon-link,
+  body[class="page-responsive"] .markdown-body h2 .octicon-link,
+  body[class="page-responsive"] .markdown-body h3 .octicon-link,
+  body[class="page-responsive"] .markdown-body h4 .octicon-link,
+  body[class="page-responsive"] .markdown-body h5 .octicon-link,
+  body[class="page-responsive"] .markdown-body h6 .octicon-link,
   body[class="page-responsive"] .jump-to-suggestions-path {
     color: #afafaf;
   }
@@ -2482,6 +2504,8 @@
   .gist-quicksearch-results .select-menu-item h4,
   .gist-quicksearch-results .select-menu-item span,
   body[class="page-responsive"] ::placeholder,
+  body[class="page-responsive"] .markdown-body blockquote,
+  body[class="page-responsive"] .markdown-body h6,
   body[class="page-responsive"] .jump-to-suggestions-path .jump-to-octicon,
   body[class="page-responsive"] .list-item .meta,
   body[class="page-responsive"] .files-list .simplified-path,
@@ -2901,6 +2925,7 @@
   body[class="page-responsive"] .form-control,
   body[class="page-responsive"] .form-select,
   body[class="page-responsive"] .Counter--gray-light,
+  body[class="page-responsive"] .markdown-body span.frame span span,
   body[class="page-responsive"] .Box-row-link,
   body[class="page-responsive"] .dropdown-item,
   body[class="page-responsive"] .header-nav-current-user .user-profile-link,
@@ -3294,6 +3319,7 @@
   body[class="page-responsive"] .form-group dd h4.is-error,
   body[class="page-responsive"] .form-group.required dt label:after,
   body[class="page-responsive"] .form-group.errored label,
+  body[class="page-responsive"] .markdown-body .absent,
   body[class="page-responsive"] .color-icons .octicon-issue-closed,
   body[class="page-responsive"] .color-icons .closed,
   body[class="page-responsive"] .btn-danger,
@@ -3933,6 +3959,7 @@
   body[class="page-responsive"] .Counter,
   body[class="page-responsive"] .subnav-item,
   body[class="page-responsive"] .subnav-search-input,
+  body[class="page-responsive"] .Box-body .help,
   body[class="page-responsive"] .diffstat,
   body[class="page-responsive"] .dropdown-header,
   body[class="page-responsive"] .color-icons .octicon-git-commit,
@@ -3984,7 +4011,8 @@
   body[class="page-responsive"] .timeline-review-meta .author,
   body[class="page-responsive"] .thread-subscription-description,
   body[class="page-responsive"] .line-comment-info,
-  .markdown-body .email-quoted-reply, .markdown-body .email-signature-reply,
+  body[class="page-responsive"] .markdown-body .email-quoted-reply,
+  body[class="page-responsive"] .markdown-body .email-signature-reply,
   body[class="page-responsive"] .breadcrumb,
   body[class="page-responsive"] .branch-action,
   body[class="page-responsive"] .merge-branch .mergeable-state-message,
@@ -4116,6 +4144,7 @@
   html[prefix] .subnav-search-context .select-menu-item-icon,
   html[prefix] .flash-close, html[prefix] .markdown-body a:not([href]),
   body[class="page-responsive"] .subnav-search-context .select-menu-item-icon,
+  body[class="page-responsive"] .markdown-body a:not([href]),
   body[class="page-responsive"] .details-overlay[open] > .dropdown-item:hover,
   body[class="page-responsive"] .dropdown-item.zeroclipboard-is-hover > .octicon,
   body[class="page-responsive"] .dropdown-item:focus > .octicon,
@@ -4376,6 +4405,7 @@
   .qr-code-table tr, .repository-merge-features .form-group.errored .error,
   .details-overlay[open] > summary::before, details[open] > summary::before,
   body[class="page-responsive"] .details-overlay[open] > summary:before,
+  body[class="page-responsive"] .markdown-body pre > code,
   body[class="page-responsive"] .HeaderMenu-link, body.zhio img.gh-emoji,
   body.zhio .zhc-dropdown__clear-filter,
   body.zhio .zhc-merge-repo-finder__cancel,
@@ -4417,6 +4447,10 @@
   html[prefix] .arrow-btn.collapsed:hover,
   html[prefix] .arrow-btn.expanded:hover, html[prefix] .highlight-graphql .err,
   body[class="page-responsive"] .Label--outline,
+  body[class="page-responsive"] .markdown-body table img,
+  body[class="page-responsive"] .markdown-body .emoji,
+  body[class="page-responsive"] .markdown-body pre code,
+  body[class="page-responsive"] .markdown-body pre tt,
   body[class="page-responsive"] .jump-to-suggestions-path mark,
   body[class="page-responsive"] .btn-link,
   body[class="page-responsive"] .inline-comment-form .inline-note-reply,

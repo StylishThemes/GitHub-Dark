@@ -273,17 +273,19 @@ const sources = [
   },
   {
     crx: "hlepfoohegkhhmjieoechaddaejaokhf", // refined-github
-    prefix: `html.refined-github`
+    prefix: `html.refined-github`,
+    match: ["html", ".refined-github"],
   },
   {
     crx: "ogcgkffhplmphkaahpmffcafajaocjbd", // zenhub
-    prefix: `body.zhio`
+    prefix: `body.zhio`,
+    match: ["body", ".zhio"],
   },
   {
     crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
+    files: ["hovercard.css", "tooltipster.css"],
     prefix: `html.ghh-theme-classic`,
     match: ["html", ".ghh-theme-classic"],
-    files: ["hovercard.css", "tooltipster.css"]
   },
 ];
 
@@ -408,8 +410,9 @@ function parseRule(decls, rule, opts) {
           // skip adding a prefix if it matches a selector in `match`
           let skip = false;
           if (opts.match) {
-            for (const matchSelector of opts.match) {
-              if (selector.split(/\s+/)[0].includes(matchSelector)) {
+            for (const match of opts.match) {
+              const first = selector.split(/\s+/)[0];
+              if ((/^\.#+/.test(first) && first === match) || first.startsWith(match)) {
                 skip = true;
                 break;
               }
