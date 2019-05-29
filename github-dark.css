@@ -36,15 +36,14 @@
   .details-overlay[open] > .dropdown-item:hover,
   .discussion-timeline.team-discussion-timeline .blankslate,
   .not-found-octocat-wrapper:after, ul.comparison-list, .tint-box.transparent,
-  .dashboard-notice .coupon, .getting-started .list-group-item,
-  .topic-tag-outline, .MarketplaceEdit-body .menu-item.selected,
-  .oauth-org-access-details, .oauth-org-access-details .oauth-org-item.revoked,
-  .manage-repo-access-icon, table.files, .qr-code-table .white,
-  .gist-quicksearch-results, .nav-desktop-productDropdown,
-  .nav-desktop-langDropdown, header #search-results-container,
-  html[prefix] .btn-primary .counter, html[prefix] .blankslate code,
-  html[prefix] .markdown-body .csv-data .blob-num, html[prefix] .card,
-  html[prefix] .pagination a, html[prefix] .pagination em,
+  .dashboard-notice .coupon, .topic-tag-outline,
+  .MarketplaceEdit-body .menu-item.selected, .oauth-org-access-details,
+  .oauth-org-access-details .oauth-org-item.revoked, .manage-repo-access-icon,
+  table.files, .qr-code-table .white, .gist-quicksearch-results,
+  .nav-desktop-productDropdown, .nav-desktop-langDropdown,
+  header #search-results-container, html[prefix] .btn-primary .counter,
+  html[prefix] .blankslate code, html[prefix] .markdown-body .csv-data .blob-num,
+  html[prefix] .card, html[prefix] .pagination a, html[prefix] .pagination em,
   html[prefix] .pagination > span,
   body[class="page-responsive"] .markdown-body .csv-data .blob-num,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
@@ -103,7 +102,8 @@
   .cvv-hint-tooltip, .credit-card.normal .signature,
   .billing-addon-items tr.total-row,
   .billing-credit-card .javascript-disabled-overlay, .plan-choice.open,
-  .plan-choice.selected, .branch-action-body, .select-menu-item,
+  .plan-choice.selected, .branch-action-body, .CheckRun-toolbar input:focus,
+  .CheckRun-toolbar input:not(:placeholder-shown), .select-menu-item,
   .coupons .coupon-form-body, .dashboards-overview-cards .blankslate,
   .file .image .border-wrap, .MarketplaceSideNav, .news .alert .gravatar,
   .news .commits li img, .thread-subscription-status,
@@ -368,9 +368,7 @@
     background-color: #1c1c1c;
   }
   /* auto-generated rule for "background: #fafbfc" */
-  ul.comparison-list > li.title, .getting-started .list-group-item:focus,
-  .getting-started .list-group-item:hover,
-  .discussion-post .timeline-inline-comments,
+  ul.comparison-list > li.title, .discussion-post .timeline-inline-comments,
   .discussion-post .reply-comment .review-comment.is-comment-editing,
   .MarketplaceEdit-body .menu-item, .MarketplaceBackground-buffer {
     background: #181818;
@@ -664,7 +662,7 @@
   .sponsors-discussion:after, .apps-quadrangle .CircleBadge:after,
   .markdown-body hr, .Progress,
   .discussion-timeline.team-discussion-timeline:before,
-  .reverse-progress-container, .reverse-progress-bar,
+  .reverse-progress-container, .reverse-progress-bar, .CheckStep .ansibg-w,
   .search-autocomplete-dropdown .autocomplete-category-heading:after,
   .discussion-post .reply-comments-holder:before,
   .marketplace-product-callout .branch-action-item-icon,
@@ -776,6 +774,7 @@
   /* auto-generated rule for "background-color: #24292e" */
   .Header-old, .Header, .discussion-item-locked .discussion-item-icon,
   .discussion-item-unlocked .discussion-item-icon, .reponav-wrapper, .CheckRun,
+  .CheckStep .ansibg-b, .CheckStep .ansibg-bl,
   .project-full-screen .project-header,
   body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
@@ -2538,12 +2537,14 @@
   .btn-octicon.disabled:hover, .commit-id,
   .signed-commit-header .octicon-unverified, .footer-octicon:hover,
   .repohead h1 .octicon, .license-summary-octicon, .neutral-check,
-  .CheckStep-line:before, .dashboard-notice .dismiss, .svg-tip,
-  .page-new-repo .octicon-repo, .news .alert .octicon, .news .alert .time,
-  .news .alert .title .subtle, .org-insights-cards .org-insights-card-legend,
-  .team-member-list .invite-icon, .team-member-list-avatar .octicon,
-  .branch-infobar .muted-link .octicon, .shelf-dismiss,
-  .email-suggestion .octicon-mail,
+  .CheckStep-line .CheckStep-line-number,
+  .CheckStep-line .CheckStep-line-timestamp, .CheckStep .log-line-info,
+  .CheckStep .log-line-verbose, .CheckStep .ansifg-gr,
+  .dashboard-notice .dismiss, .svg-tip, .page-new-repo .octicon-repo,
+  .news .alert .octicon, .news .alert .time, .news .alert .title .subtle,
+  .org-insights-cards .org-insights-card-legend, .team-member-list .invite-icon,
+  .team-member-list-avatar .octicon, .branch-infobar .muted-link .octicon,
+  .shelf-dismiss, .email-suggestion .octicon-mail,
   .gist-quicksearch-results .gist-quicksearch-no-results,
   body[class="page-responsive"] footer li,
   body[class="page-responsive"] .discussion-header .branches,
@@ -2786,8 +2787,7 @@
   .dashboards-overview-cards .summary-stats .metric-1,
   .repo-snipit:hover .repo-snipit-description,
   .repo-snipit:hover .repo-snipit-name,
-  .exploregrid-item:hover .exploregrid-item-title,
-  .getting-started .link-text strong, .issues-reset-query:hover,
+  .exploregrid-item:hover .exploregrid-item-title, .issues-reset-query:hover,
   .milestone-title-link a:hover, .milestone-description .expand-more,
   a.task-progress:hover, .notifications .notifications-more > a,
   .notifications-sso-prompt em, .notification-actions .btn-link:hover,
@@ -2901,8 +2901,9 @@
   .select-menu-item-parent[aria-selected=true].selected .octicon-check,
   .business-menu .business-sub-menu-item.selected,
   .business-menu .business-sub-menu-item:hover, .selected .checks-index-label,
+  .CheckStep-line .dt-fm, .CheckStep .ansifg-b,
   .search-autocomplete-dropdown .autocomplete-text, .CommunityTemplate-highlight,
-  .dashboard-notice h2, .exploregrid-item-title, .getting-started .link-text,
+  .dashboard-notice h2, .exploregrid-item-title,
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
   .select-menu-item[aria-selected=true] > .octicon.label-options-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
@@ -3905,10 +3906,11 @@
   .billing-manager-banner-title, .blob-interaction-bar .octicon-search,
   .status-meta, .merge-pr-more-commits, .range-editor-icon,
   ul.comparison-list > li em, .admin-options-block .policy-enforcement,
-  .code-list .full-path .octicon-repo, ul.simple-conversation-list a.meta,
-  li.contribution .num, .dashboard-notice .dismiss:hover, .ghe-license-status p,
-  .repo-snipit .octicon, .repo-snipit-description, .file .data.empty,
-  .graph-filter .info, .integration-meta-head, .issues-reset-query,
+  .CheckRun-toolbar button[disabled] svg, .code-list .full-path .octicon-repo,
+  ul.simple-conversation-list a.meta, li.contribution .num,
+  .dashboard-notice .dismiss:hover, .ghe-license-status p, .repo-snipit .octicon,
+  .repo-snipit-description, .file .data.empty, .graph-filter .info,
+  .integration-meta-head, .issues-reset-query,
   .table-list-milestones .stat-label, .task-progress,
   .marketplace-product-callout .branch-action-item-icon,
   .MarketplaceEdit-body .CircleIcon, .merge-branch-description,
@@ -6653,6 +6655,14 @@
   }
   .illflow-item.selected:after {
     border-bottom-color: #323 !important;
+  }
+  /* pink */
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/949 */
+  [style*="background: #ffeef8"] {
+    background: #35052060 !important;
+  }
+  [style*="border-bottom: 1px solid #f9b3dd"] {
+    border-color: #642550 !important;
   }
   /* brown */
   #feedHeaderContainer, .feedBackground, .infotip, .form-actions .tip,
