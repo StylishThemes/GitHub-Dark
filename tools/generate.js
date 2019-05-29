@@ -285,7 +285,7 @@ const sources = [
     crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
     files: ["hovercard.css", "tooltipster.css"],
     prefix: `html.ghh-theme-classic`,
-    match: ["html", ".ghh-theme-classic"],
+    match: ["html", ".ghh-theme-"],
   },
 ];
 
