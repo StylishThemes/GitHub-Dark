@@ -4626,7 +4626,7 @@
   }
   /* Refined gh if there are only discussion marked as unread */
   html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
-  	background: linear-gradient(#34d058, #28a745) !important;
+    background: linear-gradient(#34d058, #28a745) !important;
   }
   /* text selection */
   ::selection {
@@ -4694,11 +4694,14 @@
   .dragover textarea, .dragover .drag-and-drop {
     box-shadow: 0 0 1px 1px /*[[base-color]]*/ #4f8cc9 !important;
   }
-  /* below style currently does not work in Firefox, see */
-  /* https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
-  optgroup, optgroup:before {
+  /* below style is workaround for Firefox. */
+  /* see: https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
+  optgroup:before {
     color: #888 !important;
     background-color: #181818 !important;
+  }
+  optgroup {
+    background-color: #191919 !important;
   }
   /* custom checkboxes and radios */
   input[type="checkbox"], input[type="checkbox"]:focus, input[type="radio"],
