@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 
-const {join} = require("path");
-const {promisify} = require("util");
 const css = require("css");
 const cssMediaQuery = require("css-mediaquery");
 const fetch = require("make-fetch-happen");
@@ -10,10 +8,8 @@ const fs = require("fs").promises;
 const parse5 = require("parse5");
 const path = require("path");
 const perfectionist = require("perfectionist");
-const rimraf = promisify(require("rimraf"));
-const tempy = require("tempy");
-const unzipCrx = require("unzip-crx");
 const urlToolkit = require("url-toolkit");
+const unzipper = require("unzipper");
 
 // This list maps old declarations to new ones. Ordering is significant.
 // $ indicates a special value that will generate a set of rules.
@@ -594,30 +590,40 @@ function prepareMappings(mappings) {
 
 async function extensionCss(source) {
   const id = source.crx;
-  const dir = tempy.directory();
   let css = "";
 
   const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=74.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
   if (!res.ok) throw new Error(res.statusText);
 
-  const buf = await res.buffer();
-  const file = join(dir, `${id}.crx`);
-  await fs.writeFile(file, buf);
-  await unzipCrx(file);
-  const manifest = require(join(dir, id, "manifest.json"));
+  const buffer = await res.buffer();
+  const dir = await unzipper.Open.buffer(buffer, {crx: true});
+  const files = {};
+
+  for (const file of dir.files) {
+    files[file.path] = file;
+  }
+
+  if (!files["manifest.json"]) {
+    throw new Error(`manifest.json not found in chrome extension ${id}`);
+  }
+
+  const manifest = JSON.parse(String(await files["manifest.json"].buffer()));
 
   for (const script of manifest.content_scripts || []) {
     if (!Array.isArray(script.css)) continue;
-    for (const cssFile of script.css) {
-      css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
+    for (const file of script.css) {
+      if (Object.keys(files).includes(file)) {
+        css += String(await files[file].buffer()) + "\n";
+      }
     }
   }
 
-  for (const cssFile of source.files || []) {
-    css += await fs.readFile(join(dir, id, cssFile), "utf8") + "\n";
+  for (const file of source.files || []) {
+    if (Object.keys(files).includes(file)) {
+      css += String(await files[file].buffer()) + "\n";
+    }
   }
 
-  await rimraf(dir);
   return css;
 }
 

@@ -85,11 +85,11 @@
   .btn-outline:hover .Counter, [open] > .btn-outline .Counter,
   .btn-outline.disabled, .btn-outline:disabled, .social-count, .form-control,
   .form-select, .input-contrast:focus, .form-group .form-control:focus, .menu,
-  .menu-item.selected, .tabnav-tab.selected, .auth-form-body,
-  .page-responsive .HeaderMenu--logged-out, .btn-transparent:active,
-  .btn-transparent:hover, .Tile:hover, .avatar-child, .AvatarStack-body .avatar,
-  .markdown-body table tr, .markdown-body img, .Box--overlay, .btn-invisible,
-  .commit-icon .octicon, .gh-header,
+  .menu-item.selected, .tabnav-tab.selected, .tabnav-tab[aria-selected=true],
+  .auth-form-body, .page-responsive .HeaderMenu--logged-out,
+  .btn-transparent:active, .btn-transparent:hover, .Tile:hover, .avatar-child,
+  .AvatarStack-body .avatar, .markdown-body table tr, .markdown-body img,
+  .Box--overlay, .btn-invisible, .commit-icon .octicon, .gh-header,
   .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow,
   .gh-header-edit .edit-issue-title:focus, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
@@ -1193,8 +1193,8 @@
     border-color: #404040;
   }
   /* auto-generated rule for "border-color: #d1d5da" */
-  .tabnav-tab.selected, .summarylink:active .summarylink-btn,
-  .summarylink:hover .summarylink-btn,
+  .tabnav-tab.selected, .tabnav-tab[aria-selected=true],
+  .summarylink:active .summarylink-btn, .summarylink:hover .summarylink-btn,
   .ajax-pagination-form.loading .ajax-pagination-btn,
   .plan-choice--experiment.open, .plan-choice--experiment.selected,
   .branch-action-state-closed-dirty .branch-action-body,
@@ -1369,7 +1369,11 @@
     border-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #e1e4e8 !important" */
-  .border, body[class="page-responsive"] .border {
+  .border, .border-sm, .border-md, .border-lg,
+  body[class="page-responsive"] .border,
+  body[class="page-responsive"] .border-sm,
+  body[class="page-responsive"] .border-md,
+  body[class="page-responsive"] .border-lg {
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border-color: #e1e4e8" */
@@ -1458,7 +1462,8 @@
     border-left-color: #343434;
   }
   /* auto-generated rule for "border-left: 1px solid #e1e4e8 !important" */
-  .border-left, .border-sm-left, .border-md-left, .border-lg-left,
+  .border-x, .border-left, .border-sm-left, .border-md-left, .border-lg-left,
+  body[class="page-responsive"] .border-x,
   body[class="page-responsive"] .border-left,
   body[class="page-responsive"] .border-sm-left,
   body[class="page-responsive"] .border-md-left,
@@ -1471,7 +1476,8 @@
     border-right-color: #343434;
   }
   /* auto-generated rule for "border-right: 1px solid #e1e4e8 !important" */
-  .border-right, .border-sm-right, .border-md-right, .border-lg-right,
+  .border-x, .border-right, .border-sm-right, .border-md-right, .border-lg-right,
+  body[class="page-responsive"] .border-x,
   body[class="page-responsive"] .border-right,
   body[class="page-responsive"] .border-sm-right,
   body[class="page-responsive"] .border-md-right,
@@ -2852,8 +2858,9 @@
   .template-previews .discussion-sidebar-heading, body, .Box-row-link, .btn,
   .social-count, .form-control, .form-select, p.explain strong,
   .menu-item.selected, .menu-item .octicon, .tabnav-tab.selected,
-  .tabnav-tab:focus, .tabnav-tab:hover, .UnderlineNav-item:focus,
-  .UnderlineNav-item:hover, .UnderlineNav-item.selected, .text-emphasized,
+  .tabnav-tab[aria-selected=true], .tabnav-tab:focus, .tabnav-tab:hover,
+  .UnderlineNav-item:focus, .UnderlineNav-item:hover,
+  .UnderlineNav-item.selected, .text-emphasized,
   .page-responsive .HeaderMenu--logged-out .header-search-input,
   .page-responsive .HeaderMenu-link:hover,
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
@@ -3622,7 +3629,7 @@
   }
   /* auto-generated rule for "color: rgba(115,92,15,.5)" */
   .page-new-repo .color-private-icon,
-  .org-repos-mini .org-repo-name .octicon-lock, .text-yellow,
+  .org-repos-mini .org-repo-name .octicon-lock, .hx_color-repo-private-icon,
   .page-gist-edit .octicon-gist-secret,
   .gist-quicksearch-results .select-menu-item .octicon-gist-secret {
     color: rgba(204, 187, 68, .5);
@@ -3639,7 +3646,9 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #b08800 !important" */
-  .color-yellow-8, .text-pending, body[class="page-responsive"] .color-yellow-8,
+  .color-yellow-8, .text-yellow, .text-pending,
+  body[class="page-responsive"] .color-yellow-8,
+  body[class="page-responsive"] .text-yellow,
   body[class="page-responsive"] .text-pending {
     color: #cb4 !important;
   }
