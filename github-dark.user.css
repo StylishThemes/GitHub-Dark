@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.6
+@version     1.22.7
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.6 (2019-05-31) */
+/*! Github Dark v1.22.7 (2019-06-03) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -1659,7 +1659,8 @@
   }
   /* auto-generated rule for "border-bottom: 1px solid #e1e4e8 !important" */
   .border-y, .border-bottom, .border-sm-bottom, .border-md-bottom,
-  .border-lg-bottom, body[class="page-responsive"] .border-y,
+  .border-lg-bottom, .preview-selected .tabnav--responsive,
+  body[class="page-responsive"] .border-y,
   body[class="page-responsive"] .border-bottom,
   body[class="page-responsive"] .border-sm-bottom,
   body[class="page-responsive"] .border-md-bottom,
@@ -3490,6 +3491,11 @@
   .timeline-comment-group:target .timeline-comment:before {
     border-right-color: /*[[base-color]]*/;
   }
+  /* auto-generated rule for "background-image: linear-gradient(#54a3ff,#006eed)" */
+  .notification-indicator .mail-status, .pending-cards-status,
+  body[class="page-responsive"] .notification-indicator .mail-status {
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
   /* auto-generated rule for "color: #cb2431" */
   .btn-danger, .form-group dd h4.is-error, .form-group.required dt label:after,
   .form-group.errored label, .status-indicator-failed .octicon-x,
@@ -3819,6 +3825,10 @@
   /* auto-generated rule for "border-right-color: #34d058" */
   .branch-action-state-clean .branch-action-body:before {
     border-right-color: #34d058;
+  }
+  /* auto-generated rule for "background: linear-gradient(#34d058, #28a745)" */
+  html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
+    background: linear-gradient(#34d058, #28a745);
   }
   /* auto-generated rule for "color: rgba(47,38,6,.5)" */
   .u2f-registration-icon {
@@ -4822,6 +4832,21 @@
   .timeline-comment[aria-selected=true] .review-summary .comment-body {
     border-color: /*[[base-color]]*/ !important;
   }
+  @-webkit-keyframes autofill {
+    to {
+      background-color: #181818;
+      background-image: none;
+      color: #ddd;
+    }
+  }
+  input:-webkit-autofill, input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus, textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus,
+  select:-webkit-autofill, select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-animation-name: autofill !important;
+    -webkit-animation-fill-mode: both !important;
+  }
   #com #header .top-nav .dropdown-button:hover .dropdown-caret,
   .header-nav-link:hover .dropdown-caret, .header-nav-link:focus .dropdown-caret,
   .header-navlink:hover .dropdown-caret, .header-navlink:focus .dropdown-caret,
@@ -4833,10 +4858,9 @@
     border-left-color: /*[[base-color]]*/ !important;
     box-shadow: 2px 0 0 /*[[base-color]]*/ inset !important;
   }
-  /* notification icon */
+  /* notification icon - "transparent" border */
   .notification-indicator .mail-status {
-    background: /*[[base-color]]*/ !important;
-    border-color: #1d1d1d !important;
+    border-color: #181818;
   }
   /* text selection */
   ::selection {
@@ -4904,11 +4928,14 @@
   .dragover textarea, .dragover .drag-and-drop {
     box-shadow: 0 0 1px 1px /*[[base-color]]*/ !important;
   }
-  /* below style currently does not work in Firefox, see */
-  /* https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
-  optgroup, optgroup:before {
+  /* below style is workaround for Firefox. */
+  /* see: https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
+  optgroup:before {
     color: #888 !important;
     background-color: #181818 !important;
+  }
+  optgroup {
+    background-color: #191919 !important;
   }
   /* custom checkboxes and radios */
   input[type="checkbox"], input[type="checkbox"]:focus, input[type="radio"],
