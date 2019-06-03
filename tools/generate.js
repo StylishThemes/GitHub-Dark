@@ -187,6 +187,7 @@ let mappings = {
     filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
   "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
+  "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
 
   // red
   "color: #cb2431": "color: #f44",
@@ -211,6 +212,7 @@ let mappings = {
   "$background: rgba(108,198,68,.1)": "#002800",
   "fill: #2cbe4e": "fill: #6cc644",
   "$border: #34d058": "#34d058",
+  "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
 
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
