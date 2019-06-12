@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.13
+@version     1.22.14
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.13 (2019-06-12) */
+/*! Github Dark v1.22.14 (2019-06-12) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -3508,6 +3508,10 @@
   body[class="page-responsive"] .notification-indicator .mail-status {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
+  /* auto-generated rule for "color: #cce888" */
+  .contrib-square {
+    color: /*[[base-color]]*/;
+  }
   /* auto-generated rule for "color: #cb2431" */
   .btn-danger, .form-group dd h4.is-error, .form-group.required dt label:after,
   .form-group.errored label, .status-indicator-failed .octicon-x,
@@ -5719,8 +5723,8 @@
   .tip-body, #assignee, .commit_oneline td, .notifications th, .content table th,
   .repo-collection>ul, #graph_data .tab.selected, .full-width-divider,
   .markdown-body .csv-data th, h3.conversation-list-heading strong,
-  .file-commit-form .commit-form, .facebox-footer, .invited-banner,
-  .gcr-ext-editor-close, .gcr-ext-editor-header, .logos-download-link,
+  .file-commit-form .commit-form, .facebox-footer, .gcr-ext-editor-close,
+  .gcr-ext-editor-header, .logos-download-link,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:hover,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:focus,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:active {
@@ -6530,7 +6534,7 @@
   #user-links > li * button, .timeline-commits .hidden-text-expander a:hover,
   .color-editor-input, #user-links .sign-out-button, .table-list-item label,
   .audit-action-info .context, .token-scope, .segmented-nav li.active a,
-  .tabs > a.selected, .member-username, .invited-banner p, kbd, .kbd,
+  .tabs > a.selected, .member-username, kbd, .kbd,
   .boxed-profile .profile-preview .vcard-fullname, .integrations .site-footer a,
   .add-line-comment, .email-format .email-hidden-toggle a:hover,
   #gollum-editor-help-parent li a.selected,
@@ -6984,6 +6988,11 @@
     border-color: #542 !important;
   }
   /* yellow text */
+  /* inline style, note this does not work when color is not first */
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/952#issuecomment-501451675 */
+  [style^="color: #d3ac3b"] {
+    color: #cb4 !important;
+  }
   /* .bg-pending might be a GitHub bug as it sets the fg */
   .text-pending, .text-renamed, .bg-pending, .page-new-repo .octicon-lock,
   body[class="page-responsive"] .repo-list .private .octicon-lock {
@@ -7054,6 +7063,11 @@
     color: #55a532 !important;
   }
   /* Green text */
+  /* inline style, note this does not work when color is not first */
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/952#issuecomment-501451675 */
+  [style^="color: #28a745"] {
+    color: #6cc644 !important;
+  }
   .text-open, .text-success, .insertions, .cadd, .gi .diff-line-num,
   .authors-and-code .insertions, span.diffstat .diffstat-bar.diff-added,
   span.diffstat .diffstat-bar i.plus,
