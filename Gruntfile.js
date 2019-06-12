@@ -59,16 +59,6 @@ module.exports = function(grunt) {
     });
   }
 
-  function getVersion(level) {
-    const semver = require("semver");
-    const version = pkg.version;
-    return semver.inc(version, level);
-  }
-
-  function getDate() {
-    return (new Date()).toISOString().substring(0, 10);
-  }
-
   // modified from http://stackoverflow.com/a/5624139/145346
   function hexToRgb(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -230,18 +220,6 @@ module.exports = function(grunt) {
             {pattern: /,\u0020{2,}/g, replacement: ", "},
           ]
         }
-      },
-      newVersion: {
-        files: {
-          "github-dark.css": "github-dark.css",
-          "github-dark-userstyle.build.css": "github-dark-userstyle.build.css"
-        },
-        options: {
-          replacements: [{
-            pattern: /v[0-9.]+ \(.+\)/,
-            replacement: "v<%= config.version %> (" + getDate() + ")"
-          }],
-        }
       }
     },
     clean: {
@@ -255,14 +233,13 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      add: "git add github-dark.css github-dark.user.css",
       authors: "bash tools/authors.sh",
       eslint: "npx eslint --quiet --color *.js tools/*.js",
       generate: "node tools/generate",
       imagemin: "bash tools/imagemin.sh",
-      patch: "npx ver -p patch",
-      minor: "npx ver -p minor",
-      major: "npx ver -p major",
+      patch: "npx ver -p -d patch github-dark.css github-dark.user.css",
+      minor: "npx ver -p -d minor github-dark.css github-dark.user.css",
+      major: "npx ver -p -d major github-dark.css github-dark.user.css",
       perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
       stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       update: "npx updates -cu && npm install",
@@ -432,32 +409,23 @@ module.exports = function(grunt) {
 
   // version bump tasks
   grunt.registerTask("patch", "Bump patch version", () => {
-    config.version = getVersion("patch");
     grunt.task.run([
       "lint",
-      "string-replace:newVersion",
       "usercss",
-      "exec:add",
       "exec:patch"
     ]);
   });
   grunt.registerTask("minor", "Bump minor version", () => {
-    config.version = getVersion("minor");
     grunt.task.run([
       "lint",
-      "string-replace:newVersion",
       "usercss",
-      "exec:add",
       "exec:minor"
     ]);
   });
   grunt.registerTask("major", "Bump major version", () => {
-    config.version = getVersion("major");
     grunt.task.run([
       "lint",
-      "string-replace:newVersion",
       "usercss",
-      "exec:add",
       "exec:major"
     ]);
   });
