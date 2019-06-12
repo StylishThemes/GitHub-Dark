@@ -3,7 +3,7 @@
 
 const css = require("css");
 const cssMediaQuery = require("css-mediaquery");
-const fetch = require("make-fetch-happen");
+const doFetch = require("make-fetch-happen");
 const fs = require("fs").promises;
 const parse5 = require("parse5");
 const path = require("path");
@@ -185,6 +185,7 @@ let mappings = {
   `,
   "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
+  "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
 
   // red
   "color: #cb2431": "color: #f44",
@@ -338,6 +339,13 @@ const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 let mappingKeys;
+
+async function fetch(...args) {
+  if (process.argv.includes("-v")) console.info(`fetch ${args[0]}`);
+  const result = await doFetch(...args);
+  if (process.argv.includes("-v")) console.info(`done ${args[0]}`);
+  return result;
+}
 
 async function writeOutput(generatedCss) {
   const css = await fs.readFile(cssFile, "utf8");
