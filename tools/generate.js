@@ -280,8 +280,8 @@ const sources = [
   },
   {
     crx: "ogcgkffhplmphkaahpmffcafajaocjbd", // zenhub
-    prefix: `body.zhio`,
-    match: ["body", ".zhio"],
+    prefix: `body.zh_logged_in`,
+    match: ["body", ".zh_logged_in"],
   },
   {
     crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
