@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/github/tag/StylishThemes/GitHub-Dark.svg?label=version&style=flat" alt="Version">
   </a>
   <a href="https://github.com/StylishThemes/GitHub-Dark/stargazers">
-    <img src="http://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Stars">
+    <img src="https://github-svg-buttons.herokuapp.com/star.svg?user=StylishThemes&repo=GitHub-Dark&style=flat&background=007ec6" alt="Stars">
   </a>
   <a href="https://github.com/StylishThemes/GitHub-Dark/network">
     <img src="https://img.shields.io/github/forks/StylishThemes/GitHub-Dark.svg?style=flat" alt="Forks">
