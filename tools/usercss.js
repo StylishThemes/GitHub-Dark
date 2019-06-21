@@ -72,6 +72,9 @@ function makeTabs(css) {
   pre, .highlight, .diff-table, .tab-size {
     tab-size: ${tab} !important;
     -moz-tab-size: ${tab} !important;
+  }
+  .cm-tab {
+    width: ${tab}ch !important;
   } EOT;`);
   });
   return css.replace("  {{tab-sizes}}", tabs.join("\n"));
