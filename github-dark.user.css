@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.22
+@version     1.22.23
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.22 (2019-06-21) */
+/*! Github Dark v1.22.23 (2019-06-22) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -7146,8 +7146,8 @@
   .compare-pr-placeholder, .compare-cutoff, .diff-cutoff,
   .markdown-body li.added.moved, .repo-private-label, .gist-secret-label,
   .label-private, .stale-files-tab, .signed-out-comment, .commits-list-item em,
-  .unsupported-browser, .prereceive-feedback, .zhc-banner, .code-list em,
-  .issue-list em, .user-list em, .wiki-list em, .blob-code .bg-yellow-light {
+  .unsupported-browser, .prereceive-feedback, .code-list em, .issue-list em,
+  .user-list em, .wiki-list em, .blob-code .bg-yellow-light {
     background: rgba(51, 34, 17, .4) !important;
     border: 1px solid #542 !important;
     color: #ddd !important;
@@ -7748,15 +7748,13 @@
     filter: brightness(64%) !important;
   }
   .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
-  .zhc-board-loading, .zhc-board-loading__message, .zh-octicon-list-unordered,
-  .zh-octicon-pencil, .zh-octicon-inbox, .zh-octicon-plus, .zh-octicon-info,
-  .zh-octicon-milestone, .zh-octicon-chevron-down, .zh-epic-creator-tab-icon,
-  .zh-board-menu-item .zh-octicon-grey, .zh-octicon-search,
+  [class*="zh-octicon"], .zh-epic-creator-tab-icon,
   .zhc-burndown-chart__placeholder, .zhc-selection-button__container:after,
   .zhc-icon--grey-light {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
-  .zhc-selection-item:hover .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]) {
+  .zhc-selection-item:hover .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
+  [class*="zhc-image--placeholder"] {
     filter: invert(100%) brightness(1.4) !important;
   }
   /* move expanded zenhub board toolbar when octotree exists
@@ -8003,7 +8001,7 @@
   .editor-node.bg-white, .editor-node.bg-gray-light {
     background: #1c1c1c !important;
   }
-  body, .ActionsTimeline-item.selected {
+  .ActionsTimeline-item.selected {
     background: #222 !important;
   }
   .blankslate-box, .editor-node {
@@ -8107,7 +8105,7 @@
   }
   /* run history bg */
   .jsx-2157058810 {
-    background-color: #222 !important;
+    background-color: transparent !important;
   }
   /* The dot when creating a new action */
   svg + .jsx-1812009678 {
@@ -8116,6 +8114,10 @@
   /* create new workflow link */
   .css-15cskdj {
     color: /*[[base-color]]*/;
+  }
+  /* workflow title, conflict with main page style */
+  p code {
+    background: none !important;
   }
 }
 @-moz-document domain("help.github.com") {
