@@ -9191,7 +9191,8 @@
   .intercom-chat-card.intercom-chat-card-with-avatar::after,
   .intercom-chat-snippet-card::after,
   .intercom-comment-body-borderless.intercom-comment-body-admin-with-avatar .intercom-comment-body-block-group-text:last-child::after,
-  .intercom-comment-container-borderless-with-avatar .intercom-comment:not(.intercom-comment-with-body)::after {
+  .intercom-comment-container-borderless-with-avatar .intercom-comment:not(.intercom-comment-with-body)::after,
+  [class*="intercom-"]::after {
     border-color: transparent transparent #181818;
   }
   .intercom-chat .intercom-block-paragraph,
@@ -9200,7 +9201,8 @@
   .intercom-note-card .intercom-block-paragraph,
   .intercom-pointer .intercom-block-paragraph,
   .intercom-post .intercom-block-paragraph,
-  .intercom-post-card .intercom-block-paragraph {
+  .intercom-post-card .intercom-block-paragraph,
+  .intercom-messenger-card-text-header {
     color: #bebebe;
   }
   .intercom-borderless-dismiss-button span,
@@ -9212,14 +9214,20 @@
   .intercom-borderless-view-more-button span:hover {
     background-color: #555;
   }
-  .quick-reply-button {
+  .quick-reply-button, button[class*="intercom-"] {
     border-color: /*[[base-color]]*/ #4f8cc9;
     background-color: #222;
     color: /*[[base-color]]*/ #4f8cc9;
   }
-  .quick-reply-button:hover {
+  .quick-reply-button:hover, button[class*="intercom-"]:hover {
     background-color: /*[[base-color]]*/ #4f8cc9;
     color: #eee;
+  }
+  button[class*="intercom-"] svg path {
+    fill: /*[[base-color]]*/ #4f8cc9;
+  }
+  button[class*="intercom-"]:hover svg path {
+    fill: #eee;
   }
   .intercom-launcher [class*="css-"] {
     background: /*[[base-color]]*/ #4f8cc9;
