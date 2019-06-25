@@ -1,5 +1,3 @@
-/* global module, console */
-/* jshint esnext:true, unused:true */
 module.exports = function(grunt) {
   "use strict";
 
