@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.24
+@version     1.22.25
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.24 (2019-06-25) */
+/*! Github Dark v1.22.25 (2019-06-25) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -6143,8 +6143,11 @@
   figure .callout-permalink-big-image, figure .callout-permalink-stacked-image {
     filter: brightness(75%) !important;
   }
-  img#parallax_error_text {
+  img#parallax_error_text, div img[alt*="404"] {
     filter: invert(100%) hue-rotate(180deg) brightness(120%) !important;
+  }
+  img[src*="data:image/jpeg;base64,/9j/4AAQSkZJRgA"] {
+    filter: brightness(90%);
   }
   .header-search-key-slash {
     filter: grayscale(100%) contrast(1.5) !important;
@@ -6200,7 +6203,8 @@
   img[data-canonical-src*="prod/timeseries/"],
   a[href$="vote"] img[data-canonical-src*="/poll/"], #parallax_error_text:not(p),
   img[data-canonical-src*="img.shields.io"][data-canonical-src*="style=social"] {
-    filter: invert(90%) hue-rotate(180deg) contrast(90%) !important;
+    filter: invert(90%) hue-rotate(180deg) contrast(120%) !important;
+    mix-blend-mode: exclusion;
   }
   /* invert problematic emoji */
   /* images */
@@ -8482,6 +8486,12 @@
   h2[style*="background: white"] {
     background: transparent !important;
   }
+  img[src*="octocat-help.svg"] {
+    filter: invert(85%) hue-rotate(-180deg) brightness(125%) contrast(85%) !important;
+  }
+  #intro[style="background-color: #FAFBFC;"] {
+    background-color: #181818 !important;
+  }
   .permalink-hero.whitepaper .permalink-hero-bgShape:after {
     border-color: #252525 !important;
   }
@@ -8639,7 +8649,8 @@
   .intercom-chat-card.intercom-chat-card-with-avatar::after,
   .intercom-chat-snippet-card::after,
   .intercom-comment-body-borderless.intercom-comment-body-admin-with-avatar .intercom-comment-body-block-group-text:last-child::after,
-  .intercom-comment-container-borderless-with-avatar .intercom-comment:not(.intercom-comment-with-body)::after {
+  .intercom-comment-container-borderless-with-avatar .intercom-comment:not(.intercom-comment-with-body)::after,
+  [class*="intercom-"]::after {
     border-color: transparent transparent #181818;
   }
   .intercom-chat .intercom-block-paragraph,
@@ -8648,7 +8659,8 @@
   .intercom-note-card .intercom-block-paragraph,
   .intercom-pointer .intercom-block-paragraph,
   .intercom-post .intercom-block-paragraph,
-  .intercom-post-card .intercom-block-paragraph {
+  .intercom-post-card .intercom-block-paragraph,
+  .intercom-messenger-card-text-header {
     color: #bebebe;
   }
   .intercom-borderless-dismiss-button span,
@@ -8660,14 +8672,20 @@
   .intercom-borderless-view-more-button span:hover {
     background-color: #555;
   }
-  .quick-reply-button {
+  .quick-reply-button, button[class*="intercom-"] {
     border-color: /*[[base-color]]*/;
     background-color: #222;
     color: /*[[base-color]]*/;
   }
-  .quick-reply-button:hover {
+  .quick-reply-button:hover, button[class*="intercom-"]:hover {
     background-color: /*[[base-color]]*/;
     color: #eee;
+  }
+  button[class*="intercom-"] svg path {
+    fill: /*[[base-color]]*/;
+  }
+  button[class*="intercom-"]:hover svg path {
+    fill: #eee;
   }
   .intercom-launcher [class*="css-"] {
     background: /*[[base-color]]*/;
