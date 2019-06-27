@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.26
+@version     1.22.27
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.26 (2019-06-25) */
+/*! Github Dark v1.22.27 (2019-06-27) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -2849,6 +2849,7 @@
   .repository-lang-stats ol.repository-lang-stats-numbers li > span,
   .select-menu-item-disabled, .select-menu-item-disabled:hover .octicon,
   .page-new-repo .form-checkbox.disabled, .type-icon-state-draft,
+  .notifications-v2 .notifications-list-item .notification-list-item-title,
   .oauth-permissions-details.default:not(.delete) .access-details,
   .oauth-permissions-details.default:not(.delete) .permission-title,
   .oauth-permissions-details.none .access-details,
@@ -3273,7 +3274,9 @@
   .select-menu-item[aria-selected=true] > .octicon.label-options-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
   .marketplace-plan-emphasis, .topic-tag-contrast .delete-topic-link,
-  .merge-branch-heading, .oauth-org-access-details .oauth-org-item.on strong,
+  .merge-branch-heading,
+  .notifications-v2 .notifications-list-item.notification-unread .notification-list-item-title,
+  .oauth-org-access-details .oauth-org-item.on strong,
   .oauth-application-whitelist .request-info strong,
   .oauth-application-info .application-title,
   .developer-app-item .developer-app-name,
@@ -3535,7 +3538,9 @@
   .CommunityTemplate-highlight--focus, .newsletter-frequency-choice:hover h3,
   .issues-reset-query:hover .issues-reset-query-icon,
   a.task-progress:hover .progress-bar .progress, .reaction-sort-item:focus,
-  .reaction-sort-item:hover, .org-insights-graph-canvas .metric-0 circle,
+  .reaction-sort-item:hover,
+  .notifications-v2 .notifications-list-item.notification-unread .notification-list-item-unread-indicator,
+  .org-insights-graph-canvas .metric-0 circle,
   .org-insights-graph-canvas path.metric-0,
   .org-insights-svg-tip .metric-0 .legend, .theme-selector-thumbnail.selected,
   .card-filter-autocomplete-dropdown .navigation-focus,
@@ -4709,7 +4714,8 @@
     background: none !important;
   }
   /* auto-generated rule for "background-color: none" */
-  .form-group .form-field-hover {
+  .form-group .form-field-hover,
+  .notifications-v2 .notifications-list-item .notification-list-item-unread-indicator {
     background-color: none;
   }
   /* auto-generated rule for "background-image: none" */
