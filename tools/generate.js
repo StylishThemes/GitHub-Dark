@@ -240,7 +240,7 @@ let mappings = {
   "$border: #8a63d2": "#8368aa",
   "$border: #5e60ba": "#8368aa", // zenhub
 
-  "color: #586069": "color: #949494", // needs to be after #28a745 for mobile draft PRs
+  "color: #586069": "color: #afafaf", // needs to be after #28a745 for mobile draft PRs
 
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
 
