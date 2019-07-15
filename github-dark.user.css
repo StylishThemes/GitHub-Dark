@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.37
+@version     1.22.38
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.37 (2019-07-15) */
+/*! Github Dark v1.22.38 (2019-07-15) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -321,8 +321,7 @@
   .advisory-form .form-control, .advisory-form .previewable-comment-form,
   .credit-card.normal .signature, .billing-addon-items tr.total-row,
   .billing-credit-card .javascript-disabled-overlay, .plan-choice.open,
-  .plan-choice.selected, .branch-action-body, .CheckRun-toolbar input:focus,
-  .CheckRun-toolbar input:not(:placeholder-shown), .select-menu-item,
+  .plan-choice.selected, .branch-action-body, .select-menu-item,
   .coupons .coupon-form-body, .dashboards-overview-cards .blankslate,
   .file .image .border-wrap, .MarketplaceSideNav, .news .alert .gravatar,
   .news .commits li img, .thread-subscription-status,
@@ -630,10 +629,10 @@
   .listgroup-item.disabled, .billing-addon-items tr:nth-child(2n), .plan-choice,
   .linejump .linejump-input, .merge-status-item,
   .branch-action-body .merge-branch-form, .branch-action-body .merge-message,
-  .range-editor, .dashboard-notice, .newsletter-frequency-choice h3,
-  .file-header, .select-menu-item-disabled, .select-menu-item-disabled:hover,
-  .orghead, .manage-repo-access-not-active, .new-label, .filter-bar,
-  .branch-infobar, .oauth-pending-deletion-list-item,
+  .range-editor, .CheckRun-search-input:focus, .dashboard-notice,
+  .newsletter-frequency-choice h3, .file-header, .select-menu-item-disabled,
+  .select-menu-item-disabled:hover, .orghead, .manage-repo-access-not-active,
+  .new-label, .filter-bar, .branch-infobar, .oauth-pending-deletion-list-item,
   .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
   table.capped-list tr:nth-child(2n), .form-group .ais-SearchBox-input,
@@ -1041,6 +1040,7 @@
   /* auto-generated rule for "background-color: #24292e" */
   .Header-old, .Header, .discussion-item-locked .discussion-item-icon,
   .discussion-item-unlocked .discussion-item-icon, .reponav-wrapper, .CheckRun,
+  .CheckRun-search .btn, .CheckRun-search .btn[disabled]:hover,
   .CheckStep .ansibg-b, .CheckStep .ansibg-bl,
   .project-full-screen .project-header,
   body[class="page-responsive"] .Header-old,
@@ -1079,7 +1079,8 @@
     background-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "background-color: hsla(0,0%,100%,.125)" */
-  .header-search-wrapper, .project-full-screen .card-filter-input,
+  .header-search-wrapper, .CheckRun-search-input,
+  .project-full-screen .card-filter-input,
   body[class="page-responsive"] .header-search-wrapper {
     background-color: hsla(0, 0%, 100%, .05);
   }
@@ -1723,8 +1724,7 @@
   .timeline-new-comment .previewable-comment-form .comment-body,
   .new-discussion-timeline .previewable-comment-form .comment-body,
   .discussion-item-review-comment, .pagehead, .select-menu-divider,
-  .select-menu-header, .merge-status-item,
-  body.full-width-p-0 .new-discussion-timeline, .file-header,
+  .select-menu-header, .merge-status-item, .file-header,
   .discussion-item-body .outdated-comment[open] .file-header, .release-entry,
   body[class="page-responsive"] .Box-body,
   body[class="page-responsive"] .jump-to-suggestions-results-container .navigation-item,
@@ -3094,7 +3094,7 @@
   .HeaderMenu-link:hover, .HeaderMenu-details[open] .HeaderMenu-link,
   .header-search-input::placeholder, .reponav-wrapper .reponav,
   .reponav-wrapper .reponav-item, .btn-blurple.disabled, .btn-blurple:disabled,
-  .project-full-screen .project-header,
+  .CheckRun-search-input::placeholder, .project-full-screen .project-header,
   body[class="page-responsive"] .HeaderMenu-link:hover,
   body[class="page-responsive"] .HeaderMenu-details[open] .HeaderMenu-link,
   body[class="page-responsive"] .header-search-input::placeholder,
@@ -3108,7 +3108,9 @@
     color: hsla(0, 0%, 100%, .75);
   }
   .header-search-input:-ms-input-placeholder,
-  .header-search-input::-ms-input-placeholder {
+  .header-search-input::-ms-input-placeholder,
+  .CheckRun-search-input:-ms-input-placeholder,
+  .CheckRun-search-input::-ms-input-placeholder {
     color: hsla(0, 0%, 100%, .75);
   }
   /* auto-generated rule for "color: hsla(0,0%,100%,.75) !important" */
@@ -3274,7 +3276,7 @@
   .select-menu-item-parent[aria-selected=true].selected .octicon-check,
   .business-menu .business-sub-menu-item.selected,
   .business-menu .business-sub-menu-item:hover, .selected .checks-index-label,
-  .CheckStep-line .dt-fm, .CheckStep .ansifg-b,
+  .CheckRun-search-input:focus, .CheckStep .ansifg-b,
   .search-autocomplete-dropdown .autocomplete-text, .CommunityTemplate-highlight,
   .dashboard-notice h2, .exploregrid-item-title,
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
@@ -3339,7 +3341,7 @@
     color: #d2d2d2;
   }
   /* auto-generated rule for "color: #24292e !important" */
-  .color-gray-9, .link-gray-dark, .jump-to-field-active,
+  .color-gray-9, .link-gray-dark, .jump-to-field-active, .CheckStep-line .dt-fm,
   body[class="page-responsive"] .color-gray-9,
   body[class="page-responsive"] .link-gray-dark,
   body[class="page-responsive"] .jump-to-field-active {
@@ -4073,7 +4075,7 @@
     background-color: #cb4 !important;
   }
   /* auto-generated rule for "background: #ffdf5d" */
-  .gpr-square-yellow, .gpr-square-yellow-2 {
+  .gpr-square-yellow, .gpr-square-yellow-2, .CheckStep-line .dt-fm {
     background: #cb4;
   }
   /* auto-generated rule for "background-color: #ffdf5d" */
@@ -4312,7 +4314,7 @@
   .billing-manager-banner-title, .blob-interaction-bar .octicon-search,
   .status-meta, .merge-pr-more-commits, .range-editor-icon,
   ul.comparison-list > li em, .admin-options-block .policy-enforcement,
-  .CheckRun-toolbar button[disabled] svg, .code-list .full-path .octicon-repo,
+  .CheckRun-search .btn[disabled], .code-list .full-path .octicon-repo,
   ul.simple-conversation-list a.meta, li.contribution .num,
   .dashboard-notice .dismiss:hover, .ghe-license-status p, .file .data.empty,
   .graph-filter .info, .integration-meta-head, .issues-reset-query,
@@ -4745,7 +4747,8 @@
   .btn-outline:hover, [open] > .btn-outline, .btn-transparent,
   .btn-transparent:active, .btn-transparent:hover, .btn-invisible,
   .btn-blurple.selected, .btn-blurple:active, [open] > .btn-blurple,
-  .btn-blurple.disabled, .btn-blurple:disabled,
+  .btn-blurple.disabled, .btn-blurple:disabled, .CheckRun-search .btn,
+  .CheckRun-search .btn[disabled],
   .topic-input-container .tag-input .tag-input-inner,
   .oauth-permissions-details.open a.btn-sm,
   .clone-url-button > .clone-url-link:active, .btn-secret.selected,
