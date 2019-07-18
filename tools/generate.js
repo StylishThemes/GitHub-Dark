@@ -125,6 +125,7 @@ let mappings = {
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #1b1f23": "color: #afafaf",
+  "color: #586069": "color: #afafaf",
   "color: #666"   : "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #757575",
@@ -148,6 +149,7 @@ let mappings = {
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
   "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
+
   "fill: #959da5": "fill: #757575",
 
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
@@ -240,8 +242,6 @@ let mappings = {
   "$border: #6f42c1": "#8368aa",
   "$border: #8a63d2": "#8368aa",
   "$border: #5e60ba": "#8368aa", // zenhub
-
-  "color: #586069": "color: #afafaf", // needs to be after #28a745 for mobile draft PRs
 
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
 
