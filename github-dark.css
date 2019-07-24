@@ -93,10 +93,14 @@
   .btn-outline.disabled, .btn-outline:disabled, .social-count, .form-control,
   .form-select, .input-contrast:focus, .form-group .form-control:focus, .menu,
   .menu-item.selected, .tabnav-tab.selected, .tabnav-tab[aria-selected=true],
-  .auth-form-body, .page-responsive .HeaderMenu--logged-out,
-  .btn-transparent:active, .btn-transparent:hover, .Tile:hover, .avatar-child,
-  .AvatarStack-body .avatar, .markdown-body table tr, .markdown-body img,
-  .Box--overlay, .btn-invisible, .commit-icon .octicon, .gh-header,
+  .SideNav-item:active, .SideNav-item[aria-current=page],
+  .SideNav-item[aria-selected=true], .auth-form-body,
+  .page-responsive .HeaderMenu--logged-out, .btn-transparent:active,
+  .btn-transparent:hover, .Tile:hover, .avatar-child, .AvatarStack-body .avatar,
+  .markdown-body table tr, .markdown-body img, .SelectMenu-list,
+  .SelectMenu-item, .SelectMenu-tab[aria-selected=true], .SelectMenu-blankslate,
+  .SelectMenu-loading, .SelectMenu-message, .Toast, .Box--overlay,
+  .btn-invisible, .commit-icon .octicon, .gh-header,
   .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow, .timeline-comment,
   .new-discussion-timeline .composer .comment-form-head.tabnav,
   .discussion-timeline-actions, .pagination-loader-container, .dropdown-menu,
@@ -472,7 +476,7 @@
     background-color: #181818 !important;
   }
   /* auto-generated rule for "background: #ffe" */
-  .oauth-org-access-details :hover {
+  .oauth-org-access-details .oauth-org-item:hover {
     background: #242424;
   }
   /* auto-generated rule for "background-color: #fdfdfd" */
@@ -599,9 +603,10 @@
   /* auto-generated rule for "background-color: #f6f8fa" */
   .Box-header, .Box-row.navigation-focus.sortable-ghost,
   .Box-row--focus-gray.navigation-focus, .Box-row--hover-gray:hover,
-  .Box-row--gray, .menu-item:hover, .subnav-item:focus, .subnav-item:hover,
-  .Tile, .markdown-body table tr:nth-child(2n), .table-list-header,
-  .ajax-pagination-form .ajax-pagination-btn:focus,
+  .Box-row--gray, .menu-item:hover, .SideNav-item:focus, .SideNav-item:hover,
+  .subnav-item:focus, .subnav-item:hover, .Tile,
+  .markdown-body table tr:nth-child(2n), .SelectMenu-modal, .SelectMenu-divider,
+  .table-list-header, .ajax-pagination-form .ajax-pagination-btn:focus,
   .ajax-pagination-form .ajax-pagination-btn:hover,
   .ajax-pagination-form.loading .ajax-pagination-btn, .boxed-group .heading,
   .boxed-group > h3, .commit-sha, .signed-commit-header,
@@ -873,7 +878,8 @@
     background: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da" */
-  .block-diff-neutral, body[class="page-responsive"] .block-diff-neutral {
+  .SideNav-item:before, .block-diff-neutral,
+  body[class="page-responsive"] .block-diff-neutral {
     background-color: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da !important" */
@@ -1371,8 +1377,9 @@
     border-right-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #d1d5da" */
-  .Box, .Box-header, .form-control, .form-select, .menu, .boxed-group-inner,
-  .timeline-comment, .composer.composer-responsive .timeline-comment,
+  .Box, .Box-header, .form-control, .form-select, .menu, .SelectMenu-modal,
+  .boxed-group-inner, .timeline-comment,
+  .composer.composer-responsive .timeline-comment,
   .discussion-item-merged.open .discussion-item-details, kbd, .radio-label,
   .branch-action-body, .dashboard-notice, .setup-form .setup-plans,
   .business-sso .sso-recovery-callout, .org-sso .sso-recovery-callout,
@@ -1550,7 +1557,7 @@
     border-right-color: #343434;
   }
   /* auto-generated rule for "border: solid #e1e4e8" */
-  .merge-status-list {
+  .SelectMenu-tab[aria-selected=true], .merge-status-list {
     border-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #e1e4e8" */
@@ -1589,8 +1596,10 @@
     border-color: #343434;
   }
   /* auto-generated rule for "border-top: 1px solid #e1e4e8" */
-  .Box-row, .Box-footer, .commits-list-item + .commits-list-item,
-  .diff-table .line-comments, .diff-table tr:not(:last-child) .line-comments,
+  .Box-row, .Box-footer, .SideNav-item, .SelectMenu-filter, .SelectMenu-list,
+  .SelectMenu-tabs, .SelectMenu-divider, .SelectMenu-footer,
+  .commits-list-item + .commits-list-item, .diff-table .line-comments,
+  .diff-table tr:not(:last-child) .line-comments,
   .timeline-comment .comment + .comment, .dropdown-divider,
   .comment-reactions.has-reactions, .select-menu-divider, .advisory-form,
   .branch-action-body .merge-branch-form, .branch-action-body .merge-message,
@@ -1636,8 +1645,9 @@
   /* auto-generated rule for "border-bottom: 1px solid #e1e4e8" */
   .Box-body, .menu-item, .menu-heading, .UnderlineNav,
   .jump-to-suggestions-results-container .navigation-item,
-  .pricing-table thead th, .Subhead, .table-list, .boxed-group-list > li,
-  .signed-commit-header, .diff-table tr:not(:last-child) .line-comments,
+  .pricing-table thead th, .SelectMenu-divider, .Subhead, .table-list,
+  .boxed-group-list > li, .signed-commit-header,
+  .diff-table tr:not(:last-child) .line-comments,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .new-discussion-timeline .previewable-comment-form .comment-body,
   .discussion-item-review-comment, .pagehead, .select-menu-divider,
@@ -2068,8 +2078,8 @@
     border-color: #343434 !important;
   }
   /* auto-generated rule for "border-top: 1px solid #eaecef" */
-  .table-list-cell, .table-of-contents li + li,
-  .blob-expanded + tr:not(.blob-expanded) .blob-code,
+  .SelectMenu-item + .SelectMenu-item, .table-list-cell,
+  .table-of-contents li + li, .blob-expanded + tr:not(.blob-expanded) .blob-code,
   .blob-expanded + tr:not(.blob-expanded) .blob-num,
   .blob-expanded .blob-num-hunk,
   tr:not(.blob-expanded) + .blob-expanded .blob-code,
@@ -2362,7 +2372,7 @@
     box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4);
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
-  .notifications-v2 .notifications-list-item:hover {
+  .SelectMenu-modal, .notifications-v2 .notifications-list-item:hover {
     box-shadow: 0 1px 5px #000;
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15) !important" */
@@ -2626,7 +2636,7 @@
   .MarketingBody ul strong, .markdown-body h1 .octicon-link,
   .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link,
   .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link,
-  .markdown-body h6 .octicon-link, .tooltipped::before,
+  .markdown-body h6 .octicon-link, .Toast, .tooltipped::before,
   body[class="page-responsive"] .markdown-body h1 .octicon-link,
   body[class="page-responsive"] .markdown-body h2 .octicon-link,
   body[class="page-responsive"] .markdown-body h3 .octicon-link,
@@ -2644,11 +2654,12 @@
   .btn .Counter, .form-checkbox .note, .hfields .form-group dt label, .note,
   .drag-and-drop, .drag-and-drop-error-info, h2.account, p.explain,
   .menu-heading, .tabnav-tab, .tabnav-extra,
-  .filter-list.pjax-active .filter-item, .filter-item, .subnav-item,
-  .subnav-search-input, .UnderlineNav-item, .lead, .pullquote,
+  .filter-list.pjax-active .filter-item, .filter-item, .SideNav-item,
+  .subnav-item, .subnav-search-input, .UnderlineNav-item, .lead, .pullquote,
   .MarketingBody > p, .MarketingBody ol, .MarketingBody ul,
   .SegmentedNav .selected, .Label--gray, .Label--outline, .Counter,
-  .Subhead-description, .table-list-header-meta,
+  .SelectMenu-item, .Subhead-description, .Toast-dismissButton:focus,
+  .Toast-dismissButton:hover, .table-list-header-meta,
   .table-list-header-toggle .btn-link, .suggester li small, .Box-body .help,
   .boxed-group .heading a.boxed-group-breadcrumb,
   .boxed-group > h3 a.boxed-group-breadcrumb, .boxed-group-inner,
@@ -2975,13 +2986,15 @@
     color: #949494 !important;
   }
   /* auto-generated rule for "color: #6a737d" */
-  ::placeholder, .UnderlineNav-item:focus .UnderlineNav-octicon,
+  ::placeholder, .SideNav-icon, .UnderlineNav-item:focus .UnderlineNav-octicon,
   .UnderlineNav-item:hover .UnderlineNav-octicon,
   .UnderlineNav-item.selected .UnderlineNav-octicon,
   .jump-to-suggestions-path .jump-to-octicon, .subnav-link,
   .home-hero-signup .form-control-note,
   .SegmentedNav .gpr-testimonial-nav-link:hover, .markdown-body blockquote,
-  .markdown-body h6, .table-list, .autocomplete-item .organization-member,
+  .markdown-body h6, .SelectMenu-closeButton, .SelectMenu-tab,
+  .SelectMenu-divider, .SelectMenu-footer, .table-list,
+  .autocomplete-item .organization-member,
   .full-commit .branches-list li.loading,
   .full-commit .branches-list li.pull-request, .branches-tag-list li.loading,
   .commit-branches, .table-of-contents .octicon-diff-renamed,
@@ -3063,7 +3076,8 @@
   }
   /* auto-generated rule for "color: #959da5" */
   p.explain .octicon, .UnderlineNav-octicon,
-  .home-hero-signup .form-control-note .notice-highlight, .btn-octicon.disabled,
+  .home-hero-signup .form-control-note .notice-highlight,
+  .Toast-dismissButton:active, .btn-octicon.disabled,
   .btn-octicon.disabled:hover, .commit-id,
   .signed-commit-header .octicon-unverified, .footer-octicon:hover,
   .repohead h1 .octicon, .license-summary-octicon, .neutral-check,
@@ -3298,10 +3312,11 @@
   .btn-blue .Counter, .btn-outline, .btn-outline.selected .Counter,
   .btn-outline:active .Counter, .btn-outline:hover .Counter,
   [open] > .btn-outline .Counter, .social-count:hover, .btn-link,
-  .drag-and-drop-error-info a, a.tabnav-extra:hover, .pagination a,
-  .pagination em, .pagination span, .btn-outline-mktg:hover, .link-mktg:hover,
-  .illflow-blue .illflow-item .illflow-item-heading, .MarketingBody-lead a:hover,
-  a.branch-name, .ajax-pagination-form .ajax-pagination-btn, .btn-invisible,
+  .drag-and-drop-error-info a, a.tabnav-extra:hover, .SideNav-subItem,
+  .pagination a, .pagination em, .pagination span, .btn-outline-mktg:hover,
+  .link-mktg:hover, .illflow-blue .illflow-item .illflow-item-heading,
+  .MarketingBody-lead a:hover, a.branch-name,
+  .ajax-pagination-form .ajax-pagination-btn, .btn-invisible,
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
   .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
   .btn-invisible:focus, .btn-invisible:hover, .btn-octicon:hover,
@@ -3385,15 +3400,20 @@
   .social-count, .form-control, .form-select, p.explain strong,
   .menu-item.selected, .menu-item .octicon, .tabnav-tab.selected,
   .tabnav-tab[aria-selected=true], .tabnav-tab:focus, .tabnav-tab:hover,
-  .UnderlineNav-item:focus, .UnderlineNav-item:hover,
-  .UnderlineNav-item.selected, .text-emphasized,
+  .SideNav-item:focus, .SideNav-item:hover, .SideNav-item[aria-current=page],
+  .SideNav-item[aria-selected=true], .SideNav-subItem:focus,
+  .SideNav-subItem:hover, .SideNav-subItem[aria-current=page],
+  .SideNav-subItem[aria-selected=true], .UnderlineNav-item:focus,
+  .UnderlineNav-item:hover, .UnderlineNav-item.selected, .text-emphasized,
   .page-responsive .HeaderMenu--logged-out .header-search-input,
   .page-responsive .HeaderMenu-link:hover,
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
   .header-nav-current-user .user-profile-link, .subnav-link:hover,
   .site-subnav-nav .selected, .illflow-item.selected .illflow-item-heading,
   .home-hero-signup .form-control-lg::placeholder, .Counter--gray-light,
-  .markdown-body span.frame span span, .table-list-header-toggle .btn-link:hover,
+  .markdown-body span.frame span span, .SelectMenu-tab[aria-selected=true],
+  .SelectMenu-item[aria-checked=true], .Toast--warning .Toast-icon,
+  .table-list-header-toggle .btn-link:hover,
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
   .table-list-header-toggle .select-menu-button.selected,
@@ -3686,7 +3706,7 @@
   [open] > .btn-outline, .filter-list.pjax-active .filter-item.pjax-active,
   .filter-item.selected, .subnav-item.selected, .subnav-item.selected:focus,
   .subnav-item.selected:hover, .pagination .current, .pagination .current:hover,
-  .notification-indicator:hover .mail-status, .btn-mktg:hover,
+  .notification-indicator:hover .mail-status, .btn-mktg:hover, .Toast-icon,
   .autocomplete-item.navigation-focus, .autocomplete-item.selected,
   .autocomplete-item:hover, .autocomplete-item[aria-selected=true],
   .email-format .email-hidden-toggle a:active,
@@ -3927,7 +3947,8 @@
   }
   /* auto-generated rule for "background-color: #d73a49" */
   .conflict-gutter-marker:after, .conflict-gutter-marker:before,
-  .boxed-group.dangerzone > h3, .branch-action-state-error .branch-action-icon,
+  .Toast--error .Toast-icon, .boxed-group.dangerzone > h3,
+  .branch-action-state-error .branch-action-icon,
   .check-annotation-failure:after, .topic-tag-action .remove-topic-button:hover,
   .hook-delivery-response-status,
   .session-device .session-state-indicator.revoked,
@@ -4095,8 +4116,8 @@
     color: #6cc644 !important;
   }
   /* auto-generated rule for "background-color: #28a745" */
-  .btn-primary, .btn-primary-mktg:hover, .billing-plans .coupon td,
-  .plan-choice--experiment.open .plan-choice-icon,
+  .btn-primary, .btn-primary-mktg:hover, .Toast--success .Toast-icon,
+  .billing-plans .coupon td, .plan-choice--experiment.open .plan-choice-icon,
   .plan-choice--experiment.selected .plan-choice-icon,
   .plan-choice--experiment.plan-choice--green.open .plan-choice-icon,
   .plan-choice--experiment.plan-choice--green.selected .plan-choice-icon,
@@ -4593,10 +4614,10 @@
   .page-responsive .HeaderMenu--logged-out .dropdown-menu,
   .header-search-wrapper, .header-search-wrapper.focus, .header-search-input,
   .header-search-input:focus, .blankslate-clean-background, .Label--outline,
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
-  .btn-invisible:focus, .btn-invisible:hover, .kb-konami-dialog,
-  .btn-blurple.disabled, .btn-blurple:disabled,
+  .SelectMenu-tab[aria-selected=true], .btn-invisible.selected,
+  .btn-invisible.zeroclipboard-is-active, .btn-invisible.zeroclipboard-is-hover,
+  .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover,
+  .kb-konami-dialog, .btn-blurple.disabled, .btn-blurple:disabled,
   .search-form-fluid .search-page-input,
   .search-form-fluid .search-page-input:focus,
   .dashboards-overview-cards .blankslate,
@@ -4815,7 +4836,7 @@
   }
   /* auto-generated rule for "background-color: transparent" */
   a, .btn-link, .inline-form .btn-plain, .tabnav-tab,
-  .filter-list.pjax-active .filter-item,
+  .filter-list.pjax-active .filter-item, .SideNav-item, .SideNav-subItem,
   .session-authentication .header-logged-out,
   .session-authentication .auth-form-header,
   .session-authentication.enterprise .header-logged-out,
@@ -4823,6 +4844,7 @@
   .page-responsive .HeaderMenu--logged-out, .jump-to-suggestions-path mark,
   .btn-transparent, .Label--outline, .markdown-body table img,
   .markdown-body .emoji, .markdown-body pre code, .markdown-body pre tt,
+  .SelectMenu-closeButton, .SelectMenu-tab, .Toast-dismissButton,
   .comment-body .highlight, .timeline-commits td, .full-commit .btn-outline,
   .full-commit .btn-outline:disabled, .selected-line.blob-code .x,
   .new-discussion-timeline .previewable-comment-form .comment-body,
