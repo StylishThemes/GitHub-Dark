@@ -224,12 +224,14 @@ let mappings = {
   "color: #613A00": "color: #bba257",
   "$background: #ffd33d": "#cb4",
   "$background: #ffdf5d": "#cb4",
+  "$background: #fffdef": "#261d08",
   "$background: #fffbdd": "#261d08",
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
   "$border: #ffdf5d": "#321",
   "$border: #d9d0a5": "#542",
   "$border: #dca874": "#542",
+  "$border: #e5d999": "#542",
 
   // light yellow
   "$background: #fff5b1": "#651",
