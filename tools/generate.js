@@ -199,6 +199,7 @@ let mappings = {
   "$background: #ffdce0": "#300",
   "fill: #cb2431": "fill: #f44",
   "$border: #d73a49": "#b00",
+  "$border: #cea0a5": "#f44",
 
   // orange
   "color: #a04100": "color: #f3582c",
