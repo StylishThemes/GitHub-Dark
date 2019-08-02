@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.58
+@version     1.22.59
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.58 (2019-08-01) */
+/*! Github Dark v1.22.59 (2019-08-02) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -5696,10 +5696,6 @@
   #commit-description-textarea {
     resize: vertical !important;
   }
-  /* GitHub Bug: Fix rendering artifacts in Firefox on language graph */
-  body .repository-lang-stats-graph {
-    height: auto !important;
-  }
   /* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
   .reponav-item .counter, .reponav-item .Counter {
@@ -5798,11 +5794,11 @@
   .setup-info-module .features-list .list-divider,
   .setup-wrapper .oauth-permissions, .swipe .swipe-frame .swipe-shell,
   ul.search-results, .orgs-help-shelf-content .orgs-help-divider,
-  .repository-lang-stats-graph, .gist-quicksearch-result-group, .listgroup,
-  .listgroup-item + .listgroup-item, .user-key-badge, .newsfeed-placeholder,
-  .progress-bar-inline .progress-bar, .menu-heading, body .border-gray-dark,
-  .discussion-item-review .blob-wrapper, .bot-identifier, .counter, .Counter,
-  div.marketplace-product-callout, .CodeMirror-dialog-top, .project-card:hover {
+  .gist-quicksearch-result-group, .listgroup, .listgroup-item + .listgroup-item,
+  .user-key-badge, .newsfeed-placeholder, .progress-bar-inline .progress-bar,
+  .menu-heading, body .border-gray-dark, .discussion-item-review .blob-wrapper,
+  .bot-identifier, .counter, .Counter, div.marketplace-product-callout,
+  .CodeMirror-dialog-top, .project-card:hover {
     border-color: #484848 !important;
   }
   .btn, pre, h1, h2, h3, table, table tr, table td, table th, blockquote,
@@ -6144,12 +6140,11 @@
   .blob-num-context, #user-content-toc td, .markdown-body table tr:nth-child(2n) {
     background: #141414 !important;
   }
-  .blame .blob-num, .blame-blob-num, .repository-lang-stats, .collection-card,
-  .team-grid .team, .code-list .divider .blob-num,
-  .code-list .divider .blob-code, .expandable-line-num .diff-expander:hover,
-  .pagination a, .build-status-item, .more-branches, .plan-choice.open,
-  .uploaded-files>li.delete, .bg-gray-light, .more-repos,
-  .billing-per-seat-callout:after, .code-list-item .blob-num,
+  .blame .blob-num, .blame-blob-num, .collection-card, .team-grid .team,
+  .code-list .divider .blob-num, .code-list .divider .blob-code,
+  .expandable-line-num .diff-expander:hover, .pagination a, .build-status-item,
+  .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
+  .more-repos, .billing-per-seat-callout:after, .code-list-item .blob-num,
   .blob-num.js-line-number, .bg-gray-light.disabled,
   .MarketplaceBackground-buffer, .team-left-column.bg-white, .overall-summary,
   .markdown-body table tr {
@@ -7093,10 +7088,10 @@
   }
   pre, body, #languages a.bar, .lineoption p, table.notifications th,
   .usagestats dl dt.numbers, .commit-preview p.name .date, .download-list h4,
-  .fieldgroup p.explain.planusage, ol.repository-lang-stats-numbers li .lang,
-  .explore h2, .tabnav .active a, .vcard-username, #markdown-toc li a,
-  .tag-info .tag-name, .language, .featured-callout h2, .commit-title .message,
-  .files .message, .revision .creator, .mini-icon.search-input, .lines-changed,
+  .fieldgroup p.explain.planusage, .explore h2, .tabnav .active a,
+  .vcard-username, #markdown-toc li a, .tag-info .tag-name, .language,
+  .featured-callout h2, .commit-title .message, .files .message,
+  .revision .creator, .mini-icon.search-input, .lines-changed,
   .lines-changed:hover, .discussion-topic-author a, .graph .data .number,
   .content, .box-title, a.box-action, #blog-main .pagehead h1 a.title,
   .octofication .message p, .repolist .description, .addon p, .keyboard-mappings,
@@ -7166,21 +7161,20 @@
   .feature .intro, span.diffstat, span.diffstat a, .commit .commit-branches a,
   #readme .plain, .news blockquote, .news blockquote p, .collection-stat,
   .calendar-graph .contrib-details div .lbl, .tag-info a, a.browse-button,
-  .ghead .dir, .repository-lang-stats .percent, .comment-header-action-text a,
-  .comment-header-right a, .gist-item .creator, .dashboard-tabs a,
-  #graph_data .tab a, .pull-info, .list-group-item .list-group-item-summary a,
-  #contributors .capped-card .cmt, .boxed-group-list .access-level,
-  h3.conversation-list-heading, a.filter-tab, .starred-repo p.description,
-  .commit-desc pre, .org-repo-stats a, .org-repo-updated a,
-  .org-repo-description, .org-repo-forked a, .commandbar .display table td span,
-  .clone-options, .pulse-section, .discussion-sidebar p,
-  .discussion-topic-header .discussion-topic-author, .gist-description, .explain,
-  p.subtext, .team-grid .team-description, .orgs-nav .org-nav-item,
-  .form-actions-protip .protip, .discussion-item .author,
-  .inline-comments .comment-count, .sidebar-heading, .clear-issue-filters a,
-  .render-view-modes li.active:before, ul.comparison-list > li em,
-  .marketing-benefits .column p, .sub-nav li a, .headlines a .date,
-  .sidebar-module ul ul li span, .merge-branch-description,
+  .ghead .dir, .comment-header-action-text a, .comment-header-right a,
+  .gist-item .creator, .dashboard-tabs a, #graph_data .tab a, .pull-info,
+  .list-group-item .list-group-item-summary a, #contributors .capped-card .cmt,
+  .boxed-group-list .access-level, h3.conversation-list-heading, a.filter-tab,
+  .starred-repo p.description, .commit-desc pre, .org-repo-stats a,
+  .org-repo-updated a, .org-repo-description, .org-repo-forked a,
+  .commandbar .display table td span, .clone-options, .pulse-section,
+  .discussion-sidebar p, .discussion-topic-header .discussion-topic-author,
+  .gist-description, .explain, p.subtext, .team-grid .team-description,
+  .orgs-nav .org-nav-item, .form-actions-protip .protip,
+  .discussion-item .author, .inline-comments .comment-count, .sidebar-heading,
+  .clear-issue-filters a, .render-view-modes li.active:before,
+  ul.comparison-list > li em, .marketing-benefits .column p, .sub-nav li a,
+  .headlines a .date, .sidebar-module ul ul li span, .merge-branch-description,
   .gist-item ul.meta > li > a, ul#categories li h5 a,
   .render-view-modes li.active, .user-leaderboard-list .repo-list-item .repo,
   .repo-stats li a, .about p, dl.form > dd p.note, p.subdued,
@@ -7820,10 +7814,6 @@
   .form-select {
     background: #181818 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAQAAAAua3X8AAAARklEQVR4AWNABWcazjQg8zGl/wNhA15piBL80gglmNKYSjClMZUgpDGVwKXxKBl4QNiRBLxJIKAIBzXhyCIc3YQTDMEkBwBplPJRxEMa4wAAAABJRU5ErkJggg==") no-repeat right 8px center !important;
     background-size: 8px 10px !important;
-  }
-  /* language stats bar */
-  .repository-lang-stats-graph {
-    height: 9px !important;
   }
   /* no border */
   .multiple-avatars, .multiple-avatars:before, table.files, table.files tr,
