@@ -7463,6 +7463,16 @@
     border-top: 1px solid #6cc644 !important;
     border-bottom: 1px solid #6cc644 !important;
   }
+  /* Make text selection work over file path separators because in Firefox */
+  /* a text selection can not start over a pseudo element. The precise values */
+  /* are to match the rendering of GitHub's single-space pseudo contents */
+  .breadcrumb .separator {
+    margin-left: .283em;
+    margin-right: .283em;
+  }
+  .breadcrumb .separator::after, .breadcrumb .separator::before {
+    content: none;
+  }
   /* sticky header tweaks */
   .pr-toolbar.is-stuck + .toolbar-shadow {
     background: #181818 !important;
