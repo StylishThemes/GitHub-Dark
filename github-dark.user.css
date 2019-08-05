@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.60
+@version     1.22.61
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.60 (2019-08-02) */
+/*! Github Dark v1.22.61 (2019-08-05) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -387,7 +387,6 @@
   body[class="page-responsive"] .mobile-toc,
   body[class="page-responsive"] .discussion-labels,
   body[class="page-responsive"] .discussion-projects,
-  body[class="page-responsive"] .discussion-pull-request-references,
   body[class="page-responsive"] .discussion-block-title,
   body[class="page-responsive"] .timeline-review-container .inline-comment-form,
   body[class="page-responsive"] .discussion-reply,
@@ -2966,7 +2965,6 @@
   body[class="page-responsive"] .discussion-header .branches .branch-name,
   body[class="page-responsive"] .discussion-labels .octicon,
   body[class="page-responsive"] .discussion-projects .octicon,
-  body[class="page-responsive"] .discussion-pull-request-references .octicon,
   body[class="page-responsive"] .discussion-starting-comment time,
   body[class="page-responsive"] .discussion-starting-comment .num,
   body[class="page-responsive"] .discussion-starting-comment .username,
@@ -4869,7 +4867,9 @@
     color: inherit !important;
   }
   /* auto-generated rule for "box-shadow: none" */
-  .btn.disabled, .btn:disabled, .btn-primary.disabled, .btn-primary:disabled,
+  body.intent-mouse [role=button]:focus, body.intent-mouse [tabindex]:focus,
+  body.intent-mouse button:focus, body.intent-mouse summary:focus, .btn.disabled,
+  .btn:disabled, .btn-primary.disabled, .btn-primary:disabled,
   .btn-purple.disabled, .btn-purple:disabled, .btn-blue.disabled,
   .btn-blue:disabled, .btn-danger.disabled, .btn-danger:disabled,
   .btn-outline.disabled, .btn-outline:disabled,
@@ -6372,7 +6372,7 @@
   .btn.btn-invisible:hover,
   .application-main [style*="background: linear-gradient(#ffffff, #fcfcfc)"],
   section[style="background-color: #fafbfc;"], div[style="background:#fafbfc;"],
-  .team-left-column {
+  .team-left-column, .render-container.js-actions-page {
     background: none !important;
   }
   body[class="page-responsive"] .repo-list .private {
@@ -7665,17 +7665,27 @@
     box-shadow: 0 0 0 4px #181818 !important;
   }
   /* add borders to full-page flash on top of repos */
-  #js-repo-pjax-container > .flash-full.flash-warn {
+  main > .flash-full.flash-warn {
     border-top: 1px solid #bba257 !important;
     border-bottom: 1px solid #bba257 !important;
   }
-  #js-repo-pjax-container > .flash-full.flash-error {
+  main > .flash-full.flash-error {
     border-top: 1px solid #f44 !important;
     border-bottom: 1px solid #f44 !important;
   }
-  #js-repo-pjax-container > .flash-full.flash-success {
+  main > .flash-full.flash-success {
     border-top: 1px solid #6cc644 !important;
     border-bottom: 1px solid #6cc644 !important;
+  }
+  /* Make text selection work over file path separators because in Firefox */
+  /* a text selection can not start over a pseudo element. The precise values */
+  /* are to match the rendering of GitHub's single-space pseudo contents */
+  .breadcrumb .separator {
+    margin-left: .283em;
+    margin-right: .283em;
+  }
+  .breadcrumb .separator::after, .breadcrumb .separator::before {
+    content: none;
   }
   /* sticky header tweaks */
   .pr-toolbar.is-stuck + .toolbar-shadow {
