@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.63
+@version     1.22.64
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.63 (2019-08-08) */
+/*! Github Dark v1.22.64 (2019-08-09) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -585,8 +585,8 @@
   body.zh_logged_in .zhc-spinner:not(.zhc-spinner--no-outline),
   body.zh_logged_in .zhc-table .zhc-table__cell,
   body.zh_logged_in .zhc-table-expand-button .zhc-btn:active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active:hover,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
   body.zh_logged_in .zhc-team-members__content,
   body.zh_logged_in .zhc-timeline-button,
   body.zh_logged_in .zhc-timeline-button:active,
@@ -740,7 +740,6 @@
   body.zh_logged_in .zhc-sidebar-nav-item--is-active,
   body.zh_logged_in .zhc-workspace-header:hover,
   body.zh_logged_in .zhc-table .zhc-table__cell--header,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav,
   body.zh_logged_in .zhc-team-members__searchbar,
   body.zh_logged_in .zhc-team-members__searchbar input,
   body.zh_logged_in .zhc-timeline-button--color-secondary.zhc-timeline-button--variant-outlined:active,
@@ -918,7 +917,7 @@
   body.zh_logged_in .zhc-sidebar-profile--is-active .zhc-sidebar-profile__toggle,
   body.zh_logged_in .zhc-sidebar-profile__toggle:hover,
   body.zh_logged_in .zhc-sidebar-profile__item:hover,
-  body.zh_logged_in .zhc-tabs__nav-item:hover,
+  body.zh_logged_in .zhc-tab-navitem--full:hover,
   body.zh_logged_in .zhc-timeline-button--color-secondary,
   body.zh_logged_in .zhc-timeline-button--color-secondary[disabled],
   body.zh_logged_in .zhc-timeline-button--color-secondary[disabled]:active,
@@ -1206,7 +1205,7 @@
   body.zh_logged_in .zhc-sidebar-nav-item__action,
   body.zh_logged_in .zhc-sidebar-profile__toggle,
   body.zh_logged_in .zhc-sidebar-profile__item,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item,
+  body.zh_logged_in .zhc-tab-navitem--dropdown,
   body.zh_logged_in .zhc-timeline-expand-toggle,
   body.zh_logged_in .zhc-workspace-form__close,
   body.zh_logged_in .zhc-workspace-switcher__x,
@@ -1998,12 +1997,12 @@
   body.zh_logged_in .zhc-stripe-billing .StripeElement,
   body.zh_logged_in .zhc-stripe-billing input,
   body.zh_logged_in .zhc-table-expand-button,
-  body.zh_logged_in .zhc-tabs__nav-item, body.zh_logged_in .zhc-tag,
+  body.zh_logged_in .zhc-tab-navitem--full, body.zh_logged_in .zhc-tag,
   body.zh_logged_in .zhc-team-members__content,
   body.zh_logged_in .zhc-team-members__searchbar,
   body.zh_logged_in .zhc-sidebar-input__input,
   body.zh_logged_in .zhc-sidebar-project-display__toggle--collapsed,
-  body.zh_logged_in .zhc-timeline-button,
+  body.zh_logged_in .zhc-timeline > *, body.zh_logged_in .zhc-timeline-button,
   body.zh_logged_in .zhc-timeline-expand-toggle:hover,
   body.zh_logged_in .zhc-timeline-expand-toggle:active,
   body.zh_logged_in .zhc-timeline-expand-toggle:focus,
@@ -2104,8 +2103,8 @@
   body.zh_logged_in .zhc-sidebar-nav-item__action:hover,
   body.zh_logged_in .zhc-sidebar-nav-item__action--is-active,
   body.zh_logged_in .zhc-sidebar-profile__item:hover,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active:hover,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
   body.zh_logged_in .zhc-timeline-button,
   body.zh_logged_in .zhc-timeline-button[disabled],
   body.zh_logged_in .zhc-timeline-button[disabled]:active,
@@ -2193,8 +2192,8 @@
   body.zh_logged_in .zhc-selection-list--issue-card-actions .zhc-issue-card__actions__dependency-section,
   body.zh_logged_in .zhc-sidebar-profile__header,
   body.zh_logged_in .zhc-table .zhc-table__cell,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav,
-  body.zh_logged_in .zhc-team-member, body.zh_logged_in .zhc-topbar,
+  body.zh_logged_in .zhc-tabs-nav--dropdown, body.zh_logged_in .zhc-team-member,
+  body.zh_logged_in .zhc-topbar,
   body.zh_logged_in .zhc-workspace-form-section__tip,
   body.zh_logged_in .zhc-workspace-form-section__title {
     border-bottom-color: #343434;
@@ -2458,8 +2457,8 @@
   body[class="page-responsive"] .tabs > a.selected,
   body.zh_logged_in .zh-epic-creator-tab.selected,
   body.zh_logged_in .DateInput--with-caret::after,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active:hover,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
   body.zh_logged_in .zhc-tooltip--info-tip.zhc-tooltip--bottom .zhc-tooltip__content::before,
   .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-background {
     border-bottom-color: #181818;
@@ -2741,8 +2740,8 @@
   body.zh_logged_in .zhc-sidebar-nav-item__link,
   body.zh_logged_in .zhc-sidebar-nav-item__sub-item:hover,
   body.zh_logged_in .zhc-sidebar-profile__name,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item--active:hover,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active,
+  body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
   body.zh_logged_in .zhc-timeline-button,
   body.zh_logged_in .zhc-timeline-button[disabled],
   body.zh_logged_in .zhc-timeline-button[disabled]:active,
@@ -3096,6 +3095,8 @@
   body.zh_logged_in .zhc-issue-card__main,
   body.zh_logged_in .zhc-comment__timestamp,
   body.zh_logged_in .zhc-comment__timestamp a,
+  body.zh_logged_in .zhc-sidebar-active-pipeline__direction .zhc-icon--high-priority--hovered:not(.zhc-icon--high-priority--disabled):not(.zhc-icon--high-priority--has-priority) .zhc-icon--high-priority__pin-icon,
+  body.zh_logged_in .zhc-sidebar-active-pipeline__direction .zhc-icon--high-priority:hover:not(.zhc-icon--high-priority--disabled):not(.zhc-icon--high-priority--has-priority) .zhc-icon--high-priority__pin-icon,
   body.zh_logged_in .zhc-item-table__meta-title,
   body.zh_logged_in .zhc-manage-plan__subtitle,
   body.zh_logged_in .zhc-manage-plan__renewal-date,
@@ -3133,7 +3134,7 @@
   body.zh_logged_in .zhc-shortcuts-guide__section,
   body.zh_logged_in .zhc-board-settings-item,
   body.zh_logged_in .zhc-sidebar-profile__item,
-  body.zh_logged_in .zhc-tabs__nav-item, body.zh_logged_in .zhc-tag__text,
+  body.zh_logged_in .zhc-tab-navitem, body.zh_logged_in .zhc-tag__text,
   body.zh_logged_in .zhc-sidebar-input__char-count,
   body.zh_logged_in .zhc-timeline-button--color-secondary,
   body.zh_logged_in .zhc-timeline-button--color-secondary[disabled],
@@ -4701,8 +4702,8 @@
   body.zh_logged_in .zhc-search-bar--is-active .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-button--active-filter,
   body.zh_logged_in .zhc-selection-button--active-filter.zhc-selection-button--active-filter,
-  body.zh_logged_in .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs__nav-item--active:hover,
+  body.zh_logged_in .zhc-tab-navitem--full--active,
+  body.zh_logged_in .zhc-tab-navitem--full--active:hover,
   body.zh_logged_in .zhc-timeline-button--color-primary.zhc-timeline-button--variant-outlined,
   body.zh_logged_in .zhc-timeline-button--color-primary.zhc-timeline-button--variant-outlined[disabled],
   body.zh_logged_in .zhc-timeline-button--color-primary.zhc-timeline-button--variant-outlined[disabled]:active,
@@ -4870,13 +4871,12 @@
     color: inherit !important;
   }
   /* auto-generated rule for "box-shadow: none" */
-  body.intent-mouse [role=button]:focus, body.intent-mouse [tabindex]:focus,
-  body.intent-mouse button:focus, body.intent-mouse summary:focus, .btn.disabled,
-  .btn:disabled, .btn-primary.disabled, .btn-primary:disabled,
-  .btn-purple.disabled, .btn-purple:disabled, .btn-blue.disabled,
-  .btn-blue:disabled, .btn-danger.disabled, .btn-danger:disabled,
-  .btn-outline.disabled, .btn-outline:disabled,
-  .upload-enabled.focused .form-control,
+  body.intent-mouse [role=button]:focus, body.intent-mouse button:focus,
+  body.intent-mouse summary:focus, .btn.disabled, .btn:disabled,
+  .btn-primary.disabled, .btn-primary:disabled, .btn-purple.disabled,
+  .btn-purple:disabled, .btn-blue.disabled, .btn-blue:disabled,
+  .btn-danger.disabled, .btn-danger:disabled, .btn-outline.disabled,
+  .btn-outline:disabled, .upload-enabled.focused .form-control,
   .page-responsive .HeaderMenu--logged-out,
   .page-responsive .HeaderMenu--logged-out .dropdown-menu,
   .header-search-wrapper, .header-search-wrapper.focus, .header-search-input,
@@ -5097,7 +5097,8 @@
   body.zh_logged_in .zhc-dropdown__clear-filter,
   body.zh_logged_in .zhc-merge-repo-finder__cancel,
   body.zh_logged_in .zhc-selection-list__cancel,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item,
+  body.zh_logged_in .zhc-tab-navitem,
+  body.zh_logged_in .zhc-tab-navitem--dropdown,
   body.zh_logged_in .zhc-timeline-expand-toggle {
     background: transparent;
   }
@@ -5184,7 +5185,6 @@
   body.zh_logged_in .zhc-control-chart-report .zhc-dropdown--ccr-pipelines .zhc-selection-item--is-disabled,
   body.zh_logged_in .zhc-dependency-issue-selector__search .zhc-search,
   body.zh_logged_in .zhc-edit-issue__title-input,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__high-priority--closed,
   body.zh_logged_in .zhc-merging-tool-pipeline--placeholder,
   body.zh_logged_in .zhc-merging-tool-pipeline--placeholder .zhc-pipeline-header__main,
   body.zh_logged_in .zhc-repo-notifications--single-repo .zhc-repo-notifications__header,
@@ -5199,9 +5199,9 @@
   body.zh_logged_in .zhc-selection-list__list .zhc-selection-list__header,
   body.zh_logged_in .zhc-collapse-toggle--is-active,
   body.zh_logged_in .zhc-sidebar__overlay,
-  body.zh_logged_in .zhc-tabs--lined-bottom .zhc-tabs__nav-item:hover,
-  body.zh_logged_in .zhc-tabs--lined-bottom .zhc-tabs__nav-item--active,
-  body.zh_logged_in .zhc-tabs--dropdown .zhc-tabs__nav-item:hover,
+  body.zh_logged_in .zhc-tab-navitem--lined:hover,
+  body.zh_logged_in .zhc-tab-navitem--lined--active,
+  body.zh_logged_in .zhc-tab-navitem--dropdown:hover,
   body.zh_logged_in .zhc-tag__text,
   body.zh_logged_in .zhc-timeline-button.zhc-timeline-button--variant-text,
   body.zh_logged_in .zhc-timeline-button.zhc-timeline-button--variant-text[disabled],
@@ -7118,7 +7118,8 @@
   div.container > p, .commits-list-item .commit-author,
   .full-commit .sha-block > .sha, .discussion-item .renamed-was,
   .discussion-item .renamed-is, a.discussion-item-entity,
-  span.discussion-item-entity, .table-list-header-toggle .btn-link.selected,
+  span.discussion-item-entity:not(:hover),
+  .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover,
   .table-list-header-toggle .btn-link:hover, a.issue-title-link,
   .milestone-title-link a, .org-header .edit-org, .org-name, .blob-code,
