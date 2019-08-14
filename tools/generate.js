@@ -50,6 +50,7 @@ let mappings = {
 
   "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.1)",
   "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
+  "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
 
   "$border: #959da5": "#484848",
   "$border: #c3c8cf": "#484848",
@@ -253,8 +254,12 @@ let mappings = {
 
   "color: inherit": "color: inherit",
   "box-shadow: none": "box-shadow: none",
-  "$background: none": "none",
   "$background: transparent": "transparent",
+
+  // not using $background to remap invalid 'background-color: none'
+  "background: none": "background: none",
+  "background-color: none": "background-color: transparent",
+  "background-image: none": "background-image: none",
 };
 
 // list of sources to pull stylesheets from. Accepts fetch options. If `prefix`
@@ -267,6 +272,11 @@ const sources = [
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://developer.github.com", prefix: "html[prefix]"},
+  {
+    url: "https://www.githubstatus.com/",
+    prefix: "body.status",
+    match: ["body", ".status"],
+  },
   {
     url: "https://github.com/login",
     prefix: `body[class="page-responsive"]`,
@@ -357,12 +367,19 @@ async function writeOutput(generatedCss) {
   await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
 }
 
-async function extractStyleLinks(res) {
+async function extract(res) {
   const styleUrls = [];
-  for (const href of extractStyleHrefs(await res.text())) {
+  const inlineStyles = [];
+  const html = await res.text();
+
+  for (const href of extractStyleHrefs(html)) {
     styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
   }
-  return styleUrls;
+  for (const style of extractInlineStyles(html)) {
+    inlineStyles.push(style);
+  }
+
+  return [styleUrls, inlineStyles];
 }
 
 function extractStyleHrefs(html) {
@@ -375,6 +392,12 @@ function extractStyleHrefs(html) {
       return attrs.href;
     }
   }).filter(link => !!link);
+}
+
+function extractInlineStyles(html) {
+  return (html.match(/<style.*?>([\s\S]*?)<\/style>/g) || []).map(style => {
+    return parse5.parseFragment(style).childNodes[0].childNodes[0].value.trim();
+  }).filter(css => !!css);
 }
 
 function parseDeclarations(cssString, opts) {
@@ -582,6 +605,10 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom: 2px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 2px dashed ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right: 2px dashed ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 3px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 3px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 3px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 3px solid ${oldValue}`] = `border-right-color: ${value}`;
       newMappings[`border-top: 5px solid ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom: 5px solid ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 5px solid ${oldValue}`] = `border-left-color: ${value}`;
@@ -653,7 +680,9 @@ async function main() {
   for (const [index, response] of Object.entries(sourceResponses)) {
     const source = sources[index];
     if (response) {
-      source.styles = await extractStyleLinks(response);
+      const [styleUrls, inlineStyles] = await extract(response);
+      source.styles = styleUrls;
+      source.inlineStyles = inlineStyles;
     } else if (source.url) {
       source.styles = [source.url];
     }
@@ -669,6 +698,9 @@ async function main() {
       sources[index].css = await extensionCss(sources[index]);
     } else {
       sources[index].css = responses.join("\n");
+      if (sources[index].inlineStyles.length) {
+        sources[index].css += "\n" + sources[index].inlineStyles.join("\n");
+      }
     }
   }
 
