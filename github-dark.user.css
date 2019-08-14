@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.64
+@version     1.22.65
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com") {
-/*! Github Dark v1.22.64 (2019-08-09) */
+/*! Github Dark v1.22.65 (2019-08-14) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -5348,7 +5348,7 @@
   .timeline-comment[aria-selected=true] .review-summary .comment-body {
     border-color: /*[[base-color]]*/ !important;
   }
-  @-webkit-keyframes autofill {
+  @keyframes autofill {
     to {
       background-color: #181818;
       background-image: none;
@@ -5360,8 +5360,8 @@
   textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus,
   select:-webkit-autofill, select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    -webkit-animation-name: autofill !important;
-    -webkit-animation-fill-mode: both !important;
+    animation-name: autofill !important;
+    animation-fill-mode: both !important;
   }
   #com #header .top-nav .dropdown-button:hover .dropdown-caret,
   .header-nav-link:hover .dropdown-caret, .header-nav-link:focus .dropdown-caret,
@@ -6125,7 +6125,7 @@
   .list-group-item.standalone, .commit-form {
     background: #181818 !important;
   }
-  .bg-white, .radio-label {
+  .bg-white, .radio-label, [style*="background-color: #2f363d"] {
     background-color: #181818 !important;
   }
   /* https://github.com/StylishThemes/GitHub-Dark/issues/811 */
@@ -6377,6 +6377,11 @@
   section[style="background-color: #fafbfc;"], div[style="background:#fafbfc;"],
   .team-left-column, .render-container.js-actions-page {
     background: none !important;
+  }
+  @media (min-width: 1012px) {
+    .file-commit-form--full {
+      background: none !important;
+    }
   }
   body[class="page-responsive"] .repo-list .private {
     background-color: initial;
@@ -8877,12 +8882,10 @@
   .intercom-home-screen-conversation-card {
     background-color: #111 !important;
     color: #eee !important;
-    -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .1), inset 0 2px 0 0 rgba(79, 140, 201, .5);
-    -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .1), inset 0 2px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
-            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
                     0 1px 2px 0 rgba(0, 0, 0, .1),
                     inset 0 2px 0 0 rgba(79, 140, 201, .5);
-            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
                     0 1px 2px 0 rgba(0, 0, 0, .1),
                     inset 0 2px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
   }
@@ -8955,12 +8958,10 @@
   .intercom-attribute-collector-card-body {
     background-color: #141414;
     color: #eee;
-    -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .1), inset 0 2px 0 0 rgba(79, 140, 201, .5);
-    -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .1), inset 0 2px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
-            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
                     0 1px 2px 0 rgba(0, 0, 0, .1),
                     inset 0 2px 0 0 rgba(79, 140, 201, .5);
-            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1),
                     0 1px 2px 0 rgba(0, 0, 0, .1),
                     inset 0 2px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
   }
