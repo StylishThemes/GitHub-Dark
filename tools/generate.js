@@ -369,17 +369,17 @@ async function writeOutput(generatedCss) {
 
 async function extract(res) {
   const styleUrls = [];
-  const inlineStyles = [];
+  const styleTags = [];
   const html = await res.text();
 
   for (const href of extractStyleHrefs(html)) {
     styleUrls.push(urlToolkit.buildAbsoluteURL(res.url, href));
   }
-  for (const style of extractInlineStyles(html)) {
-    inlineStyles.push(style);
+  for (const style of extractStyleTags(html)) {
+    styleTags.push(style);
   }
 
-  return [styleUrls, inlineStyles];
+  return [styleUrls, styleTags];
 }
 
 function extractStyleHrefs(html) {
@@ -394,10 +394,9 @@ function extractStyleHrefs(html) {
   }).filter(link => !!link);
 }
 
-function extractInlineStyles(html) {
-  return (html.match(/<style.*?>([\s\S]*?)<\/style>/g) || []).map(style => {
-    return parse5.parseFragment(style).childNodes[0].childNodes[0].value.trim();
-  }).filter(css => !!css);
+function extractStyleTags(html) {
+  const matches = Array.from((html || "").matchAll(/<style.*?>([\s\S]*?)<\/style>/g) || []);
+  return matches.map(match => match[1]).map(css => css.trim()).filter(css => !!css);
 }
 
 function parseDeclarations(cssString, opts) {
@@ -680,9 +679,9 @@ async function main() {
   for (const [index, response] of Object.entries(sourceResponses)) {
     const source = sources[index];
     if (response) {
-      const [styleUrls, inlineStyles] = await extract(response);
+      const [styleUrls, styleTags] = await extract(response);
       source.styles = styleUrls;
-      source.inlineStyles = inlineStyles;
+      source.styleTags = styleTags;
     } else if (source.url) {
       source.styles = [source.url];
     }
@@ -698,8 +697,8 @@ async function main() {
       sources[index].css = await extensionCss(sources[index]);
     } else {
       sources[index].css = responses.join("\n");
-      if (sources[index].inlineStyles.length) {
-        sources[index].css += "\n" + sources[index].inlineStyles.join("\n");
+      if (sources[index].styleTags.length) {
+        sources[index].css += "\n" + sources[index].styleTags.join("\n");
       }
     }
   }
