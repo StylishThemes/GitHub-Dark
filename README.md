@@ -109,7 +109,7 @@ If you would like to contribute to this repository, please...
 
 ## Development
 
-To develop, first install [Node.js](https://nodejs.org), install dependencies via `npm install` after which you can use the various grunt tasks available:
+To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various grunt tasks available:
 
 - `npx grunt`: The default task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `npx grunt min`: Same as `grunt`, but outputs a minified style.
