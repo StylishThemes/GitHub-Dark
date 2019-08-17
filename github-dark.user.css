@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.67
+@version     1.22.68
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.67 (2019-08-16) */
+/*! Github Dark v1.22.68 (2019-08-17) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -974,13 +974,12 @@
     background-color: #343434;
   }
   /* auto-generated rule for "background: #e6ebf1" */
-  .new-discussion-timeline .closed-banner, .MarketplaceEdit-body .CircleIcon {
+  .MarketplaceEdit-body .CircleIcon {
     background: #444;
   }
   /* auto-generated rule for "background-color: #e6ebf1" */
-  .btn.hover, .btn:hover, .discussion-timeline:before, .discussion-item-icon,
-  .status-day::before, body.status .incident-list::before,
-  body.status .incident-container::before,
+  .btn.hover, .btn:hover, .status-day::before,
+  body.status .incident-list::before, body.status .incident-container::before,
   body.status .incident-container .incident-title::before,
   body[class="page-responsive"] .btn.hover,
   body[class="page-responsive"] .btn:hover,
@@ -988,18 +987,15 @@
   body.zh_logged_in .zhc-discussion-events__icon--grey {
     background-color: #444;
   }
-  /* auto-generated rule for "background-color: #e6ebf1 !important" */
-  .discussion-item-icon-gray {
-    background-color: #444 !important;
-  }
   /* auto-generated rule for "background: #e1e4e8" */
-  .avatar.avatar-more:before, body[class="page-responsive"] hr {
+  .avatar.avatar-more:before, .new-discussion-timeline .closed-banner,
+  body[class="page-responsive"] hr {
     background: #343434;
   }
   /* auto-generated rule for "background-color: #e1e4e8" */
   .sponsors-discussion:after, .apps-quadrangle .CircleBadge:after,
-  .markdown-body hr, .Progress,
-  .discussion-timeline.team-discussion-timeline:before,
+  .markdown-body hr, .Progress, .discussion-timeline:before,
+  .discussion-timeline.team-discussion-timeline:before, .discussion-item-icon,
   .reverse-progress-container, .reverse-progress-bar, .CheckStep .ansibg-w,
   .search-autocomplete-dropdown .autocomplete-category-heading:after,
   .discussion-post .reply-comments-holder:before,
@@ -1012,7 +1008,8 @@
     background-color: #343434;
   }
   /* auto-generated rule for "background-color: #e1e4e8 !important" */
-  .bg-gray-2, body[class="page-responsive"] .bg-gray-2 {
+  .bg-gray-2, .discussion-item-icon-gray,
+  body[class="page-responsive"] .bg-gray-2 {
     background-color: #343434 !important;
   }
   /* auto-generated rule for "background: #e9e9e9" */
@@ -1453,14 +1450,10 @@
   body.zh_logged_in .zhc-sidebar-nav-item--is-secondary-active {
     border-left-color: transparent;
   }
-  /* auto-generated rule for "border: 1px solid rgba(27,31,35,.1)" */
-  .timeline-comment-label {
-    border-color: rgba(200, 200, 200, .1);
-  }
   /* auto-generated rule for "border: 1px solid rgba(27,31,35,.15)" */
   .flash, .Label--outline, .boxed-group .heading, .boxed-group > h3,
-  .comment-form-error, .full-commit, .dropdown-menu, .select-menu-modal,
-  .RecentBranches, .pull-request-review-menu,
+  .comment-form-error, .full-commit, .timeline-comment-label, .dropdown-menu,
+  .select-menu-modal, .RecentBranches, .pull-request-review-menu,
   .pull-request-suggested-changes-menu, .shelf-dismiss .close-button,
   html[prefix] .site-header-nav .dropdown-menu,
   body[class="page-responsive"] .Label--outline,
@@ -1867,10 +1860,13 @@
   .SelectMenu-tabs, .SelectMenu-divider, .SelectMenu-footer,
   .commits-list-item + .commits-list-item, .diff-table .line-comments,
   .diff-table tr:not(:last-child) .line-comments,
-  .timeline-comment .comment + .comment, .dropdown-divider,
-  .comment-reactions.has-reactions, .select-menu-divider, .advisory-form,
-  .branch-action-body .merge-branch-form, .branch-action-body .merge-message,
-  .branch-action-item + .branch-action-item,
+  .discussion-sidebar-item + .discussion-sidebar-item,
+  .timeline-comment .comment + .comment, .discussion-item + .discussion-item,
+  .discussion-item-review + .discussion-item,
+  .discussion-item + .discussion-item-review, .discussion-item-deployed,
+  .dropdown-divider, .comment-reactions.has-reactions, .select-menu-divider,
+  .advisory-form, .branch-action-body .merge-branch-form,
+  .branch-action-body .merge-message, .branch-action-item + .branch-action-item,
   .branch-action-item + .mergeability-details,
   .codesearch-results .repo-list-item + .repo-list-item,
   .dashboard-rollup-items > .dashboard-rollup-item,
@@ -1915,7 +1911,7 @@
   .jump-to-suggestions-results-container .navigation-item,
   .pricing-table thead th, .SelectMenu-divider, .Subhead, .table-list,
   .boxed-group-list > li, .signed-commit-header,
-  .diff-table tr:not(:last-child) .line-comments,
+  .diff-table tr:not(:last-child) .line-comments, .gh-header-meta,
   .timeline-new-comment .previewable-comment-form .comment-body,
   .new-discussion-timeline .previewable-comment-form .comment-body,
   .discussion-item-review-comment, .pagehead, .select-menu-divider,
@@ -1966,6 +1962,10 @@
   body[class="page-responsive"] .border-lg-right {
     border-right-color: #343434 !important;
   }
+  /* auto-generated rule for "border-top: 2px solid #e1e4e8" */
+  .discussion-timeline-actions {
+    border-top-color: #343434;
+  }
   /* auto-generated rule for "border-left: 2px solid #e1e4e8" */
   .release-main-section {
     border-left-color: #343434;
@@ -1995,21 +1995,9 @@
   .merge-branch-form .commit-form:before {
     border-right-color: #343434;
   }
-  /* auto-generated rule for "border-top: 1px solid #e6ebf1" */
-  .discussion-sidebar-item + .discussion-sidebar-item,
-  .discussion-item + .discussion-item,
-  .discussion-item-review + .discussion-item,
-  .discussion-item + .discussion-item-review, .discussion-item-deployed {
-    border-top-color: #343434;
-  }
   /* auto-generated rule for "border-bottom: 1px solid #e6ebf1" */
-  .gh-header-meta,
   body.zh_logged_in .zh-collapse-manager-container--isExpanded .discussion-item:last-child {
     border-bottom-color: #343434;
-  }
-  /* auto-generated rule for "border-top: 2px solid #e6ebf1" */
-  .discussion-timeline-actions {
-    border-top-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 2px solid #e6ebf1" */
   .deployments-timeline {
@@ -3330,7 +3318,8 @@
   .commit-branches, .table-of-contents .octicon-diff-renamed,
   .toc-select .select-menu-item-icon.octicon-diff-renamed,
   .conversation-list-heading, .simple-conversation-list,
-  .simple-conversation-list > li .num, .deployment-status-label,
+  .simple-conversation-list > li .num, .gh-header-number,
+  .timeline-comment-action, .deployment-status-label,
   .list-group-item .list-group-item-summary a.quiet, .draft.octicon,
   .select-menu-tabs .select-menu-tab-nav, .select-menu-tabs a,
   .select-menu-item.disabled, .select-menu-item.disabled.selected,
@@ -3421,8 +3410,10 @@
   .home-hero-signup .form-control-note .notice-highlight, .actions-event-event,
   .actions-template-repo, .Toast-dismissButton:active, .btn-octicon.disabled,
   .btn-octicon.disabled:hover, .commit-id,
-  .signed-commit-header .octicon-unverified, .footer-octicon:hover,
-  .repohead h1 .octicon, .license-summary-octicon, .neutral-check,
+  .signed-commit-header .octicon-unverified,
+  .discussion-sidebar-item .muted-icon, .discussion-sidebar-toggle .octicon,
+  .deployment-meta .octicon, .footer-octicon:hover, .repohead h1 .octicon,
+  .license-summary-octicon, .neutral-check,
   .CheckStep-line .CheckStep-line-number,
   .CheckStep-line .CheckStep-line-timestamp, .CheckStep .log-line-info,
   .CheckStep .log-line-verbose, .CheckStep .ansifg-gr,
@@ -3494,20 +3485,15 @@
     color: #767676 !important;
   }
   /* auto-generated rule for "color: #a3aab1" */
-  .blankslate-icon, .gh-header-number,
-  .select-menu-text-filter input::placeholder, ul.comparison-list > li .octicon,
-  .team-project-suggestion-number, body[class="page-responsive"] footer .octicon,
+  .blankslate-icon, .select-menu-text-filter input::placeholder,
+  ul.comparison-list > li .octicon, .team-project-suggestion-number,
+  body[class="page-responsive"] footer .octicon,
   body[class="page-responsive"] .diff-view .file .meta .octicon-file {
     color: #757575;
   }
   .select-menu-text-filter input:-ms-input-placeholder,
   .select-menu-text-filter input::-ms-input-placeholder {
     color: #757575;
-  }
-  /* auto-generated rule for "color: #c3c8cf" */
-  .discussion-sidebar-item .muted-icon, .discussion-sidebar-toggle .octicon,
-  .deployment-meta .octicon {
-    color: #5a5a5a;
   }
   /* auto-generated rule for "color: #c6cbd1" */
   .subnav-search-icon, .locked-conversation .preview-tab,
@@ -3526,7 +3512,9 @@
   .pagination .disabled, .pagination .disabled:hover, .pagination .gap,
   .pagination .gap:hover, .actions-event-on,
   .SegmentedNav .gpr-testimonial-nav-link, .action-card-syntax:before,
-  .commit-icon, .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon,
+  .commit-icon, .timeline-comment-action.disabled,
+  .timeline-comment-action.disabled:hover,
+  .prose-diff.collapsed .rich-diff-level-zero.expandable .octicon,
   .prose-diff.collapsed .rich-diff-level-zero.expandable:only-child:before,
   .prose-diff > .markdown-body li.added.moved-down .octicon,
   .prose-diff > .markdown-body li.added.moved-up .octicon, .reblame-link,
@@ -4199,6 +4187,13 @@
   .subnav-link.selected, .subnav-primary.selected {
     border-bottom-color: /*[[base-color]]*/;
   }
+  /* auto-generated rule for "filter: drop-shadow(-.28em 0 0 #c8e1ff)" */
+  .review-comment:target .timeline-comment--caret:before,
+  .timeline-comment-group:target .timeline-comment--caret:before,
+  .timeline-comment:target .timeline-comment--caret:before {
+    filter: drop-shadow(-.28em 0 0 rgba(79, 140, 201, .3));
+    filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3));
+  }
   /* auto-generated rule for "border: 1px solid #2188ff" */
   .review-comment:target, .timeline-comment:target .review-summary .comment-body {
     border-color: /*[[base-color]]*/;
@@ -4528,6 +4523,8 @@
   }
   /* auto-generated rule for "background-color: #28a745" */
   .btn-primary, .btn-primary-mktg:hover, .Toast--success .Toast-icon,
+  .discussion-item-reopened .discussion-item-icon,
+  .discussion-item-review.is-approved.is-writer .discussion-item-icon,
   .billing-plans .coupon td, .plan-choice--experiment.open .plan-choice-icon,
   .plan-choice--experiment.selected .plan-choice-icon,
   .plan-choice--experiment.plan-choice--green.open .plan-choice-icon,
@@ -4546,26 +4543,24 @@
   body[class="page-responsive"] .btn-primary,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary,
   html.ghh-theme-classic .ghh .ghh-state-verified {
-    background-color: #6cc644;
+    background-color: #072;
   }
   /* auto-generated rule for "background-color: #28a745 !important" */
   .bg-green, .bg-green-5, body.status .bg-green,
   body[class="page-responsive"] .bg-green,
   body[class="page-responsive"] .bg-green-5 {
-    background-color: #6cc644 !important;
+    background-color: #072 !important;
   }
   /* auto-generated rule for "background-color: #2cbe4e" */
-  .State--green, .block-diff-added, .block-diff-neutral,
-  .discussion-item-reopened .discussion-item-icon,
-  .discussion-item-review.is-approved.is-writer .discussion-item-icon,
-  .progress-bar .progress, .branch-action-state-clean .branch-action-icon,
+  .State--green, .block-diff-added, .block-diff-neutral, .progress-bar .progress,
+  .branch-action-state-clean .branch-action-icon,
   .completeness-indicator-success, body[class="page-responsive"] .State--green,
   body[class="page-responsive"] .block-diff-added,
   body[class="page-responsive"] .block-diff-neutral,
   body[class="page-responsive"] .progress-bar .progress,
   html.ghh-theme-classic .ghh .ghh-state-open,
   .ghh-theme-github .ghh-reviews .ghh-state-icon-success {
-    background-color: #163;
+    background-color: #072;
   }
   /* auto-generated rule for "background: #dcffe4" */
   .boxed-group-list > li.selected {
@@ -4985,8 +4980,7 @@
   .full-commit .branches-list li a, .branches-tag-list li .ellipsis-expander,
   .branches-tag-list li a, .details-overlay[open] > .dropdown-item:hover,
   .discussion-sidebar-toggle:hover .octicon, .timeline-comment-header .timestamp,
-  .comment-type-icon, .timeline-comment-action, .discussion-item .timestamp,
-  .discussion-item .code-owner,
+  .comment-type-icon, .discussion-item .timestamp, .discussion-item .code-owner,
   .discussion-item-ref-title .title-link:hover .issue-num,
   .dropdown-item.zeroclipboard-is-hover > .octicon,
   .dropdown-item:focus > .octicon, .dropdown-item:hover > .octicon,
@@ -7915,6 +7909,12 @@
     z-index: 1 !important;
     background: #181818 !important;
     box-shadow: 0 0 0 4px #181818 !important;
+  }
+  /* center the dot icon inside green discussion timeline icons */
+  .discussion-item-reopened .discussion-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   /* add borders to full-page flash on top of repos */
   main > .flash-full.flash-warn {
