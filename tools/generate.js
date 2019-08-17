@@ -214,8 +214,8 @@ let mappings = {
   // green
   "color: #28a745": "color: #6cc644",
   "color: #165c26": "color: #6cc644",
-  "$background: #28a745": "#6cc644",
-  "$background: #2cbe4e": "#163",
+  "$background: #28a745": "#072",
+  "$background: #2cbe4e": "#072",
   "$background: #dcffe4": "#002800",
   "$background: rgba(108,198,68,.1)": "#002800",
   "fill: #2cbe4e": "fill: #6cc644",
