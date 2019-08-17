@@ -188,6 +188,10 @@ let mappings = {
     filter: drop-shadow(0 -.28em 0 rgba(79,140,201,.3));
     filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
   `,
+  "filter: drop-shadow(-.28em 0 0 #c8e1ff)": `
+    filter: drop-shadow(-.28em 0 0 rgba(79,140,201,.3));
+    filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3))
+  `,
   "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
   "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
