@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.69
+@version     1.22.70
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.69 (2019-08-17) */
+/*! Github Dark v1.22.70 (2019-08-19) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -6035,7 +6035,7 @@
   .user-key-badge, .newsfeed-placeholder, .progress-bar-inline .progress-bar,
   .menu-heading, body .border-gray-dark, .discussion-item-review .blob-wrapper,
   .bot-identifier, .counter, .Counter, div.marketplace-product-callout,
-  .CodeMirror-dialog-top, .project-card:hover {
+  .CodeMirror-dialog-top, .project-card:hover:not(:focus) {
     border-color: #484848 !important;
   }
   .btn, pre, h1, h2, h3, table, table tr, table td, table th, blockquote,
@@ -6609,7 +6609,8 @@
   .btn.btn-invisible:hover,
   .application-main [style*="background: linear-gradient(#ffffff, #fcfcfc)"],
   section[style="background-color: #fafbfc;"], div[style="background:#fafbfc;"],
-  .team-left-column, .render-container.js-actions-page {
+  .team-left-column, .render-container.js-actions-page,
+  .deployments-timeline-icon {
     background: none !important;
   }
   @media (min-width: 1012px) {
@@ -6764,8 +6765,12 @@
   svg [data-name="Layer 2"] #Layer_5[data-name="Layer 5"],
   .illoTeam svg [data-name="Layer 2"], .illoIndiv #Layer_2[data-name="Layer 2"],
   svg [data-name="Layer 2"] g[data-name="octocat header"],
-  svg[viewBox="0 0 1461.5 677.84"][width="700"], .illo-desktop-header {
+  svg[viewBox="0 0 1461.5 677.84"][width="700"] {
     filter: invert(85%) hue-rotate(-180deg) brightness(125%) contrast(85%) !important;
+  }
+  /* https://www.githubstatus.com */
+  .illo-desktop-header {
+    filter: invert(90%) hue-rotate(-180deg) !important;
   }
   .bg-dots-gray, .bg-dots-gray-large, .action-logo:after {
     filter: invert(100%) hue-rotate(180deg) brightness(350%) !important;
@@ -6977,6 +6982,10 @@
   }
   .jumbotron-codelines {
     background-color: #222 !important;
+  }
+  /* https://www.githubstatus.com/ */
+  .status-day > .date::before {
+    background-color: #444 !important;
   }
   .profile-timeline.discussion-timeline:before,
   .profile-timeline.discussion-timeline .profile-timeline-month-heading:after,
