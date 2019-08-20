@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.71
+@version     1.22.72
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.71 (2019-08-20) */
+/*! Github Dark v1.22.72 (2019-08-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -222,6 +222,10 @@
   }
   button {
     color: #b5b5b5;
+  }
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/968 */
+  input, textarea {
+    color: #bebebe;
   }
   .Popover-message:before {
     border-bottom-color: #343434;
@@ -6164,7 +6168,7 @@
     display: none !important;
   }
   .discussion-timeline-actions {
-    border-top: 2px solid #444 !important;
+    border-top: 2px solid #383838 !important;
     background: none !important;
   }
   .discussion-timeline:before {
@@ -6391,6 +6395,10 @@
   }
   /* https://github.com/StylishThemes/GitHub-Dark/issues/811 */
   .application-main > main > .container > .pt-4.bg-white.text-center {
+    background: none !important;
+  }
+  /* bottom panel on actions */
+  .flex-auto > .bg-gray-light {
     background: none !important;
   }
   button.bg-white.subnav-link {
@@ -8056,6 +8064,10 @@
   .Box-body.blob-wrapper {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+  }
+  /* remove actions editor padding */
+  form[action*="/.github/workflows/"] .commit-create {
+    padding-top: 0 !important;
   }
   /* remove margin above codemirror */
   .file-box .file-header.mb-2 {
