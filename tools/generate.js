@@ -612,6 +612,10 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom: 3px solid ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 3px solid ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right: 3px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 4px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 4px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 4px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 4px solid ${oldValue}`] = `border-right-color: ${value}`;
       newMappings[`border-top: 5px solid ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom: 5px solid ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 5px solid ${oldValue}`] = `border-left-color: ${value}`;
