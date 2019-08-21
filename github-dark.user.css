@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.72
+@version     1.22.73
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.72 (2019-08-20) */
+/*! Github Dark v1.22.73 (2019-08-21) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -2655,6 +2655,20 @@
   .select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true] {
     border-color: #343434 #343434 #181818;
   }
+  /* auto-generated rule for "border-top: 1px solid #e5e5e5" */
+  .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
+  .is-failed .repo-file-upload-errors, .is-hidden-file .repo-file-upload-errors,
+  .is-too-big .repo-file-upload-errors, .is-too-many .repo-file-upload-errors,
+  dl.new-email-form, .listgroup-item + .listgroup-item, html[prefix] .Box-footer,
+  html[prefix] .footer, body.status hr,
+  body.zh_logged_in .zh-estimate-create-item,
+  body.zh_logged_in .zh-issuecard-meta {
+    border-top-color: #343434;
+  }
+  /* auto-generated rule for "border-top: 1px solid #e5e5e5 !important" */
+  html[prefix] .border-top, html[prefix] .border-y {
+    border-top-color: #343434 !important;
+  }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)" */
   .btn.focus, .btn:focus, .btn-mktg:focus, .project-column:focus,
   .project-column.moving, body[class="page-responsive"] .btn.focus,
@@ -2668,9 +2682,8 @@
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3) !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
-  .timeline-comment-group:target .timeline-comment, .review-comment:target,
-  .timeline-comment:target .review-summary,
-  .timeline-comment:target .timeline-comment-group .timeline-comment {
+  :target .timeline-comment, .review-comment:target, :target .review-summary,
+  :target .timeline-comment-group .timeline-comment {
     box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
   }
@@ -4218,20 +4231,18 @@
     border-bottom-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "filter: drop-shadow(-.28em 0 0 #c8e1ff)" */
-  .review-comment:target .timeline-comment--caret:before,
-  .timeline-comment-group:target .timeline-comment--caret:before,
-  .timeline-comment:target .timeline-comment--caret:before {
+  :target .timeline-comment--caret:before {
     filter: drop-shadow(-.28em 0 0 rgba(79, 140, 201, .3));
     filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3));
   }
   /* auto-generated rule for "border: 1px solid #2188ff" */
-  .review-comment:target, .timeline-comment:target .review-summary .comment-body {
+  .review-comment:target, :target .review-summary .comment-body {
     border-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-color: #2188ff" */
   .form-control.focus, .form-control:focus, .form-select.focus,
-  .form-select:focus, .timeline-comment-group:target .timeline-comment,
-  .timeline-comment:target .timeline-comment-group .timeline-comment,
+  .form-select:focus, :target .timeline-comment,
+  :target .timeline-comment-group .timeline-comment,
   .plan-choice--experiment.plan-choice--blue.open,
   .plan-choice--experiment.plan-choice--blue.selected,
   .focus.ais-SearchBox-input, .ais-SearchBox-input:focus,
@@ -4250,9 +4261,7 @@
     border-top-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-right-color: #2188ff" */
-  .review-comment:target .timeline-comment--caret:before,
-  .timeline-comment-group:target .timeline-comment--caret:before,
-  .timeline-comment:target .timeline-comment--caret:before {
+  :target .timeline-comment--caret:before {
     border-right-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "background-image: linear-gradient(#54a3ff,#006eed)" */
@@ -6400,6 +6409,11 @@
   /* bottom panel on actions */
   .flex-auto > .bg-gray-light {
     background: none !important;
+  }
+  /* https://github.com/nodejs/node/pull/29168/files/a93476bfa855c7040c45481cb456df04e897647b */
+  .repository-content > .container > .blankslate {
+    background: none !important;
+    box-shadow: none !important;
   }
   button.bg-white.subnav-link {
     background-color: transparent !important;
