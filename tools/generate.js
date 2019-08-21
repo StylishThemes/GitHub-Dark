@@ -58,6 +58,7 @@ let mappings = {
   "$border: #d1d5da": "#404040",
   "$border: #ddd":    "#343434",
   "$border: #e1e4e8": "#343434",
+  "$border: #e5e5e5": "#343434",
   "$border: #e6ebf1": "#343434",
   "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaecef": "#343434",
@@ -72,8 +73,6 @@ let mappings = {
   "border: 1px solid": "border-color: #181818",
   "border-top: 7px solid #fff": "border-top-color: #181818",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
-
-  "border-top: 1px solid #e5e5e5": "border-top-color: #343434",
 
   // ==========================================================================
   // Box-Shadow
