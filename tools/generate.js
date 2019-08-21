@@ -73,6 +73,8 @@ let mappings = {
   "border-top: 7px solid #fff": "border-top-color: #181818",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
 
+  "border-top: 1px solid #e5e5e5": "border-top-color: #343434",
+
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
