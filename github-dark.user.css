@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.74
+@version     1.22.75
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.74 (2019-08-21) */
+/*! Github Dark v1.22.75 (2019-08-22) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -627,7 +627,12 @@
   body.zh_logged_in .zhc-roadmap-button--color-danger.zhc-roadmap-button--variant-outlined:active,
   body.zh_logged_in .zhc-roadmap-button--color-danger.zhc-roadmap-button--variant-outlined:focus,
   body.zh_logged_in .zhc-roadmap-button--color-danger.zhc-roadmap-button--variant-outlined:hover,
-  body.zh_logged_in .zhc-search, body.zh_logged_in .zhc-search-bar__input,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:active,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
+  body.zh_logged_in .zhc-options-panel, body.zh_logged_in .zhc-search,
+  body.zh_logged_in .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-filter,
   body.zh_logged_in .zhc-selection-list__body,
   body.zh_logged_in .zhc-shortcuts-guide__shortcuts-list,
@@ -2220,6 +2225,7 @@
   body.zh_logged_in .zhc-roadmap-expand-toggle:active,
   body.zh_logged_in .zhc-roadmap-expand-toggle:focus,
   body.zh_logged_in .zhc-sidebar-input__input,
+  body.zh_logged_in .zhc-options-panel,
   body.zh_logged_in .zhc-sidebar-project-display__toggle--collapsed,
   body.zh_logged_in .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-filter__input,
@@ -2332,6 +2338,10 @@
   body.zh_logged_in .zhc-roadmap-button--color-secondary[disabled]:active,
   body.zh_logged_in .zhc-roadmap-button--color-secondary[disabled]:focus,
   body.zh_logged_in .zhc-roadmap-button--color-secondary[disabled]:hover,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:active,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
   body.zh_logged_in .zhc-roadmap-expand-toggle:hover .zhc-roadmap-expand-toggle__title,
   body.zh_logged_in .zhc-roadmap-expand-toggle:active .zhc-roadmap-expand-toggle__title,
   body.zh_logged_in .zhc-roadmap-expand-toggle:focus .zhc-roadmap-expand-toggle__title,
@@ -2368,6 +2378,7 @@
   body.zh_logged_in .zhc-release-add-repos-dropdown__repo-item:hover:first-child,
   body.zh_logged_in .zhc-release-progress__header,
   body.zh_logged_in .zhc-release-progress__stats,
+  body.zh_logged_in .zhc-options-panel__actions-section,
   body.zh_logged_in .zhc-selection-list--issue-card-actions .zhc-issue-card__actions__quick-action-section,
   body.zh_logged_in .zhc-selection-list__footer,
   body.zh_logged_in .zhc-selection-list__footer:not(.zhc-selection-list__footer--items-underlined) .zhc-issue-card__action-notification,
@@ -2757,19 +2768,19 @@
   .btn.focus, .btn:focus, .btn-mktg:focus, .project-column:focus,
   .project-column.moving, body[class="page-responsive"] .btn.focus,
   body[class="page-responsive"] .btn:focus {
-    box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
-    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em rgba(3,102,214,.3) !important" */
   .project-card:focus, .project-card.moving {
-    box-shadow: 0 0 0 2px rgba(79, 140, 201, .3) !important;
-    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3) !important;
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3) !important;
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3) !important;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
   :target .timeline-comment, .review-comment:target, :target .review-summary,
   :target .timeline-comment-group .timeline-comment {
-    box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
-    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   }
   /* auto-generated rule for "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)" */
   .form-control.focus, .form-control:focus, .form-select.focus,
@@ -2995,6 +3006,10 @@
   body.zh_logged_in .zhc-roadmap-button.zhc-roadmap-button--variant-text:active,
   body.zh_logged_in .zhc-roadmap-button.zhc-roadmap-button--variant-text:focus,
   body.zh_logged_in .zhc-roadmap-button.zhc-roadmap-button--variant-text:hover,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:active,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
+  body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
   body.zh_logged_in .zhc-roadmap-title--color-default,
   body.zh_logged_in .zhc-selection-list__header,
   body.zh_logged_in .zhc-selection-list__header__text,
@@ -5462,7 +5477,9 @@
   body.zh_logged_in .zhc-collapse-toggle--is-active,
   body.zh_logged_in .zhc-sidebar__overlay,
   body.zh_logged_in .zhc-tab-navitem--lined:hover,
+  body.zh_logged_in .zhc-tab-navitem--large:hover,
   body.zh_logged_in .zhc-tab-navitem--lined--active,
+  body.zh_logged_in .zhc-tab-navitem--large--active,
   body.zh_logged_in .zhc-tab-navitem--dropdown:hover,
   body.zh_logged_in .zhc-tag__text, html.ghh-theme-classic .ghh-readme pre code,
   html.ghh-theme-classic .ghh-issue-body pre code,
@@ -8050,6 +8067,11 @@
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
   .review-comment-contents:after, .review-comment.is-comment-editing:after {
     z-index: 0 !important;
+  }
+  /* remove 16px padding on timeline references */
+  .TimelineItem {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
   .review-comment .avatar {
     position: relative !important;
