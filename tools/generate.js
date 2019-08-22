@@ -641,7 +641,7 @@ async function extensionCss(source) {
   const id = source.crx;
   let css = "";
 
-  const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=74.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
+  const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=78.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
   if (!res.ok) throw new Error(res.statusText);
 
   const buffer = await res.buffer();
