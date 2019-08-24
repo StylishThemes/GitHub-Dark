@@ -17,8 +17,8 @@ let mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
-  "$background: #fff":    "#181818",
-  "$background: #ffe":    "#242424",
+  "$background: #fff": "#181818",
+  "$background: #ffe": "#242424",
   "$background: #fdfdfd": "#1c1c1c",
   "$background: #fafbfc": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
@@ -56,16 +56,16 @@ let mappings = {
   "$border: #c3c8cf": "#484848",
   "$border: #dfe2e5": "#343434",
   "$border: #d1d5da": "#404040",
-  "$border: #ddd":    "#343434",
+  "$border: #ddd": "#343434",
   "$border: #e1e4e8": "#343434",
   "$border: #e5e5e5": "#343434",
   "$border: #e6ebf1": "#343434",
   "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaecef": "#343434",
-  "$border: #eee":    "#343434",
+  "$border: #eee": "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
-  "$border: #fff":    "#181818",
+  "$border: #fff": "#181818",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
@@ -123,12 +123,12 @@ let mappings = {
   "fill: currentColor": "fill: currentColor", // needs to come before color variants
 
   "color: #05264c": "color: #bebebe", // big commit title
-  "color: #333"   : "color: #bebebe",
+  "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #1b1f23": "color: #afafaf",
   "color: #586069": "color: #afafaf",
-  "color: #666"   : "color: #949494",
+  "color: #666": "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #757575",
   "color: #767676": "color: #767676",

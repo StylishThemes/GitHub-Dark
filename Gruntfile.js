@@ -195,12 +195,12 @@ module.exports = function(grunt) {
     pkg, config,
     "string-replace": {
       inline: {
-        files: {"<%= config.buildFile %>" : "<%= config.sourceFile %>"},
+        files: {"<%= config.buildFile %>": "<%= config.sourceFile %>"},
         options: {replacements: "<%= config.replacements %>"}
       },
       // Tweak Perfectionist results
       afterPerfectionist: {
-        files: {"<%= config.sourceFile %>" : "<%= config.sourceFile %>"},
+        files: {"<%= config.sourceFile %>": "<%= config.sourceFile %>"},
         options: {
           replacements: [
             {pattern: /\{\/\*!/g, replacement: "{\n /*!"},
@@ -245,12 +245,12 @@ module.exports = function(grunt) {
     },
     cssmin: {
       minify: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
+        files: {"<%= config.buildFile %>": "<%= config.buildFile %>"},
         options: {
           rebase: false,
           level: {
             1: {
-              specialComments : "all",
+              specialComments: "all",
               removeEmpty: false,
             },
             2: {
@@ -264,11 +264,11 @@ module.exports = function(grunt) {
       },
       codemirror: {
         files: [{
-          expand : true,
-          cwd : "themes/src/codemirror/",
-          src : "*.css",
-          dest : "themes/codemirror",
-          ext : ".min.css"
+          expand: true,
+          cwd: "themes/src/codemirror/",
+          src: "*.css",
+          dest: "themes/codemirror",
+          ext: ".min.css"
         }],
         options: {
           level: {
@@ -281,11 +281,11 @@ module.exports = function(grunt) {
       },
       github: {
         files: [{
-          expand : true,
-          cwd : "themes/src/github/",
-          src : "*.css",
-          dest : "themes/github",
-          ext : ".min.css"
+          expand: true,
+          cwd: "themes/src/github/",
+          src: "*.css",
+          dest: "themes/github",
+          ext: ".min.css"
         }],
         options: {
           // Don't use level 2; background *must* be the first entry; see #599
@@ -295,11 +295,11 @@ module.exports = function(grunt) {
       },
       jupyter: {
         files: [{
-          expand : true,
-          cwd : "themes/src/jupyter/",
-          src : "*.css",
-          dest : "themes/jupyter",
-          ext : ".min.css"
+          expand: true,
+          cwd: "themes/src/jupyter/",
+          src: "*.css",
+          dest: "themes/jupyter",
+          ext: ".min.css"
         }],
         options: {
           level: {
@@ -313,7 +313,7 @@ module.exports = function(grunt) {
     },
     wrap: {
       mozrule: {
-        files: {"<%= config.buildFile %>" : "<%= config.buildFile %>"},
+        files: {"<%= config.buildFile %>": "<%= config.buildFile %>"},
         options: {
           wrapper: ["<%= config.prefix %>", ""]
         }
