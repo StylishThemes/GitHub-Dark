@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.76
+@version     1.22.77
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.76 (2019-08-24) */
+/*! Github Dark v1.22.77 (2019-08-26) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -5968,7 +5968,7 @@
   .discussion-item .label-color, .coupons .coupon-form-body, .label-private,
   .repo-file-upload-progress, .more-repos, .header .header-search-wrapper.focus,
   .blame-commit .blame-commit-info, .label, .Label, .project-card,
-  .focused .drag-and-drop, .blankslate.blankslate-clean-background, .IssueLabel {
+  .focused .drag-and-drop, .IssueLabel {
     box-shadow: none !important;
   }
   a, button, p, ul, li, dl.form label, .formbody label, .js-context-button,
@@ -6198,7 +6198,7 @@
   .table-of-contents li, .commit-group,
   .table-list-bordered .table-list-cell:first-child,
   .table-list-bordered .table-list-cell:last-child, .table-list-cell,
-  .table-list, .table-list-header, .blankslate, .labels-list-item,
+  .table-list, .table-list-header, .labels-list-item,
   .subnav-divider-right, .subnav-bordered, .content table tr th,
   #search-results li, .subhead, #pages-composer, .render-bar,
   #gollum-editor-help, #gollum-editor-help-parent, #gollum-editor-help-list,
@@ -6470,7 +6470,7 @@
   #common-issues, .setup-wrapper .oauth-permissions-details, .milestone-list,
   .setup-form .setup-plans, .prose-diff > .markdown-body, .revision .gu,
   .tree-browser td, .tree-browser .alt td, .branches .branch-summary,
-  .branches .no-results-message, .simple-box-footer, .commit-group, .blankslate,
+  .branches .no-results-message, .simple-box-footer, .commit-group,
   .content table tr, #search-results, table.files, .mergeable, .org-module,
   .org-add-footer, .branch-infobar, table.capped-list tr:nth-child(2n),
   .team-org-group, #gollum-editor-help-wrapper, .integrations-quality,
@@ -6510,8 +6510,8 @@
   .flex-auto > .bg-gray-light {
     background: none !important;
   }
-  /* https://github.com/nodejs/node/pull/29168/files/a93476bfa855c7040c45481cb456df04e897647b */
-  .repository-content > .container > .blankslate {
+  /* make .blankslate invisible. if there are exceptions where it's useful, add them via :not() */
+  .blankslate {
     background: none !important;
     box-shadow: none !important;
   }
@@ -6752,7 +6752,7 @@
   .Collection ~ div[style*="linear-grad"],
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, ul.add-member-team-list.table-list, .gh-header,
-  iframe[src*="zuora.com"], .pr-toolbar, .blankslate.blankslate-clean-background,
+  iframe[src*="zuora.com"], .pr-toolbar,
   .enterprise-prompt, .enterprise-prompt *, .diffbar, .footer .bg-gray-light,
   button.btn-invisible, button.btn-invisible:hover, .btn.btn-invisible,
   .btn.btn-invisible:hover,
@@ -7369,7 +7369,7 @@
   .clone-url-button.selected > .clone-url-link {
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3) inset !important;
   }
-  .blankslate, .ScreenshotCarousel-navitem.selected {
+  .ScreenshotCarousel-navitem.selected {
     box-shadow: inset 0 0 10px rgba(255, 255, 255, .05) !important;
   }
   /* commits page - committer icon */
@@ -7670,7 +7670,7 @@
   .table-list-milestones .stat-label, .table-list, #blog-home, .diff-line-num,
   .file-data .line-numbers span, .discussion-item .timestamp,
   .branch-status .divider, .news .alert .octicon, .news .alert .mega-octicon,
-  .blankslate > .mega-octicon, .repo-list-meta, a.discussion-item-help,
+  .repo-list-meta, a.discussion-item-help,
   .page-new-repo .license-info, .commit-info .commit-meta,
   .notification-actions .age, .list-item .byline, .issue-list-meta,
   .file-type-icon, .uploaded-files .remove, .releases-tag-list td.date a,
@@ -8066,11 +8066,6 @@
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
   .review-comment-contents:after, .review-comment.is-comment-editing:after {
     z-index: 0 !important;
-  }
-  /* remove 16px padding on timeline references */
-  .TimelineItem {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
   }
   .review-comment .avatar {
     position: relative !important;
