@@ -88,7 +88,11 @@
   body.zh_logged_in .zhc-feature-announcement, body.zh_logged_in .zhc-issue-card,
   body.zh_logged_in .zhc-edit-comment__file-upload,
   body.zh_logged_in .zhc-reports-date-range .DateRangePickerInput,
-  body.zh_logged_in .zhc-roadmap-item, body.zh_logged_in .zhc-shortcut-indicator {
+  body.zh_logged_in .zhc-roadmap-item,
+  body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-sidebar,
+  body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body__subheader,
+  body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body-view--root,
+  body.zh_logged_in .zhc-shortcut-indicator {
     background: #181818;
   }
   /* auto-generated rule for "background-color: #fff" */
@@ -417,6 +421,7 @@
   body.zh_logged_in .zhc-roadmap-button--color-inactive:active,
   body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
   body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
+  body.zh_logged_in .zhc-roadmap-progress__bar,
   body.zh_logged_in .zhc-options-panel, body.zh_logged_in .zhc-search,
   body.zh_logged_in .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-filter,
@@ -470,7 +475,7 @@
   }
   /* auto-generated rule for "background-color: #fafbfc" */
   .Box-row.navigation-focus.sortable-chosen, .btn-danger, .input-contrast,
-  .form-group .form-control, .drag-and-drop, .pagination .disabled,
+  .form-group .form-control, .drag-and-drop, .SideNav, .pagination .disabled,
   .pagination .disabled:hover, .pagination .gap, .pagination .gap:hover,
   .jump-to-field-active, .bg-hero-dots-gray:before,
   .illflow-item:not(.selected):hover, .markdown-body kbd, .boxed-group-table th,
@@ -809,6 +814,7 @@
   }
   /* auto-generated rule for "background: #e9e9e9" */
   body.zh_logged_in .zhc-chart-legend::after,
+  body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body-view--sub-item,
   body.zh_logged_in .zhc-sidebar-divider__bar {
     background: #343434;
   }
@@ -866,7 +872,7 @@
     background: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da" */
-  .SideNav-item:before, .block-diff-neutral,
+  .SideNav-item:focus:before, .SideNav-item:hover:before, .block-diff-neutral,
   body[class="page-responsive"] .block-diff-neutral {
     background-color: #404040;
   }
@@ -2010,8 +2016,6 @@
   body.zh_logged_in .zhc-report-card, body.zh_logged_in .zhc-report-tabs,
   body.zh_logged_in .zhc-roadmap-button,
   body.zh_logged_in .zhc-roadmap-expand-toggle:hover,
-  body.zh_logged_in .zhc-roadmap-expand-toggle:active,
-  body.zh_logged_in .zhc-roadmap-expand-toggle:focus,
   body.zh_logged_in .zhc-sidebar-input__input,
   body.zh_logged_in .zhc-options-panel,
   body.zh_logged_in .zhc-sidebar-project-display__toggle--collapsed,
@@ -2131,8 +2135,6 @@
   body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
   body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
   body.zh_logged_in .zhc-roadmap-expand-toggle:hover .zhc-roadmap-expand-toggle__title,
-  body.zh_logged_in .zhc-roadmap-expand-toggle:active .zhc-roadmap-expand-toggle__title,
-  body.zh_logged_in .zhc-roadmap-expand-toggle:focus .zhc-roadmap-expand-toggle__title,
   body.zh_logged_in .zhc-selection-item--is-active,
   body.zh_logged_in .zhc-selection-list--simple .zhc-selection-list-item:hover:not(.zhc-selection-item--is-disabled),
   body.zh_logged_in .zhc-selection-list:not(.zhc-selection-list--has-search) .zhc-selection-list-item:hover:not(.zhc-selection-item--is-disabled),
@@ -2371,6 +2373,7 @@
   html[prefix] .headlines > li, html[prefix] .sidebar-module ul h3,
   html[prefix] .sidebar-module ul ul li, body.status .popover .popover-title,
   body.zh_logged_in .zh-select-menu-item, body.zh_logged_in .zh-board-menu,
+  body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body__subheader,
   html.ghh-theme-classic .ghh-overlay form h3 {
     border-bottom-color: #343434;
   }
@@ -2733,12 +2736,12 @@
   body.zh_logged_in .zhc-sidebar-pipeline-selector__label,
   body.zh_logged_in .zhc-sidebar-active-pipeline__name,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:active,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:focus,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:hover,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:active .zhc-sidebar-active-pipeline__name,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:focus .zhc-sidebar-active-pipeline__name,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button.zhc-sidebar-pipeline-selector__button--disabled:hover .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:active,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:focus,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:hover,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:active .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:focus .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:hover .zhc-sidebar-active-pipeline__name,
   body.zh_logged_in .zhc-sidebar-selector-button,
   body.zh_logged_in .zhc-sidebar-selector-button--no-hover:active .zhc-sidebar-selector-button__heading,
   body.zh_logged_in .zhc-sidebar-selector-button--no-hover:focus .zhc-sidebar-selector-button__heading,
@@ -2798,6 +2801,7 @@
   body.zh_logged_in .zhc-roadmap-button--color-inactive:active,
   body.zh_logged_in .zhc-roadmap-button--color-inactive:focus,
   body.zh_logged_in .zhc-roadmap-button--color-inactive:hover,
+  body.zh_logged_in .zhc-roadmap-item-title__no-epics-string,
   body.zh_logged_in .zhc-roadmap-title--color-default,
   body.zh_logged_in .zhc-selection-list__header,
   body.zh_logged_in .zhc-selection-list__header__text,
@@ -4980,6 +4984,7 @@
   body.zh_logged_in .DateRangePickerInput__calendar-icon,
   body.zh_logged_in .SingleDatePicker__close,
   body.zh_logged_in .SingleDatePickerInput__clear-date,
+  body.zh_logged_in .zhc-roadmap-title--color-inherit,
   body.zh_logged_in .zhc-selection-item,
   body.zh_logged_in .zhc-board-settings-item:hover,
   body.zh_logged_in .zhc-username--is-deleted,
