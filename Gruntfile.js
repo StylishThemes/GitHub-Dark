@@ -45,8 +45,10 @@ module.exports = function(grunt) {
   // :any() has been deprecated, and :matches() is not fully supported
   // this is a simple replace method.. it'll handle `:matches .selector`, but
   // not `selector :matches()`
+  // `:matches()` renamed to `:is()`
+  // see https://developer.mozilla.org/en-US/docs/Web/CSS/:is
   function replaceCSSMatches(theme) {
-    return theme.replace(/:matches\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
+    return theme.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
       let result = "";
       const m = matches.split(/\s*,\s*/);
       const last = m.length - 1;
@@ -366,7 +368,7 @@ module.exports = function(grunt) {
     ]);
   });
 
-  grunt.registerTask("jupyter", "Replacing :matches() in Jupyter files", () => {
+  grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
     processJupyterFiles();
   });
 
