@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.81
+@version     1.22.82
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.81 (2019-09-02) */
+/*! Github Dark v1.22.82 (2019-09-04) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -302,11 +302,10 @@
   body.zh_logged_in .zhc-feature-announcement, body.zh_logged_in .zhc-issue-card,
   body.zh_logged_in .zhc-edit-comment__file-upload,
   body.zh_logged_in .zhc-reports-date-range .DateRangePickerInput,
-  body.zh_logged_in .zhc-roadmap-item,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-sidebar,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body__subheader,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body-view--root,
-  body.zh_logged_in .zhc-shortcut-indicator {
+  body.zh_logged_in .zhc-roadmap-row, body.zh_logged_in .zhc-shortcut-indicator {
     background: #181818;
   }
   /* auto-generated rule for "background-color: #fff" */
@@ -331,7 +330,7 @@
   .select-menu-modal, .select-menu-tabs .select-menu-tab-nav.selected,
   .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
   .select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true],
-  .TimelineItem--break, .TimelineItem--condensed .TimelineItem-badge,
+  .TimelineItem-break, .TimelineItem--condensed .TimelineItem-badge,
   .btn-blurple .Counter, .advisory-form .form-actions,
   .advisory-form .form-control, .advisory-form .previewable-comment-form,
   .credit-card.normal .signature, .billing-addon-items tr.total-row,
@@ -692,14 +691,15 @@
   .form-group .form-control, .drag-and-drop, .SideNav, .pagination .disabled,
   .pagination .disabled:hover, .pagination .gap, .pagination .gap:hover,
   .jump-to-field-active, .bg-hero-dots-gray:before,
-  .illflow-item:not(.selected):hover, .markdown-body kbd, .boxed-group-table th,
-  .blob-expanded .blob-code, .blob-expanded .blob-num,
-  .file-diff-split .empty-cell, .discussion-item-review .file-header, kbd,
-  .list-group-item.closed, .repohead.experiment-repo-nav, .steps li,
-  .listgroup-item.disabled, .billing-addon-items tr:nth-child(2n), .plan-choice,
-  .linejump .linejump-input, .merge-status-item,
-  .branch-action-body .merge-branch-form, .branch-action-body .merge-message,
-  .range-editor, .CheckRun-search-input:focus, .dashboard-notice,
+  .illflow-item:not(.selected):hover, .home-enterprise-wrapper:before,
+  .markdown-body kbd, .boxed-group-table th, .blob-expanded .blob-code,
+  .blob-expanded .blob-num, .file-diff-split .empty-cell,
+  .discussion-item-review .file-header, kbd, .list-group-item.closed,
+  .repohead.experiment-repo-nav, .steps li, .listgroup-item.disabled,
+  .billing-addon-items tr:nth-child(2n), .plan-choice, .linejump .linejump-input,
+  .merge-status-item, .branch-action-body .merge-branch-form,
+  .branch-action-body .merge-message, .range-editor,
+  .CheckRun-search-input:focus, .dashboard-notice,
   .newsletter-frequency-choice h3, .file-header, .select-menu-item-disabled,
   .select-menu-item-disabled:hover, .orghead, .manage-repo-access-not-active,
   .new-label, .filter-bar, .branch-infobar, .oauth-pending-deletion-list-item,
@@ -732,7 +732,7 @@
   body.zh_logged_in .DateRangePickerInput,
   body.zh_logged_in .zhc-feature-announcement__image,
   body.zh_logged_in .zhc-app-notification:hover,
-  body.zh_logged_in .zhc-roadmap-item.zhc-roadmap-item--color-primary,
+  body.zh_logged_in .zhc-roadmap-row.zhc-roadmap-row--color-primary,
   body.zh_logged_in .zhc-workspace-form-section__tip {
     background: #202020;
   }
@@ -2014,7 +2014,7 @@
     border-left-color: #343434;
   }
   /* auto-generated rule for "border-top: 4px solid #e1e4e8" */
-  .TimelineItem--break {
+  .TimelineItem-break {
     border-top-color: #343434;
   }
   /* auto-generated rule for "border-top-color: #e1e4e8" */
@@ -2432,6 +2432,7 @@
   body.zh_logged_in .zhc-report-tabs__nav,
   body.zh_logged_in .zhc-report-tabs__filters,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-header,
+  body.zh_logged_in .zhc-roadmap-row,
   body.zh_logged_in .zhc-selection-list--issue-card-actions .zhc-issue-card__actions__dependency-section,
   body.zh_logged_in .zhc-sidebar-profile__header,
   body.zh_logged_in .zhc-table .zhc-table__cell,
@@ -3478,7 +3479,7 @@
   .payment-history .refunded .status, .plan-choice-exp,
   .blame-commit-date[data-heat="10"], .blame-hunk:hover .reblame-link,
   ul.comparison-list > li.title, .admin-options-block .disabled,
-  .admin-options-block .disabled .note, .business-menu .business-sub-menu-item,
+  .admin-options-block .disabled .note,
   .check-annotation-notice .annotation-title, .code-list .full-path a,
   .deployments-timeline-icon.is-inactive, .graphs .dir, .delete-topic-button,
   .delete-topic-link, .topic-tag-action .add-topic-button,
@@ -3944,11 +3945,9 @@
   .select-menu-item-parent.navigation-focus.selected .octicon-check,
   .select-menu-item-parent[aria-selected=true] .octicon-check,
   .select-menu-item-parent[aria-selected=true].selected .octicon-check,
-  .business-menu .business-sub-menu-item.selected,
-  .business-menu .business-sub-menu-item:hover, .selected .checks-index-label,
-  .CheckRun-search-input:focus, .CheckStep .ansifg-b,
-  .search-autocomplete-dropdown .autocomplete-text, .CommunityTemplate-highlight,
-  .dashboard-notice h2, .exploregrid-item-title,
+  .selected .checks-index-label, .CheckRun-search-input:focus,
+  .CheckStep .ansifg-b, .search-autocomplete-dropdown .autocomplete-text,
+  .CommunityTemplate-highlight, .dashboard-notice h2, .exploregrid-item-title,
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
   .select-menu-item[aria-selected=true] > .octicon.label-options-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
@@ -6518,6 +6517,9 @@
   .blankslate {
     background: none !important;
     box-shadow: none !important;
+  }
+  .discussion-timeline .TimelineItem-break {
+    background-color: transparent;
   }
   button.bg-white.subnav-link {
     background-color: transparent !important;
