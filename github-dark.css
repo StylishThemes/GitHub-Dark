@@ -121,10 +121,11 @@
   .advisory-form .form-control, .advisory-form .previewable-comment-form,
   .credit-card.normal .signature, .billing-addon-items tr.total-row,
   .billing-credit-card .javascript-disabled-overlay, .plan-choice.open,
-  .plan-choice.selected, .branch-action-body, .select-menu-item,
-  .coupons .coupon-form-body, .dashboards-overview-cards .blankslate,
-  .file .image .border-wrap, .MarketplaceSideNav, .news .alert .gravatar,
-  .news .commits li img, .thread-subscription-status,
+  .plan-choice.selected, .CopyBlock:active, .CopyBlock:focus, .CopyBlock:hover,
+  .branch-action-body, .select-menu-item, .coupons .coupon-form-body,
+  .dashboards-overview-cards .blankslate, .file .image .border-wrap,
+  .MarketplaceSideNav, .news .alert .gravatar, .news .commits li img,
+  .thread-subscription-status,
   .notifications-v2 .notifications-list-item.notification-unread,
   .auto-search-group .spinner, .manage-repo-access-group,
   .manage-memberships-tabs-item.selected, .theme-picker, .theme-picker-spinner,
@@ -4008,7 +4009,8 @@
   .select-menu-item.navigation-focus,
   .select-menu-item.navigation-focus .description-inline,
   .select-menu-item.navigation-focus.select-menu-action,
-  .select-menu-item.navigation-focus.selected, .select-menu-item:focus,
+  .select-menu-item.navigation-focus.selected,
+  .select-menu-item.navigation-focus[aria-checked=true], .select-menu-item:focus,
   .select-menu-item:focus .description-inline,
   .select-menu-item:focus.select-menu-action, .select-menu-item:focus.selected,
   .select-menu-item:hover, .select-menu-item:hover .description-inline,
@@ -4063,7 +4065,8 @@
   }
   /* auto-generated rule for "background-color: #0366d6 !important" */
   .bg-blue, .bg-blue-5, .dreamlifter-checks-index-item.selected,
-  body.status .bg-blue, body[class="page-responsive"] .bg-blue,
+  .hx_badge[aria-pressed=true], body.status .bg-blue,
+  body[class="page-responsive"] .bg-blue,
   body[class="page-responsive"] .bg-blue-5 {
     background-color: /*[[base-color]]*/ #4f8cc9 !important;
     color: #fff !important;
@@ -4092,8 +4095,8 @@
     border-color: /*[[base-color]]*/ #4f8cc9;
   }
   /* auto-generated rule for "border-color: #0366d6 !important" */
-  .border-blue, .signup-prompt .btn-link:hover, body.status .border-blue,
-  body[class="page-responsive"] .border-blue {
+  .border-blue, .signup-prompt .btn-link:hover, .hx_badge[aria-pressed=true],
+  body.status .border-blue, body[class="page-responsive"] .border-blue {
     border-color: /*[[base-color]]*/ #4f8cc9 !important;
   }
   /* auto-generated rule for "border-bottom: 1px solid #0366d6" */
@@ -5032,6 +5035,7 @@
   .clone-url-button + .clone-url-button > .clone-url-link:hover,
   .avatar-upload .flash, .tag-input input, .tag-input input:focus,
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
+  .hx_badge-search-container .hx_badge-input,
   .upload-enabled.focused .ais-SearchBox-input,
   html[prefix] .btn-primary.disabled, html[prefix] .btn-primary.disabled:hover,
   html[prefix] .btn-primary:disabled, html[prefix] .btn-primary:disabled:hover,
@@ -5086,7 +5090,8 @@
     box-shadow: none;
   }
   /* auto-generated rule for "box-shadow: none !important" */
-  .box-shadow-none, html[prefix] .box-shadow-none, body.status #es-search-field,
+  .box-shadow-none, .hx_badge-search-container .hx_badge-input:focus,
+  html[prefix] .box-shadow-none, body.status #es-search-field,
   body.status .box-shadow-none, body[class="page-responsive"] .box-shadow-none,
   body.zh_logged_in .zh-pipeline-heading-edit {
     box-shadow: none !important;
