@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.90
+@version     1.22.91
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.90 (2019-09-12) */
+/*! Github Dark v1.22.91 (2019-09-12) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -669,8 +669,7 @@
     background-color: #181818;
   }
   /* auto-generated rule for "background-color: #fff !important" */
-  .checks-index-item.selected, .checks-index-item:hover,
-  .dreamlifter-checks-index-item:hover, .tree-browser-result[aria-selected=true] {
+  .checks-index-item:hover, .tree-browser-result[aria-selected=true] {
     background-color: #181818 !important;
   }
   /* auto-generated rule for "background: #ffe" */
@@ -2815,7 +2814,7 @@
     box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4);
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
-  .SelectMenu-modal, .notifications-v2 .notifications-list-item:hover {
+  .SelectMenu-modal {
     box-shadow: 0 1px 5px #000;
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15) !important" */
@@ -3494,7 +3493,6 @@
   .repository-lang-stats ol.repository-lang-stats-numbers li > span,
   .select-menu-item-disabled, .select-menu-item-disabled:hover .octicon,
   .page-new-repo .form-checkbox.disabled, .type-icon-state-draft,
-  .notifications-v2 .notifications-list-item .notification-list-item-title,
   .notification-navigation .menu-item,
   .oauth-permissions-details.default:not(.delete) .access-details,
   .oauth-permissions-details.default:not(.delete) .permission-title,
@@ -3944,16 +3942,14 @@
   .select-menu-item-parent.navigation-focus.selected .octicon-check,
   .select-menu-item-parent[aria-selected=true] .octicon-check,
   .select-menu-item-parent[aria-selected=true].selected .octicon-check,
-  .selected .checks-index-label, .CheckRun-search-input:focus,
-  .CheckStep .ansifg-b, .search-autocomplete-dropdown .autocomplete-text,
-  .CommunityTemplate-highlight, .dashboard-notice h2, .exploregrid-item-title,
+  .CheckRun-search-input:focus, .CheckStep .ansifg-b,
+  .search-autocomplete-dropdown .autocomplete-text, .CommunityTemplate-highlight,
+  .dashboard-notice h2, .exploregrid-item-title,
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
   .select-menu-item[aria-selected=true] > .octicon.label-options-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li .lang,
   .marketplace-plan-emphasis, .topic-tag-contrast .delete-topic-link,
-  .merge-branch-heading,
-  .notifications-v2 .notifications-list-item.notification-unread .notification-list-item-title,
-  .oauth-org-access-details .oauth-org-item.on strong,
+  .merge-branch-heading, .oauth-org-access-details .oauth-org-item.on strong,
   .oauth-application-whitelist .request-info strong,
   .oauth-application-info .application-title,
   .developer-app-item .developer-app-name,
@@ -4025,8 +4021,7 @@
   }
   /* auto-generated rule for "color: #24292e !important" */
   .color-gray-9, .link-gray-dark, .jump-to-field-active, .CheckStep-line .dt-fm,
-  .notifications-v2 .notifications-list-item:hover,
-  .notifications-v2 .notifications-list-item:hover .notification-list-item-title,
+  .notifications-v2 .notifications-list-item:hover .notification-list-item-link,
   .notifications-v2 .notification-action:hover, body.status .link-gray-dark,
   body.status .flat-button, body.status .history-header .show-filter,
   body[class="page-responsive"] .color-gray-9,
@@ -4279,7 +4274,7 @@
     color: #fff;
   }
   /* auto-generated rule for "background-color: #0366d6 !important" */
-  .bg-blue, .bg-blue-5, .dreamlifter-checks-index-item.selected,
+  .bg-blue, .bg-blue-5, .checks-index-item.selected,
   .hx_badge[aria-pressed=true], body.status .bg-blue,
   body[class="page-responsive"] .bg-blue,
   body[class="page-responsive"] .bg-blue-5 {
@@ -4319,7 +4314,7 @@
     border-bottom-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-top-color: #0366d6 !important" */
-  .dreamlifter-checks-index-item.selected {
+  .checks-index-item.selected {
     border-top-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "border: 1px solid #1074e7" */
@@ -5511,10 +5506,12 @@
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
   .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   .search-form-fluid .search-page-input, .file .empty,
-  .notifications-sso-prompt a, .theme-toggle, .tag-input input,
-  .tree-browser-result mark, .toolbar-commenting .dropdown-item, .toolbar-item,
-  .toolbar-item .menu-target, .wiki-footer .markdown-body img, .user-list li em,
-  .ais-SearchBox-reset, .ais-Highlight-highlighted, body.status .cpt-toggle,
+  .notifications-sso-prompt a,
+  .notifications-v2 .notifications-list-item .notification-list-item-unread-indicator,
+  .theme-toggle, .tag-input input, .tree-browser-result mark,
+  .toolbar-commenting .dropdown-item, .toolbar-item, .toolbar-item .menu-target,
+  .wiki-footer .markdown-body img, .user-list li em, .ais-SearchBox-reset,
+  .ais-Highlight-highlighted, body.status .cpt-toggle,
   body[class="page-responsive"] .dropdown-signout,
   body[class="page-responsive"] .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   body[class="page-responsive"] .header-search-input,
@@ -5550,8 +5547,7 @@
     background: none !important;
   }
   /* auto-generated rule for "background-color: none" */
-  .form-group .form-field-hover,
-  .notifications-v2 .notifications-list-item .notification-list-item-unread-indicator {
+  .form-group .form-field-hover {
     background-color: transparent;
   }
   /* auto-generated rule for "background-image: none" */
