@@ -237,9 +237,11 @@ let mappings = {
   "$background: #ffdf5d": "#cb4",
   "$background: #fffdef": "#261d08",
   "$background: #fffbdd": "#261d08",
+  "$background: #fcf9e4": "#321", // zenhub blocked banner
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
   "$border: #ffdf5d": "#321",
+  "$border: #faebcc": "#542", // zenhub
   "$border: #d9d0a5": "#542",
   "$border: #dca874": "#542",
   "$border: #e5d999": "#542",
@@ -661,7 +663,6 @@ async function extensionCss(source) {
   }
 
   const manifest = JSON.parse(String(await files["manifest.json"].buffer()));
-
   for (const script of manifest.content_scripts || []) {
     if (!Array.isArray(script.css)) continue;
     for (const file of script.css) {
