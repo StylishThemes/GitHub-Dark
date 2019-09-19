@@ -43,6 +43,8 @@ let mappings = {
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
 
+  "background-image: linear-gradient(#fafafa,#eaeaea)": "background-image: linear-gradient(#202020, #181818)",
+
   // ==========================================================================
   // Border
   // ==========================================================================
