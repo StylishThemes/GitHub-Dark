@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.96
+@version     1.22.97
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.96 (2019-09-19) */
+/*! Github Dark v1.22.97 (2019-09-19) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -1185,6 +1185,10 @@
   /* auto-generated rule for "background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))" */
   .code-navigation-banner {
     background: linear-gradient(180deg, #181818, #181818);
+  }
+  /* auto-generated rule for "background-image: linear-gradient(#fafafa,#eaeaea)" */
+  .clone-url-button > .clone-url-link {
+    background-image: linear-gradient(#202020, #181818);
   }
   /* auto-generated rule for "border: solid transparent" */
   .form-group.errored .error:after, .form-group.errored .error:before,
@@ -4350,6 +4354,16 @@
   .contrib-square {
     color: /*[[base-color]]*/;
   }
+  /* auto-generated rule for "background-image: linear-gradient(#599bcd,#3072b3)" */
+  .clone-url-button > .clone-url-link:active,
+  .clone-url-button > .clone-url-link:hover {
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
+  /* auto-generated rule for "border-color: #2a65a0" */
+  .clone-url-button > .clone-url-link:active,
+  .clone-url-button > .clone-url-link:hover {
+    border-color: /*[[base-color]]*/;
+  }
   /* auto-generated rule for "color: #cb2431" */
   .btn-danger, .form-group dd h4.is-error, .form-group.required dt label:after,
   .form-group.errored label, .status-indicator-failed .octicon-x,
@@ -7300,10 +7314,12 @@
   .cheatsheet h2, .section a.section-head, .list-heading, .dashboard-tabs li a,
   a.function-button, .add-pill-form, .gist .gist-file .gist-meta,
   ul.comparison-list > li.title, button.button, a.button, span.button,
-  button.minibutton, a.minibutton, span.minibutton,
-  .clone-url-button > .clone-url-link {
+  button.minibutton, a.minibutton, span.minibutton {
     background: linear-gradient(#202020, #181818) !important;
     border-color: #383838 !important;
+  }
+  .clone-url-button > .clone-url-link {
+    border-color: #383838;
   }
   .search-form button, .issues-list-actions, a.gollum-minibutton,
   a.gollum-minibutton:visited {
@@ -8371,7 +8387,8 @@
   .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
   .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num,
   .blob-num[colspan], .blob-num-hunk,
-  .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child {
+  .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child,
+  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code.empty-cell {
     background: #2a2a2a !important;
   }
   .diff-table tr:hover > pre,
