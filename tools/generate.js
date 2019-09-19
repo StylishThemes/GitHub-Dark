@@ -196,6 +196,8 @@ let mappings = {
   "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
   "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
+  "background-image: linear-gradient(#599bcd,#3072b3)": "background-image: linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
+  "$border: #2a65a0": "/*[[base-color]]*/ #4f8cc9",
 
   // red
   "color: #cb2431": "color: #f44",
