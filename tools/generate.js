@@ -230,6 +230,7 @@ let mappings = {
   // yellow
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: rgba(115,92,15,.5)": "color: rgba(204,187,68,.5)",
+  "color: #dbab09": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "color: #735c0f": "color: #bba257",
   "color: #613A00": "color: #bba257",
