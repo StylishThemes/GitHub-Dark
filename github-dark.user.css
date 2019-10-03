@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.105
+@version     1.22.106
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.105 (2019-10-02) */
+/*! Github Dark v1.22.106 (2019-10-03) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -3195,7 +3195,6 @@
   body[class="page-responsive"] .discussion-starting-comment .num,
   body[class="page-responsive"] .discussion-starting-comment .username,
   body[class="page-responsive"] .discussion-block-title,
-  body[class="page-responsive"] .discussion-block-title .timestamp,
   body[class="page-responsive"] .discussion-block-header,
   body[class="page-responsive"] .timeline-truncation-title,
   body[class="page-responsive"] .issue-event,
@@ -3204,7 +3203,6 @@
   body[class="page-responsive"] .dead-pull-request-review-comment .username,
   body[class="page-responsive"] .timeline-commits-container,
   body[class="page-responsive"] .timeline-commits-container .author,
-  body[class="page-responsive"] .timeline-commits-container .timestamp,
   body[class="page-responsive"] .timeline-commits-container .commit-message a,
   body[class="page-responsive"] .timeline-review-header,
   body[class="page-responsive"] .timeline-review-meta .author,
@@ -4718,6 +4716,27 @@
   .gist-quicksearch-results .select-menu-item .octicon-gist-secret {
     color: rgba(204, 187, 68, .5);
   }
+  /* auto-generated rule for "color: #dbab09" */
+  .table-of-contents .octicon-diff-modified,
+  .toc-select .select-menu-item-icon.octicon-diff-modified,
+  .check-annotation-warning .octicon-alert, .community-checklist .checklist-dot,
+  body.status .update.investigating > strong,
+  body.status .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  body.status .layout-content.status-full-history .month .incident-container .impact-minor,
+  body.status .layout-content.status-incident .incident-name.impact-minor,
+  body.status .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator, body.status .incident-history .impact-minor,
+  body.status .components-container .component-inner-container.status-yellow .component-status,
+  body.status .components-container .component-inner-container.status-yellow .icon-indicator,
+  body.status .layout-content.status.manage-subscriptions .confirmation-infobox .fa,
+  html.ghh-theme-classic .ghh .ghh-state-warning {
+    color: #cb4;
+  }
+  /* auto-generated rule for "color: #dbab09 !important" */
+  .color-yellow-7, .bg-pending, body.status .bg-pending,
+  body[class="page-responsive"] .color-yellow-7 {
+    color: #cb4 !important;
+  }
   /* auto-generated rule for "color: #b08800" */
   .deployment-status-label.is-in_progress, .deployment-status-label.is-pending,
   .deployment-status-label.is-queued,
@@ -5098,8 +5117,8 @@
   .boxed-group .heading a, .boxed-group > h3 a, .full-commit .branches-list li a,
   .branches-tag-list li .ellipsis-expander, .branches-tag-list li a,
   .details-overlay[open] > .dropdown-item:hover,
-  .discussion-sidebar-toggle:hover .octicon, .timeline-comment-header .timestamp,
-  .comment-type-icon, .pagehead-heading, .pagehead-tabs-item.selected > .octicon,
+  .discussion-sidebar-toggle:hover .octicon, .comment-type-icon,
+  .pagehead-heading, .pagehead-tabs-item.selected > .octicon,
   .reponav-item.selected > .octicon, .reponav-wrapper .reponav-item .Counter,
   .select-menu .select-menu-clear-item .octicon, .select-menu-item,
   .select-menu-item input:checked + .octicon-check,
@@ -5123,8 +5142,7 @@
   .label-select-menu .select-menu-item:hover,
   .label-select-menu .select-menu-item[aria-selected=true],
   .stale-files-tab-link, .diffbar-range-menu .is-range-selected .description,
-  .review-comment-contents .timestamp, .numbers-summary li > a:hover .num,
-  .branch-infobar .muted-link:hover .octicon,
+  .numbers-summary li > a:hover .num, .branch-infobar .muted-link:hover .octicon,
   .repository-merge-features .form-group.errored label,
   .follow-list .follow-list-name a,
   .page-gist-edit .btn-toggle-visibility .octicon-gist-secret,
@@ -5151,7 +5169,6 @@
   body[class="page-responsive"] .list-heading .btn-link,
   body[class="page-responsive"] .list-heading a,
   body[class="page-responsive"] .diff-view .file .file-label a,
-  body[class="page-responsive"] .discussion-event .timestamp,
   body[class="page-responsive"] .reponav-item .Counter,
   html.refined-github .mergeability-details .js-details-container .status-meta,
   html.refined-github .repohead h1 .commit-build-statuses .octicon,
@@ -5294,7 +5311,8 @@
   .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting,
   .select-menu-tabs .select-menu-tab-nav, .select-menu-tabs a,
   .repository-lang-stats ol.repository-lang-stats-numbers li a:hover,
-  .qr-code-table tr, .repository-merge-features .form-group.errored .error,
+  .progress-pjax-loader, .qr-code-table tr,
+  .repository-merge-features .form-group.errored .error,
   .details-overlay[open] > summary::before, body.status html, body,
   body.status div, body.status span, body.status object, body.status iframe,
   body.status h1, body.status h2, body.status h3, body.status h4, body.status h5,
@@ -6733,6 +6751,11 @@
   body[class="page-responsive"] .repo-list .private {
     background-color: initial;
   }
+  @media (hover: hover) {
+    .SelectMenu-item:hover, body:not(.intent-mouse) .SelectMenu-item:focus {
+      background-color: /*[[base-color]]*/;
+    }
+  }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
   #message .envelope .header .info .title.unread, li.contextswitch ul li.current,
   .watcher-widget, ul.main_nav li.selected a, ul.states li, .add_file, .inset,
@@ -7907,7 +7930,8 @@
   }
   /* .bg-pending might be a GitHub bug as it sets the fg */
   .text-pending, .text-renamed, .bg-pending, .page-new-repo .octicon-lock,
-  body[class="page-responsive"] .repo-list .private .octicon-lock {
+  body[class="page-responsive"] .repo-list .private .octicon-lock,
+  .menu a .octicon.color-yellow-7 {
     color: #cb4 !important;
   }
   .archived-project-cards-pane .project-card .archived-header {
@@ -7986,8 +8010,8 @@
   ul.summary-stats li .octicon-git-branch-create,
   ul.summary-stats li .octicon-issue-opened, #toc .octicon-diff-added,
   .setup-info-module .features-list .octicon, .setup-form-container .secure,
-  .highlight .gi, .type-icon-state-open, .text-green, .release-label.latest a,
-  .release .Label--latest a {
+  .highlight .gi, .type-icon-state-open, .release-label.latest a,
+  .release .Label--latest a, .menu a .octicon.text-green {
     color: #6cc644 !important;
   }
   /* bright green background */
