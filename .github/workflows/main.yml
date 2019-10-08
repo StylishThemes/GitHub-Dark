@@ -3,44 +3,13 @@ name: CI
 on: push
 
 jobs:
-  build-macOS:
-    runs-on: macOS-latest
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macOS-latest, ubuntu-latest, windows-latest]
 
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v1
-
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
-  build-ubuntu:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v1
-
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
-  build-windows:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout Repo
