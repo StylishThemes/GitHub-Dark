@@ -10029,7 +10029,7 @@
     background: /*[[base-color]]*/ #4f8cc9;
   }
 }
-@-moz-document regexp("^https:\\/\\/(github\\.com)\\/(features)\\/(security).*$") {
+@-moz-document regexp("^https:\\/\\/(github\\.com)\\/(features)\\/(security|actions).*$") {
   img[src*="security-vulnerability.svg"],
   img[src*="security-vulnerability-alert.svg"], img[src*="security-policy.svg"],
   img[src*="security-workspace-bg.svg"],
@@ -10040,7 +10040,7 @@
   img[src*="security-dependabot.svg"], img.security-pr-merge,
   .section-security-patches-graph, img[src*="security-token-scanning.svg"],
   img[src*="security-lgtm-vulnerability.svg"],
-  img[src*="security-lgtm-alert.svg"] {
+  img[src*="security-lgtm-alert.svg"], .actions-pr-checks {
     filter: invert(90%) hue-rotate(-180deg) !important;
   }
   .section-security-alerts-graph svg, .section-security-patches-graph {
@@ -10054,12 +10054,24 @@
     stroke: #484848;
   }
   [stroke="#B08800"] {
-    stroke: #ffca14 !important;
+    stroke: #652;
   }
   [fill="#FFFDEF"] {
     fill: #321;
   }
-  svg.security-hero {
+  [fill="#6A737D"] {
+    fill: #444;
+  }
+  [fill="white"]:not([d*="M279.27"]) {
+    fill: #111;
+  }
+  [fill="black"] {
+    fill: #eee;
+  }
+  svg.security-hero, .actions-hero {
     filter: brightness(200%) contrast(80%);
+  }
+  .section-actions-workflow-logs::before, .actions-pricing-private::before {
+    filter: brightness(60%);
   }
 }
