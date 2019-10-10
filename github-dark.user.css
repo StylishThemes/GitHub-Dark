@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.110
+@version     1.22.111
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.110 (2019-10-09) */
+/*! Github Dark v1.22.111 (2019-10-10) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -6909,9 +6909,6 @@
   .code-navigation-banner .code-navigation-banner-illo {
     filter: invert(900%) hue-rotate(180deg) contrast(70%) brightness(110%) !important;
   }
-  svg.security-hero {
-    filter: invert(100%) hue-rotate(180deg) contrast(90%) brightness(450%);
-  }
   /* code coverage */
   /* example: https://github.com/go-gitea/gitea/pull/6969 */
   img[data-canonical-src^="https://codecov.io"][alt="Impacted file tree graph"] {
@@ -6926,21 +6923,11 @@
   svg[viewBox="0 0 1461.5 677.84"][width="700"] {
     filter: invert(85%) hue-rotate(-180deg) brightness(125%) contrast(85%) !important;
   }
-  /* https://www.githubstatus.com, https://github.com/features/security */
-  .illo-desktop-header, img[src*="security-vulnerability.svg"],
-  img[src*="security-vulnerability-alert.svg"], img[src*="security-policy.svg"],
-  img[src*="security-workspace-bg.svg"],
-  img[src*="security-workspace-comment-1.svg"],
-  img[src*="security-workspace-comment-2.svg"],
-  img[src*="security-workspace-changes.svg"],
-  img[src*="security-workspace-merge.svg"], .section-security-alerts svg,
-  img[src*="security-dependabot.svg"], img.security-pr-merge,
-  .section-security-patches-graph, img[src*="security-token-scanning.svg"],
-  img[src*="security-lgtm-vulnerability.svg"],
-  img[src*="security-lgtm-alert.svg"] {
+  /* https://www.githubstatus.com */
+  .illo-desktop-header {
     filter: invert(90%) hue-rotate(-180deg) !important;
   }
-  .bg-dots-gray, .bg-dots-gray-large, .action-logo:after {
+  .action-logo:after {
     filter: invert(100%) hue-rotate(180deg) brightness(350%) !important;
   }
   /* invert network graph; gh-polls (https://github.com/apex/gh-polls) */
@@ -7405,11 +7392,6 @@
     box-shadow: -2px -2px 0 rgba(0, 0, 0, .4) !important;
   }
   .Header .header-search-wrapper.focus {
-    box-shadow: none !important;
-  }
-  /* https://github.com/features/security */
-  [style="background: #fff; box-shadow: 0 10px 50px 30px #fff;"] {
-    background: none !important;
     box-shadow: none !important;
   }
   /* text color */
@@ -8208,6 +8190,12 @@
   }
   img[src="/images/spinner.gif"] {
     padding: 32px !important;
+  }
+  .bg-dots-gray {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><circle cx="1.5" cy="1.5" r="1.5" fill="%23333"/></svg>') !important;
+  }
+  .bg-dots-gray-large {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><circle cx="3" cy="3" r="3" fill="%23333"/></svg>') !important;
   }
   /* remove code view padding */
   .Box-body.blob-wrapper {
@@ -9504,6 +9492,57 @@
   }
   .intercom-launcher [class*="css-"] {
     background: /*[[base-color]]*/;
+  }
+}
+@-moz-document regexp("^https:\\/\\/(github\\.com)\\/(features)\\/(security|actions).*$") {
+  img[src*="security-vulnerability.svg"],
+  img[src*="security-vulnerability-alert.svg"], img[src*="security-policy.svg"],
+  img[src*="security-workspace-bg.svg"],
+  img[src*="security-workspace-comment-1.svg"],
+  img[src*="security-workspace-comment-2.svg"],
+  img[src*="security-workspace-changes.svg"],
+  img[src*="security-workspace-merge.svg"], .section-security-alerts svg,
+  img[src*="security-dependabot.svg"], img.security-pr-merge,
+  .section-security-patches-graph, img[src*="security-token-scanning.svg"],
+  img[src*="security-lgtm-vulnerability.svg"],
+  img[src*="security-lgtm-alert.svg"], .actions-pr-checks {
+    filter: invert(90%) hue-rotate(-180deg) !important;
+  }
+  .section-security-alerts-graph svg, .section-security-patches-graph {
+    filter: none !important;
+  }
+  [style="background: #fff; box-shadow: 0 10px 50px 30px #fff;"] {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  [stroke="#E1E4E8"] {
+    stroke: #484848;
+  }
+  [stroke="#B08800"] {
+    stroke: #652;
+  }
+  [fill="#FFFDEF"] {
+    fill: #321;
+  }
+  [fill="#6A737D"] {
+    fill: #444;
+  }
+  [fill="white"]:not([d*="M279.27"]) {
+    fill: #111;
+  }
+  [fill="black"] {
+    fill: #eee;
+  }
+  svg.security-hero, .actions-hero {
+    filter: brightness(200%) contrast(80%);
+  }
+  .section-actions-workflow-logs::before, .actions-pricing-private::before {
+    filter: brightness(60%);
+  }
+}
+@-moz-document regexp("^https:\/\/(github\.com)\/(features)\.*$") {
+  img[src*="img-"] {
+    filter: invert(90%) hue-rotate(-180deg) !important;
   }
 }
 
