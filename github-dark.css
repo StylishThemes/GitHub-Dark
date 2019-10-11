@@ -6401,8 +6401,8 @@
     background: #222 !important;
     border-color: #343434 !important;
   }
-  .btn:disabled, .btn:disabled:hover, .btn.disabled, .btn.disabled:hover,
-  button.button:disabled, button.button:disabled:hover, button.button.disabled,
+  .btn:disabled, .btn.disabled, button.button:disabled,
+  button.button:disabled:hover, button.button.disabled,
   button.button.disabled:hover, button.minibutton:disabled,
   button.minibutton:disabled:hover, button.minibutton.disabled,
   span.minibutton.disabled, a.minibutton.disabled,
@@ -6413,6 +6413,10 @@
     background: #282828 !important;
     border-color: #484848 !important;
     color: #555 !important;
+  }
+  .btn:disabled:hover, .btn.disabled:hover {
+    background: #282828 !important;
+    border-color: #484848 !important;
   }
   .btn-outline:disabled, .btn-outline:disabled:hover, .btn-outline.disabled,
   .btn-outline.disabled:hover, .btn.btn-outline:disabled,
@@ -7597,7 +7601,7 @@
   .mergeable-dirty .bubble:after {
     border-right-color: #911 !important;
   }
-  /* bright red text */
+  /*  red text */
   .btn-danger, .text-failure, .text-error, a:not(.octicon-btn).danger,
   .deletions, .cdel, .gd .diff-line-num, .authors-and-code .deletions,
   .diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
@@ -7613,6 +7617,11 @@
   input[id="label-color-"]:invalid,
   body[class="page-responsive"] .color-icons .closed {
     color: #f44 !important;
+  }
+  .btn-danger.disabled, .btn-danger:disabled,
+  body[class="page-responsive"] .btn-danger.disabled,
+  body[class="page-responsive"] .btn-danger:disabled {
+    color: rgba(203, 36, 49, .4) !important;
   }
   /* blue purple */
   .btn-blurple {
