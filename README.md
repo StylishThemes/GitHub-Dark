@@ -119,7 +119,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npm run eslint`: Lint the JavaScript code in the `tools` directory.
 - `npm run stylelint`: Run Stylelint on `github-dark.css`.
 - `npm run authors`: Regenerate the `AUTHORS` file based on git history.
-- `npx grunt imagemin`: Minify all images present in the `image` directory.
+- `npm run imagemin`: Minify all images present in the `image` directory.
 - `npm run generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
 - `npm run patch`: Increment the version on the patch version number, update headers and create a commit.
 - `npm run minor`: Increment the version on the minor version number, update headers and create a commit.
