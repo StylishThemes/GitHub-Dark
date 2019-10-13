@@ -195,34 +195,6 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg, config,
-    "string-replace": {
-      inline: {
-        files: {"<%= config.buildFile %>": "<%= config.sourceFile %>"},
-        options: {replacements: "<%= config.replacements %>"}
-      },
-      // Tweak Perfectionist results
-      afterPerfectionist: {
-        files: {"<%= config.sourceFile %>": "<%= config.sourceFile %>"},
-        options: {
-          replacements: [
-            {pattern: /\{\/\*!/g, replacement: "{\n /*!"},
-            {pattern: /\/\* /g, replacement: "\n  /* "},
-            {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: "\n"},
-            {pattern: / {2}}\/\*/gm, replacement: "  }\n  /*"},
-            {pattern: /,\s+\n/gm, replacement: ",\n"},
-            // fix unicode-range block
-            {pattern: /\n\s{23}/gm, replacement: ""},
-            {
-              pattern: /(-025A9,|-02662,)/gim,
-              replacement: "$&\n                   "
-            },
-            {pattern: /\/\*\[\[code-wrap/, replacement: "/*[[code-wrap"},
-            {pattern: /,\u0020{2,}/g, replacement: ", "},
-            {pattern: /\s+domain\(/g, replacement: " domain("},
-          ]
-        }
-      }
-    },
     clean: {
       cssmins: {
         src: [
@@ -238,9 +210,7 @@ module.exports = function(grunt) {
       eslint: "npx eslint --quiet --color *.js tools/*.js",
       generate: "node tools/generate",
       imagemin: "bash tools/imagemin.sh",
-      perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
       stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
-      update: "npx updates -cu && npm install",
       usercss: "node tools/build-usercss",
     },
     cssmin: {
@@ -368,13 +338,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
     processJupyterFiles();
-  });
-
-  grunt.registerTask("clean", "Perfectionist cleanup", () => {
-    grunt.task.run([
-      "exec:perfectionist",
-      "string-replace:afterPerfectionist"
-    ]);
   });
 
   // lint github-dark.css and themes for errors
