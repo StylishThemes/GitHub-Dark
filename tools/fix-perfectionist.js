@@ -9,15 +9,15 @@ const fileName = path.join(__dirname, "..", pkg.main);
 
 function cleanup(css) {
   return css
-    .replace(/\{\/\*!/g, "\n /*!");
-    .replace(/\/\* /g, "\n  /* ");
-    .replace(/(\s+)?\n(\s+)?\n/gm, "\n");
-    .replace(/ {2}}\/\*/gm, "  }\n  /*");
-    .replace(/,\s+\n/gm, ",\n");
+    .replace(/\{\/\*!/g, "{\n /*!")
+    .replace(/\/\* /g, "\n  /* ")
+    .replace(/(\s+)?\n(\s+)?\n/gm, "\n")
+    .replace(/ {2}}\/\*/gm, "  }\n  /*")
+    .replace(/,\s+\n/gm, ",\n")
     // fix unicode-range block
-    .replace(/\n\s{23}/gm, "");
-    .replace(/(-025A9,|-02662,)/gim, "$&\n                   ");
-    .replace(/\/\*\[\[code-wrap/, "/*[[code-wrap");
+    .replace(/\n\s{23}/gm, "")
+    .replace(/(-025A9,|-02662,)/gim, "$&\n                   ")
+    .replace(/\/\*\[\[code-wrap/, "/*[[code-wrap")
     .replace(/,\u0020{2,}/g, ", ");
 }
 
