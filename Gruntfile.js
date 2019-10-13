@@ -206,7 +206,6 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      imagemin: "bash tools/imagemin.sh",
       usercss: "node tools/build-usercss",
     },
     cssmin: {
@@ -334,10 +333,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
     processJupyterFiles();
-  });
-
-  // minify all PNG and SVG images
-  grunt.registerTask("imagemin", "Minify all PNG and SVG images", () => {
-    grunt.task.run(["exec:imagemin"]);
   });
 };
