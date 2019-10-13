@@ -238,9 +238,6 @@ module.exports = function(grunt) {
       eslint: "npx eslint --quiet --color *.js tools/*.js",
       generate: "node tools/generate",
       imagemin: "bash tools/imagemin.sh",
-      patch: "npx ver -p -d -C patch github-dark.css github-dark.user.css",
-      minor: "npx ver -p -d -C minor github-dark.css github-dark.user.css",
-      major: "npx ver -p -d -C major github-dark.css github-dark.user.css",
       perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
       stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       update: "npx updates -cu && npm install",
@@ -406,28 +403,5 @@ module.exports = function(grunt) {
   // Auto-generate styles based on GitHub's CSS
   grunt.registerTask("update", "Update dependencies", () => {
     grunt.task.run(["exec:update"]);
-  });
-
-  // version bump tasks
-  grunt.registerTask("patch", "Bump patch version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:patch"
-    ]);
-  });
-  grunt.registerTask("minor", "Bump minor version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:minor"
-    ]);
-  });
-  grunt.registerTask("major", "Bump major version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:major"
-    ]);
   });
 };
