@@ -115,7 +115,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npx grunt min`: Same as `grunt`, but outputs a minified style.
 - `npx grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npx grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
-- `npx grunt clean`: Reformat `github-dark.css` to conform the style guide.
+- `npm run clean`: Reformat `github-dark.css` to conform the style guide.
 - `npx grunt lint`: Run Stylelint on `github-dark.css`.
 - `npx grunt authors`: Regenerate the `AUTHORS` file based on git history.
 - `npx grunt imagemin`: Minify all images present in the `image` directory.
@@ -123,6 +123,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npm run patch`: Increment the version on the patch version number, update headers and create a commit.
 - `npm run minor`: Increment the version on the minor version number, update headers and create a commit.
 - `npm run major`: Increment the version on the major version number, update headers and create a commit.
+- `npm run perfectionist`: Runs perfectionist only. CSS is not cleaned!
 - `npm run update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!

@@ -9,10 +9,11 @@
     "node": ">=12"
   },
   "scripts": {
-    "clean": "grunt clean",
+    "clean": "npm run perfectionist && node tools/fix-perfectionist.js",
     "generate": "grunt generate",
     "test": "grunt lint",
     "usercss": "grunt usercss",
+    "perfectionist": "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
     "patch": "npx ver -p -d -C patch github-dark.css github-dark.user.css",
     "minor": "npx ver -p -d -C minor github-dark.css github-dark.user.css",
     "major": "npx ver -p -d -C major github-dark.css github-dark.user.css",
