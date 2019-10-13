@@ -9,7 +9,7 @@ const fileName = path.join(__dirname, "..", pkg.main);
 
 function cleanup(css) {
   return css
-    .replace(/\{\/\*!/g,  "\n /*!");
+    .replace(/\{\/\*!/g, "\n /*!");
     .replace(/\/\* /g, "\n  /* ");
     .replace(/(\s+)?\n(\s+)?\n/gm, "\n");
     .replace(/ {2}}\/\*/gm, "  }\n  /*");
