@@ -206,9 +206,7 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      eslint: "npx eslint --quiet --color *.js tools/*.js",
       imagemin: "bash tools/imagemin.sh",
-      stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       usercss: "node tools/build-usercss",
     },
     cssmin: {
@@ -336,14 +334,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
     processJupyterFiles();
-  });
-
-  // lint github-dark.css and themes for errors
-  grunt.registerTask("lint", "Lint CSS and JS scripts for errors", () => {
-    grunt.task.run([
-      "exec:eslint",
-      "exec:stylelint"
-    ]);
   });
 
   // minify all PNG and SVG images

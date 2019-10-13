@@ -116,7 +116,8 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npx grunt usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npx grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
 - `npm run clean`: Reformat `github-dark.css` to conform the style guide.
-- `npx grunt lint`: Run Stylelint on `github-dark.css`.
+- `npm run eslint`: Lint the JavaScript code in the `tools` directory.
+- `npm run stylelint`: Run Stylelint on `github-dark.css`.
 - `npm run authors`: Regenerate the `AUTHORS` file based on git history.
 - `npx grunt imagemin`: Minify all images present in the `image` directory.
 - `npm run generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
