@@ -123,7 +123,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npm run patch`: Increment the version on the patch version number, update headers and create a commit.
 - `npm run minor`: Increment the version on the minor version number, update headers and create a commit.
 - `npm run major`: Increment the version on the major version number, update headers and create a commit.
-- `npx grunt update`: Update and install dependencies.
+- `npm run update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 

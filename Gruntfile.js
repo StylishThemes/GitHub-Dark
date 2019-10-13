@@ -399,9 +399,4 @@ module.exports = function(grunt) {
   grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
     grunt.task.run(["exec:generate", "clean"]);
   });
-
-  // Auto-generate styles based on GitHub's CSS
-  grunt.registerTask("update", "Update dependencies", () => {
-    grunt.task.run(["exec:update"]);
-  });
 };
