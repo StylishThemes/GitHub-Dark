@@ -207,7 +207,6 @@ module.exports = function(grunt) {
     },
     exec: {
       eslint: "npx eslint --quiet --color *.js tools/*.js",
-      generate: "node tools/generate",
       imagemin: "bash tools/imagemin.sh",
       stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       usercss: "node tools/build-usercss",
@@ -350,10 +349,5 @@ module.exports = function(grunt) {
   // minify all PNG and SVG images
   grunt.registerTask("imagemin", "Minify all PNG and SVG images", () => {
     grunt.task.run(["exec:imagemin"]);
-  });
-
-  // Auto-generate styles based on GitHub's CSS
-  grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
-    grunt.task.run(["exec:generate", "clean"]);
   });
 };
