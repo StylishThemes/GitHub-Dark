@@ -205,9 +205,6 @@ module.exports = function(grunt) {
         ]
       }
     },
-    exec: {
-      usercss: "node tools/build-usercss",
-    },
     cssmin: {
       minify: {
         files: {"<%= config.buildFile %>": "<%= config.buildFile %>"},
