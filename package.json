@@ -14,16 +14,16 @@
     "authors": "bash tools/authors.sh",
     "clean": "npm run perfectionist && node tools/fix-perfectionist.js",
     "generate": "node tools/generate.js",
-    "eslint": "npx eslint --quiet --color *.js tools/*.js",
-    "stylelint": "npx stylelint github-dark.css themes/src/**/*.css",
+    "eslint": "eslint --quiet --color *.js tools/*.js",
+    "stylelint": "stylelint github-dark.css themes/src/**/*.css",
     "imagemin": "bash tools/imagemin.sh",
     "test": "npm run eslint && npm run stylelint",
     "usercss": "node tools/build-usercss.js",
-    "perfectionist": "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-    "patch": "npx ver -p -d -C patch github-dark.css github-dark.user.css",
-    "minor": "npx ver -p -d -C minor github-dark.css github-dark.user.css",
-    "major": "npx ver -p -d -C major github-dark.css github-dark.user.css",
-    "update": "npx updates -cu && npm install"
+    "perfectionist": "perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
+    "patch": "ver -p -d -C patch github-dark.css github-dark.user.css",
+    "minor": "ver -p -d -C minor github-dark.css github-dark.user.css",
+    "major": "ver -p -d -C major github-dark.css github-dark.user.css",
+    "update": "updates -cu && npm install"
   },
   "devDependencies": {
     "css": "2.2.4",
