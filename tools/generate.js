@@ -64,6 +64,7 @@ let mappings = {
   "$border: #e6ebf1": "#343434",
   "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaecef": "#343434",
+  "$border: #eaeaea": "#343434",
   "$border: #eee": "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
