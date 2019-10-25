@@ -212,7 +212,7 @@
   } EOT;
 }
 ==/UserStyle== */
-@-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
 /*! Github Dark v1.22.126 (2019-10-23) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
@@ -2578,6 +2578,18 @@
   /* auto-generated rule for "border-right-color: #eaecef" */
   .file-diff-split .empty-cell {
     border-right-color: #343434;
+  }
+  /* auto-generated rule for "border: 1px solid #eaeaea" */
+  .two-factor-help, .confirm-removal-list-container, .team-label-ldap {
+    border-color: #343434;
+  }
+  /* auto-generated rule for "border-top: 1px solid #eaeaea" */
+  .confirm-removal-list-item {
+    border-top-color: #343434;
+  }
+  /* auto-generated rule for "border-bottom: 1px solid #eaeaea" */
+  .u2f-auth-header:not(:last-child), .two-factor-toggle .two-factor-status {
+    border-bottom-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #eee" */
   .newsletter-frequency-choice, .thread-subscription-status, .two-factor-steps,
@@ -6607,7 +6619,7 @@
     background: none !important;
   }
   /* make .blankslate invisible. if there are exceptions where it's useful, add them via :not() */
-  .blankslate:not(.repository-og-image) {
+  .blankslate:not(.repository-og-image):not(.blankslate-capped) {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
@@ -7012,7 +7024,7 @@
   img[src$="favicons.githubusercontent.com/gist.github.com"],
   img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
   #footer .github img, #com span.octicon:not(.octicon-comment-discussion),
-  .developer-thanks-image img {
+  .developer-thanks-image img, img[alt="GitHub Support"] {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
   .code-navigation-banner .code-navigation-banner-illo {
@@ -7191,6 +7203,9 @@
   .traffic-graph g.x.axis g.tick:first-of-type line {
     stroke: #1db34f !important;
   }
+  [style*="stroke: #dbab09"] {
+    stroke: #cb4 !important;
+  }
   .traffic-graph g.x.axis g.tick:nth-child(15) line {
     stroke: #1d7fb3 !important;
   }
@@ -7349,7 +7364,9 @@
   .topic-tag-action, .delete-topic-button, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button, .RecentBranches, .signup-prompt-bg,
   ul.search-results li .label, div[style*="background-color: #044d6e"],
-  .topic-tag-contrast .delete-topic-link {
+  .topic-tag-contrast .delete-topic-link,
+  body[class="page-responsive"] .bg-blue-light,
+  .repository-content > .Box--condensed > .Box-body.bg-blue-light {
     background: #182030 !important;
   }
   .repo-file-upload-progress .repo-file-upload-meter, .btn.btn-blue:hover,
@@ -7532,7 +7549,8 @@
   .diffbar [role^=menuitem]:focus:not(.is-range-selected) .text-emphasized,
   .diffbar [role^=menuitem]:hover:not(.is-range-selected) .text-emphasized,
   .filter-item.selected p, .filter-item:hover .marketplace-plan-per-time,
-  ul.filter-list .filter-item:hover, .feature-preview-dialog .text-white {
+  ul.filter-list .filter-item:hover, .feature-preview-dialog .text-white,
+  .oauth-permissions-details .permission-summary em.highlight {
     color: #f0f0f0 !important;
   }
   ul.repo-stats li a:hover, .minibutton.danger:hover, #gist-form label,
@@ -7926,9 +7944,7 @@
   .deletions, .cdel, .gd .diff-line-num, .authors-and-code .deletions,
   .diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
   .icon-for-failure, ul.summary-stats li .octicon-issue-closed, .branch-delete,
-  #toc .octicon-diff-removed, .highlight .gd,
-  .settings-email .email-actions .settings-remove-email,
-  .uploaded-files .remove:hover,
+  #toc .octicon-diff-removed, .highlight .gd, .uploaded-files .remove:hover,
   .collaborators .collab-remove .remove-link:hover, .minibutton.danger,
   .octicon-btn-danger:hover, .text-danger, .type-icon-state-closed,
   .delete-owners-button:hover, .dangerzone-module h4, .deprecation-notice a,
