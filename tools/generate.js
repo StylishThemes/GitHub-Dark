@@ -284,6 +284,7 @@ const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
+  {url: "https://support.github.com"},
   {url: "https://developer.github.com", prefix: "html[prefix]"},
   {
     url: "https://www.githubstatus.com/",

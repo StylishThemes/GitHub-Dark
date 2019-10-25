@@ -360,8 +360,10 @@
   .orgs-help-item-octicon, .plan-category-tab, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
   .org-sso .org-sso-panel, .btn-purple .Counter, .ais-SearchBox-input,
-  .form-group .ais-SearchBox-input:focus, html[prefix] .Box,
-  html[prefix] .btn-outline, html[prefix] .btn-outline.selected .counter,
+  .form-group .ais-SearchBox-input:focus, #query, .form-group #query:focus,
+  .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"],
+  details-dialog, html[prefix] .Box, html[prefix] .btn-outline,
+  html[prefix] .btn-outline.selected .counter,
   html[prefix] .btn-outline.zeroclipboard-is-active .counter,
   html[prefix] .btn-outline.zeroclipboard-is-hover .counter,
   html[prefix] .btn-outline:active .counter,
@@ -713,7 +715,7 @@
   .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
   table.capped-list tr:nth-child(2n), .form-group .ais-SearchBox-input,
-  body[class="page-responsive"] .input-contrast,
+  .form-group #query, body[class="page-responsive"] .input-contrast,
   body[class="page-responsive"] .form-group .form-control,
   body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] .Box-row.navigation-focus.sortable-chosen,
@@ -1105,7 +1107,8 @@
   }
   /* auto-generated rule for "background-color: #d1d5da" */
   .SideNav-item:focus:before, .SideNav-item:hover:before,
-  .diffstat-block-neutral, body[class="page-responsive"] .diffstat-block-neutral {
+  .diffstat-block-neutral, .SideNav-item::before,
+  body[class="page-responsive"] .diffstat-block-neutral {
     background-color: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da !important" */
@@ -1678,7 +1681,7 @@
   .composer.composer-responsive .timeline-comment, .radio-label,
   .branch-action-body, .dashboard-notice, .setup-form .setup-plans,
   .business-sso .sso-recovery-callout, .org-sso .sso-recovery-callout,
-  .gist-quicksearch-results, .ais-SearchBox-input,
+  .gist-quicksearch-results, .ais-SearchBox-input, #query,
   body[class="page-responsive"] .form-control,
   body[class="page-responsive"] .form-select,
   body[class="page-responsive"] .markdown-body kbd,
@@ -1972,8 +1975,8 @@
   /* auto-generated rule for "border-bottom: 1px solid #e1e4e8 !important" */
   .border-y, .border-bottom, .border-sm-bottom, .border-md-bottom,
   .border-lg-bottom, .preview-selected .tabnav--responsive,
-  body.status .border-y, body.status .border-bottom,
-  body[class="page-responsive"] .border-y,
+  #site-search-results .search-result, body.status .border-y,
+  body.status .border-bottom, body[class="page-responsive"] .border-y,
   body[class="page-responsive"] .border-bottom,
   body[class="page-responsive"] .border-sm-bottom,
   body[class="page-responsive"] .border-md-bottom,
@@ -2530,7 +2533,8 @@
     border-color: #343434;
   }
   /* auto-generated rule for "border-color: #eaecef !important" */
-  .border-gray-light, body.status .border-gray-light,
+  .border-gray-light, #site-search-results .search-result,
+  body.status .border-gray-light,
   body[class="page-responsive"] .border-gray-light {
     border-color: #343434 !important;
   }
@@ -2843,7 +2847,8 @@
   /* auto-generated rule for "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus, .upload-enabled.focused, .focus.ais-SearchBox-input,
-  .ais-SearchBox-input:focus, body[class="page-responsive"] .form-control.focus,
+  .ais-SearchBox-input:focus, .focus#query, #query:focus,
+  body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
   body[class="page-responsive"] .form-select:focus {
@@ -3317,7 +3322,9 @@
   .page-responsive .HeaderMenu--logged-out .header-search-input::placeholder,
   .jump-to-field-active::placeholder,
   .notifications-list-item:hover .notification-list-item-actions .btn,
-  body.status .text-gray, body.status .link-gray, body.status .muted-link,
+  #site-search-results .search-result-title,
+  #site-search-results .search-result-intro, body.status .text-gray,
+  body.status .link-gray, body.status .muted-link,
   body[class="page-responsive"] .color-gray-6,
   body[class="page-responsive"] .text-gray,
   body[class="page-responsive"] .link-gray,
@@ -3578,6 +3585,7 @@
   html.ghh-theme-classic .ghh-issue-body blockquote {
     color: #949494;
   }
+  ::-webkit-input-placeholder,
   body[class="page-responsive"] ::-webkit-input-placeholder {
     color: #949494;
   }
@@ -3875,7 +3883,7 @@
   .toggle-user-status-edit:focus .user-status-message-wrapper,
   .toggle-user-status-edit:hover .user-status-message-wrapper,
   .search-result-title mark, .search-result-title .ais-Highlight-highlighted,
-  body.status a,
+  #site-search-results .search-result-title em, body.status a,
   body.status .layout-content.status-index .components-statuses .component-container.status-blue:after,
   body.status .layout-content.status-full-history .month .incident-container .impact-maintenance,
   body.status .layout-content.status-incident .incident-name.impact-maintenance,
@@ -4006,7 +4014,9 @@
   .user-status-message-wrapper, .hx_UnderlineNav-item[aria-selected=true],
   .gisthead .pagehead-actions .octicon-mute, .keyboard-mappings th,
   .ais-SearchBox-input, .directory-toc h3 a, .markdown-body .lead-mktg p,
-  div.light-bg a, div.light-bg a h4,
+  div.light-bg a, div.light-bg a h4, #query, .SideNav-item[aria-current="page"],
+  .SideNav-item[aria-selected="true"], .SideNav-subItem[aria-current="page"],
+  .SideNav-subItem[aria-selected="true"],
   html[prefix] .site-header-nav .dropdown-menu a.active,
   body.status .text-emphasized,
   body.status .updates-dropdown-container .updates-dropdown-nav::before,
@@ -4100,7 +4110,8 @@
     color: #9daccc !important;
   }
   /* auto-generated rule for "background: #f1f8ff" */
-  .commit-tease .AvatarStack-body, .ais-Hits-item:hover, .ais-Hits-item.active {
+  .commit-tease .AvatarStack-body, .ais-Hits-item:hover, .ais-Hits-item.active,
+  #site-search-results .search-result:hover {
     background: #182030;
   }
   /* auto-generated rule for "background-color: #f1f8ff" */
@@ -4356,7 +4367,8 @@
     border-color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "border-bottom: 1px solid #0366d6" */
-  .search-result-intro mark, .search-result-intro .ais-Highlight-highlighted {
+  .search-result-intro mark, .search-result-intro .ais-Highlight-highlighted,
+  #site-search-results .search-result-intro em {
     border-bottom-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-top-color: #0366d6 !important" */
@@ -4390,8 +4402,8 @@
   :target .timeline-comment-group .timeline-comment,
   .plan-choice--experiment.plan-choice--blue.open,
   .plan-choice--experiment.plan-choice--blue.selected,
-  .focus.ais-SearchBox-input, .ais-SearchBox-input:focus,
-  body[class="page-responsive"] .form-control.focus,
+  .focus.ais-SearchBox-input, .ais-SearchBox-input:focus, .focus#query,
+  #query:focus, body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
   body[class="page-responsive"] .form-select:focus {
@@ -5345,8 +5357,9 @@
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
   .hx_badge-search-container .hx_badge-input, .btn-purple:disabled,
   .btn-purple.disabled, .upload-enabled.focused .ais-SearchBox-input,
-  html[prefix] .btn-primary.disabled, html[prefix] .btn-primary.disabled:hover,
-  html[prefix] .btn-primary:disabled, html[prefix] .btn-primary:disabled:hover,
+  .upload-enabled.focused #query, html[prefix] .btn-primary.disabled,
+  html[prefix] .btn-primary.disabled:hover, html[prefix] .btn-primary:disabled,
+  html[prefix] .btn-primary:disabled:hover,
   html[prefix] .blankslate-clean-background, html[prefix] .btn.disabled,
   html[prefix] .btn.disabled:hover, html[prefix] .btn:disabled,
   html[prefix] .btn:disabled:hover, body.status .grouped-items-selector.inline,
@@ -5454,9 +5467,9 @@
   a, .btn-link, .inline-form .btn-plain, .tabnav-tab,
   .filter-list.pjax-active .filter-item, .markdown-body table img,
   .markdown-body .emoji, .markdown-body pre code, .markdown-body pre tt,
-  .btn-transparent, html[prefix] a, html[prefix] .btn-link,
-  html[prefix] .inline-form .btn-plain, html[prefix] .tabnav-tab,
-  html[prefix] .filter-list.pjax-active .filter-item,
+  .btn-transparent, .SideNav-item, .SideNav-subItem, html[prefix] a,
+  html[prefix] .btn-link, html[prefix] .inline-form .btn-plain,
+  html[prefix] .tabnav-tab, html[prefix] .filter-list.pjax-active .filter-item,
   html[prefix] .avatar-stack .avatar:only-child,
   html[prefix] .markdown-body .emoji, html[prefix] .markdown-body pre code,
   html[prefix] .markdown-body pre tt, html[prefix] .jumbotron-shadow::after,
