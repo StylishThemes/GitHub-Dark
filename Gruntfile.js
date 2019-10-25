@@ -218,6 +218,7 @@ module.exports = function(grunt) {
             },
             {pattern: /\/\*\[\[code-wrap/, replacement: "/*[[code-wrap"},
             {pattern: /,\u0020{2,}/g, replacement: ", "},
+            {pattern: /\s+domain\(/g, replacement: " domain("},
           ]
         }
       }
