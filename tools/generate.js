@@ -42,8 +42,7 @@ let mappings = {
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
-
-  "background-image: linear-gradient(#fafafa,#eaeaea)": "background-image: linear-gradient(#202020, #181818)",
+  "$background: linear-gradient(#fafafa,#eaeaea)": "linear-gradient(#202020, #181818)",
 
   // ==========================================================================
   // Border
@@ -199,7 +198,7 @@ let mappings = {
   "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
   "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
-  "background-image: linear-gradient(#599bcd,#3072b3)": "background-image: linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
+  "$background: linear-gradient(#599bcd,#3072b3)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
   "$border: #2a65a0": "/*[[base-color]]*/ #4f8cc9",
 
   // red
