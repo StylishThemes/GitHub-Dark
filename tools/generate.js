@@ -113,8 +113,8 @@ let mappings = {
   "box-shadow: inset 0 0 0 1px #e1e4e8": "box-shadow: inset 0 0 0 1px #555",
   "box-shadow: inset 0 1px 0 0 #e1e4e8": "box-shadow: inset 0 1px 0 0 #555",
 
-  "box-shadow: inset 0 -1px 0 #c6cbd1": "box-shadow: inset 0 -2px 0 #343434",
-  "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #343434",
+  "box-shadow: inset 0 -1px 0 #d1d5da": "box-shadow: inset 0 -2px 0 #383838",
+  "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
 
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
 
