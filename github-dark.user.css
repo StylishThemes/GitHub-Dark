@@ -287,28 +287,34 @@
   body.zh_logged_in .zh-epic-form-control:focus,
   body.zh_logged_in .zh-epic-form-control-small:focus,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .search-query:focus,
-  body.zh_logged_in .CalendarDay--outside:active,
-  body.zh_logged_in .CalendarDay--blocked-minimum-nights,
-  body.zh_logged_in .CalendarDay--blocked-minimum-nights:active,
-  body.zh_logged_in .CalendarDay--blocked-out-of-range,
-  body.zh_logged_in .CalendarDay--blocked-out-of-range:active,
-  body.zh_logged_in .CalendarMonthGrid, body.zh_logged_in .DayPicker,
-  body.zh_logged_in .DayPicker--horizontal,
-  body.zh_logged_in .DayPickerNavigation--vertical,
-  body.zh_logged_in .DayPickerKeyboardShortcuts__panel,
-  body.zh_logged_in .DateInput, body.zh_logged_in .zhc-account-details__section,
+  body.zh_logged_in .DayPickerKeyboardShortcuts_panel,
+  body.zh_logged_in .CalendarDay__default,
+  body.zh_logged_in .CalendarDay__outside,
+  body.zh_logged_in .CalendarDay__blocked_minimum_nights,
+  body.zh_logged_in .CalendarDay__blocked_minimum_nights:active,
+  body.zh_logged_in .CalendarDay__blocked_minimum_nights:hover,
+  body.zh_logged_in .CalendarDay__blocked_out_of_range,
+  body.zh_logged_in .CalendarDay__blocked_out_of_range:active,
+  body.zh_logged_in .CalendarDay__blocked_out_of_range:hover,
+  body.zh_logged_in .CalendarMonth, body.zh_logged_in .CalendarMonthGrid,
+  body.zh_logged_in .DayPickerNavigation_button__verticalDefault,
+  body.zh_logged_in .DayPicker, body.zh_logged_in .DayPicker__horizontal,
+  body.zh_logged_in .DayPicker_weekHeader__verticalScrollable,
+  body.zh_logged_in .DateInput, body.zh_logged_in .DateInput_input__focused,
+  body.zh_logged_in .zhc-account-details__section,
   body.zh_logged_in .zhc-date-selector .DayPicker,
   body.zh_logged_in .zhc-date-selector .DayPicker--horizontal,
   body.zh_logged_in .zhc-feature-announcement, body.zh_logged_in .zhc-issue-card,
   body.zh_logged_in .zhc-edit-comment__file-upload,
   body.zh_logged_in .zhc-reports-date-range .DateRangePickerInput,
   body.zh_logged_in .zhc-shortcut-indicator,
-  body.zh_logged_in .zhc-roadmap-dropdown,
   body.zh_logged_in .zhc-roadmap-body-empty,
   body.zh_logged_in .zhc-roadmap-sidebar-empty,
+  body.zh_logged_in .zhc-roadmap-panel,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body__subheader,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body-view--root,
   body.zh_logged_in .zhc-roadmap-row, body.zh_logged_in .zhc-sidebar-item-add,
+  body.zh_logged_in .zhc-roadmap-track--expandable:not(.react-draggable-dragging):hover .zhc-roadmap-track__drag-handle,
   body.zh_logged_in .zhc-roadmap-track__drag-handle--has-background,
   body.zh_logged_in .zhc-roadmap-track__drag-handle:hover,
   body.zh_logged_in .zhc-roadmap-warning {
@@ -454,6 +460,7 @@
   body.zh_logged_in .zh-select-menu-modal-body .zh-select-menu-modal,
   body.zh_logged_in .zh-onboarding-highlighted,
   body.zh_logged_in .zhe .zh-onboarding-highlighted,
+  body.zh_logged_in .zh-onboarding-modal,
   body.zh_logged_in .zh-select-menu-modal,
   body.zh_logged_in .zh-progress-bar__completed,
   body.zh_logged_in .zh-epic-issue-list-item-sm,
@@ -461,14 +468,13 @@
   body.zh_logged_in .zh-epic-issue-list-item-lg,
   body.zh_logged_in .zh-epic-creator-title input,
   body.zh_logged_in .zh-epic-picker-issue-placeholder:hover,
-  body.zh_logged_in .DayPickerNavigation__prev--default,
-  body.zh_logged_in .DayPickerNavigation__next--default,
-  body.zh_logged_in .DateRangePicker__picker,
-  body.zh_logged_in .DateRangePicker__picker--full-screen-portal,
-  body.zh_logged_in .DateRangePickerInput,
-  body.zh_logged_in .SingleDatePicker__picker,
-  body.zh_logged_in .SingleDatePicker__picker--full-screen-portal,
   body.zh_logged_in .SingleDatePickerInput,
+  body.zh_logged_in .SingleDatePicker_picker,
+  body.zh_logged_in .SingleDatePicker_picker__fullScreenPortal,
+  body.zh_logged_in .DayPickerNavigation_button__default,
+  body.zh_logged_in .DateInput_input, body.zh_logged_in .DateRangePickerInput,
+  body.zh_logged_in .DateRangePicker_picker,
+  body.zh_logged_in .DateRangePicker_picker__fullScreenPortal,
   body.zh_logged_in .zhc-markdown table tr, body.zh_logged_in .zhc-markdown img,
   body.zh_logged_in .zhc-btn, body.zh_logged_in .zhc-btn[disabled],
   body.zh_logged_in .zhc-btn.zhc-btn--disabled,
@@ -873,7 +879,8 @@
   }
   /* auto-generated rule for "background: #f4f5f5" */
   body.zh_logged_in .zh-pipeline-heading-container,
-  body.zh_logged_in .zh-select-menu-header {
+  body.zh_logged_in .zh-select-menu-header,
+  body.zh_logged_in .CalendarDay__hovered_offset {
     background: #242424;
   }
   body.zh_logged_in .horizontal-scrollbar::-webkit-scrollbar-track {
@@ -1412,7 +1419,8 @@
   }
   /* auto-generated rule for "border-bottom: 2px solid transparent" */
   .UnderlineNav-item, .subnav-link,
-  body[class="page-responsive"] .user-status-emoji-tab {
+  body[class="page-responsive"] .user-status-emoji-tab,
+  body.zh_logged_in .DateInput_input {
     border-bottom-color: transparent;
   }
   /* auto-generated rule for "border-left: 2px solid transparent" */
@@ -1566,6 +1574,26 @@
   /* auto-generated rule for "border-bottom-color: rgba(0,0,0,.125)" */
   .exploregrid-item {
     border-bottom-color: rgba(200, 200, 200, .125);
+  }
+  /* auto-generated rule for "border-color: #444d56" */
+  .IconNav-item.selected, .dropdown-menu-dark, .Box--overlay, details-dialog,
+  body[class="page-responsive"] .dropdown-menu-dark,
+  body[class="page-responsive"] .Box--overlay {
+    border-color: #484848;
+  }
+  /* auto-generated rule for "border-bottom: 1px solid #444d56" */
+  .full-commit .sha-block > a:hover, .CheckRun-header {
+    border-bottom-color: #484848;
+  }
+  /* auto-generated rule for "border-top-color: #444d56" */
+  .dropdown-menu-dark .dropdown-divider,
+  body[class="page-responsive"] .dropdown-menu-dark .dropdown-divider {
+    border-top-color: #484848;
+  }
+  /* auto-generated rule for "border-bottom-color: #444d56" */
+  .dropdown-menu-dark:before,
+  body[class="page-responsive"] .dropdown-menu-dark:before {
+    border-bottom-color: #484848;
   }
   /* auto-generated rule for "border: 1px solid #959da5" */
   .form-group:hover .form-field-hover, .placeholder-box {
@@ -2188,9 +2216,9 @@
   body.zh_logged_in .zhc-collapsible__content,
   body.zh_logged_in .zhc-collapsible-control__main-icon,
   body.zh_logged_in .zhc-consent-form, body.zh_logged_in .DateRangePickerInput,
-  body.zh_logged_in .DateRangePicker__picker,
-  body.zh_logged_in .DayPicker--horizontal .DayPicker__nav--prev,
-  body.zh_logged_in .DayPicker--horizontal .DayPicker__nav--next,
+  body.zh_logged_in .DateRangePickerInput .DateRangePicker_picker,
+  body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__prev,
+  body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__next,
   body.zh_logged_in .CalendarDay, body.zh_logged_in .zhc-dependency,
   body.zh_logged_in .zhc-dependency-type-dropdown__control,
   body.zh_logged_in .zhc-dependency-type-dropdown__list__item,
@@ -2264,8 +2292,8 @@
   body.zh_logged_in .zhc-workspace-switcher-search__input,
   body.zh_logged_in .zhc-workspace-switcher-item:hover,
   body.zh_logged_in .zhc-roadmap-onboarding__fake-add-button,
-  body.zh_logged_in .zhc-roadmap-dropdown,
   body.zh_logged_in .zhc-roadmap-sidebar-empty,
+  body.zh_logged_in .zhc-roadmap-panel,
   body.zh_logged_in .zhc-sidebar-expand-toggle--enabled:hover,
   body.zh_logged_in .zhc-sidebar-input__input,
   body.zh_logged_in .zhc-options-panel,
@@ -2465,7 +2493,6 @@
   body.zh_logged_in .zhc-roadmap-body-empty,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-header,
   body.zh_logged_in .zhc-roadmap-row,
-  body.zh_logged_in .zhc-roadmap-selection-item,
   body.zh_logged_in .zhc-sidebar-item-add-to-project,
   body.zh_logged_in .zhc-sidebar-item-add, body.zh_logged_in .zhc-roadmap__title,
   body.zh_logged_in .zhc-roadmap-date-strip,
@@ -2767,7 +2794,6 @@
   body[class="page-responsive"] .dropdown-menu:after,
   body[class="page-responsive"] .tabs > a.selected,
   body.zh_logged_in .zh-epic-creator-tab.selected,
-  body.zh_logged_in .DateInput--with-caret::after,
   body.zh_logged_in .zhc-info-alert--pointer--top:after,
   body.zh_logged_in .zhc-tab-navitem--dropdown--active,
   body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
@@ -2815,7 +2841,8 @@
   }
   /* auto-generated rule for "border: 1px solid" */
   .uploaded-files.is-populated, body.zh_logged_in .zhc-color-square,
-  body.zh_logged_in .zhc-workspace-switcher-item {
+  body.zh_logged_in .zhc-workspace-switcher-item,
+  body.zh_logged_in .zhc-roadmap-selection-item {
     border-color: #181818;
   }
   /* auto-generated rule for "border-top: 7px solid #fff" */
@@ -2885,13 +2912,22 @@
   .action-card--code {
     box-shadow: inset 0 0 0 1px #555;
   }
+  /* auto-generated rule for "box-shadow: inset 0 -1px 0 #d1d5da" */
+  kbd, .markdown-body kbd, body[class="page-responsive"] .markdown-body kbd,
+  body[class="page-responsive"] kbd {
+    box-shadow: inset 0 -2px 0 #383838;
+  }
   /* auto-generated rule for "box-shadow: inset 0 -1px 0 #959da5" */
   .markdown-body kbd, body.zh_logged_in .zhc-markdown kbd {
-    box-shadow: inset 0 -2px 0 #343434;
+    box-shadow: inset 0 -2px 0 #383838;
   }
   /* auto-generated rule for "box-shadow: 0 1px 0 0 #0058a2" */
   html[prefix] .link-mono:hover {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
+  }
+  /* auto-generated rule for "box-shadow: 0 0 0.2em #c8e1ff" */
+  .TimelineItem:target .TimelineItem-badge {
+    box-shadow: 0 0 .2em /*[[base-color]]*/;
   }
   /* auto-generated rule for "fill: currentColor" */
   .octicon, html[prefix] .octicon, body.status .octicon,
@@ -2949,6 +2985,7 @@
   body.zh_logged_in .zh-reports .btn:hover,
   body.zh_logged_in .zh-mergetool-pipelines-dialog .zh-mergetool-info,
   body.zh_logged_in .zh-mergetool-pipelines-dialog .zh-miniboard-wrapper .zh-miniboard-pipeline,
+  body.zh_logged_in .zh-onboarding-modal__title,
   body.zh_logged_in .zh-epic-issue-header strong,
   body.zh_logged_in .zh-epic-issue-header-title,
   body.zh_logged_in .zh-epic-issue-progress-text strong,
@@ -3052,9 +3089,9 @@
   body.zh_logged_in .zhc-release-report__date .zhc-due-date,
   body.zh_logged_in .zhc-reports-date-range .zhc-reports-date-range__date-range,
   body.zh_logged_in .zhc-reports-date-range .zhc-dropdown--reports-dates .zhc-selection-button__title .zhc-reports-date-range__date-range,
-  body.zh_logged_in .zhc-reports-date-range .DateRangePickerInput .DateInput .DateInput__display-text,
-  body.zh_logged_in .zhc-reports-date-range .CalendarMonth__caption,
-  body.zh_logged_in .zhc-reports-date-range .DayPicker__week-header,
+  body.zh_logged_in .zhc-reports-date-range .DateRangePickerInput .DateInput .DateInput_input,
+  body.zh_logged_in .zhc-reports-date-range .CalendarMonth_caption,
+  body.zh_logged_in .zhc-reports-date-range .DayPicker_weekHeader,
   body.zh_logged_in .zhc-report-card__title,
   body.zh_logged_in .zhc-report-tabs__nav .zhc-report-tabs__nav__item:hover,
   body.zh_logged_in .zhc-report-tabs__nav .zhc-report-tabs__nav__item--active,
@@ -3072,8 +3109,8 @@
   body.zh_logged_in .zhc-workspace-switcher-empty__title,
   body.zh_logged_in .zhc-workspace-switcher-item,
   body.zh_logged_in .zhc-workspace-switcher-item__search-terms,
-  body.zh_logged_in .zhc-roadmap-dropdown__header,
   body.zh_logged_in .zhc-roadmap-item-title__no-epics-string,
+  body.zh_logged_in .zhc-roadmap-panel__header,
   body.zh_logged_in .zhc-roadmap-title--color-default,
   body.zh_logged_in .zhc-roadmap-warning-body .zhc-roadmap-warning-body__warning {
     color: #bebebe;
@@ -3372,6 +3409,7 @@
   body[data-render-url] .render-view-modes li,
   html.refined-github body > .footer li a, body.zh_logged_in .burndown-chart-tip,
   body.zh_logged_in .zh-issue-list .table-list-header,
+  body.zh_logged_in .zh-onboarding-modal,
   body.zh_logged_in .zh-select-menu-modal,
   body.zh_logged_in .zh-epic-creator-placeholder-bottom a,
   body.zh_logged_in .zhc-btn--secondary,
@@ -3413,13 +3451,13 @@
   body.zh_logged_in .zhc-confetti-announcement,
   body.zh_logged_in .zhc-billing__period, body.zh_logged_in .zhc-billing__title,
   body.zh_logged_in .zhc-dashboard-nav__item--secondary,
-  body.zh_logged_in .DateRangePickerInput__arrow:after,
+  body.zh_logged_in .DateRangePickerInput_arrow:after,
   body.zh_logged_in .DateInput,
-  body.zh_logged_in .DateInput__display-text--has-input,
-  body.zh_logged_in .DayPicker--horizontal .DayPicker__nav--prev,
-  body.zh_logged_in .DayPicker--horizontal .DayPicker__nav--next,
-  body.zh_logged_in .CalendarMonth__caption, body.zh_logged_in .CalendarDay,
-  body.zh_logged_in .DayPicker__week-header,
+  body.zh_logged_in .DateInput .DateInput_displayText__has-input,
+  body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__prev,
+  body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__next,
+  body.zh_logged_in .CalendarMonth_caption, body.zh_logged_in .CalendarDay,
+  body.zh_logged_in .DayPicker_weekHeader,
   body.zh_logged_in .zhc-dependency-color-grey,
   body.zh_logged_in .zhc-dependency-list__issue--completed .zhc-dependency-list__issue__title a,
   body.zh_logged_in .zhc-dependency-item-simple a,
@@ -4095,6 +4133,12 @@
   body[class="page-responsive"] .link-gray-dark,
   body[class="page-responsive"] .jump-to-field-active {
     color: #d2d2d2 !important;
+  }
+  /* auto-generated rule for "stroke: #24292e" */
+  .page-responsive .HeaderMenu-link .icon-chevon-down-mktg,
+  .page-responsive .HeaderMenu-details[open] .icon-chevon-down-mktg,
+  .graphs .selection .selection {
+    stroke: #d2d2d2;
   }
   /* auto-generated rule for "color: #2f363d" */
   .btn-transparent:active, .btn-transparent:hover, .graph-canvas .activity,
@@ -5191,7 +5235,7 @@
   body.zh_logged_in .zh-select-menu-header .zh-select-menu-title,
   body.zh_logged_in .zhc-selection-list__header,
   body.zh_logged_in .zhc-selection-list__header__text,
-  body.zh_logged_in .zhc-roadmap-dropdown__header {
+  body.zh_logged_in .zhc-roadmap-panel__header {
     text-shadow: none;
   }
   /* auto-generated rule for "background: rgba(0,0,0,.8)" */
@@ -5301,15 +5345,15 @@
   body.zh_logged_in .zh-select-menu-item,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus.selected,
-  body.zh_logged_in .CalendarDay__button,
-  body.zh_logged_in .CalendarDay--hovered,
-  body.zh_logged_in .DayPickerKeyboardShortcuts__show,
-  body.zh_logged_in .DayPickerKeyboardShortcuts__close,
-  body.zh_logged_in .DateRangePicker__close,
-  body.zh_logged_in .DateRangePickerInput__clear-dates,
-  body.zh_logged_in .DateRangePickerInput__calendar-icon,
-  body.zh_logged_in .SingleDatePicker__close,
-  body.zh_logged_in .SingleDatePickerInput__clear-date,
+  body.zh_logged_in .SingleDatePickerInput_clearDate,
+  body.zh_logged_in .SingleDatePickerInput_calendarIcon,
+  body.zh_logged_in .SingleDatePicker_closeButton,
+  body.zh_logged_in .DayPickerKeyboardShortcuts_buttonReset,
+  body.zh_logged_in .CalendarDay__default:hover,
+  body.zh_logged_in .CalendarDay__hovered_offset,
+  body.zh_logged_in .DateRangePickerInput_clearDates,
+  body.zh_logged_in .DateRangePickerInput_calendarIcon,
+  body.zh_logged_in .DateRangePicker_closeButton,
   body.zh_logged_in .zhc-selection-item,
   body.zh_logged_in .zhc-board-settings-item:hover,
   body.zh_logged_in .zhc-username--is-deleted,
@@ -5389,7 +5433,7 @@
   body[class="page-responsive"] .btn-danger:disabled,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn:hover,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn.selected,
-  body.zh_logged_in .DayPicker--horizontal.DayPicker--portal,
+  body.zh_logged_in .DayPicker_portal__horizontal,
   body.zh_logged_in .zhc-input--error:focus,
   body.zh_logged_in .zhu-checkbox:focus,
   body.zh_logged_in .zhc-board-loading__message .zhc-spinner-outline,
@@ -5417,7 +5461,8 @@
   body.zh_logged_in .zhc-sidebar a:focus, body.zh_logged_in .zhc-spinner--purple,
   body.zh_logged_in .zhc-team-members__searchbar input:focus,
   body.zh_logged_in .zhc-chart-velocity__left-axis,
-  body.zh_logged_in .zhc-workspace-switcher-search__input:focus {
+  body.zh_logged_in .zhc-workspace-switcher-search__input:focus,
+  body.zh_logged_in .zhc-roadmap-calendar.zhc-roadmap-panel .DateRangePicker .DateRangePicker_picker .DayPicker.DayPicker__horizontal {
     box-shadow: none;
   }
   /* auto-generated rule for "box-shadow: none !important" */
@@ -5650,16 +5695,8 @@
   html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches,
   body.zh_logged_in .ui-dialog .ui-dialog-content,
   body.zh_logged_in .ui-spinner-input, body.zh_logged_in .ui-tabs .ui-tabs-panel,
-  body.zh_logged_in .zh-discussion-sidebar-toggle,
-  body.zh_logged_in .CalendarDay__button,
-  body.zh_logged_in .DayPickerKeyboardShortcuts__show,
-  body.zh_logged_in .DayPickerKeyboardShortcuts__close,
-  body.zh_logged_in .DateRangePicker__close,
-  body.zh_logged_in .DateRangePickerInput__clear-dates,
-  body.zh_logged_in .DateRangePickerInput__calendar-icon,
-  body.zh_logged_in .SingleDatePicker__close,
-  body.zh_logged_in .SingleDatePickerInput__clear-date,
-  body.zh_logged_in .DateInput,
+  body.zh_logged_in .zh-discussion-sidebar-toggle, body.zh_logged_in .DateInput,
+  body.zh_logged_in .DateInput .DateInput_input,
   body.zh_logged_in .zhc-sidebar-assignee-selector .zhc-sidebar-assignee-selector_active_assignees,
   body.zh_logged_in .zhc-sidebar-selector,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button,
@@ -5978,6 +6015,9 @@
   input[type="radio"]:checked:disabled {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23282828"/><circle cx="256" cy="256" r="96" fill="%23555"/></svg>') !important;
   }
+  #query {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 13.3l-3.8-3.8C12.6 8.5 13 7.2 13 6c0-3.3-2.7-6-6-6C3.7 0 1 2.7 1 6c0 3.3 2.7 6 6 6 1.3 0 2.5-0.4 3.5-1.1L14.3 14.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4 0 0 0 0 0 0V13.3zM7 10.7c-2.6 0-4.7-2.1-4.7-4.7S4.4 1.3 7 1.3s4.7 2.1 4.7 4.7S9.6 10.7 7 10.7z" fill="%23DDDDDD"/></svg>') no-repeat 6px;
+  }
   /*[[tab-size]]*/
   /* User time line firsts */
   img[src$="profile-joined-github.png"] {
@@ -6054,7 +6094,7 @@
     box-shadow: none !important;
   }
   .dropdown-menu, .word-upload-callout, .select-menu-modal {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, .4) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .4);
   }
   .exploregrid-item {
     border-color: rgba(255, 255, 255, .075) !important;
@@ -6160,14 +6200,6 @@
   }
   .js-menu-target:hover .dropdown-arrow {
     border-top-color: /*[[base-color]]*/ !important;
-  }
-  /* add border-top to CI/action runs (improves visual balance) */
-  .CheckRun-header {
-    border-bottom: 1px solid #343434;
-    border-top: 1px solid #343434;
-  }
-  .Details .checks-index-item:first-of-type {
-    border-top: none !important;
   }
   /* Make it more apparent that <details> is clickable */
   .markdown-body details summary:not([aria-haspopup]):hover {
@@ -6380,7 +6412,7 @@
   }
   .discussion-item-icon, .date:after, ul.color-label-list .color,
   .facebox-header, .TimelineItem-badge {
-    border-color: #222 !important;
+    border-color: #222;
   }
   .filter-tab.selected {
     border: 1px solid #444 !important;
@@ -6645,7 +6677,7 @@
     box-shadow: none !important;
   }
   button.bg-white.subnav-link, main [style="background-color: #fcfdfd;"],
-  .repository-content .bg-white {
+  .repository-content > .bg-white {
     background-color: transparent !important;
   }
   .sidebar-module, div.search-form input, #search > input[name="q"],
@@ -6755,12 +6787,12 @@
   span.minibutton.disabled:hover, .search-result-group,
   .gist-quicksearch-result-group {
     background: #282828 !important;
-    border-color: #484848 !important;
+    border-color: rgba(68, 68, 68, .5) !important;
     color: #555 !important;
   }
   .btn:disabled:hover, .btn.disabled:hover {
     background: #282828 !important;
-    border-color: #484848 !important;
+    border-color: rgba(68, 68, 68, .5) !important;
   }
   .btn-outline:disabled, .btn-outline:disabled:hover, .btn-outline.disabled,
   .btn-outline.disabled:hover, .btn.btn-outline:disabled,
@@ -7850,8 +7882,7 @@
   .discussion-item-integrations-callout .pull-request-integrations-dismiss,
   .oauth-application-info .meta-link, .oauth-application-info .app-info,
   .repo-file-upload-file-wrap .remove-file, .gcr-ext-editor-close svg,
-  .commit-id, .orghead .edit-org, .signed-commit-badge,
-  .manage-member-meta-item .btn-link, a.footer-octicon:hover,
+  .commit-id, .orghead .edit-org, .signed-commit-badge, a.footer-octicon:hover,
   .table-of-contents .toc-diff-stats .octicon {
     color: #757575 !important;
   }
@@ -8896,6 +8927,10 @@
   .file-commit-form .commit-form {
     background: #181818 !important;
   }
+  /* Actions runs */
+  .CheckStep div[style*="opacity:0.5"] {
+    opacity: 1 !important;
+  }
   /*[[code-wrap]]*/
   /* inline code - single lines */
   .markdown-body code, .markdown-body tt, .protip code, .content dl code,
@@ -9114,6 +9149,9 @@
   }
   .hljs {
     color: var(--ghd-code-color, #ccc);
+  }
+  .extended-markdown p code {
+    background-color: #1e293c !important;
   }
 }
 @-moz-document domain("resources.github.com") {
