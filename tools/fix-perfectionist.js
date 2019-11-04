@@ -18,7 +18,8 @@ function cleanup(css) {
     .replace(/\n\s{23}/gm, "")
     .replace(/(-025A9,|-02662,)/gim, "$&\n                   ")
     .replace(/\/\*\[\[code-wrap/, "/*[[code-wrap")
-    .replace(/,\u0020{2,}/g, ", ");
+    .replace(/,\u0020{2,}/g, ", ")
+    .replace(/\s+domain\(/g, " domain(");
 }
 
 async function postPerfectionist() {
