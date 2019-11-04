@@ -53,6 +53,7 @@ let mappings = {
   "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
   "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
 
+  "$border: #444d56": "#484848",
   "$border: #959da5": "#484848",
   "$border: #c3c8cf": "#484848",
   "$border: #dfe2e5": "#343434",
