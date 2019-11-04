@@ -161,6 +161,7 @@ let mappings = {
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
   "color: #24292e": "color: #d2d2d2",
+  "stroke: #24292e": "stroke: #d2d2d2",
   "color: #2f363d": "color: #bebebe",
 
   // blue
