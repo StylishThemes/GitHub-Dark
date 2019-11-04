@@ -117,6 +117,7 @@ let mappings = {
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
 
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
+  "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
 
   // ==========================================================================
   // Color / Background
