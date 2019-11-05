@@ -262,6 +262,10 @@ let mappings = {
   "$border: #8a63d2": "#8368aa",
   "$border: #5e60ba": "#8368aa", // zenhub
 
+  // pink
+  "$border: #ec6cb9": "#c49",
+  "$background: #ffeef8": "#170711",
+
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
