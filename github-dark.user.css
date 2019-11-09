@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.134
+@version     1.22.135
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.134 (2019-11-08) */
+/*! Github Dark v1.22.135 (2019-11-09) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -675,6 +675,7 @@
   body.zh_logged_in .zhc-workspace-switcher__header,
   body.zh_logged_in .zhc-workspace-switcher,
   body.zh_logged_in .zhc-roadmap-progress__bar,
+  body.zh_logged_in .roadmap-loading-state__body,
   body.zh_logged_in .zhc-options-panel,
   html.ghh-theme-classic .ghh-readme a[href^="https://saucelabs.com/"] img,
   html.ghh-theme-classic .ghh-issue-body a[href^="https://saucelabs.com/"] img,
@@ -8057,10 +8058,11 @@
   /* https://github.com/StylishThemes/GitHub-Dark/issues/949 */
   /* Github uses !important inline styles on some of these elements which are
      impossible to overrides via userstyle */
-  [style*="border-bottom: 1px solid #f9b3dd"],
+  [style*="border-bottom: 1px solid #f9b3dd"] {
+    border-bottom: 1px solid #c49 !important;
+  }
   [style*="border: 1px solid #f9b3dd"], [style*="border: 1px solid #ec6cb9"] {
-    border-color: "#c49";
-    color: #333 !important;
+    border: 1px solid #c49 !important;
   }
   [style*="border: 1px solid #f9b3dd"] .text-gray-dark {
     color: #333 !important;
