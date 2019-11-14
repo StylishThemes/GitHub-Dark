@@ -2923,6 +2923,10 @@
   body.zh_logged_in .zhc-markdown kbd {
     box-shadow: inset 0 -2px 0 #383838;
   }
+  /* auto-generated rule for "box-shadow: 0 1px 0 #eaecef" */
+  .SelectMenu--hasFilter .SelectMenu-item:last-child {
+    box-shadow: 0 1px 0 #343434;
+  }
   /* auto-generated rule for "box-shadow: 0 1px 0 0 #0058a2" */
   html[prefix] .link-mono:hover {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
@@ -5040,6 +5044,12 @@
   body[class="page-responsive"] .user-status-container-border-busy {
     border-color: #321;
   }
+  /* auto-generated rule for "border-right-color: #fffdef" */
+  .is-pending .timeline-comment--caret:after,
+  .timeline-comment--caret.is-internal:after,
+  .timeline-comment--caret.unread-item:after {
+    border-right-color: #261d08;
+  }
   /* auto-generated rule for "border: 1px solid #faebcc" */
   body.zh_logged_in .zhc-account-settings__summary--warning,
   body.zh_logged_in .zhc-banner,
@@ -6673,6 +6683,9 @@
   .list-group-item.standalone, .commit-form, .sidebar-progress-bar > .d-flex {
     background: #181818 !important;
   }
+  .Box-row--hover-blue {
+    background: #181818;
+  }
   .bg-white, .radio-label, [style*="background-color: #2f363d"],
   .project-full-screen .project-header {
     background-color: #181818 !important;
@@ -6945,7 +6958,8 @@
   section[style="background-color: #fafbfc;"], div[style="background:#fafbfc;"],
   .team-left-column, .render-container.js-actions-page,
   .deployments-timeline-icon, .TimelineItem--condensed .TimelineItem-badge,
-  .previewable-comment-form .comment-form-head.tabnav.bg-white {
+  .previewable-comment-form .comment-form-head.tabnav.bg-white,
+  .notification-navigation, .check-annotation code pre {
     background: none !important;
   }
   @media (min-width: 1012px) {
@@ -6959,6 +6973,30 @@
   @media (hover: hover) {
     .SelectMenu-item:hover, body:not(.intent-mouse) .SelectMenu-item:focus {
       background-color: /*[[base-color]]*/;
+    }
+    .SelectMenu-item:active {
+      background-color: /*[[base-color]]*/;
+      color: #fff;
+    }
+    body:not(.intent-mouse) .SelectMenu-tab:focus {
+      background-color: #182030;
+    }
+    .SelectMenu-tab:not([aria-checked=true]):hover {
+      color: #d2d2d2;
+      background-color: #343434;
+    }
+    .SelectMenu-tab:not([aria-checked=true]):active {
+      color: #d2d2d2;
+      background-color: #202020;
+    }
+  }
+  @media (hover: none) {
+    .SelectMenu-item:active, .SelectMenu-item:focus {
+      background-color: /*[[base-color]]*/;
+      color: #fff;
+    }
+    .SelectMenu-item {
+      -webkit-tap-highlight-color: /*[[base-color]]*/;
     }
   }
   .comment-form, #issues .labels, .listings .odd, .feed, #files .description,
@@ -7770,7 +7808,8 @@
   .header-nav-link, .header-navlink, .Header .header-search-scope,
   a.notification-indicator, .HeaderNavlink, .UnderlineNav-item:hover,
   .UnderlineNav-item:focus, .project-pane-close:hover, .user-mention,
-  .text-gray-dark, .Header-link, .label-select-menu .select-menu-item:hover {
+  .text-gray-dark, .Header-link, .label-select-menu .select-menu-item:hover,
+  .check-annotation code pre {
     color: #bebebe !important;
   }
   .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
@@ -8082,7 +8121,7 @@
   .discussion-item-review.is-pending .file-header,
   .discussion-item-review.is-pending .comment-form-head.tabnav,
   .timeline-comment.unread-item .timeline-comment-header, .Label.bg-yellow,
-  table.files tr.warning {
+  table.files tr.warning, .code-list-item-private .blob-num {
     background-color: #261d08 !important;
     border-color: #542 !important;
     color: #ddd !important;
@@ -8090,7 +8129,7 @@
   .discussion-item-review.is-pending .file, .timeline-comment.unread-item,
   .timeline-comment.unread-item .timeline-comment-label,
   .review-comment .pending-batched-suggestion-label,
-  .is-pending .review-summary-form-wrapper {
+  .is-pending .review-summary-form-wrapper, .code-list-item-private .file-box {
     border-color: #542 !important;
   }
   .timeline-comment-wrapper .timeline-comment.unread-item:before {
@@ -8104,6 +8143,10 @@
   }
   .deprecation-warning a {
     color: #c97 !important;
+  }
+  .code-list-item-private .divider .blob-code,
+  .code-list-item-private .divider .blob-num {
+    background-color: #261d08 !important;
   }
   /* semi-transparent brown */
   .compare-pr-placeholder, .compare-cutoff, .diff-cutoff,
@@ -8171,7 +8214,7 @@
   .mergeable-clean .bubble, .gh-header-status.open,
   .branch-status.status-success .discussion-item-icon, .state-open,
   .state-proposed, .big-notice, .state-indicator.open, .state-indicator.proposed,
-  .state-indicator.reopened, .boxed-group-success, #message.good, .bg-green,
+  .state-indicator.reopened, .boxed-group-success, #message.good,
   .add-topic-button:hover, .topic-tag-action .add-topic-button:hover {
     background: #163 !important;
     border-color: #041 !important;
