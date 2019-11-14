@@ -245,6 +245,7 @@ let mappings = {
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
   "$border: #ffdf5d": "#321",
+  "$border: #fffdef": "#261d08",
   "$border: #faebcc": "#542", // zenhub
   "$border: #d9d0a5": "#542",
   "$border: #dca874": "#542",
