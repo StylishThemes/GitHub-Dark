@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.136
+@version     1.22.137
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.136 (2019-11-14) */
+/*! Github Dark v1.22.137 (2019-11-15) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -2378,6 +2378,7 @@
   body.zh_logged_in .zhc-btn--text.zhc-btn--disabled:focus,
   body.zh_logged_in .zhc-btn--text[disabled]:hover,
   body.zh_logged_in .zhc-btn--text.zhc-btn--disabled:hover,
+  body.zh_logged_in .zhc-cancel-subscription__input,
   body.zh_logged_in .zhc-banner--neutral, body.zh_logged_in .zhc-button,
   body.zh_logged_in .zhc-button[disabled],
   body.zh_logged_in .zhc-button[disabled]:active,
@@ -2419,7 +2420,6 @@
   /* auto-generated rule for "border-top: 1px solid #e9e9e9" */
   body.zh_logged_in .zh-epic-creator-issue-list .zh-epic-creator-issue-list-not-in-workspace,
   body.zh_logged_in .zhc-confirm-dialog__footer,
-  body.zh_logged_in .zhc-cancel-subscription__controls,
   body.zh_logged_in .zhc-account-settings__link .zhu-panel,
   body.zh_logged_in .zhc-chart-container__footer,
   body.zh_logged_in .zhc-footer__wrapper,
@@ -3425,6 +3425,8 @@
   body.zh_logged_in .zhc-confirm-dialog__footer,
   body.zh_logged_in .zhc-account-details__item--edit__info-message,
   body.zh_logged_in .zhc-billing-history__item:first-child,
+  body.zh_logged_in .zhc-cancel-subscription__feedback,
+  body.zh_logged_in .zhc-cancel-subscription__note,
   body.zh_logged_in .zhc-cancel-subscription__warning,
   body.zh_logged_in .zhc-remove-licenses__subtext,
   body.zh_logged_in .zhc-account-settings__section,
@@ -6959,8 +6961,14 @@
   .team-left-column, .render-container.js-actions-page,
   .deployments-timeline-icon, .TimelineItem--condensed .TimelineItem-badge,
   .previewable-comment-form .comment-form-head.tabnav.bg-white,
-  .notification-navigation, .check-annotation code pre {
+  .notification-navigation, .check-annotation code pre,
+  .notification-read .bg-white.border-md {
     background: none !important;
+  }
+  @media (min-width:  768px) {
+    .notification-read .bg-white.border-md {
+      background: #181818 !important;
+    }
   }
   @media (min-width: 1012px) {
     .file-commit-form--full {
