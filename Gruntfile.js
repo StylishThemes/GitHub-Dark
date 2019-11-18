@@ -234,7 +234,6 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      authors: "bash tools/authors.sh",
       eslint: "npx eslint --quiet --color *.js tools/*.js",
       generate: "node tools/generate",
       imagemin: "bash tools/imagemin.sh",
@@ -386,11 +385,6 @@ module.exports = function(grunt) {
       "exec:eslint",
       "exec:stylelint"
     ]);
-  });
-
-  // regenerate AUTHORS based on commits
-  grunt.registerTask("authors", "Regenerate AUTHORS", () => {
-    grunt.task.run(["exec:authors"]);
   });
 
   // minify all PNG and SVG images
