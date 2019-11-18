@@ -118,7 +118,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npx grunt clean`: Reformat `github-dark.css` to conform the style guide.
 - `npx grunt lint`: Run Stylelint on `github-dark.css`.
 - `npm run authors`: Regenerate the `AUTHORS` file based on git history.
-- `npx grunt imagemin`: Minify all images present in the `image` directory.
+- `npm run imagemin`: Minify all images present in the `image` directory.
 - `npx grunt generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
 - `npx grunt patch`: Increment the version on the patch version number, update headers and create a commit.
 - `npx grunt minor`: Increment the version on the minor version number, update headers and create a commit.
