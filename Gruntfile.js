@@ -242,7 +242,6 @@ module.exports = function(grunt) {
       major: "npx versions -p -d -C major github-dark.css github-dark.user.css",
       perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
       stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
-      update: "npx updates -cu && npm install",
       usercss: "node tools/build-usercss",
     },
     cssmin: {
@@ -395,11 +394,6 @@ module.exports = function(grunt) {
   // Auto-generate styles based on GitHub's CSS
   grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
     grunt.task.run(["exec:generate", "clean"]);
-  });
-
-  // Auto-generate styles based on GitHub's CSS
-  grunt.registerTask("update", "Update dependencies", () => {
-    grunt.task.run(["exec:update"]);
   });
 
   // version bump tasks
