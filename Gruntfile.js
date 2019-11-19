@@ -212,7 +212,7 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      usercss: "node tools/build-usercss",
+      usercss: "node tools/usercss.js",
     },
     cssmin: {
       codemirror: {
