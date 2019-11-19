@@ -38,7 +38,7 @@ let mappings = {
   "$background: #6a737d": "#303030",
   "$background: #24292e": "#181818",
   "$background: #f9f9f9": "#181818",
-  "$background: #4183C4": "/*[[base-color]]*/ #4f8cc9",
+  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
@@ -142,7 +142,7 @@ let mappings = {
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
   "color: #d1d5da": "color: #404040",
-  "color: #4183C4": `
+  "color: #4183c4": `
     color: rgba(79,140,201,.9);
     color: rgba(/*[[base-color-rgb]]*/,.9);
   `,
@@ -179,8 +179,8 @@ let mappings = {
   "$border: #c8e1ff": "#224466",
   "$border: #c0d3eb": "#224466",
   "$background: #0361cc": "#182030",
-  "$background: #05264C": "#182030",
-  "$background: #005CC2": "/*[[base-color]]*/ #4f8cc9",
+  "$background: #05264c": "#182030",
+  "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(-180deg,#0679fc,#0361cc 90%)": "linear-gradient(to bottom,#283040,#182030)",
   "$background: linear-gradient(90deg,#257bf9,#2426ca)": "linear-gradient(90deg,#283040,#182030)",
 
@@ -240,7 +240,7 @@ let mappings = {
   "color: #dbab09": "color: #cb4",
   "color: #b08800": "color: #cb4",
   "color: #735c0f": "color: #bba257",
-  "color: #613A00": "color: #bba257",
+  "color: #613a00": "color: #bba257",
   "$background: #ffd33d": "#cb4",
   "$background: #ffdf5d": "#cb4",
   "$background: #fffdef": "#261d08",
