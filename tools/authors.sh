@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # generate AUTHORS, modify .mailmap in case of duplicates
 git log --reverse --format='%aN <%aE>' | perl -we '
