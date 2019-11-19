@@ -109,20 +109,19 @@ If you would like to contribute to this repository, please...
 
 ## Development
 
-To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various grunt tasks available:
+To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various commands available:
 
-- `npx grunt`: The default task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
-- `npx grunt min`: Same as `grunt`, but outputs a minified style.
+- `npx grunt`: The default grunt task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `npm run usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npx grunt themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
 - `npm run clean`: Reformat `github-dark.css` to conform the style guide.
-- `npx grunt lint`: Run Stylelint on `github-dark.css`.
+- `npm run lint`: Run Stylelint on `github-dark.css`.
 - `npm run authors`: Regenerate the `AUTHORS` file based on git history.
 - `npm run imagemin`: Minify all images present in the `image` directory.
 - `npm run generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
-- `npx grunt patch`: Increment the version on the patch version number, update headers and create a commit.
-- `npx grunt minor`: Increment the version on the minor version number, update headers and create a commit.
-- `npx grunt major`: Increment the version on the major version number, update headers and create a commit.
+- `npm run patch`: Increment the version on the patch version number, update headers and create a commit.
+- `npm run minor`: Increment the version on the minor version number, update headers and create a commit.
+- `npm run major`: Increment the version on the major version number, update headers and create a commit.
 - `npm run update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
