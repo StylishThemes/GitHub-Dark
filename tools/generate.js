@@ -179,6 +179,7 @@ let mappings = {
   "$border: #c8e1ff": "#224466",
   "$border: #c0d3eb": "#224466",
   "$background: #0361cc": "#182030",
+  "$background: #05264C": "#182030",
   "$background: linear-gradient(-180deg,#0679fc,#0361cc 90%)": "linear-gradient(to bottom,#283040,#182030)",
   "$background: linear-gradient(90deg,#257bf9,#2426ca)": "linear-gradient(90deg,#283040,#182030)",
 
