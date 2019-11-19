@@ -199,28 +199,6 @@ module.exports = function(grunt) {
       inline: {
         files: {"<%= config.buildFile %>": "<%= config.sourceFile %>"},
         options: {replacements: "<%= config.replacements %>"}
-      },
-      // Tweak Perfectionist results
-      afterPerfectionist: {
-        files: {"<%= config.sourceFile %>": "<%= config.sourceFile %>"},
-        options: {
-          replacements: [
-            {pattern: /\{\/\*!/g, replacement: "{\n /*!"},
-            {pattern: /\/\* /g, replacement: "\n  /* "},
-            {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: "\n"},
-            {pattern: / {2}}\/\*/gm, replacement: "  }\n  /*"},
-            {pattern: /,\s+\n/gm, replacement: ",\n"},
-            // fix unicode-range block
-            {pattern: /\n\s{23}/gm, replacement: ""},
-            {
-              pattern: /(-025A9,|-02662,)/gim,
-              replacement: "$&\n                   "
-            },
-            {pattern: /\/\*\[\[code-wrap/, replacement: "/*[[code-wrap"},
-            {pattern: /,\u0020{2,}/g, replacement: ", "},
-            {pattern: /\s+domain\(/g, replacement: " domain("},
-          ]
-        }
       }
     },
     clean: {
@@ -234,13 +212,6 @@ module.exports = function(grunt) {
       }
     },
     exec: {
-      eslint: "npx eslint --quiet --color *.js tools/*.js",
-      generate: "node tools/generate",
-      patch: "npx versions -p -d -C patch github-dark.css github-dark.user.css",
-      minor: "npx versions -p -d -C minor github-dark.css github-dark.user.css",
-      major: "npx versions -p -d -C major github-dark.css github-dark.user.css",
-      perfectionist: "npx perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-      stylelint: "npx stylelint github-dark.css themes/src/**/*.css",
       usercss: "node tools/build-usercss",
     },
     cssmin: {
@@ -368,48 +339,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
     processJupyterFiles();
-  });
-
-  grunt.registerTask("clean", "Perfectionist cleanup", () => {
-    grunt.task.run([
-      "exec:perfectionist",
-      "string-replace:afterPerfectionist"
-    ]);
-  });
-
-  // lint github-dark.css and themes for errors
-  grunt.registerTask("lint", "Lint CSS and JS scripts for errors", () => {
-    grunt.task.run([
-      "exec:eslint",
-      "exec:stylelint"
-    ]);
-  });
-
-  // Auto-generate styles based on GitHub's CSS
-  grunt.registerTask("generate", "Auto-generate styles based on GitHub's CSS", () => {
-    grunt.task.run(["exec:generate", "clean"]);
-  });
-
-  // version bump tasks
-  grunt.registerTask("patch", "Bump patch version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:patch"
-    ]);
-  });
-  grunt.registerTask("minor", "Bump minor version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:minor"
-    ]);
-  });
-  grunt.registerTask("major", "Bump major version", () => {
-    grunt.task.run([
-      "lint",
-      "usercss",
-      "exec:major"
-    ]);
   });
 };

@@ -90,5 +90,5 @@ fs.unlink(files.usercss).catch(noop)
   .then(css => processGroup(css, "Jupyter"))
   .then(css => fs.readFile(files.userstyle, "utf8").then(style => css + style))
   .then(css => fs.writeFile(files.usercss, replaceVars(css)))
-  .then(() => console.log("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete"))
+  .then(() => console.info("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete"))
   .catch(exit);
