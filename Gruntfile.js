@@ -215,24 +215,6 @@ module.exports = function(grunt) {
       usercss: "node tools/build-usercss",
     },
     cssmin: {
-      minify: {
-        files: {"<%= config.buildFile %>": "<%= config.buildFile %>"},
-        options: {
-          rebase: false,
-          level: {
-            1: {
-              specialComments: "all",
-              removeEmpty: false,
-            },
-            2: {
-              all: false,
-              mergeMedia: true,
-              removeDuplicateMediaBlocks: true,
-              removeDuplicateRules: true
-            },
-          },
-        }
-      },
       codemirror: {
         files: [{
           expand: true,
@@ -302,14 +284,6 @@ module.exports = function(grunt) {
   grunt.registerTask("default", "Building custom style", () => {
     config.buildFile = config.buildFile.replace(".min.css", ".css");
     grunt.task.run(["string-replace:inline"]);
-    if (!(config.chrome || config.webkit)) {
-      grunt.task.run(["wrap"]);
-    }
-  });
-
-  // build custom minified GitHub-Dark style
-  grunt.registerTask("min", "Building custom minified style", () => {
-    grunt.task.run(["string-replace:inline", "cssmin:minify"]);
     if (!(config.chrome || config.webkit)) {
       grunt.task.run(["wrap"]);
     }
