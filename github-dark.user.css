@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.141
+@version     1.22.142
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.141 (2019-11-20) */
+/*! Github Dark v1.22.142 (2019-11-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -7915,6 +7915,11 @@
   #commit-description-textarea {
     resize: vertical !important;
   }
+  /* GitHub Bug: Fix cut-off 'g' letters in box headers like on https://github.com/notifications */
+  .boxed-group .heading, .boxed-group > h3 {
+    padding: 7px 10px 8px;
+    line-height: inherit;
+  }
   /* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
   .reponav-item .counter, .reponav-item .Counter {
@@ -8113,6 +8118,13 @@
     background: #181818 !important;
     border-color: #484848 !important;
     color: #bebebe !important;
+  }
+  /* https://github.com/mobile/ */
+  .mobile-gradient-bg {
+    display: none;
+  }
+  svg.mobile-hero {
+    filter: invert(100%) hue-rotate(180deg);
   }
   /* discussion timeline tweaks */
   .closed-banner {
@@ -8621,11 +8633,6 @@
   .notification-navigation, .check-annotation code pre,
   .notification-read .bg-white.border-md {
     background: none !important;
-  }
-  @media (min-width:  768px) {
-    .notification-read .bg-white.border-md {
-      background: #181818 !important;
-    }
   }
   @media (min-width: 1012px) {
     .file-commit-form--full {
@@ -10192,7 +10199,8 @@
   .profile-timeline-card-wrapper, .render-shell img, img.asset,
   .AvatarStack--right .avatar, .AvatarStack-body .avatar,
   .sidebar-notifications .thread-subscription-status,
-  .repository-lang-stats-graph .language-color:not(:first-child) {
+  .repository-lang-stats-graph .language-color:not(:first-child),
+  .notification-read .bg-white.border-md {
     border: none !important;
   }
   .dashboard-tabs a {
@@ -10597,7 +10605,7 @@
   .refined-github-diff-signs .blob-code-deletion:before {
     color: #7b7b7b !important;
   }
-  .repohead h1 .rgh-ci-link .octicon {
+  .refined-github .repohead h1 .rgh-ci-link .octicon {
     color: inherit !important;
   }
   .refined-github .dashboard .border-gray.flex-items-baseline.py-3,
@@ -10606,6 +10614,10 @@
   }
   .refined-github .dashboard .js-all-activity-header + div {
     border-color: #343434 !important;
+  }
+  /* https://github.com/StylishThemes/GitHub-Dark/issues/1035 */
+  .refined-github .reaction-summary-item.user-has-reacted {
+    --background: #f2f8fa;
   }
   /* GraphQL API (https://developer.github.com/v4/explorer/) */
   iframe#graphiql, .graphiql-ide, .graphiql-container .topBar,
