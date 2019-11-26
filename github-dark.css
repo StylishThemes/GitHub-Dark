@@ -8487,21 +8487,27 @@
     background-color: #420a0a !important;
   }
   /* link target lines */
-  .selected-line::after {
+  .selected-line::after,
+  .blob-code-inner.highlighted {
     background: rgba(255, 255, 255, .075) !important;
+  }
+  .selected-line::after {
     mix-blend-mode: normal !important;
   }
   /* custom hover highlight */
-  .diff-table > tbody > tr[data-hunk]:hover > td {
+  .diff-table > tbody > tr[data-hunk]:hover > td,
+  .highlight > tbody > tr:hover > td {
     position: relative;
   }
-  .diff-table > tbody > tr[data-hunk]:hover > td::after {
+  .diff-table > tbody > tr[data-hunk]:hover > td::after,
+  .highlight > tbody > tr:hover > td::after {
     content: "";
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     background: rgba(255,255,255,.075);
   }
-  .diff-table > tbody > tr[data-hunk]:hover > td.selected-line::after {
+  .diff-table > tbody > tr[data-hunk]:hover > td.selected-line::after,
+  .highlight > tbody > tr:hover > td.blob-code-inner.highlighted::after {
     background: rgba(255,255,255,.15) !important;
   }
   /* custom hover highlight end */
