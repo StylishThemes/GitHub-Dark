@@ -150,9 +150,9 @@ let mappings = {
     color: rgba(79,140,201,1);
     color: rgba(/*[[base-color-rgb]]*/,1);
   `,
-  "color: rgba(27,31,35,.6)": "color: #9daccc",
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
+  "color: rgba(27,31,35,.6)": "color: rgba(230,230,230,.6)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
@@ -246,6 +246,7 @@ let mappings = {
   "$background: #fffdef": "#261d08",
   "$background: #fffbdd": "#261d08",
   "$background: #fcf9e4": "#321", // zenhub blocked banner
+  "$border: #ffd33d": "#bba257", // code link highlight
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
   "$border: #ffdf5d": "#321",
