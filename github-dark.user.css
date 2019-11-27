@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.148
+@version     1.22.149
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.148 (2019-11-26) */
+/*! Github Dark v1.22.149 (2019-11-27) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -421,7 +421,6 @@
   body[class="page-responsive"] .mobile-toc,
   body[class="page-responsive"] .discussion-issue-references,
   body[class="page-responsive"] .discussion-labels,
-  body[class="page-responsive"] .discussion-projects,
   body[class="page-responsive"] .discussion-block-title,
   body[class="page-responsive"] .timeline-review-container .inline-comment-form,
   body[class="page-responsive"] .discussion-reply,
@@ -3316,7 +3315,6 @@
   body[class="page-responsive"] .discussion-header .branches .branch-name,
   body[class="page-responsive"] .discussion-issue-references .octicon,
   body[class="page-responsive"] .discussion-labels .octicon,
-  body[class="page-responsive"] .discussion-projects .octicon,
   body[class="page-responsive"] .discussion-starting-comment time,
   body[class="page-responsive"] .discussion-starting-comment .num,
   body[class="page-responsive"] .discussion-starting-comment .username,
@@ -3790,10 +3788,6 @@
     color: rgba(79, 140, 201, 1);
     color: rgba(/*[[base-color-rgb]]*/, 1);
   }
-  /* auto-generated rule for "color: rgba(27,31,35,.6)" */
-  .branch-name, .blob-num:hover {
-    color: #9daccc;
-  }
   /* auto-generated rule for "color: rgba(27,31,35,.85)" */
   .boxed-group-warning, .intro-shelf {
     color: rgba(230, 230, 230, .85);
@@ -3809,6 +3803,10 @@
   body[class="page-responsive"] .repo-list .octicon-lock,
   body[class="page-responsive"] .cross-reference .bubble-title .octicon-lock {
     color: rgba(230, 230, 230, .7);
+  }
+  /* auto-generated rule for "color: rgba(27,31,35,.6)" */
+  .branch-name, .blob-num:hover {
+    color: rgba(230, 230, 230, .6);
   }
   /* auto-generated rule for "color: rgba(27,31,35,.3)" */
   .btn-outline.disabled, .btn-outline:disabled, .commit .commit-title.blank,
@@ -5035,6 +5033,22 @@
   body.zh_logged_in .zhc-merging-tool__warning,
   body.zh_logged_in .zhc-sidebar-warning {
     background-color: #321;
+  }
+  /* auto-generated rule for "border-top: 1px solid #ffd33d" */
+  .selected-line.selected-line-top:after {
+    border-top-color: #bba257;
+  }
+  /* auto-generated rule for "border-bottom: 1px solid #ffd33d" */
+  .selected-line.selected-line-bottom:after {
+    border-bottom-color: #bba257;
+  }
+  /* auto-generated rule for "border-left: 1px solid #ffd33d" */
+  .selected-line.selected-line-left:after, .selected-line:first-child:after {
+    border-left-color: #bba257;
+  }
+  /* auto-generated rule for "border-right: 1px solid #ffd33d" */
+  .selected-line.selected-line-right:after, .selected-line:last-child:after {
+    border-right-color: #bba257;
   }
   /* auto-generated rule for "fill: #dbab09" */
   .graph-canvas .alert-label--low, .repo-private-icon, .donut-chart > .expected,
@@ -8663,11 +8677,11 @@
   .prose-diff .changed ins pre, .prose-diff .changed .added,
   .prose-diff > .markdown-body ins pre, .prose-diff > .markdown-body ins code,
   .prose-diff > .markdown-body ins > div, .prose-diff > .markdown-body ins > p {
-    background: #002800 !important;
+    background-color: #002800 !important;
     border-color: #060 !important;
   }
   .blob-num-addition {
-    background: #0a320a !important;
+    background-color: #0a320a !important;
   }
   /* git diff line deletions (dark red) */
   .blob-code-deletion, .prose-diff > .markdown-body .changed del,
@@ -8680,52 +8694,37 @@
   .prose-diff > .markdown-body .changed .removed > div,
   .CodeMirror-linebackground.conflict-background, .conflict-gutter-marker,
   .conflict-background + .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
-    background: #380000 !important;
+    background-color: #380000 !important;
     border-color: #600 !important;
   }
   .blob-num-deletion {
-    background: #420a0a !important;
+    background-color: #420a0a !important;
   }
-  /* code and diff line selection */
-  pre div[style^="background-color: rgb(248, 238, 199)"],
-  .highlight td.blob-code-inner[style^="background-color: rgb(255, 251, 221)"],
-  .highlight td.blob-code-inner[style^="background-color: rgb(248, 238, 199)"],
-  .line[style^="background-color: rgb(255, 255, 204)"],
-  td.selected-line.blob-num, td.selected-line.blob-code,
-  .blob-code-inner.highlighted {
-    background: rgba(85, 85, 85, .4) !important;
-    border-color: rgba(85, 85, 85, .4) !important;
+  /* link target lines */
+  .selected-line::after, .blob-code-inner.highlighted {
+    background: rgba(255, 255, 255, .075) !important;
   }
-  /* hover highlight in code and diffs */
-  .highlight tr:not(.inline-comments):hover .blob-num:not(.non-expandable),
-  .diff-table .blob-num:hover:before,
-  .highlight tr:not(.inline-comments):hover .blob-num:before {
-    color: #e2e2e2 !important;
+  .selected-line::after {
+    mix-blend-mode: normal !important;
   }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-num:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num,
-  .blob-num[colspan], .blob-num-hunk,
-  .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child,
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code.empty-cell {
-    background: #2a2a2a !important;
+  /* custom hover highlight */
+  .diff-table > tbody > tr[data-hunk]:hover > td,
+  .highlight > tbody > tr:hover > td {
+    position: relative;
   }
-  .diff-table tr:hover > pre,
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.selected-line.blob-code:not(.line-age),
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code,
-  .blob-code-hunk, .blob-code-expandable {
-    background: #202020 !important;
+  .diff-table > tbody > tr[data-hunk]:hover > td::after,
+  .highlight > tbody > tr:hover > td::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .075);
   }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-addition:not(.line-age) {
-    background: #1a421a !important;
-  }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-addition:not(.line-age) {
-    background: #103810 !important;
-  }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-num-deletion:not(.line-age) {
-    background: #521a1a !important;
-  }
-  .highlight:not(.lines) tr:not(.inline-comments):hover td.blob-code-deletion:not(.line-age) {
-    background: #481010 !important;
+  .diff-table > tbody > tr[data-hunk]:hover > td.selected-line::after,
+  .highlight > tbody > tr:hover > td.blob-code-inner.highlighted::after {
+    background: rgba(255, 255, 255, .15) !important;
   }
   /* custom hover highlight end */
   .prose-diff > .markdown-body th.changed,
