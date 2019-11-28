@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.150
+@version     1.22.151
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.150 (2019-11-27) */
+/*! Github Dark v1.22.151 (2019-11-28) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -233,7 +233,7 @@
   .Popover-message:after {
     border-bottom-color: #181818;
   }
-  .alert {
+  .alert:not(.octicon) {
     background: #182030;
     border: 1px solid #246;
   }
@@ -2856,7 +2856,9 @@
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)" */
   .btn.focus, .btn:focus, .btn-mktg:focus, .project-column:focus,
-  .project-column.moving, body[class="page-responsive"] .btn.focus,
+  .project-column.moving,
+  body:not(.intent-mouse) .hx_focus-input:focus + .hx_focus-target,
+  body[class="page-responsive"] .btn.focus,
   body[class="page-responsive"] .btn:focus {
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
