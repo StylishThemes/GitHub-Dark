@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.152
+@version     1.22.153
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.152 (2019-12-02) */
+/*! Github Dark v1.22.153 (2019-12-04) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -646,10 +646,8 @@
   body.zh_logged_in .zhc-repo-notifications__load-more,
   body.zh_logged_in .zh-onboarding-banner__progress-dot,
   body.zh_logged_in .zhc-pipeline--add__input,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__title input,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__desc input,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__title textarea,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__desc textarea,
+  body.zh_logged_in .zhc-release-report-form__title-input,
+  body.zh_logged_in .zhc-release-report-form__desc-textarea,
   body.zh_logged_in .zhc-repo-overlay, body.zh_logged_in .zhc-report-card,
   body.zh_logged_in .zhc-report-tabs, body.zh_logged_in .zhc-search,
   body.zh_logged_in .zhc-search-bar__input,
@@ -2267,10 +2265,8 @@
   body.zh_logged_in .zhc-pipeline-form__text-area,
   body.zh_logged_in .zhc-release-add-repos-dropdown__repo-item:hover,
   body.zh_logged_in .zhc-release-issues .zhc-release-issues__info-alert,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__title input,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__desc input,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__title textarea,
-  body.zh_logged_in .zhc-release-create__form .zhc-release-report-form__desc textarea,
+  body.zh_logged_in .zhc-release-report-form__title-input,
+  body.zh_logged_in .zhc-release-report-form__desc-textarea,
   body.zh_logged_in .zhc-report-card, body.zh_logged_in .zhc-report-tabs,
   body.zh_logged_in .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-filter__input,
@@ -3481,6 +3477,9 @@
   body.zh_logged_in .zhc-item-table__meta-title,
   body.zh_logged_in .zhc-manage-plan__subtitle,
   body.zh_logged_in .zhc-manage-plan__renewal-date,
+  body.zh_logged_in .zhc-markdown-toolbar__item:hover,
+  body.zh_logged_in .zhc-markdown-toolbar__item:focus,
+  body.zh_logged_in .zhc-markdown-toolbar__item:active,
   body.zh_logged_in .zhc-merge-repo-finder,
   body.zh_logged_in .zhc-merging-tool__warning,
   body.zh_logged_in .zhc-merging-tool-repo-dropdown__org-name,
@@ -8697,6 +8696,13 @@
   }
   .blob-num-deletion {
     background-color: #420a0a !important;
+  }
+  /* code splitter in diffs */
+  .blob-num-expandable, .blob-num-hunk {
+    background: #2b2b2b;
+  }
+  .blob-code-hunk {
+    background: #222;
   }
   /* link target lines */
   .selected-line::after, .blob-code-inner.highlighted {
