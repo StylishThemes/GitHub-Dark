@@ -31,34 +31,6 @@ module.exports = function(grunt) {
     return data;
   }
 
-  function processJupyterFiles() {
-    const files = grunt.file.expand({
-      filter: "isFile",
-      cwd: "themes/jupyter"
-    }, ["*"]);
-    files.forEach(file => {
-      const theme = grunt.file.read(`themes/jupyter/${file}`);
-      grunt.file.write(`themes/jupyter/${file}`, replaceCSSMatches(theme));
-    });
-  }
-
-  // :any() has been deprecated, and :matches() is not fully supported
-  // this is a simple replace method.. it'll handle `:matches .selector`, but
-  // not `selector :matches()`
-  // `:matches()` renamed to `:is()`
-  // see https://developer.mozilla.org/en-US/docs/Web/CSS/:is
-  function replaceCSSMatches(theme) {
-    return theme.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
-      let result = "";
-      const m = matches.split(/\s*,\s*/);
-      const last = m.length - 1;
-      m.forEach((match, index) => {
-        result += `${match} ${selector.trim()}${index >= last && separator === "{" ? " {" : ", "}`;
-      });
-      return result;
-    });
-  }
-
   // modified from http://stackoverflow.com/a/5624139/145346
   function hexToRgb(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -201,68 +173,8 @@ module.exports = function(grunt) {
         options: {replacements: "<%= config.replacements %>"}
       }
     },
-    clean: {
-      cssmins: {
-        src: [
-          // don't clean combined theme files (older method) until
-          // we can be assured that everyone has updated GitHub-Dark-Script
-          // "themes/*.min.css",
-          "themes/**/*.min.css"
-        ]
-      }
-    },
     exec: {
       usercss: "node tools/usercss.js",
-    },
-    cssmin: {
-      codemirror: {
-        files: [{
-          expand: true,
-          cwd: "themes/src/codemirror/",
-          src: "*.css",
-          dest: "themes/codemirror",
-          ext: ".min.css"
-        }],
-        options: {
-          level: {
-            2: {
-              all: true,
-              specialComments: "all"
-            }
-          }
-        }
-      },
-      github: {
-        files: [{
-          expand: true,
-          cwd: "themes/src/github/",
-          src: "*.css",
-          dest: "themes/github",
-          ext: ".min.css"
-        }],
-        options: {
-          // Don't use level 2; background *must* be the first entry; see #599
-          keepSpecialComments: "*",
-          advanced: false
-        }
-      },
-      jupyter: {
-        files: [{
-          expand: true,
-          cwd: "themes/src/jupyter/",
-          src: "*.css",
-          dest: "themes/jupyter",
-          ext: ".min.css"
-        }],
-        options: {
-          level: {
-            2: {
-              all: true,
-              specialComments: "all"
-            }
-          }
-        }
-      }
     },
     wrap: {
       mozrule: {
@@ -275,8 +187,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks("grunt-string-replace");
-  grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-wrap");
   grunt.loadNpmTasks("grunt-exec");
 
@@ -298,20 +208,5 @@ module.exports = function(grunt) {
       "wrap",
       "exec:usercss"
     ]);
-  });
-
-  // build custom minified GitHub-Dark style
-  grunt.registerTask("themes", "Rebuild minified theme files", () => {
-    grunt.task.run([
-      "clean:cssmins",
-      "cssmin:codemirror",
-      "cssmin:github",
-      "cssmin:jupyter",
-      "jupyter"
-    ]);
-  });
-
-  grunt.registerTask("jupyter", "Replacing :is() in Jupyter files", () => {
-    processJupyterFiles();
   });
 };
