@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.158
+@version     1.22.159
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.158 (2019-12-07) */
+/*! Github Dark v1.22.159 (2019-12-09) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -4960,6 +4960,23 @@
   .bg-yellow-4, body[class="page-responsive"] .bg-yellow-4 {
     background-color: #cb4 !important;
   }
+  /* auto-generated rule for "background-color: #dbab09" */
+  .alert-label--low, .branch-action-state-unknown .branch-action-icon,
+  .branch-action-state-unstable .branch-action-icon,
+  body.status .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  body.status .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  body.status .layout-content.status.status-index .page-status.status-minor,
+  body.status .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  body.status .layout-content.status.status-index .scheduled-incidents-container .tab,
+  body[class="page-responsive"] .alert-label--low,
+  html.ghh-theme-classic .ghh-pull-meta .ghh-reviews .ghh-state-icon-warning {
+    background-color: #cb4;
+  }
+  /* auto-generated rule for "background-color: #dbab09 !important" */
+  .bg-yellow-dark, .bg-yellow-7, body[class="page-responsive"] .bg-yellow-dark,
+  body[class="page-responsive"] .bg-yellow-7 {
+    background-color: #cb4 !important;
+  }
   /* auto-generated rule for "background: #fffdef" */
   .prose-diff > .markdown-body li.added.moved,
   .prose-diff > .markdown-body td.changed,
@@ -6454,7 +6471,8 @@
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, ul.color-label-list .color,
-  .facebox-header, .TimelineItem-badge {
+  .facebox-header, .TimelineItem-badge,
+  .release-timeline-tags .tag-timeline-date:after {
     border-color: #222;
   }
   .filter-tab.selected {
@@ -7176,10 +7194,6 @@
   svg[viewBox="0 0 1461.5 677.84"][width="700"] {
     filter: invert(85%) hue-rotate(-180deg) brightness(125%) contrast(85%) !important;
   }
-  /* https://www.githubstatus.com */
-  .illo-desktop-header {
-    filter: invert(90%) hue-rotate(-180deg) !important;
-  }
   .action-logo:after {
     filter: invert(100%) hue-rotate(180deg) brightness(350%) !important;
   }
@@ -7396,10 +7410,6 @@
   }
   .community-checklist .progress-bar .progress {
     background-color: #333;
-  }
-  /* https://www.githubstatus.com/ */
-  .status-day > .date::before {
-    background-color: #444 !important;
   }
   .profile-timeline.discussion-timeline:before,
   .profile-timeline.discussion-timeline .profile-timeline-month-heading:after,
@@ -7934,8 +7944,7 @@
   .tree-browser-result mark, .octicon.text-gray {
     color: #949494 !important;
   }
-  .timeline-comment-action, #suggestions a, .table-list-header-toggle .btn-link,
-  .btn-link .octicon-kebab-horizontal {
+  .timeline-comment-action, #suggestions a, .table-list-header-toggle .btn-link {
     color: #949494;
   }
   .vcard-detail .octicon, .member-badge .octicon,
@@ -9914,6 +9923,29 @@
   .sidebar {
     background-color: #1c1c1c;
     border-right: 1px solid #343434;
+  }
+}
+@-moz-document domain("githubstatus.com") {
+  .illo-desktop-header {
+    filter: invert(90%) hue-rotate(-180deg) !important;
+  }
+  .status-day > .date::before {
+    background-color: #444 !important;
+  }
+  .page-title .impact-minor::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.89307 1.50072C8.70961 1.19027 8.37325 1 8.00632 1C7.63938 1 7.30302 1.19027 7.11956 1.50072L0.137601 13.4979C-0.0458669 13.8083 -0.0458669 14.1888 0.137601 14.4993C0.331261 14.8097 0.667618 15 1.02436 15H14.9883C15.3552 15 15.6916 14.8097 15.8648 14.4993C16.0381 14.1888 16.0483 13.8083 15.875 13.4979L8.89307 1.50072ZM9.02558 12.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558 9.99285H6.98705V5.98712H9.02558V9.99285Z' fill='%23cb4'/%3E%3C/svg%3e");
+  }
+  .page-title .impact-minor::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.89307 1.50072C8.70961 1.19027 8.37325 1 8.00632 1C7.63938 1 7.30302 1.19027 7.11956 1.50072L0.137601 13.4979C-0.0458669 13.8083 -0.0458669 14.1888 0.137601 14.4993C0.331261 14.8097 0.667618 15 1.02436 15H14.9883C15.3552 15 15.6916 14.8097 15.8648 14.4993C16.0381 14.1888 16.0483 13.8083 15.875 13.4979L8.89307 1.50072ZM9.02558 12.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558 9.99285H6.98705V5.98712H9.02558V9.99285Z' fill='%23cb4'/%3E%3C/svg%3e");
+  }
+  .page-title .impact-major::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.89307 1.50072C8.70961 1.19027 8.37325 1 8.00632 1C7.63938 1 7.30302 1.19027 7.11956 1.50072L0.137601 13.4979C-0.0458669 13.8083 -0.0458669 14.1888 0.137601 14.4993C0.331261 14.8097 0.667618 15 1.02436 15H14.9883C15.3552 15 15.6916 14.8097 15.8648 14.4993C16.0381 14.1888 16.0483 13.8083 15.875 13.4979L8.89307 1.50072ZM9.02558 12.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558 9.99285H6.98705V5.98712H9.02558V9.99285Z' fill='%23f3582c'/%3E%3C/svg%3e");
+  }
+  .page-title .impact-critical::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.89307 1.50072C8.70961 1.19027 8.37325 1 8.00632 1C7.63938 1 7.30302 1.19027 7.11956 1.50072L0.137601 13.4979C-0.0458669 13.8083 -0.0458669 14.1888 0.137601 14.4993C0.331261 14.8097 0.667618 15 1.02436 15H14.9883C15.3552 15 15.6916 14.8097 15.8648 14.4993C16.0381 14.1888 16.0483 13.8083 15.875 13.4979L8.89307 1.50072ZM9.02558 12.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558 9.99285H6.98705V5.98712H9.02558V9.99285Z' fill='%23f44'/%3E%3C/svg%3e");
+  }
+  .page-title .impact-maintenance::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.48 7.27001C4.74 7.53001 5.76 8.60001 5.76 8.60001L6.32 8.02001L5.44 7.11001L7.13 5.31001C7.13 5.31001 6.37 4.57001 6.7 4.86001C7.02 3.67001 6.73 2.35001 5.83 1.42001C4.93 0.500006 3.66 0.200006 2.52 0.510006L4.45 2.51001L3.94 4.47001L2.05 4.99001L0.12 2.99001C-0.19 4.17001 0.1 5.48001 1 6.40001C1.94 7.38001 3.29 7.66001 4.48 7.27001ZM10.92 9.21001L8.59 11.51L12.43 15.49C12.74 15.82 13.16 15.98 13.57 15.98C13.98 15.98 14.39 15.82 14.71 15.49C15.34 14.84 15.34 13.79 14.71 13.14L10.92 9.21001ZM16 2.53L13.55 0L6.33 7.46L7.21 8.37L2.9 12.83L1.91 13.36L0.519998 15.63L0.869998 16L3.07 14.56L3.58 13.54L7.9 9.08L8.78 9.99L16 2.53Z' fill='rgb(/*[[base-color-rgb]]*/)'/%3E%3C/svg%3e");
   }
 }
 
