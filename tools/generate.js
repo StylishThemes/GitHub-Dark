@@ -243,6 +243,7 @@ let mappings = {
   "color: #613a00": "color: #bba257",
   "$background: #ffd33d": "#cb4",
   "$background: #ffdf5d": "#cb4",
+  "$background: #dbab09": "#cb4",
   "$background: #fffdef": "#261d08",
   "$background: #fffbdd": "#261d08",
   "$background: #fcf9e4": "#321", // zenhub blocked banner
