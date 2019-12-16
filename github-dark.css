@@ -6577,7 +6577,6 @@
   .js-current .standalone a, .menu-item:hover,
   .Box-row--focus-gray.navigation-focus, .team-listing .is-open.root-team,
   .Box-row--hover-gray:hover, table.files tr[aria-selected="true"] td,
-  .select-menu-item[aria-checked="true"]:not(.selected):not([role="menuitemradio"]):hover,
   .label-select-menu .select-menu-item.navigation-focus,
   .label-select-menu .select-menu-item:focus,
   .label-select-menu .select-menu-item:hover {
@@ -6805,11 +6804,22 @@
   }
   @media (hover: hover) {
     .SelectMenu-item:hover, body:not(.intent-mouse) .SelectMenu-item:focus {
-      background-color: /*[[base-color]]*/ #4f8cc9;
+      color: #bebebe;
+      background-color: #202020;
     }
     .SelectMenu-item:active {
-      background-color: /*[[base-color]]*/ #4f8cc9;
-      color: #fff;
+      color: #c0c0c0;
+      background-color: #242424;
+    }
+    .SelectMenu-item[aria-checked=true]:active,
+    .SelectMenu-item[aria-checked=true]:hover,
+    body:not(.intent-mouse) .SelectMenu-item[aria-checked=true]:focus {
+      color: #e0e0e0;
+    }
+    .SelectMenu-tab[aria-selected=true]:active,
+    .SelectMenu-tab[aria-selected=true]:hover {
+      color: #c0c0c0;
+      background-color: #202020;
     }
     body:not(.intent-mouse) .SelectMenu-tab:focus {
       background-color: #182030;
