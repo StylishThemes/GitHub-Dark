@@ -501,6 +501,7 @@ function parseRule(decls, rule, opts) {
   }
 }
 
+// TODO: manually wrap long lines here
 function format(css) {
   return String(perfectionist.process(css, perfOpts));
 }
