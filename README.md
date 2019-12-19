@@ -116,6 +116,7 @@ To develop, first install [Node.js](https://nodejs.org) 12 or greater, then inst
 - `npx grunt`: The default grunt task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `npm run usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npm run themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
+- `npm run clean`: Reformat `github-dark.css` to conform the style guide.
 - `npm run lint`: Run Stylelint on `github-dark.css`.
 - `npm run authors`: Regenerate the `AUTHORS` file based on git history.
 - `npm run imagemin`: Minify all images present in the `image` directory.
