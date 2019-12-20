@@ -114,6 +114,7 @@ If you would like to contribute to this repository, please...
 To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various commands available:
 
 - `npx grunt`: The default grunt task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
+- `npm run build`: Runs the `generate` and `usercss` tasks.
 - `npm run usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npm run themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
 - `npm run clean`: Reformat `github-dark.css` to conform the style guide.
