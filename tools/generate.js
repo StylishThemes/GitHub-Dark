@@ -38,7 +38,6 @@ let mappings = {
   "$background: #6a737d": "#303030",
   "$background: #24292e": "#181818",
   "$background: #f9f9f9": "#181818",
-  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
@@ -187,6 +186,7 @@ let mappings = {
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
+  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9; color: #fff !important",
   "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff",
   "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
