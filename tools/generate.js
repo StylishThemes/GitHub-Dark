@@ -18,6 +18,7 @@ let mappings = {
   // Background
   // ==========================================================================
   "$background: #fff": "#181818",
+  "$background: #ffffff": "#181818",
   "$background: #ffe": "#242424",
   "$background: #fdfdfd": "#1c1c1c",
   "$background: #fafbfc": "#181818",
@@ -68,6 +69,7 @@ let mappings = {
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #fff": "#181818",
+  "$border: #ffffff": "#181818",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
