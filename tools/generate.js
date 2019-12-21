@@ -40,6 +40,7 @@ let mappings = {
   "$background: #6a737d": "#303030",
   "$background: #24292e": "#181818",
   "$background: #f9f9f9": "#181818",
+  "$background: rgba(225,228,232,0.31)": "#282828",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
