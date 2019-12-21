@@ -294,7 +294,7 @@ const sources = [
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {
-    url: "https://graphql-explorer.githubapp.com/", 
+    url: "https://graphql-explorer.githubapp.com/",
     prefix: ".graphql-container",
     match: [".graphql-container"],
   },
