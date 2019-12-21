@@ -293,7 +293,11 @@ const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
-  {url: "https://graphql-explorer.githubapp.com/"},
+  {
+    url: "https://graphql-explorer.githubapp.com/", 
+    prefix: ".graphql-container",
+    match: [".graphql-container"],
+  },
   {url: "https://developer.github.com", prefix: "html[prefix]"},
   {
     url: "https://www.githubstatus.com/",
