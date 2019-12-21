@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.173
+@version     1.22.174
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.173 (2019-12-21) */
+/*! Github Dark v1.22.174 (2019-12-21) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -689,6 +689,15 @@
   /* auto-generated rule for "background-color: #fff !important" */
   .tree-browser-result[aria-selected=true] {
     background-color: #181818 !important;
+  }
+  /* auto-generated rule for "background-color: #ffffff" */
+  body, body.status .dropdown .dropdown-menu, body.status .modal,
+  body.status .popover, body.status .cpt-tabs:not(.unstyled) li.active a,
+  body.status .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  body.status .grouped-items-selector,
+  body.status .layout-content.status.status-full-history .history-nav a.current,
+  body.status #uptime-tooltip .tooltip-box {
+    background-color: #181818;
   }
   /* auto-generated rule for "background: #ffe" */
   .oauth-org-access-details .oauth-org-item:hover {
@@ -2812,6 +2821,23 @@
   body.zh_logged_in .zhc-pr-issue-connector__info::after,
   body.zh_logged_in .zhc-tooltip--info-tip.zhc-tooltip--right .zhc-tooltip__content::before,
   .ghh-theme-github .tooltipster-right .tooltipster-arrow-background {
+    border-right-color: #181818;
+  }
+  /* auto-generated rule for "border-top-color: #ffffff" */
+  body.status .popover.top .arrow:after, body.status .cpt-button .caret {
+    border-top-color: #181818;
+  }
+  /* auto-generated rule for "border-bottom-color: #ffffff" */
+  body.status .popover.bottom .arrow:after,
+  body.status #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color: #181818;
+  }
+  /* auto-generated rule for "border-left-color: #ffffff" */
+  body.status .popover.left .arrow:after {
+    border-left-color: #181818;
+  }
+  /* auto-generated rule for "border-right-color: #ffffff" */
+  body.status .popover.right .arrow:after {
     border-right-color: #181818;
   }
   /* auto-generated rule for "border-top: 8px solid rgba(27,31,35,.15)" */
@@ -5998,6 +6024,13 @@
   .select-menu-text-filter input::placeholder {
     color: #555 !important;
   }
+  ::-webkit-calendar-picker-indicator {
+    background-color: #181818;
+    color: #c9c9c9;
+  }
+  ::-webkit-calendar-picker-indicator:hover {
+    color: #666;
+  }
   /* Remove dotted borders on already otherwise higlighted elements (Firefox) */
   .dropdown-item:focus, .details-dialog:focus {
     outline: none;
@@ -8083,6 +8116,10 @@
     background: #911 !important;
     border-color: #b00 !important;
   }
+  .deprecation-banner {
+    background: #200;
+    border-color: #911;
+  }
   .mergeable-dirty .bubble, .mergeable-dirty .merge-status-icon,
   .dangerzone > h3 {
     background: #911 !important;
@@ -8123,6 +8160,9 @@
   input[id="label-color-"]:invalid,
   body[class="page-responsive"] .color-icons .closed {
     color: #f44 !important;
+  }
+  .deprecation-banner p {
+    color: #f66;
   }
   .btn-danger.disabled, .btn-danger:disabled,
   body[class="page-responsive"] .btn-danger.disabled,
@@ -9884,7 +9924,7 @@
   }
 }
 @-moz-document regexp("^https://github.?com/(features).*$") {
-  img[src*="img-"] {
+  img[src*="img-"], img[src*="security"] {
     filter: invert(90%) hue-rotate(-180deg) !important;
   }
   img[src*="img-share-achievements.png"] {
@@ -9960,6 +10000,9 @@
   .status-day > .date::before {
     background-color: #444 !important;
   }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    opacity: .7;
+  }
   .page-title .impact-minor::before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.89307 1.50072C8.70961 1.19027 8.37325 1 8.00632 1C7.63938 1 7.30302 1.19027 7.11956 1.50072L0.137601 13.4979C-0.0458669 13.8083 -0.0458669 14.1888 0.137601 14.4993C0.331261 14.8097 0.667618 15 1.02436 15H14.9883C15.3552 15 15.6916 14.8097 15.8648 14.4993C16.0381 14.1888 16.0483 13.8083 15.875 13.4979L8.89307 1.50072ZM9.02558 12.9971H6.98705V10.9943H9.02558V12.9971ZM9.02558 9.99285H6.98705V5.98712H9.02558V9.99285Z' fill='%23cb4'/%3E%3C/svg%3e");
   }
@@ -9977,6 +10020,19 @@
   }
   .incident-container .incident-title::before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99999 2.3C10.14 2.3 12.7 4.86 12.7 8C12.7 11.14 10.14 13.7 6.99999 13.7C3.85999 13.7 1.29999 11.14 1.29999 8C1.29999 4.86 3.85999 2.3 6.99999 2.3ZM7 1C3.14 1 0 4.14 0 8C0 11.86 3.14 15 7 15C10.86 15 14 11.86 14 8C14 4.14 10.86 1 7 1ZM8 4H6V9H8V4ZM8 10H6V12H8V10Z' fill='%23bebebe'/%3E%3C/svg%3e");
+  }
+  .select-input__control[class*="css-"] {
+    background-color: #181818;
+    border-color: #555;
+  }
+  .select-input__single-value[class*="css-"] {
+    color: #bebebe;
+  }
+  body.status div[class*="css-"] {
+    background-color: #181818;
+  }
+  svg [fill="#EAEAEA"] {
+    fill: #555;
   }
 }
 
