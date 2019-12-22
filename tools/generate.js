@@ -142,6 +142,7 @@ let mappings = {
   "color: #959da5": "color: #757575",
   "color: #767676": "color: #767676",
   "color: #a3aab1": "color: #757575",
+  "color: #808891": "color: #999",
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
   "color: #d1d5da": "color: #404040",
