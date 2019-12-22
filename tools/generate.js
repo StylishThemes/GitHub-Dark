@@ -41,6 +41,7 @@ let mappings = {
   "$background: #24292e": "#181818",
   "$background: #f9f9f9": "#181818",
   "$background: #2f363d": "#282828",
+  "$background: #586069": "#343434",
   "$background: rgba(225,228,232,0.31)": "#282828",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
