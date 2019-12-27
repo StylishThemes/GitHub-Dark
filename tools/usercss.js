@@ -22,7 +22,7 @@ async function processGroup(css, name) {
 }
 
 async function getThemesInFolder(folder) {
-  const path = "./themes/" + folder;
+  const path = `./themes/${folder}`;
   let files = await readdir(path);
 
   // put the default theme (twilight) first
@@ -32,7 +32,7 @@ async function getThemesInFolder(folder) {
     return a.localeCompare(b);
   });
 
-  return await Promise.all(files.map(file => readFile(path + "/" + file, "utf8")));
+  return await Promise.all(files.map(file => readFile(`${path}/${file}`, "utf8")));
 }
 
 function extractThemeName(css) {

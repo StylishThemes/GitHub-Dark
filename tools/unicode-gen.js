@@ -4,11 +4,6 @@
 const chars = "©®™▪◼◾♠♣✔✖〰";
 const emojis = "➕➖➗➰⬛◾🎶🎼💱💲🔃🔙🔚🔛🔜🔝🎵➿🐾🐾";
 
-function padStart(num) {
-  const str = "" + num, pad = "00000";
-  return pad.substring(0, pad.length - str.length) + str;
-}
-
 function getExcludeRanges(chars) {
   const codes = Array.from(chars).map(char => char.codePointAt(0));
   const ranges = codes.map((code, i, codes) => {
@@ -22,16 +17,16 @@ function cssString(ranges) {
   let str = "";
   ranges.forEach(range => {
     str += "U+";
-    str += padStart(range[0].toString(16).toUpperCase(), 5, "0");
+    str += range[0].toString(16).toUpperCase().padStart(5, "0");
     str += "-";
-    str += padStart(range[1].toString(16).toUpperCase(), 5, "0");
+    str += range[1].toString(16).toUpperCase().padStart(5, "0");
     str += ",";
   });
   return str.slice(0, -1);
 }
 
-console.info(cssString(getExcludeRanges(chars)) + "\n");
+console.info(`${cssString(getExcludeRanges(chars))}\n`);
 console.info(Array.from(emojis).map(char => {
   const hex = char.codePointAt(0).toString(16);
-  return 'g-emoji[fallback-src$="' + hex + '.png"]';
+  return `g-emoji[fallback-src$="${hex}.png"]`;
 }).join(", "));

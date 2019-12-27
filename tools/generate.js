@@ -576,7 +576,7 @@ function buildOutput(decls) {
     }
   }
   output += "/* end auto-generated rules */";
-  return output.split("\n").map(line => "  " + line).join("\n");
+  return output.split("\n").map(line => `  ${line}`).join("\n");
 }
 
 function normalize(value) {
@@ -692,14 +692,14 @@ async function extensionCss(source) {
     if (!Array.isArray(script.css)) continue;
     for (const file of script.css) {
       if (Object.keys(files).includes(file)) {
-        css += String(await files[file].buffer()) + "\n";
+        css += `${String(await files[file].buffer())}\n`;
       }
     }
   }
 
   for (const file of source.files || []) {
     if (Object.keys(files).includes(file)) {
-      css += String(await files[file].buffer()) + "\n";
+      css += `${String(await files[file].buffer())}\n`;
     }
   }
 
@@ -737,7 +737,7 @@ async function main() {
     } else {
       sources[index].css = responses.join("\n");
       if (sources[index].styleTags.length) {
-        sources[index].css += "\n" + sources[index].styleTags.join("\n");
+        sources[index].css += `\n${sources[index].styleTags.join("\n")}`;
       }
     }
   }
