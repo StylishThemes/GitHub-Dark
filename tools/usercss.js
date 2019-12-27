@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 "use strict";
 
-const fs = require("fs").promises;
-const path = require("path");
+const {readFile, writeFile, readdir, unlink} = require("fs").promises;
+const {join} = require("path");
 
 // make sure to run "grunt user" before grabbing this style
 const files = {
-  defaults: path.join(__dirname, "..", "defaults.json"),
-  userstyle: path.join(__dirname, "..", "github-dark-userstyle.build.css"),
-  usercss: path.join(__dirname, "..", "github-dark.user.css"),
-  template: path.join(__dirname, "usercss-template.css"),
+  defaults: join(__dirname, "..", "defaults.json"),
+  userstyle: join(__dirname, "..", "github-dark-userstyle.build.css"),
+  usercss: join(__dirname, "..", "github-dark.user.css"),
+  template: join(__dirname, "usercss-template.css"),
 };
 
 const userBase = require(files.defaults);
-const noop = () => {};
 
 async function processGroup(css, name) {
   const themes = await getThemesInFolder(name.toLowerCase());
@@ -24,7 +23,7 @@ async function processGroup(css, name) {
 
 async function getThemesInFolder(folder) {
   const path = "./themes/" + folder;
-  let files = await fs.readdir(path);
+  let files = await readdir(path);
 
   // put the default theme (twilight) first
   files = files.sort((a, b) => {
@@ -33,7 +32,7 @@ async function getThemesInFolder(folder) {
     return a.localeCompare(b);
   });
 
-  return await Promise.all(files.map(file => fs.readFile(path + "/" + file, "utf8")));
+  return await Promise.all(files.map(file => readFile(path + "/" + file, "utf8")));
 }
 
 function extractThemeName(css) {
@@ -83,12 +82,20 @@ function exit(err) {
   process.exit(err ? 1 : 0);
 }
 
-fs.unlink(files.usercss).catch(noop)
-  .then(() => fs.readFile(files.template, "utf8"))
-  .then(css => processGroup(css, "GitHub"))
-  .then(css => processGroup(css, "CodeMirror"))
-  .then(css => processGroup(css, "Jupyter"))
-  .then(css => fs.readFile(files.userstyle, "utf8").then(style => css + style))
-  .then(css => fs.writeFile(files.usercss, replaceVars(css)))
-  .then(() => console.info("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete"))
-  .catch(exit);
+async function main() {
+  try {
+    await unlink(files.usercss);
+  } catch {}
+
+  let css = await readFile(files.template, "utf8");
+  css = await processGroup(css, "GitHub");
+  css = await processGroup(css, "CodeMirror");
+  css = await processGroup(css, "Jupyter");
+  const userstyle = await readFile(files.userstyle, "utf8");
+  css = replaceVars(`${css}${userstyle}`);
+  await writeFile(files.usercss, css);
+
+  console.info("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete");
+}
+
+main().then(exit).catch(exit);

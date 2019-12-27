@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 
 // this script does some cleanups after perfectionist ran

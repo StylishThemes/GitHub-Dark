@@ -4,7 +4,7 @@
 const css = require("css");
 const cssMediaQuery = require("css-mediaquery");
 const doFetch = require("make-fetch-happen");
-const fs = require("fs").promises;
+const {readFile, writeFile} = require("fs").promises;
 const parse5 = require("parse5");
 const path = require("path");
 const perfectionist = require("perfectionist");
@@ -398,8 +398,8 @@ async function fetch(...args) {
 }
 
 async function writeOutput(generatedCss) {
-  const css = await fs.readFile(cssFile, "utf8");
-  await fs.writeFile(cssFile, css.replace(replaceRe, generatedCss));
+  const css = await readFile(cssFile, "utf8");
+  await writeFile(cssFile, css.replace(replaceRe, generatedCss));
 }
 
 async function extract(res) {
