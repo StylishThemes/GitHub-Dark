@@ -668,11 +668,24 @@ function prepareMappings(mappings) {
   return newMappings;
 }
 
-async function extensionCss(source) {
+// obtain the latest chrome version in major.minor format
+async function chromeVersion() {
+  try {
+    const res = await fetch(`https://chromedriver.storage.googleapis.com/LATEST_RELEASE`);
+    if (!res.ok) throw new Error(res.statusText);
+
+    const version = await res.text();
+    return version.match(/[0-9]+\.[0-9]+/)[0];
+  } catch {
+    return "80.0";
+  }
+}
+
+async function extensionCss(source, version) {
   const id = source.crx;
   let css = "";
 
-  const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=78.0&x=id%3D${id}%26installsource%3Dondemand%26uc`);
+  const res = await fetch(`https://clients2.google.com/service/update2/crx?response=redirect&prodversion=${version}&x=id%3D${id}%26installsource%3Dondemand%26uc`);
   if (!res.ok) throw new Error(res.statusText);
 
   const buffer = await res.buffer();
@@ -731,9 +744,11 @@ async function main() {
     return Promise.all(source.styles.map(url => fetch(url).then(res => res.text())));
   }));
 
+  const version = await chromeVersion();
+
   for (const [index, responses] of Object.entries(cssResponses)) {
     if (sources[index].crx) {
-      sources[index].css = await extensionCss(sources[index]);
+      sources[index].css = await extensionCss(sources[index], version);
     } else {
       sources[index].css = responses.join("\n");
       if (sources[index].styleTags.length) {
