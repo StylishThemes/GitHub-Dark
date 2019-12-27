@@ -670,15 +670,14 @@ function prepareMappings(mappings) {
 
 // obtain the latest chrome version in major.minor format
 async function chromeVersion() {
-  try {
-    const res = await fetch(`https://chromedriver.storage.googleapis.com/LATEST_RELEASE`);
-    if (!res.ok) throw new Error(res.statusText);
+  const res = await fetch(`https://chromedriver.storage.googleapis.com/LATEST_RELEASE`);
+  if (!res.ok) throw new Error(res.statusText);
 
-    const version = await res.text();
-    return version.match(/[0-9]+\.[0-9]+/)[0];
-  } catch {
-    return "80.0";
-  }
+  const text = await res.text();
+  const [version] = text.match(/[0-9]+\.[0-9]+/) || [];
+
+  if (!version) throw new Error(`Unable to match version in response text '${text}'`);
+  return version;
 }
 
 async function extensionCss(source, version) {
