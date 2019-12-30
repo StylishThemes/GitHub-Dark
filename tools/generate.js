@@ -704,14 +704,14 @@ async function extensionCss(source, version) {
     if (!Array.isArray(script.css)) continue;
     for (const file of script.css) {
       if (Object.keys(files).includes(file)) {
-        css += `${String(await files[file].buffer())}\n`;
+        css += `${await files[file].buffer()}\n`;
       }
     }
   }
 
   for (const file of source.files || []) {
     if (Object.keys(files).includes(file)) {
-      css += `${String(await files[file].buffer())}\n`;
+      css += `${await files[file].buffer()}\n`;
     }
   }
 
