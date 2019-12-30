@@ -5990,6 +5990,16 @@
   .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
+  .project-card .highlight pre {
+    padding: 1em;
+    overflow: auto;
+    white-space: pre;
+    word-wrap: initial;
+  }
+  .project-card code {
+    font-size: 85%;
+    padding: .2em .4em;
+  }
   .markdown-body pre code, .markdown-body pre tt {
     padding: .2em 0 !important;
     border: none !important;
@@ -6080,7 +6090,8 @@
   /* border-radius */
   #wrapper, #your-repos-filter, .topsearch ul.nav, .merge-pr-more-commits,
   .oauth-org-access-details .boxed-group-list > li.on,
-  .gist-snippet .file-box .highlight {
+  .gist-snippet .file-box .highlight, .project-card .highlight pre,
+  .project-card code {
     border-radius: 3px !important;
   }
   /* add rounded borders on bottom */
@@ -8525,7 +8536,7 @@
   .markdown-format p > code, .markdown-body code, .markdown-body tt,
   .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
   .markdown-body .highlight pre, body.blog pre, #user-content-toc td,
-  .copyable-terminal {
+  .copyable-terminal, .project-card .highlight pre, .project-card code {
     border: 1px solid rgba(255, 255, 255, .1) !important;
   }
   /* toc in markdown, reset border-collaps so border-radius works   */
@@ -8942,6 +8953,9 @@
   .commit-preview .message pre, .rendered_html pre, .rendered_html code,
   .markdown-format p > code, .markdown-format pre {
     background: #222 !important;
+  }
+  .project-card code {
+    background: #333 !important;
   }
   /* Styles auto-complete popups in the actions workflow editor */
   .CodeMirror-hints {
