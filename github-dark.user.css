@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.176
+@version     1.22.177
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.176 (2019-12-22) */
+/*! Github Dark v1.22.177 (2019-12-31) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -368,9 +368,9 @@
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
   .org-sso .org-sso-panel, .ais-SearchBox-input,
   .form-group .ais-SearchBox-input:focus, .SideNav-item[aria-current="page"],
-  .SideNav-item[aria-selected="true"], .btn-purple .Counter, #query,
-  .form-group #query:focus, details-dialog, html[prefix] .Box,
-  html[prefix] .btn-outline, html[prefix] .btn-outline.selected .counter,
+  .SideNav-item[aria-selected="true"], #query, .form-group #query:focus,
+  details-dialog, html[prefix] .Box, html[prefix] .btn-outline,
+  html[prefix] .btn-outline.selected .counter,
   html[prefix] .btn-outline.zeroclipboard-is-active .counter,
   html[prefix] .btn-outline.zeroclipboard-is-hover .counter,
   html[prefix] .btn-outline:active .counter,
@@ -1137,7 +1137,7 @@
   /* auto-generated rule for "background-color: #d1d5da" */
   .SideNav-item:focus:before, .SideNav-item:hover:before,
   .diffstat-block-neutral, .SideNav-item:hover::before,
-  .SideNav-item:focus::before, .SideNav-item::before,
+  .SideNav-item:focus::before,
   body[class="page-responsive"] .diffstat-block-neutral {
     background-color: #404040;
   }
@@ -1335,6 +1335,10 @@
   }
   /* auto-generated rule for "border-color: transparent" */
   .input-dark, .timeline-comment--caret:after, .timeline-comment--caret:before,
+  .timeline-comment--caret.current-user.is-answer:after,
+  .timeline-comment--caret.current-user.is-answer:before,
+  .timeline-comment--caret.is-answer:after,
+  .timeline-comment--caret.is-answer:before,
   .is-pending .timeline-comment--caret:after,
   .is-pending .timeline-comment--caret:before,
   .timeline-comment--caret.current-user:after,
@@ -4896,7 +4900,11 @@
     background: #002800;
   }
   /* auto-generated rule for "background-color: #dcffe4" */
-  .flash-success {
+  .flash-success,
+  .timeline-comment.is-answer.current-user .timeline-comment-header,
+  .timeline-comment.is-answer .timeline-comment-header,
+  .timeline-comment.is-answer.current-user .previewable-comment-form .comment-form-head.tabnav,
+  .timeline-comment.is-answer .previewable-comment-form .comment-form-head.tabnav {
     background-color: #002800;
   }
   /* auto-generated rule for "background-color: #dcffe4 !important" */
@@ -4918,6 +4926,9 @@
     border-color: #34d058;
   }
   /* auto-generated rule for "border-color: #34d058" */
+  .timeline-comment.is-answer, .timeline-comment.is-answer.current-user,
+  .timeline-comment.is-answer.current-user .timeline-comment-label,
+  .timeline-comment.is-answer .timeline-comment-label,
   .plan-choice--experiment.plan-choice--green.open,
   .plan-choice--experiment.plan-choice--green.selected,
   .branch-action-state-clean .branch-action-body {
@@ -4928,7 +4939,16 @@
   body[class="page-responsive"] .border-green {
     border-color: #34d058 !important;
   }
+  /* auto-generated rule for "border-bottom-color: #34d058" */
+  .timeline-comment.is-answer.current-user .timeline-comment-header,
+  .timeline-comment.is-answer .timeline-comment-header,
+  .timeline-comment.is-answer.current-user .previewable-comment-form .comment-form-head.tabnav,
+  .timeline-comment.is-answer .previewable-comment-form .comment-form-head.tabnav {
+    border-bottom-color: #34d058;
+  }
   /* auto-generated rule for "border-right-color: #34d058" */
+  .timeline-comment--caret.current-user.is-answer:before,
+  .timeline-comment--caret.is-answer:before,
   .branch-action-state-clean .branch-action-body:before {
     border-right-color: #34d058;
   }
@@ -4964,7 +4984,7 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #dbab09 !important" */
-  .color-yellow-7, .bg-pending, body.status .bg-pending,
+  .color-yellow-7, body.status .bg-pending,
   body[class="page-responsive"] .color-yellow-7 {
     color: #cb4 !important;
   }
@@ -4980,7 +5000,7 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #b08800 !important" */
-  .color-yellow-8, .text-yellow, .text-pending, body.status .text-pending,
+  .color-yellow-8, .text-yellow, body.status .text-pending,
   body[class="page-responsive"] .color-yellow-8,
   body[class="page-responsive"] .text-yellow {
     color: #cb4 !important;
@@ -5491,7 +5511,8 @@
   html.ghh-theme-classic .ghh-commit-meta .commit-ref .user {
     color: inherit;
   }
-  ::-webkit-input-placeholder, html[prefix] ::-webkit-input-placeholder,
+  ::-webkit-input-placeholder, .input-dark::-webkit-input-placeholder,
+  html[prefix] ::-webkit-input-placeholder,
   body.status ::-webkit-input-placeholder,
   body[class="page-responsive"] .input-dark::-webkit-input-placeholder {
     color: inherit;
@@ -5536,8 +5557,7 @@
   .avatar-upload .flash, .tag-input input, .tag-input input:focus,
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
   .hx_badge-search-container .hx_badge-input,
-  .upload-enabled.focused .ais-SearchBox-input, .btn-purple:disabled,
-  .btn-purple.disabled, .upload-enabled.focused #query,
+  .upload-enabled.focused .ais-SearchBox-input, .upload-enabled.focused #query,
   html[prefix] .btn-primary.disabled, html[prefix] .btn-primary.disabled:hover,
   html[prefix] .btn-primary:disabled, html[prefix] .btn-primary:disabled:hover,
   html[prefix] .blankslate-clean-background, html[prefix] .btn.disabled,
@@ -5856,9 +5876,7 @@
   .topic-input-container .tag-input .tag-input-inner,
   .oauth-permissions-details.open a.btn-sm,
   .clone-url-button > .clone-url-link:active, .btn-secret.selected,
-  .btn-secret:active, .btn-purple:active, .btn-purple.selected,
-  [open] > .btn-purple, .btn-purple:disabled, .btn-purple.disabled,
-  html[prefix] .btn-primary.selected,
+  .btn-secret:active, html[prefix] .btn-primary.selected,
   html[prefix] .btn-primary.zeroclipboard-is-active,
   html[prefix] .btn-primary:active, html[prefix] .btn-danger.selected,
   html[prefix] .btn-danger:active, html[prefix] .btn-outline,
@@ -6206,6 +6224,16 @@
   .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
+  .project-card .highlight pre {
+    padding: 1em;
+    overflow: auto;
+    white-space: pre;
+    word-wrap: initial;
+  }
+  .project-card code {
+    font-size: 85%;
+    padding: .2em .4em;
+  }
   .markdown-body pre code, .markdown-body pre tt {
     padding: .2em 0 !important;
     border: none !important;
@@ -6296,7 +6324,8 @@
   /* border-radius */
   #wrapper, #your-repos-filter, .topsearch ul.nav, .merge-pr-more-commits,
   .oauth-org-access-details .boxed-group-list > li.on,
-  .gist-snippet .file-box .highlight {
+  .gist-snippet .file-box .highlight, .project-card .highlight pre,
+  .project-card code {
     border-radius: 3px !important;
   }
   /* add rounded borders on bottom */
@@ -8741,7 +8770,7 @@
   .markdown-format p > code, .markdown-body code, .markdown-body tt,
   .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
   .markdown-body .highlight pre, body.blog pre, #user-content-toc td,
-  .copyable-terminal {
+  .copyable-terminal, .project-card .highlight pre, .project-card code {
     border: 1px solid rgba(255, 255, 255, .1) !important;
   }
   /* toc in markdown, reset border-collaps so border-radius works   */
@@ -9158,6 +9187,9 @@
   .commit-preview .message pre, .rendered_html pre, .rendered_html code,
   .markdown-format p > code, .markdown-format pre {
     background: #222 !important;
+  }
+  .project-card code {
+    background: #333 !important;
   }
   /* Styles auto-complete popups in the actions workflow editor */
   .CodeMirror-hints {
