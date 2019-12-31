@@ -43,7 +43,9 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub-Feed-Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
 ⚙️ [Overlay-Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
-⚙️ [GitHub-Sticky-Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
+⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 
 ## Supported GitHub Addons
 
