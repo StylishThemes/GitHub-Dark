@@ -1,4 +1,4 @@
-name: ⛸️ Tests-CI
+name: Tests-CI
 
 on: [push, pull_request]
 
@@ -12,16 +12,16 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: 🧲 Checkout Repo
+      - name: Checkout repo
         uses: actions/checkout@v1
 
-      - name: 🛠️ Setup Node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
 
-      - name: 🗜️ Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: ⚙️ Run Tests
+      - name: Run tests
         run: npm test
