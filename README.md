@@ -46,6 +46,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub-Sticky-Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 
 ## Supported GitHub Addons
 
