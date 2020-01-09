@@ -3,7 +3,7 @@
 
 const glob = require("fast-glob");
 const {join} = require("path");
-const {unlink, readFile, writeFile, chmod} = require("fs").promises;
+const {unlink, readFile, writeFile} = require("fs").promises;
 const CleanCSS = require("clean-css");
 
 const clean = new CleanCSS({
