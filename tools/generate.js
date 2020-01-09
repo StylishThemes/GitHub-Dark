@@ -10,6 +10,7 @@ const path = require("path");
 const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 const unzipper = require("unzipper");
+const {isShorthand} = require("css-shorthand-properties");
 
 // This list maps old declarations to new ones. Ordering is significant.
 // $ indicates a special value that will generate a set of rules.
@@ -18,7 +19,6 @@ let mappings = {
   // Background
   // ==========================================================================
   "$background: #fff": "#181818",
-  "$background: #ffffff": "#181818",
   "$background: white": "#181818",
   "$background: #ffe": "#242424",
   "$background: #fdfdfd": "#1c1c1c",
@@ -74,7 +74,6 @@ let mappings = {
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #fff": "#181818",
-  "$border: #ffffff": "#181818",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
@@ -361,20 +360,6 @@ const ignoreSelectors = [
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
-// list of shorthand properties where values are compared insensitively
-// to their order, e.g. "1px solid red" is equal to "1px red solid".
-const shorthands = [
-  "background",
-  "border",
-  "border-bottom",
-  "border-left",
-  "border-right",
-  "border-top",
-  "box-shadow",
-  "font",
-  "text-shadow",
-];
-
 // a device we optimize for, used to remove mobile-only media queries
 const device = {
   type: "screen",
@@ -580,19 +565,34 @@ function buildOutput(decls) {
   return output.split("\n").map(line => `  ${line}`).join("\n");
 }
 
+function normalizeHexColor(string) {
+  if ([4, 5].includes(string.length)) {
+    const [h, r, g, b, a] = string;
+    return `${h}${r}${r}${g}${g}${b}${b}${a || "f"}${a || "f"}`;
+  } else if (string.length === 7) {
+    return `${string}ff`;
+  }
+  return string;
+}
+
 function normalize(value) {
-  return value
+  value = value
     // remove !important and trim whitespace
     .replace(/!important$/g, "").trim().toLowerCase()
     // remove leading zeroes on values like 'rgba(27,31,35,0.075)'
     .replace(/0(\.[0-9])/g, (_, val) => val)
     // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
     .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
+
+  if (/#[0-9a-f]+/i.test(value)) {
+    value = normalizeHexColor(value);
+  }
+
+  return value;
 }
 
 function isEqualValue(prop, a, b) {
-  // try to ignore order in shorthands
-  if (shorthands.includes(prop)) {
+  if (isShorthand(prop)) { // try to ignore order in shorthands
     return normalize(a).split(" ").sort().join(" ") === normalize(b).split(" ").sort().join(" ");
   } else {
     return normalize(a) === normalize(b);

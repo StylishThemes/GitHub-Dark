@@ -181,7 +181,9 @@
   html[prefix] .libraries-jumbotron, html[prefix] .sidebar-menu,
   html[prefix] .content table tr,
   body.status .component-statuses .component-status-container .component-dropdown-selector .status-dropdown,
-  body.status .panel, body.status .cpt-tabs:not(.unstyled).mobile li a,
+  body.status .dropdown .dropdown-menu, body.status .modal, body.status .panel,
+  body.status .popover, body.status .cpt-tabs:not(.unstyled) li.active a,
+  body.status .cpt-tabs:not(.unstyled).mobile li a,
   body.status .cpt-tabs:not(.unstyled).mobile li:not(.active) a:hover,
   body.status .cpt-tabs:not(.unstyled).mobile li.active a,
   body.status .cpt-pill-group button.pill,
@@ -189,6 +191,10 @@
   body.status .layout-content.status-internal .message-container,
   body.status .component-container, body.status .incident-title + .updates,
   body.status .updates-dropdown-container .updates-dropdown,
+  body.status .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  body.status .grouped-items-selector,
+  body.status .layout-content.status.status-full-history .history-nav a.current,
+  body.status #uptime-tooltip .tooltip-box,
   body[class="page-responsive"] .form-control,
   body[class="page-responsive"] .form-select,
   body[class="page-responsive"] .input-contrast:focus,
@@ -477,15 +483,6 @@
   /* auto-generated rule for "background-color: #fff !important" */
   .tree-browser-result[aria-selected=true] {
     background-color: #181818 !important;
-  }
-  /* auto-generated rule for "background-color: #ffffff" */
-  body, body.status .dropdown .dropdown-menu, body.status .modal,
-  body.status .popover, body.status .cpt-tabs:not(.unstyled) li.active a,
-  body.status .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
-  body.status .grouped-items-selector,
-  body.status .layout-content.status.status-full-history .history-nav a.current,
-  body.status #uptime-tooltip .tooltip-box {
-    background-color: #181818;
   }
   /* auto-generated rule for "background: white" */
   body.status .es-menu {
@@ -2475,6 +2472,10 @@
   .procedural-image-wrapper img {
     border-color: #343434;
   }
+  /* auto-generated rule for "border-color: #eee" */
+  body.status .domain-helper .dns-records .dns-records-row {
+    border-color: #343434;
+  }
   /* auto-generated rule for "border-color: #eee !important" */
   html[prefix] .border-gray-light {
     border-color: #343434 !important;
@@ -2624,6 +2625,7 @@
   .Popover-message--bottom-right:after, .Popover-message--bottom:after,
   .select-menu-button.primary:after,
   html[prefix] .site-header-nav .dropdown-button .enterprise-mode .dropdown-caret,
+  body.status .popover.top .arrow:after, body.status .cpt-button .caret,
   body.zh_logged_in .zhc-info-alert--pointer--bottom:after,
   body.zh_logged_in .zhc-tooltip--info-tip.zhc-tooltip--top .zhc-tooltip__content::before,
   .ghh-theme-github .tooltipster-top .tooltipster-arrow-background {
@@ -2632,6 +2634,8 @@
   /* auto-generated rule for "border-bottom-color: #fff" */
   .dropdown-menu:after, .gist-banner,
   html[prefix] .site-header-nav .dropdown-menu::after,
+  body.status .popover.bottom .arrow:after,
+  body.status #uptime-tooltip .pointer-container .pointer-smaller,
   body[class="page-responsive"] .dropdown-menu:after,
   body[class="page-responsive"] .tabs > a.selected,
   body.zh_logged_in .zh-epic-creator-tab.selected,
@@ -2647,6 +2651,7 @@
   .Popover-message--right:after,
   .boxed-group .tabnav.heading li:first-child .selected,
   .billing-box-progressBars span:nth-child(2),
+  body.status .popover.left .arrow:after,
   body[class="page-responsive"] .pagination a,
   body[class="page-responsive"] .pagination em,
   body[class="page-responsive"] .pagination span,
@@ -2659,28 +2664,11 @@
   .Popover-message--left-bottom:after, .Popover-message--left-top:after,
   .Popover-message--left:after,
   .new-discussion-timeline .composer .timeline-comment:after, .commit-form:after,
-  .branch-action-body:after,
+  .branch-action-body:after, body.status .popover.right .arrow:after,
   body.zh_logged_in .zhc-info-alert--pointer--left:after,
   body.zh_logged_in .zhc-pr-issue-connector__info::after,
   body.zh_logged_in .zhc-tooltip--info-tip.zhc-tooltip--right .zhc-tooltip__content::before,
   .ghh-theme-github .tooltipster-right .tooltipster-arrow-background {
-    border-right-color: #181818;
-  }
-  /* auto-generated rule for "border-top-color: #ffffff" */
-  body.status .popover.top .arrow:after, body.status .cpt-button .caret {
-    border-top-color: #181818;
-  }
-  /* auto-generated rule for "border-bottom-color: #ffffff" */
-  body.status .popover.bottom .arrow:after,
-  body.status #uptime-tooltip .pointer-container .pointer-smaller {
-    border-bottom-color: #181818;
-  }
-  /* auto-generated rule for "border-left-color: #ffffff" */
-  body.status .popover.left .arrow:after {
-    border-left-color: #181818;
-  }
-  /* auto-generated rule for "border-right-color: #ffffff" */
-  body.status .popover.right .arrow:after {
     border-right-color: #181818;
   }
   /* auto-generated rule for "border-top: 8px solid rgba(27,31,35,.15)" */
@@ -2827,11 +2815,13 @@
   html[prefix] .js-current .standalone a,
   html[prefix] .sidebar-module .disable > a, html[prefix] .content .anchor,
   html[prefix] #markdown-toc li a, body,
-  body.status .dropdown .dropdown-menu li a,
+  body.status .dropdown .dropdown-menu li a, body.status .es-menu .item div .fa,
+  body.status .es-menu .item div i.component-status,
   body.status .grouped-items-selector.inline .grouped-item.active,
   body.status .panel.panel-default .panel-heading,
   body.status .cpt-tabs:not(.unstyled) li.active a,
   body.status .cpt-pill-group button.pill.active,
+  body.status .layout-content.status-internal,
   body.status #uptime-tooltip .related-events .related-event .related-event-link,
   body[data-render-url] .click-for-more .button,
   body.zh_logged_in .zh-form-control, body.zh_logged_in .zh-form-control-small,
@@ -5157,10 +5147,7 @@
   /* auto-generated rule for "text-shadow: 0 1px 0 #fff" */
   .logo-placeholder, body[class="page-responsive"] .diff-view .file .meta,
   body.zh_logged_in .zh-connect-repository-container a,
-  body.zh_logged_in .zh-select-menu-header .zh-select-menu-title,
-  body.zh_logged_in .zhc-selection-list__header,
-  body.zh_logged_in .zhc-selection-list__header__text,
-  body.zh_logged_in .zhc-roadmap-panel__header {
+  body.zh_logged_in .zh-select-menu-header .zh-select-menu-title {
     text-shadow: none;
   }
   /* auto-generated rule for "background: rgba(0,0,0,.8)" */
@@ -8759,7 +8746,8 @@
     background: none !important;
     border: none !important;
   }
-  body.zh_logged_in .zh-icon-circled-bolt, body.zh_logged_in .zh-icon-bolt, body.zh_logged_in .zh-octicon-x {
+  body.zh_logged_in .zh-icon-circled-bolt, body.zh_logged_in .zh-icon-bolt,
+  body.zh_logged_in .zh-octicon-x {
     filter: invert(40%) brightness(120%) !important;
   }
   body.zh_logged_in a.zh-topbar-item.selected .zh-icon-zenhub {
@@ -8769,8 +8757,10 @@
     filter: brightness(64%) !important;
   }
   body.zh_logged_in .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
-  body.zh_logged_in [class*="zh-octicon"], body.zh_logged_in .zh-epic-creator-tab-icon,
-  body.zh_logged_in .zhc-burndown-chart__placeholder, body.zh_logged_in .zhc-selection-button__container:after,
+  body.zh_logged_in [class*="zh-octicon"],
+  body.zh_logged_in .zh-epic-creator-tab-icon,
+  body.zh_logged_in .zhc-burndown-chart__placeholder,
+  body.zh_logged_in .zhc-selection-button__container:after,
   body.zh_logged_in .zhc-icon--grey-light {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
