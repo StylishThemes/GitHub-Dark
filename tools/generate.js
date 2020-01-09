@@ -592,7 +592,9 @@ function normalize(value) {
 }
 
 function isEqualValue(prop, a, b) {
-  if (isShorthand(prop)) { // try to ignore order in shorthands
+  if (isShorthand(prop)) {
+    // try to ignore order in shorthands. This will only work on simple cases as for example
+    // `background` can take a comma-separated list which totally breaks this comparison.
     return normalize(a).split(" ").sort().join(" ") === normalize(b).split(" ").sort().join(" ");
   } else {
     return normalize(a) === normalize(b);
