@@ -584,7 +584,7 @@ function normalize(value) {
     // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
     .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
 
-  if (/#[0-9a-f]+/i.test(value)) {
+  if (/^#[0-9a-f]+$/i.test(value)) {
     value = normalizeHexColor(value);
   }
 
