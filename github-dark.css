@@ -6394,22 +6394,6 @@
   .wiki-list .wiki-list-item + .wiki-list-item, .member-badge + .member-badge {
     border-top: 1px solid #343434 !important;
   }
-  /* zenhub inline styles */
-  .zh-login-status {
-    background: #181818 !important;
-    border-color: #484848 !important;
-    color: #bebebe !important;
-  }
-  [style*="background-color: rgb(244, 244, 244)"] {
-    background: #222 !important;
-  }
-  /* zenhub gradients */
-  .zhc-sidebar__navigation {
-    background: none !important;
-  }
-  .zhc-workspace-switcher__header {
-    box-shadow: none !important;
-  }
   /* https://github.com/mobile/ */
   .mobile-gradient-bg {
     display: none;
@@ -8759,27 +8743,42 @@
     border-color: #343434 !important;
   }
   /* ZenHub */
-  .zhc-btn--minimal {
+  body.zh_logged_in .zh-login-status {
+    background: #181818 !important;
+    border-color: #484848 !important;
+    color: #bebebe !important;
+  }
+  body.zh_logged_in [style*="background-color: rgb(244, 244, 244)"] {
+    background: #222 !important;
+  }
+  /* zenhub gradients */
+  body.zh_logged_in .zhc-sidebar__navigation {
+    background: none !important;
+  }
+  body.zh_logged_in .zhc-workspace-switcher__header {
+    box-shadow: none !important;
+  }
+  body.zh_logged_in .zhc-btn--minimal {
     background: none !important;
     border: none !important;
   }
-  .zh-icon-circled-bolt, .zh-icon-bolt, .zh-octicon-x {
+  body.zh_logged_in .zh-icon-circled-bolt, body.zh_logged_in .zh-icon-bolt, body.zh_logged_in .zh-octicon-x {
     filter: invert(40%) brightness(120%) !important;
   }
-  a.zh-topbar-item.selected .zh-icon-zenhub {
+  body.zh_logged_in a.zh-topbar-item.selected .zh-icon-zenhub {
     filter: invert(40%) brightness(169%) !important;
   }
-  a.zh-topbar-item .zh-icon-zenhub {
+  body.zh_logged_in a.zh-topbar-item .zh-icon-zenhub {
     filter: brightness(64%) !important;
   }
-  .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
-  [class*="zh-octicon"], .zh-epic-creator-tab-icon,
-  .zhc-burndown-chart__placeholder, .zhc-selection-button__container:after,
-  .zhc-icon--grey-light {
+  body.zh_logged_in .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
+  body.zh_logged_in [class*="zh-octicon"], body.zh_logged_in .zh-epic-creator-tab-icon,
+  body.zh_logged_in .zhc-burndown-chart__placeholder, body.zh_logged_in .zhc-selection-button__container:after,
+  body.zh_logged_in .zhc-icon--grey-light {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
-  .zhc-selection-item:hover .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
-  [class*="zhc-image--placeholder"] {
+  body.zh_logged_in .zhc-selection-item:hover .zhc-icon:not([class$="-red"]):not([class$="-white"]):not([class$="-light"]):not([class$="-purple"]),
+  body.zh_logged_in [class*="zhc-image--placeholder"] {
     filter: invert(100%) brightness(1.4) !important;
   }
   /* move expanded zenhub board toolbar when octotree exists
