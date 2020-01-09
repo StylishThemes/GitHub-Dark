@@ -2,8 +2,8 @@
 "use strict";
 
 const glob = require("fast-glob");
-const {join, sep} = require("path");
-const {unlink, readFile, writeFile} = require("fs").promises;
+const {join} = require("path");
+const {unlink, readFile, writeFile, chmod} = require("fs").promises;
 const CleanCSS = require("clean-css");
 
 const clean = new CleanCSS({
@@ -35,7 +35,7 @@ async function main() {
 
   paths = await glob(join(__dirname, "..", "themes", "src", "*", "*.css"));
   await Promise.all(paths.map(async path => {
-    const newPath = path.replace(new RegExp(`${sep}src${sep}`), sep).replace(/\.css$/, ".min.css");
+    const newPath = path.replace(/[/\\]src[/\\]/, "/").replace(/\.css$/, ".min.css");
     let css = await readFile(path, "utf8");
     css = await minify(css);
     await writeFile(newPath, css);
