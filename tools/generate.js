@@ -575,8 +575,6 @@ function normalizeHexColor(string) {
   return string;
 }
 
-const colorNamesSet = new Set(Object.keys(cssColorNames));
-
 function normalize(value) {
   value = value
     // remove !important and trim whitespace
@@ -586,7 +584,7 @@ function normalize(value) {
     // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
     .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
 
-  if (colorNamesSet.has(value)) {
+  if (value in cssColorNames) {
     value = cssColorNames[value];
   }
 
