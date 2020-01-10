@@ -11,6 +11,7 @@ const perfectionist = require("perfectionist");
 const urlToolkit = require("url-toolkit");
 const unzipper = require("unzipper");
 const {isShorthand} = require("css-shorthand-properties");
+const cssColorNames = require("css-color-names");
 
 // This list maps old declarations to new ones. Ordering is significant.
 // $ indicates a special value that will generate a set of rules.
@@ -19,7 +20,6 @@ let mappings = {
   // Background
   // ==========================================================================
   "$background: #fff": "#181818",
-  "$background: white": "#181818",
   "$background: #ffe": "#242424",
   "$background: #fdfdfd": "#1c1c1c",
   "$background: #fafbfc": "#181818",
@@ -575,6 +575,8 @@ function normalizeHexColor(string) {
   return string;
 }
 
+const colorNamesSet = new Set(Object.keys(cssColorNames));
+
 function normalize(value) {
   value = value
     // remove !important and trim whitespace
@@ -583,6 +585,10 @@ function normalize(value) {
     .replace(/0(\.[0-9])/g, (_, val) => val)
     // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
     .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
+
+  if (colorNamesSet.has(value)) {
+    value = cssColorNames[value];
+  }
 
   if (/^#[0-9a-f]+$/i.test(value)) {
     value = normalizeHexColor(value);
