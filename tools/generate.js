@@ -133,6 +133,7 @@ let mappings = {
 
   "fill: currentColor": "fill: currentColor", // needs to come before color variants
 
+  "color: #000": "color: #bebebe",
   "color: #05264c": "color: #bebebe", // big commit title
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
