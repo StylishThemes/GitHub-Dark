@@ -59,6 +59,7 @@ let mappings = {
   "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
 
   "$border: #444d56": "#484848",
+  "$border: #484848": "#afafaf", // github blog
   "$border: #959da5": "#484848",
   "$border: #c3c8cf": "#484848",
   "$border: #dfe2e5": "#343434",
@@ -166,6 +167,8 @@ let mappings = {
   "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
 
   "fill: #959da5": "fill: #757575",
+  "fill: #0366d6": "fill:  /*[[base-color]]*/ #4f8cc9",
+  "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
 
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
@@ -308,9 +311,18 @@ const sources = [
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://support.github.com"},
-  {url: "https://developer.github.com", prefix: "html[prefix]"},
   {
-    url: "https://www.githubstatus.com/",
+    url: "https://github.blog",
+    prefix: "html.wf-active",
+    match: ["html", ".wf-active"],
+  },
+  {
+    url: "https://developer.github.com",
+    prefix: "html[prefix]",
+    match: ["html", "[prefix]"],
+  },
+  {
+    url: "https://www.githubstatus.com",
     prefix: "body.status",
     match: ["body", ".status"],
   },
@@ -439,7 +451,7 @@ function parseDeclarations(cssString, opts) {
 }
 
 function parseRule(decls, rule, opts) {
-  for (const decl of rule.declarations) {
+  for (const decl of rule.declarations || []) {
     if (!decl.value) continue;
     for (const mapping of mappingKeys) {
       const [prop, val] = mapping.split(": ");
@@ -628,10 +640,15 @@ function prepareMappings(mappings) {
       const oldValue = key.substring("$border: ".length);
       newMappings[`border: solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 2px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 2px dashed ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 3px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 4px solid ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border: 5px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 6px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 7px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 8px solid ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
+      newMappings[`border: 2px dashed ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
       newMappings[`border-top: 1px solid ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom: 1px solid ${oldValue}`] = `border-bottom-color: ${value}`;
@@ -661,6 +678,18 @@ function prepareMappings(mappings) {
       newMappings[`border-bottom: 5px solid ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left: 5px solid ${oldValue}`] = `border-left-color: ${value}`;
       newMappings[`border-right: 5px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 6px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 6px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 6px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 6px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 7px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 7px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 7px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 7px solid ${oldValue}`] = `border-right-color: ${value}`;
+      newMappings[`border-top: 8px solid ${oldValue}`] = `border-top-color: ${value}`;
+      newMappings[`border-bottom: 8px solid ${oldValue}`] = `border-bottom-color: ${value}`;
+      newMappings[`border-left: 8px solid ${oldValue}`] = `border-left-color: ${value}`;
+      newMappings[`border-right: 8px solid ${oldValue}`] = `border-right-color: ${value}`;
       newMappings[`border-top-color: ${oldValue}`] = `border-top-color: ${value}`;
       newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
       newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
