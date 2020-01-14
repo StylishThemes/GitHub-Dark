@@ -34,32 +34,32 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 ## Additional Userstyles
 
-⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
-⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
 ⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
-⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size)<br>
 ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
 ⚙️ [GitHub-Community-Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
 ⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub-Feed-Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
-⚙️ [Overlay-Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
-⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
-⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
-⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
+⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
 ⚙️ [GitHub-Sticky-Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
+⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size)<br>
+⚙️ [Overlay-Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
+⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 
 ## Supported GitHub Addons
 
 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)<br>
+💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard) (set it to dark theme)<br>
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)<br>
 💾 [npmhub](https://github.com/npmhub/npmhub)<br>
-💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)<br>
+💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
 💾 [ZenHub](https://www.zenhub.io/)<br>
-💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard) (set it to dark theme)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
