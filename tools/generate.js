@@ -283,6 +283,7 @@ let mappings = {
   "$background: #ffeef8": "#170711",
 
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
+  "outline: 1px solid #fff": "outline-color: #222",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
