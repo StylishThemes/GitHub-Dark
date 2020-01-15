@@ -312,11 +312,6 @@ const sources = [
   {url: "https://help.github.com"},
   {url: "https://support.github.com"},
   {
-    url: "https://github.blog",
-    prefix: "html.wf-active",
-    match: ["html", ".wf-active"],
-  },
-  {
     url: "https://developer.github.com",
     prefix: "html[prefix]",
     match: ["html", "[prefix]"],
