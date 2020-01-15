@@ -34,6 +34,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 ## Additional Userstyles
 
+⚙️ [GitHub-Blog-Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
 ⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
 ⚙️ [GitHub-Community-Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
