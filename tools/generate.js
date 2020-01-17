@@ -132,7 +132,8 @@ let mappings = {
   // Color / Background
   // ==========================================================================
 
-  "fill: currentColor": "fill: currentColor", // needs to come before color variants
+  "fill: currentcolor": "fill: currentcolor", // needs to come before color variants
+  "$border: currentcolor": "currentcolor",
 
   "color: #000": "color: #bebebe",
   "color: #05264c": "color: #bebebe", // big commit title
@@ -584,7 +585,7 @@ function normalizeHexColor(string) {
   return string;
 }
 
-function normalize(value) {
+function normalize(value, prop) {
   value = value
     // remove !important and trim whitespace
     .replace(/!important$/g, "").trim().toLowerCase()
@@ -601,6 +602,11 @@ function normalize(value) {
     value = normalizeHexColor(value);
   }
 
+  // treat values case-insensitively
+  if (prop !== "content" && !value.startsWith("url(")) {
+    value = value.toLowerCase();
+  }
+
   return value;
 }
 
@@ -608,9 +614,9 @@ function isEqualValue(prop, a, b) {
   if (isShorthand(prop)) {
     // try to ignore order in shorthands. This will only work on simple cases as for example
     // `background` can take a comma-separated list which totally breaks this comparison.
-    return normalize(a).split(" ").sort().join(" ") === normalize(b).split(" ").sort().join(" ");
+    return normalize(a, prop).split(" ").sort().join(" ") === normalize(b, prop).split(" ").sort().join(" ");
   } else {
-    return normalize(a) === normalize(b);
+    return normalize(a, prop) === normalize(b, prop);
   }
 }
 
