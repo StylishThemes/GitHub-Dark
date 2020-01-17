@@ -459,7 +459,7 @@ function parseRule(decls, rule, opts) {
         name = `${mapping} !important`;
       }
 
-      if (!decls[name]) decls[name] = [];
+      if (!decls[name]) decls[name] = new Set();
 
       rule.selectors.forEach(selector => {
         // Skip ignored selectors
@@ -497,8 +497,8 @@ function parseRule(decls, rule, opts) {
         }
 
         // add the new rule to our list, unless it's already on it
-        if (!decls[name].includes(selector)) {
-          decls[name].push(selector);
+        if (!decls[name].has(selector)) {
+          decls[name].add(selector);
         }
       });
     }
@@ -540,8 +540,8 @@ function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
   for (const [fromValue, toValue] of Object.entries(mappings)) {
-    let normalSelectors = decls[fromValue];
-    let importantSelectors = decls[`${fromValue} !important`];
+    let normalSelectors = Array.from(decls[fromValue] || new Set());
+    let importantSelectors = Array.from(decls[`${fromValue} !important`] || new Set());
 
     if (normalSelectors && normalSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "");
@@ -588,7 +588,7 @@ function normalizeHexColor(string) {
 function normalize(value, prop) {
   value = value
     // remove !important and trim whitespace
-    .replace(/!important$/g, "").trim().toLowerCase()
+    .replace(/!important$/g, "").trim()
     // remove leading zeroes on values like 'rgba(27,31,35,0.075)'
     .replace(/0(\.[0-9])/g, (_, val) => val)
     // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
@@ -799,9 +799,10 @@ async function main() {
   for (const source of sources) {
     const opts = {prefix: source.prefix, match: source.match};
     for (const [key, values] of Object.entries(parseDeclarations(source.css, opts))) {
-      if (!decls[key]) decls[key] = [];
-      decls[key].push(...values);
-      decls[key] = Array.from(new Set(decls[key]));
+      if (!decls[key]) decls[key] = new Set();
+      for (const value of values) {
+        decls[key].add(value);
+      }
     }
   }
 
