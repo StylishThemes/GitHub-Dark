@@ -384,8 +384,6 @@ const perfOpts = {
 const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
-let mappingKeys;
-
 async function fetch(...args) {
   if (process.argv.includes("-v")) console.info(`fetch ${args[0]}`);
   const result = await doFetch(...args);
@@ -446,62 +444,60 @@ function parseDeclarations(cssString, opts) {
   return decls;
 }
 
-function parseRule(decls, rule, opts) {
+function parseRule(decls, rule, {prefix, match, props} = {}) {
   for (const decl of rule.declarations || []) {
     if (!decl.value) continue;
-    for (const mapping of mappingKeys) {
-      const [prop, val] = mapping.split(": ");
-      if (decl.property !== prop) continue;
-      if (!isEqualValue(prop, decl.value, val)) continue;
+    if (!props[decl.property]) continue;
+    const normalizedValue = normalize(decl.value, decl.property);
+    if (!props[decl.property][normalizedValue]) continue;
+    const originalValue = props[decl.property][normalizedValue];
 
-      let name = mapping;
-      if (decl.value.trim().endsWith("!important")) {
-        name = `${mapping} !important`;
+    let name = `${decl.property}: ${originalValue}`;
+    if (decl.value.trim().endsWith("!important")) {
+      name = `${name} !important`;
+    }
+
+    if (!decls[name]) decls[name] = new Set();
+
+    rule.selectors.forEach(selector => {
+      // Skip ignored selectors
+      if (ignoreSelectors.some(re => re.test(selector))) return;
+
+      // stylistic tweaks
+      selector = selector
+        .replace(/\+/g, " + ")
+        .replace(/~/g, " ~ ")
+        .replace(/>/g, " > ")
+        .replace(/ {2,}/g, " ")
+        .replace(/'/g, `"`);
+
+      // add prefix
+      if (prefix) {
+        // skip adding a prefix if it matches a selector in `match`
+        let skip = false;
+        if (match) {
+          for (const m of match) {
+            const first = selector.split(/\s+/)[0];
+            if ((/^[.#]+/.test(first) && first === m) || first.startsWith(m)) {
+              skip = true;
+              break;
+            }
+          }
+        }
+
+        if (!skip) {
+          // incomplete check to avoid generating invalid "html :root" selectors
+          if (selector.startsWith(":root ") && prefix.startsWith("html")) {
+            selector = `${prefix} ${selector.substring(":root ".length)}`;
+          } else {
+            selector = `${prefix} ${selector}`;
+          }
+        }
       }
 
-      if (!decls[name]) decls[name] = new Set();
-
-      rule.selectors.forEach(selector => {
-        // Skip ignored selectors
-        if (ignoreSelectors.some(re => re.test(selector))) return;
-
-        // stylistic tweaks
-        selector = selector.replace(/\+/g, " + ");
-        selector = selector.replace(/~/g, " ~ ");
-        selector = selector.replace(/>/g, " > ");
-        selector = selector.replace(/ {2,}/g, " ");
-        selector = selector.replace(/'/g, `"`);
-
-        // add prefix
-        if (opts.prefix) {
-          // skip adding a prefix if it matches a selector in `match`
-          let skip = false;
-          if (opts.match) {
-            for (const match of opts.match) {
-              const first = selector.split(/\s+/)[0];
-              if ((/^[.#]+/.test(first) && first === match) || first.startsWith(match)) {
-                skip = true;
-                break;
-              }
-            }
-          }
-
-          if (!skip) {
-            // incomplete check to avoid generating invalid "html :root" selectors
-            if (selector.startsWith(":root ") && opts.prefix.startsWith("html")) {
-              selector = `${opts.prefix} ${selector.substring(":root ".length)}`;
-            } else {
-              selector = `${opts.prefix} ${selector}`;
-            }
-          }
-        }
-
-        // add the new rule to our list, unless it's already on it
-        if (!decls[name].has(selector)) {
-          decls[name].add(selector);
-        }
-      });
-    }
+      // add the selector to the selector list for this mapping
+      decls[name].add(selector);
+    });
   }
 }
 
@@ -540,8 +536,8 @@ function buildOutput(decls) {
   let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
 
   for (const [fromValue, toValue] of Object.entries(mappings)) {
-    let normalSelectors = Array.from(decls[fromValue] || new Set());
-    let importantSelectors = Array.from(decls[`${fromValue} !important`] || new Set());
+    let normalSelectors = Array.from(decls[fromValue] || []);
+    let importantSelectors = Array.from(decls[`${fromValue} !important`] || []);
 
     if (normalSelectors && normalSelectors.length) {
       const newValue = toValue.trim().replace(/;$/, "");
@@ -607,17 +603,13 @@ function normalize(value, prop) {
     value = value.toLowerCase();
   }
 
-  return value;
-}
-
-function isEqualValue(prop, a, b) {
+  // try to ignore order in shorthands. This will only work on simple cases as for example
+  // `background` can take a comma-separated list which totally breaks this comparison.
   if (isShorthand(prop)) {
-    // try to ignore order in shorthands. This will only work on simple cases as for example
-    // `background` can take a comma-separated list which totally breaks this comparison.
-    return normalize(a, prop).split(" ").sort().join(" ") === normalize(b, prop).split(" ").sort().join(" ");
-  } else {
-    return normalize(a, prop) === normalize(b, prop);
+    value = value.split(" ").sort().join(" ");
   }
+
+  return value;
 }
 
 function mediaMatches(query) {
@@ -759,7 +751,14 @@ async function extensionCss(source, version) {
 
 async function main() {
   mappings = prepareMappings(mappings);
-  mappingKeys = Object.keys(mappings);
+
+  const props = {};
+  for (const mapping of Object.keys(mappings)) {
+    const [prop, val] = mapping.split(": ");
+    const normalizedVal = normalize(val, prop);
+    if (!props[prop]) props[prop] = {};
+    props[prop][normalizedVal] = val;
+  }
 
   const sourceResponses = await Promise.all(sources.map(source => {
     if (!source.url) return null;
@@ -797,7 +796,7 @@ async function main() {
 
   const decls = {};
   for (const source of sources) {
-    const opts = {prefix: source.prefix, match: source.match};
+    const opts = {prefix: source.prefix, match: source.match, props};
     for (const [key, values] of Object.entries(parseDeclarations(source.css, opts))) {
       if (!decls[key]) decls[key] = new Set();
       for (const value of values) {
