@@ -445,15 +445,15 @@ function parseDeclarations(cssString, opts) {
 }
 
 function parseRule(decls, rule, {prefix, match, props} = {}) {
-  for (const decl of rule.declarations || []) {
-    if (!decl.value) continue;
-    if (!props[decl.property]) continue;
-    const normalizedValue = normalize(decl.value, decl.property);
-    if (!props[decl.property][normalizedValue]) continue;
-    const originalValue = props[decl.property][normalizedValue];
+  for (const {value, property} of rule.declarations || []) {
+    if (!value) continue;
+    if (!props[property]) continue;
+    const normalizedValue = normalize(value, property);
+    if (!props[property][normalizedValue]) continue;
+    const originalValue = props[property][normalizedValue];
 
-    let name = `${decl.property}: ${originalValue}`;
-    if (decl.value.trim().endsWith("!important")) {
+    let name = `${property}: ${originalValue}`;
+    if (value.trim().endsWith("!important")) {
       name = `${name} !important`;
     }
 
