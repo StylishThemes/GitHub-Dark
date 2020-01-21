@@ -446,8 +446,7 @@ function parseDeclarations(cssString, opts) {
 
 function parseRule(decls, rule, {prefix, match, props} = {}) {
   for (const {value, property} of rule.declarations || []) {
-    if (!value) continue;
-    if (!props[property]) continue;
+    if (!props[property] || !value) continue;
     const normalizedValue = normalize(value, property);
     if (!props[property][normalizedValue]) continue;
     const originalValue = props[property][normalizedValue];
