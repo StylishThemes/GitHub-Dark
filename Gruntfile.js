@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     `${config.color.replace(/[^\d\w]/g, "")}.build.min.css`;
 
   // background options
-  config.image = /^url/.test(config.image) ?
+  config.image = config.image.startsWith("url") ?
     config.image :
     `url("${config.image}")`;
 

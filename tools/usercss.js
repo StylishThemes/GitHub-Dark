@@ -95,7 +95,7 @@ async function main() {
   css = replaceVars(`${css}${userstyle}`);
   await writeFile(files.usercss, css);
 
-  console.info("\x1b[32m%s\x1b[0m", "GitHub Dark usercss build complete");
+  console.info("\u001B[32m%s\u001B[0m", "GitHub Dark usercss build complete");
 }
 
 main().then(exit).catch(exit);
