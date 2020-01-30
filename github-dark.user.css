@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.198
+@version     1.22.199
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.198 (2020-01-29) */
+/*! Github Dark v1.22.199 (2020-01-30) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -452,6 +452,7 @@
   body[class="page-responsive"] .profile-timeline .profile-timeline-month-line,
   body[class="page-responsive"] .inbox-unavailable,
   body[class="page-responsive"] .inbox-zero,
+  body[data-render-url] div.border-wrap,
   html.refined-github .dashboard .js-all-activity-header + div,
   body.zh_logged_in .zh-app--board-visible .zh-app--is-fullscreen,
   body.zh_logged_in .zh-issue-event-item-icon .zh-icon-issue-added,
@@ -2854,6 +2855,7 @@
   /* auto-generated rule for "border: 1px solid #fff" */
   .kb-konami-dialog .Box-btn-octicon, .file .image canvas, .file .image img,
   .theme-selector-thumbnail.selected .theme-selector-img,
+  body[data-render-url] .render-shell img, body[data-render-url] img.asset,
   body.zh_logged_in .zhc-icon--has-notification:after {
     border-color: #181818;
   }
@@ -2887,6 +2889,10 @@
   html[prefix] .btn-outline-white:hover,
   body.status .cpt-button.style-outline:hover {
     border-color: #181818;
+  }
+  /* auto-generated rule for "border-top: 1px solid #fff" */
+  body[data-render-url] .slider .slider-track {
+    border-top-color: #181818;
   }
   /* auto-generated rule for "border-left: 1px solid #fff" */
   .AvatarStack--right .avatar,
@@ -5831,7 +5837,7 @@
   body.status .markdown-display pre code,
   body.status .ak-editor-wrapper pre code, body.status pre.code-display code,
   body.status .cpt-tabs:not(.unstyled) li:not(.active) a:hover.disabled,
-  body.status a,
+  body.status a, body[data-render-url] .onion-skin .controls .slider,
   html.refined-github .repository-content #readme:not(.blob) .Box-header,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn:hover,
@@ -6748,7 +6754,7 @@
   .profile-timeline-card-wrapper,
   .profile-rollup-wrapper + .profile-rollup-wrapper,
   .email-preference-exceptions .exception, .user-key-email-unverified, .diffbar,
-  .rendered_html hr, .drag-and-drop, .form-hr, .release-timeline-tags .main, img {
+  .rendered_html hr, .drag-and-drop, .form-hr, .release-timeline-tags .main {
     border-color: #343434 !important;
   }
   .discussion-item-icon, .date:after, ul.color-label-list .color,
@@ -7139,6 +7145,10 @@
   .btn:disabled:hover, .btn.disabled:hover {
     background: #282828 !important;
     border-color: rgba(68, 68, 68, .5) !important;
+  }
+  .dropdown-item.btn-link:disabled:hover {
+    color: rgba(148, 148, 148, .5) !important;
+    background: none !important;
   }
   .btn-outline:disabled, .btn-outline:disabled:hover, .btn-outline.disabled,
   .btn-outline.disabled:hover, .btn.btn-outline:disabled,
@@ -8114,9 +8124,9 @@
   .team-grid .team-name, .completeness-indicator-success,
   .completeness-indicator-error, .completeness-indicator-problem, .article-meta,
   .commit-tease-sha, .stats-group-stat.no-link:hover .stat-number,
-  .application-authorizations .oauth-app-access-name, .dropdown-item,
-  .header-logo-invertocat, a.header-logo-wordmark,
-  .pull-request-integrations-title, .intgrs-dir-intro .directory-header-back,
+  .application-authorizations .oauth-app-access-name, .header-logo-invertocat,
+  a.header-logo-wordmark, .pull-request-integrations-title,
+  .intgrs-dir-intro .directory-header-back,
   .intgrs-dir-intro .directory-header-back .header-link,
   .oauth-application-info .application-title,
   .session-authentication .header-logo, .repo-file-upload-progress,
@@ -8858,9 +8868,8 @@
   .inline-comments .line-comments, #gist-form .gist-name-textbox,
   #adv_code_search .search-page-input, .fullscreen-overlay textarea,
   .file .image .border-wrap, .site-search .chromeless-input,
-  .profile-timeline-card-wrapper, .render-shell img, img.asset,
-  .AvatarStack--right .avatar, .AvatarStack-body .avatar,
-  .sidebar-notifications .thread-subscription-status,
+  .profile-timeline-card-wrapper, .AvatarStack--right .avatar,
+  .AvatarStack-body .avatar, .sidebar-notifications .thread-subscription-status,
   .repository-lang-stats-graph .language-color:not(:first-child),
   .notification-read .bg-white.border-md {
     border: none !important;
