@@ -65,6 +65,9 @@ let mappings = {
   "$border: #dfe2e5": "#343434",
   "$border: #d1d5da": "#404040",
   "$border: #ddd": "#343434",
+  "$border: #d6d6d6": "#343434", // graphql explorer
+  "$border: #d3d6db": "#343434", // graphql explorer
+  "$border: #e0e0e0": "#343434", // graphql explorer
   "$border: #e1e4e8": "#343434",
   "$border: #e5e5e5": "#343434",
   "$border: #e6ebf1": "#343434",
@@ -136,11 +139,11 @@ let mappings = {
   "$border: currentcolor": "currentcolor",
 
   "color: #000": "color: #bebebe",
-  "color: #05264c": "color: #bebebe", // big commit title
+  "color: #1b1f23": "color: #afafaf",
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
-  "color: #1b1f23": "color: #afafaf",
+  "color: #555": "color: #bebebe", // graphql explorer
   "color: #586069": "color: #afafaf",
   "color: #666": "color: #949494",
   "color: #6a737d": "color: #949494",
@@ -151,6 +154,7 @@ let mappings = {
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
   "color: #d1d5da": "color: #404040",
+
   "color: #4183c4": `
     color: rgba(79,140,201,.9);
     color: rgba(/*[[base-color-rgb]]*/,.9);
@@ -173,14 +177,16 @@ let mappings = {
 
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
+  "color: #1f61a0": "color: /*[[base-color]]*/ #4f8cc9", //  graphql explorer
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
   "color: #24292e": "color: #d2d2d2",
   "stroke: #24292e": "stroke: #d2d2d2",
   "color: #2f363d": "color: #bebebe",
 
   // blue
-  "color: #264c72": "color: #9daccc",
   "color: #032f62": "color: #9daccc",
+  "color: #05264c": "color: #bebebe", // big commit title
+  "color: #264c72": "color: #9daccc",
   "$background: #f1f8ff": "#182030",
   "$background: #032f62": "#182030",
   "$background: #dbedff": "#182030",
@@ -222,6 +228,7 @@ let mappings = {
 
   // red
   "color: #cb2431": "color: #f44",
+  "color: #b11a04": "color: #f44", // graphql explorer
   "color: #86181d": "color: #f44",
   "$background: #d73a49": "#f44",
   "$background: #cb2431": "#911",
@@ -251,6 +258,7 @@ let mappings = {
   "color: rgba(47,38,6,.5)": "color: #cb4",
   "color: rgba(115,92,15,.5)": "color: rgba(204,187,68,.5)",
   "color: #dbab09": "color: #cb4",
+  "color: #ca9800": "color: #cb4", // graphql explorer
   "color: #b08800": "color: #cb4",
   "color: #735c0f": "color: #bba257",
   "color: #613a00": "color: #bba257",
@@ -274,6 +282,7 @@ let mappings = {
   "$background: #fff5b1": "#651",
 
   // purple
+  "color: #8b2bb9": "color: #8368aa", // graphql explorer
   "color: #6f42c1": "color: #8368aa",
   "$background: #6f42c1": "#8368aa",
   "$background: #f8f4ff": "#213",
@@ -312,6 +321,11 @@ let sources = [
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://support.github.com"},
+  {
+    url: "https://graphql-explorer.githubapp.com/", // https://developer.github.com/v4/explorer
+    prefix: `html[prefix*="ogp.me"]`,
+    match: ["html", `[prefix*="ogp.me"]`],
+  },
   {
     url: "https://developer.github.com",
     prefix: "html[prefix]",
