@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.203
+@version     1.22.204
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.203 (2020-02-06) */
+/*! Github Dark v1.22.204 (2020-02-07) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -262,17 +262,15 @@
   .details-overlay[open] > .dropdown-item:hover, .gist-quicksearch-results,
   .nav-desktop-productDropdown, .nav-desktop-langDropdown,
   header #search-results-container,
-  html[prefix*="ogp.me"] .graphiql-container .docExplorerWrap,
-  html[prefix*="ogp.me"] .graphiql-container .historyPaneWrap,
-  html[prefix*="ogp.me"] .graphiql-container .execute-options,
-  html[prefix*="ogp.me"] .graphiql-container .toolbar-menu-items,
-  html[prefix*="ogp.me"] .graphiql-container .toolbar-select-options,
-  html[prefix*="ogp.me"] .graphiql-container .doc-explorer,
-  html[prefix*="ogp.me"] .pagination a, html[prefix*="ogp.me"] .pagination span,
-  html[prefix*="ogp.me"] .pagination em,
-  html[prefix*="ogp.me"] .AvatarStack-body,
-  html[prefix*="ogp.me"] .blankslate code,
-  html[prefix*="ogp.me"] .markdown-body .csv-data .blob-num,
+  #graphiql .graphiql-container .docExplorerWrap,
+  #graphiql .graphiql-container .historyPaneWrap,
+  #graphiql .graphiql-container .execute-options,
+  #graphiql .graphiql-container .toolbar-menu-items,
+  #graphiql .graphiql-container .toolbar-select-options,
+  #graphiql .graphiql-container .doc-explorer, #graphiql .pagination a,
+  #graphiql .pagination span, #graphiql .pagination em,
+  #graphiql .AvatarStack-body, #graphiql .blankslate code,
+  #graphiql .markdown-body .csv-data .blob-num,
   html[prefix] .btn-primary .counter, html[prefix] .blankslate code,
   html[prefix] .markdown-body .csv-data .blob-num, html[prefix] .card,
   html[prefix] .pagination a, html[prefix] .pagination em,
@@ -386,43 +384,30 @@
   .org-sso .org-sso-panel, .ais-SearchBox-input,
   .form-group .ais-SearchBox-input:focus, .SideNav-item[aria-current="page"],
   .SideNav-item[aria-selected="true"], #q, .form-group #q:focus, details-dialog,
-  html[prefix*="ogp.me"] .graphiql-container .doc-explorer-contents,
-  html[prefix*="ogp.me"] .graphiql-container .history-contents,
-  html[prefix*="ogp.me"] body, html[prefix*="ogp.me"] .Box,
-  html[prefix*="ogp.me"] .btn-primary .Counter,
-  html[prefix*="ogp.me"] .btn-blue .Counter, html[prefix*="ogp.me"] .btn-outline,
-  html[prefix*="ogp.me"] .btn-outline:hover .Counter,
-  html[prefix*="ogp.me"] .btn-outline:active .Counter,
-  html[prefix*="ogp.me"] .btn-outline.selected .Counter,
-  html[prefix*="ogp.me"] [open] > .btn-outline .Counter,
-  html[prefix*="ogp.me"] .btn-outline:disabled,
-  html[prefix*="ogp.me"] .btn-outline.disabled,
-  html[prefix*="ogp.me"] .btn-invisible, html[prefix*="ogp.me"] .social-count,
-  html[prefix*="ogp.me"] .form-control, html[prefix*="ogp.me"] .form-select,
-  html[prefix*="ogp.me"] .input-contrast:focus,
-  html[prefix*="ogp.me"] .form-group .form-control:focus,
-  html[prefix*="ogp.me"] .menu, html[prefix*="ogp.me"] .menu-item.selected,
-  html[prefix*="ogp.me"] .tabnav-tab[aria-selected=true],
-  html[prefix*="ogp.me"] .tabnav-tab.selected,
-  html[prefix*="ogp.me"] .SideNav-item:active,
-  html[prefix*="ogp.me"] .SideNav-item[aria-current="page"],
-  html[prefix*="ogp.me"] .SideNav-item[aria-selected="true"],
-  html[prefix*="ogp.me"] .avatar-child,
-  html[prefix*="ogp.me"] .AvatarStack-body .avatar,
-  html[prefix*="ogp.me"] .dropdown-menu,
-  html[prefix*="ogp.me"] .markdown-body table tr,
-  html[prefix*="ogp.me"] .markdown-body img,
-  html[prefix*="ogp.me"] .SelectMenu-list,
-  html[prefix*="ogp.me"] .SelectMenu-item,
-  html[prefix*="ogp.me"] .SelectMenu-tab[aria-selected="true"],
-  html[prefix*="ogp.me"] .SelectMenu-message,
-  html[prefix*="ogp.me"] .SelectMenu-blankslate,
-  html[prefix*="ogp.me"] .SelectMenu-loading,
-  html[prefix*="ogp.me"] .TimelineItem-break,
-  html[prefix*="ogp.me"] .TimelineItem--condensed .TimelineItem-badge,
-  html[prefix*="ogp.me"] .Toast, html[prefix*="ogp.me"] .btn-transparent:hover,
-  html[prefix*="ogp.me"] .btn-transparent:active, html[prefix] .Box,
-  html[prefix] .btn-outline, html[prefix] .btn-outline.selected .counter,
+  #graphiql .graphiql-container .doc-explorer-contents,
+  #graphiql .graphiql-container .history-contents, #graphiql body,
+  #graphiql .Box, #graphiql .btn-primary .Counter, #graphiql .btn-blue .Counter,
+  #graphiql .btn-outline, #graphiql .btn-outline:hover .Counter,
+  #graphiql .btn-outline:active .Counter,
+  #graphiql .btn-outline.selected .Counter,
+  #graphiql [open] > .btn-outline .Counter, #graphiql .btn-outline:disabled,
+  #graphiql .btn-outline.disabled, #graphiql .btn-invisible,
+  #graphiql .social-count, #graphiql .form-control, #graphiql .form-select,
+  #graphiql .input-contrast:focus, #graphiql .form-group .form-control:focus,
+  #graphiql .menu, #graphiql .menu-item.selected,
+  #graphiql .tabnav-tab[aria-selected=true], #graphiql .tabnav-tab.selected,
+  #graphiql .SideNav-item:active, #graphiql .SideNav-item[aria-current="page"],
+  #graphiql .SideNav-item[aria-selected="true"], #graphiql .avatar-child,
+  #graphiql .AvatarStack-body .avatar, #graphiql .dropdown-menu,
+  #graphiql .markdown-body table tr, #graphiql .markdown-body img,
+  #graphiql .SelectMenu-list, #graphiql .SelectMenu-item,
+  #graphiql .SelectMenu-tab[aria-selected="true"], #graphiql .SelectMenu-message,
+  #graphiql .SelectMenu-blankslate, #graphiql .SelectMenu-loading,
+  #graphiql .TimelineItem-break,
+  #graphiql .TimelineItem--condensed .TimelineItem-badge, #graphiql .Toast,
+  #graphiql .btn-transparent:hover, #graphiql .btn-transparent:active,
+  html[prefix] .Box, html[prefix] .btn-outline,
+  html[prefix] .btn-outline.selected .counter,
   html[prefix] .btn-outline.zeroclipboard-is-active .counter,
   html[prefix] .btn-outline.zeroclipboard-is-hover .counter,
   html[prefix] .btn-outline:active .counter,
@@ -762,7 +747,7 @@
     background: #242424;
   }
   /* auto-generated rule for "background: #fdfdfd" */
-  html[prefix*="ogp.me"] .graphiql-container .toolbar-button {
+  #graphiql .graphiql-container .toolbar-button {
     background: #1c1c1c;
   }
   /* auto-generated rule for "background-color: #fdfdfd" */
@@ -794,16 +779,12 @@
   .oauth-pending-deletion-list-item, .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
   table.capped-list tr:nth-child(2n), .form-group .ais-SearchBox-input,
-  .form-group #q, html[prefix*="ogp.me"] kbd,
-  html[prefix*="ogp.me"] .Box-row.navigation-focus.sortable-chosen,
-  html[prefix*="ogp.me"] .btn-danger, html[prefix*="ogp.me"] .input-contrast,
-  html[prefix*="ogp.me"] .form-group .form-control,
-  html[prefix*="ogp.me"] .drag-and-drop, html[prefix*="ogp.me"] .SideNav,
-  html[prefix*="ogp.me"] .pagination .gap,
-  html[prefix*="ogp.me"] .pagination .disabled,
-  html[prefix*="ogp.me"] .pagination .gap:hover,
-  html[prefix*="ogp.me"] .pagination .disabled:hover,
-  html[prefix*="ogp.me"] .markdown-body kbd,
+  .form-group #q, #graphiql kbd,
+  #graphiql .Box-row.navigation-focus.sortable-chosen, #graphiql .btn-danger,
+  #graphiql .input-contrast, #graphiql .form-group .form-control,
+  #graphiql .drag-and-drop, #graphiql .SideNav, #graphiql .pagination .gap,
+  #graphiql .pagination .disabled, #graphiql .pagination .gap:hover,
+  #graphiql .pagination .disabled:hover, #graphiql .markdown-body kbd,
   body[class="page-responsive"] .input-contrast,
   body[class="page-responsive"] .form-group .form-control,
   body[class="page-responsive"] .markdown-body kbd,
@@ -818,8 +799,8 @@
     background-color: #181818;
   }
   /* auto-generated rule for "background-color: #fafbfc !important" */
-  .bg-gray-light, .bg-gray-0, html[prefix*="ogp.me"] .bg-gray-light,
-  html[prefix*="ogp.me"] .bg-gray-0, body.status .bg-gray-light,
+  .bg-gray-light, .bg-gray-0, .page-responsive .pagehead,
+  #graphiql .bg-gray-light, #graphiql .bg-gray-0, body.status .bg-gray-light,
   body[class="page-responsive"] .bg-gray-light,
   body[class="page-responsive"] .bg-gray-0 {
     background-color: #181818 !important;
@@ -908,9 +889,9 @@
   .signup-plan-card, .team-member-ellipsis:hover, table.capped-list th,
   .gistsearch-aside .filter-list li span.bar,
   .gist-quicksearch-results .gist-quicksearch-result-header,
-  html[prefix*="ogp.me"] .avatar.avatar-more,
-  html[prefix*="ogp.me"] .AvatarStack--right .avatar.avatar-more::after,
-  html[prefix*="ogp.me"] .markdown-body .csv-data th,
+  #graphiql .avatar.avatar-more,
+  #graphiql .AvatarStack--right .avatar.avatar-more::after,
+  #graphiql .markdown-body .csv-data th,
   body[class="page-responsive"] .markdown-body .csv-data th,
   body[class="page-responsive"] .bubble-disabled,
   body[class="page-responsive"] .diff-view .file .meta span.icon,
@@ -939,19 +920,14 @@
   .MarketplaceSideNav, .ScreenshotCarousel-navitem.selected,
   .notifications .read.list-group-item, .sortable-ghost,
   .review-comment-loader:after, .review-comment.is-comment-editing:after,
-  .review-comment:after, .review-thread-reply,
-  html[prefix*="ogp.me"] .Box-header,
-  html[prefix*="ogp.me"] .Box-row.navigation-focus.sortable-ghost,
-  html[prefix*="ogp.me"] .Box-row--focus-gray.navigation-focus,
-  html[prefix*="ogp.me"] .Box-row--hover-gray:hover,
-  html[prefix*="ogp.me"] .Box-row--gray, html[prefix*="ogp.me"] .menu-item:hover,
-  html[prefix*="ogp.me"] .SideNav-item:hover,
-  html[prefix*="ogp.me"] .SideNav-item:focus,
-  html[prefix*="ogp.me"] .subnav-item:hover,
-  html[prefix*="ogp.me"] .subnav-item:focus,
-  html[prefix*="ogp.me"] .markdown-body table tr:nth-child(2n),
-  html[prefix*="ogp.me"] .SelectMenu-modal,
-  html[prefix*="ogp.me"] .SelectMenu-divider, body,
+  .review-comment:after, .review-thread-reply, #graphiql .Box-header,
+  #graphiql .Box-row.navigation-focus.sortable-ghost,
+  #graphiql .Box-row--focus-gray.navigation-focus,
+  #graphiql .Box-row--hover-gray:hover, #graphiql .Box-row--gray,
+  #graphiql .menu-item:hover, #graphiql .SideNav-item:hover,
+  #graphiql .SideNav-item:focus, #graphiql .subnav-item:hover,
+  #graphiql .subnav-item:focus, #graphiql .markdown-body table tr:nth-child(2n),
+  #graphiql .SelectMenu-modal, #graphiql .SelectMenu-divider, body,
   body.status .component-items-selector .grouped-item:hover,
   body[class="page-responsive"] .subnav-item:focus,
   body[class="page-responsive"] .subnav-item:hover,
@@ -982,9 +958,8 @@
     background-color: #202020;
   }
   /* auto-generated rule for "background-color: #f6f8fa !important" */
-  .bg-gray, .bg-gray-1, html[prefix*="ogp.me"] .bg-gray,
-  html[prefix*="ogp.me"] .bg-gray-1, body.status .bg-gray,
-  body[class="page-responsive"] .bg-gray,
+  .bg-gray, .bg-gray-1, #graphiql .bg-gray, #graphiql .bg-gray-1,
+  body.status .bg-gray, body[class="page-responsive"] .bg-gray,
   body[class="page-responsive"] .bg-gray-1 {
     background-color: #202020 !important;
   }
@@ -1098,17 +1073,12 @@
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true],
   .filter-item .bar, .pagination a:focus, .pagination a:hover,
   .pagination em:focus, .pagination em:hover, .pagination span:focus,
-  .pagination span:hover, html[prefix*="ogp.me"] .btn,
-  html[prefix*="ogp.me"] .btn:disabled, html[prefix*="ogp.me"] .btn.disabled,
-  html[prefix*="ogp.me"] .btn-danger:disabled,
-  html[prefix*="ogp.me"] .btn-danger.disabled,
-  html[prefix*="ogp.me"] .filter-item .bar,
-  html[prefix*="ogp.me"] .pagination a:hover,
-  html[prefix*="ogp.me"] .pagination a:focus,
-  html[prefix*="ogp.me"] .pagination span:hover,
-  html[prefix*="ogp.me"] .pagination span:focus,
-  html[prefix*="ogp.me"] .pagination em:hover,
-  html[prefix*="ogp.me"] .pagination em:focus,
+  .pagination span:hover, #graphiql .btn, #graphiql .btn:disabled,
+  #graphiql .btn.disabled, #graphiql .btn-danger:disabled,
+  #graphiql .btn-danger.disabled, #graphiql .filter-item .bar,
+  #graphiql .pagination a:hover, #graphiql .pagination a:focus,
+  #graphiql .pagination span:hover, #graphiql .pagination span:focus,
+  #graphiql .pagination em:hover, #graphiql .pagination em:focus,
   body[class="page-responsive"] .btn,
   body[class="page-responsive"] .btn.disabled,
   body[class="page-responsive"] .btn:disabled,
@@ -1130,9 +1100,8 @@
   /* auto-generated rule for "background-color: #eaecef" */
   .filter-item:hover, .Label--gray, .progress-bar,
   .profile-timeline.discussion-timeline .profile-timeline-month-heading:after,
-  .profile-timeline.discussion-timeline:before,
-  html[prefix*="ogp.me"] .filter-item:hover, html[prefix*="ogp.me"] .Label--gray,
-  body[class="page-responsive"] .Label--gray,
+  .profile-timeline.discussion-timeline:before, #graphiql .filter-item:hover,
+  #graphiql .Label--gray, body[class="page-responsive"] .Label--gray,
   body[class="page-responsive"] .progress-bar {
     background-color: #343434;
   }
@@ -1141,9 +1110,9 @@
     background: #444;
   }
   /* auto-generated rule for "background-color: #e6ebf1" */
-  .btn.hover, .btn:hover, html[prefix*="ogp.me"] .btn:hover,
-  html[prefix*="ogp.me"] .btn.hover, .status-day::before,
-  body.status .incident-list::before, body.status .incident-container::before,
+  .btn.hover, .btn:hover, #graphiql .btn:hover, #graphiql .btn.hover,
+  .status-day::before, body.status .incident-list::before,
+  body.status .incident-container::before,
   body.status .incident-container .incident-title::before,
   body[class="page-responsive"] .btn.hover,
   body[class="page-responsive"] .btn:hover,
@@ -1152,7 +1121,7 @@
     background-color: #444;
   }
   /* auto-generated rule for "background: #e1e4e8" */
-  .avatar.avatar-more:before, html[prefix*="ogp.me"] .avatar.avatar-more::before,
+  .avatar.avatar-more:before, #graphiql .avatar.avatar-more::before,
   body[class="page-responsive"] hr {
     background: #343434;
   }
@@ -1166,11 +1135,9 @@
   .discussion-timeline.team-discussion-timeline:before, .discussion-item-icon,
   .CheckStep .ansibg-w, .discussion-post .reply-comments-holder:before,
   .marketplace-product-callout .branch-action-item-icon,
-  .release-timeline-tags .tag-timeline-date:after,
-  html[prefix*="ogp.me"] .markdown-body hr, html[prefix*="ogp.me"] .Progress,
-  html[prefix*="ogp.me"] .TimelineItem::before,
-  html[prefix*="ogp.me"] .TimelineItem-badge,
-  body[class="page-responsive"] .markdown-body hr,
+  .release-timeline-tags .tag-timeline-date:after, #graphiql .markdown-body hr,
+  #graphiql .Progress, #graphiql .TimelineItem::before,
+  #graphiql .TimelineItem-badge, body[class="page-responsive"] .markdown-body hr,
   body[class="page-responsive"] .reverse-progress-container,
   body[class="page-responsive"] .reverse-progress-bar {
     background-color: #343434;
@@ -1178,7 +1145,7 @@
   /* auto-generated rule for "background-color: #e1e4e8 !important" */
   .bg-gray-2, .discussion-item-icon-gray,
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
-  html[prefix*="ogp.me"] .bg-gray-2, body[class="page-responsive"] .bg-gray-2 {
+  #graphiql .bg-gray-2, body[class="page-responsive"] .bg-gray-2 {
     background-color: #343434 !important;
   }
   /* auto-generated rule for "background: #e9e9e9" */
@@ -1224,8 +1191,7 @@
   /* auto-generated rule for "background: #dfe2e5" */
   .ellipsis-expander, .hidden-text-expander a,
   .email-format .email-hidden-toggle a, .render-container,
-  html[prefix*="ogp.me"] .hidden-text-expander a,
-  html[prefix*="ogp.me"] .ellipsis-expander,
+  #graphiql .hidden-text-expander a, #graphiql .ellipsis-expander,
   body[class="page-responsive"] .render-container {
     background: #383838;
   }
@@ -1243,30 +1209,26 @@
   }
   /* auto-generated rule for "background: #d1d5da" */
   .avatar.avatar-more:after, .AvatarStack--right .avatar.avatar-more,
-  html[prefix*="ogp.me"] .avatar.avatar-more::after,
-  html[prefix*="ogp.me"] .AvatarStack--right .avatar.avatar-more {
+  #graphiql .avatar.avatar-more::after,
+  #graphiql .AvatarStack--right .avatar.avatar-more {
     background: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da" */
   .SideNav-item:focus:before, .SideNav-item:hover:before,
   .diffstat-block-neutral, .SideNav-item:hover::before,
-  .SideNav-item:focus::before,
-  html[prefix*="ogp.me"] .SideNav-item:hover::before,
-  html[prefix*="ogp.me"] .SideNav-item:focus::before,
-  html[prefix*="ogp.me"] .diffstat-block-neutral,
+  .SideNav-item:focus::before, #graphiql .SideNav-item:hover::before,
+  #graphiql .SideNav-item:focus::before, #graphiql .diffstat-block-neutral,
   body[class="page-responsive"] .diffstat-block-neutral {
     background-color: #404040;
   }
   /* auto-generated rule for "background-color: #d1d5da !important" */
-  .bg-gray-3, html[prefix*="ogp.me"] .bg-gray-3,
-  body[class="page-responsive"] .bg-gray-3 {
+  .bg-gray-3, #graphiql .bg-gray-3, body[class="page-responsive"] .bg-gray-3 {
     background-color: #404040 !important;
   }
   /* auto-generated rule for "background-color: #c6cbd1" */
   .ellipsis-expander:hover, .hidden-text-expander a:hover,
   .email-format .email-hidden-toggle a:hover, .branch-a-b-count .meter,
-  html[prefix*="ogp.me"] .hidden-text-expander a:hover,
-  html[prefix*="ogp.me"] .ellipsis-expander:hover {
+  #graphiql .hidden-text-expander a:hover, #graphiql .ellipsis-expander:hover {
     background-color: #484848;
   }
   /* auto-generated rule for "background: #6a737d" */
@@ -1280,9 +1242,8 @@
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon,
   .completeness-indicator-problem, .check-annotation-notice:after,
   .issues-reset-query-icon, .projects-reset-query-icon,
-  html[prefix*="ogp.me"] .Label--gray-darker, html[prefix*="ogp.me"] .state,
-  html[prefix*="ogp.me"] .State, html[prefix*="ogp.me"] .Counter--gray,
-  body[class="page-responsive"] .Label--gray-darker,
+  #graphiql .Label--gray-darker, #graphiql .state, #graphiql .State,
+  #graphiql .Counter--gray, body[class="page-responsive"] .Label--gray-darker,
   body[class="page-responsive"] .state, body[class="page-responsive"] .State,
   body[class="page-responsive"] .Counter--gray,
   body[class="page-responsive"] .pagination .current,
@@ -1294,8 +1255,7 @@
     background-color: #303030;
   }
   /* auto-generated rule for "background-color: #6a737d !important" */
-  .bg-gray-5, html[prefix*="ogp.me"] .bg-gray-5,
-  body[class="page-responsive"] .bg-gray-5 {
+  .bg-gray-5, #graphiql .bg-gray-5, body[class="page-responsive"] .bg-gray-5 {
     background-color: #303030 !important;
   }
   /* auto-generated rule for "background: #24292e" */
@@ -1306,8 +1266,8 @@
   /* auto-generated rule for "background-color: #24292e" */
   .Header-old, .Header, .reponav-wrapper, .CheckRun, .CheckRun-search .btn,
   .CheckRun-search .btn[disabled]:hover, .CheckStep .ansibg-b,
-  .CheckStep .ansibg-bl, .project-full-screen .project-header,
-  html[prefix*="ogp.me"] .Header, body[class="page-responsive"] .Header-old,
+  .CheckStep .ansibg-bl, .project-full-screen .project-header, #graphiql .Header,
+  body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
   body[class="page-responsive"] .Header,
   html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches,
@@ -1315,8 +1275,8 @@
     background-color: #181818;
   }
   /* auto-generated rule for "background-color: #24292e !important" */
-  .bg-gray-dark, .bg-gray-9, html[prefix*="ogp.me"] .bg-gray-dark,
-  html[prefix*="ogp.me"] .bg-gray-9, body.status .bg-gray-dark,
+  .bg-gray-dark, .bg-gray-9, .page-responsive .pagehead, #graphiql .bg-gray-dark,
+  #graphiql .bg-gray-9, body.status .bg-gray-dark,
   body[class="page-responsive"] .bg-gray-dark,
   body[class="page-responsive"] .bg-gray-9 {
     background-color: #181818 !important;
@@ -1342,7 +1302,7 @@
     background-color: #181818;
   }
   /* auto-generated rule for "background: #2f363d" */
-  .dropdown-menu-dark, html[prefix*="ogp.me"] .dropdown-menu-dark,
+  .dropdown-menu-dark, #graphiql .dropdown-menu-dark,
   body[class="page-responsive"] .dropdown-menu-dark {
     background: #282828;
   }
@@ -1351,18 +1311,16 @@
     background-color: #282828;
   }
   /* auto-generated rule for "background-color: #2f363d !important" */
-  .bg-gray-8, html[prefix*="ogp.me"] .bg-gray-8,
-  body[class="page-responsive"] .bg-gray-8 {
+  .bg-gray-8, #graphiql .bg-gray-8, body[class="page-responsive"] .bg-gray-8 {
     background-color: #282828 !important;
   }
   /* auto-generated rule for "background-color: #586069" */
   .CheckStep-line.selected, .Toast--loading .Toast-icon,
-  html[prefix*="ogp.me"] .Toast--loading .Toast-icon {
+  #graphiql .Toast--loading .Toast-icon {
     background-color: #343434;
   }
   /* auto-generated rule for "background-color: #586069 !important" */
-  .bg-gray-6, html[prefix*="ogp.me"] .bg-gray-6,
-  body[class="page-responsive"] .bg-gray-6 {
+  .bg-gray-6, #graphiql .bg-gray-6, body[class="page-responsive"] .bg-gray-6 {
     background-color: #343434 !important;
   }
   /* auto-generated rule for "background-color: rgba(225,228,232,0.31)" */
@@ -1398,14 +1356,14 @@
   .form-group.warn .error::after, .form-group.warn .error::before,
   .form-group.errored .warning::after, .form-group.errored .warning::before,
   .form-group.errored .error::after, .form-group.errored .error::before,
-  html[prefix*="ogp.me"] .form-group.warn .warning::after,
-  html[prefix*="ogp.me"] .form-group.warn .warning::before,
-  html[prefix*="ogp.me"] .form-group.warn .error::after,
-  html[prefix*="ogp.me"] .form-group.warn .error::before,
-  html[prefix*="ogp.me"] .form-group.errored .warning::after,
-  html[prefix*="ogp.me"] .form-group.errored .warning::before,
-  html[prefix*="ogp.me"] .form-group.errored .error::after,
-  html[prefix*="ogp.me"] .form-group.errored .error::before,
+  #graphiql .form-group.warn .warning::after,
+  #graphiql .form-group.warn .warning::before,
+  #graphiql .form-group.warn .error::after,
+  #graphiql .form-group.warn .error::before,
+  #graphiql .form-group.errored .warning::after,
+  #graphiql .form-group.errored .warning::before,
+  #graphiql .form-group.errored .error::after,
+  #graphiql .form-group.errored .error::before,
   html[prefix] .form-group.errored .error::after,
   html[prefix] .form-group.errored .error::before,
   html[prefix] .form-group.errored .warning::after,
@@ -1431,9 +1389,8 @@
   .select-menu-tabs .select-menu-tab-nav, .select-menu-tabs a,
   .reaction-sort-item, .manage-memberships-tabs-item,
   .protected-branch-admin-permission,
-  .reorderable-task-lists .markdown-body .task-list-item,
-  html[prefix*="ogp.me"] .tabnav-tab, html[prefix*="ogp.me"] .SelectMenu-tab,
-  html[prefix] .tabnav-tab, body.status .panel,
+  .reorderable-task-lists .markdown-body .task-list-item, #graphiql .tabnav-tab,
+  #graphiql .SelectMenu-tab, html[prefix] .tabnav-tab, body.status .panel,
   body.status .cpt-tabs:not(.unstyled) li a,
   body.status .cpt-pill-group button.pill.inactive,
   body[class="page-responsive"] .reorderable-task-lists .markdown-body .task-list-item,
@@ -1474,17 +1431,15 @@
     border-color: transparent;
   }
   /* auto-generated rule for "border: 6px solid transparent" */
-  .tooltipped:before, .tooltipped::before,
-  html[prefix*="ogp.me"] .tooltipped::before {
+  .tooltipped:before, .tooltipped::before, #graphiql .tooltipped::before {
     border-color: transparent;
   }
   html.ghh-theme-classic .windows .ghh ::-webkit-scrollbar-thumb {
     border-color: transparent;
   }
   /* auto-generated rule for "border: 7px solid transparent" */
-  .sponsors-popover:after, .dropdown-menu:after,
-  html[prefix*="ogp.me"] .dropdown-menu::after,
-  html[prefix*="ogp.me"] .Popover-message::after,
+  .sponsors-popover:after, .dropdown-menu:after, #graphiql .dropdown-menu::after,
+  #graphiql .Popover-message::after,
   html[prefix] .site-header-nav .dropdown-menu::after,
   body[class="page-responsive"] .dropdown-menu:after,
   .ghh-theme-github .tooltipster-arrow-background {
@@ -1492,8 +1447,7 @@
   }
   /* auto-generated rule for "border: 8px solid transparent" */
   .sponsors-popover:before, .dropdown-menu:before,
-  html[prefix*="ogp.me"] .dropdown-menu::before,
-  html[prefix*="ogp.me"] .Popover-message::before,
+  #graphiql .dropdown-menu::before, #graphiql .Popover-message::before,
   html[prefix] .site-header-nav .dropdown-menu::before,
   body.status .tooltipster-sidetip.tooltipster-borderless .tooltipster-arrow-border,
   body.status #uptime-tooltip .pointer-smaller,
@@ -1514,11 +1468,9 @@
   .composer.composer-responsive .timeline-comment:after,
   .composer.composer-responsive .timeline-comment:before, .commit-form:after,
   .commit-form:before, .branch-action-body:after, .branch-action-body:before,
-  html[prefix*="ogp.me"] .input-dark,
-  html[prefix*="ogp.me"] .dropdown-menu-w::before,
-  html[prefix*="ogp.me"] .dropdown-menu-w::after,
-  html[prefix*="ogp.me"] .dropdown-menu-e::before,
-  html[prefix*="ogp.me"] .dropdown-menu-e::after, body.status .popover .arrow,
+  #graphiql .input-dark, #graphiql .dropdown-menu-w::before,
+  #graphiql .dropdown-menu-w::after, #graphiql .dropdown-menu-e::before,
+  #graphiql .dropdown-menu-e::after, body.status .popover .arrow,
   body.status .popover .arrow:after,
   body.status .layout-content.status.status-full-history .show-filter.open,
   body[class="page-responsive"] .input-dark, body[class="page-responsive"] hr,
@@ -1632,7 +1584,7 @@
     border-right-color: transparent;
   }
   /* auto-generated rule for "border-bottom: 2px solid transparent" */
-  .UnderlineNav-item, .subnav-link, html[prefix*="ogp.me"] .UnderlineNav-item,
+  .UnderlineNav-item, .subnav-link, #graphiql .UnderlineNav-item,
   body[class="page-responsive"] .UnderlineNav-item,
   body[class="page-responsive"] .user-status-emoji-tab,
   body.zh_logged_in .DateInput_input {
@@ -1692,33 +1644,33 @@
     border-right-color: transparent;
   }
   /* auto-generated rule for "border-left: 7px solid transparent" */
-  .dropdown-menu-ne:after, html[prefix*="ogp.me"] .dropdown-menu-ne::after,
+  .dropdown-menu-ne:after, #graphiql .dropdown-menu-ne::after,
   body.status .datepicker:before,
   body[class="page-responsive"] .dropdown-menu-ne:after,
   body[class="page-responsive"] .line-comment-info:after {
     border-left-color: transparent;
   }
   /* auto-generated rule for "border-right: 7px solid transparent" */
-  .dropdown-menu-ne:after, html[prefix*="ogp.me"] .dropdown-menu-ne::after,
+  .dropdown-menu-ne:after, #graphiql .dropdown-menu-ne::after,
   body.status .datepicker:before,
   body[class="page-responsive"] .dropdown-menu-ne:after,
   body[class="page-responsive"] .line-comment-info:after {
     border-right-color: transparent;
   }
   /* auto-generated rule for "border-left: 8px solid transparent" */
-  .dropdown-menu-ne:before, html[prefix*="ogp.me"] .dropdown-menu-ne::before,
+  .dropdown-menu-ne:before, #graphiql .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne:before,
   body[class="page-responsive"] .line-comment-info:before {
     border-left-color: transparent;
   }
   /* auto-generated rule for "border-right: 8px solid transparent" */
-  .dropdown-menu-ne:before, html[prefix*="ogp.me"] .dropdown-menu-ne::before,
+  .dropdown-menu-ne:before, #graphiql .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne:before,
   body[class="page-responsive"] .line-comment-info:before {
     border-right-color: transparent;
   }
   /* auto-generated rule for "border-top-color: transparent" */
-  .Box-row:first-of-type, html[prefix*="ogp.me"] .Box-row:first-of-type,
+  .Box-row:first-of-type, #graphiql .Box-row:first-of-type,
   html[prefix] .Box-row:first-of-type,
   body[class="page-responsive"] .Box-row:first-of-type,
   body.zh_logged_in .zhc-merging-tool-repo-dropdown .zhc-selection-list__list .zhc-tooltip-wrapper .zhc-selection-item:hover,
@@ -1746,26 +1698,25 @@
   .Popover-message--right-bottom:after, .Popover-message--right-bottom:before,
   .Popover-message--right-top:after, .Popover-message--right-top:before,
   .Popover-message--right:after, .Popover-message--right:before,
-  .dropdown-signed-commit .dropdown-menu-w:after,
-  html[prefix*="ogp.me"] .dropdown-caret,
-  html[prefix*="ogp.me"] .Popover-message--bottom::before,
-  html[prefix*="ogp.me"] .Popover-message--bottom::after,
-  html[prefix*="ogp.me"] .Popover-message--bottom-right::before,
-  html[prefix*="ogp.me"] .Popover-message--bottom-right::after,
-  html[prefix*="ogp.me"] .Popover-message--bottom-left::before,
-  html[prefix*="ogp.me"] .Popover-message--bottom-left::after,
-  html[prefix*="ogp.me"] .Popover-message--right::before,
-  html[prefix*="ogp.me"] .Popover-message--right::after,
-  html[prefix*="ogp.me"] .Popover-message--right-top::before,
-  html[prefix*="ogp.me"] .Popover-message--right-top::after,
-  html[prefix*="ogp.me"] .Popover-message--right-bottom::before,
-  html[prefix*="ogp.me"] .Popover-message--right-bottom::after,
-  html[prefix*="ogp.me"] .Popover-message--left::before,
-  html[prefix*="ogp.me"] .Popover-message--left::after,
-  html[prefix*="ogp.me"] .Popover-message--left-top::before,
-  html[prefix*="ogp.me"] .Popover-message--left-top::after,
-  html[prefix*="ogp.me"] .Popover-message--left-bottom::before,
-  html[prefix*="ogp.me"] .Popover-message--left-bottom::after,
+  .dropdown-signed-commit .dropdown-menu-w:after, #graphiql .dropdown-caret,
+  #graphiql .Popover-message--bottom::before,
+  #graphiql .Popover-message--bottom::after,
+  #graphiql .Popover-message--bottom-right::before,
+  #graphiql .Popover-message--bottom-right::after,
+  #graphiql .Popover-message--bottom-left::before,
+  #graphiql .Popover-message--bottom-left::after,
+  #graphiql .Popover-message--right::before,
+  #graphiql .Popover-message--right::after,
+  #graphiql .Popover-message--right-top::before,
+  #graphiql .Popover-message--right-top::after,
+  #graphiql .Popover-message--right-bottom::before,
+  #graphiql .Popover-message--right-bottom::after,
+  #graphiql .Popover-message--left::before,
+  #graphiql .Popover-message--left::after,
+  #graphiql .Popover-message--left-top::before,
+  #graphiql .Popover-message--left-top::after,
+  #graphiql .Popover-message--left-bottom::before,
+  #graphiql .Popover-message--left-bottom::after,
   body.status .cpt-tabs:not(.unstyled) li.active a,
   body.status .layout-content.status.status-full-history .history-nav a.current,
   body.zh_logged_in .zhc-merging-tool-repo-dropdown .zhc-selection-list__list .zhc-tooltip-wrapper:last-child .zhc-selection-item,
@@ -1774,12 +1725,12 @@
     border-bottom-color: transparent;
   }
   /* auto-generated rule for "border-left-color: transparent" */
-  html[prefix*="ogp.me"] .dropdown-caret,
+  #graphiql .dropdown-caret,
   body.zh_logged_in .zhc-sidebar-nav-item--is-secondary-active {
     border-left-color: transparent;
   }
   /* auto-generated rule for "border-right-color: transparent" */
-  html[prefix*="ogp.me"] .dropdown-caret {
+  #graphiql .dropdown-caret {
     border-right-color: transparent;
   }
   /* auto-generated rule for "border: 1px solid rgba(27,31,35,.15)" */
@@ -1787,9 +1738,8 @@
   .boxed-group > h3, .comment-form-error, .full-commit, .timeline-comment-label,
   .select-menu-modal, .RecentBranches, .pull-request-review-menu,
   .pull-request-suggested-changes-menu, .shelf-dismiss .close-button,
-  .ColorSwatch, html[prefix*="ogp.me"] .flash,
-  html[prefix*="ogp.me"] .dropdown-menu, html[prefix*="ogp.me"] .Label--outline,
-  html[prefix] .site-header-nav .dropdown-menu,
+  .ColorSwatch, #graphiql .flash, #graphiql .dropdown-menu,
+  #graphiql .Label--outline, html[prefix] .site-header-nav .dropdown-menu,
   body[class="page-responsive"] .Label--outline,
   body[class="page-responsive"] .dropdown-menu {
     border-color: rgba(200, 200, 200, .15);
@@ -1798,17 +1748,15 @@
   .btn-outline.disabled, .btn-outline:disabled, .btn-outline[aria-disabled=true],
   .flash-error, .flash-warn, .flash-success, .boxed-group-warning,
   .full-commit .btn-outline, .full-commit .btn-outline:disabled, .render-notice,
-  html[prefix*="ogp.me"] .btn-outline:disabled,
-  html[prefix*="ogp.me"] .btn-outline.disabled,
-  html[prefix*="ogp.me"] .flash-warn, html[prefix*="ogp.me"] .flash-error,
-  html[prefix*="ogp.me"] .flash-success,
+  #graphiql .btn-outline:disabled, #graphiql .btn-outline.disabled,
+  #graphiql .flash-warn, #graphiql .flash-error, #graphiql .flash-success,
   body[class="page-responsive"] .flash.flash-warn,
   body[class="page-responsive"] .flash.flash-error,
   body[class="page-responsive"] .render-notice {
     border-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-color: rgba(27,31,35,.15) !important" */
-  .border-black-fade, html[prefix*="ogp.me"] .border-black-fade,
+  .border-black-fade, #graphiql .border-black-fade,
   body.status .border-black-fade,
   body[class="page-responsive"] .border-black-fade {
     border-color: rgba(200, 200, 200, .15) !important;
@@ -1823,22 +1771,21 @@
     border-bottom-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-top: 8px solid rgba(27,31,35,.15)" */
-  .dropdown-menu-ne:before, html[prefix*="ogp.me"] .dropdown-menu-ne::before,
+  .dropdown-menu-ne:before, #graphiql .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne:before {
     border-top-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-top-color: rgba(27,31,35,.15)" */
   .sponsors-popover:before, .Popover-message--bottom-left:before,
   .Popover-message--bottom-right:before, .Popover-message--bottom:before,
-  html[prefix*="ogp.me"] .Popover-message--bottom::before,
-  html[prefix*="ogp.me"] .Popover-message--bottom-right::before,
-  html[prefix*="ogp.me"] .Popover-message--bottom-left::before {
+  #graphiql .Popover-message--bottom::before,
+  #graphiql .Popover-message--bottom-right::before,
+  #graphiql .Popover-message--bottom-left::before {
     border-top-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-bottom-color: rgba(27,31,35,.15)" */
   .dropdown-menu:before, .diffbar-range-menu .in-range:not(.is-range-selected),
-  html[prefix*="ogp.me"] .dropdown-menu::before,
-  html[prefix*="ogp.me"] .Popover-message::before,
+  #graphiql .dropdown-menu::before, #graphiql .Popover-message::before,
   html[prefix] .site-header-nav .dropdown-menu::before,
   body[class="page-responsive"] .dropdown-menu:before {
     border-bottom-color: rgba(200, 200, 200, .15);
@@ -1846,18 +1793,17 @@
   /* auto-generated rule for "border-left-color: rgba(27,31,35,.15)" */
   .Popover-message--right-bottom:before, .Popover-message--right-top:before,
   .Popover-message--right:before, .topic-tag-contrast .delete-topic-link,
-  html[prefix*="ogp.me"] .dropdown-menu-w::before,
-  html[prefix*="ogp.me"] .Popover-message--right::before,
-  html[prefix*="ogp.me"] .Popover-message--right-top::before,
-  html[prefix*="ogp.me"] .Popover-message--right-bottom::before {
+  #graphiql .dropdown-menu-w::before, #graphiql .Popover-message--right::before,
+  #graphiql .Popover-message--right-top::before,
+  #graphiql .Popover-message--right-bottom::before {
     border-left-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-right-color: rgba(27,31,35,.15)" */
   .Popover-message--left-bottom:before, .Popover-message--left-top:before,
-  .Popover-message--left:before, html[prefix*="ogp.me"] .dropdown-menu-e::before,
-  html[prefix*="ogp.me"] .Popover-message--left::before,
-  html[prefix*="ogp.me"] .Popover-message--left-top::before,
-  html[prefix*="ogp.me"] .Popover-message--left-bottom::before {
+  .Popover-message--left:before, #graphiql .dropdown-menu-e::before,
+  #graphiql .Popover-message--left::before,
+  #graphiql .Popover-message--left-top::before,
+  #graphiql .Popover-message--left-bottom::before {
     border-right-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-color: rgba(0,0,0,.125)" */
@@ -1877,7 +1823,7 @@
   }
   /* auto-generated rule for "border-color: #444d56" */
   .IconNav-item.selected, .dropdown-menu-dark, .Box--overlay, details-dialog,
-  html[prefix*="ogp.me"] .dropdown-menu-dark,
+  #graphiql .dropdown-menu-dark,
   body[class="page-responsive"] .dropdown-menu-dark,
   body[class="page-responsive"] .Box--overlay {
     border-color: #484848;
@@ -1888,12 +1834,12 @@
   }
   /* auto-generated rule for "border-top-color: #444d56" */
   .dropdown-menu-dark .dropdown-divider,
-  html[prefix*="ogp.me"] .dropdown-menu-dark .dropdown-divider,
+  #graphiql .dropdown-menu-dark .dropdown-divider,
   body[class="page-responsive"] .dropdown-menu-dark .dropdown-divider {
     border-top-color: #484848;
   }
   /* auto-generated rule for "border-bottom-color: #444d56" */
-  .dropdown-menu-dark:before, html[prefix*="ogp.me"] .dropdown-menu-dark::before,
+  .dropdown-menu-dark:before, #graphiql .dropdown-menu-dark::before,
   body[class="page-responsive"] .dropdown-menu-dark:before {
     border-bottom-color: #484848;
   }
@@ -1918,9 +1864,8 @@
     border-bottom-color: #484848;
   }
   /* auto-generated rule for "border: 1px solid #c3c8cf" */
-  .drag-and-drop, .previewable-comment-form .comment,
-  html[prefix*="ogp.me"] .drag-and-drop,
-  html[prefix*="ogp.me"] .previewable-comment-form .comment {
+  .drag-and-drop, .previewable-comment-form .comment, #graphiql .drag-and-drop,
+  #graphiql .previewable-comment-form .comment {
     border-color: #484848;
   }
   /* auto-generated rule for "border: solid #dfe2e5" */
@@ -1932,9 +1877,8 @@
   .markdown-body table th, .markdown-body span.frame > span, .capped-card,
   .commit-form, .inline-comment-form, .steps, .select-menu-text-filter input,
   ul.comparison-list, .overall-summary, .file-wrap, .prereceive-feedback,
-  html[prefix*="ogp.me"] .markdown-body table th,
-  html[prefix*="ogp.me"] .markdown-body table td,
-  html[prefix*="ogp.me"] .markdown-body span.frame > span,
+  #graphiql .markdown-body table th, #graphiql .markdown-body table td,
+  #graphiql .markdown-body span.frame > span,
   body[class="page-responsive"] .markdown-body table td,
   body[class="page-responsive"] .markdown-body table th,
   body[class="page-responsive"] .markdown-body span.frame > span,
@@ -1955,8 +1899,8 @@
   /* auto-generated rule for "border-bottom: 1px solid #dfe2e5" */
   .rule, hr, .conversation-list-heading,
   .select-menu-text-filter:first-child:last-child, .select-menu-tabs,
-  table.capped-list th, html[prefix*="ogp.me"] hr, html[prefix*="ogp.me"] .rule,
-  body.status .rule, body.status hr,
+  table.capped-list th, #graphiql hr, #graphiql .rule, body.status .rule,
+  body.status hr,
   body[class="page-responsive"] .timeline-inline-comments .inline-comment-form-container:last-child,
   body[class="page-responsive"] .discussion-comment,
   body[class="page-responsive"] .line-comment-info,
@@ -1979,7 +1923,7 @@
     border-right-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 1px dashed #dfe2e5" */
-  .upload-enabled textarea, html[prefix*="ogp.me"] .upload-enabled textarea {
+  .upload-enabled textarea, #graphiql .upload-enabled textarea {
     border-bottom-color: #343434;
   }
   /* auto-generated rule for "border-top: 3px solid #dfe2e5" */
@@ -2021,10 +1965,8 @@
   .dashboard-notice, .logo-box, .setup-form .setup-plans,
   .business-sso .sso-recovery-callout, .org-sso .sso-recovery-callout,
   .Box--responsive, .gist-quicksearch-results, .ais-SearchBox-input, #q,
-  html[prefix*="ogp.me"] kbd, html[prefix*="ogp.me"] .Box,
-  html[prefix*="ogp.me"] .form-control, html[prefix*="ogp.me"] .form-select,
-  html[prefix*="ogp.me"] .menu, html[prefix*="ogp.me"] .markdown-body kbd,
-  html[prefix*="ogp.me"] .SelectMenu-modal,
+  #graphiql kbd, #graphiql .Box, #graphiql .form-control, #graphiql .form-select,
+  #graphiql .menu, #graphiql .markdown-body kbd, #graphiql .SelectMenu-modal,
   body[class="page-responsive"] .form-control,
   body[class="page-responsive"] .form-select,
   body[class="page-responsive"] .markdown-body kbd,
@@ -2045,16 +1987,15 @@
   .branch-action-state-closed-dirty .branch-action-body,
   .branch-action-state-dirty .branch-action-body,
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body,
-  .Box-header, html[prefix*="ogp.me"] .Box-header,
-  html[prefix*="ogp.me"] .tabnav-tab[aria-selected=true],
-  html[prefix*="ogp.me"] .tabnav-tab.selected,
+  .Box-header, #graphiql .Box-header, #graphiql .tabnav-tab[aria-selected=true],
+  #graphiql .tabnav-tab.selected,
   body[class="page-responsive"] .ajax-pagination-form.loading .ajax-pagination-btn,
   body[class="page-responsive"] .bubble-disabled {
     border-color: #404040;
   }
   /* auto-generated rule for "border-color: #d1d5da !important" */
   .border-gray-dark, .marketplace-product-callout, .project-card:hover,
-  html[prefix*="ogp.me"] .border-gray-dark, body.status .border-gray-dark,
+  #graphiql .border-gray-dark, body.status .border-gray-dark,
   body[class="page-responsive"] .border-gray-dark {
     border-color: #404040 !important;
   }
@@ -2073,7 +2014,7 @@
   }
   /* auto-generated rule for "border-bottom: 1px solid #d1d5da" */
   .tabnav, .timeline-comment-header, .user-profile-sticky-bar:after,
-  .user-profile-nav, html[prefix*="ogp.me"] .tabnav,
+  .user-profile-nav, #graphiql .tabnav,
   body[class="page-responsive"] .bubble-title,
   body[class="page-responsive"] .diff-view .file,
   body[class="page-responsive"] .diff-view .file .meta {
@@ -2098,9 +2039,8 @@
   }
   /* auto-generated rule for "border-bottom-color: #d1d5da" */
   .UnderlineNav-item:focus, .UnderlineNav-item:hover, kbd, .markdown-body kbd,
-  html[prefix*="ogp.me"] kbd, html[prefix*="ogp.me"] .UnderlineNav-item:hover,
-  html[prefix*="ogp.me"] .UnderlineNav-item:focus,
-  html[prefix*="ogp.me"] .markdown-body kbd,
+  #graphiql kbd, #graphiql .UnderlineNav-item:hover,
+  #graphiql .UnderlineNav-item:focus, #graphiql .markdown-body kbd,
   body[class="page-responsive"] .UnderlineNav-item:focus,
   body[class="page-responsive"] .UnderlineNav-item:hover,
   .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-border {
@@ -2218,16 +2158,16 @@
     border-right-color: #343434;
   }
   /* auto-generated rule for "border-top: 1px solid #d6d6d6" */
-  html[prefix*="ogp.me"] .graphiql-container .doc-explorer-contents,
-  html[prefix*="ogp.me"] .graphiql-container .history-contents {
+  #graphiql .graphiql-container .doc-explorer-contents,
+  #graphiql .graphiql-container .history-contents {
     border-top-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 1px solid #d6d6d6" */
-  html[prefix*="ogp.me"] .graphiql-container .variable-editor-title {
+  #graphiql .graphiql-container .variable-editor-title {
     border-bottom-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 1px solid #d3d6db" */
-  html[prefix*="ogp.me"] .graphiql-container .search-box {
+  #graphiql .graphiql-container .search-box {
     border-bottom-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #e0e0e0" */
@@ -2245,23 +2185,22 @@
   }
   /* auto-generated rule for "border-top: 1px solid #e0e0e0" */
   .billing-line-item, .setup-info-module .setup-info-note,
-  html[prefix*="ogp.me"] .graphiql-container .variable-editor-title,
-  html[prefix*="ogp.me"] .graphiql-container .footer,
-  html[prefix*="ogp.me"] .graphiql-ide,
+  #graphiql .graphiql-container .variable-editor-title,
+  #graphiql .graphiql-container .footer, .graphiql-ide,
   body.status .form-bordered .control-group.first-border {
     border-top-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 1px solid #e0e0e0" */
-  html[prefix*="ogp.me"] .graphiql-container .doc-category-title,
-  html[prefix*="ogp.me"] .graphiql-container .history-contents p,
+  #graphiql .graphiql-container .doc-category-title,
+  #graphiql .graphiql-container .history-contents p,
   body.status .form-bordered .control-group, body.status .modal .modal-header,
   body.status .cpt-tabs:not(.unstyled).mobile.open li:last-of-type,
   body.status .updates-dropdown-container .updates-dropdown .updates-dropdown-nav a {
     border-bottom-color: #343434;
   }
   /* auto-generated rule for "border-left: 1px solid #e0e0e0" */
-  html[prefix*="ogp.me"] .graphiql-container .resultWrap,
-  html[prefix*="ogp.me"] .graphiql-container .footer,
+  #graphiql .graphiql-container .resultWrap,
+  #graphiql .graphiql-container .footer,
   body.status .cpt-tabs:not(.unstyled).mobile.open li a {
     border-left-color: #343434;
   }
@@ -2283,9 +2222,8 @@
   .review-comment .is-comment-editing, .review-summary-form-wrapper,
   .orgs-help-item-octicon, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
-  .org-sso .org-sso-panel, .avatar-before-user-status,
-  html[prefix*="ogp.me"] .subnav-item, html[prefix*="ogp.me"] .pagination a,
-  html[prefix*="ogp.me"] .pagination span, html[prefix*="ogp.me"] .pagination em,
+  .org-sso .org-sso-panel, .avatar-before-user-status, #graphiql .subnav-item,
+  #graphiql .pagination a, #graphiql .pagination span, #graphiql .pagination em,
   body[class="page-responsive"] .subnav-item,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
   body[class="page-responsive"] .progress-bar-inline .progress-bar,
@@ -2295,10 +2233,9 @@
     border-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #e1e4e8 !important" */
-  .border, .border-sm, .border-md, .border-lg, html[prefix*="ogp.me"] .border,
-  html[prefix*="ogp.me"] .border-sm, html[prefix*="ogp.me"] .border-md,
-  html[prefix*="ogp.me"] .border-lg, body.status .border,
-  body[class="page-responsive"] .border,
+  .border, .border-sm, .border-md, .border-lg, #graphiql .border,
+  #graphiql .border-sm, #graphiql .border-md, #graphiql .border-lg,
+  body.status .border, body[class="page-responsive"] .border,
   body[class="page-responsive"] .border-sm,
   body[class="page-responsive"] .border-md,
   body[class="page-responsive"] .border-lg {
@@ -2310,13 +2247,11 @@
   .SelectMenu-tab[aria-selected=true],
   .select-menu-item + .semantic-toc-file:after,
   .semantic-toc-symbol:not(.last-visible):after, .tabnav-pr,
-  .tabnav-pr .tabnav-tab.selected, html[prefix*="ogp.me"] .pagination a:hover,
-  html[prefix*="ogp.me"] .pagination a:focus,
-  html[prefix*="ogp.me"] .pagination span:hover,
-  html[prefix*="ogp.me"] .pagination span:focus,
-  html[prefix*="ogp.me"] .pagination em:hover,
-  html[prefix*="ogp.me"] .pagination em:focus,
-  html[prefix*="ogp.me"] .SelectMenu-tab[aria-selected="true"],
+  .tabnav-pr .tabnav-tab.selected, #graphiql .pagination a:hover,
+  #graphiql .pagination a:focus, #graphiql .pagination span:hover,
+  #graphiql .pagination span:focus, #graphiql .pagination em:hover,
+  #graphiql .pagination em:focus,
+  #graphiql .SelectMenu-tab[aria-selected="true"],
   body.status .layout-content.status .border-color, body.status hr,
   body.status .tooltip-base, body.status .markdown-display table,
   body.status #uptime-tooltip .tooltip-box {
@@ -2338,13 +2273,10 @@
   .discussion-post .reply-comment:first-child,
   .issue-list-item + .issue-list-item, .review-thread-reply,
   .file-navigation .get-repo-btn, .user-list-item + .user-list-item,
-  html[prefix*="ogp.me"] .Box-row, html[prefix*="ogp.me"] .Box-footer,
-  html[prefix*="ogp.me"] .SideNav-item, html[prefix*="ogp.me"] .dropdown-divider,
-  html[prefix*="ogp.me"] .SelectMenu-filter,
-  html[prefix*="ogp.me"] .SelectMenu-list,
-  html[prefix*="ogp.me"] .SelectMenu-tabs,
-  html[prefix*="ogp.me"] .SelectMenu-divider,
-  html[prefix*="ogp.me"] .SelectMenu-footer,
+  #graphiql .Box-row, #graphiql .Box-footer, #graphiql .SideNav-item,
+  #graphiql .dropdown-divider, #graphiql .SelectMenu-filter,
+  #graphiql .SelectMenu-list, #graphiql .SelectMenu-tabs,
+  #graphiql .SelectMenu-divider, #graphiql .SelectMenu-footer,
   body[class="page-responsive"] .dropdown-divider,
   body[class="page-responsive"] .Box-row,
   body[class="page-responsive"] .Box-footer,
@@ -2369,9 +2301,8 @@
   }
   /* auto-generated rule for "border-top: 1px solid #e1e4e8 !important" */
   .border-y, .border-top, .border-sm-top, .border-md-top, .border-lg-top,
-  html[prefix*="ogp.me"] .border-y, html[prefix*="ogp.me"] .border-top,
-  html[prefix*="ogp.me"] .border-sm-top, html[prefix*="ogp.me"] .border-md-top,
-  html[prefix*="ogp.me"] .border-lg-top, body.status .border-y,
+  #graphiql .border-y, #graphiql .border-top, #graphiql .border-sm-top,
+  #graphiql .border-md-top, #graphiql .border-lg-top, body.status .border-y,
   body.status .border-top, body[class="page-responsive"] .border-y,
   body[class="page-responsive"] .border-top,
   body[class="page-responsive"] .border-sm-top,
@@ -2389,9 +2320,8 @@
   .previewable-comment-form .comment-body, .discussion-item-review-comment,
   .pagehead, .select-menu-divider, .select-menu-header, .merge-status-item,
   .file-header, .release-entry, .preview-selected .tabnav--responsive,
-  html[prefix*="ogp.me"] .Box-body, html[prefix*="ogp.me"] .menu-item,
-  html[prefix*="ogp.me"] .menu-heading, html[prefix*="ogp.me"] .UnderlineNav,
-  html[prefix*="ogp.me"] .SelectMenu-divider, html[prefix*="ogp.me"] .Subhead,
+  #graphiql .Box-body, #graphiql .menu-item, #graphiql .menu-heading,
+  #graphiql .UnderlineNav, #graphiql .SelectMenu-divider, #graphiql .Subhead,
   body[class="page-responsive"] .UnderlineNav,
   body[class="page-responsive"] .Box-body,
   body[class="page-responsive"] .jump-to-suggestions-results-container .navigation-item,
@@ -2403,12 +2333,11 @@
   }
   /* auto-generated rule for "border-bottom: 1px solid #e1e4e8 !important" */
   .border-y, .border-bottom, .border-sm-bottom, .border-md-bottom,
-  .border-lg-bottom, #site-search-results .search-result,
-  html[prefix*="ogp.me"] .border-y, html[prefix*="ogp.me"] .border-bottom,
-  html[prefix*="ogp.me"] .border-sm-bottom,
-  html[prefix*="ogp.me"] .border-md-bottom,
-  html[prefix*="ogp.me"] .border-lg-bottom, body.status .border-y,
-  body.status .border-bottom, body[class="page-responsive"] .border-y,
+  .border-lg-bottom, #site-search-results .search-result, #graphiql .border-y,
+  #graphiql .border-bottom, #graphiql .border-sm-bottom,
+  #graphiql .border-md-bottom, #graphiql .border-lg-bottom,
+  body.status .border-y, body.status .border-bottom,
+  body[class="page-responsive"] .border-y,
   body[class="page-responsive"] .border-bottom,
   body[class="page-responsive"] .border-sm-bottom,
   body[class="page-responsive"] .border-md-bottom,
@@ -2421,9 +2350,8 @@
   }
   /* auto-generated rule for "border-left: 1px solid #e1e4e8 !important" */
   .border-x, .border-left, .border-sm-left, .border-md-left, .border-lg-left,
-  html[prefix*="ogp.me"] .border-x, html[prefix*="ogp.me"] .border-left,
-  html[prefix*="ogp.me"] .border-sm-left, html[prefix*="ogp.me"] .border-md-left,
-  html[prefix*="ogp.me"] .border-lg-left, body.status .border-left,
+  #graphiql .border-x, #graphiql .border-left, #graphiql .border-sm-left,
+  #graphiql .border-md-left, #graphiql .border-lg-left, body.status .border-left,
   body[class="page-responsive"] .border-x,
   body[class="page-responsive"] .border-left,
   body[class="page-responsive"] .border-sm-left,
@@ -2438,11 +2366,9 @@
   }
   /* auto-generated rule for "border-right: 1px solid #e1e4e8 !important" */
   .border-x, .border-right, .border-sm-right, .border-md-right, .border-lg-right,
-  html[prefix*="ogp.me"] .border-x, html[prefix*="ogp.me"] .border-right,
-  html[prefix*="ogp.me"] .border-sm-right,
-  html[prefix*="ogp.me"] .border-md-right,
-  html[prefix*="ogp.me"] .border-lg-right, body.status .border-right,
-  body[class="page-responsive"] .border-x,
+  #graphiql .border-x, #graphiql .border-right, #graphiql .border-sm-right,
+  #graphiql .border-md-right, #graphiql .border-lg-right,
+  body.status .border-right, body[class="page-responsive"] .border-x,
   body[class="page-responsive"] .border-right,
   body[class="page-responsive"] .border-sm-right,
   body[class="page-responsive"] .border-md-right,
@@ -2458,15 +2384,15 @@
     border-left-color: #343434;
   }
   /* auto-generated rule for "border-bottom: 2px dashed #e1e4e8" */
-  .DashedConnection:before, html[prefix*="ogp.me"] .DashedConnection::before {
+  .DashedConnection:before, #graphiql .DashedConnection::before {
     border-bottom-color: #343434;
   }
   /* auto-generated rule for "border-left: 3px solid #e1e4e8" */
-  .pullquote, html[prefix*="ogp.me"] .pullquote {
+  .pullquote, #graphiql .pullquote {
     border-left-color: #343434;
   }
   /* auto-generated rule for "border-top: 4px solid #e1e4e8" */
-  .TimelineItem-break, html[prefix*="ogp.me"] .TimelineItem-break {
+  .TimelineItem-break, #graphiql .TimelineItem-break {
     border-top-color: #343434;
   }
   /* auto-generated rule for "border-top-color: #e1e4e8" */
@@ -2966,12 +2892,12 @@
   /* auto-generated rule for "border: 1px solid #eaecef" */
   .page-responsive .HeaderMenu--logged-out .header-search-wrapper,
   .blankslate code, .commit-sha, .two-factor-steps, .qr-code-table,
-  html[prefix*="ogp.me"] .blankslate code {
+  #graphiql .blankslate code {
     border-color: #343434;
   }
   /* auto-generated rule for "border-color: #eaecef !important" */
   .border-gray-light, #site-search-results .search-result,
-  html[prefix*="ogp.me"] .border-gray-light, body.status .border-gray-light,
+  #graphiql .border-gray-light, body.status .border-gray-light,
   body[class="page-responsive"] .border-gray-light {
     border-color: #343434 !important;
   }
@@ -2985,7 +2911,7 @@
   .CheckRun-header, .profile-rollup-wrapper + .profile-rollup-wrapper,
   .profile-rollup-summarized + .profile-rollup-summarized, table.files td,
   table.files tr.up-tree, .email-preference-exceptions .exception,
-  html[prefix*="ogp.me"] .SelectMenu-item + .SelectMenu-item,
+  #graphiql .SelectMenu-item + .SelectMenu-item,
   body[class="page-responsive"] .list-heading + .list-item,
   body[class="page-responsive"] .list-item + .list-heading,
   body[class="page-responsive"] .list-item + .list-item,
@@ -2999,10 +2925,8 @@
   .capped-card h3, .select-menu-item, table.files tr.up-tree,
   .saved-reply-form .comment-body,
   .email-preference-exceptions .exception:last-child, table.capped-list td,
-  html[prefix*="ogp.me"] .subnav-bordered,
-  html[prefix*="ogp.me"] .markdown-body h1,
-  html[prefix*="ogp.me"] .markdown-body h2,
-  body[class="page-responsive"] .subnav-bordered,
+  #graphiql .subnav-bordered, #graphiql .markdown-body h1,
+  #graphiql .markdown-body h2, body[class="page-responsive"] .subnav-bordered,
   body[class="page-responsive"] .markdown-body h1,
   body[class="page-responsive"] .markdown-body h2,
   body[class="page-responsive"] .discussion-item-review-comment,
@@ -3152,7 +3076,7 @@
   .page-new-repo .internal-repo-avatar,
   .org-insights-cards .repository-lang-stats-graph .language-color,
   .pending-cards-status, .release-timeline-tags .tag-timeline-date:after,
-  html[prefix*="ogp.me"] .TimelineItem-badge,
+  #graphiql .TimelineItem-badge,
   body[class="page-responsive"] .profile-timeline .timeline-item-icon,
   body.zh_logged_in .zh-issue-event-item-icon .zh-icon-issue-added,
   body.zh_logged_in .zh-issue-event-item-icon .zh-icon-issue-removed,
@@ -3174,8 +3098,7 @@
   .btn-transparent:active, .btn-transparent:hover,
   .filter-item.selected .Label--outline-white,
   .MarketplaceAnnouncement .btn-outline-mktg:hover,
-  html[prefix*="ogp.me"] .btn-transparent:hover,
-  html[prefix*="ogp.me"] .btn-transparent:active,
+  #graphiql .btn-transparent:hover, #graphiql .btn-transparent:active,
   html[prefix] .btn-outline-white, html[prefix] .btn-outline-white:active,
   html[prefix] .btn-outline-white:hover,
   body.status .cpt-button.style-outline:hover {
@@ -3188,12 +3111,11 @@
   /* auto-generated rule for "border-left: 1px solid #fff" */
   .AvatarStack--right .avatar,
   .repository-lang-stats-graph .language-color:not(:first-child),
-  html[prefix*="ogp.me"] .AvatarStack--right .avatar {
+  #graphiql .AvatarStack--right .avatar {
     border-left-color: #181818;
   }
   /* auto-generated rule for "border-right: 1px solid #fff" */
-  .AvatarStack-body .avatar, .BarChart-bar,
-  html[prefix*="ogp.me"] .AvatarStack-body .avatar,
+  .AvatarStack-body .avatar, .BarChart-bar, #graphiql .AvatarStack-body .avatar,
   html[prefix] .avatar-stack .avatar {
     border-right-color: #181818;
   }
@@ -3212,7 +3134,7 @@
     border-bottom-color: #181818;
   }
   /* auto-generated rule for "border-top: 7px solid #fff" */
-  .dropdown-menu-ne:after, html[prefix*="ogp.me"] .dropdown-menu-ne::after,
+  .dropdown-menu-ne:after, #graphiql .dropdown-menu-ne::after,
   body[class="page-responsive"] .dropdown-menu-ne:after,
   body[class="page-responsive"] .line-comment-info:after {
     border-top-color: #181818;
@@ -3220,10 +3142,9 @@
   /* auto-generated rule for "border-top-color: #fff" */
   .sponsors-popover:after, .Popover-message--bottom-left:after,
   .Popover-message--bottom-right:after, .Popover-message--bottom:after,
-  .select-menu-button.primary:after,
-  html[prefix*="ogp.me"] .Popover-message--bottom::after,
-  html[prefix*="ogp.me"] .Popover-message--bottom-right::after,
-  html[prefix*="ogp.me"] .Popover-message--bottom-left::after,
+  .select-menu-button.primary:after, #graphiql .Popover-message--bottom::after,
+  #graphiql .Popover-message--bottom-right::after,
+  #graphiql .Popover-message--bottom-left::after,
   html[prefix] .site-header-nav .dropdown-button .enterprise-mode .dropdown-caret,
   body.status .popover.top .arrow:after, body.status .cpt-button .caret,
   body.zh_logged_in .zhc-info-alert--pointer--bottom:after,
@@ -3232,9 +3153,8 @@
     border-top-color: #181818;
   }
   /* auto-generated rule for "border-bottom-color: #fff" */
-  .dropdown-menu:after, .gist-banner,
-  html[prefix*="ogp.me"] .dropdown-menu::after,
-  html[prefix*="ogp.me"] .Popover-message::after,
+  .dropdown-menu:after, .gist-banner, #graphiql .dropdown-menu::after,
+  #graphiql .Popover-message::after,
   html[prefix] .site-header-nav .dropdown-menu::after,
   body.status .popover.bottom .arrow:after,
   body.status #uptime-tooltip .pointer-smaller,
@@ -3253,11 +3173,10 @@
   .Popover-message--right-bottom:after, .Popover-message--right-top:after,
   .Popover-message--right:after,
   .boxed-group .tabnav.heading li:first-child .selected,
-  .billing-box-progressBars span:nth-child(2),
-  html[prefix*="ogp.me"] .dropdown-menu-w::after,
-  html[prefix*="ogp.me"] .Popover-message--right::after,
-  html[prefix*="ogp.me"] .Popover-message--right-top::after,
-  html[prefix*="ogp.me"] .Popover-message--right-bottom::after,
+  .billing-box-progressBars span:nth-child(2), #graphiql .dropdown-menu-w::after,
+  #graphiql .Popover-message--right::after,
+  #graphiql .Popover-message--right-top::after,
+  #graphiql .Popover-message--right-bottom::after,
   body.status .popover.left .arrow:after,
   body[class="page-responsive"] .pagination a,
   body[class="page-responsive"] .pagination em,
@@ -3272,10 +3191,10 @@
   .Popover-message--left:after,
   .new-discussion-timeline .composer .timeline-comment:after,
   .composer.composer-responsive .timeline-comment:after, .commit-form:after,
-  .branch-action-body:after, html[prefix*="ogp.me"] .dropdown-menu-e::after,
-  html[prefix*="ogp.me"] .Popover-message--left::after,
-  html[prefix*="ogp.me"] .Popover-message--left-top::after,
-  html[prefix*="ogp.me"] .Popover-message--left-bottom::after,
+  .branch-action-body:after, #graphiql .dropdown-menu-e::after,
+  #graphiql .Popover-message--left::after,
+  #graphiql .Popover-message--left-top::after,
+  #graphiql .Popover-message--left-bottom::after,
   body.status .popover.right .arrow:after,
   body.zh_logged_in .zhc-info-alert--pointer--left:after,
   body.zh_logged_in .zhc-pr-issue-connector__info::after,
@@ -3288,9 +3207,9 @@
   .UnderlineNav-item[role=tab][aria-selected=true],
   .repository-settings-actions [role=tab][aria-selected=true],
   .user-status-emoji-tab[role=tab][aria-selected=true],
-  html[prefix*="ogp.me"] .UnderlineNav-item.selected,
-  html[prefix*="ogp.me"] .UnderlineNav-item[role=tab][aria-selected=true],
-  html[prefix*="ogp.me"] .UnderlineNav-item[aria-current],
+  #graphiql .UnderlineNav-item.selected,
+  #graphiql .UnderlineNav-item[role=tab][aria-selected=true],
+  #graphiql .UnderlineNav-item[aria-current],
   body[class="page-responsive"] .UnderlineNav-item.selected,
   body[class="page-responsive"] .UnderlineNav-item[aria-current],
   body[class="page-responsive"] .UnderlineNav-item[role=tab][aria-selected=true],
@@ -3313,8 +3232,7 @@
   .btn.focus, .btn:focus, .btn-mktg:focus, .project-column:focus,
   .project-column.moving,
   body:not(.intent-mouse) .hx_focus-input:focus + .hx_focus-target,
-  html[prefix*="ogp.me"] .btn:focus, html[prefix*="ogp.me"] .btn.focus,
-  html[prefix*="ogp.me"] .btn-mktg:focus,
+  #graphiql .btn:focus, #graphiql .btn.focus, #graphiql .btn-mktg:focus,
   body[class="page-responsive"] .btn.focus,
   body[class="page-responsive"] .btn:focus {
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
@@ -3334,12 +3252,9 @@
   /* auto-generated rule for "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus, .upload-enabled.focused, .focus.ais-SearchBox-input,
-  .ais-SearchBox-input:focus, .focus#q, #q:focus,
-  html[prefix*="ogp.me"] .form-control.focus,
-  html[prefix*="ogp.me"] .form-control:focus,
-  html[prefix*="ogp.me"] .form-select.focus,
-  html[prefix*="ogp.me"] .form-select:focus,
-  html[prefix*="ogp.me"] .upload-enabled.focused,
+  .ais-SearchBox-input:focus, .focus#q, #q:focus, #graphiql .form-control.focus,
+  #graphiql .form-control:focus, #graphiql .form-select.focus,
+  #graphiql .form-select:focus, #graphiql .upload-enabled.focused,
   body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
@@ -3358,24 +3273,23 @@
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
   }
   /* auto-generated rule for "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)" */
-  .btn-danger:focus, html[prefix*="ogp.me"] .btn-danger:focus,
+  .btn-danger:focus, #graphiql .btn-danger:focus,
   body[class="page-responsive"] .btn-danger:focus {
     box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4);
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
   .suggester, .SelectMenu-modal, .checkable-input-container.checked,
-  html[prefix*="ogp.me"] .SelectMenu-modal {
+  #graphiql .SelectMenu-modal {
     box-shadow: 0 1px 5px #000;
   }
   /* auto-generated rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15) !important" */
-  .box-shadow-medium, html[prefix*="ogp.me"] .box-shadow-medium,
+  .box-shadow-medium, #graphiql .box-shadow-medium,
   body.status .box-shadow-medium,
   body[class="page-responsive"] .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
   }
   /* auto-generated rule for "box-shadow: inset 0 -1px 0 #d1d5da" */
-  kbd, .markdown-body kbd, html[prefix*="ogp.me"] kbd,
-  html[prefix*="ogp.me"] .markdown-body kbd,
+  kbd, .markdown-body kbd, #graphiql kbd, #graphiql .markdown-body kbd,
   body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] kbd {
     box-shadow: inset 0 -2px 0 #383838;
@@ -3385,7 +3299,7 @@
     box-shadow: inset 0 -2px 0 #383838;
   }
   /* auto-generated rule for "box-shadow: 0 1px 0 #eaecef" */
-  html[prefix*="ogp.me"] .SelectMenu--hasFilter .SelectMenu-item:last-child {
+  #graphiql .SelectMenu--hasFilter .SelectMenu-item:last-child {
     box-shadow: 0 1px 0 #343434;
   }
   /* auto-generated rule for "box-shadow: 0 1px 0 0 #0058a2" */
@@ -3394,12 +3308,12 @@
   }
   /* auto-generated rule for "box-shadow: 0 0 0.2em #c8e1ff" */
   .TimelineItem:target .TimelineItem-badge,
-  html[prefix*="ogp.me"] .TimelineItem:target .TimelineItem-badge {
+  #graphiql .TimelineItem:target .TimelineItem-badge {
     box-shadow: 0 0 .2em /*[[base-color]]*/;
   }
   /* auto-generated rule for "fill: currentcolor" */
-  .octicon, html[prefix*="ogp.me"] .octicon, html[prefix] .octicon,
-  body.status .octicon, body[class="page-responsive"] .octicon,
+  .octicon, #graphiql .octicon, html[prefix] .octicon, body.status .octicon,
+  body[class="page-responsive"] .octicon,
   body.zh_logged_in .ReactVirtualized__Table__sortableHeaderIcon,
   html.ghh-theme-classic .ghh .octicon {
     fill: currentcolor;
@@ -3413,7 +3327,7 @@
     border-top-color: currentcolor;
   }
   /* auto-generated rule for "color: #000" */
-  html[prefix*="ogp.me"] mark, html[prefix] mark,
+  #graphiql mark, html[prefix] mark,
   html[prefix] .markdown-body h1 .octicon-link,
   html[prefix] .markdown-body h2 .octicon-link,
   html[prefix] .markdown-body h3 .octicon-link,
@@ -3449,14 +3363,12 @@
   .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link,
   .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link,
   .markdown-body h6 .octicon-link, .Toast, .tooltipped::before,
-  html[prefix*="ogp.me"] .tooltipped::before,
-  html[prefix*="ogp.me"] .markdown-body h1 .octicon-link,
-  html[prefix*="ogp.me"] .markdown-body h2 .octicon-link,
-  html[prefix*="ogp.me"] .markdown-body h3 .octicon-link,
-  html[prefix*="ogp.me"] .markdown-body h4 .octicon-link,
-  html[prefix*="ogp.me"] .markdown-body h5 .octicon-link,
-  html[prefix*="ogp.me"] .markdown-body h6 .octicon-link,
-  html[prefix*="ogp.me"] .Toast,
+  #graphiql .tooltipped::before, #graphiql .markdown-body h1 .octicon-link,
+  #graphiql .markdown-body h2 .octicon-link,
+  #graphiql .markdown-body h3 .octicon-link,
+  #graphiql .markdown-body h4 .octicon-link,
+  #graphiql .markdown-body h5 .octicon-link,
+  #graphiql .markdown-body h6 .octicon-link, #graphiql .Toast,
   body[class="page-responsive"] .markdown-body h1 .octicon-link,
   body[class="page-responsive"] .markdown-body h2 .octicon-link,
   body[class="page-responsive"] .markdown-body h3 .octicon-link,
@@ -3672,12 +3584,9 @@
   .pagehead-tabs-item .Counter, .reponav-item .Counter, .render-notice,
   .select-menu-header .close-button:hover, .select-menu-header .octicon:hover,
   .select-menu-action, table.capped-list .octicon, .keyboard-mappings,
-  html[prefix*="ogp.me"] kbd, html[prefix*="ogp.me"] .hidden-text-expander a,
-  html[prefix*="ogp.me"] .ellipsis-expander,
-  html[prefix*="ogp.me"] .subnav-search-context .btn,
-  html[prefix*="ogp.me"] .markdown-body kbd,
-  html[prefix*="ogp.me"] .TimelineItem-badge,
-  html[prefix*="ogp.me"] .TimelineItem-body,
+  #graphiql kbd, #graphiql .hidden-text-expander a, #graphiql .ellipsis-expander,
+  #graphiql .subnav-search-context .btn, #graphiql .markdown-body kbd,
+  #graphiql .TimelineItem-badge, #graphiql .TimelineItem-body,
   body[class="page-responsive"] .subnav-search-context .btn,
   body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] kbd,
@@ -3702,21 +3611,21 @@
     color: #afafaf;
   }
   /* auto-generated rule for "color: #444d56 !important" */
-  .color-gray-7, html[prefix*="ogp.me"] .color-gray-7,
+  .color-gray-7, #graphiql .color-gray-7,
   body[class="page-responsive"] .color-gray-7 {
     color: #afafaf !important;
   }
   /* auto-generated rule for "color: #555" */
   .billing-manager-banner-text, .exploregrid-item, .table-list-milestones .stat,
   .diffstat-summary a, .features-list .octicon-question,
-  html[prefix*="ogp.me"] .graphiql-container .toolbar-button,
-  html[prefix*="ogp.me"] .graphiql-container .doc-category-item,
-  html[prefix*="ogp.me"] .graphiql-container .show-btn,
-  html[prefix] .ellipsis-expander, html[prefix] .hidden-text-expander a,
-  html[prefix] .menu-heading, html[prefix] .subnav-search-context .btn,
-  html[prefix] .markdown-body kbd, html[prefix] .site-header-nav-item,
-  html[prefix] .sidebar-module h3 a, html[prefix] code .gp,
-  html[prefix] code .nn, body.zh_logged_in .zh-timeline-comment-header-text {
+  #graphiql .graphiql-container .toolbar-button,
+  #graphiql .graphiql-container .doc-category-item,
+  #graphiql .graphiql-container .show-btn, html[prefix] .ellipsis-expander,
+  html[prefix] .hidden-text-expander a, html[prefix] .menu-heading,
+  html[prefix] .subnav-search-context .btn, html[prefix] .markdown-body kbd,
+  html[prefix] .site-header-nav-item, html[prefix] .sidebar-module h3 a,
+  html[prefix] code .gp, html[prefix] code .nn,
+  body.zh_logged_in .zh-timeline-comment-header-text {
     color: #bebebe;
   }
   /* auto-generated rule for "color: #586069" */
@@ -3803,27 +3712,18 @@
   .repo-access-add-team .team-size, .follow-list .follow-list-info,
   .user-status-org-button .user-status-org-detail,
   .gist-revisions-list .gist-revision-meta, .keyboard-mappings .keys,
-  div.light-bg a p, html[prefix*="ogp.me"] .btn .Counter,
-  html[prefix*="ogp.me"] .btn-octicon,
-  html[prefix*="ogp.me"] .form-checkbox .note,
-  html[prefix*="ogp.me"] .hfields .form-group dt label,
-  html[prefix*="ogp.me"] .note, html[prefix*="ogp.me"] .drag-and-drop,
-  html[prefix*="ogp.me"] .drag-and-drop-error-info,
-  html[prefix*="ogp.me"] h2.account, html[prefix*="ogp.me"] p.explain,
-  html[prefix*="ogp.me"] .menu-heading, html[prefix*="ogp.me"] .tabnav-tab,
-  html[prefix*="ogp.me"] .tabnav-extra,
-  html[prefix*="ogp.me"] .filter-list.pjax-active .filter-item,
-  html[prefix*="ogp.me"] .filter-item, html[prefix*="ogp.me"] .SideNav-item,
-  html[prefix*="ogp.me"] .subnav-item,
-  html[prefix*="ogp.me"] .subnav-search-input,
-  html[prefix*="ogp.me"] .UnderlineNav-item, html[prefix*="ogp.me"] .lead,
-  html[prefix*="ogp.me"] .dropdown-header, html[prefix*="ogp.me"] .Label--gray,
-  html[prefix*="ogp.me"] .Label--outline, html[prefix*="ogp.me"] .Counter,
-  html[prefix*="ogp.me"] .diffstat, html[prefix*="ogp.me"] .SelectMenu-item,
-  html[prefix*="ogp.me"] .Subhead-description,
-  html[prefix*="ogp.me"] .Toast-dismissButton:focus,
-  html[prefix*="ogp.me"] .Toast-dismissButton:hover,
-  html[prefix*="ogp.me"] .pullquote, body.status .lead,
+  div.light-bg a p, #graphiql .btn .Counter, #graphiql .btn-octicon,
+  #graphiql .form-checkbox .note, #graphiql .hfields .form-group dt label,
+  #graphiql .note, #graphiql .drag-and-drop, #graphiql .drag-and-drop-error-info,
+  #graphiql h2.account, #graphiql p.explain, #graphiql .menu-heading,
+  #graphiql .tabnav-tab, #graphiql .tabnav-extra,
+  #graphiql .filter-list.pjax-active .filter-item, #graphiql .filter-item,
+  #graphiql .SideNav-item, #graphiql .subnav-item,
+  #graphiql .subnav-search-input, #graphiql .UnderlineNav-item, #graphiql .lead,
+  #graphiql .dropdown-header, #graphiql .Label--gray, #graphiql .Label--outline,
+  #graphiql .Counter, #graphiql .diffstat, #graphiql .SelectMenu-item,
+  #graphiql .Subhead-description, #graphiql .Toast-dismissButton:focus,
+  #graphiql .Toast-dismissButton:hover, #graphiql .pullquote, body.status .lead,
   body[class="page-responsive"] .lead,
   body[class="page-responsive"] .form-checkbox .note,
   body[class="page-responsive"] .hfields .form-group dt label,
@@ -3915,9 +3815,8 @@
   .jump-to-field-active::placeholder,
   .notifications-list-item:hover .notification-list-item-actions .btn,
   #site-search-results .search-result-title,
-  #site-search-results .search-result-intro,
-  html[prefix*="ogp.me"] .color-gray-6, html[prefix*="ogp.me"] .text-gray,
-  html[prefix*="ogp.me"] .link-gray, html[prefix*="ogp.me"] .muted-link,
+  #site-search-results .search-result-intro, #graphiql .color-gray-6,
+  #graphiql .text-gray, #graphiql .link-gray, #graphiql .muted-link,
   body.status .text-gray, body.status .link-gray, body.status .muted-link,
   body[class="page-responsive"] .color-gray-6,
   body[class="page-responsive"] .text-gray,
@@ -4159,19 +4058,16 @@
   .user-status-emoji-tab[role=tab][aria-selected=true] .UnderlineNav-octicon,
   .gist-quicksearch-results .gist-quicksearch-result-header,
   .gist-quicksearch-results .select-menu-item h4,
-  .gist-quicksearch-results .select-menu-item span,
-  html[prefix*="ogp.me"] ::placeholder, html[prefix*="ogp.me"] .SideNav-icon,
-  html[prefix*="ogp.me"] .UnderlineNav-item:hover .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .UnderlineNav-item:focus .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .UnderlineNav-item.selected .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .UnderlineNav-item[role=tab][aria-selected=true] .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .markdown-body blockquote,
-  html[prefix*="ogp.me"] .markdown-body h6,
-  html[prefix*="ogp.me"] .SelectMenu-closeButton,
-  html[prefix*="ogp.me"] .SelectMenu-tab,
-  html[prefix*="ogp.me"] .SelectMenu-divider,
-  html[prefix*="ogp.me"] .SelectMenu-footer, body.status small,
+  .gist-quicksearch-results .select-menu-item span, #graphiql ::placeholder,
+  #graphiql .SideNav-icon,
+  #graphiql .UnderlineNav-item:hover .UnderlineNav-octicon,
+  #graphiql .UnderlineNav-item:focus .UnderlineNav-octicon,
+  #graphiql .UnderlineNav-item.selected .UnderlineNav-octicon,
+  #graphiql .UnderlineNav-item[role=tab][aria-selected=true] .UnderlineNav-octicon,
+  #graphiql .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
+  #graphiql .markdown-body blockquote, #graphiql .markdown-body h6,
+  #graphiql .SelectMenu-closeButton, #graphiql .SelectMenu-tab,
+  #graphiql .SelectMenu-divider, #graphiql .SelectMenu-footer, body.status small,
   body.status .layout-content.status .table-row .date,
   body.status .color-secondary,
   body.status .layout-content.status .grouped-items-selector.inline .grouped-item,
@@ -4213,9 +4109,9 @@
   .color-gray-5, .text-gray-light,
   .select-menu-item.selected .octicon-circle-slash.select-menu-item-icon,
   .notification-navigation .notification-configure-filters .octicon,
-  .notifications-list-item .notification-list-item-link,
-  html[prefix*="ogp.me"] .color-gray-5, html[prefix*="ogp.me"] .text-gray-light,
-  body.status .text-gray-light, body[class="page-responsive"] .color-gray-5,
+  .notifications-list-item .notification-list-item-link, #graphiql .color-gray-5,
+  #graphiql .text-gray-light, body.status .text-gray-light,
+  body[class="page-responsive"] .color-gray-5,
   body[class="page-responsive"] .text-gray-light {
     color: #949494 !important;
   }
@@ -4238,13 +4134,11 @@
   .team-member-list-avatar .octicon, .branch-infobar .muted-link .octicon,
   .shelf-dismiss, .email-suggestion .octicon-mail,
   .gist-quicksearch-results .gist-quicksearch-no-results,
-  .breadcrumbs a:not(:last-child)::after,
-  html[prefix*="ogp.me"] .btn-octicon.disabled,
-  html[prefix*="ogp.me"] .btn-octicon.disabled:hover,
-  html[prefix*="ogp.me"] p.explain .octicon,
-  html[prefix*="ogp.me"] .UnderlineNav-octicon,
-  html[prefix*="ogp.me"] .TimelineItem--condensed .TimelineItem-badge,
-  html[prefix*="ogp.me"] .Toast-dismissButton:active,
+  .breadcrumbs a:not(:last-child)::after, #graphiql .btn-octicon.disabled,
+  #graphiql .btn-octicon.disabled:hover, #graphiql p.explain .octicon,
+  #graphiql .UnderlineNav-octicon,
+  #graphiql .TimelineItem--condensed .TimelineItem-badge,
+  #graphiql .Toast-dismissButton:active,
   body[class="page-responsive"] .UnderlineNav-octicon,
   body[class="page-responsive"] footer li,
   body[class="page-responsive"] .discussion-header .branches,
@@ -4256,7 +4150,7 @@
     color: #757575;
   }
   /* auto-generated rule for "color: #959da5 !important" */
-  .color-gray-4, html[prefix*="ogp.me"] .color-gray-4,
+  .color-gray-4, #graphiql .color-gray-4,
   body[class="page-responsive"] .color-gray-4 {
     color: #757575 !important;
   }
@@ -4309,8 +4203,7 @@
   /* auto-generated rule for "color: #a3aab1" */
   .blankslate-icon, .select-menu-text-filter input::placeholder,
   ul.comparison-list > li .octicon, .team-project-suggestion-number,
-  html[prefix*="ogp.me"] .blankslate-icon,
-  body[class="page-responsive"] footer .octicon,
+  #graphiql .blankslate-icon, body[class="page-responsive"] footer .octicon,
   body[class="page-responsive"] .diff-view .file .meta .octicon-file {
     color: #757575;
   }
@@ -4327,7 +4220,7 @@
   .locked-conversation .write-tab, .commit-group-title .octicon-git-commit,
   .table-of-contents .toc-diff-stats .octicon, .footer-octicon, .steps li,
   .select-menu-header .close-button, .select-menu-header .octicon,
-  html[prefix*="ogp.me"] .subnav-search-icon,
+  #graphiql .subnav-search-icon,
   body[class="page-responsive"] .subnav-search-icon,
   body[class="page-responsive"] .list-action-form > .btn-link,
   body[class="page-responsive"] .mobile-toc .switcher-option .octicon,
@@ -4348,16 +4241,14 @@
   .prose-diff > .markdown-body li.added.moved-down .octicon,
   .prose-diff > .markdown-body li.added.moved-up .octicon, .reblame-link,
   .topic-box .unstarred, .notification-actions .unsaved-notification,
-  html[prefix*="ogp.me"] .pagination .gap,
-  html[prefix*="ogp.me"] .pagination .disabled,
-  html[prefix*="ogp.me"] .pagination .gap:hover,
-  html[prefix*="ogp.me"] .pagination .disabled:hover,
-  html[prefix*="ogp.me"] .dropdown-menu-dark .dropdown-header,
+  #graphiql .pagination .gap, #graphiql .pagination .disabled,
+  #graphiql .pagination .gap:hover, #graphiql .pagination .disabled:hover,
+  #graphiql .dropdown-menu-dark .dropdown-header,
   body[class="page-responsive"] .dropdown-menu-dark .dropdown-header {
     color: #404040;
   }
   /* auto-generated rule for "color: #d1d5da !important" */
-  .color-gray-3, html[prefix*="ogp.me"] .color-gray-3,
+  .color-gray-3, #graphiql .color-gray-3,
   body[class="page-responsive"] .color-gray-3 {
     color: #404040 !important;
   }
@@ -4398,7 +4289,7 @@
     color: rgba(230, 230, 230, .7);
   }
   /* auto-generated rule for "color: rgba(27,31,35,.6)" */
-  .branch-name, .blob-num:hover, html[prefix*="ogp.me"] .branch-name {
+  .branch-name, .blob-num:hover, #graphiql .branch-name {
     color: rgba(230, 230, 230, .6);
   }
   /* auto-generated rule for "color: rgba(27,31,35,.3)" */
@@ -4408,8 +4299,7 @@
   .reponav-item .octicon, .blame-commit-message .message.blank,
   .pinned-gist-blob-num:hover,
   .gist-quicksearch-results .select-menu-item .octicon-gist,
-  html[prefix*="ogp.me"] .btn-outline:disabled,
-  html[prefix*="ogp.me"] .btn-outline.disabled,
+  #graphiql .btn-outline:disabled, #graphiql .btn-outline.disabled,
   body[class="page-responsive"] .diff-view .file .blob-num {
     color: rgba(230, 230, 230, .3);
   }
@@ -4537,29 +4427,22 @@
   .toggle-user-status-edit:focus .user-status-message-wrapper,
   .toggle-user-status-edit:hover .user-status-message-wrapper,
   .search-result-title mark, .search-result-title .ais-Highlight-highlighted,
-  #site-search-results .search-result-title em, html[prefix*="ogp.me"] a,
-  html[prefix*="ogp.me"] .Box-row.navigation-focus .Box-row--drag-button,
-  html[prefix*="ogp.me"] .Box-row-link:hover,
-  html[prefix*="ogp.me"] .btn-blue .Counter, html[prefix*="ogp.me"] .btn-outline,
-  html[prefix*="ogp.me"] .btn-outline:hover .Counter,
-  html[prefix*="ogp.me"] .btn-outline:active .Counter,
-  html[prefix*="ogp.me"] .btn-outline.selected .Counter,
-  html[prefix*="ogp.me"] [open] > .btn-outline .Counter,
-  html[prefix*="ogp.me"] .btn-link, html[prefix*="ogp.me"] .btn-invisible,
-  html[prefix*="ogp.me"] .btn-invisible:hover,
-  html[prefix*="ogp.me"] .btn-invisible:active,
-  html[prefix*="ogp.me"] .btn-invisible:focus,
-  html[prefix*="ogp.me"] .btn-invisible.selected,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-hover,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-active,
-  html[prefix*="ogp.me"] .btn-octicon:hover,
-  html[prefix*="ogp.me"] .social-count:hover,
-  html[prefix*="ogp.me"] .drag-and-drop-error-info a,
-  html[prefix*="ogp.me"] a.tabnav-extra:hover,
-  html[prefix*="ogp.me"] .SideNav-subItem, html[prefix*="ogp.me"] .pagination a,
-  html[prefix*="ogp.me"] .pagination span, html[prefix*="ogp.me"] .pagination em,
-  html[prefix*="ogp.me"] a.branch-name,
-  html[prefix*="ogp.me"] .btn-outline-mktg:hover, body.status a,
+  #site-search-results .search-result-title em, #graphiql a,
+  #graphiql .Box-row.navigation-focus .Box-row--drag-button,
+  #graphiql .Box-row-link:hover, #graphiql .btn-blue .Counter,
+  #graphiql .btn-outline, #graphiql .btn-outline:hover .Counter,
+  #graphiql .btn-outline:active .Counter,
+  #graphiql .btn-outline.selected .Counter,
+  #graphiql [open] > .btn-outline .Counter, #graphiql .btn-link,
+  #graphiql .btn-invisible, #graphiql .btn-invisible:hover,
+  #graphiql .btn-invisible:active, #graphiql .btn-invisible:focus,
+  #graphiql .btn-invisible.selected,
+  #graphiql .btn-invisible.zeroclipboard-is-hover,
+  #graphiql .btn-invisible.zeroclipboard-is-active, #graphiql .btn-octicon:hover,
+  #graphiql .social-count:hover, #graphiql .drag-and-drop-error-info a,
+  #graphiql a.tabnav-extra:hover, #graphiql .SideNav-subItem,
+  #graphiql .pagination a, #graphiql .pagination span, #graphiql .pagination em,
+  #graphiql a.branch-name, #graphiql .btn-outline-mktg:hover, body.status a,
   body.status .layout-content.status-index .components-statuses .component-container.status-blue:after,
   body.status .layout-content.status-full-history .month .incident-container .impact-maintenance,
   body.status .layout-content.status-incident .incident-name.impact-maintenance,
@@ -4592,14 +4475,12 @@
   .link-hover-blue:hover, .muted-link:hover,
   .notification-navigation .menu-item.selected .octicon,
   .notification-navigation .notification-configure-filters:hover .octicon,
-  .text-blue-mktg, html[prefix*="ogp.me"] .color-blue-5,
-  html[prefix*="ogp.me"] .text-blue, html[prefix*="ogp.me"] .link-gray:hover,
-  html[prefix*="ogp.me"] .link-gray-dark:hover,
-  html[prefix*="ogp.me"] .link-hover-blue:hover,
-  html[prefix*="ogp.me"] .muted-link:hover, body.status .text-blue,
-  body.status .link-gray:hover, body.status .link-gray-dark:hover,
-  body.status .link-hover-blue:hover, body.status .muted-link:hover,
-  body[class="page-responsive"] .color-blue-5,
+  .text-blue-mktg, #graphiql .color-blue-5, #graphiql .text-blue,
+  #graphiql .link-gray:hover, #graphiql .link-gray-dark:hover,
+  #graphiql .link-hover-blue:hover, #graphiql .muted-link:hover,
+  body.status .text-blue, body.status .link-gray:hover,
+  body.status .link-gray-dark:hover, body.status .link-hover-blue:hover,
+  body.status .muted-link:hover, body[class="page-responsive"] .color-blue-5,
   body[class="page-responsive"] .text-blue,
   body[class="page-responsive"] .link-gray:hover,
   body[class="page-responsive"] .link-gray-dark:hover,
@@ -4609,7 +4490,7 @@
   }
   /* auto-generated rule for "color: #1074e7" */
   .btn-outline-mktg, .link-mktg, .MarketingBody blockquote,
-  .MarketingBody-lead a, html[prefix*="ogp.me"] .btn-outline-mktg {
+  .MarketingBody-lead a, #graphiql .btn-outline-mktg {
     color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "color: #1074e7 !important" */
@@ -4617,13 +4498,13 @@
     color: /*[[base-color]]*/ !important;
   }
   /* auto-generated rule for "color: #1f61a0" */
-  html[prefix*="ogp.me"] .graphiql-container .field-name {
+  #graphiql .graphiql-container .field-name {
     color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "color: rgba(88,96,105,.5)" */
   .btn-link:disabled, .btn-link:disabled:hover, .btn-link[aria-disabled=true],
-  .btn-link[aria-disabled=true]:hover, html[prefix*="ogp.me"] .btn-link:disabled,
-  html[prefix*="ogp.me"] .btn-link:disabled:hover {
+  .btn-link[aria-disabled=true]:hover, #graphiql .btn-link:disabled,
+  #graphiql .btn-link:disabled:hover {
     color: rgba(148, 148, 148, .5);
   }
   /* auto-generated rule for "color: #24292e" */
@@ -4699,35 +4580,26 @@
   .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"],
   .SideNav-subItem[aria-current="page"], .SideNav-subItem[aria-selected="true"],
   .directory-toc h3 a, .markdown-body .lead-mktg p, div.light-bg a,
-  div.light-bg a h4, #q, html[prefix*="ogp.me"] body,
-  html[prefix*="ogp.me"] .Box-row-link, html[prefix*="ogp.me"] .btn,
-  html[prefix*="ogp.me"] .social-count, html[prefix*="ogp.me"] .form-control,
-  html[prefix*="ogp.me"] .form-select, html[prefix*="ogp.me"] p.explain strong,
-  html[prefix*="ogp.me"] .menu-item.selected,
-  html[prefix*="ogp.me"] .menu-item .octicon,
-  html[prefix*="ogp.me"] .tabnav-tab[aria-selected=true],
-  html[prefix*="ogp.me"] .tabnav-tab.selected,
-  html[prefix*="ogp.me"] .tabnav-tab:hover,
-  html[prefix*="ogp.me"] .tabnav-tab:focus,
-  html[prefix*="ogp.me"] .SideNav-item:hover,
-  html[prefix*="ogp.me"] .SideNav-item:focus,
-  html[prefix*="ogp.me"] .SideNav-item[aria-current="page"],
-  html[prefix*="ogp.me"] .SideNav-item[aria-selected="true"],
-  html[prefix*="ogp.me"] .SideNav-subItem:hover,
-  html[prefix*="ogp.me"] .SideNav-subItem:focus,
-  html[prefix*="ogp.me"] .SideNav-subItem[aria-current="page"],
-  html[prefix*="ogp.me"] .SideNav-subItem[aria-selected="true"],
-  html[prefix*="ogp.me"] .UnderlineNav-item:hover,
-  html[prefix*="ogp.me"] .UnderlineNav-item:focus,
-  html[prefix*="ogp.me"] .UnderlineNav-item.selected,
-  html[prefix*="ogp.me"] .UnderlineNav-item[role=tab][aria-selected=true],
-  html[prefix*="ogp.me"] .UnderlineNav-item[aria-current],
-  html[prefix*="ogp.me"] .text-emphasized, html[prefix*="ogp.me"] .dropdown-item,
-  html[prefix*="ogp.me"] .Counter--gray-light,
-  html[prefix*="ogp.me"] .markdown-body span.frame span span,
-  html[prefix*="ogp.me"] .SelectMenu-tab[aria-selected="true"],
-  html[prefix*="ogp.me"] .SelectMenu-item[aria-checked="true"],
-  html[prefix*="ogp.me"] .Toast--warning .Toast-icon,
+  div.light-bg a h4, #q, #graphiql body, #graphiql .Box-row-link, #graphiql .btn,
+  #graphiql .social-count, #graphiql .form-control, #graphiql .form-select,
+  #graphiql p.explain strong, #graphiql .menu-item.selected,
+  #graphiql .menu-item .octicon, #graphiql .tabnav-tab[aria-selected=true],
+  #graphiql .tabnav-tab.selected, #graphiql .tabnav-tab:hover,
+  #graphiql .tabnav-tab:focus, #graphiql .SideNav-item:hover,
+  #graphiql .SideNav-item:focus, #graphiql .SideNav-item[aria-current="page"],
+  #graphiql .SideNav-item[aria-selected="true"],
+  #graphiql .SideNav-subItem:hover, #graphiql .SideNav-subItem:focus,
+  #graphiql .SideNav-subItem[aria-current="page"],
+  #graphiql .SideNav-subItem[aria-selected="true"],
+  #graphiql .UnderlineNav-item:hover, #graphiql .UnderlineNav-item:focus,
+  #graphiql .UnderlineNav-item.selected,
+  #graphiql .UnderlineNav-item[role=tab][aria-selected=true],
+  #graphiql .UnderlineNav-item[aria-current], #graphiql .text-emphasized,
+  #graphiql .dropdown-item, #graphiql .Counter--gray-light,
+  #graphiql .markdown-body span.frame span span,
+  #graphiql .SelectMenu-tab[aria-selected="true"],
+  #graphiql .SelectMenu-item[aria-checked="true"],
+  #graphiql .Toast--warning .Toast-icon,
   html[prefix] .site-header-nav .dropdown-menu a.active,
   body.status .text-emphasized,
   body.status .updates-dropdown-container .updates-dropdown-nav::before,
@@ -4796,7 +4668,7 @@
   .notifications-list-item:hover .notification-list-item-actions .btn:hover,
   .notifications-list-item.navigation-focus .notification-list-item-link,
   .notifications-list-item.notification-unread .notification-list-item-link,
-  html[prefix*="ogp.me"] .color-gray-9, html[prefix*="ogp.me"] .link-gray-dark,
+  #graphiql .color-gray-9, #graphiql .link-gray-dark,
   body.status .link-gray-dark, body.status .flat-button,
   body.status .history-header .show-filter,
   body[class="page-responsive"] .color-gray-9,
@@ -4815,23 +4687,21 @@
   .btn-transparent:active, .btn-transparent:hover, .choose-team-lp .lead-mktg,
   .choose-team-lp .feature-list, .graph-canvas .activity,
   .org-insights-graph-canvas .activity, .pinned-item-name,
-  html[prefix*="ogp.me"] .btn-transparent:hover,
-  html[prefix*="ogp.me"] .btn-transparent:active,
+  #graphiql .btn-transparent:hover, #graphiql .btn-transparent:active,
   body[class="page-responsive"] .bubble-title {
     color: #bebebe;
   }
   /* auto-generated rule for "color: #2f363d !important" */
-  .color-gray-8, .MarketingBody-lead > p:first-child,
-  html[prefix*="ogp.me"] .color-gray-8,
+  .color-gray-8, .MarketingBody-lead > p:first-child, #graphiql .color-gray-8,
   body[class="page-responsive"] .color-gray-8 {
     color: #bebebe !important;
   }
   /* auto-generated rule for "color: #032f62" */
-  .flash, html[prefix*="ogp.me"] .flash, body[class="page-responsive"] .flash {
+  .flash, #graphiql .flash, body[class="page-responsive"] .flash {
     color: #9daccc;
   }
   /* auto-generated rule for "color: #032f62 !important" */
-  .color-blue-8, .text-blue-dark, html[prefix*="ogp.me"] .color-blue-8,
+  .color-blue-8, .text-blue-dark, #graphiql .color-blue-8,
   body[class="page-responsive"] .color-blue-8 {
     color: #9daccc !important;
   }
@@ -4840,7 +4710,7 @@
     color: #bebebe;
   }
   /* auto-generated rule for "color: #05264c !important" */
-  .color-blue-9, html[prefix*="ogp.me"] .color-blue-9,
+  .color-blue-9, #graphiql .color-blue-9,
   body[class="page-responsive"] .color-blue-9 {
     color: #bebebe !important;
   }
@@ -4871,11 +4741,9 @@
   .pinned-item-list-item.is-dragging, .pinned-item-list-item.sortable-ghost,
   .diffbar-range-menu .in-range:not(.is-range-selected),
   .setup-form .setup-plans tr.selected,
-  html[prefix*="ogp.me"] .Box-row--focus-blue.navigation-focus,
-  html[prefix*="ogp.me"] .Box-row--hover-blue:hover,
-  html[prefix*="ogp.me"] .Box--blue .Box-header,
-  html[prefix*="ogp.me"] .Box-header--blue,
-  html[prefix*="ogp.me"] .Box-row--blue,
+  #graphiql .Box-row--focus-blue.navigation-focus,
+  #graphiql .Box-row--hover-blue:hover, #graphiql .Box--blue .Box-header,
+  #graphiql .Box-header--blue, #graphiql .Box-row--blue,
   body[class="page-responsive"] .Box-row--focus-blue.navigation-focus,
   body[class="page-responsive"] .Box-row--hover-blue:hover,
   body[class="page-responsive"] .Box--blue .Box-header,
@@ -4888,9 +4756,8 @@
   /* auto-generated rule for "background-color: #f1f8ff !important" */
   .bg-blue-light, .bg-blue-0, .notifications-list-item:hover,
   .notifications-list-item.navigation-focus, .project-column.moving,
-  .project-card.moving, html[prefix*="ogp.me"] .bg-blue-light,
-  html[prefix*="ogp.me"] .bg-blue-0, body.status .bg-blue-light,
-  body[class="page-responsive"] .bg-blue-light,
+  .project-card.moving, #graphiql .bg-blue-light, #graphiql .bg-blue-0,
+  body.status .bg-blue-light, body[class="page-responsive"] .bg-blue-light,
   body[class="page-responsive"] .bg-blue-0 {
     background-color: #182030 !important;
   }
@@ -4903,19 +4770,18 @@
     background-color: #182030;
   }
   /* auto-generated rule for "background-color: #032f62 !important" */
-  .bg-blue-8, .bg-blue-dark, html[prefix*="ogp.me"] .bg-blue-8,
+  .bg-blue-8, .bg-blue-dark, #graphiql .bg-blue-8,
   body[class="page-responsive"] .bg-blue-8 {
     background-color: #182030 !important;
   }
   /* auto-generated rule for "background-color: #dbedff" */
   .mobile-work-overlay-bluetap, .flash, a.commit-ref:hover, .blob-num-expandable,
-  .blob-num-hunk, .add-reactions-options-item:active,
-  html[prefix*="ogp.me"] .flash, body[class="page-responsive"] .flash {
+  .blob-num-hunk, .add-reactions-options-item:active, #graphiql .flash,
+  body[class="page-responsive"] .flash {
     background-color: #182030;
   }
   /* auto-generated rule for "background-color: #dbedff !important" */
-  .bg-blue-1, html[prefix*="ogp.me"] .bg-blue-1,
-  body[class="page-responsive"] .bg-blue-1 {
+  .bg-blue-1, #graphiql .bg-blue-1, body[class="page-responsive"] .bg-blue-1 {
     background-color: #182030 !important;
   }
   /* auto-generated rule for "border-right-color: #f1f8ff" */
@@ -4931,8 +4797,7 @@
     background-color: #246;
   }
   /* auto-generated rule for "background-color: #c8e1ff !important" */
-  .bg-blue-2, html[prefix*="ogp.me"] .bg-blue-2,
-  body[class="page-responsive"] .bg-blue-2 {
+  .bg-blue-2, #graphiql .bg-blue-2, body[class="page-responsive"] .bg-blue-2 {
     background-color: #246 !important;
   }
   /* auto-generated rule for "border: 1px solid #c8e1ff" */
@@ -4942,12 +4807,9 @@
   /* auto-generated rule for "border-color: #c8e1ff" */
   .Box--blue, .Box--blue .Box-header, .Box--blue .Box-body,
   .Box--blue .Box-footer, .Box--blue .Box-row, .Box-header--blue,
-  html[prefix*="ogp.me"] .Box--blue,
-  html[prefix*="ogp.me"] .Box--blue .Box-header,
-  html[prefix*="ogp.me"] .Box--blue .Box-body,
-  html[prefix*="ogp.me"] .Box--blue .Box-row,
-  html[prefix*="ogp.me"] .Box--blue .Box-footer,
-  html[prefix*="ogp.me"] .Box-header--blue,
+  #graphiql .Box--blue, #graphiql .Box--blue .Box-header,
+  #graphiql .Box--blue .Box-body, #graphiql .Box--blue .Box-row,
+  #graphiql .Box--blue .Box-footer, #graphiql .Box-header--blue,
   body[class="page-responsive"] .Box--blue,
   body[class="page-responsive"] .Box--blue .Box-header,
   body[class="page-responsive"] .Box--blue .Box-body,
@@ -4957,7 +4819,7 @@
     border-color: #246;
   }
   /* auto-generated rule for "border-color: #c8e1ff !important" */
-  .border-blue-light, html[prefix*="ogp.me"] .border-blue-light,
+  .border-blue-light, #graphiql .border-blue-light,
   body.status .border-blue-light,
   body[class="page-responsive"] .border-blue-light {
     border-color: #246 !important;
@@ -4981,7 +4843,7 @@
     border-right-color: #246;
   }
   /* auto-generated rule for "background-color: #0361cc" */
-  .btn-blue, html[prefix*="ogp.me"] .btn-blue {
+  .btn-blue, #graphiql .btn-blue {
     background-color: #182030;
   }
   /* auto-generated rule for "background-color: #05264c" */
@@ -4989,8 +4851,7 @@
     background-color: #182030;
   }
   /* auto-generated rule for "background-color: #05264c !important" */
-  .bg-blue-9, html[prefix*="ogp.me"] .bg-blue-9,
-  body[class="page-responsive"] .bg-blue-9 {
+  .bg-blue-9, #graphiql .bg-blue-9, body[class="page-responsive"] .bg-blue-9 {
     background-color: #182030 !important;
   }
   /* auto-generated rule for "background: #005cc2" */
@@ -5085,21 +4946,14 @@
   .typeahead-result[aria-selected=true], .selected-emoji,
   .user-status-org-button.selected, .gist-snippet .link-overlay .link,
   .subnav-item.selected:hover, .subnav-item.selected:focus,
-  html[prefix*="ogp.me"] .btn-outline:hover,
-  html[prefix*="ogp.me"] .btn-outline:active,
-  html[prefix*="ogp.me"] .btn-outline.selected,
-  html[prefix*="ogp.me"] [open] > .btn-outline,
-  html[prefix*="ogp.me"] .filter-list.pjax-active .filter-item.pjax-active,
-  html[prefix*="ogp.me"] .filter-item.selected,
-  html[prefix*="ogp.me"] .subnav-item.selected,
-  html[prefix*="ogp.me"] .subnav-item.selected:hover,
-  html[prefix*="ogp.me"] .subnav-item.selected:focus,
-  html[prefix*="ogp.me"] .pagination .current,
-  html[prefix*="ogp.me"] .pagination .current:hover,
-  html[prefix*="ogp.me"] .dropdown-item:focus,
-  html[prefix*="ogp.me"] .dropdown-item:hover,
-  html[prefix*="ogp.me"] .Toast-icon, html[prefix*="ogp.me"] .btn-mktg:hover,
-  html[prefix*="ogp.me"] .alpha-badge,
+  #graphiql .btn-outline:hover, #graphiql .btn-outline:active,
+  #graphiql .btn-outline.selected, #graphiql [open] > .btn-outline,
+  #graphiql .filter-list.pjax-active .filter-item.pjax-active,
+  #graphiql .filter-item.selected, #graphiql .subnav-item.selected,
+  #graphiql .subnav-item.selected:hover, #graphiql .subnav-item.selected:focus,
+  #graphiql .pagination .current, #graphiql .pagination .current:hover,
+  #graphiql .dropdown-item:focus, #graphiql .dropdown-item:hover,
+  #graphiql .Toast-icon, #graphiql .btn-mktg:hover, #graphiql .alpha-badge,
   body.status .component-items-selector .active,
   body.status .component-items-selector .active:hover,
   body.status .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
@@ -5125,8 +4979,8 @@
   /* auto-generated rule for "background-color: #0366d6 !important" */
   .bg-blue, .bg-blue-5, .checks-list-item.selected .checks-list-item-name,
   .plan-category-tab[aria-selected=true], .hx_badge[aria-pressed=true],
-  html[prefix*="ogp.me"] .bg-blue, html[prefix*="ogp.me"] .bg-blue-5,
-  body.status .bg-blue, body[class="page-responsive"] .bg-blue,
+  #graphiql .bg-blue, #graphiql .bg-blue-5, body.status .bg-blue,
+  body[class="page-responsive"] .bg-blue,
   body[class="page-responsive"] .bg-blue-5 {
     background-color: /*[[base-color]]*/ !important;
     color: #fff !important;
@@ -5148,17 +5002,12 @@
   .newsletter-frequency-choice:hover, .newsletter-frequency-choice:hover h3,
   .reaction-sort-item[aria-checked=true], .gist-snippet .file-box:hover .file,
   .subnav-item.selected:hover, .subnav-item.selected:focus,
-  html[prefix*="ogp.me"] .btn-outline:hover,
-  html[prefix*="ogp.me"] .btn-outline:active,
-  html[prefix*="ogp.me"] .btn-outline.selected,
-  html[prefix*="ogp.me"] [open] > .btn-outline,
-  html[prefix*="ogp.me"] .btn-outline:focus,
-  html[prefix*="ogp.me"] .subnav-item.selected,
-  html[prefix*="ogp.me"] .subnav-item.selected:hover,
-  html[prefix*="ogp.me"] .subnav-item.selected:focus,
-  html[prefix*="ogp.me"] .pagination .current,
-  html[prefix*="ogp.me"] .pagination .current:hover,
-  html[prefix*="ogp.me"] .btn-mktg:hover,
+  #graphiql .btn-outline:hover, #graphiql .btn-outline:active,
+  #graphiql .btn-outline.selected, #graphiql [open] > .btn-outline,
+  #graphiql .btn-outline:focus, #graphiql .subnav-item.selected,
+  #graphiql .subnav-item.selected:hover, #graphiql .subnav-item.selected:focus,
+  #graphiql .pagination .current, #graphiql .pagination .current:hover,
+  #graphiql .btn-mktg:hover,
   body.status .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
   body.status .layout-content.status.status-index .scheduled-incidents-container,
   body[class="page-responsive"] .subnav-item.selected,
@@ -5170,7 +5019,7 @@
   }
   /* auto-generated rule for "border-color: #0366d6 !important" */
   .border-blue, .signup-prompt .btn-link:hover, .hx_badge[aria-pressed=true],
-  html[prefix*="ogp.me"] .border-blue, body.status .border-blue,
+  #graphiql .border-blue, body.status .border-blue,
   body[class="page-responsive"] .border-blue {
     border-color: /*[[base-color]]*/ !important;
   }
@@ -5180,11 +5029,11 @@
     border-bottom-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border: 1px solid #1074e7" */
-  .btn-mktg, html[prefix*="ogp.me"] .btn-mktg {
+  .btn-mktg, #graphiql .btn-mktg {
     border-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-color: #1074e7" */
-  .btn-outline-mktg:hover, html[prefix*="ogp.me"] .btn-outline-mktg:hover {
+  .btn-outline-mktg:hover, #graphiql .btn-outline-mktg:hover {
     border-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "border-bottom-color: #1074e7" */
@@ -5211,11 +5060,9 @@
   .plan-choice--experiment.plan-choice--blue.open,
   .plan-choice--experiment.plan-choice--blue.selected,
   .focus.ais-SearchBox-input, .ais-SearchBox-input:focus, .focus#q, #q:focus,
-  html[prefix*="ogp.me"] .form-control.focus,
-  html[prefix*="ogp.me"] .form-control:focus,
-  html[prefix*="ogp.me"] .form-select.focus,
-  html[prefix*="ogp.me"] .form-select:focus,
-  html[prefix*="ogp.me"] .TimelineItem:target .TimelineItem-badge,
+  #graphiql .form-control.focus, #graphiql .form-control:focus,
+  #graphiql .form-select.focus, #graphiql .form-select:focus,
+  #graphiql .TimelineItem:target .TimelineItem-badge,
   body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
@@ -5292,16 +5139,13 @@
   .collaborators .collab-remove .remove-link:hover,
   .repository-merge-features .form-group.errored .error,
   .setup-form .octicon-alert, .form-group.required dt label::after,
-  html[prefix*="ogp.me"] .btn-danger,
-  html[prefix*="ogp.me"] .btn-octicon-danger:hover,
-  html[prefix*="ogp.me"] .form-group dd h4.is-error,
-  html[prefix*="ogp.me"] .form-group.required dt label::after,
-  html[prefix*="ogp.me"] .form-group.errored label,
-  html[prefix*="ogp.me"] .status-indicator-failed .octicon-x,
-  html[prefix*="ogp.me"] .drag-and-drop .error,
-  html[prefix*="ogp.me"] .menu-item.alert .Counter,
-  html[prefix*="ogp.me"] .markdown-body .absent,
-  html[prefix*="ogp.me"] .Subhead-heading--danger,
+  #graphiql .btn-danger, #graphiql .btn-octicon-danger:hover,
+  #graphiql .form-group dd h4.is-error,
+  #graphiql .form-group.required dt label::after,
+  #graphiql .form-group.errored label,
+  #graphiql .status-indicator-failed .octicon-x, #graphiql .drag-and-drop .error,
+  #graphiql .menu-item.alert .Counter, #graphiql .markdown-body .absent,
+  #graphiql .Subhead-heading--danger,
   body[class="page-responsive"] .form-group dd h4.is-error,
   body[class="page-responsive"] .form-group.required dt label:after,
   body[class="page-responsive"] .form-group.errored label,
@@ -5321,31 +5165,30 @@
     color: #f44;
   }
   /* auto-generated rule for "color: #cb2431 !important" */
-  .color-red-6, .text-red, .uploaded-files .remove:hover,
-  html[prefix*="ogp.me"] .color-red-6, html[prefix*="ogp.me"] .text-red,
-  body.status .text-red, body[class="page-responsive"] .color-red-6,
+  .color-red-6, .text-red, .uploaded-files .remove:hover, #graphiql .color-red-6,
+  #graphiql .text-red, body.status .text-red,
+  body[class="page-responsive"] .color-red-6,
   body[class="page-responsive"] .text-red,
   .ghh-theme-github .ghh-commit-meta .text-diff-deleted,
   .ghh-theme-github .ghh-pull-meta .text-diff-deleted {
     color: #f44 !important;
   }
   /* auto-generated rule for "color: #b11a04" */
-  html[prefix*="ogp.me"] .graphiql-container .keyword {
+  #graphiql .graphiql-container .keyword {
     color: #f44;
   }
   /* auto-generated rule for "color: #86181d" */
   .form-group.errored .error, .menu-item .menu-warning, .flash-error,
   .comment-form-error, .invalid-topic .delete-topic-button,
   .topic-tag-action.invalid-topic, .pinned-items-reorder-error,
-  .user-profile-bio-message, html[prefix*="ogp.me"] .form-group.errored .error,
-  html[prefix*="ogp.me"] .menu-item .menu-warning,
-  html[prefix*="ogp.me"] .flash-error,
+  .user-profile-bio-message, #graphiql .form-group.errored .error,
+  #graphiql .menu-item .menu-warning, #graphiql .flash-error,
   body[class="page-responsive"] .form-group.errored .error,
   body[class="page-responsive"] .flash.flash-error {
     color: #f44;
   }
   /* auto-generated rule for "color: #86181d !important" */
-  .color-red-9, html[prefix*="ogp.me"] .color-red-9,
+  .color-red-9, #graphiql .color-red-9,
   body[class="page-responsive"] .color-red-9 {
     color: #f44 !important;
   }
@@ -5364,24 +5207,22 @@
   .check-annotation-failure:after, .topic-tag-action .remove-topic-button:hover,
   .hook-delivery-response-status,
   .session-device .session-state-indicator.revoked,
-  html[prefix*="ogp.me"] .Toast--error .Toast-icon,
+  #graphiql .Toast--error .Toast-icon,
   body[class="page-responsive"] .check-annotation-failure:after {
     background-color: #f44;
   }
   /* auto-generated rule for "background-color: #d73a49 !important" */
-  .bg-red, .bg-red-5, .usage-bar.exceeded .progress,
-  html[prefix*="ogp.me"] .bg-red, html[prefix*="ogp.me"] .bg-red-5,
-  body.status .bg-red, body[class="page-responsive"] .bg-red,
-  body[class="page-responsive"] .bg-red-5 {
+  .bg-red, .bg-red-5, .usage-bar.exceeded .progress, #graphiql .bg-red,
+  #graphiql .bg-red-5, body.status .bg-red,
+  body[class="page-responsive"] .bg-red, body[class="page-responsive"] .bg-red-5 {
     background-color: #f44 !important;
   }
   /* auto-generated rule for "background-color: #cb2431" */
   .btn-danger:hover, .State--red, .diffstat-block-deleted, .alert-label--high,
   .completeness-indicator-error,
   .saml-settings-form .test-status-indicator-error, .follow-list .flagged-banner,
-  html[prefix*="ogp.me"] .btn-danger:hover, html[prefix*="ogp.me"] .State--red,
-  html[prefix*="ogp.me"] .diffstat-block-deleted,
-  body[class="page-responsive"] .State--red,
+  #graphiql .btn-danger:hover, #graphiql .State--red,
+  #graphiql .diffstat-block-deleted, body[class="page-responsive"] .State--red,
   body[class="page-responsive"] .diffstat-block-deleted,
   body[class="page-responsive"] .alert-label--high,
   body[class="page-responsive"] .btn-danger:hover,
@@ -5390,8 +5231,7 @@
     background-color: #911;
   }
   /* auto-generated rule for "background-color: #cb2431 !important" */
-  .bg-red-6, html[prefix*="ogp.me"] .bg-red-6,
-  body[class="page-responsive"] .bg-red-6 {
+  .bg-red-6, #graphiql .bg-red-6, body[class="page-responsive"] .bg-red-6 {
     background-color: #911 !important;
   }
   /* auto-generated rule for "background: #ffdce0" */
@@ -5405,8 +5245,7 @@
   .blob-num-deletion, .btn-voted:focus, .btn-voted:hover,
   .btn-answer-active:focus, .btn-answer-active:hover,
   .invalid-topic .delete-topic-button, .topic-tag-action.invalid-topic,
-  html[prefix*="ogp.me"] .form-group.errored .error,
-  html[prefix*="ogp.me"] .flash-error,
+  #graphiql .form-group.errored .error, #graphiql .flash-error,
   body[class="page-responsive"] .form-group.errored .error,
   body[class="page-responsive"] .diff-view + .js-comments-holder .blob-num-deletion,
   body[class="page-responsive"] .diff-view .file .blob-num-deletion,
@@ -5414,9 +5253,8 @@
     background-color: #300;
   }
   /* auto-generated rule for "background-color: #ffdce0 !important" */
-  .bg-red-light, .bg-red-1, html[prefix*="ogp.me"] .bg-red-light,
-  html[prefix*="ogp.me"] .bg-red-1, body.status .bg-red-light,
-  body[class="page-responsive"] .bg-red-light,
+  .bg-red-light, .bg-red-1, #graphiql .bg-red-light, #graphiql .bg-red-1,
+  body.status .bg-red-light, body[class="page-responsive"] .bg-red-light,
   body[class="page-responsive"] .bg-red-1 {
     background-color: #300 !important;
   }
@@ -5443,16 +5281,16 @@
   .Box--danger, .Box--danger .Box-body:last-of-type,
   .Box--danger .Box-row:first-of-type, .timeline-comment-label-spammy,
   .marketplace-plan-dollar-field-container.is-errored .form-control,
-  .Label--draft, html[prefix*="ogp.me"] .Box--danger,
-  html[prefix*="ogp.me"] .Box--danger .Box-row:first-of-type,
-  html[prefix*="ogp.me"] .Box--danger .Box-body:last-of-type,
+  .Label--draft, #graphiql .Box--danger,
+  #graphiql .Box--danger .Box-row:first-of-type,
+  #graphiql .Box--danger .Box-body:last-of-type,
   body[class="page-responsive"] .Box--danger,
   body[class="page-responsive"] .Box--danger .Box-body:last-of-type,
   body[class="page-responsive"] .Box--danger .Box-row:first-of-type {
     border-color: #b00;
   }
   /* auto-generated rule for "border-color: #d73a49 !important" */
-  .border-red, html[prefix*="ogp.me"] .border-red, body.status .border-red,
+  .border-red, #graphiql .border-red, body.status .border-red,
   body[class="page-responsive"] .border-red {
     border-color: #b00 !important;
   }
@@ -5462,18 +5300,18 @@
   }
   /* auto-generated rule for "border-color: #cea0a5" */
   .form-group.errored .error, .topic-tag-action.invalid-topic,
-  html[prefix*="ogp.me"] .form-group.errored .error,
+  #graphiql .form-group.errored .error,
   body[class="page-responsive"] .form-group.errored .error {
     border-color: #f44;
   }
   /* auto-generated rule for "border-color: #cea0a5 !important" */
-  .border-red-light, html[prefix*="ogp.me"] .border-red-light,
-  body.status .border-red-light, body[class="page-responsive"] .border-red-light {
+  .border-red-light, #graphiql .border-red-light, body.status .border-red-light,
+  body[class="page-responsive"] .border-red-light {
     border-color: #f44 !important;
   }
   /* auto-generated rule for "border-bottom-color: #cea0a5" */
   .form-group.errored .error:before, .form-group.errored .error::before,
-  html[prefix*="ogp.me"] .form-group.errored .error::before,
+  #graphiql .form-group.errored .error::before,
   body[class="page-responsive"] .form-group.errored .error:before {
     border-bottom-color: #f44;
   }
@@ -5492,20 +5330,19 @@
     color: #f3582c;
   }
   /* auto-generated rule for "color: #a04100 !important" */
-  .color-orange-9, .text-orange, html[prefix*="ogp.me"] .color-orange-9,
-  html[prefix*="ogp.me"] .text-orange, body.status .text-orange,
+  .color-orange-9, .text-orange, #graphiql .color-orange-9,
+  #graphiql .text-orange, body.status .text-orange,
   body[class="page-responsive"] .color-orange-9,
   body[class="page-responsive"] .text-orange {
     color: #f3582c !important;
   }
   /* auto-generated rule for "background-color: #d15704" */
-  .Label--orange, .user-already-added:after,
-  html[prefix*="ogp.me"] .Label--orange,
+  .Label--orange, .user-already-added:after, #graphiql .Label--orange,
   body[class="page-responsive"] .Label--orange {
     background-color: #f3582c;
   }
   /* auto-generated rule for "background-color: #d15704 !important" */
-  .bg-orange-7, html[prefix*="ogp.me"] .bg-orange-7,
+  .bg-orange-7, #graphiql .bg-orange-7,
   body[class="page-responsive"] .bg-orange-7 {
     background-color: #f3582c !important;
   }
@@ -5524,7 +5361,7 @@
     background-color: #f3582c;
   }
   /* auto-generated rule for "background-color: #fb8532 !important" */
-  .bg-orange-4, html[prefix*="ogp.me"] .bg-orange-4,
+  .bg-orange-4, #graphiql .bg-orange-4,
   body[class="page-responsive"] .bg-orange-4 {
     background-color: #f3582c !important;
   }
@@ -5552,12 +5389,10 @@
   .authors-and-code .insertions, .summary-stats li .octicon-git-branch,
   .summary-stats li .octicon-issue-opened, .recent-user-key,
   .access-token.new-token .octicon-check, .two-factor-steps .sent-message,
-  .setup-form .octicon-check,
-  html[prefix*="ogp.me"] .form-group dd h4.is-success,
-  html[prefix*="ogp.me"] .form-group.successful .success,
-  html[prefix*="ogp.me"] .status-indicator-success .octicon-check,
-  html[prefix*="ogp.me"] .Label--outline-green,
-  body.status .update.resolved > strong,
+  .setup-form .octicon-check, #graphiql .form-group dd h4.is-success,
+  #graphiql .form-group.successful .success,
+  #graphiql .status-indicator-success .octicon-check,
+  #graphiql .Label--outline-green, body.status .update.resolved > strong,
   body.status .layout-content.status-index .components-statuses .component-container.status-green:after,
   .status-green .icon-indicator,
   body.status .components-container .component-inner-container.status-green .component-status,
@@ -5576,18 +5411,17 @@
     color: #6cc644;
   }
   /* auto-generated rule for "color: #28a745 !important" */
-  .color-green-5, .text-green, html[prefix*="ogp.me"] .color-green-5,
-  html[prefix*="ogp.me"] .text-green, body.status .text-green,
-  body[class="page-responsive"] .color-green-5,
+  .color-green-5, .text-green, #graphiql .color-green-5, #graphiql .text-green,
+  body.status .text-green, body[class="page-responsive"] .color-green-5,
   body[class="page-responsive"] .text-green {
     color: #6cc644 !important;
   }
   /* auto-generated rule for "color: #165c26" */
-  .flash-success, html[prefix*="ogp.me"] .flash-success {
+  .flash-success, #graphiql .flash-success {
     color: #6cc644;
   }
   /* auto-generated rule for "color: #165c26 !important" */
-  .color-green-8, html[prefix*="ogp.me"] .color-green-8,
+  .color-green-8, #graphiql .color-green-8,
   body[class="page-responsive"] .color-green-8 {
     color: #6cc644 !important;
   }
@@ -5606,9 +5440,8 @@
   .saml-settings-form .test-status-indicator-success,
   .two-factor-toggle .two-factor-on,
   .session-device .session-state-indicator.recent,
-  .user-list li .actions .status-modified, html[prefix*="ogp.me"] .btn-primary,
-  html[prefix*="ogp.me"] .Toast--success .Toast-icon,
-  html[prefix*="ogp.me"] .btn-primary-mktg:hover,
+  .user-list li .actions .status-modified, #graphiql .btn-primary,
+  #graphiql .Toast--success .Toast-icon, #graphiql .btn-primary-mktg:hover,
   body.status .layout-content.status.status-index .page-status.status-none,
   body[class="page-responsive"] .btn-primary,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary,
@@ -5616,18 +5449,16 @@
     background-color: #061;
   }
   /* auto-generated rule for "background-color: #28a745 !important" */
-  .bg-green, .bg-green-5, html[prefix*="ogp.me"] .bg-green,
-  html[prefix*="ogp.me"] .bg-green-5, body.status .bg-green,
-  body[class="page-responsive"] .bg-green,
+  .bg-green, .bg-green-5, #graphiql .bg-green, #graphiql .bg-green-5,
+  body.status .bg-green, body[class="page-responsive"] .bg-green,
   body[class="page-responsive"] .bg-green-5 {
     background-color: #061 !important;
   }
   /* auto-generated rule for "background-color: #2cbe4e" */
   .State--green, .diffstat-block-added, .progress-bar .progress,
   .branch-action-state-clean .branch-action-icon,
-  .completeness-indicator-success, html[prefix*="ogp.me"] .State--green,
-  html[prefix*="ogp.me"] .diffstat-block-added,
-  body[class="page-responsive"] .State--green,
+  .completeness-indicator-success, #graphiql .State--green,
+  #graphiql .diffstat-block-added, body[class="page-responsive"] .State--green,
   body[class="page-responsive"] .diffstat-block-added,
   body[class="page-responsive"] .progress-bar .progress,
   html.ghh-theme-classic .ghh .ghh-state-open,
@@ -5639,14 +5470,12 @@
     background: #002800;
   }
   /* auto-generated rule for "background-color: #dcffe4" */
-  .flash-success, .btn-answer:focus, .btn-answer:hover,
-  html[prefix*="ogp.me"] .flash-success {
+  .flash-success, .btn-answer:focus, .btn-answer:hover, #graphiql .flash-success {
     background-color: #002800;
   }
   /* auto-generated rule for "background-color: #dcffe4 !important" */
-  .bg-green-light, .bg-green-1, html[prefix*="ogp.me"] .bg-green-light,
-  html[prefix*="ogp.me"] .bg-green-1, body.status .bg-green-light,
-  body[class="page-responsive"] .bg-green-light,
+  .bg-green-light, .bg-green-1, #graphiql .bg-green-light, #graphiql .bg-green-1,
+  body.status .bg-green-light, body[class="page-responsive"] .bg-green-light,
   body[class="page-responsive"] .bg-green-1 {
     background-color: #002800 !important;
   }
@@ -5659,7 +5488,7 @@
     fill: #6cc644;
   }
   /* auto-generated rule for "border: 1px solid #34d058" */
-  .Label--outline-green, html[prefix*="ogp.me"] .Label--outline-green,
+  .Label--outline-green, #graphiql .Label--outline-green,
   body[class="page-responsive"] .Label--outline-green {
     border-color: #34d058;
   }
@@ -5670,7 +5499,7 @@
     border-color: #34d058;
   }
   /* auto-generated rule for "border-color: #34d058 !important" */
-  .border-green, html[prefix*="ogp.me"] .border-green, body.status .border-green,
+  .border-green, #graphiql .border-green, body.status .border-green,
   body[class="page-responsive"] .border-green {
     border-color: #34d058 !important;
   }
@@ -5710,12 +5539,12 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #dbab09 !important" */
-  .color-yellow-7, html[prefix*="ogp.me"] .color-yellow-7,
-  body.status .bg-pending, body[class="page-responsive"] .color-yellow-7 {
+  .color-yellow-7, #graphiql .color-yellow-7, body.status .bg-pending,
+  body[class="page-responsive"] .color-yellow-7 {
     color: #cb4 !important;
   }
   /* auto-generated rule for "color: #ca9800" */
-  html[prefix*="ogp.me"] .graphiql-container .type-name {
+  #graphiql .graphiql-container .type-name {
     color: #cb4;
   }
   /* auto-generated rule for "color: #b08800" */
@@ -5730,8 +5559,8 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #b08800 !important" */
-  .color-yellow-8, .text-yellow, html[prefix*="ogp.me"] .color-yellow-8,
-  html[prefix*="ogp.me"] .text-yellow, body.status .text-pending,
+  .color-yellow-8, .text-yellow, #graphiql .color-yellow-8,
+  #graphiql .text-yellow, body.status .text-pending,
   body[class="page-responsive"] .color-yellow-8,
   body[class="page-responsive"] .text-yellow {
     color: #cb4 !important;
@@ -5740,9 +5569,8 @@
   .form-warning, .form-group.warn .warning, .flash-warn, .RecentBranches-item,
   .RecentBranches-item-link,
   .archived-project-cards-pane .project-card .archived-header,
-  .diffbar-range-menu .is-range-selected, html[prefix*="ogp.me"] .form-warning,
-  html[prefix*="ogp.me"] .form-group.warn .warning,
-  html[prefix*="ogp.me"] .flash-warn,
+  .diffbar-range-menu .is-range-selected, #graphiql .form-warning,
+  #graphiql .form-group.warn .warning, #graphiql .flash-warn,
   body[class="page-responsive"] .form-warning,
   body[class="page-responsive"] .form-group.warn .warning,
   body[class="page-responsive"] .timeline-review-container.is-pending .file-header,
@@ -5751,7 +5579,7 @@
     color: #bba257;
   }
   /* auto-generated rule for "color: #735c0f !important" */
-  .color-yellow-9, html[prefix*="ogp.me"] .color-yellow-9,
+  .color-yellow-9, #graphiql .color-yellow-9,
   body[class="page-responsive"] .color-yellow-9 {
     color: #bba257 !important;
   }
@@ -5765,9 +5593,8 @@
     background-color: #cb4;
   }
   /* auto-generated rule for "background-color: #ffd33d !important" */
-  .bg-yellow, .bg-yellow-5, html[prefix*="ogp.me"] .bg-yellow,
-  html[prefix*="ogp.me"] .bg-yellow-5, body.status .bg-yellow,
-  body[class="page-responsive"] .bg-yellow,
+  .bg-yellow, .bg-yellow-5, #graphiql .bg-yellow, #graphiql .bg-yellow-5,
+  body.status .bg-yellow, body[class="page-responsive"] .bg-yellow,
   body[class="page-responsive"] .bg-yellow-5 {
     background-color: #cb4 !important;
   }
@@ -5783,7 +5610,7 @@
     background-color: #cb4;
   }
   /* auto-generated rule for "background-color: #ffdf5d !important" */
-  .bg-yellow-4, html[prefix*="ogp.me"] .bg-yellow-4,
+  .bg-yellow-4, #graphiql .bg-yellow-4,
   body[class="page-responsive"] .bg-yellow-4 {
     background-color: #cb4 !important;
   }
@@ -5800,9 +5627,8 @@
     background-color: #cb4;
   }
   /* auto-generated rule for "background-color: #dbab09 !important" */
-  .bg-yellow-dark, .bg-yellow-7, html[prefix*="ogp.me"] .bg-yellow-dark,
-  html[prefix*="ogp.me"] .bg-yellow-7,
-  body[class="page-responsive"] .bg-yellow-dark,
+  .bg-yellow-dark, .bg-yellow-7, #graphiql .bg-yellow-dark,
+  #graphiql .bg-yellow-7, body[class="page-responsive"] .bg-yellow-dark,
   body[class="page-responsive"] .bg-yellow-7 {
     background-color: #cb4 !important;
   }
@@ -5828,14 +5654,13 @@
     background-color: #261d08;
   }
   /* auto-generated rule for "background-color: #fffdef !important" */
-  .bg-yellow-0, html[prefix*="ogp.me"] .bg-yellow-0,
+  .bg-yellow-0, #graphiql .bg-yellow-0,
   body[class="page-responsive"] .bg-yellow-0 {
     background-color: #261d08 !important;
   }
   /* auto-generated rule for "background: #fffbdd" */
   .form-checkbox label em.highlight, .form-warning,
-  html[prefix*="ogp.me"] .form-checkbox label em.highlight,
-  html[prefix*="ogp.me"] .form-warning,
+  #graphiql .form-checkbox label em.highlight, #graphiql .form-warning,
   body[class="page-responsive"] .form-checkbox label em.highlight,
   body[class="page-responsive"] .form-warning {
     background: #261d08;
@@ -5845,9 +5670,8 @@
   .flash-warn, .warning, .boxed-group-warning, .blob-code-inner.highlighted,
   .blob-code-inner .highlighted, .RecentBranches,
   .diffbar-range-menu .is-range-selected, .user-status-container-border-busy,
-  html[prefix*="ogp.me"] .Box-row--yellow,
-  html[prefix*="ogp.me"] .form-group.warn .warning,
-  html[prefix*="ogp.me"] .flash-warn, html[prefix*="ogp.me"] .warning,
+  #graphiql .Box-row--yellow, #graphiql .form-group.warn .warning,
+  #graphiql .flash-warn, #graphiql .warning,
   body[class="page-responsive"] .form-group.warn .warning,
   body[class="page-responsive"] .Box-row--yellow,
   body[class="page-responsive"] .files-list .warning,
@@ -5859,7 +5683,7 @@
     background-color: #261d08;
   }
   /* auto-generated rule for "background-color: #fffbdd !important" */
-  .bg-yellow-1, html[prefix*="ogp.me"] .bg-yellow-1,
+  .bg-yellow-1, #graphiql .bg-yellow-1,
   body[class="page-responsive"] .bg-yellow-1 {
     background-color: #261d08 !important;
   }
@@ -5900,7 +5724,7 @@
   }
   /* auto-generated rule for "border-bottom-color: #fffbdd" */
   .form-group.warn .warning:after, .form-group.warn .warning::after,
-  html[prefix*="ogp.me"] .form-group.warn .warning::after,
+  #graphiql .form-group.warn .warning::after,
   body[class="page-responsive"] .form-group.warn .warning:after {
     border-bottom-color: #321;
   }
@@ -5929,7 +5753,7 @@
     border-bottom-color: #542;
   }
   /* auto-generated rule for "border: 1px solid #d9d0a5" */
-  .form-warning, html[prefix*="ogp.me"] .form-warning,
+  .form-warning, #graphiql .form-warning,
   body[class="page-responsive"] .form-warning {
     border-color: #542;
   }
@@ -5937,8 +5761,7 @@
   .form-group.warn .warning, .is-pending .comment-form-head.tabnav,
   .is-pending .file, .is-pending .file-header, .is-pending .tabnav-tab.selected,
   .review-comment .pending-batched-suggestion-label,
-  .is-pending .review-summary-form-wrapper,
-  html[prefix*="ogp.me"] .form-group.warn .warning,
+  .is-pending .review-summary-form-wrapper, #graphiql .form-group.warn .warning,
   body[class="page-responsive"] .form-group.warn .warning,
   body[class="page-responsive"] .bubble.is-pending,
   body[class="page-responsive"] .bubble.is-pending .discussion-block-title,
@@ -5947,13 +5770,13 @@
     border-color: #542;
   }
   /* auto-generated rule for "border-color: #d9d0a5 !important" */
-  .border-yellow, html[prefix*="ogp.me"] .border-yellow,
-  body.status .border-yellow, body[class="page-responsive"] .border-yellow {
+  .border-yellow, #graphiql .border-yellow, body.status .border-yellow,
+  body[class="page-responsive"] .border-yellow {
     border-color: #542 !important;
   }
   /* auto-generated rule for "border-bottom-color: #d9d0a5" */
   .form-group.warn .warning:before, .form-group.warn .warning::before,
-  html[prefix*="ogp.me"] .form-group.warn .warning::before,
+  #graphiql .form-group.warn .warning::before,
   body[class="page-responsive"] .form-group.warn .warning:before {
     border-bottom-color: #542;
   }
@@ -5988,14 +5811,14 @@
     background-color: #651;
   }
   /* auto-generated rule for "background-color: #fff5b1 !important" */
-  .bg-yellow-light, .bg-yellow-2, html[prefix*="ogp.me"] .bg-yellow-light,
-  html[prefix*="ogp.me"] .bg-yellow-2, body.status .bg-yellow-light,
+  .bg-yellow-light, .bg-yellow-2, #graphiql .bg-yellow-light,
+  #graphiql .bg-yellow-2, body.status .bg-yellow-light,
   body[class="page-responsive"] .bg-yellow-light,
   body[class="page-responsive"] .bg-yellow-2 {
     background-color: #651 !important;
   }
   /* auto-generated rule for "color: #8b2bb9" */
-  html[prefix*="ogp.me"] .graphiql-container .arg-name {
+  #graphiql .graphiql-container .arg-name {
     color: #8368aa;
   }
   /* auto-generated rule for "color: #6f42c1" */
@@ -6009,9 +5832,9 @@
     color: #8368aa;
   }
   /* auto-generated rule for "color: #6f42c1 !important" */
-  .color-purple-5, .text-purple, .hx_link-purple,
-  html[prefix*="ogp.me"] .color-purple-5, html[prefix*="ogp.me"] .text-purple,
-  body.status .text-purple, body[class="page-responsive"] .color-purple-5,
+  .color-purple-5, .text-purple, .hx_link-purple, #graphiql .color-purple-5,
+  #graphiql .text-purple, body.status .text-purple,
+  body[class="page-responsive"] .color-purple-5,
   body[class="page-responsive"] .text-purple {
     color: #8368aa !important;
   }
@@ -6022,15 +5845,14 @@
   .branch-action-state-merged .branch-action-icon,
   .org-insights-graph-canvas .metric-3 circle,
   .org-insights-graph-canvas path.metric-3,
-  .org-insights-svg-tip .metric-3 .legend, html[prefix*="ogp.me"] .State--purple,
+  .org-insights-svg-tip .metric-3 .legend, #graphiql .State--purple,
   body[class="page-responsive"] .State--purple,
   html.ghh-theme-classic .ghh .ghh-state-merged {
     background-color: #8368aa;
   }
   /* auto-generated rule for "background-color: #6f42c1 !important" */
-  .bg-purple, .bg-purple-5, html[prefix*="ogp.me"] .bg-purple,
-  html[prefix*="ogp.me"] .bg-purple-5, body.status .bg-purple,
-  body[class="page-responsive"] .bg-purple,
+  .bg-purple, .bg-purple-5, #graphiql .bg-purple, #graphiql .bg-purple-5,
+  body.status .bg-purple, body[class="page-responsive"] .bg-purple,
   body[class="page-responsive"] .bg-purple-5 {
     background-color: #8368aa !important;
   }
@@ -6044,8 +5866,8 @@
     background-color: #213;
   }
   /* auto-generated rule for "background-color: #f5f0ff !important" */
-  .bg-purple-light, .bg-purple-0, html[prefix*="ogp.me"] .bg-purple-light,
-  html[prefix*="ogp.me"] .bg-purple-0, body.status .bg-purple-light,
+  .bg-purple-light, .bg-purple-0, #graphiql .bg-purple-light,
+  #graphiql .bg-purple-0, body.status .bg-purple-light,
   body[class="page-responsive"] .bg-purple-light,
   body[class="page-responsive"] .bg-purple-0 {
     background-color: #213 !important;
@@ -6055,8 +5877,8 @@
     border-color: #8368aa;
   }
   /* auto-generated rule for "border-color: #6f42c1 !important" */
-  .border-purple, html[prefix*="ogp.me"] .border-purple,
-  body.status .border-purple, body[class="page-responsive"] .border-purple {
+  .border-purple, #graphiql .border-purple, body.status .border-purple,
+  body[class="page-responsive"] .border-purple {
     border-color: #8368aa !important;
   }
   /* auto-generated rule for "border-color: #8a63d2" */
@@ -6121,8 +5943,7 @@
     border-left-color: #8368aa;
   }
   /* auto-generated rule for "background-color: #ffeef8 !important" */
-  .bg-pink-0, html[prefix*="ogp.me"] .bg-pink-0,
-  body[class="page-responsive"] .bg-pink-0 {
+  .bg-pink-0, #graphiql .bg-pink-0, body[class="page-responsive"] .bg-pink-0 {
     background-color: #170711 !important;
   }
   /* auto-generated rule for "text-shadow: 0 1px 0 #fff" */
@@ -6133,8 +5954,7 @@
   }
   /* auto-generated rule for "outline: 1px solid #fff" */
   .avatar.avatar-more:after, .avatar.avatar-more:before,
-  html[prefix*="ogp.me"] .avatar.avatar-more::before,
-  html[prefix*="ogp.me"] .avatar.avatar-more::after {
+  #graphiql .avatar.avatar-more::before, #graphiql .avatar.avatar-more::after {
     outline-color: #222;
   }
   /* auto-generated rule for "background: rgba(0,0,0,.8)" */
@@ -6214,14 +6034,13 @@
   .follow-list .follow-list-name a,
   .details-overlay[open] > .dropdown-item:hover,
   .page-gist-edit .btn-toggle-visibility .octicon-gist-secret, mark,
-  .ais-Highlight-highlighted, html[prefix*="ogp.me"] legend,
-  html[prefix*="ogp.me"] .input-dark::placeholder,
-  html[prefix*="ogp.me"] .subnav-search-context .select-menu-item-icon,
-  html[prefix*="ogp.me"] .flash-close,
-  html[prefix*="ogp.me"] .dropdown-item:focus > .octicon,
-  html[prefix*="ogp.me"] .dropdown-item:hover > .octicon,
-  html[prefix*="ogp.me"] .dropdown-menu-dark .dropdown-item,
-  html[prefix*="ogp.me"] .markdown-body a:not([href]), html[prefix] legend,
+  .ais-Highlight-highlighted, #graphiql legend,
+  #graphiql .input-dark::placeholder,
+  #graphiql .subnav-search-context .select-menu-item-icon,
+  #graphiql .flash-close, #graphiql .dropdown-item:focus > .octicon,
+  #graphiql .dropdown-item:hover > .octicon,
+  #graphiql .dropdown-menu-dark .dropdown-item,
+  #graphiql .markdown-body a:not([href]), html[prefix] legend,
   html[prefix] .subnav-search-context .select-menu-item-icon,
   html[prefix] .flash-close, html[prefix] .markdown-body a:not([href]),
   body.status .markdown-display pre code,
@@ -6280,7 +6099,7 @@
     color: inherit;
   }
   ::-webkit-input-placeholder, .input-dark::-webkit-input-placeholder,
-  html[prefix*="ogp.me"] ::-webkit-input-placeholder,
+  #graphiql ::-webkit-input-placeholder,
   html[prefix] ::-webkit-input-placeholder,
   body.status ::-webkit-input-placeholder,
   body[class="page-responsive"] .input-dark::-webkit-input-placeholder {
@@ -6296,7 +6115,7 @@
   .label-select-menu .selected .select-menu-item-icon,
   .label-select-menu [aria-checked=mixed] .select-menu-item-icon,
   .label-select-menu [aria-checked=true] .select-menu-item-icon, .color-inherit,
-  html[prefix*="ogp.me"] .text-inherit, html[prefix] .text-inherit,
+  #graphiql .text-inherit, html[prefix] .text-inherit,
   html[prefix] .link-no-style, html[prefix] .link-no-style:hover,
   body.status .text-inherit, body[class="page-responsive"] .text-inherit {
     color: inherit !important;
@@ -6330,24 +6149,17 @@
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
   .hx_badge-search-container .hx_badge-input, .Box--responsive .Box-row--unread,
   .upload-enabled.focused .ais-SearchBox-input, .upload-enabled.focused #q,
-  html[prefix*="ogp.me"] .btn:disabled, html[prefix*="ogp.me"] .btn.disabled,
-  html[prefix*="ogp.me"] .btn-primary:disabled,
-  html[prefix*="ogp.me"] .btn-primary.disabled,
-  html[prefix*="ogp.me"] .btn-blue:disabled,
-  html[prefix*="ogp.me"] .btn-blue.disabled,
-  html[prefix*="ogp.me"] .btn-danger:disabled,
-  html[prefix*="ogp.me"] .btn-danger.disabled,
-  html[prefix*="ogp.me"] .btn-outline:disabled,
-  html[prefix*="ogp.me"] .btn-outline.disabled,
-  html[prefix*="ogp.me"] .btn-invisible:hover,
-  html[prefix*="ogp.me"] .btn-invisible:active,
-  html[prefix*="ogp.me"] .btn-invisible:focus,
-  html[prefix*="ogp.me"] .btn-invisible.selected,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-hover,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-active,
-  html[prefix*="ogp.me"] .upload-enabled.focused .form-control,
-  html[prefix*="ogp.me"] .Label--outline,
-  html[prefix*="ogp.me"] .SelectMenu-tab[aria-selected="true"],
+  #graphiql .btn:disabled, #graphiql .btn.disabled,
+  #graphiql .btn-primary:disabled, #graphiql .btn-primary.disabled,
+  #graphiql .btn-blue:disabled, #graphiql .btn-blue.disabled,
+  #graphiql .btn-danger:disabled, #graphiql .btn-danger.disabled,
+  #graphiql .btn-outline:disabled, #graphiql .btn-outline.disabled,
+  #graphiql .btn-invisible:hover, #graphiql .btn-invisible:active,
+  #graphiql .btn-invisible:focus, #graphiql .btn-invisible.selected,
+  #graphiql .btn-invisible.zeroclipboard-is-hover,
+  #graphiql .btn-invisible.zeroclipboard-is-active,
+  #graphiql .upload-enabled.focused .form-control, #graphiql .Label--outline,
+  #graphiql .SelectMenu-tab[aria-selected="true"],
   html[prefix] .btn-primary.disabled, html[prefix] .btn-primary.disabled:hover,
   html[prefix] .btn-primary:disabled, html[prefix] .btn-primary:disabled:hover,
   html[prefix] .blankslate-clean-background, html[prefix] .btn.disabled,
@@ -6407,7 +6219,7 @@
   }
   /* auto-generated rule for "box-shadow: none !important" */
   .box-shadow-none, .hx_badge-search-container .hx_badge-input:focus,
-  html[prefix*="ogp.me"] .box-shadow-none, html[prefix] .box-shadow-none,
+  #graphiql .box-shadow-none, html[prefix] .box-shadow-none,
   body.status #es-search-field, body.status .box-shadow-none,
   body[class="page-responsive"] .box-shadow-none,
   body.zh_logged_in .zh-pipeline-heading-edit {
@@ -6424,26 +6236,25 @@
   .progress-pjax-loader, .qr-code-table tr,
   .repository-merge-features .form-group.errored .error,
   .details-overlay[open] > summary::before,
-  details:not(.toc-dropdown)[open] > summary::before, html[prefix*="ogp.me"] hr,
-  html[prefix*="ogp.me"] .rule, html[prefix*="ogp.me"] .btn-octicon,
-  html[prefix*="ogp.me"] .close-button,
-  html[prefix*="ogp.me"] .details-overlay[open] > summary::before,
-  html[prefix*="ogp.me"] .markdown-body pre > code, body.status html, body,
-  body.status div, body.status span, body.status object, body.status iframe,
-  body.status h1, body.status h2, body.status h3, body.status h4, body.status h5,
-  body.status h6, body.status p, body.status blockquote, body.status pre,
-  body.status abbr, body.status address, body.status cite, body.status code,
-  body.status del, body.status dfn, body.status em, body.status img,
-  body.status ins, body.status kbd, body.status q, body.status samp,
-  body.status small, body.status strong, body.status sub, body.status sup,
-  body.status var, body.status b, body.status i, body.status dl, body.status dt,
-  body.status dd, body.status ol, body.status ul, body.status li,
-  body.status fieldset, body.status form, body.status label, body.status legend,
-  body.status caption, body.status article, body.status aside,
-  body.status canvas, body.status details, body.status figcaption,
-  body.status figure, body.status footer, body.status header, body.status hgroup,
-  body.status menu, body.status nav, body.status section, body.status summary,
-  body.status time, body.status mark, body.status audio, body.status video,
+  details:not(.toc-dropdown)[open] > summary::before, #graphiql hr,
+  #graphiql .rule, #graphiql .btn-octicon, #graphiql .close-button,
+  #graphiql .details-overlay[open] > summary::before,
+  #graphiql .markdown-body pre > code, body.status html, body, body.status div,
+  body.status span, body.status object, body.status iframe, body.status h1,
+  body.status h2, body.status h3, body.status h4, body.status h5, body.status h6,
+  body.status p, body.status blockquote, body.status pre, body.status abbr,
+  body.status address, body.status cite, body.status code, body.status del,
+  body.status dfn, body.status em, body.status img, body.status ins,
+  body.status kbd, body.status q, body.status samp, body.status small,
+  body.status strong, body.status sub, body.status sup, body.status var,
+  body.status b, body.status i, body.status dl, body.status dt, body.status dd,
+  body.status ol, body.status ul, body.status li, body.status fieldset,
+  body.status form, body.status label, body.status legend, body.status caption,
+  body.status article, body.status aside, body.status canvas,
+  body.status details, body.status figcaption, body.status figure,
+  body.status footer, body.status header, body.status hgroup, body.status menu,
+  body.status nav, body.status section, body.status summary, body.status time,
+  body.status mark, body.status audio, body.status video,
   body.status .cpt-button.style-outline,
   body[class="page-responsive"] .details-overlay[open] > summary:before,
   body[class="page-responsive"] .markdown-body pre > code,
@@ -6467,21 +6278,14 @@
   a, .btn-link, .inline-form .btn-plain, .tabnav-tab,
   .filter-list.pjax-active .filter-item, .SideNav-item, .SideNav-subItem,
   .markdown-body table img, .markdown-body .emoji, .markdown-body pre code,
-  .markdown-body pre tt, .btn-transparent, html[prefix*="ogp.me"] a,
-  html[prefix*="ogp.me"] .btn-link,
-  html[prefix*="ogp.me"] .inline-form .btn-plain,
-  html[prefix*="ogp.me"] .tabnav-tab,
-  html[prefix*="ogp.me"] .filter-list.pjax-active .filter-item,
-  html[prefix*="ogp.me"] .SideNav-item, html[prefix*="ogp.me"] .SideNav-subItem,
-  html[prefix*="ogp.me"] .Label--outline,
-  html[prefix*="ogp.me"] .markdown-body table img,
-  html[prefix*="ogp.me"] .markdown-body .emoji,
-  html[prefix*="ogp.me"] .markdown-body pre code,
-  html[prefix*="ogp.me"] .markdown-body pre tt,
-  html[prefix*="ogp.me"] .SelectMenu-closeButton,
-  html[prefix*="ogp.me"] .SelectMenu-tab,
-  html[prefix*="ogp.me"] .Toast-dismissButton,
-  html[prefix*="ogp.me"] .btn-transparent, html[prefix] a,
+  .markdown-body pre tt, .btn-transparent, #graphiql a, #graphiql .btn-link,
+  #graphiql .inline-form .btn-plain, #graphiql .tabnav-tab,
+  #graphiql .filter-list.pjax-active .filter-item, #graphiql .SideNav-item,
+  #graphiql .SideNav-subItem, #graphiql .Label--outline,
+  #graphiql .markdown-body table img, #graphiql .markdown-body .emoji,
+  #graphiql .markdown-body pre code, #graphiql .markdown-body pre tt,
+  #graphiql .SelectMenu-closeButton, #graphiql .SelectMenu-tab,
+  #graphiql .Toast-dismissButton, #graphiql .btn-transparent, html[prefix] a,
   html[prefix] .btn-link, html[prefix] .inline-form .btn-plain,
   html[prefix] .tabnav-tab, html[prefix] .filter-list.pjax-active .filter-item,
   html[prefix] .avatar-stack .avatar:only-child,
@@ -6642,14 +6446,13 @@
   .theme-toggle, .tag-input input, .tree-browser-result mark,
   .toolbar-commenting .dropdown-item, .toolbar-item, .toolbar-item .menu-target,
   .wiki-footer .markdown-body img, .user-list li em, .ais-SearchBox-reset, mark,
-  .ais-Highlight-highlighted, html[prefix*="ogp.me"] .btn-invisible:hover,
-  html[prefix*="ogp.me"] .btn-invisible:active,
-  html[prefix*="ogp.me"] .btn-invisible:focus,
-  html[prefix*="ogp.me"] .btn-invisible.selected,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-hover,
-  html[prefix*="ogp.me"] .btn-invisible.zeroclipboard-is-active,
-  html[prefix*="ogp.me"] .flash-close, html[prefix*="ogp.me"] .dropdown-signout,
-  body.status .cpt-toggle, body[class="page-responsive"] .dropdown-signout,
+  .ais-Highlight-highlighted, #graphiql .btn-invisible:hover,
+  #graphiql .btn-invisible:active, #graphiql .btn-invisible:focus,
+  #graphiql .btn-invisible.selected,
+  #graphiql .btn-invisible.zeroclipboard-is-hover,
+  #graphiql .btn-invisible.zeroclipboard-is-active, #graphiql .flash-close,
+  #graphiql .dropdown-signout, body.status .cpt-toggle,
+  body[class="page-responsive"] .dropdown-signout,
   body[class="page-responsive"] .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   body[class="page-responsive"] .header-search-input,
   body[class="page-responsive"] button,
@@ -6699,31 +6502,20 @@
   .topic-input-container .tag-input .tag-input-inner,
   .oauth-permissions-details.open a.btn-sm,
   .clone-url-button > .clone-url-link:active, .btn-secret.selected,
-  .btn-secret:active, html[prefix*="ogp.me"] .btn:active,
-  html[prefix*="ogp.me"] .btn.selected, html[prefix*="ogp.me"] [open] > .btn,
-  html[prefix*="ogp.me"] .btn:disabled, html[prefix*="ogp.me"] .btn.disabled,
-  html[prefix*="ogp.me"] .btn-primary:active,
-  html[prefix*="ogp.me"] .btn-primary.selected,
-  html[prefix*="ogp.me"] [open] > .btn-primary,
-  html[prefix*="ogp.me"] .btn-primary:disabled,
-  html[prefix*="ogp.me"] .btn-primary.disabled,
-  html[prefix*="ogp.me"] .btn-blue:active,
-  html[prefix*="ogp.me"] .btn-blue.selected,
-  html[prefix*="ogp.me"] [open] > .btn-blue,
-  html[prefix*="ogp.me"] .btn-blue:disabled,
-  html[prefix*="ogp.me"] .btn-blue.disabled,
-  html[prefix*="ogp.me"] .btn-danger:active,
-  html[prefix*="ogp.me"] .btn-danger.selected,
-  html[prefix*="ogp.me"] [open] > .btn-danger,
-  html[prefix*="ogp.me"] .btn-danger:disabled,
-  html[prefix*="ogp.me"] .btn-danger.disabled,
-  html[prefix*="ogp.me"] .btn-outline, html[prefix*="ogp.me"] .btn-outline:hover,
-  html[prefix*="ogp.me"] .btn-outline:active,
-  html[prefix*="ogp.me"] .btn-outline.selected,
-  html[prefix*="ogp.me"] [open] > .btn-outline,
-  html[prefix*="ogp.me"] .btn-invisible, html[prefix*="ogp.me"] .btn-transparent,
-  html[prefix*="ogp.me"] .btn-transparent:hover,
-  html[prefix*="ogp.me"] .btn-transparent:active,
+  .btn-secret:active, #graphiql .btn:active, #graphiql .btn.selected,
+  #graphiql [open] > .btn, #graphiql .btn:disabled, #graphiql .btn.disabled,
+  #graphiql .btn-primary:active, #graphiql .btn-primary.selected,
+  #graphiql [open] > .btn-primary, #graphiql .btn-primary:disabled,
+  #graphiql .btn-primary.disabled, #graphiql .btn-blue:active,
+  #graphiql .btn-blue.selected, #graphiql [open] > .btn-blue,
+  #graphiql .btn-blue:disabled, #graphiql .btn-blue.disabled,
+  #graphiql .btn-danger:active, #graphiql .btn-danger.selected,
+  #graphiql [open] > .btn-danger, #graphiql .btn-danger:disabled,
+  #graphiql .btn-danger.disabled, #graphiql .btn-outline,
+  #graphiql .btn-outline:hover, #graphiql .btn-outline:active,
+  #graphiql .btn-outline.selected, #graphiql [open] > .btn-outline,
+  #graphiql .btn-invisible, #graphiql .btn-transparent,
+  #graphiql .btn-transparent:hover, #graphiql .btn-transparent:active,
   html[prefix] .btn-primary.selected,
   html[prefix] .btn-primary.zeroclipboard-is-active,
   html[prefix] .btn-primary:active, html[prefix] .btn-danger.selected,
@@ -7835,7 +7627,8 @@
     background: #282828 !important;
     border-color: rgba(68, 68, 68, .5) !important;
   }
-  .dropdown-item.btn-link:disabled:hover {
+  /* GitHub Bug, see https://github.com/StylishThemes/GitHub-Dark/commit/c6796282bd5593c4acbf305abb850b0debaf774b */
+  .btn-link:disabled:hover {
     color: rgba(148, 148, 148, .5) !important;
     background: none !important;
   }
