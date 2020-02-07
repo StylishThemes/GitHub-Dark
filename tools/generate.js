@@ -323,8 +323,8 @@ let sources = [
   {url: "https://support.github.com"},
   {
     url: "https://graphql-explorer.githubapp.com/", // https://developer.github.com/v4/explorer
-    prefix: `html[prefix*="ogp.me"]`,
-    match: ["html", `[prefix*="ogp.me"]`],
+    prefix: `#graphiql`,
+    match: ["#graphiql", ".graphiql-ide"],
   },
   {
     url: "https://developer.github.com",
