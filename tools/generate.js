@@ -375,7 +375,7 @@ let sources = [
     match: ["html", ".ghh-theme-"],
   },
   {
-    crx: "giljefjcheohhamkjphiebfjnlphnokk",
+    crx: "giljefjcheohhamkjphiebfjnlphnokk", // Gitako
     prefix: `body.gitako-ready`,
     match: ["body", ".gitako-ready"],
   },
