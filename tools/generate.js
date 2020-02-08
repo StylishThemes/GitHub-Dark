@@ -371,7 +371,6 @@ let sources = [
   },
   {
     crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
-    files: ["hovercard.css", "tooltipster.css"],
     prefix: `html.ghh-theme-classic`,
     match: ["html", ".ghh-theme-"],
   },
@@ -770,25 +769,36 @@ async function extensionCss(source, version) {
     throw new Error(`manifest.json not found in chrome extension ${id}`);
   }
 
+  const cssFiles = [];
+  const jsFiles = [];
+
+  for (const path of Object.keys(files)) {
+    if (path.endsWith(".css")) cssFiles.push(path);
+    if (path.endsWith(".js")) jsFiles.push(path);
+  }
+
   const manifest = JSON.parse(String(await files["manifest.json"].buffer()));
-  for (const script of manifest.content_scripts || []) {
-    for (const file of script.css || []) {
-      if (Object.keys(files).includes(file)) {
-        css += `${await files[file].buffer()}\n`;
-      }
-    }
-    for (const file of script.js || []) {
-      acorn.parse(String(await files[file].buffer()), {onToken: async token => {
-        if (token.type.label === "string") {
-          const str = token.value.trim()
-            .replace(/\n/gm, "")
-            .replace(/^\);}/, ""); // this is probably not universal to webpack's css-in-js strings
-          if (str.length > 25 && isValidCSS(str)) { // hackish treshold to ignore short strings that may be valid CSS
-            css += `${str}\n`;
-          }
+
+  for (const {css, js} of manifest.content_scripts || []) {
+    if (Array.isArray(css) && css.length) cssFiles.push(...css);
+    if (Array.isArray(js) && js.length) jsFiles.push(...js);
+  }
+
+  for (const file of cssFiles) {
+    css += `${await files[file].buffer()}\n`;
+  }
+
+  for (const file of jsFiles) {
+    acorn.parse(String(await files[file].buffer()), {onToken: async token => {
+      if (token.type.label === "string") {
+        const str = token.value.trim()
+          .replace(/\n/gm, "")
+          .replace(/^\);}/, ""); // this is probably not universal to webpack's css-in-js strings
+        if (str.length > 25 && isValidCSS(str)) { // hackish treshold to ignore short strings that may be valid CSS
+          css += `${str}\n`;
         }
-      }});
-    }
+      }
+    }});
   }
 
   for (const file of source.files || []) {
