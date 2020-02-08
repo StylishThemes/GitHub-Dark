@@ -49,8 +49,9 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 
-## Supported GitHub Addons
+## Supported GitHub Extensions
 
+💾 [Gitako](https://github.com/EnixCoda/Gitako)<br>
 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)<br>
 💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard) (set it to dark theme)<br>
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
