@@ -12,6 +12,7 @@ const urlToolkit = require("url-toolkit");
 const unzipper = require("unzipper");
 const {isShorthand} = require("css-shorthand-properties");
 const cssColorNames = require("css-color-names");
+const acorn = require("acorn");
 
 // This list maps old declarations to new ones. Ordering is significant.
 // $ indicates a special value that will generate a set of rules.
@@ -26,6 +27,7 @@ let mappings = {
   "$background: #efefef": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
   "$background: #f6f8fa": "#202020",
+  "$background: #f5f5f5": "#202020", // gitako
   "$background: #f4f5f5": "#242424", // zenhub
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#343434",
@@ -225,6 +227,13 @@ let mappings = {
   "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
   "$background: linear-gradient(#599bcd,#3072b3)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
   "$border: #2a65a0": "/*[[base-color]]*/ #4f8cc9",
+  "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/ #4f8cc9", // gitako
+  "color: #0366d6d0": "color: /*[[base-color]]*/ #4f8cc9", // gitako
+  "$background: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "box-shadow: 0 0 10px rgba(121,184,255,.7)": `
+    box-shadow: 0 0 rgba(79,140,201,.3);
+    box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
+  `,
 
   // red
   "color: #cb2431": "color: #f44",
@@ -365,6 +374,11 @@ let sources = [
     files: ["hovercard.css", "tooltipster.css"],
     prefix: `html.ghh-theme-classic`,
     match: ["html", ".ghh-theme-"],
+  },
+  {
+    crx: "giljefjcheohhamkjphiebfjnlphnokk",
+    prefix: `body.gitako-ready`,
+    match: ["body", ".gitako-ready"],
   },
 ];
 
@@ -587,14 +601,14 @@ function buildOutput(decls) {
   return output.split("\n").map(line => `  ${line}`).join("\n");
 }
 
-function normalizeHexColor(string) {
-  if ([4, 5].includes(string.length)) {
-    const [h, r, g, b, a] = string;
+function normalizeHexColor(value) {
+  if ([4, 5].includes(value.length)) {
+    const [h, r, g, b, a] = value;
     return `${h}${r}${r}${g}${g}${b}${b}${a || "f"}${a || "f"}`;
-  } else if (string.length === 7) {
-    return `${string}ff`;
+  } else if (value.length === 7) {
+    return `${value}ff`;
   }
-  return string;
+  return value;
 }
 
 function normalize(value, prop) {
@@ -715,6 +729,16 @@ function prepareMappings(mappings) {
   return newMappings;
 }
 
+function isValidCSS(string) {
+  try {
+    const result = css.parse(string);
+    if (result && result.type === "stylesheet" && result.stylesheet && Array.isArray(result.stylesheet.rules) && result.stylesheet.rules.length > 1) {
+      return true;
+    }
+  } catch (err) {}
+  return false;
+}
+
 // obtain the latest chrome version in major.minor format
 async function chromeVersion() {
   const res = await fetch(`https://chromedriver.storage.googleapis.com/LATEST_RELEASE`);
@@ -748,11 +772,22 @@ async function extensionCss(source, version) {
 
   const manifest = JSON.parse(String(await files["manifest.json"].buffer()));
   for (const script of manifest.content_scripts || []) {
-    if (!Array.isArray(script.css)) continue;
-    for (const file of script.css) {
+    for (const file of script.css || []) {
       if (Object.keys(files).includes(file)) {
         css += `${await files[file].buffer()}\n`;
       }
+    }
+    for (const file of script.js || []) {
+      acorn.parse(String(await files[file].buffer()), {onToken: async token => {
+        if (token.type.label === "string") {
+          const str = token.value.trim()
+            .replace(/\n/gm, "")
+            .replace(/^\);}/, ""); // this is probably not universal to webpack's css-in-js strings
+          if (str.length > 25 && isValidCSS(str)) { // hackish treshold to ignore short strings that may be valid CSS
+            css += `${str}\n`;
+          }
+        }
+      }});
     }
   }
 
