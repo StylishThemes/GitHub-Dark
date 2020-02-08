@@ -769,8 +769,8 @@ async function extensionCss(source, version) {
     throw new Error(`manifest.json not found in chrome extension ${id}`);
   }
 
-  const cssFiles = [];
-  const jsFiles = [];
+  let cssFiles = [];
+  let jsFiles = [];
 
   for (const path of Object.keys(files)) {
     if (path.endsWith(".css")) cssFiles.push(path);
@@ -783,6 +783,9 @@ async function extensionCss(source, version) {
     if (Array.isArray(css) && css.length) cssFiles.push(...css);
     if (Array.isArray(js) && js.length) jsFiles.push(...js);
   }
+
+  cssFiles = Array.from(new Set(cssFiles));
+  jsFiles = Array.from(new Set(jsFiles));
 
   for (const file of cssFiles) {
     css += `${await files[file].buffer()}\n`;
