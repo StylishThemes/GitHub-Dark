@@ -34,20 +34,21 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 ## Additional Userstyles
 
-⚙️ [GitHub-Blog-Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
-⚙️ [GitHub-code-wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
-⚙️ [GitHub-Commit-Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
-⚙️ [GitHub-Community-Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
-⚙️ [GitHub-Compact-Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
-⚙️ [GitHub-Feed-Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
-⚙️ [GitHub-FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
-⚙️ [GitHub-Selected-Tab-Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
-⚙️ [GitHub-Sticky-Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
-⚙️ [GitHub-tab-size](https://github.com/StylishThemes/GitHub-tab-size)<br>
-⚙️ [Overlay-Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
+⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
+⚙️ [GitHub Community Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
+
+⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
+⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
+⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Feed Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
+⚙️ [GitHub FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
+⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
+⚙️ [GitHub Tab Size](https://github.com/StylishThemes/GitHub-tab-size)<br>
+⚙️ [GitHub Selected Tab Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
+⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
 
 ## Supported GitHub Extensions
 
