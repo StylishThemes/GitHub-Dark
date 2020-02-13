@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.214
+@version     1.22.215
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.214 (2020-02-13) */
+/*! Github Dark v1.22.215 (2020-02-13) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -7782,8 +7782,10 @@
   .dropdown-toggle.selected {
     background: rgba(24, 24, 24, .4) !important;
   }
+  /* repo header */
   .page-responsive .repohead, .page-responsive .pagehead,
-  .repohead.bg-gray-light, .pagehead.bg-gray-light {
+  .repohead.bg-gray-light, .pagehead.bg-gray-light,
+  .repohead.experiment-repo-nav {
     background: rgba(24, 24, 24, .4) !important;
   }
   .explore-signup-entice-inner {
@@ -8099,14 +8101,15 @@
   img[data-canonical-src^="https://codecov.io"][alt="Impacted file tree graph"] {
     filter: invert(92%) hue-rotate(180deg) saturate(250%) !important;
   }
-  /* marketplace + help img invert */
+  /* marketplace + help + feature img invert */
   img[src*="marketplace-illustration-01.svg"],
   img[src*="marketplace-illustration-02.svg"],
   svg [data-name="Layer 2"] #Layer_5[data-name="Layer 5"],
   .illoTeam svg [data-name="Layer 2"], .illoIndiv #Layer_2[data-name="Layer 2"],
   svg [data-name="Layer 2"] g[data-name="octocat header"],
   svg[viewBox="0 0 1461.5 677.84"][width="700"],
-  .feature-preview-dialog svg[fill="none"] {
+  .feature-preview-dialog svg[fill="none"], img[src*="-zero.svg"],
+  img[src*="saved-blank.svg"] {
     filter: invert(85%) hue-rotate(-180deg) brightness(125%) contrast(85%) !important;
   }
   .action-logo:after {
@@ -10920,6 +10923,11 @@
   }
   svg [fill="#EAEAEA"] {
     fill: #555;
+  }
+}
+@-moz-document url-prefix("https://github.com/personal") {
+  .bg-blue-4, .illflow-blue .selected {
+    background: #182030 !important;
   }
 }
 @-moz-document domain("education.github.com") {
