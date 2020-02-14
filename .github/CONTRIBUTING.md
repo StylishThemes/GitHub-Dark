@@ -86,7 +86,7 @@ If you don't know CSS very well and have found a missing style, please include a
 
 * Create or edit your `build.json` file to include any customizations to the style, see the [build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more details.
 * Run `grunt` to create your custom theme.
-* Copy & paste the CSS from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylish editor to test your changes.
+* Copy & paste the CSS from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylus editor to test your changes.
 * Once you are satisfied with the changes, run `grunt clean` to reindent &amp; clean up the CSS.
 * Now you can push the changes of the `github-dark.css` file to your fork and submit a pull request.
 * If you haven't already contributed, then also run `npx grunt authors` to add your name to our list of contributors :smile:
