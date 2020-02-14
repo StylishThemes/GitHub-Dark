@@ -9117,6 +9117,17 @@
   .breadcrumb .separator::after, .breadcrumb .separator::before {
     content: none;
   }
+  /* Hack to add a background to the sticky toolbar on the pr files tab when using unified diffs */
+  body:not(.full-width) .pr-toolbar.is-stuck + .toolbar-shadow::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #181818;
+    box-shadow: 0 0 .75rem rgba(0, 0, 0, .7);
+  }
   .gh-header-shadow {
     border: none !important;
     box-shadow: 0 0 .75rem rgba(0, 0, 0, .7) !important;
