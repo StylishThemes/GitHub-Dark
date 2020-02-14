@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.215
+@version     1.22.216
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.215 (2020-02-13) */
+/*! Github Dark v1.22.216 (2020-02-14) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -246,12 +246,11 @@
   }
   /* begin auto-generated rules - use tools/generate.js to generate them */
   /* auto-generated rule for "background: #fff" */
-  image-crop .handle:before, .ajax-pagination-form .ajax-pagination-btn,
-  .pagination a, .pagination em, .pagination span, .autocomplete-results,
-  .suggester, .AvatarStack-body, .blankslate code,
-  .markdown-body .csv-data .blob-num, .boxed-group-inner,
-  .commit-group-title .octicon-git-commit, .full-commit .commit-meta,
-  .conversation-list-heading .inner,
+  .pagination a, .pagination em, .pagination span, image-crop .handle:before,
+  .ajax-pagination-form .ajax-pagination-btn, .autocomplete-results, .suggester,
+  .AvatarStack-body, .blankslate code, .markdown-body .csv-data .blob-num,
+  .boxed-group-inner, .commit-group-title .octicon-git-commit,
+  .full-commit .commit-meta, .conversation-list-heading .inner,
   .discussion-timeline.team-discussion-timeline .blankslate,
   .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting,
   .not-found-octocat-wrapper:after, .file-commit-form--full, ul.comparison-list,
@@ -907,13 +906,13 @@
     background: #202020;
   }
   /* auto-generated rule for "background-color: #f6f8fa" */
-  .ajax-pagination-form .ajax-pagination-btn:focus,
-  .ajax-pagination-form .ajax-pagination-btn:hover,
-  .ajax-pagination-form.loading .ajax-pagination-btn, .Box-header,
-  .Box-row.navigation-focus.sortable-ghost,
+  .Box-header, .Box-row.navigation-focus.sortable-ghost,
   .Box-row--focus-gray.navigation-focus, .Box-row--hover-gray:hover,
   .Box-row--gray, .menu-item:hover, .SideNav-item:focus, .SideNav-item:hover,
-  .subnav-item:focus, .subnav-item:hover, .Tile,
+  .subnav-item:focus, .subnav-item:hover,
+  .ajax-pagination-form .ajax-pagination-btn:focus,
+  .ajax-pagination-form .ajax-pagination-btn:hover,
+  .ajax-pagination-form.loading .ajax-pagination-btn, .Tile,
   .pricing-matrix-row:hover .pricing-matrix-column-tier, .choose-team-lp,
   .markdown-body table tr:nth-child(2n), .SelectMenu-modal, .SelectMenu-divider,
   .boxed-group .heading, .boxed-group > h3, .table-list-header, .commit-sha,
@@ -949,6 +948,7 @@
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn:focus,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn:hover,
   body[class="page-responsive"] .ajax-pagination-form.loading .ajax-pagination-btn,
+  body[class="page-responsive"] .render-notice,
   body[class="page-responsive"] .advisory-form,
   body[class="page-responsive"] .list-heading,
   body[class="page-responsive"] .discussion-block-header,
@@ -958,7 +958,6 @@
   body[class="page-responsive"] .profile-timeline .timeline-item-icon,
   body[class="page-responsive"] .profile-timeline .profile-timeline-month-line:after,
   body[class="page-responsive"] .profile-timeline .profile-timeline-line:before,
-  body[class="page-responsive"] .render-notice,
   html.refined-github .rgh-split-issue-pr-combined.selected:hover,
   body.zh_logged_in .zh-epic-creator-issue-list .zh-epic-creator-issue-list-not-in-workspace,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .table-list-header,
@@ -1314,9 +1313,9 @@
   .Header-old, .Header, .reponav-wrapper, .CheckRun, .CheckRun-search .btn,
   .CheckRun-search .btn[disabled]:hover, .CheckStep .ansibg-b,
   .CheckStep .ansibg-bl, .project-full-screen .project-header, #graphiql .Header,
+  body[class="page-responsive"] .Header,
   body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
-  body[class="page-responsive"] .Header,
   html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches,
   body.zh_logged_in .zhc-discussion-events__icon--grey-darker {
     background-color: #181818;
@@ -1804,9 +1803,9 @@
   .full-commit .btn-outline, .full-commit .btn-outline:disabled, .render-notice,
   #graphiql .btn-outline:disabled, #graphiql .btn-outline.disabled,
   #graphiql .flash-warn, #graphiql .flash-error, #graphiql .flash-success,
+  body[class="page-responsive"] .render-notice,
   body[class="page-responsive"] .flash.flash-warn,
-  body[class="page-responsive"] .flash.flash-error,
-  body[class="page-responsive"] .render-notice {
+  body[class="page-responsive"] .flash.flash-error {
     border-color: rgba(200, 200, 200, .15);
   }
   /* auto-generated rule for "border-color: rgba(27,31,35,.15) !important" */
@@ -2034,8 +2033,9 @@
     border-color: #404040;
   }
   /* auto-generated rule for "border-color: #d1d5da" */
-  .ajax-pagination-form.loading .ajax-pagination-btn, .tabnav-tab.selected,
-  .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true],
+  .tabnav-tab.selected, .tabnav-tab[aria-current],
+  .tabnav-tab[aria-selected=true],
+  .ajax-pagination-form.loading .ajax-pagination-btn,
   .summarylink:active .summarylink-btn, .summarylink:hover .summarylink-btn,
   .plan-choice--experiment.open, .plan-choice--experiment.selected,
   .branch-action-state-closed-dirty .branch-action-body,
@@ -2269,8 +2269,8 @@
     border-color: #343434;
   }
   /* auto-generated rule for "border: 1px solid #e1e4e8" */
-  .ajax-pagination-form .ajax-pagination-btn, .subnav-item, .pagination a,
-  .pagination em, .pagination span, .suggester,
+  .subnav-item, .pagination a, .pagination em, .pagination span,
+  .ajax-pagination-form .ajax-pagination-btn, .suggester,
   .progress-bar-inline .progress-bar, .table-list-header, .signed-commit-badge,
   .deployment-status-label, .list-group-item, .range-editor,
   .code-list .file-box, .ScreenshotCarousel, .conflict-resolver.loading,
@@ -3656,6 +3656,7 @@
   body[class="page-responsive"] .subnav-search-context .btn,
   body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] kbd,
+  body[class="page-responsive"] .render-notice,
   body[class="page-responsive"] .list-item .byline strong,
   body[class="page-responsive"] .list-options .selected > .octicon,
   body[class="page-responsive"] .diff-view .file .meta,
@@ -3672,7 +3673,6 @@
   body[class="page-responsive"] .pagination em,
   body[class="page-responsive"] .pagination span,
   body[class="page-responsive"] .latest-commit .bubble-content strong,
-  body[class="page-responsive"] .render-notice,
   body.zh_logged_in .zhc-markdown kbd {
     color: #afafaf;
   }
@@ -4448,11 +4448,7 @@
     fill:  /*[[base-color]]*/;
   }
   /* auto-generated rule for "color: #0366d6" */
-  .ajax-pagination-form .ajax-pagination-btn,
-  .ajax-pagination-form .ajax-pagination-btn:focus,
-  .ajax-pagination-form .ajax-pagination-btn:hover,
-  .template-previews .discussion-sidebar-heading:hover, .zeroclipboard-link, a,
-  .Box-row.navigation-focus .Box-row--drag-button, .Box-row-link:hover,
+  a, .Box-row.navigation-focus .Box-row--drag-button, .Box-row-link:hover,
   .btn-blue .Counter, .btn-outline, .btn-outline.selected .Counter,
   .btn-outline:active .Counter, .btn-outline:hover .Counter,
   .btn-outline[aria-selected=true] .Counter, [open] > .btn-outline .Counter,
@@ -4461,8 +4457,13 @@
   .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover,
   .btn-invisible[aria-selected=true], .btn-octicon:hover, .social-count:hover,
   .drag-and-drop-error-info a, a.tabnav-extra:hover, .SideNav-subItem,
-  .pagination a, .pagination em, .pagination span, .btn-outline-mktg:hover,
-  .link-mktg:hover, .illflow-blue .illflow-item .illflow-item-heading,
+  .pagination a, .pagination em, .pagination span,
+  .ajax-pagination-form .ajax-pagination-btn,
+  .ajax-pagination-form .ajax-pagination-btn:focus,
+  .ajax-pagination-form .ajax-pagination-btn:hover,
+  .template-previews .discussion-sidebar-heading:hover, .zeroclipboard-link,
+  .btn-outline-mktg:hover, .link-mktg:hover,
+  .illflow-blue .illflow-item .illflow-item-heading,
   .actions-template-card:hover .actions-template-repo,
   .MarketingBody-lead a:hover, a.branch-name, .commit .commit-title .issue-link,
   .commit-link, .discussion-sidebar-item .muted-icon:hover,
@@ -4582,18 +4583,18 @@
     color: rgba(148, 148, 148, .5);
   }
   /* auto-generated rule for "color: #24292e" */
-  .template-previews .discussion-sidebar-heading, body, .Box-row-link, .btn,
-  .social-count, .form-control, .form-select, p.explain strong, .radio-label,
-  .menu-item.selected, .menu-item[aria-current], .menu-item[aria-selected=true],
-  .menu-item .octicon, .tabnav-tab.selected, .tabnav-tab[aria-current],
-  .tabnav-tab[aria-selected=true], .tabnav-tab:focus, .tabnav-tab:hover,
-  .SideNav-item:focus, .SideNav-item:hover, .SideNav-item[aria-current=page],
-  .SideNav-item[aria-selected=true], .SideNav-subItem:focus,
-  .SideNav-subItem:hover, .SideNav-subItem[aria-current=page],
-  .SideNav-subItem[aria-selected=true], .UnderlineNav-item:focus,
-  .UnderlineNav-item:hover, .UnderlineNav-item.selected,
-  .UnderlineNav-item[aria-current],
+  body, .Box-row-link, .btn, .social-count, .form-control, .form-select,
+  p.explain strong, .radio-label, .menu-item.selected, .menu-item[aria-current],
+  .menu-item[aria-selected=true], .menu-item .octicon, .tabnav-tab.selected,
+  .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true], .tabnav-tab:focus,
+  .tabnav-tab:hover, .SideNav-item:focus, .SideNav-item:hover,
+  .SideNav-item[aria-current=page], .SideNav-item[aria-selected=true],
+  .SideNav-subItem:focus, .SideNav-subItem:hover,
+  .SideNav-subItem[aria-current=page], .SideNav-subItem[aria-selected=true],
+  .UnderlineNav-item:focus, .UnderlineNav-item:hover,
+  .UnderlineNav-item.selected, .UnderlineNav-item[aria-current],
   .UnderlineNav-item[role=tab][aria-selected=true], .text-emphasized,
+  .template-previews .discussion-sidebar-heading,
   .page-responsive .HeaderMenu--logged-out .header-search-input,
   .page-responsive .HeaderMenu-link:hover,
   .page-responsive .HeaderMenu-details[open] .HeaderMenu-link,
@@ -5773,7 +5774,7 @@
     background: #261d08;
   }
   /* auto-generated rule for "background-color: #fffbdd" */
-  .conflict-gutter-marker, .Box-row--yellow, .form-group.warn .warning,
+  .Box-row--yellow, .form-group.warn .warning, .conflict-gutter-marker,
   .flash-warn, .warning, .boxed-group-warning, .blob-code-inner.highlighted,
   .blob-code-inner .highlighted, .RecentBranches,
   .diffbar-range-menu .is-range-selected, .user-status-container-border-busy,
@@ -6228,10 +6229,7 @@
     color: inherit !important;
   }
   /* auto-generated rule for "box-shadow: none" */
-  body.intent-mouse [role=button]:focus,
-  body.intent-mouse [role=tabpanel][tabindex="0"]:focus,
-  body.intent-mouse button:focus, body.intent-mouse summary:focus, .btn.disabled,
-  .btn:disabled, .btn[aria-disabled=true], .btn-primary.disabled,
+  .btn.disabled, .btn:disabled, .btn[aria-disabled=true], .btn-primary.disabled,
   .btn-primary:disabled, .btn-primary[aria-disabled=true], .btn-blue.disabled,
   .btn-blue:disabled, .btn-blue[aria-disabled=true], .btn-danger.disabled,
   .btn-danger:disabled, .btn-danger[aria-disabled=true], .btn-outline.disabled,
@@ -6239,7 +6237,9 @@
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
   .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
   .btn-invisible:focus, .btn-invisible:hover, .btn-invisible[aria-selected=true],
-  .upload-enabled.focused .form-control,
+  .upload-enabled.focused .form-control, body.intent-mouse [role=button]:focus,
+  body.intent-mouse [role=tabpanel][tabindex="0"]:focus,
+  body.intent-mouse button:focus, body.intent-mouse summary:focus,
   .page-responsive .HeaderMenu--logged-out,
   .page-responsive .HeaderMenu--logged-out .dropdown-menu,
   .header-search-wrapper, .header-search-wrapper.focus, .header-search-input,
@@ -6542,13 +6542,13 @@
     background-color: transparent !important;
   }
   /* auto-generated rule for "background: none" */
-  .zeroclipboard-link, .btn-invisible.selected,
-  .btn-invisible.zeroclipboard-is-active, .btn-invisible.zeroclipboard-is-hover,
-  .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover,
-  .btn-invisible[aria-selected=true], .header-search-input, .DeveloperVideo-data,
-  .flash-close, .dropdown-signout, .signed-commit-badge,
-  button.discussion-sidebar-toggle, .deployment-status-label, .kb-konami-dialog,
-  .konami, .konami-overlay, .konami .key.complete, .konami .enter-link:hover,
+  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
+  .btn-invisible:focus, .btn-invisible:hover, .btn-invisible[aria-selected=true],
+  .zeroclipboard-link, .header-search-input, .DeveloperVideo-data, .flash-close,
+  .dropdown-signout, .signed-commit-badge, button.discussion-sidebar-toggle,
+  .deployment-status-label, .kb-konami-dialog, .konami, .konami-overlay,
+  .konami .key.complete, .konami .enter-link:hover,
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
   .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   .search-form-fluid .search-page-input, .file .empty,
@@ -6565,10 +6565,9 @@
   #graphiql .dropdown-signout, body.status .cpt-toggle,
   body[class="page-responsive"] .dropdown-signout,
   body[class="page-responsive"] .content-attachment-details[open] .max--md .content-attachment-content--gradient,
-  body[class="page-responsive"] .header-search-input,
-  body[class="page-responsive"] button,
   body[class="page-responsive"] .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
-  body[data-render-url] .render-view-modes,
+  body[class="page-responsive"] .header-search-input,
+  body[class="page-responsive"] button, body[data-render-url] .render-view-modes,
   body[data-render-url] .render-view-modes li,
   html.refined-github .dashboard .js-all-activity-header + div .Box,
   html.refined-github .notifications-list .boxed-group-action button,
