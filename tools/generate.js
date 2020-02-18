@@ -329,6 +329,7 @@ let sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
+  {url: "https://lab.github.com"},
   {url: "https://support.github.com"},
   {
     url: "https://graphql-explorer.githubapp.com/", // https://developer.github.com/v4/explorer
