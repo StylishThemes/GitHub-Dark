@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.219
+@version     1.22.220
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.219 (2020-02-18) */
+/*! Github Dark v1.22.220 (2020-02-18) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -385,7 +385,8 @@
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
   .org-sso .org-sso-panel, .ais-SearchBox-input,
   .form-group .ais-SearchBox-input:focus, .SideNav-item[aria-current="page"],
-  .SideNav-item[aria-selected="true"], #q, .form-group #q:focus, details-dialog,
+  .SideNav-item[aria-selected="true"], .btn-purple .Counter, #q,
+  .form-group #q:focus, details-dialog,
   #graphiql .graphiql-container .doc-explorer-contents,
   #graphiql .graphiql-container .history-contents, #graphiql body,
   #graphiql .Box, #graphiql .btn-primary .Counter, #graphiql .btn-blue .Counter,
@@ -768,7 +769,7 @@
   .oauth-pending-deletion-list-item, .oauth-pending-deletion-list-item:hover,
   .protected-branch-orgs-and-repo-admins, .team-listing .is-open.root-team,
   table.capped-list tr:nth-child(2n), .form-group .ais-SearchBox-input,
-  .form-group #q, #graphiql kbd,
+  .blankslate, .form-group #q, #graphiql kbd,
   #graphiql .Box-row.navigation-focus.sortable-chosen, #graphiql .btn-danger,
   #graphiql .input-contrast, #graphiql .form-group .form-control,
   #graphiql .drag-and-drop, #graphiql .SideNav, #graphiql .pagination .gap,
@@ -1929,7 +1930,7 @@
     border-left-color: #484848;
   }
   /* auto-generated rule for "border-bottom-color: #959da5" */
-  body.zh_logged_in .zhc-markdown kbd {
+  .markdown-body kbd, body.zh_logged_in .zhc-markdown kbd {
     border-bottom-color: #484848;
   }
   /* auto-generated rule for "border: 1px solid #c3c8cf" */
@@ -2293,9 +2294,9 @@
   .review-comment .is-comment-editing, .review-summary-form-wrapper,
   .orgs-help-item-octicon, .business-sso .business-sso-panel,
   .business-sso .org-sso-panel, .org-sso .business-sso-panel,
-  .org-sso .org-sso-panel, .avatar-before-user-status, #graphiql .subnav-item,
-  #graphiql .pagination a, #graphiql .pagination span, #graphiql .pagination em,
-  body[class="page-responsive"] .subnav-item,
+  .org-sso .org-sso-panel, .avatar-before-user-status, .blankslate,
+  #graphiql .subnav-item, #graphiql .pagination a, #graphiql .pagination span,
+  #graphiql .pagination em, body[class="page-responsive"] .subnav-item,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
   body[class="page-responsive"] .progress-bar-inline .progress-bar,
   body[class="page-responsive"] .avatar-before-user-status,
@@ -3429,7 +3430,7 @@
     box-shadow: inset 0 -2px 0 #383838;
   }
   /* auto-generated rule for "box-shadow: inset 0 -1px 0 #959da5" */
-  body.zh_logged_in .zhc-markdown kbd {
+  .markdown-body kbd, body.zh_logged_in .zhc-markdown kbd {
     box-shadow: inset 0 -2px 0 #383838;
   }
   /* auto-generated rule for "box-shadow: 0 1px 0 #eaecef" */
@@ -3461,7 +3462,7 @@
     border-top-color: currentcolor;
   }
   /* auto-generated rule for "color: #000" */
-  #graphiql mark, html[prefix] mark,
+  mark, #graphiql mark, html[prefix] mark,
   html[prefix] .markdown-body h1 .octicon-link,
   html[prefix] .markdown-body h2 .octicon-link,
   html[prefix] .markdown-body h3 .octicon-link,
@@ -4175,7 +4176,9 @@
   .user-status-emoji-tab[role=tab][aria-selected=true] .UnderlineNav-octicon,
   .gist-quicksearch-results .gist-quicksearch-result-header,
   .gist-quicksearch-results .select-menu-item h4,
-  .gist-quicksearch-results .select-menu-item span, #graphiql ::placeholder,
+  .gist-quicksearch-results .select-menu-item span,
+  .step--current ~ .step:not(.step-completed), .footer-octicon:hover,
+  .course-details p:first-child, #graphiql ::placeholder,
   #graphiql .SideNav-icon,
   #graphiql .UnderlineNav-item:hover .UnderlineNav-octicon,
   #graphiql .UnderlineNav-item:focus .UnderlineNav-octicon,
@@ -4229,9 +4232,11 @@
   .color-gray-5, .text-gray-light,
   .select-menu-item.selected .octicon-circle-slash.select-menu-item-icon,
   .notification-navigation .notification-configure-filters .octicon,
-  .notifications-list-item .notification-list-item-link, #graphiql .color-gray-5,
-  #graphiql .text-gray-light, body.status .text-gray-light,
-  body[class="page-responsive"] .color-gray-5,
+  .notifications-list-item .notification-list-item-link,
+  .step--completed .step-title, .step--completed .link-gray-dark,
+  .step--current ~ .step:not(.step-completed) .link-gray-dark,
+  #graphiql .color-gray-5, #graphiql .text-gray-light,
+  body.status .text-gray-light, body[class="page-responsive"] .color-gray-5,
   body[class="page-responsive"] .text-gray-light {
     color: #949494 !important;
   }
@@ -4254,7 +4259,8 @@
   .team-member-list-avatar .octicon, .branch-infobar .muted-link .octicon,
   .shelf-dismiss, .email-suggestion .octicon-mail,
   .gist-quicksearch-results .gist-quicksearch-no-results,
-  .breadcrumbs a:not(:last-child)::after, #graphiql .btn-octicon.disabled,
+  .breadcrumbs a:not(:last-child)::after, .step .step-title:before,
+  .step--completed, .task-progress-counts, #graphiql .btn-octicon.disabled,
   #graphiql .btn-octicon.disabled:hover, #graphiql p.explain .octicon,
   #graphiql .UnderlineNav-octicon,
   #graphiql .TimelineItem--condensed .TimelineItem-badge,
@@ -4327,6 +4333,9 @@
   body[class="page-responsive"] .diff-view .file .meta .octicon-file {
     color: #757575;
   }
+  .select-menu-text-filter input::-webkit-input-placeholder {
+    color: #757575;
+  }
   .select-menu-text-filter input:-ms-input-placeholder,
   .select-menu-text-filter input::-ms-input-placeholder {
     color: #757575;
@@ -4361,6 +4370,7 @@
   .prose-diff > .markdown-body li.added.moved-down .octicon,
   .prose-diff > .markdown-body li.added.moved-up .octicon, .reblame-link,
   .topic-box .unstarred, .notification-actions .unsaved-notification,
+  .registration-progress-steps .step-loading, .footer-octicon,
   #graphiql .pagination .gap, #graphiql .pagination .disabled,
   #graphiql .pagination .gap:hover, #graphiql .pagination .disabled:hover,
   #graphiql .dropdown-menu-dark .dropdown-header,
@@ -4427,7 +4437,8 @@
   .select-menu-item.navigation-focus.disabled, .select-menu-item:hover.disabled,
   .select-menu-item[aria-disabled=true]:hover,
   .select-menu-item[aria-selected=true].disabled,
-  .select-menu-item[disabled]:hover, .signup-btn:disabled {
+  .select-menu-item[disabled]:hover, .signup-btn:disabled,
+  .staff-bar_current-branch-octicon, .staff-bar_stats {
     color: hsla(0, 0%, 100%, .5);
   }
   /* auto-generated rule for "color: hsla(0,0%,100%,.6)" */
@@ -4447,7 +4458,8 @@
   .header-search-input::placeholder, .reponav-wrapper .reponav,
   .reponav-wrapper .reponav-item, .btn-blurple.disabled, .btn-blurple:disabled,
   .btn-blurple[aria-disabled=true], .CheckRun-search-input::placeholder,
-  .project-full-screen .project-header,
+  .project-full-screen .project-header, .btn-purple.disabled,
+  .btn-purple:disabled, .staff-bar_current-branch,
   body[class="page-responsive"] .HeaderMenu-link:hover,
   body[class="page-responsive"] .HeaderMenu-details[open] .HeaderMenu-link,
   body[class="page-responsive"] .header-search-input::placeholder,
@@ -4703,8 +4715,16 @@
   .ais-SearchBox-input, .SideNav-item[aria-current="page"],
   .SideNav-item[aria-selected="true"], .SideNav-subItem[aria-current="page"],
   .SideNav-subItem[aria-selected="true"], .directory-toc h3 a,
-  .markdown-body .lead-mktg p, div.light-bg a, div.light-bg a h4, #q,
-  #graphiql body, #graphiql .Box-row-link, #graphiql .btn,
+  .markdown-body .lead-mktg p, div.light-bg a, div.light-bg a h4, .step,
+  .step--current, .select-menu-item-parent.navigation-focus,
+  .select-menu-item-parent.navigation-focus.selected,
+  .select-menu-item-parent[aria-selected=true],
+  .select-menu-item-parent[aria-selected=true].selected,
+  .select-menu-item-parent.navigation-focus .octicon-check,
+  .select-menu-item-parent.navigation-focus.selected .octicon-check,
+  .select-menu-item-parent[aria-selected=true] .octicon-check,
+  .select-menu-item-parent[aria-selected=true].selected .octicon-check,
+  .btn-octicon, #q, #graphiql body, #graphiql .Box-row-link, #graphiql .btn,
   #graphiql .social-count, #graphiql .form-control, #graphiql .form-select,
   #graphiql p.explain strong, #graphiql .menu-item.selected,
   #graphiql .menu-item .octicon, #graphiql .tabnav-tab[aria-selected=true],
@@ -4815,8 +4835,10 @@
     color: #bebebe;
   }
   /* auto-generated rule for "color: #2f363d !important" */
-  .color-gray-8, .MarketingBody-lead > p:first-child, #graphiql .color-gray-8,
-  body[class="page-responsive"] .color-gray-8 {
+  .color-gray-8, .MarketingBody-lead > p:first-child,
+  .step--completed .link-gray-dark:hover,
+  .step--current ~ .step:not(.step-completed) .link-gray-dark:hover,
+  #graphiql .color-gray-8, body[class="page-responsive"] .color-gray-8 {
     color: #bebebe !important;
   }
   /* auto-generated rule for "color: #032f62" */
@@ -4864,6 +4886,10 @@
   .pinned-item-list-item.is-dragging, .pinned-item-list-item.sortable-ghost,
   .diffbar-range-menu .in-range:not(.is-range-selected),
   .setup-form .setup-plans tr.selected,
+  .select-menu-item-parent.navigation-focus,
+  .select-menu-item-parent.navigation-focus.selected,
+  .select-menu-item-parent[aria-selected=true],
+  .select-menu-item-parent[aria-selected=true].selected,
   #graphiql .Box-row--focus-blue.navigation-focus,
   #graphiql .Box-row--hover-blue:hover, #graphiql .Box--blue .Box-header,
   #graphiql .Box-header--blue, #graphiql .Box-row--blue,
@@ -5070,8 +5096,10 @@
   .typeahead-result[aria-selected=true], .selected-emoji,
   .user-status-org-button.selected, .gist-snippet .link-overlay .link,
   .subnav-item.selected:hover, .subnav-item.selected:focus,
-  #graphiql .btn-outline:hover, #graphiql .btn-outline:active,
-  #graphiql .btn-outline.selected, #graphiql [open] > .btn-outline,
+  .dropdown-item.selected, .select-menu-item[aria-selected=true],
+  .select-menu-item[aria-selected=true].selected, #graphiql .btn-outline:hover,
+  #graphiql .btn-outline:active, #graphiql .btn-outline.selected,
+  #graphiql [open] > .btn-outline,
   #graphiql .filter-list.pjax-active .filter-item.pjax-active,
   #graphiql .filter-item.selected, #graphiql .subnav-item.selected,
   #graphiql .subnav-item.selected:hover, #graphiql .subnav-item.selected:focus,
@@ -5238,7 +5266,7 @@
   }
   /* auto-generated rule for "background-color: #79b8ff" */
   .topic-tag-contrast .delete-topic-link:hover,
-  .progress-pjax-loader > .progress-pjax-loader-bar {
+  .progress-pjax-loader > .progress-pjax-loader-bar, .loader-bar {
     background-color: /*[[base-color]]*/;
   }
   /* auto-generated rule for "background-color: #79b8ff !important" */
@@ -5539,7 +5567,8 @@
   .authors-and-code .insertions, .summary-stats li .octicon-git-branch,
   .summary-stats li .octicon-issue-opened, .recent-user-key,
   .access-token.new-token .octicon-check, .two-factor-steps .sent-message,
-  .setup-form .octicon-check, #graphiql .form-group dd h4.is-success,
+  .setup-form .octicon-check, .step .step-check,
+  #graphiql .form-group dd h4.is-success,
   #graphiql .form-group.successful .success,
   #graphiql .status-indicator-success .octicon-check,
   #graphiql .Label--outline-green, body.status .update.resolved > strong,
@@ -5689,8 +5718,8 @@
     color: #cb4;
   }
   /* auto-generated rule for "color: #dbab09 !important" */
-  .color-yellow-7, #graphiql .color-yellow-7, body.status .bg-pending,
-  body[class="page-responsive"] .color-yellow-7 {
+  .color-yellow-7, .bg-pending, #graphiql .color-yellow-7,
+  body.status .bg-pending, body[class="page-responsive"] .color-yellow-7 {
     color: #cb4 !important;
   }
   /* auto-generated rule for "color: #ca9800" */
@@ -5705,11 +5734,12 @@
   .deployments-timeline-icon.is-pending, .deployments-timeline-icon.is-queued,
   .review-comment .pending-batched-suggestion-label,
   .prereceive-feedback-heading,
+  .registration-progress-steps .step--current .step-loading,
   .ghh-theme-github .ghh-reviews .ghh-state-warning {
     color: #cb4;
   }
   /* auto-generated rule for "color: #b08800 !important" */
-  .color-yellow-8, .text-yellow, #graphiql .color-yellow-8,
+  .color-yellow-8, .text-yellow, .text-pending, #graphiql .color-yellow-8,
   #graphiql .text-yellow, body.status .text-pending,
   body[class="page-responsive"] .color-yellow-8,
   body[class="page-responsive"] .text-yellow {
@@ -6180,7 +6210,8 @@
   .follow-list .follow-list-name a,
   .details-overlay[open] > .dropdown-item:hover,
   .page-gist-edit .btn-toggle-visibility .octicon-gist-secret, mark,
-  .ais-Highlight-highlighted, #graphiql legend,
+  .ais-Highlight-highlighted, .dropdown-item.selected > .octicon,
+  .select-menu-item[aria-checked=true] .octicon-check, #graphiql legend,
   #graphiql .input-dark::placeholder,
   #graphiql .subnav-search-context .select-menu-item-icon,
   #graphiql .flash-close, #graphiql .dropdown-item:focus > .octicon,
@@ -6291,7 +6322,8 @@
   .avatar-upload .flash, .tag-input input, .tag-input input:focus,
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
   .hx_badge-search-container .hx_badge-input, .Box--responsive .Box-row--unread,
-  .upload-enabled.focused .ais-SearchBox-input, .upload-enabled.focused #q,
+  .upload-enabled.focused .ais-SearchBox-input, .btn-purple.disabled,
+  .btn-purple:disabled, .blankslate-clean-background, .upload-enabled.focused #q,
   #graphiql .btn:disabled, #graphiql .btn.disabled,
   #graphiql .btn-primary:disabled, #graphiql .btn-primary.disabled,
   #graphiql .btn-blue:disabled, #graphiql .btn-blue.disabled,
@@ -6481,8 +6513,8 @@
   a, .btn-link, .inline-form .btn-plain, .tabnav-tab,
   .filter-list.pjax-active .filter-item, .SideNav-item, .SideNav-subItem,
   .markdown-body table img, .markdown-body .emoji, .markdown-body pre code,
-  .markdown-body pre tt, .btn-transparent, #graphiql a, #graphiql .btn-link,
-  #graphiql .inline-form .btn-plain, #graphiql .tabnav-tab,
+  .markdown-body pre tt, .btn-transparent, .Label--outline, #graphiql a,
+  #graphiql .btn-link, #graphiql .inline-form .btn-plain, #graphiql .tabnav-tab,
   #graphiql .filter-list.pjax-active .filter-item, #graphiql .SideNav-item,
   #graphiql .SideNav-subItem, #graphiql .Label--outline,
   #graphiql .markdown-body table img, #graphiql .markdown-body .emoji,
@@ -6599,6 +6631,7 @@
     background-color: transparent;
   }
   /* auto-generated rule for "background-color: transparent !important" */
+  .select-menu.label-select-menu .select-menu-item:active,
   body.zh_logged_in .zhc-btn--text, body.zh_logged_in .zhc-btn--text[disabled],
   body.zh_logged_in .zhc-btn--text.zhc-btn--disabled,
   body.zh_logged_in .zhc-btn--text[disabled].zhc-btn--is-active,
@@ -6629,9 +6662,9 @@
   .theme-toggle, .tag-input input, .tree-browser-result mark,
   .toolbar-commenting .dropdown-item, .toolbar-item, .toolbar-item .menu-target,
   .wiki-footer .markdown-body img, .user-list li em, .ais-SearchBox-reset, mark,
-  .ais-Highlight-highlighted, #graphiql .btn-invisible:hover,
-  #graphiql .btn-invisible:active, #graphiql .btn-invisible:focus,
-  #graphiql .btn-invisible.selected,
+  .ais-Highlight-highlighted, .blankslate-clean-background,
+  #graphiql .btn-invisible:hover, #graphiql .btn-invisible:active,
+  #graphiql .btn-invisible:focus, #graphiql .btn-invisible.selected,
   #graphiql .btn-invisible.zeroclipboard-is-hover,
   #graphiql .btn-invisible.zeroclipboard-is-active, #graphiql .flash-close,
   #graphiql .dropdown-signout, body.status .cpt-toggle,
@@ -6684,8 +6717,10 @@
   .topic-input-container .tag-input .tag-input-inner,
   .oauth-permissions-details.open a.btn-sm,
   .clone-url-button > .clone-url-link:active, .btn-secret.selected,
-  .btn-secret:active, #graphiql .btn:active, #graphiql .btn.selected,
-  #graphiql [open] > .btn, #graphiql .btn:disabled, #graphiql .btn.disabled,
+  .btn-secret:active, .btn-purple.selected, .btn-purple:active,
+  [open] > .btn-purple, .btn-purple.disabled, .btn-purple:disabled,
+  #graphiql .btn:active, #graphiql .btn.selected, #graphiql [open] > .btn,
+  #graphiql .btn:disabled, #graphiql .btn.disabled,
   #graphiql .btn-primary:active, #graphiql .btn-primary.selected,
   #graphiql [open] > .btn-primary, #graphiql .btn-primary:disabled,
   #graphiql .btn-primary.disabled, #graphiql .btn-blue:active,
@@ -11030,6 +11065,33 @@
   }
   .shaded-background {
     background: transparent;
+  }
+}
+@-moz-document regexp("^https://(education|lab)\.github\.com\/.*$") {
+  .btn-blue {
+    background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, 1), rgba(/*[[base-color-rgb]]*/, .9) 90%) !important;
+  }
+  .btn-blue.hover, .btn.btn-blue:hover {
+    background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, .9), rgba(/*[[base-color-rgb]]*/, .8) 90%) !important;
+    border-color: rgba(/*[[base-color-rgb]]*/, .3) !important;
+  }
+}
+@-moz-document domain("lab.github.com") {
+  div[style="background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));"],
+  div[style="background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));"] {
+    background: transparent !important;
+  }
+  .tabnav-tab[aria-current="page"] {
+    border-color: transparent;
+    border-bottom: 1px solid #444;
+    background-color: #222;
+  }
+  .tabnav-tab {
+    border: 1px solid transparent;
+  }
+  img[src*="org-page.png"], img[src*="learning-path-ui.png"],
+  img[src*="private-course-ui.png"], img[src*="course-admin-ui.png"] {
+    filter: invert(1) hue-rotate(180deg) contrast(95%);
   }
 }
 @-moz-document regexp("^https://(render)\.githubusercontent\.com\/render\/math\?.*$") {
