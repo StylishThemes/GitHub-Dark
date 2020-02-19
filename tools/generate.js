@@ -364,6 +364,7 @@ let sources = [
     crx: "hlepfoohegkhhmjieoechaddaejaokhf", // refined-github
     prefix: `html.refined-github`,
     match: ["html", ".refined-github"],
+    contentScriptsOnly: true,
   },
   {
     crx: "ogcgkffhplmphkaahpmffcafajaocjbd", // zenhub
@@ -773,9 +774,11 @@ async function extensionCss(source, version) {
   let cssFiles = [];
   let jsFiles = [];
 
-  for (const path of Object.keys(files)) {
-    if (path.endsWith(".css")) cssFiles.push(path);
-    if (path.endsWith(".js")) jsFiles.push(path);
+  if (!source.contentScriptsOnly) {
+    for (const path of Object.keys(files)) {
+      if (path.endsWith(".css")) cssFiles.push(path);
+      if (path.endsWith(".js")) jsFiles.push(path);
+    }
   }
 
   const manifest = JSON.parse(String(await files["manifest.json"].buffer()));
