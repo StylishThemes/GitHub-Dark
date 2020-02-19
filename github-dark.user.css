@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.221
+@version     1.22.222
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.221 (2020-02-19) */
+/*! Github Dark v1.22.222 (2020-02-19) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -9405,6 +9405,14 @@
   .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
     background: #202020 !important;
   }
+  /* HACK: Fix extraneous margin on last task list item in markdown */
+  /* Example: https://github.com/go-gitea/gitea/pull/10325#issue-376340276 */
+  .reorderable-task-lists .markdown-body li p {
+    margin-bottom: 0 !important;
+  }
+  .reorderable-task-lists .markdown-body li + li {
+    margin-top: 1rem !important;
+  }
   /* HACK: Fix review comment timeline */
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
   .review-comment-contents::after, .review-comment.is-comment-editing::after {
@@ -9672,7 +9680,7 @@
   .markdown-format p > code, .markdown-body code, .markdown-body tt,
   .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
   .markdown-body .highlight pre, #user-content-toc td, .copyable-terminal,
-  .project-card .highlight pre, .project-card code {
+  .project-card .highlight pre, .project-card code, .rgh-parse-backticks {
     border: 1px solid rgba(255, 255, 255, .1) !important;
   }
   /* toc in markdown, reset border-collaps so border-radius works   */
@@ -10111,7 +10119,7 @@
   .content ul code, p code, .content .sectionbody .dlist dt, .content p > tt,
   .content .sectionbody .dlist dt, .content p > tt, .commit-sha,
   .commit-preview .message pre, .rendered_html pre, .rendered_html code,
-  .markdown-format p > code, .markdown-format pre {
+  .markdown-format p > code, .markdown-format pre, .rgh-parse-backticks {
     background: #222 !important;
   }
   .project-card code {
