@@ -500,7 +500,8 @@ function parseRule(decls, rule, {prefix, match, props} = {}) {
         .replace(/~/g, " ~ ")
         .replace(/>/g, " > ")
         .replace(/ {2,}/g, " ")
-        .replace(/'/g, `"`);
+        .replace(/'/g, `"`)
+        .replace(/([^:]):(before|after)/g, (_, m1, m2) => `${m1}::${m2}`); // css parser seems to emit "::" as ":"
 
       // add prefix
       if (prefix) {
