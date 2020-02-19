@@ -9190,6 +9190,14 @@
   .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
     background: #202020 !important;
   }
+  /* HACK: Fix extraneous margin on last task list item in markdown */
+  /* Example: https://github.com/go-gitea/gitea/pull/10325#issue-376340276 */
+  .reorderable-task-lists .markdown-body li p {
+    margin-bottom: 0 !important;
+  }
+  .reorderable-task-lists .markdown-body li + li {
+    margin-top: 1rem !important;
+  }
   /* HACK: Fix review comment timeline */
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
   .review-comment-contents::after, .review-comment.is-comment-editing::after {
