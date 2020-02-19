@@ -146,7 +146,6 @@ let mappings = {
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #555": "color: #bebebe", // graphql explorer
-  "color: #586069": "color: #afafaf",
   "color: #666": "color: #949494",
   "color: #6a737d": "color: #949494",
   "color: #959da5": "color: #757575",
@@ -178,6 +177,7 @@ let mappings = {
   "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
 
   "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
+  "color: #586069": "color: #afafaf", // needs to be after #0366d6 for RGH "more" button
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1f61a0": "color: /*[[base-color]]*/ #4f8cc9", //  graphql explorer
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
