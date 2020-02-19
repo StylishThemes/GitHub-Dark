@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.220
+@version     1.22.221
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.220 (2020-02-18) */
+/*! Github Dark v1.22.221 (2020-02-19) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -3880,7 +3880,6 @@
   body[class="page-responsive"] .bubble-disabled .bubble-content,
   body[class="page-responsive"] .bubble-disabled .bubble-action,
   body[class="page-responsive"] .list-item > .list-item-chevron,
-  body[class="page-responsive"] .list-item .nwo-link,
   body[class="page-responsive"] .list-item .ref,
   body[class="page-responsive"] .list-item .byline,
   body[class="page-responsive"] .list-item.read .list-item-title,
@@ -5095,7 +5094,7 @@
   .typeahead-result.navigation-focus, .typeahead-result:hover,
   .typeahead-result[aria-selected=true], .selected-emoji,
   .user-status-org-button.selected, .gist-snippet .link-overlay .link,
-  .subnav-item.selected:hover, .subnav-item.selected:focus,
+  .subnav-item.selected:focus, .subnav-item.selected:hover,
   .dropdown-item.selected, .select-menu-item[aria-selected=true],
   .select-menu-item[aria-selected=true].selected, #graphiql .btn-outline:hover,
   #graphiql .btn-outline:active, #graphiql .btn-outline.selected,
@@ -5153,7 +5152,7 @@
   .blob-num-expandable .directional-expander:hover,
   .newsletter-frequency-choice:hover, .newsletter-frequency-choice:hover h3,
   .reaction-sort-item[aria-checked=true], .gist-snippet .file-box:hover .file,
-  .subnav-item.selected:hover, .subnav-item.selected:focus,
+  .subnav-item.selected:focus, .subnav-item.selected:hover,
   #graphiql .btn-outline:hover, #graphiql .btn-outline:active,
   #graphiql .btn-outline.selected, #graphiql [open] > .btn-outline,
   #graphiql .btn-outline:focus, #graphiql .subnav-item.selected,
@@ -7894,8 +7893,7 @@
   }
   /* repo header */
   .page-responsive .repohead, .page-responsive .pagehead,
-  .repohead.bg-gray-light, .pagehead.bg-gray-light,
-  .repohead.experiment-repo-nav {
+  .repohead.bg-gray-light, .pagehead.bg-gray-light {
     background: rgba(24, 24, 24, .4) !important;
   }
   .explore-signup-entice-inner {
@@ -9398,6 +9396,14 @@
   .repo-list-item p, .repo-list-item .repo-list-stats, .review-thread-reply {
     position: relative !important;
     z-index: 1 !important;
+  }
+  /* GHE site header */
+  .repohead.experiment-repo-nav {
+    background: rgba(24, 24, 24, .4) !important;
+  }
+  /* GHE comment form header */
+  .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
+    background: #202020 !important;
   }
   /* HACK: Fix review comment timeline */
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
