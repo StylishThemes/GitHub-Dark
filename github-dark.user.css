@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.224
+@version     1.22.225
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.224 (2020-02-20) */
+/*! Github Dark v1.22.225 (2020-02-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -227,6 +227,9 @@
   /* https://github.com/StylishThemes/GitHub-Dark/issues/968 */
   input, textarea {
     color: #bebebe;
+  }
+  svg {
+    fill: #bebebe;
   }
   .Popover-message::before {
     border-bottom-color: #343434;
@@ -7445,9 +7448,9 @@
   .reorderable-task-lists .markdown-body .task-list-item.hovered,
   .next-charge-box, .setup-info-module h2, .pinned-repo-list-item,
   .pinned-repo-filters, .orghead, .orghead .edit-org, .discussion-item-deployed,
-  .branch-action-body .merge-message, .new-project-column,
-  .confirm-removal-list-container, .confirm-removal-list-item, .user-profile-nav,
-  .review-thread-reply, .feature-callout-octicon, .feature-callout,
+  .new-project-column, .confirm-removal-list-container,
+  .confirm-removal-list-item, .user-profile-nav, .review-thread-reply,
+  .feature-callout-octicon, .feature-callout,
   .discussion-item + .discussion-item,
   .discussion-item-review + .discussion-item, .libraries-jumbotron,
   .last-review-thread, .menu-item, .review-comment.is-comment-editing,
@@ -7728,12 +7731,6 @@
   .flex-auto > .bg-gray-light {
     background: none !important;
   }
-  /* make .blankslate invisible. if there are exceptions where it's useful, add them via :not() */
-  .blankslate:not(.repository-og-image):not(.blankslate-capped) {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
   button.bg-white.subnav-link, main [style="background-color: #fcfdfd;"],
   .repository-content > .bg-white:not(.card-filter-autocomplete-dropdown) {
     background-color: transparent !important;
@@ -7799,11 +7796,10 @@
   .migration-jumbotron, .migration-sub-header, .commit-tease,
   .manage-repo-access-title, .signed-commit-header,
   .reorderable-task-lists .markdown-body .task-list-item.hovered,
-  .next-charge-box, .credit-card, .branch-action-body .merge-message,
-  .review-thread-reply, a.card.bg-gray-light:hover,
-  .add-member-team-list .team-row-header, .pagination .gap,
-  .pagination .disabled, .pagination .gap:hover, .pagination .disabled:hover,
-  .listgroup-header, .merge-status-item,
+  .next-charge-box, .credit-card, .review-thread-reply,
+  a.card.bg-gray-light:hover, .add-member-team-list .team-row-header,
+  .pagination .gap, .pagination .disabled, .pagination .gap:hover,
+  .pagination .disabled:hover, .listgroup-header, .merge-status-item,
   .bg-gray:not(body):not(.team-discussions-container),
   .Header .header-search-wrapper, .Header .header-search-wrapper input,
   .user-key-email-unverified, .action-card-header::before,
@@ -9637,6 +9633,9 @@
   .pagehead.repohead h1 .repo-label span,
   .coupons .coupon-form-body .coupon-icon, .menu, .api pre {
     border: 1px solid #484848 !important;
+  }
+  .js-notice .js-notice-dismiss {
+    border: 1px solid #484848;
   }
   #graph-shots li > p, .logo-box, .branch-infobar, #com hr,
   .discussion-item-body .outdated-comment .file-header,
