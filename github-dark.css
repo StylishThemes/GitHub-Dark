@@ -9169,21 +9169,24 @@
     position: relative !important;
     z-index: 1 !important;
   }
-  /* GHE site header */
-  .repohead.experiment-repo-nav {
+  /* GitHub Enterprise (GHE) stuff */
+  body.enterprise .repohead.experiment-repo-nav {
     background: rgba(24, 24, 24, .4);
   }
-  /* GHE comment form header */
-  .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
+  body.enterprise .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
     background: #202020;
   }
-  /* GHE comment form header triangles */
-  .timeline-comment-wrapper > .timeline-comment::after,
-  .timeline-new-comment .timeline-comment::after {
-    border-right-color: #202020;
+  body.enterprise .timeline-comment-wrapper .timeline-comment.current-user::before {
+    border-right-color: #246;
   }
-  .timeline-comment-wrapper .timeline-comment.current-user::after {
+  body.enterprise .timeline-comment-wrapper .timeline-comment.current-user::after {
     border-right-color: #182030;
+  }
+  body.enterprise .timeline-new-comment .timeline-comment::before {
+    border-right-color: #404040;
+  }
+  body.enterprise .timeline-new-comment .timeline-comment::after {
+    border-right-color: #202020;
   }
   /* HACK: Fix extraneous margin on last task list item in markdown */
   /* Example: https://github.com/go-gitea/gitea/pull/10325#issue-376340276 */
