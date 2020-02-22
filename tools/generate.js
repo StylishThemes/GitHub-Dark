@@ -258,9 +258,11 @@ let mappings = {
   "$background: #28a745": "#061",
   "$background: #2cbe4e": "#061",
   "$background: #dcffe4": "#002800",
+  "$background: #f0fff4": "#002800",
   "$background: rgba(108,198,68,.1)": "#002800",
   "fill: #2cbe4e": "fill: #6cc644",
   "$border: #34d058": "#34d058",
+  "$border: #a2cbac": "#28a745",
   "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
 
   // yellow
