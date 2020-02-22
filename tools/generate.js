@@ -1,22 +1,19 @@
 #!/usr/bin/env node
 "use strict";
 
+const acorn = require("acorn");
 const css = require("css");
-const cssMediaQuery = require("css-mediaquery");
 const doFetch = require("make-fetch-happen");
-const {readFile, writeFile} = require("fs").promises;
 const parse5 = require("parse5");
 const path = require("path");
-const perfectionist = require("perfectionist");
-const urlToolkit = require("url-toolkit");
+const remapCss = require("remap-css");
 const unzipper = require("unzipper");
-const {isShorthand} = require("css-shorthand-properties");
-const cssColorNames = require("css-color-names");
-const acorn = require("acorn");
+const urlToolkit = require("url-toolkit");
+const {readFile, writeFile} = require("fs").promises;
 
 // This list maps old declarations to new ones. Ordering is significant.
 // $ indicates a special value that will generate a set of rules.
-let mappings = {
+const mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
@@ -406,18 +403,7 @@ const ignoreSelectors = [
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
-// a device we optimize for, used to remove mobile-only media queries
-const device = {
-  type: "screen",
-  width: "1024px",
-};
-
-const perfOpts = {
-  maxSelectorLength: 76, // -4 because of indentation and to accomodate ' {'
-  indentSize: 2,
-};
-
-const replaceRe = /.*begin auto-generated[\s\S]+end auto-generated.*/gm;
+const replaceRe = /.*begin remap-css[\s\S]+end remap-css.*/gm;
 const cssFile = path.join(__dirname, "..", "github-dark.css");
 
 async function fetch(...args) {
@@ -464,275 +450,9 @@ function extractStyleTags(html) {
   return matches.map(match => match[1]).map(css => css.trim()).filter(css => !!css);
 }
 
-function parseDeclarations(cssString, opts) {
-  const decls = {};
-  const stylesheet = css.parse(cssString).stylesheet;
-
-  stylesheet.rules.forEach(rule => {
-    if (rule.type === "media" && mediaMatches(rule.media)) {
-      rule.rules.forEach(rule => parseRule(decls, rule, opts));
-    }
-
-    if (!rule.selectors || rule.selectors.length === 0) return;
-    parseRule(decls, rule, opts);
-  });
-
-  return decls;
-}
-
-function parseRule(decls, rule, {prefix, match, props} = {}) {
-  for (const {value, property} of rule.declarations || []) {
-    if (!props[property] || !value) continue;
-    const normalizedValue = normalize(value, property);
-    if (!props[property][normalizedValue]) continue;
-    const originalValue = props[property][normalizedValue];
-
-    let name = `${property}: ${originalValue}`;
-    if (value.trim().endsWith("!important")) {
-      name = `${name} !important`;
-    }
-
-    if (!decls[name]) decls[name] = new Set();
-
-    rule.selectors.forEach(selector => {
-      // Skip ignored selectors
-      if (ignoreSelectors.some(re => re.test(selector))) return;
-
-      // stylistic tweaks
-      selector = selector
-        .replace(/\+/g, " + ")
-        .replace(/~/g, " ~ ")
-        .replace(/>/g, " > ")
-        .replace(/ {2,}/g, " ")
-        .replace(/'/g, `"`)
-        .replace(/([^:]):(before|after)/g, (_, m1, m2) => `${m1}::${m2}`); // css parser seems to emit "::" as ":"
-
-      // add prefix
-      if (prefix) {
-        // skip adding a prefix if it matches a selector in `match`
-        let skip = false;
-        if (match) {
-          for (const m of match) {
-            const first = selector.split(/\s+/)[0];
-            if ((/^[.#]+/.test(first) && first === m) || first.startsWith(m)) {
-              skip = true;
-              break;
-            }
-          }
-        }
-
-        if (!skip) {
-          // incomplete check to avoid generating invalid "html :root" selectors
-          if (selector.startsWith(":root ") && prefix.startsWith("html")) {
-            selector = `${prefix} ${selector.substring(":root ".length)}`;
-          } else {
-            selector = `${prefix} ${selector}`;
-          }
-        }
-      }
-
-      // add the selector to the selector list for this mapping
-      decls[name].add(selector);
-    });
-  }
-}
-
-// TODO: manually wrap long lines here
-function format(css) {
-  return String(perfectionist.process(css, perfOpts));
-}
-
-function unmergeables(selectors) {
-  return selectors.filter(selector => /-(moz|ms|webkit)-.+/.test(selector));
-}
-
-function unmergeableRules(selectors, value) {
-  let ret = "";
-  const moz = [];
-  const webkit = [];
-  const ms = [];
-  const other = [];
-
-  for (const selector of selectors) {
-    if (selector.includes("-moz-")) moz.push(selector);
-    else if (selector.includes("-webkit-")) webkit.push(selector);
-    else if (selector.includes("-ms-")) ms.push(selector);
-    else other.push(selector);
-  }
-
-  if (moz.length) ret += format(`${moz.join(", ")} {${value};}`);
-  if (webkit.length) ret += format(`${webkit.join(", ")} {${value};}`);
-  if (ms.length) ret += format(`${ms.join(", ")} {${value};}`);
-  if (other.length) ret += format(`${other.join(", ")} {${value};}`);
-
-  return ret;
-}
-
-function buildOutput(decls) {
-  let output = "/* begin auto-generated rules - use tools/generate.js to generate them */\n";
-
-  for (const [fromValue, toValue] of Object.entries(mappings)) {
-    let normalSelectors = Array.from(decls[fromValue] || []);
-    let importantSelectors = Array.from(decls[`${fromValue} !important`] || []);
-
-    if (normalSelectors && normalSelectors.length) {
-      const newValue = toValue.trim().replace(/;$/, "");
-      const normalUnmergeables = unmergeables(normalSelectors);
-
-      if (normalUnmergeables.length) {
-        normalSelectors = normalSelectors.filter(selector => !normalUnmergeables.includes(selector));
-      }
-      if (normalSelectors.length || normalUnmergeables.length) {
-        output += `/* auto-generated rule for "${fromValue}" */\n`;
-      }
-      if (normalSelectors.length) output += format(`${normalSelectors.join(",")} {${newValue};}`);
-      if (normalUnmergeables.length) output += unmergeableRules(normalUnmergeables, newValue);
-    }
-
-    if (importantSelectors && importantSelectors.length) {
-      const newValue = toValue.trim().replace(/;$/, "").split(";").map(v => `${v} !important`).join(";");
-      const importantUnmergeables = unmergeables(importantSelectors);
-
-      if (importantUnmergeables.length) {
-        importantSelectors = importantSelectors.filter(selector => !importantUnmergeables.includes(selector));
-      }
-      if (importantSelectors.length || importantUnmergeables.length) {
-        output += `/* auto-generated rule for "${fromValue} !important" */\n`;
-      }
-      if (importantSelectors.length) output += format(`${importantSelectors.join(",")} {${newValue};}`);
-      if (importantUnmergeables.length) output += unmergeableRules(importantUnmergeables, newValue);
-    }
-  }
-  output += "/* end auto-generated rules */";
-  return output.split("\n").map(line => `  ${line}`).join("\n");
-}
-
-function normalizeHexColor(value) {
-  if ([4, 5].includes(value.length)) {
-    const [h, r, g, b, a] = value;
-    return `${h}${r}${r}${g}${g}${b}${b}${a || "f"}${a || "f"}`;
-  } else if (value.length === 7) {
-    return `${value}ff`;
-  }
-  return value;
-}
-
-function normalize(value, prop) {
-  value = value
-    // remove !important and trim whitespace
-    .replace(/!important$/g, "").trim()
-    // remove leading zeroes on values like 'rgba(27,31,35,0.075)'
-    .replace(/0(\.[0-9])/g, (_, val) => val)
-    // normalize 'linear-gradient(-180deg, #0679fc, #0361cc 90%)' to not have whitespace in parens
-    .replace(/([a-z-]+\()(.+)(\))/g, (_, m1, m2, m3) => `${m1}${m2.replace(/,\s+/g, ",")}${m3}`);
-
-  if (value in cssColorNames) {
-    value = cssColorNames[value];
-  }
-
-  if (/^#[0-9a-f]+$/i.test(value)) {
-    value = normalizeHexColor(value);
-  }
-
-  // treat values case-insensitively
-  if (prop !== "content" && !value.startsWith("url(")) {
-    value = value.toLowerCase();
-  }
-
-  // try to ignore order in shorthands. This will only work on simple cases as for example
-  // `background` can take a comma-separated list which totally breaks this comparison.
-  if (isShorthand(prop)) {
-    value = value.split(" ").sort().join(" ");
-  }
-
-  return value;
-}
-
-function mediaMatches(query) {
-  try {
-    return cssMediaQuery.match(query, device);
-  } catch (err) {
-    // this library has a few bugs. In case of error, we include the rule.
-    return true;
-  }
-}
-
 function exit(err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
-}
-
-function prepareMappings(mappings) {
-  const newMappings = {};
-  for (const [key, value] of Object.entries(mappings)) {
-    if (key.startsWith("$border: ")) {
-      const oldValue = key.substring("$border: ".length);
-      newMappings[`border: solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 1px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 2px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 3px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 4px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 5px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 6px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 7px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 8px solid ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 1px dashed ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border: 2px dashed ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border-color: ${oldValue}`] = `border-color: ${value}`;
-      newMappings[`border-top: 1px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 1px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 1px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 1px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 1px dashed ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 1px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 1px dashed ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 1px dashed ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 2px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 2px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 2px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 2px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 2px dashed ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 2px dashed ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 2px dashed ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 2px dashed ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 3px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 3px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 3px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 3px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 4px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 4px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 4px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 4px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 5px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 5px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 5px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 5px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 6px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 6px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 6px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 6px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 7px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 7px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 7px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 7px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top: 8px solid ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom: 8px solid ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left: 8px solid ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right: 8px solid ${oldValue}`] = `border-right-color: ${value}`;
-      newMappings[`border-top-color: ${oldValue}`] = `border-top-color: ${value}`;
-      newMappings[`border-bottom-color: ${oldValue}`] = `border-bottom-color: ${value}`;
-      newMappings[`border-left-color: ${oldValue}`] = `border-left-color: ${value}`;
-      newMappings[`border-right-color: ${oldValue}`] = `border-right-color: ${value}`;
-    } else if (key.startsWith("$background: ")) {
-      const oldValue = key.substring("$background: ".length);
-      newMappings[`background: ${oldValue}`] = `background: ${value}`;
-      newMappings[`background-color: ${oldValue}`] = `background-color: ${value}`;
-      newMappings[`background-image: ${oldValue}`] = `background-image: ${value}`;
-    } else {
-      newMappings[key] = value;
-    }
-  }
-  return newMappings;
 }
 
 function isValidCSS(string) {
@@ -823,16 +543,6 @@ async function extensionCss(source, version) {
 }
 
 async function main() {
-  mappings = prepareMappings(mappings);
-
-  const props = {};
-  for (const mapping of Object.keys(mappings)) {
-    const [prop, val] = mapping.split(": ");
-    const normalizedVal = normalize(val, prop);
-    if (!props[prop]) props[prop] = {};
-    props[prop][normalizedVal] = val;
-  }
-
   const expandedSources = [];
   for (const source of sources) {
     if ("url" in source && Array.isArray(source.url)) {
@@ -879,18 +589,11 @@ async function main() {
     }
   }
 
-  const decls = {};
-  for (const source of sources) {
-    const opts = {prefix: source.prefix, match: source.match, props};
-    for (const [key, values] of Object.entries(parseDeclarations(source.css, opts))) {
-      if (!decls[key]) decls[key] = new Set();
-      for (const value of values) {
-        decls[key].add(value);
-      }
-    }
-  }
-
-  await writeOutput(buildOutput(decls));
+  await writeOutput(await remapCss(sources, mappings, {
+    ignoreSelectors,
+    indent: 2,
+    lineLength: 76,
+  }));
 }
 
 main().then(exit).catch(exit);
