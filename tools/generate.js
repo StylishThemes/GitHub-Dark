@@ -314,11 +314,6 @@ const mappings = {
   "background-image: none": "background-image: none",
 };
 
-// list of sources to pull stylesheets from. Accepts fetch options. If `prefix`
-// is  set, will prefix all selectors obtained from this source, unless they
-// start with one of the selectors in `match`. If `url` ends with .css, will
-// directly load that stylesheet. `crx` refers so a Chrome extension id and can
-// be used in place of `url`.
 const sources = [
   {url: "https://github.com"},
   {url: "https://gist.github.com"},
@@ -377,8 +372,6 @@ const sources = [
   },
 ];
 
-// list of regexes matching selectors that should be ignored
-// TODO: every selector should be validated against W3C rules
 const ignoreSelectors = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
@@ -399,21 +392,21 @@ const ignoreSelectors = [
 const replaceRe = /.*begin remap-css[\s\S]+end remap-css.*/gm;
 const cssFile = join(__dirname, "..", "github-dark.css");
 
+const remapOpts = {
+  ignoreSelectors,
+  indentCss: 2,
+  lineLength: 76,
+  comments: true,
+};
+
 function exit(err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
 }
 
 async function main() {
-  const generatedCss = await remapCss(await fetchCss(sources), mappings, {
-    ignoreSelectors,
-    indentCss: 2,
-    lineLength: 76,
-    comments: true,
-  });
-
-  const css = await readFile(cssFile, "utf8");
-  await writeFile(cssFile, css.replace(replaceRe, generatedCss));
+  const generatedCss = await remapCss(await fetchCss(sources), mappings, remapOpts);
+  await writeFile(cssFile, (await readFile(cssFile, "utf8")).replace(replaceRe, generatedCss));
 }
 
 main().then(exit).catch(exit);
