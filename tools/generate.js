@@ -398,6 +398,7 @@ const remapOpts = {
   indentCss: 2,
   lineLength: 76,
   comments: true,
+  stylistic: true,
 };
 
 function exit(err) {
