@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.231
+@version     1.22.232
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.231 (2020-02-23) */
+/*! Github Dark v1.22.232 (2020-02-23) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -227,6 +227,12 @@
   /* https://github.com/StylishThemes/GitHub-Dark/issues/968 */
   input, textarea {
     color: #bebebe;
+  }
+  input[type="date"], input[type="datetime-local"], input[type="email"],
+  input[type="file"], input[type="number"], input[type="password"],
+  input[type="search"], input[type="tel"], input[type="text"],
+  input[type="time"], input[type="url"] {
+    background: #181818;
   }
   svg {
     fill: #bebebe;
@@ -3435,6 +3441,10 @@
   body.status .box-shadow-medium,
   body[class="page-responsive"] .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
+  }
+  /* remap-css rule for "box-shadow: 0 0 5px rgba(27,31,35,.3)" */
+  .autocomplete-results {
+    box-shadow: 0 0 5px #000;
   }
   /* remap-css rule for "box-shadow: inset 0 -1px 0 #d1d5da" */
   kbd, .markdown-body kbd, #graphiql kbd, #graphiql .markdown-body kbd,
@@ -7767,7 +7777,8 @@
   .pinned-issue-item, #wiki-footer .border-dashed, #wiki-rightbar .border-dashed,
   .list-group-item.standalone, .commit-form, .sidebar-progress-bar > .d-flex,
   .pagination-loader-container .discussion-item-header .border,
-  .notifications-list .list-style-none.bg-gray, .pr-toolbar.is-stuck {
+  .notifications-list .list-style-none.bg-gray, .pr-toolbar.is-stuck,
+  .hx_badge-search-container {
     background: #181818 !important;
   }
   .Box-row--hover-blue {
@@ -9463,14 +9474,6 @@
   }
   body.enterprise .timeline-new-comment .timeline-comment::after {
     border-right-color: #202020;
-  }
-  /* HACK: Fix extraneous margin on last task list item in markdown */
-  /* Example: https://github.com/go-gitea/gitea/pull/10325#issue-376340276 */
-  .reorderable-task-lists .markdown-body li p {
-    margin-bottom: 0 !important;
-  }
-  .reorderable-task-lists .markdown-body li + li {
-    margin-top: 1rem !important;
   }
   /* HACK: Fix review comment timeline */
   /* https://github.com/nodejs/node/pull/8519#r78637092 */
