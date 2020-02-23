@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.230
+@version     1.22.231
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.230 (2020-02-22) */
+/*! Github Dark v1.22.231 (2020-02-23) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -5635,13 +5635,13 @@
   body[class="page-responsive"] .btn-primary,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary,
   html.ghh-theme-classic .ghh .ghh-state-verified {
-    background-color: #061;
+    background-color: #373;
   }
   /* remap-css rule for "background-color: #28a745 !important" */
   .bg-green, .bg-green-5, #graphiql .bg-green, #graphiql .bg-green-5,
   body.status .bg-green, body[class="page-responsive"] .bg-green,
   body[class="page-responsive"] .bg-green-5 {
-    background-color: #061 !important;
+    background-color: #373 !important;
   }
   /* remap-css rule for "background-color: #2cbe4e" */
   .State--green, .diffstat-block-added, .progress-bar .progress,
@@ -5652,7 +5652,7 @@
   body[class="page-responsive"] .progress-bar .progress,
   html.ghh-theme-classic .ghh .ghh-state-open,
   .ghh-theme-github .ghh-reviews .ghh-state-icon-success {
-    background-color: #061;
+    background-color: #373;
   }
   /* remap-css rule for "background: #dcffe4" */
   .boxed-group-list > li.selected {
@@ -7785,6 +7785,15 @@
   .flex-auto > .bg-gray-light {
     background: none !important;
   }
+  /* blankslates */
+  /* bordered: https://github.com/StylishThemes/GitHub-Dark/actions/runs/42585904 */
+  /* unbordered: https://github.com/StylishThemes/GitHub-Dark/pull/1069/files/d0801046a22eaf88d9081de9c7d415825cb1f9fa..291b428577d344d54039de9aa0d8ed3a8fcfaebc */
+  .blankslate {
+    background: none !important;
+  }
+  .blankslate.border {
+    background: #181818 !important;
+  }
   button.bg-white.subnav-link, main [style="background-color: #fcfdfd;"],
   .repository-content > .bg-white:not(.card-filter-autocomplete-dropdown) {
     background-color: transparent !important;
@@ -9378,30 +9387,32 @@
   /* interactive button - bright border */
   .btn-primary:not(.compare-button):not(.btn-outline):not([disabled]):not(.disabled),
   .button.primary, .btn-theme-green, .btn-primary-mktg {
-    background: linear-gradient(#407045, #305530) !important;
-    border-color: #083 !important;
+    background: linear-gradient(180deg, #373 5%, #060 100%) !important;
+    border-color: #193 !important;
   }
-  .button.primary:disabled, .button.primary:disabled:hover,
-  .button.primary.disabled, .button.primary.disabled:hover,
-  .btn-primary:disabled, .btn-primary:disabled:hover, .btn-primary.disabled,
-  .btn-primary.disabled:hover, .btn-theme-green:disabled,
-  .btn-theme-green:disabled:hover {
-    background: linear-gradient(#203522, #152715) !important;
+  .button.primary:disabled, .button.primary.disabled, .btn-primary:disabled,
+  .btn-primary.disabled, .button.primary:disabled:hover,
+  .button.primary.disabled:hover, .btn-primary:disabled:hover,
+  .btn-primary.disabled:hover {
+    background: linear-gradient(0deg, #030 5%, #040 100%) !important;
     border-color: #041 !important;
+    color: rgba(255, 255, 255, .3) !important;
+    opacity: .7;
+  }
+  /* Green hovered */
+  .btn-primary:not(:disabled):not(.disabled):not(.compare-button):not(.btn-outline):hover,
+  .button.primary:not(:disabled):hover, .btn-theme-green:hover,
+  .btn-primary-mktg:hover {
+    background: linear-gradient(180deg, #383 0%, #170 50%) !important;
+    border-color: #493 !important;
+  }
+  .noproblems .pageheader_wrap, a.new-repo:hover {
+    background: #373 !important;
   }
   /* New additions */
   .repo-owner-tag .tag, .gist-owner-tag .tag {
     background: #070 !important;
     color: #ddd !important;
-  }
-  /* Green hovered */
-  .noproblems .pageheader_wrap, a.new-repo:hover {
-    background: #373 !important;
-  }
-  .btn-primary:not(:disabled):not(.disabled):not(.compare-button):not(.btn-outline):hover,
-  .button.primary:not(:disabled):hover, .btn-theme-green:hover,
-  .btn-primary-mktg:hover {
-    background: linear-gradient(#508055, #407045) !important;
   }
   /* orange */
   #user-links .unread_count, .minorproblem .pageheader_wrap {
@@ -11055,6 +11066,23 @@
   .sidebar {
     background-color: #1c1c1c;
     border-right: 1px solid #343434;
+  }
+  .sidebar-guide.active {
+    background: #242424;
+  }
+  .sidebar-topic .sidebar-article::before,
+  .sidebar-topic .sidebar-article.active::before {
+    border-left-color: /*[[base-color]]*/;
+  }
+  .sidebar-products svg:not([fill]) {
+    fill: #eee;
+  }
+  .sidebar-products a, .sidebar-products .arrow {
+    color: #eee;
+  }
+  .sidebar-guide > a, .sidebar-guide summary a, .sidebar-product > a,
+  .sidebar-product summary a {
+    color: #ccc;
   }
 }
 @-moz-document domain("githubstatus.com") {
