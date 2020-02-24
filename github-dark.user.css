@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.234
+@version     1.22.235
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.234 (2020-02-24) */
+/*! Github Dark v1.22.235 (2020-02-24) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -228,10 +228,7 @@
   input, textarea {
     color: #bebebe;
   }
-  input[type="date"], input[type="datetime-local"], input[type="email"],
-  input[type="file"], input[type="number"], input[type="password"],
-  input[type="search"], input[type="tel"], input[type="text"],
-  input[type="time"], input[type="url"] {
+  input {
     background: #181818;
   }
   svg {
@@ -1369,7 +1366,7 @@
   body[class="page-responsive"] .Header,
   body[class="page-responsive"] .Header-old,
   body[class="page-responsive"] .reponav-wrapper,
-  html.refined-github .rgh-recently-pushed-branches .RecentBranches {
+  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches {
     background-color: #181818;
   }
   /* remap-css rule for "background-color: #24292e !important" */
@@ -3472,7 +3469,7 @@
     fill: currentcolor;
   }
   /* remap-css rule for "border-color: currentcolor" */
-  html.refined-github .rgh-recently-pushed-branches .RecentBranches {
+  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches {
     border-color: currentcolor;
   }
   /* remap-css rule for "border-top-color: currentcolor" */
@@ -4829,7 +4826,8 @@
   body.status .history-header .show-filter, body.status .link-gray-dark,
   body[class="page-responsive"] .color-gray-9,
   body[class="page-responsive"] .jump-to-field-active,
-  body[class="page-responsive"] .link-gray-dark {
+  body[class="page-responsive"] .link-gray-dark,
+  html.refined-github .branch-action-state-unstable .branch-action-item > .status-meta {
     color: #d2d2d2 !important;
   }
   /* remap-css rule for "stroke: #24292e" */
@@ -4998,6 +4996,10 @@
   /* remap-css rule for "border-right-color: #c0d3eb" */
   .timeline-comment--caret.current-user::before {
     border-right-color: #246;
+  }
+  /* remap-css rule for "border: 1px solid #c0d3eb" */
+  html.refined-github .rgh-collaborator {
+    border-color: #246;
   }
   /* remap-css rule for "background-color: #0361cc" */
   #graphiql .btn-blue, .btn-blue {
@@ -6306,7 +6308,9 @@
   html.ghh-theme-classic .ghh-readme a:not([href]),
   html.refined-github .mergeability-details .js-details-container .status-meta,
   html.refined-github .repohead h1 .commit-build-statuses .octicon,
-  html.refined-github .rgh-recently-pushed-branches .RecentBranches-item,
+  html.refined-github .rgh-comments-indicator button,
+  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches-item,
+  html.refined-github button.rgh-quick-mention:not(:hover):not(:focus),
   html[prefix] .flash-close, html[prefix] .markdown-body a:not([href]),
   html[prefix] .subnav-search-context .select-menu-item-icon,
   html[prefix] legend, legend, mark {
@@ -6726,7 +6730,8 @@
   body[data-render-url] .render-view-modes li, button.discussion-sidebar-toggle,
   html.refined-github .dashboard .js-all-activity-header + div .Box,
   html.refined-github .notifications-list .boxed-group-action button,
-  html.refined-github .rgh-recently-pushed-branches .RecentBranches, mark {
+  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches,
+  mark {
     background: none;
   }
   /* remap-css rule for "background: none !important" */
@@ -9545,8 +9550,9 @@
   img[src*="octocat-spinner"], img[src="/images/spinner.gif"], .facebox-loading,
   .branch-action-body .spinner, .status-indicator-loading,
   .ajax-pagination-form.loading .ajax-pagination-btn::after,
-  .profile-picture-spinner, .more-repos-link.is-loading {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><style>.a{fill:%23333;}</style><path d="M364 29C421 57 460 94 485 151l-31 15c-20-41-63-84-105-104" class="a"><animate attributeName="fill" begin="0s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m494 169c20 60 21 114-1 172l-33-11c15-43 15-104 0-148" class="a"><animate attributeName="fill" begin="0.125s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m485 359c-28 57-66 96-122 121l-15-31c41-20 84-63 105-105" class="a"><animate attributeName="fill" begin="0.250s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m345 489c-60 20-114 21-172-1l11-33c43 15 104 15 148 0" class="a"><animate attributeName="fill" begin="0.375s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m154 483c-57-28-95-66-121-122l31-15c20 41 63 84 105 105" class="a"><animate attributeName="fill" begin="0.500s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m24 343c-20-60-21-114 1-172l33 11c-15 44-15 104 0 148" class="a"><animate attributeName="fill" begin="0.625s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="M32 151C60 94 98 55 154 30l15 31c-41 20-84 63-105 105" class="a"><animate attributeName="fill" begin="0.750s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m173 21c60-20 114-21 172 1l-11 33c-43-15-104-15-148 0" class="a"><animate attributeName="fill" begin="0.875s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m197 459v-48s-4-4-33-1c-28 3-62-66-65-69 24-10 43 26 65 38h31s3-44 20-37c17 6-72 1-97-61s19-126 20-115c0 9-17-35-10-46 20-24 50 11 69 15 5 0 18-8 59-7 41 0 55 8 60 6 22-10 51-32 65-17 10 12-1 61-1 49s43 81 6 132c-29 46-95 43-84 46 21 15 14 91 14 115l-22 4v-74c0-9-9-10-9-9v85l-21 1v-86h-10v86l-20-1v-83s-8-1-8 10v72" fill="%23eee"/></svg>') !important;
+  .profile-picture-spinner, .more-repos-link.is-loading,
+  auto-check .is-autocheck-loading {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><style>.a{fill:%23333;}</style><path d="M364 29C421 57 460 94 485 151l-31 15c-20-41-63-84-105-104" class="a"><animate attributeName="fill" begin="0s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m494 169c20 60 21 114-1 172l-33-11c15-43 15-104 0-148" class="a"><animate attributeName="fill" begin="0.125s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m485 359c-28 57-66 96-122 121l-15-31c41-20 84-63 105-105" class="a"><animate attributeName="fill" begin="0.250s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m345 489c-60 20-114 21-172-1l11-33c43 15 104 15 148 0" class="a"><animate attributeName="fill" begin="0.375s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m154 483c-57-28-95-66-121-122l31-15c20 41 63 84 105 105" class="a"><animate attributeName="fill" begin="0.500s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m24 343c-20-60-21-114 1-172l33 11c-15 44-15 104 0 148" class="a"><animate attributeName="fill" begin="0.625s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="M32 151C60 94 98 55 154 30l15 31c-41 20-84 63-105 105" class="a"><animate attributeName="fill" begin="0.750s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m173 21c60-20 114-21 172 1l-11 33c-43-15-104-15-148 0" class="a"><animate attributeName="fill" begin="0.875s" dur="1s" repeatCount="indefinite" values="%23333;%23eee;%23333;%23333"/></path><path d="m197 459v-48s-4-4-33-1c-28 3-62-66-65-69 24-10 43 26 65 38h31s3-44 20-37c17 6-72 1-97-61s19-126 20-115c0 9-17-35-10-46 20-24 50 11 69 15 5 0 18-8 59-7 41 0 55 8 60 6 22-10 51-32 65-17 10 12-1 61-1 49s43 81 6 132c-29 46-95 43-84 46 21 15 14 91 14 115l-22 4v-74c0-9-9-10-9-9v85l-21 1v-86h-10v86l-20-1v-83s-8-1-8 10v72" fill="%23eee"/></svg>') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: 50% 50% !important;
@@ -9556,13 +9562,19 @@
     background-position: 50% 50% !important;
     background-size: 16px 16px !important;
   }
+  auto-check .is-autocheck-loading {
+    background-size: 16px 16px !important;
+    background-position: 97% 50% !important;
+  }
   .timeline-progressive-disclosure-container, .pagination-loader-container {
     background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="44" height="34" viewBox="0 0 44 34"><polyline points="0 21 22 8 44 21 44 26 22 13 0 26" fill="%23444"/></svg>') repeat-x left center/22px 17px !important;
   }
   img[src*="octocat-spinner"][width="128"] {
     padding: 64px !important;
   }
-  img[src*="octocat-spinner"][width="64"], .profile-picture-spinner {
+  img[src*="octocat-spinner"][width="64"],
+  .profile-picture-spinner
+  img[src="/images/spinner.gif"] {
     padding: 32px !important;
   }
   img[src*="octocat-spinner"][width="32"] {
@@ -9570,9 +9582,6 @@
   }
   img[src*="octocat-spinner"][width="16"] {
     padding: 8px !important;
-  }
-  img[src="/images/spinner.gif"] {
-    padding: 32px !important;
   }
   .bg-dots-gray {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><circle cx="1.5" cy="1.5" r="1.5" fill="%23555"/></svg>') !important;
@@ -10377,14 +10386,35 @@
     filter: invert(100%) hue-rotate(180deg) !important;
   }
   /* Using #fff over currentColor because GH relies on browser default #000 */
-  svg:not([fill]) {
-    fill: #fff;
-  }
   .hljs {
     color: var(--ghd-code-color, #ccc);
   }
   .extended-markdown p code {
     background-color: #1e293c !important;
+  }
+  .octicon-mark-github {
+    color: currentcolor;
+  }
+  .sidebar {
+    background-color: #1c1c1c;
+    border-right: 1px solid #343434;
+  }
+  .sidebar-guide.active {
+    background: #242424;
+  }
+  .sidebar-topic .sidebar-article::before,
+  .sidebar-topic .sidebar-article.active::before {
+    border-left-color: /*[[base-color]]*/;
+  }
+  .sidebar-products svg:not([fill]) {
+    fill: #eee;
+  }
+  .sidebar-products a, .sidebar-products .arrow {
+    color: #eee;
+  }
+  .sidebar-guide > a, .sidebar-guide summary a, .sidebar-product > a,
+  .sidebar-product summary a {
+    color: #ccc;
   }
 }
 @-moz-document regexp("^https?://((support)\.?)github\.com.*$") {
@@ -11044,32 +11074,6 @@
   }
   #suggestions a {
     color: #9e9e9e;
-  }
-}
-@-moz-document domain("help.github.com") {
-  .octicon-mark-github {
-    color: #f0f0f0;
-  }
-  .sidebar {
-    background-color: #1c1c1c;
-    border-right: 1px solid #343434;
-  }
-  .sidebar-guide.active {
-    background: #242424;
-  }
-  .sidebar-topic .sidebar-article::before,
-  .sidebar-topic .sidebar-article.active::before {
-    border-left-color: /*[[base-color]]*/;
-  }
-  .sidebar-products svg:not([fill]) {
-    fill: #eee;
-  }
-  .sidebar-products a, .sidebar-products .arrow {
-    color: #eee;
-  }
-  .sidebar-guide > a, .sidebar-guide summary a, .sidebar-product > a,
-  .sidebar-product summary a {
-    color: #ccc;
   }
 }
 @-moz-document domain("githubstatus.com") {
