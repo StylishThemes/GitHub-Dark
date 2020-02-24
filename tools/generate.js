@@ -388,6 +388,7 @@ const ignoreSelectors = [
   /^.markdown-body del$/, // this in not main page style
   /:(before|after).+/, // invalid pseudo-elements, they must come last in a chain of
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
+  /^.markdown-body img$/, // this in not main page style
 ];
 
 const replaceRe = /.*begin remap-css[\s\S]+end remap-css.*/gm;
