@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.235
+@version     1.22.236
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.235 (2020-02-24) */
+/*! Github Dark v1.22.236 (2020-02-24) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -228,8 +228,11 @@
   input, textarea {
     color: #bebebe;
   }
-  input {
-    background: #181818;
+  input[type="date"], input[type="datetime-local"], input[type="email"],
+  input[type="file"], input[type="number"], input[type="password"],
+  input[type="search"], input[type="tel"], input[type="text"],
+  input[type="time"], input[type="url"] {
+    background-color: #181818;
   }
   svg {
     fill: #bebebe;
@@ -8603,7 +8606,8 @@
   ul.search-results li .label, .markdown-format table th,
   div[style*="background-color: #044d6e"],
   .subset-files-tab .stale-files-tab-link,
-  .timeline-comment.current-user:not(.is-internal) .link-gray {
+  .timeline-comment.current-user:not(.is-internal) .link-gray,
+  .commit-tease, .commit-tease-sha {
     color: #9daccc !important;
   }
   .timeline-comment.current-user:not(.is-internal) .timeline-comment-header,
