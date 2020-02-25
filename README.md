@@ -35,27 +35,26 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ## Additional Userstyles
 
 ⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
-⚙️ [GitHub Community Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
-
-⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
-⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
 ⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
+⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
+⚙️ [GitHub Community Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
+⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark IMG Background Color](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-img-bg-clr.user.css)<br>
 ⚙️ [GitHub Feed Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
-⚙️ [GitHub Dark IMG Background Color](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-img-bg-clr.user.css)
 ⚙️ [GitHub FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
+⚙️ [GitHub Selected Tab Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
 ⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 ⚙️ [GitHub Tab Size](https://github.com/StylishThemes/GitHub-tab-size)<br>
-⚙️ [GitHub Selected Tab Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
 ⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
 
 ## Supported GitHub Extensions
 
 💾 [Gitako](https://github.com/EnixCoda/Gitako)<br>
 💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)<br>
-💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard) (set it to dark theme)<br>
+💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard)<br>
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)<br>
