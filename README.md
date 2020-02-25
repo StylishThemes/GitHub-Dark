@@ -44,6 +44,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
 ⚙️ [GitHub Feed Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
+⚙️ [GitHub Dark IMG Background Color](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-img-bg-clr.user.css)
 ⚙️ [GitHub FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
 ⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 ⚙️ [GitHub Tab Size](https://github.com/StylishThemes/GitHub-tab-size)<br>
