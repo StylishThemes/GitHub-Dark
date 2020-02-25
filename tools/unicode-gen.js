@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-const chars = "©®™▪◼◾♠♣✔✖〰";
+const chars = "▪◼◾♠♣✔✖〰";
 const emojis = "➕➖➗➰⬛◾🎶🎼💱💲🔃🔙🔚🔛🔜🔝🎵➿🐾🐾";
 
 function getExcludeRanges(chars) {
