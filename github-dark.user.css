@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     1.22.238
+@version     1.22.239
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -214,7 +214,7 @@
 }
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
-/*! Github Dark v1.22.238 (2020-02-25) */
+/*! Github Dark v1.22.239 (2020-02-25) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
   :root {
@@ -7030,8 +7030,12 @@
     outline: none;
   }
   /* commit tease */
-  .user-mention, .commit-tease, .commit-tease-sha {
+  .commit-tease, .commit-tease-sha, .commit-tease .commit-author {
     color: #bebebe !important;
+  }
+  /* HACK: Match font-size to rest of the box */
+  .commit-tease > .f6 {
+    font-size: 13px !important;
   }
   /* people panel org page issue #1041 */
   .auto-search-group input[type="text"][aria-label] {
@@ -8295,14 +8299,13 @@
   /* invert problematic emoji */
   /* images */
   [alt=":soon:"], [alt=":on:"], [alt=":end:"], [alt=":heavy_dollar_sign:"],
-  [alt=":registered:"], [alt=":tm:"], [alt=":heavy_multiplication_x:"],
-  [alt=":heavy_plus_sign:"], [alt=":heavy_minus_sign:"],
-  [alt=":heavy_division_sign:"], [alt=":arrows_clockwise:"], [alt=":wavy_dash:"],
-  [alt=":curly_loop:"], [alt=":copyright:"], [alt=":currency_exchange:"],
-  [alt=":top:"], [alt=":back:"], [alt=":zzz:"], [alt=":notes:"],
-  [alt=":musical_score:"], [alt=":black_large_square:"],
-  [alt=":black_medium_small_square:"], [alt=":ant:"], [alt=":musical_note:"],
-  [alt=":loop:"], [alt=":feet:"], [alt=":paw_prints:"],
+  [alt=":heavy_multiplication_x:"], [alt=":heavy_plus_sign:"],
+  [alt=":heavy_minus_sign:"], [alt=":heavy_division_sign:"], [alt=":wavy_dash:"],
+  [alt=":curly_loop:"], [alt=":currency_exchange:"], [alt=":top:"],
+  [alt=":back:"], [alt=":zzz:"], [alt=":notes:"], [alt=":musical_score:"],
+  [alt=":black_large_square:"], [alt=":black_medium_small_square:"],
+  [alt=":ant:"], [alt=":musical_note:"], [alt=":loop:"], [alt=":feet:"],
+  [alt=":paw_prints:"],
   /* unicode */
   /* some emoji don't need to be inverted on Windows */
   /* from https://github.com/Dunedan/mbp-2016-linux on Windows*/
@@ -8310,10 +8313,10 @@
     fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
     ios-version="6.0">✔️</g-emoji> */
   [alias="soon"], [alias="on"], [alias="end"], [alias="heavy_dollar_sign"],
-  [alias="registered"], [alias="tm"], [alias="heavy_multiplication_x"],
+  [alias="heavy_multiplication_x"],
   [alias="heavy_plus_sign"], [alias="heavy_minus_sign"],
-  [alias="heavy_division_sign"], [alias="arrows_clockwise"], [alias="wavy_dash"],
-  [alias="curly_loop"], [alias="copyright"], [alias="currency_exchange"],
+  [alias="heavy_division_sign"], [alias="wavy_dash"],
+  [alias="curly_loop"], [alias="currency_exchange"],
   [alias="top"], [alias="back"], [alias="zzz"], [alias="notes"],
   [alias="musical_score"], [alias="black_large_square"],
   [alias="black_medium_small_square"], [alias="ant"], [alias="musical_note"],
@@ -8331,28 +8334,20 @@
   g-emoji[fallback-src$="2b1b.png"], g-emoji[fallback-src$="25fe.png"],
   g-emoji[fallback-src$="1f3b6.png"], g-emoji[fallback-src$="1f3bc.png"],
   g-emoji[fallback-src$="1f4b1.png"], g-emoji[fallback-src$="1f4b2.png"],
-  g-emoji[fallback-src$="1f503.png"], g-emoji[fallback-src$="1f519.png"],
-  g-emoji[fallback-src$="1f51a.png"], g-emoji[fallback-src$="1f51b.png"],
-  g-emoji[fallback-src$="1f51c.png"], g-emoji[fallback-src$="1f51d.png"],
-  g-emoji[fallback-src$="1f3b5.png"], g-emoji[fallback-src$="27bf.png"],
-  g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="1f43e.png"],
-  img[src*="resources-logo"], svg.IconNav-img,
-  /* https://github.com/ten */
-  .container-xl[id] svg,
+  g-emoji[fallback-src$="1f519.png"], g-emoji[fallback-src$="1f51a.png"],
+  g-emoji[fallback-src$="1f51b.png"], g-emoji[fallback-src$="1f51c.png"],
+  g-emoji[fallback-src$="1f51d.png"], g-emoji[fallback-src$="1f3b5.png"],
+  g-emoji[fallback-src$="27bf.png"], g-emoji[fallback-src$="1f43e.png"],
+  g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="a9.png"],
+  g-emoji[fallback-src$="fe0f.png"], g-emoji[fallback-src$="ae.png"],
+  g-emoji[fallback-src$="fe0f.png"], img[src*="resources-logo"], svg.IconNav-img,
+  .container-xl[id] svg
+  /* https://github.com/ten */,
   body.logged-out .col-md-7 svg {
     filter: invert(83%) !important;
   }
   .container-xl[id] img {
     z-index: 100 !important;
-  }
-  /* Exclude problematic non-emojis from Apple's emoji font on macOS */
-  /* use tools/unicode-gen.js to generate. */
-  @font-face {
-    font-family: "Apple Color Emoji";
-    src: local("Apple Color Emoji");
-    unicode-range: U+00000-000A8,U+000AA-000AD,U+000AF-02121,U+02123-025A9,
-                   U+025AB-025FB,U+025FD-025FD,U+025FF-0265F,U+02661-02662,
-                   U+02664-02713,U+02715-02715,U+02717-0302F,U+03031-10FFFF;
   }
   /* GeoJSON maps */
   /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson */
@@ -11190,6 +11185,11 @@
   }
   svg #surface1 g[style*="fill"] {
     fill: #eee !important;
+  }
+}
+@-moz-document domain("camo.githubusercontent.com") {
+  svg {
+    background: #222;
   }
 }
 
