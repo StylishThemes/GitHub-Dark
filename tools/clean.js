@@ -14,8 +14,6 @@ const pairs = [
   {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: "\n"},
   {pattern: / {2}}\/\*/gm, replacement: "  }\n  /*"},
   {pattern: /,\s+\n/gm, replacement: ",\n"},
-  {pattern: /\n\s{23}/gm, replacement: ""}, // unicode-range block
-  {pattern: /(-025A9,|-02662,)/gim, replacement: "$&\n                   "}, // unicode-range block
   {pattern: /\/\*\[\[code-wrap/, replacement: "/*[[code-wrap"},
   {pattern: /,\u0020{2,}/g, replacement: ", "},
   {pattern: /\s+domain\(/g, replacement: " domain("},

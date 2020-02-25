@@ -2,7 +2,7 @@
 "use strict";
 
 const chars = "▪◼◾♠♣✔✖〰";
-const emojis = "➕➖➗➰⬛◾🎶🎼💱💲🔙🔚🔛🔜🔝🎵➿🐾🐾";
+const emojis = "➕➖➗➰⬛◾🎶🎼💱💲🔙🔚🔛🔜🔝🎵➿🐾🐾©️®️";
 
 function getExcludeRanges(chars) {
   const codes = Array.from(chars).map(char => char.codePointAt(0));
