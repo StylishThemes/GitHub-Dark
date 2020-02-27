@@ -196,9 +196,9 @@
   .org-sso .org-sso-panel, .orgs-help-item-octicon, .page-preview,
   .page-responsive .HeaderMenu--logged-out, .pagehead-tabs-item.selected,
   .pagination-loader-container, .phone-buttons, .phone-buttons::after,
-  .phone-buttons::before, .plan-choice.open, .plan-choice.selected, .pr-toolbar,
-  .pricing-matrix-column-tier, .pricing-plan-tab-active, .project-header,
-  .projects-comment-form .comment-form-head .toolbar-commenting,
+  .phone-buttons::before, .plan-choice.open, .plan-choice.selected,
+  .pr-toolbar.is-stuck, .pricing-matrix-column-tier, .pricing-plan-tab-active,
+  .project-header, .projects-comment-form .comment-form-head .toolbar-commenting,
   .reponav-item.selected, .review-comment .is-comment-editing,
   .review-summary-form-wrapper, .review-thread-reply .inline-comment-form,
   .select-menu-item, .select-menu-modal,
@@ -3178,7 +3178,7 @@
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3) !important;
   }
   /* remap-css rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
-  .review-comment:target, :target .timeline-comment,
+  .file:target, .review-comment:target, :target .timeline-comment,
   :target .timeline-comment-group .timeline-comment {
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
@@ -4992,10 +4992,10 @@
   #graphiql .TimelineItem:target .TimelineItem-badge,
   #graphiql .form-control.focus, #graphiql .form-control:focus,
   #graphiql .form-select.focus, #graphiql .form-select:focus, #q:focus,
-  .TimelineItem:target .TimelineItem-badge, .ais-SearchBox-input:focus, .focus#q,
-  .focus.ais-SearchBox-input, .form-control.focus, .form-control:focus,
-  .form-select.focus, .form-select:focus, :target .timeline-comment,
-  :target .timeline-comment-group .timeline-comment,
+  .TimelineItem:target .TimelineItem-badge, .ais-SearchBox-input:focus,
+  .file:target, .focus#q, .focus.ais-SearchBox-input, .form-control.focus,
+  .form-control:focus, .form-select.focus, .form-select:focus,
+  :target .timeline-comment, :target .timeline-comment-group .timeline-comment,
   body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
@@ -5815,7 +5815,8 @@
     border-right-color: #542;
   }
   /* remap-css rule for "background-color: #fff5b1" */
-  .diffbar-range-menu .is-last-in-range, .network .current-repository {
+  .diffbar-range-menu .is-last-in-range, .network .current-repository,
+  body[class="page-responsive"] .diff-view .file:target .meta {
     background-color: #651;
   }
   /* remap-css rule for "background-color: #fff5b1 !important" */
@@ -6616,6 +6617,7 @@
   body[class="page-responsive"] .btn[aria-disabled=true],
   body[class="page-responsive"] .btn[aria-selected=true],
   body[class="page-responsive"] .cross-reference .bubble-title.private,
+  body[class="page-responsive"] .diff-view .file:target .meta,
   body[class="page-responsive"] .emoji-picker-emoji-width,
   body[class="page-responsive"] .notification-shelf .btn-outline,
   body[class="page-responsive"] [open] > .btn,
