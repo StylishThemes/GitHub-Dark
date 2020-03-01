@@ -3,7 +3,7 @@
 const {writeFile, truncate} = require("fs").promises;
 const {platform} = require("os");
 
-// this truncates and appends to existing files on windows to preserve file metadata for WSL
+// special version of writeFile that preserves metadata on WSL and Cygwin platforms
 module.exports.writeFile = async (file, content) => {
   if (platform() === "win32") {
     try {
