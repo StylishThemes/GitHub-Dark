@@ -41,6 +41,7 @@ const mappings = {
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
   "$background: linear-gradient(#fafafa,#eaeaea)": "linear-gradient(#202020, #181818)",
+  "$background: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)": "linear-gradient(-180deg, #202020 0%, #181818 90%)", // status
 
   // ==========================================================================
   // Border
@@ -49,6 +50,7 @@ const mappings = {
 
   "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.1)",
   "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.15)",
+  "$border: rgba(27,31,35,.2)": "rgba(200,200,200,.2)",
   "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
 
   "$border: #444d56": "#484848",
@@ -121,6 +123,7 @@ const mappings = {
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
 
   "box-shadow: 0 1px 0 #eaecef": "box-shadow: 0 1px 0 #343434",
+  "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset": "box-shadow: #000 0px 0px 0px inset", // status
 
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
