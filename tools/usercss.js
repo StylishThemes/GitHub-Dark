@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 
-const {readFile, writeFile, readdir, unlink} = require("fs").promises;
+const {readFile, readdir} = require("fs").promises;
 const {join} = require("path");
+const {writeFile} = require("./utils");
 
 // make sure to run "grunt user" before grabbing this style
 const files = {
@@ -83,10 +84,6 @@ function exit(err) {
 }
 
 async function main() {
-  try {
-    await unlink(files.usercss);
-  } catch {}
-
   let css = await readFile(files.template, "utf8");
   css = await processGroup(css, "GitHub");
   css = await processGroup(css, "CodeMirror");

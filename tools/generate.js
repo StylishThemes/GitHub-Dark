@@ -4,7 +4,8 @@
 const fetchCss = require("fetch-css");
 const remapCss = require("remap-css");
 const {join} = require("path");
-const {readFile, writeFile} = require("fs").promises;
+const {readFile} = require("fs").promises;
+const {writeFile} = require("./utils");
 
 const mappings = {
   // ==========================================================================

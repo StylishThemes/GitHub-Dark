@@ -3,8 +3,9 @@
 
 // this script does some cleanups after perfectionist ran
 
-const {readFile, writeFile} = require("fs").promises;
+const {readFile} = require("fs").promises;
 const {join} = require("path");
+const {writeFile} = require("./utils");
 
 const source = join(__dirname, "..", "github-dark.css");
 
