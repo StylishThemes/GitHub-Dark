@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.0
+@version     2.0.2
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.0 (2020-03-01) */
+/*! Github Dark v2.0.2 (2020-03-01) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|launch-editor|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
@@ -1444,6 +1444,18 @@
   .clone-url-button > .clone-url-link {
     background-image: linear-gradient(#202020, #181818);
   }
+  /* remap-css rule for "background-color: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn {
+    background-color: linear-gradient(-180deg, #202020 0%, #181818 90%);
+  }
+  /* remap-css rule for "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
+  #graphiql .btn, #graphiql .btn-danger, .btn, .btn-danger {
+    background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
+  }
+  /* remap-css rule for "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%) !important" */
+  body.status .flat-button, body.status .history-header .show-filter {
+    background-image: linear-gradient(-180deg, #202020 0%, #181818 90%) !important;
+  }
   /* remap-css rule for "border-color: transparent" */
   #graphiql .dropdown-menu-e::after, #graphiql .dropdown-menu-e::before,
   #graphiql .dropdown-menu-w::after, #graphiql .dropdown-menu-w::before,
@@ -1895,6 +1907,37 @@
   #graphiql .dropdown-menu-ne::before, .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne::before {
     border-top-color: rgba(200, 200, 200, .15);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
+  #graphiql .btn-blue.disabled, #graphiql .btn-blue:disabled,
+  #graphiql .btn-danger.disabled, #graphiql .btn-danger:disabled,
+  #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled,
+  #graphiql .btn.disabled, #graphiql .btn:disabled, .btn-blue.disabled,
+  .btn-blue:disabled, .btn-blue[aria-disabled=true], .btn-blurple.disabled,
+  .btn-blurple:disabled, .btn-blurple[aria-disabled=true], .btn-danger.disabled,
+  .btn-danger:disabled, .btn-danger[aria-disabled=true], .btn-primary.disabled,
+  .btn-primary:disabled, .btn-primary[aria-disabled=true], .btn-purple.disabled,
+  .btn-purple:disabled, .btn.disabled, .btn:disabled, .btn[aria-disabled=true],
+  body[class="page-responsive"] .btn-danger.disabled,
+  body[class="page-responsive"] .btn-danger:disabled,
+  body[class="page-responsive"] .btn-danger[aria-disabled=true],
+  body[class="page-responsive"] .btn-primary.disabled,
+  body[class="page-responsive"] .btn-primary:disabled,
+  body[class="page-responsive"] .btn-primary[aria-disabled=true],
+  body[class="page-responsive"] .btn.disabled,
+  body[class="page-responsive"] .btn:disabled,
+  body[class="page-responsive"] .btn[aria-disabled=true] {
+    border-color: rgba(200, 200, 200, .2);
+  }
+  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2)" */
+  #graphiql .btn, #graphiql .social-count, .btn, .social-count,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn,
+  body[class="page-responsive"] .btn {
+    border-color: rgba(200, 200, 200, .2);
+  }
+  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2) !important" */
+  body.status .flat-button, body.status .history-header .show-filter {
+    border-color: rgba(200, 200, 200, .2) !important;
   }
   /* remap-css rule for "border-color: rgba(0,0,0,.125)" */
   body.status .layout-content.status .border-color,
@@ -3454,6 +3497,10 @@
   /* remap-css rule for "box-shadow: 0 1px 0 #eaecef" */
   #graphiql .SelectMenu--hasFilter .SelectMenu-item:last-child {
     box-shadow: 0 1px 0 #343434;
+  }
+  /* remap-css rule for "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset !important" */
+  body.status .flat-button, body.status .history-header .show-filter {
+    box-shadow: #000 0 0 0 inset !important;
   }
   /* remap-css rule for "box-shadow: 0 1px 0 0 #0058a2" */
   html[prefix] .link-mono:hover {
@@ -7443,7 +7490,7 @@
   .setup-form .tos-info, .setup-form .setup-organization-next,
   .collection-page .other-content, .bubble-wrap, .release-show, .file-wrap,
   .branches .branch-summary, .branches .no-results-message,
-  .branch-a-b-count .count-half:last-child, .panel-nav, .file,
+  .branch-a-b-count .count-half:last-child, .panel-nav,
   .full-commit .sha-block > a, .theme-selector-thumbnail, .segmented-nav li,
   .boxed-group-inner, .search-form button, .branches .branch-group-heading,
   .boxed-group > h3, .boxed-group .heading, .issues-list-actions, p code, code,
@@ -7740,7 +7787,7 @@
     background: #181818 !important;
     border-color: #484848 !important;
   }
-  .header, .headers, #readme .markdown-body, .social-count, .file, .box-body,
+  .header, .headers, #readme .markdown-body, .social-count, .box-body,
   .steps li, .explore-section:nth-child(2n), .markdown-format table,
   .chromed-list-browser .none p, .chromed-list-browser .error p,
   .list-browser-footer, .commandbar .choice:hover, #gollum-editor-help,
