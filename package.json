@@ -14,7 +14,7 @@
     "clean": "npm run perfectionist && node tools/clean.js",
     "generate": "node tools/generate.js && npm run perfectionist && node tools/clean.js",
     "imagemin": "bash tools/imagemin.sh",
-    "lint": "eslint *.js tools && stylelint github-dark.css themes/src",
+    "lint": "eslint . && stylelint github-dark.css themes/src",
     "major": "npm run lint && npm run usercss && versions -p -d -C major github-dark.css github-dark.user.css",
     "minor": "npm run lint && npm run usercss && versions -p -d -C minor github-dark.css github-dark.user.css",
     "patch": "npm run lint && npm run usercss && versions -p -d -C patch github-dark.css github-dark.user.css",
