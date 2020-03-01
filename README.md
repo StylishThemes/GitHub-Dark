@@ -30,7 +30,6 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 📦 [Install the usercss](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css) which supports automatic updates and customization.<br>
 📦 [Install GitHub-Dark Script](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark-Script/master/github-dark-script.user.js) which supports automatic updates and customization. Refer to its [README](https://github.com/StylishThemes/GitHub-Dark-Script/blob/master/README.md).<br>
 📦 [Install manually from GitHub](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.css) with no customization, but useful for development. The style is in Mozilla format.<br>
-📦 [Install via custom build](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) with customization from configuration file. Refer to [this wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
 
 ## Additional Userstyles
 
@@ -118,7 +117,6 @@ If you would like to contribute to this repository, please...
 
 To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various commands available:
 
-- `npx grunt`: The default grunt task builds a custom theme using a provided `build.json` file. See the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for details.
 - `npm run build`: Runs the `generate` and `usercss` tasks.
 - `npm run usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
 - `npm run themes`: Parse all theme files and combine them into minified styles in the `themes` directory.

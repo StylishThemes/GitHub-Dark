@@ -9,15 +9,15 @@ const {writeFile} = require("./utils");
 
 const source = join(__dirname, "..", "github-dark.css");
 
-const pairs = [
-  {pattern: /\{\/\*!/g, replacement: "{\n /*!"},
-  {pattern: /\/\* /g, replacement: "\n  /* "},
-  {pattern: /(\s+)?\n(\s+)?\n/gm, replacement: "\n"},
-  {pattern: / {2}}\/\*/gm, replacement: "  }\n  /*"},
-  {pattern: /,\s+\n/gm, replacement: ",\n"},
-  {pattern: /\/\*\[\[code-wrap/, replacement: "/*[[code-wrap"},
-  {pattern: /,\u0020{2,}/g, replacement: ", "},
-  {pattern: /\s+domain\(/g, replacement: " domain("},
+const replacements = [
+  {from: /\{\/\*!/g, to: "{\n /*!"},
+  {from: /\/\* /g, to: "\n  /* "},
+  {from: /(\s+)?\n(\s+)?\n/gm, to: "\n"},
+  {from: / {2}}\/\*/gm, to: "  }\n  /*"},
+  {from: /,\s+\n/gm, to: ",\n"},
+  {from: /\/\*\[\[code-wrap/, to: "/*[[code-wrap"},
+  {from: /,\u0020{2,}/g, to: ", "},
+  {from: /\s+domain\(/g, to: " domain("},
 ];
 
 function exit(err) {
@@ -27,8 +27,8 @@ function exit(err) {
 
 async function main() {
   let css = await readFile(source, "utf8");
-  for (const {pattern, replacement} of pairs) {
-    css = css.replace(pattern, replacement);
+  for (const replacement of replacements) {
+    css = css.replace(replacement.from, replacement.to);
   }
   await writeFile(source, css);
 }
