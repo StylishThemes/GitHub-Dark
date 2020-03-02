@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.5
+@version     2.0.6
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.5 (2020-03-02) */
+/*! Github Dark v2.0.6 (2020-03-02) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
@@ -7863,7 +7863,7 @@
   .list-group-item.standalone, .commit-form, .sidebar-progress-bar > .d-flex,
   .pagination-loader-container .discussion-item-header .border,
   .notifications-list .list-style-none.bg-gray, .pr-toolbar.is-stuck,
-  .hx_badge-search-container, .js-diff-load-container {
+  .hx_badge-search-container, .file {
     background: #181818 !important;
   }
   .Box-row--hover-blue {
@@ -10289,7 +10289,7 @@
     color: var(--ghd-code-color, #ccc) !important;
   }
 }
-@-moz-document regexp("^https://www\.zuora\.com.*github\.com.*$") {
+@-moz-document regexp("^https?://www\.zuora\.com.*github\.com") {
   /* Styles the payment form iframe */
   body, label, .popup {
     background: transparent !important;
@@ -10322,7 +10322,7 @@
     background-color: transparent;
   }
 }
-@-moz-document regexp("^https?://((help)\.?)github\.com.*$") {
+@-moz-document domain("help.github.com") {
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h4 a > strong code {
     color: #bebebe;
   }
@@ -10367,12 +10367,12 @@
     color: #ccc;
   }
 }
-@-moz-document regexp("^https?://((support)\.?)github\.com.*$") {
+@-moz-document domain("support.github.com") {
   .input-block #query {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M15.7 13.3l-3.8-3.8C12.6 8.5 13 7.2 13 6c0-3.3-2.7-6-6-6C3.7 0 1 2.7 1 6c0 3.3 2.7 6 6 6 1.3 0 2.5-0.4 3.5-1.1L14.3 14.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4 0 0 0 0 0 0V13.3zM7 10.7c-2.6 0-4.7-2.1-4.7-4.7S4.4 1.3 7 1.3s4.7 2.1 4.7 4.7S9.6 10.7 7 10.7z" fill="%23DDDDDD"/></svg>') no-repeat 6px;
   }
 }
-@-moz-document regexp("^https?://((resources)\.?)github\.com.*$") {
+@-moz-document domain("resources.github.com") {
   body .user-status-header, body, .btn-primary .Counter, .btn-purple .Counter,
   .btn-blue .Counter, .btn-outline, .btn-outline:hover .Counter,
   .btn-outline:active .Counter, .btn-outline.selected .Counter,
@@ -10919,7 +10919,7 @@
     background: /*[[base-color]]*/;
   }
 }
-@-moz-document regexp("^https?:\\/\\/(github\\.com)\\/(features)\\/(security|actions).*$") {
+@-moz-document regexp("^https?://github\.com/features/(security|actions)") {
   img[src*="security-vulnerability.svg"],
   img[src*="security-vulnerability-alert.svg"], img[src*="security-policy.svg"],
   img[src*="security-workspace-bg.svg"],
@@ -10965,7 +10965,7 @@
     filter: brightness(60%);
   }
 }
-@-moz-document regexp("^https?://github.?com/(features|security).*$") {
+@-moz-document regexp("^https?://github\.com/(features|security)") {
   img[src*="img-"], img[src*="security"] {
     filter: invert(90%) hue-rotate(-180deg) !important;
   }
@@ -11100,7 +11100,7 @@
     background: transparent;
   }
 }
-@-moz-document regexp("^https?://(education|lab)\.github\.com\/.*$") {
+@-moz-document regexp("^https?://(education|lab)\.github\.com") {
   .btn-blue {
     background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, 1), rgba(/*[[base-color-rgb]]*/, .9) 90%) !important;
   }
@@ -11127,7 +11127,7 @@
     filter: invert(1) hue-rotate(180deg) contrast(95%);
   }
 }
-@-moz-document regexp("^https?://(render)\.githubusercontent\.com\/render\/math\?.*$") {
+@-moz-document regexp("^https?://(render)\.githubusercontent\.com\/render\/math") {
   svg {
     background: #222;
   }
