@@ -207,7 +207,7 @@ const mappings = {
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
-  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9; color: #fff !important",
+  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
   "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff",
   "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
