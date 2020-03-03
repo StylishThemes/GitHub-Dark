@@ -362,8 +362,8 @@ const sources = [
   },
   {
     crx: "hlepfoohegkhhmjieoechaddaejaokhf", // refined-github
-    prefix: `html.refined-github`,
-    match: ["html", ".refined-github"],
+    prefix: `html`,
+    match: ["html"],
     contentScriptsOnly: true,
   },
   {
