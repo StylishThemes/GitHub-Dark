@@ -3,7 +3,7 @@
 
 const {readFile, readdir} = require("fs").promises;
 const fastGlob = require("fast-glob");
-const {writeFile} = require("./utils");
+const {writeFile, exit} = require("./utils");
 
 const globSync = (pattern) => fastGlob.sync(pattern, {cwd: __dirname, absolute: true});
 
@@ -104,11 +104,6 @@ function makeTabs(css) {
   } EOT;`);
   });
   return css.replace("  {{tab-sizes}}", tabs.join("\n"));
-}
-
-function exit(err) {
-  if (err) console.error(err);
-  process.exit(err ? 1 : 0);
 }
 
 async function main() {

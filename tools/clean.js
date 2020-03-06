@@ -5,7 +5,7 @@
 
 const {readFile} = require("fs").promises;
 const {join} = require("path");
-const {writeFile} = require("./utils");
+const {writeFile, exit} = require("./utils");
 
 const source = join(__dirname, "..", "github-dark.css");
 
@@ -19,11 +19,6 @@ const replacements = [
   {from: /,\u0020{2,}/g, to: ", "},
   {from: /\s+domain\(/g, to: " domain("},
 ];
-
-function exit(err) {
-  if (err) console.error(err);
-  process.exit(err ? 1 : 0);
-}
 
 async function main() {
   let css = await readFile(source, "utf8");

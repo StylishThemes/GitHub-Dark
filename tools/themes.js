@@ -5,18 +5,13 @@ const glob = require("fast-glob");
 const {join} = require("path");
 const {unlink, readFile} = require("fs").promises;
 const CleanCSS = require("clean-css");
-const {writeFile} = require("./utils");
+const {writeFile, exit} = require("./utils");
 
 const clean = new CleanCSS({
   level: 1,
   returnPromise: true,
 });
 const minify = async css => (await (clean.minify.bind(clean)(css))).styles;
-
-function exit(err) {
-  if (err) console.error(err);
-  process.exit(err ? 1 : 0);
-}
 
 function replaceCSSMatches(theme) {
   return theme.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {

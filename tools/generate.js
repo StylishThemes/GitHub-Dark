@@ -5,7 +5,7 @@ const fetchCss = require("fetch-css");
 const remapCss = require("remap-css");
 const {join} = require("path");
 const {readFile} = require("fs").promises;
-const {writeFile} = require("./utils");
+const {writeFile, exit} = require("./utils");
 
 const mappings = {
   // ==========================================================================
@@ -410,11 +410,6 @@ const remapOpts = {
   comments: true,
   stylistic: true,
 };
-
-function exit(err) {
-  if (err) console.error(err);
-  process.exit(err ? 1 : 0);
-}
 
 async function main() {
   const generatedCss = await remapCss(await fetchCss(sources), mappings, remapOpts);

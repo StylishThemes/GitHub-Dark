@@ -16,3 +16,8 @@ module.exports.writeFile = async (file, content) => {
     await writeFile(file, content);
   }
 };
+
+module.exports.exit = (err) => {
+  if (err) console.error(err);
+  process.exit(err ? 1 : 0);
+};
