@@ -14,6 +14,7 @@ const mappings = {
   "$background: #fff": "#181818",
   "$background: #ffe": "#242424",
   "$background: #fdfdfd": "#1c1c1c",
+  "$background: #fafafb": "#181818",
   "$background: #fafbfc": "#181818",
   "$background: #efefef": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
