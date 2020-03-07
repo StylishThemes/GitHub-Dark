@@ -7470,24 +7470,6 @@
   .context-button:hover::after, .switcher > span::before {
     border-color: #eee transparent transparent !important;
   }
-  /* developer sidebar indicator arrows */
-  .sidebar-module .arrow-btn:hover {
-    width: 0 !important;
-    height: 0 !important;
-    padding: 0 !important;
-    border-color: transparent !important;
-    border-style: solid !important;
-  }
-  .sidebar-module .arrow-btn.collapsed:hover {
-    border-width: 5px 8px !important;
-    border-left-color: /*[[base-color]]*/ #4f8cc9 !important;
-    margin: 12px 0 0 12px !important;
-  }
-  .sidebar-module .arrow-btn.expanded:hover {
-    border-width: 8px 6px 0 5px !important;
-    border-top-color: /*[[base-color]]*/ #4f8cc9 !important;
-    margin: 14px 0 0 9px !important;
-  }
   .reponav-item {
     padding-top: 9px !important;
     border-top-width: 1px !important;
@@ -10855,6 +10837,18 @@
 @-moz-document domain("developer.github.com") {
   table {
     background-color: transparent;
+  }
+  .sidebar-module .arrow-btn {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 6 16"><path fill="%23bebebe" fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>') no-repeat 8px 10px;
+  }
+  .arrow-btn.collapsed:hover {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 6 16"><path fill="rgb(/*[[base-color-rgb]]*/)" fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>') no-repeat 8px 10px;
+  }
+  .arrow-btn.expanded {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 16"><path fill="%23bebebe" fill-rule="evenodd" d="M0 5l6 6 6-6H0z"></path></svg>') no-repeat 8px 10px;
+  }
+  .arrow-btn.expanded:hover {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 16"><path fill="rgb(/*[[base-color-rgb]]*/)" fill-rule="evenodd" d="M0 5l6 6 6-6H0z"></path></svg>') no-repeat 8px 10px;
   }
 }
 @-moz-document domain("help.github.com") {
