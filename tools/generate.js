@@ -44,7 +44,10 @@ const mappings = {
   "$background: linear-gradient(#fafafa,#eaeaea)": "linear-gradient(#202020, #181818)",
   "$background: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)": "linear-gradient(-180deg, #202020 0%, #181818 90%)", // status
   "$background: linear-gradient(#f7f7f7, #e2e2e2)": "#222", // graphql explorer
-
+  "$background: linear-gradient(#f9f9f9, #ececec)": "linear-gradient(#303030, #282828)", // graphql explorer
+  "$background: linear-gradient(#fdfdfd, #d2d3d6)": "linear-gradient(#303030, #282828)", // graphql explorer
+  "$background: linear-gradient(#e6e6e6, #c3c3c3)": "linear-gradient(#404040, #383838)", // graphql explorer
+  "$background: linear-gradient(#ececec, #d5d5d5)": "linear-gradient(#404040, #383838)", // graphql explorer
   "$background: rgba(27,31,35,.1)": "rgba(0,0,0,.1)",
   "$background: rgba(27,31,35,.15)": "rgba(0,0,0,.15)",
 
@@ -91,6 +94,12 @@ const mappings = {
   // ==========================================================================
   // Box-Shadow
   // ==========================================================================
+
+  "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)": `
+     box-shadow: 0 0 0 1px #484848;
+  `, // graphql explorer
+  "box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.7),inset 0 1px #fff": "box-shadow: 0 0 0 .1px #343434", // graphql explorer
+  "box-shadow: 0 1px 0 #fff": "box-shadow: 0 0 0 1px #484848", // graphql explorer
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
      box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
@@ -144,6 +153,7 @@ const mappings = {
 
   "color: #000": "color: #bebebe",
   "color: #1b1f23": "color: #afafaf",
+  "color: #141823": "color: #ddd", // graphql explorer
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
