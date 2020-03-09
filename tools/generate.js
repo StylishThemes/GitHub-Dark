@@ -236,6 +236,7 @@ const mappings = {
     box-shadow: 0 0 rgba(79,140,201,.3);
     box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
   `,
+  "$border: #3b5998": "/*[[base-color]]*/ #4f8cc9",
 
   // red
   "color: #cb2431": "color: #f44",
