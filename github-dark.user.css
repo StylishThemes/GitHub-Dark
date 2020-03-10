@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.15
+@version     2.0.16
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.15 (2020-03-09) */
+/*! Github Dark v2.0.16 (2020-03-10) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
@@ -300,7 +300,8 @@
   body.zh_logged_in .zh-epic-form-control:focus,
   body.zh_logged_in .zh-form-control-small:focus,
   body.zh_logged_in .zh-form-control:focus,
-  body.zh_logged_in .zh-issuecard-container,
+  body.zh_logged_in .zh-issuecard-container, body.zh_logged_in .zh-login-status,
+  body.zh_logged_in .zh-login-status__sign-in-button,
   body.zh_logged_in .zh-pipeline-issue-content,
   body.zh_logged_in .zh-reload-update-prompt-container,
   body.zh_logged_in .zh-toggle-button,
@@ -607,6 +608,7 @@
   body.zh_logged_in .zhc-dependency-type-dropdown__list,
   body.zh_logged_in .zhc-edit-comment__preview,
   body.zh_logged_in .zhc-edit-comment__textarea,
+  body.zh_logged_in .zhc-enterprise-manage-plan__section,
   body.zh_logged_in .zhc-epic-list, body.zh_logged_in .zhc-filter-expand-button,
   body.zh_logged_in .zhc-info-alert, body.zh_logged_in .zhc-input,
   body.zh_logged_in .zhc-integration-repo-selector__repos__container,
@@ -2288,7 +2290,6 @@
   body.zh_logged_in .zh-epic-form-control,
   body.zh_logged_in .zh-epic-form-control-small,
   body.zh_logged_in .zh-form-control, body.zh_logged_in .zh-form-control-small,
-  body.zh_logged_in .zh-login-status,
   body.zh_logged_in .zh-milestone-dates .milestone-start-calendar-container,
   body.zh_logged_in .zh-select-menu-text-filter input,
   body.zh_logged_in .zhc-burndown-chart__placeholder__message,
@@ -2932,6 +2933,7 @@
   body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__next,
   body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__prev,
   body.zh_logged_in .zh-collapse-control__main-icon,
+  body.zh_logged_in .zh-login-status,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn.selected,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn:hover,
   body.zh_logged_in .zhc-account-details__section,
@@ -3074,6 +3076,8 @@
   body.zh_logged_in .zhc-dashboard-nav__section,
   body.zh_logged_in .zhc-dashboard-topbar,
   body.zh_logged_in .zhc-edit-issue__title-input,
+  body.zh_logged_in .zhc-enterprise-manage-plan__header,
+  body.zh_logged_in .zhc-enterprise-manage-plan__item,
   body.zh_logged_in .zhc-integrations-item,
   body.zh_logged_in .zhc-integrations-list__header,
   body.zh_logged_in .zhc-invite-your-team-item,
@@ -3624,7 +3628,7 @@
   body.status .modal .modal-header .close:hover, body.status mark,
   body.zh_logged_in .zh-badge-value, body.zh_logged_in .zh-epic-creator-tab,
   body.zh_logged_in .zh-issue-event-toggle:hover,
-  body.zh_logged_in .zh-overlay-body,
+  body.zh_logged_in .zh-login-status__logo, body.zh_logged_in .zh-overlay-body,
   body.zh_logged_in .zhc-badge--epic-points .zhc-badge__value,
   body.zh_logged_in .zhc-loading__header,
   body.zh_logged_in .zhc-tab-navitem--large--active,
@@ -3725,6 +3729,8 @@
   body.zh_logged_in .zh-power .zh-pipeline-options,
   body.zh_logged_in .zh-reports .btn, body.zh_logged_in .zh-reports .btn:hover,
   body.zh_logged_in .zh-select-menu-header .zh-select-menu-title,
+  body.zh_logged_in .zhc-account-settings__arrow,
+  body.zh_logged_in .zhc-account-settings__members .zhu-font-bold,
   body.zh_logged_in .zhc-account-settings__section h3,
   body.zh_logged_in .zhc-account-settings__section strong,
   body.zh_logged_in .zhc-add-comment__username,
@@ -3746,6 +3752,9 @@
   body.zh_logged_in .zhc-control-chart-report__chart_stat .zhc-chart-emphasis,
   body.zh_logged_in .zhc-dependency-item-simple__header,
   body.zh_logged_in .zhc-empty-state h1,
+  body.zh_logged_in .zhc-enterprise-manage-plan__item .zhu-font-bold,
+  body.zh_logged_in .zhc-enterprise-manage-plan__radio,
+  body.zh_logged_in .zhc-enterprise-manage-plan__section h3,
   body.zh_logged_in .zhc-epic-pipeline-list--item__title,
   body.zh_logged_in .zhc-error-page__header__description,
   body.zh_logged_in .zhc-error-page__header__title,
@@ -3982,6 +3991,7 @@
   body.zh_logged_in .zhc-dependency-item-simple a,
   body.zh_logged_in .zhc-dependency-list__issue--completed .zhc-dependency-list__issue__title a,
   body.zh_logged_in .zhc-dependency-type-dropdown,
+  body.zh_logged_in .zhc-enterprise-manage-plan__section,
   body.zh_logged_in .zhc-filter-tag__text,
   body.zh_logged_in .zhc-filter-tags__options,
   body.zh_logged_in .zhc-footer__terms a, body.zh_logged_in .zhc-footer__wrapper,
@@ -5717,8 +5727,7 @@
     background-color: #f3582c !important;
   }
   /* remap-css rule for "fill: #e36209" */
-  .graph-canvas .alert-label--moderate, .icon-discussion-unanswered,
-  .icon-discussion-unanswered path, .map-point:hover,
+  .graph-canvas .alert-label--moderate, .map-point:hover,
   body[class="page-responsive"] .graph-canvas .alert-label--moderate {
     fill: #fb8532;
   }
@@ -5854,7 +5863,7 @@
     fill: #6cc644;
   }
   /* remap-css rule for "fill: #22863a" */
-  .icon-discussion-answered, .icon-discussion-answered path {
+  .icon-discussion-unanswered, .icon-discussion-unanswered path {
     fill: #6cc644;
   }
   /* remap-css rule for "border-color: #34d058" */
@@ -6217,7 +6226,8 @@
     color: #8368aa;
   }
   /* remap-css rule for "color: #6f42c1" */
-  .audit-type .user, .illflow-purple .illflow-item .illflow-item-heading,
+  .audit-type .user, .icon-discussion-answered,
+  .illflow-purple .illflow-item .illflow-item-heading,
   .issue-list .title .merged.octicon, .merged.octicon,
   .org-insights-card-legend .metric-3,
   .summary-stats li .octicon-git-pull-request, .type-icon-state-merged,
