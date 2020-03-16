@@ -16,7 +16,7 @@ const mappings = {
   "$background: #eee": "#242424", // graphql explorer
   "$background: #fdfdfd": "#181818",
   "$background: #fafafb": "#181818",
-  "$background: #fafbfc": "#181818",
+  "$background: #fafbfc": "#181818", // .bg-gray-light
   "$background: #efefef": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
   "$background: #f6f8fa": "#202020",
