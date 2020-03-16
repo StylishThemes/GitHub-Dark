@@ -14,7 +14,7 @@ const mappings = {
   "$background: #fff": "#181818",
   "$background: #ffe": "#242424",
   "$background: #eee": "#242424", // graphql explorer
-  "$background: #fdfdfd": "#1c1c1c",
+  "$background: #fdfdfd": "#181818",
   "$background: #fafafb": "#181818",
   "$background: #fafbfc": "#181818",
   "$background: #efefef": "#181818",
