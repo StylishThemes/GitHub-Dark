@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.22
+@version     2.0.23
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.22 (2020-03-16) */
+/*! Github Dark v2.0.23 (2020-03-16) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
@@ -765,11 +765,11 @@
   }
   /* remap-css rule for "background: #fdfdfd" */
   #graphiql .graphiql-container .toolbar-button {
-    background: #1c1c1c;
+    background: #181818;
   }
   /* remap-css rule for "background-color: #fdfdfd" */
   html[prefix] .headlines li:hover, html[prefix] .sidebar-module h3 a:hover {
-    background-color: #1c1c1c;
+    background-color: #181818;
   }
   /* remap-css rule for "background: #fafafb" */
   html[prefix] .sidebar-module.notice {
@@ -1364,6 +1364,7 @@
   .ghh-theme-github .ghh-reviews .ghh-state-icon-problem,
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon,
   .issues-reset-query-icon, .projects-reset-query-icon, .state,
+  .token-scanning-reset-query-icon,
   body.zh_logged_in .zhc-discussion-events__icon--grey-dark,
   body[class="page-responsive"] .Counter--gray,
   body[class="page-responsive"] .Label--gray-darker,
@@ -5287,6 +5288,7 @@
   .subnav-item.selected, .subnav-item.selected:focus,
   .subnav-item.selected:hover, .subnav-item[aria-current],
   .subnav-item[aria-selected=true], .theme-selector-thumbnail.selected,
+  .token-scanning-reset-query:hover .token-scanning-reset-query-icon,
   .typeahead-result.navigation-focus, .typeahead-result:hover,
   .typeahead-result[aria-selected=true], .user-status-org-button.selected,
   [open] > .btn-outline, a.task-progress:hover .progress-bar .progress,
@@ -8006,8 +8008,8 @@
   .blame .blob-num, .blame-blob-num, .collection-card, .team-grid .team,
   .code-list .divider .blob-num, .code-list .divider .blob-code,
   .expandable-line-num .diff-expander:hover, .pagination a, .build-status-item,
-  .more-branches, .plan-choice.open, .uploaded-files>li.delete, .bg-gray-light,
-  .more-repos, .billing-per-seat-callout::after, .code-list-item .blob-num,
+  .more-branches, .plan-choice.open, .uploaded-files>li.delete, .more-repos,
+  .billing-per-seat-callout::after, .code-list-item .blob-num,
   .blob-num.js-line-number, .bg-gray-light.disabled,
   .MarketplaceBackground-buffer, .team-left-column.bg-white, .overall-summary,
   .markdown-body table tr {
@@ -8064,7 +8066,8 @@
   .Header .header-search-wrapper, .Header .header-search-wrapper input,
   .user-key-email-unverified, .action-card-header::before,
   .commits-listing .octicon-git-commit,
-  .new-discussion-timeline .composer .comment-form-head.tabnav {
+  .new-discussion-timeline .composer .comment-form-head.tabnav,
+  .advisory-form .bg-gray-light {
     background: #202020 !important;
   }
   #browser, .repos, .options-group, .pagehead ul.tabs li a.selected, .subnav-bar,
@@ -10390,7 +10393,7 @@
     color: var(--ghd-code-color, #ccc) !important;
   }
 }
-@-moz-document regexp("^https?://www\.zuora\.com.*github\.com") {
+@-moz-document regexp("^https?:\/\/www\.zuora\.com.*github\.com.*") {
   /* Styles the payment form iframe */
   body, label, .popup {
     background: transparent !important;
