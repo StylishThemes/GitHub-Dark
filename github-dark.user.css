@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.21
+@version     2.0.22
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.21 (2020-03-16) */
+/*! Github Dark v2.0.22 (2020-03-16) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("graphql-explorer.githubapp.com"), domain("www.githubstatus.com") {
@@ -4862,13 +4862,14 @@
   .header-nav-current-user .user-profile-link,
   .home-hero-signup .form-control-lg::placeholder,
   .hx_SelectMenu-item--input:checked + .hx_SelectMenu-item:not(:hover):not([aria-selected=true]),
-  .illflow-item.selected .illflow-item-heading, .keyboard-mappings th,
-  .konami .enter-link, .konami .key.active, .list-group-item-link,
-  .manage-memberships-tabs-item.selected, .manage-repo-access-not-active,
-  .markdown-body .lead-mktg p, .markdown-body span.frame span span,
-  .marketplace-plan-emphasis, .menu-item .octicon, .menu-item.selected,
-  .menu-item[aria-current], .menu-item[aria-selected=true],
-  .merge-branch-heading, .oauth-application-info .application-title,
+  .icon-discussion-gray, .illflow-item.selected .illflow-item-heading,
+  .keyboard-mappings th, .konami .enter-link, .konami .key.active,
+  .list-group-item-link, .manage-memberships-tabs-item.selected,
+  .manage-repo-access-not-active, .markdown-body .lead-mktg p,
+  .markdown-body span.frame span span, .marketplace-plan-emphasis,
+  .menu-item .octicon, .menu-item.selected, .menu-item[aria-current],
+  .menu-item[aria-selected=true], .merge-branch-heading,
+  .oauth-application-info .application-title,
   .oauth-application-whitelist .request-info strong,
   .oauth-org-access-details .oauth-org-item.on strong,
   .oauth-permissions-details .permission-title,
@@ -8338,7 +8339,8 @@
   /* contribution calendar */
   .calendar-graph rect[fill="#c6e48b"], .calendar-graph rect[fill="#7bc96f"],
   .calendar-graph rect[fill="#239a3b"], .calendar-graph rect[fill="#196127"],
-  .contrib-legend li, .contribution-activity-listing .progress-bar {
+  .contrib-legend li,
+  .contribution-activity-listing .progress-bar[style*="background-color"] {
     background-color: /*[[base-color]]*/ !important;
     fill: /*[[base-color]]*/ !important;
   }
@@ -10305,18 +10307,27 @@
     background-color: #181818;
   }
   /* style inline HTML graphql cant be generated */
-  .graphiql-explorer-root input[style*="color: rgb(210, 5, 78); border-color: currentcolor currentcolor rgb(136, 136, 136);"] {
+  .graphiql-explorer-root input[style*="color: rgb(210, 5, 78)"] {
     border-color: currentcolor currentcolor #999 !important;
     background-color: #181818;
   }
-  .graphiql-explorer-node span[style*="color: rgb(31, 97, 160);"] {
+  .graphiql-explorer-root input[style*="border-color: currentcolor currentcolor rgb(136, 136, 136)"] {
+    border-color: currentcolor currentcolor #999 !important;
+  }
+  .graphiql-explorer-node span[style*="color: rgb(31, 97, 160)"] {
     color: #4183c4 !important;
   }
-  .graphiql-explorer-node span[style="color: rgb(139, 43, 185);"] {
+  .graphiql-explorer-node span[style="color: rgb(139, 43, 185)"] {
     color: #9a6cdf !important;
   }
+  #graphiql svg path[d*="2V16H2V2H16ZM16"][fill="#CCC"] {
+    fill: #444;
+  }
+  #graphiql svg path[d*="0H2C0.9"][fill="#666"] {
+    fill: #777;
+  }
   .graphiql-ide.signed-out::after {
-    background: #000 !important;
+    background: #333;
   }
   .prereceive-feedback-heading, .State--red code a {
     color: #ddd !important;
