@@ -398,6 +398,9 @@ const sources = [
     prefix: `body.gitako-ready`,
     match: ["body", ".gitako-ready"],
   },
+  {
+    crx: "kbbbjimdjbjclaebffknlabpogocablj" // npmhub
+  }
 ];
 
 const ignoreSelectors = [
