@@ -349,7 +349,7 @@ const sources = [
   {url: "https://lab.github.com"},
   {url: "https://support.github.com"},
   {
-    url: "https://developer.github.com/v4/explorer/", // https://developer.github.com/v4/explorer
+    url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
     prefix: `#graphiql`,
     match: ["#graphiql", ".graphiql-ide"],
   },
