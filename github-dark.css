@@ -1385,17 +1385,32 @@
   #graphiql .form-group.warn .warning::after,
   #graphiql .form-group.warn .warning::before, .SelectMenu-tab,
   .form-group.errored .error::after, .form-group.errored .error::before,
+  .form-group.errored .success::after, .form-group.errored .success::before,
   .form-group.errored .warning::after, .form-group.errored .warning::before,
+  .form-group.successed .error::after, .form-group.successed .error::before,
+  .form-group.successed .success::after, .form-group.successed .success::before,
+  .form-group.successed .warning::after, .form-group.successed .warning::before,
   .form-group.warn .error::after, .form-group.warn .error::before,
+  .form-group.warn .success::after, .form-group.warn .success::before,
   .form-group.warn .warning::after, .form-group.warn .warning::before,
   .org-insights-svg-tip::after, .org-insights-svg-tip::before,
   body.zh_logged_in .zhc-feature-alert--new-workspace::after,
   body[class="page-responsive"] .form-group.errored .error::after,
   body[class="page-responsive"] .form-group.errored .error::before,
+  body[class="page-responsive"] .form-group.errored .success::after,
+  body[class="page-responsive"] .form-group.errored .success::before,
   body[class="page-responsive"] .form-group.errored .warning::after,
   body[class="page-responsive"] .form-group.errored .warning::before,
+  body[class="page-responsive"] .form-group.successed .error::after,
+  body[class="page-responsive"] .form-group.successed .error::before,
+  body[class="page-responsive"] .form-group.successed .success::after,
+  body[class="page-responsive"] .form-group.successed .success::before,
+  body[class="page-responsive"] .form-group.successed .warning::after,
+  body[class="page-responsive"] .form-group.successed .warning::before,
   body[class="page-responsive"] .form-group.warn .error::after,
   body[class="page-responsive"] .form-group.warn .error::before,
+  body[class="page-responsive"] .form-group.warn .success::after,
+  body[class="page-responsive"] .form-group.warn .success::before,
   body[class="page-responsive"] .form-group.warn .warning::after,
   body[class="page-responsive"] .form-group.warn .warning::before,
   html[prefix] .form-group.errored .error::after,
@@ -1421,7 +1436,6 @@
   body.zh_logged_in .zhc-selection-list__list-container--items-underlined .zhc-selection-item--is-disabled:hover:not(:first-child),
   body.zh_logged_in .zhc-selection-list__list-container--items-underlined .zhc-selection-item:disabled.zhc-selection-item--is-active:not(:first-child),
   body.zh_logged_in .zhc-selection-list__list-container--items-underlined .zhc-selection-item:disabled:hover:not(:first-child),
-  body[class="page-responsive"] .Box-row:first-of-type,
   html[prefix] .Box-row:first-of-type {
     border-top-color: transparent;
   }
@@ -4393,12 +4407,12 @@
   .form-checkbox .note, .full-commit .sha-block, .gh-header-meta,
   .ghe-license-status p, .ghh-theme-github .tooltipster-box .tooltipster-content,
   .gist-revisions-list .gist-revision-meta, .graph-filter .info,
-  .hanging-icon-list .octicon, .hfields .form-group dt label,
-  .integration-meta-head, .intgr-admin-link .octicon,
-  .intgrs-lstng-item-description, .issues-reset-query, .keyboard-mappings .keys,
-  .label-characters-remaining, .lead, .lfs-data-icon,
-  .list-group-item .list-group-item-summary a, .listgroup-item,
-  .logo-placeholder, .logo-upload-container .upload-state p,
+  .hanging-icon-list .octicon, .hfields .form-group .form-group-header label,
+  .hfields .form-group dt label, .integration-meta-head,
+  .intgr-admin-link .octicon, .intgrs-lstng-item-description,
+  .issues-reset-query, .keyboard-mappings .keys, .label-characters-remaining,
+  .lead, .lfs-data-icon, .list-group-item .list-group-item-summary a,
+  .listgroup-item, .logo-placeholder, .logo-upload-container .upload-state p,
   .manage-member-meta-item, .manage-member-meta-item .btn-link,
   .manage-member-meta-item > .octicon, .manage-repo-access-lead,
   .marketing .pagehead p, .marketplace-product-callout .branch-action-item-icon,
@@ -4472,6 +4486,7 @@
   body[class="page-responsive"] .dropdown-header,
   body[class="page-responsive"] .file-browser-header .octicon,
   body[class="page-responsive"] .form-checkbox .note,
+  body[class="page-responsive"] .hfields .form-group .form-group-header label,
   body[class="page-responsive"] .hfields .form-group dt label,
   body[class="page-responsive"] .history-link,
   body[class="page-responsive"] .inbox-unavailable,
@@ -5235,7 +5250,9 @@
   .confirm-removal-container .deleting-private-forks-warning .octicon,
   .dashboards-overview-cards .octicon-arrow-down,
   .deployments-timeline-icon.is-error, .deployments-timeline-icon.is-failure,
-  .drag-and-drop .error, .form-group dd h4.is-error, .form-group.errored label,
+  .drag-and-drop .error, .form-group .form-group-body h4.is-error,
+  .form-group dd h4.is-error, .form-group.errored label,
+  .form-group.required .form-group-header label::after,
   .form-group.required dt label::after,
   .ghh-theme-github .ghh-reviews .ghh-state-alert,
   .github-access-banner .octicon, .hanging-icon-list .octicon-x,
@@ -5272,8 +5289,10 @@
   body[class="page-responsive"] .commit-meta .octicon-x,
   body[class="page-responsive"] .diff-view + .js-comments-holder span.no-nl-marker,
   body[class="page-responsive"] .diff-view .file span.no-nl-marker,
+  body[class="page-responsive"] .form-group .form-group-body h4.is-error,
   body[class="page-responsive"] .form-group dd h4.is-error,
   body[class="page-responsive"] .form-group.errored label,
+  body[class="page-responsive"] .form-group.required .form-group-header label::after,
   body[class="page-responsive"] .form-group.required dt label::after,
   body[class="page-responsive"] .issue-event-icon-closed,
   body[class="page-responsive"] .markdown-body .absent,
@@ -5498,8 +5517,9 @@
   .authors-and-code .insertions, .btn-answer-active, .btn-answer:focus,
   .btn-answer:hover, .btn-suggest-answer, .btn-voted.btn-suggest-answer, .cadd,
   .deployments-timeline-icon.is-active, .developer-next-steps .octicon,
-  .form-group dd h4.is-success, .form-group.successful .success,
-  .hanging-icon-list .octicon-check, .hook-deliveries-list .item-status.success,
+  .form-group .form-group-body h4.is-success, .form-group dd h4.is-success,
+  .form-group.successful .success, .hanging-icon-list .octicon-check,
+  .hook-deliveries-list .item-status.success,
   .hook-item.enabled .icon-for-enabled, .hook-item.success .icon-for-success,
   .issue-list .title .open.octicon, .marketing h2 .secure,
   .newsletter-frequency-choice .notice,
@@ -5528,6 +5548,7 @@
   body[class="page-responsive"] .color-icons .octicon-issue-opened,
   body[class="page-responsive"] .color-icons .opened,
   body[class="page-responsive"] .commit-meta .octicon-check,
+  body[class="page-responsive"] .form-group .form-group-body h4.is-success,
   body[class="page-responsive"] .form-group dd h4.is-success,
   body[class="page-responsive"] .form-group.successful .success,
   body[class="page-responsive"] .issue-event-icon-open,
@@ -5594,7 +5615,9 @@
     background: #002800;
   }
   /* remap-css rule for "background-color: #dcffe4" */
-  #graphiql .flash-success, .btn-answer:focus, .btn-answer:hover, .flash-success {
+  #graphiql .flash-success, .btn-answer:focus, .btn-answer:hover, .flash-success,
+  .form-group.successed .success,
+  body[class="page-responsive"] .form-group.successed .success {
     background-color: #002800;
   }
   /* remap-css rule for "background-color: #dcffe4 !important" */
@@ -5625,15 +5648,21 @@
     fill: #6cc644;
   }
   /* remap-css rule for "border-color: #34d058" */
-  .branch-action-state-clean .branch-action-body,
+  .branch-action-state-clean .branch-action-body, .form-group.successed .success,
   .plan-choice--experiment.plan-choice--green.open,
-  .plan-choice--experiment.plan-choice--green.selected {
+  .plan-choice--experiment.plan-choice--green.selected,
+  body[class="page-responsive"] .form-group.successed .success {
     border-color: #34d058;
   }
   /* remap-css rule for "border-color: #34d058 !important" */
   #graphiql .border-green, .border-green, body.status .border-green,
   body[class="page-responsive"] .border-green {
     border-color: #34d058 !important;
+  }
+  /* remap-css rule for "border-bottom-color: #34d058" */
+  .form-group.successed .success::before,
+  body[class="page-responsive"] .form-group.successed .success::before {
+    border-bottom-color: #34d058;
   }
   /* remap-css rule for "border-right-color: #34d058" */
   .branch-action-state-clean .branch-action-body::before {
