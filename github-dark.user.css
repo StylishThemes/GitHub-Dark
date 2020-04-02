@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.35
+@version     2.0.36
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.35 (2020-04-01) */
+/*! Github Dark v2.0.36 (2020-04-02) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -308,6 +308,7 @@
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .search-query:focus,
   body.zh_logged_in .zhc-account-details__section,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined,
+  body.zh_logged_in .zhc-cancel-subscription-modal__missing-features__feature .zhu-checkbox:not(:checked),
   body.zh_logged_in .zhc-date-selector .DayPicker,
   body.zh_logged_in .zhc-date-selector .DayPicker--horizontal,
   body.zh_logged_in .zhc-edit-comment__file-upload,
@@ -600,6 +601,7 @@
   body.zh_logged_in .zhc-chip--outlined,
   body.zh_logged_in .zhc-choose-organization__org-list,
   body.zh_logged_in .zhc-collapsible-control:hover.zhc-collapsible-control--border,
+  body.zh_logged_in .zhc-collapsible-team-member-list__header,
   body.zh_logged_in .zhc-comment, body.zh_logged_in .zhc-confetti-announcement,
   body.zh_logged_in .zhc-confirm-dialog,
   body.zh_logged_in .zhc-confirmation-modal, body.zh_logged_in .zhc-consent-form,
@@ -661,6 +663,7 @@
   body.zh_logged_in .zhc-tab-navitem--dropdown--active:hover,
   body.zh_logged_in .zhc-table .zhc-table__cell,
   body.zh_logged_in .zhc-table-expand-button .zhc-btn:active,
+  body.zh_logged_in .zhc-team-members-page__container,
   body.zh_logged_in .zhc-team-members__content,
   body.zh_logged_in .zhc-tooltip--info-tip .zhc-tooltip__content,
   body.zh_logged_in .zhc-topbar, body.zh_logged_in .zhc-tutorial-card,
@@ -848,6 +851,7 @@
   .hljs, body.zh_logged_in .DateRangePickerInput, body.zh_logged_in .hljs,
   body.zh_logged_in .zh-select-menu-filters,
   body.zh_logged_in .zhc-app-notification:hover,
+  body.zh_logged_in .zhc-cancel-subscription-modal__missing-features,
   body.zh_logged_in .zhc-chart-info__wrapper,
   body.zh_logged_in .zhc-feature-announcement__image,
   body.zh_logged_in .zhc-roadmap,
@@ -1103,6 +1107,7 @@
   }
   /* remap-css rule for "background: #f4f4f4" */
   body.zh_logged_in .zhc-account-details__item--edit input,
+  body.zh_logged_in .zhc-input--disabled,
   body.zh_logged_in .zhc-integrations .zhc-integrations-section input,
   body.zh_logged_in .zhc-pipeline-header,
   body.zh_logged_in .zhc-roadmap-sidebar-empty-placeholder__bottomLine,
@@ -1177,6 +1182,7 @@
   body.zh_logged_in .zhc-sidebar-profile__toggle:hover,
   body.zh_logged_in .zhc-subscription-menu__item:hover,
   body.zh_logged_in .zhc-tab-navitem--full:hover,
+  body.zh_logged_in .zhc-unlicensed-team-list,
   body.zh_logged_in .zhc-workspace-form__close:hover,
   body.zh_logged_in .zhc-workspace-switcher__close:hover,
   body.zh_logged_in .zhc-workspace-switcher__header .zhc-org-dropdown:hover,
@@ -2895,7 +2901,8 @@
   body.zh_logged_in .zhc-button[disabled]:active,
   body.zh_logged_in .zhc-button[disabled]:focus,
   body.zh_logged_in .zhc-button[disabled]:hover,
-  body.zh_logged_in .zhc-cancel-subscription-modal__input,
+  body.zh_logged_in .zhc-cancel-subscription-modal__cancellation-reason,
+  body.zh_logged_in .zhc-cancel-subscription-modal__other-comments__input,
   body.zh_logged_in .zhc-collapsible-control:hover.zhc-collapsible-control--border,
   body.zh_logged_in .zhc-dashboard-nav .zhc-org-dropdown__toggle-button:hover,
   body.zh_logged_in .zhc-dependency-item-simple .zhc-selection-item:hover,
@@ -3047,6 +3054,7 @@
   body.zh_logged_in .zhc-team-members__searchbar,
   body.zh_logged_in .zhc-tutorial-checklist-modal__description input,
   body.zh_logged_in .zhc-tutorial-checklist-modal__description textarea,
+  body.zh_logged_in .zhc-unlicensed-team-list__default-team-list,
   body.zh_logged_in .zhc-workspace-form-input__text-input,
   body.zh_logged_in .zhc-workspace-form-section--connected-repos,
   body.zh_logged_in .zhc-workspace-form__load-info,
@@ -3061,6 +3069,7 @@
   body.zh_logged_in .zh-epic-creator-issue-list .zh-epic-creator-issue-list-not-in-workspace,
   body.zh_logged_in .zhc-account-settings__link .zhu-panel,
   body.zh_logged_in .zhc-add-panel__divider,
+  body.zh_logged_in .zhc-banner--zhc-renewal-notice-section,
   body.zh_logged_in .zhc-chart-container__footer,
   body.zh_logged_in .zhc-confirm-dialog__footer,
   body.zh_logged_in .zhc-footer__wrapper,
@@ -3089,6 +3098,7 @@
   body.zh_logged_in .zh-epic-creator-issue-list .zh-epic-creator-issue-list-not-in-workspace,
   body.zh_logged_in .zhc-account-details__item,
   body.zh_logged_in .zhc-app-notification,
+  body.zh_logged_in .zhc-banner--zhc-renewal-notice-section,
   body.zh_logged_in .zhc-billing-history__item,
   body.zh_logged_in .zhc-chart-container__header,
   body.zh_logged_in .zhc-chart-info__wrapper,
@@ -3140,7 +3150,10 @@
   body.zh_logged_in .zhc-subscription-menu__item,
   body.zh_logged_in .zhc-table .zhc-table__cell,
   body.zh_logged_in .zhc-tabs-nav--dropdown, body.zh_logged_in .zhc-team-member,
-  body.zh_logged_in .zhc-team-member-item, body.zh_logged_in .zhc-topbar,
+  body.zh_logged_in .zhc-team-member-item,
+  body.zh_logged_in .zhc-team-members-page__search,
+  body.zh_logged_in .zhc-topbar,
+  body.zh_logged_in .zhc-unlicensed-team-list > .zhc-collapsible-team-member-list__header,
   body.zh_logged_in .zhc-workspace-form-section__tip,
   body.zh_logged_in .zhc-workspace-form-section__title,
   body.zh_logged_in .zhc-workspace-import__header {
@@ -3768,6 +3781,7 @@
   body.zh_logged_in .zhc-button.zhc-button--variant-text:active,
   body.zh_logged_in .zhc-button.zhc-button--variant-text:focus,
   body.zh_logged_in .zhc-button.zhc-button--variant-text:hover,
+  body.zh_logged_in .zhc-cancel-subscription-modal__cancellation-reason,
   body.zh_logged_in .zhc-collapsible-control:hover.zhc-collapsible-control--grey:not(.zhc-collapsible-control--border),
   body.zh_logged_in .zhc-comment__username,
   body.zh_logged_in .zhc-control-chart-report__chart_stat .zhc-chart-emphasis,
@@ -4268,22 +4282,17 @@
   .credit-card.normal .signature, .link-small,
   .org-creation-questions .question-title i,
   .user-identification-questions .question-title i,
-  body.zh_logged_in .zh-discussion-sidebar-heading,
   body.zh_logged_in .zh-epic-creator-empty span,
   body.zh_logged_in .zh-epic-creator-header-label,
-  body.zh_logged_in .zh-epic-issue-header,
   body.zh_logged_in .zh-epic-issue-list-empty span,
   body.zh_logged_in .zh-epic-issue-list-item-number,
   body.zh_logged_in .zh-epic-issue-list-item-status,
-  body.zh_logged_in .zh-epic-issue-progress-text,
   body.zh_logged_in .zh-epic-pipeline-selector-name,
   body.zh_logged_in .zh-markdown-body,
   body.zh_logged_in .zh-merge-repository-body .zh-open-cross-organization-btn,
   body.zh_logged_in .zh-progress-title,
-  body.zh_logged_in .zh-reload-update-prompt-content,
   body.zh_logged_in .zh-reports .stats-item--issues .zh-estimate-badge-closed,
-  body.zh_logged_in .zh-reports .stats-item--issues strong,
-  body.zh_logged_in .zh-timeline-comment-header, html[prefix] .btn,
+  body.zh_logged_in .zh-reports .stats-item--issues strong, html[prefix] .btn,
   html[prefix] .btn-outline.disabled, html[prefix] .btn-outline.disabled:hover,
   html[prefix] .btn-outline:disabled, html[prefix] .btn-outline:disabled:hover,
   html[prefix] .drag-and-drop, html[prefix] .drag-and-drop-error-info,
@@ -4305,7 +4314,6 @@
     color: #767676;
   }
   /* remap-css rule for "color: #767676 !important" */
-  body.zh_logged_in .zh-muted-link, body.zh_logged_in .zh-text-muted,
   html[prefix] .link-gray, html[prefix] .muted-link, html[prefix] .text-default,
   html[prefix] .text-gray {
     color: #767676 !important;
@@ -4579,6 +4587,8 @@
   body.status .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
   body.status .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
   body.status a, body.status a:hover,
+  body.zh_logged_in .zh-epic-creator-header-repo a,
+  body.zh_logged_in .zh-epic-issue-list-item-title-link:hover,
   body[class="page-responsive"] .Box-row-link:hover,
   body[class="page-responsive"] .Box-row.navigation-focus .Box-row--drag-button,
   body[class="page-responsive"] .ajax-pagination-form .ajax-pagination-btn,
@@ -4604,6 +4614,8 @@
   .text-blue, .text-blue-mktg, body.status .link-gray-dark:hover,
   body.status .link-gray:hover, body.status .link-hover-blue:hover,
   body.status .muted-link:hover, body.status .text-blue,
+  body.zh_logged_in .zh-merge-repository-body .zh-open-cross-organization-btn:hover,
+  body.zh_logged_in .zh-muted-link:hover,
   body[class="page-responsive"] .color-blue-5,
   body[class="page-responsive"] .link-gray-dark:hover,
   body[class="page-responsive"] .link-gray:hover,
@@ -4707,6 +4719,11 @@
   body.status .lead,
   body.zh_logged_in .discussion-sidebar-item .zhc-sidebar-pipeline-selector__label,
   body.zh_logged_in .discussion-sidebar-item .zhc-sidebar-selector-button,
+  body.zh_logged_in .zh-discussion-sidebar-heading,
+  body.zh_logged_in .zh-epic-issue-header,
+  body.zh_logged_in .zh-epic-issue-progress-text,
+  body.zh_logged_in .zh-reload-update-prompt-content,
+  body.zh_logged_in .zh-timeline-comment-header,
   body[class="page-responsive"] .Box-body .help,
   body[class="page-responsive"] .Counter,
   body[class="page-responsive"] .Label--gray,
@@ -4801,7 +4818,8 @@
   .notifications-list-item:hover .notification-list-item-actions .btn,
   .page-responsive .HeaderMenu--logged-out .header-search-input::placeholder,
   .text-gray, body.status .link-gray, body.status .muted-link,
-  body.status .text-gray, body[class="page-responsive"] .color-gray-6,
+  body.status .text-gray, body.zh_logged_in .zh-muted-link,
+  body.zh_logged_in .zh-text-muted, body[class="page-responsive"] .color-gray-6,
   body[class="page-responsive"] .jump-to-field-active::placeholder,
   body[class="page-responsive"] .link-gray,
   body[class="page-responsive"] .muted-link,
@@ -5319,6 +5337,8 @@
   body.status .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
   body.status .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
   body.status .masthead .updates-dropdown-container .show-updates-dropdown,
+  body.zh_logged_in .zh-select-menu-item.navigation-focus,
+  body.zh_logged_in .zh-select-menu-item:hover,
   body[class="page-responsive"] .dropdown-item:focus,
   body[class="page-responsive"] .dropdown-item:hover,
   body[class="page-responsive"] .notification-indicator:hover .mail-status,
@@ -6145,7 +6165,9 @@
   body.zh_logged_in .zhc-banner,
   body.zh_logged_in .zhc-manage-plan__non-licensed-members,
   body.zh_logged_in .zhc-merging-tool__warning,
-  body.zh_logged_in .zhc-sidebar-warning {
+  body.zh_logged_in .zhc-sidebar-warning,
+  body.zh_logged_in .zhc-unlicensed-team-list__requested-team-list,
+  body.zh_logged_in .zhc-unlicensed-team-list__requested-team-list .zhc-collapsible-team-member-list__header {
     background-color: #321;
   }
   /* remap-css rule for "background-color: #ffe3c8" */
@@ -6197,7 +6219,8 @@
   body.zh_logged_in .zhc-banner,
   body.zh_logged_in .zhc-manage-plan__non-licensed-members,
   body.zh_logged_in .zhc-roadmap-warning-body,
-  body.zh_logged_in .zhc-sidebar-warning {
+  body.zh_logged_in .zhc-sidebar-warning,
+  body.zh_logged_in .zhc-unlicensed-team-list__requested-team-list {
     border-color: #542;
   }
   /* remap-css rule for "border-bottom: 1px solid #faebcc" */
