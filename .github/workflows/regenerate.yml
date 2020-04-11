@@ -12,14 +12,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
+
       - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: "12"
+
       - name: Install dependencies
         run: npm install
+
       - name: Regenerate
         run: npm run generate
+
       - name: Push
         run: |
           if [[ $(git status --porcelain) ]]; then
