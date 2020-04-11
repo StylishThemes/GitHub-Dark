@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -24,17 +24,8 @@ jobs:
         run: |
           if [[ $(git status --porcelain) ]]; then
             npm test
-
-            mkdir -p ~/.ssh
-            chmod 700 ~/.ssh
-            echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-            chmod 600 ~/.ssh/id_ed25519
-            ssh-keyscan github.com
-
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git remote set-url origin git@github.com:$GITHUB_REPOSITORY.git
-
             git commit -am "automated regeneration"
             npm run patch
             git push --tags origin master
