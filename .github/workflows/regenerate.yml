@@ -2,23 +2,24 @@ name: Regenerate
 
 on:
   schedule:
-    - cron: "0 */1 * * *"
+    - cron: "0 */6 * * *"
 
 jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: setup node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: "12"
-      - name: install dependencies
+      - name: Install dependencies
         run: npm install
-      - name: regenerate
+      - name: Regenerate
+        run: npm run generate
+      - name: Push
         run: |
-          npm run generate
           if [[ $(git status --porcelain) ]]; then
             npm test || exit 1
             git config user.name "$GITHUB_ACTOR"
@@ -27,4 +28,6 @@ jobs:
             git commit -am "automated regeneration"
             npm run patch
             git push --tags origin master
+          else
+            echo "Nothing to commit"
           fi
