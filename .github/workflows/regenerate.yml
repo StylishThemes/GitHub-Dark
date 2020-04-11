@@ -1,0 +1,29 @@
+name: regenerate
+
+on:
+  schedule:
+    - cron:  "0 */3 * * *"
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: install dependencies
+        run: npm install
+      - name: regenerate
+        run: |
+          npm run generate
+          if [[ $(git status --porcelain) ]]; then
+            npm test || exit 1
+            git config user.name "$GITHUB_ACTOR"
+            git config user.email "$GITHUB_ACTOR@github.com"
+            git commit -am "automated regeneration"
+            npm run patch
+            git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" --tags origin master
+          fi
