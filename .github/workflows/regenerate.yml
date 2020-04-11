@@ -22,9 +22,8 @@ jobs:
         run: |
           if [[ $(git status --porcelain) ]]; then
             npm test || exit 1
-            REPO_OWNER=$(echo $GITHUB_REPOSITORY | cut -d "/" -f1)
-            git config user.name "$REPO_OWNER"
-            git config user.email "$REPO_OWNER@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git remote set-url origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
             git commit -am "automated regeneration"
             npm run patch
