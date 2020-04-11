@@ -59,9 +59,11 @@
   .oauth-org-access-details .oauth-org-item.revoked,
   .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting,
   .pagination a, .pagination em, .pagination span, .qr-code-table .white,
+  .signup-plan-card-redesign, .signup-plan-card-redesign:hover,
   .signup-plan-card:hover, .suggester, .tint-box.transparent, .topic-tag-outline,
   body,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item-row,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .settings-section .field select,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item,
   body.gitako-ready .markdown-body .clippy-wrapper .clippy:hover,
   body.status .cpt-table .content, body.status .datepicker, body.status .es-menu,
   body.zh_logged_in .CalendarDay__blocked_minimum_nights,
@@ -204,7 +206,8 @@
   .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true], .theme-picker,
   .theme-picker-spinner, .thread-subscription-status, .timeline-comment,
   .user-profile-nav, .user-profile-sticky-bar::after,
-  [open] > .btn-outline .Counter, body, body.status #uptime-tooltip .tooltip-box,
+  [open] > .btn-outline .Counter, body, body.gitako-ready .gitako-side-bar body,
+  body.status #uptime-tooltip .tooltip-box,
   body.status ._2NFgh0Z6tkGorUToiId47k .status-dropdown__option::before,
   body.status ._2NFgh0Z6tkGorUToiId47k [class^="Content__ChildWrapper"] > [class^="Content"],
   body.status ._2dv0LNfUzjAAPh-wPACjXb,
@@ -570,10 +573,14 @@
   .MarketplaceBackground-buffer, .MarketplaceEdit-body .menu-item,
   .discussion-post .reply-comment .review-comment.is-comment-editing,
   .discussion-post .timeline-inline-comments,
+  body.gitako-ready .gitako-side-bar .gitako-resize-handler:active,
   body.gitako-ready .gitako-side-bar .gitako-resize-handler:hover,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-content .shadow-shelter,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:hover,
+  body.gitako-ready .markdown-body .clippy-wrapper .clippy,
+  body.gitako-ready .markdown-body .clippy-wrapper .clippy:active,
   ul.comparison-list > li.title {
     background: #181818;
   }
@@ -600,7 +607,7 @@
   .pagination .disabled:hover, .pagination .gap, .pagination .gap:hover,
   .pagination [aria-disabled=true], .pagination [aria-disabled=true]:hover,
   .plan-choice, .protected-branch-orgs-and-repo-admins, .range-editor, .steps li,
-  .team-listing .is-open.root-team, body,
+  .team-listing .is-open.root-team, body, body.gitako-ready .gitako-side-bar kbd,
   body[class="page-responsive"] .Box-row.navigation-focus.sortable-chosen,
   body[class="page-responsive"] .btn-danger,
   body[class="page-responsive"] .diff-view .inline-comments,
@@ -634,11 +641,13 @@
   }
   /* remap-css rule for "background: #f8f8f8" */
   .hljs, body.zh_logged_in .DateRangePickerInput, body.zh_logged_in .hljs,
+  body.zh_logged_in .invite-link-footer,
   body.zh_logged_in .zh-select-menu-filters,
   body.zh_logged_in .zhc-app-notification:hover,
   body.zh_logged_in .zhc-cancel-subscription-modal__missing-features,
   body.zh_logged_in .zhc-chart-info__wrapper,
   body.zh_logged_in .zhc-feature-announcement__image,
+  body.zh_logged_in .zhc-invite-your-team-section--suggested:not(.zhc-invite-your-team-section--empty),
   body.zh_logged_in .zhc-roadmap,
   body.zh_logged_in .zhc-roadmap-row.zhc-roadmap-row--color-primary,
   body.zh_logged_in .zhc-roadmap-subheader,
@@ -767,7 +776,10 @@
   .payment-history .failed, .payment-history .refunded,
   .previewable-comment-form .comment-form-head.tabnav, .select-menu-divider,
   .select-menu-header, .signup-plan-card, .team-member-ellipsis:hover, .tint-box,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item-row:hover,
+  body.gitako-ready .gitako-side-bar .gitako-resize-handler,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item.focused,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item:active,
+  body.gitako-ready .gitako-toggle-show-button-wrapper.collapsed,
   body[class="page-responsive"] .bubble-disabled,
   body[class="page-responsive"] .diff-view .file .meta span.icon,
   body[class="page-responsive"] .markdown-body .csv-data th,
@@ -837,9 +849,6 @@
     background-color: #202020 !important;
   }
   /* remap-css rule for "background: #f5f5f5" */
-  body.gitako-ready .gitako-toggle-show-button-wrapper.collapsed {
-    background: #202020;
-  }
   body.zh_logged_in .zh-pipeline-issues::-webkit-scrollbar-track {
     background: #202020;
   }
@@ -1030,8 +1039,7 @@
   }
   /* remap-css rule for "background: #e1e4e8" */
   #graphiql .avatar.avatar-more::before, .avatar.avatar-more::before,
-  body.gitako-ready .gitako-side-bar .gitako-resize-handler,
-  body[class="page-responsive"] hr {
+  .test-hello-bot .circle, body[class="page-responsive"] hr {
     background: #343434;
   }
   /* remap-css rule for "background-color: #e1e4e8" */
@@ -1150,7 +1158,7 @@
   #graphiql .state, .Counter--gray, .Label--gray-darker, .State,
   .branch-action-state-closed-dirty .branch-action-icon,
   .branch-action-state-dirty .branch-action-icon,
-  .check-annotation-notice::after, .completeness-indicator-problem,
+  .completeness-indicator-problem,
   .ghh-theme-github .ghh-reviews .ghh-state-icon-problem,
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon,
   .issues-reset-query-icon, .projects-reset-query-icon, .state,
@@ -1159,7 +1167,6 @@
   body[class="page-responsive"] .Counter--gray,
   body[class="page-responsive"] .Label--gray-darker,
   body[class="page-responsive"] .State,
-  body[class="page-responsive"] .check-annotation-notice::after,
   body[class="page-responsive"] .pagination .current,
   body[class="page-responsive"] .state,
   html.ghh-theme-classic .ghh .ghh-state-draft,
@@ -1196,8 +1203,7 @@
   /* remap-css rule for "background: #f9f9f9" */
   .billing-manager-banner,
   .manage-repo-access-not-active .manage-repo-access-icon,
-  .setup-info-module .setup-info-note, .uploaded-files > li.delete,
-  body.gitako-ready .markdown-body .clippy-wrapper .clippy {
+  .setup-info-module .setup-info-note, .uploaded-files > li.delete {
     background: #181818;
   }
   /* remap-css rule for "background-color: #f9f9f9" */
@@ -1912,8 +1918,10 @@
   #graphiql .rule, #graphiql hr, .conversation-list-heading,
   .ghh-theme-github .ghh .ghh-more-separator,
   .ghh-theme-github .ghh-markdown-separator, .rule, .select-menu-tabs,
-  .select-menu-text-filter:first-child:last-child, body.status .rule,
-  body.status hr, body[class="page-responsive"] .breadcrumb,
+  .select-menu-text-filter:first-child:last-child,
+  body.gitako-ready .gitako-side-bar .rule,
+  body.gitako-ready .gitako-side-bar hr, body.status .rule, body.status hr,
+  body[class="page-responsive"] .breadcrumb,
   body[class="page-responsive"] .discussion-comment,
   body[class="page-responsive"] .file-browser-header,
   body[class="page-responsive"] .line-comment-info,
@@ -1982,7 +1990,8 @@
   #graphiql .markdown-body kbd, #graphiql kbd, .UnderlineNav-item:focus,
   .UnderlineNav-item:hover,
   .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-border,
-  .markdown-body kbd, body[class="page-responsive"] .UnderlineNav-item:focus,
+  .markdown-body kbd, body.gitako-ready .gitako-side-bar kbd,
+  body[class="page-responsive"] .UnderlineNav-item:focus,
   body[class="page-responsive"] .UnderlineNav-item:hover, kbd {
     border-bottom-color: #404040;
   }
@@ -2011,8 +2020,10 @@
   .ghh-theme-github .tooltipster-box .tooltipster-content,
   .gist-quicksearch-results, .logo-box, .markdown-body kbd, .menu,
   .org-sso .sso-recovery-callout, .radio-label, .setup-form .setup-plans,
-  .timeline-comment, body[class="page-responsive"] .Box,
-  body[class="page-responsive"] .Box-header,
+  .signup-plan-card-redesign, .timeline-comment,
+  body.gitako-ready .gitako-side-bar kbd,
+  body.gitako-ready .markdown-body .clippy-wrapper .clippy,
+  body[class="page-responsive"] .Box, body[class="page-responsive"] .Box-header,
   body[class="page-responsive"] .bubble,
   body[class="page-responsive"] .form-control,
   body[class="page-responsive"] .form-select,
@@ -2085,9 +2096,7 @@
   .file, .github-access-banner, .manage-repo-access-group,
   .manage-repo-access-teams-group, .repository-lang-stats-graph,
   .saved-reply-form, .theme-selector-thumbnail, .user-key-badge, .user-key-email,
-  .user-key-email-unverified,
-  body.gitako-ready .markdown-body .clippy-wrapper .clippy,
-  body.status .ak-editor-wrapper table,
+  .user-key-email-unverified, body.status .ak-editor-wrapper table,
   body.status .cpt-tabs:not(.unstyled) li.active a,
   body.status .cpt-tabular-table, body.status .markdown-display table,
   body.zh_logged_in .zh-board-loading-message,
@@ -2232,6 +2241,7 @@
   .pagination a:focus, .pagination a:hover, .pagination em:focus,
   .pagination em:hover, .pagination span:focus, .pagination span:hover,
   .tabnav-pr, .tabnav-pr .tabnav-tab.selected,
+  body.gitako-ready .gitako-toggle-show-button-wrapper.collapsed,
   body.status #uptime-tooltip .tooltip-box,
   body.status .layout-content.status .border-color,
   body.status .markdown-display table, body.status .tooltip-base, body.status hr {
@@ -2353,6 +2363,7 @@
   .pricing-table thead th, .release-entry, .select-menu-divider,
   .select-menu-header, .signed-commit-header, .suggester li, .table-list,
   .timeline-new-comment .previewable-comment-form .comment-body,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar,
   body[class="page-responsive"] .Box-body,
   body[class="page-responsive"] .UnderlineNav,
   body[class="page-responsive"] .cross-reference .bubble-title,
@@ -2377,8 +2388,7 @@
     border-bottom-color: #343434 !important;
   }
   /* remap-css rule for "border-left: 1px solid #e1e4e8" */
-  .summary-stats li, body.gitako-ready .gitako-side-bar .gitako-resize-handler,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body {
+  .summary-stats li, body.gitako-ready .gitako-side-bar .gitako-side-bar-body {
     border-left-color: #343434;
   }
   /* remap-css rule for "border-left: 1px solid #e1e4e8 !important" */
@@ -2395,8 +2405,7 @@
   /* remap-css rule for "border-right: 1px solid #e1e4e8" */
   .MarketplaceSideNav, .ScreenshotCarousel-navitem,
   .file-navigation .get-repo-btn:first-child, .reaction-summary-item,
-  body.gitako-ready .gitako-side-bar .gitako-resize-handler:hover,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body {
+  body.gitako-ready .gitako-side-bar .gitako-resize-handler {
     border-right-color: #343434;
   }
   /* remap-css rule for "border-right: 1px solid #e1e4e8 !important" */
@@ -2419,7 +2428,7 @@
     border-bottom-color: #343434;
   }
   /* remap-css rule for "border-left: 2px solid #e1e4e8" */
-  .release-main-section {
+  .release-main-section, .test-hello-bot .step2 {
     border-left-color: #343434;
   }
   /* remap-css rule for "border-left: 3px solid #e1e4e8" */
@@ -2897,6 +2906,7 @@
   body.zh_logged_in .zhc-integrations-item,
   body.zh_logged_in .zhc-integrations-list__header,
   body.zh_logged_in .zhc-invite-your-team-item,
+  body.zh_logged_in .zhc-invite-your-team-section--suggested:not(.zhc-invite-your-team-section--empty),
   body.zh_logged_in .zhc-invitees-list, body.zh_logged_in .zhc-issue-meta,
   body.zh_logged_in .zhc-issue-sidebar .zhc-sidebar-selector,
   body.zh_logged_in .zhc-issues-list__header,
@@ -3005,7 +3015,7 @@
   .table-of-contents li + li,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .header-row,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar-title,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item-row .node-item,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item,
   body[class="page-responsive"] .list-heading,
   body[class="page-responsive"] .list-heading + .list-item,
   body[class="page-responsive"] .list-item + .list-heading,
@@ -3037,7 +3047,8 @@
     border-left-color: #343434;
   }
   /* remap-css rule for "border-right: 1px solid #eaecef" */
-  .pricing-table td + td, .table-list-bordered .table-list-cell:last-child {
+  .pricing-table td + td, .table-list-bordered .table-list-cell:last-child,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body {
     border-right-color: #343434;
   }
   /* remap-css rule for "border: 1px solid #eaeaea" */
@@ -3251,7 +3262,7 @@
   #graphiql .TimelineItem-badge, .TimelineItem-badge, .discussion-item-icon,
   .org-insights-cards .repository-lang-stats-graph .language-color,
   .page-new-repo .internal-repo-avatar, .pending-cards-status,
-  .release-timeline-tags .tag-timeline-date::after,
+  .release-timeline-tags .tag-timeline-date::after, .test-hello-bot .circle,
   body.zh_logged_in .zh-issue-event-item-icon .zh-icon-issue-added,
   body.zh_logged_in .zh-issue-event-item-icon .zh-icon-issue-removed,
   body.zh_logged_in .zhc-epic-list__epic-icon {
@@ -3348,7 +3359,8 @@
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3) !important;
   }
   /* remap-css rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
-  .file:target, .review-comment:target, :target .timeline-comment,
+  .discussion-nested-comment-timeline-item:target, .file:target,
+  .review-comment:target, :target .timeline-comment,
   :target .timeline-comment-group .timeline-comment {
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
@@ -3383,7 +3395,7 @@
   }
   /* remap-css rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
   #graphiql .SelectMenu-modal, .SelectMenu-modal,
-  .checkable-input-container.checked, .suggester {
+  .checkable-input-container.checked, .signup-plan-card-redesign, .suggester {
     box-shadow: 0 1px 5px #000;
   }
   /* remap-css rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15) !important" */
@@ -3398,6 +3410,7 @@
   }
   /* remap-css rule for "box-shadow: inset 0 -1px 0 #d1d5da" */
   #graphiql .markdown-body kbd, #graphiql kbd, .markdown-body kbd,
+  body.gitako-ready .gitako-side-bar kbd,
   body[class="page-responsive"] .markdown-body kbd,
   body[class="page-responsive"] kbd, kbd {
     box-shadow: inset 0 -2px 0 #383838;
@@ -3481,6 +3494,7 @@
   .markdown-body h2 .octicon-link, .markdown-body h3 .octicon-link,
   .markdown-body h4 .octicon-link, .markdown-body h5 .octicon-link,
   .markdown-body h6 .octicon-link, .tooltipped::before,
+  body.gitako-ready .gitako-side-bar mark,
   body[class="page-responsive"] .jump-to-suggestions-path,
   body[class="page-responsive"] .markdown-body h1 .octicon-link,
   body[class="page-responsive"] .markdown-body h2 .octicon-link,
@@ -3579,6 +3593,7 @@
   body.zh_logged_in .zhc-integrations-item .zhc-integrations__hook:first-child:not(:last-child),
   body.zh_logged_in .zhc-integrations-item .zhc-integrations__repo,
   body.zh_logged_in .zhc-integrations-item .zhc-integrations__service,
+  body.zh_logged_in .zhc-invitee-input,
   body.zh_logged_in .zhc-issue-card__epic-filter,
   body.zh_logged_in .zhc-issue-card__heading__main,
   body.zh_logged_in .zhc-issue-card__issue-title,
@@ -3705,7 +3720,8 @@
   .page-responsive .HeaderMenu-link, .pagehead-tabs-item .Counter,
   .render-notice, .reponav-item .Counter, .select-menu-action,
   .select-menu-header .close-button:hover, .select-menu-header .octicon:hover,
-  .subnav-search-context .btn, body.zh_logged_in .zhc-markdown kbd,
+  .subnav-search-context .btn, body.gitako-ready .gitako-side-bar kbd,
+  body.zh_logged_in .zhc-markdown kbd,
   body[class="page-responsive"] .breadcrumb strong,
   body[class="page-responsive"] .bubble .commit-message,
   body[class="page-responsive"] .cross-reference .bubble-content a,
@@ -3757,8 +3773,6 @@
   .repo-file-upload-file-wrap .remove-file:hover, .repo-file-upload-target,
   .repo-file-upload-tree-target, .repo-subscription-container .intro,
   .subscriptions-content .repo-icon, .user-key-email-unverified, .vcard-username,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .no-results,
-  body.gitako-ready .gitako-toggle-show-button-wrapper .action-icon,
   body.status .chzn-container-single .chzn-single,
   body.status .controls.append label, body.status .controls.prepend label,
   body.status .cpt-tabs:not(.unstyled) li:not(.active) a:hover,
@@ -3772,6 +3786,7 @@
   body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__next,
   body.zh_logged_in .DayPicker__horizontal .DayPicker_nav__prev,
   body.zh_logged_in .DayPicker_weekHeader, body.zh_logged_in .burndown-chart-tip,
+  body.zh_logged_in .invite-link-footer__link .zhc-input,
   body.zh_logged_in .zh-epic-creator-placeholder-bottom a,
   body.zh_logged_in .zh-issue-list .table-list-header,
   body.zh_logged_in .zh-menu-content__item,
@@ -3920,9 +3935,9 @@
   .billing-addon-items .addon-cost,
   .billing-box-accordion:hover .billing-box-accordion-state .octicon,
   .blame-commit-date[data-heat="10"], .blame-hunk:hover .reblame-link,
-  .branches-tag-list li.loading, .check-annotation-notice .annotation-title,
-  .code-list .full-path a, .commit-branches, .conversation-list-heading,
-  .course-details p:first-child, .delete-topic-button, .delete-topic-link,
+  .branches-tag-list li.loading, .code-list .full-path a, .commit-branches,
+  .conversation-list-heading, .course-details p:first-child,
+  .delete-topic-button, .delete-topic-link,
   .deployments-timeline-icon.is-inactive,
   .deprovisioning-checkbox.checkbox-disabled,
   .developer-app-item .developer-app-list-meta, .draft.octicon,
@@ -3969,9 +3984,8 @@
   .type-icon-state-draft,
   .user-status-emoji-tab[role=tab][aria-selected=true] .UnderlineNav-octicon,
   .vcard-detail .octicon, ::placeholder,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .access-token .hint,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .singleton .hint,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .toggle-shortcut .hint,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .hint,
+  body.gitako-ready .gitako-toggle-show-button-wrapper .action-icon,
   body.status #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header,
   body.status .color-secondary,
   body.status .components-section .components-uptime-link,
@@ -3987,7 +4001,6 @@
   body[class="page-responsive"] .UnderlineNav-item:hover .UnderlineNav-octicon,
   body[class="page-responsive"] .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
   body[class="page-responsive"] .UnderlineNav-item[role=tab][aria-selected=true] .UnderlineNav-octicon,
-  body[class="page-responsive"] .check-annotation-notice .annotation-title,
   body[class="page-responsive"] .cross-reference .bubble-title,
   body[class="page-responsive"] .cross-reference .bubble-title a,
   body[class="page-responsive"] .jump-to-suggestions-path .jump-to-octicon,
@@ -4045,6 +4058,7 @@
   .signed-commit-header .octicon-unverified, .step .step-title::before,
   .step--completed, .svg-tip, .task-progress-counts,
   .team-member-list .invite-icon, .team-member-list-avatar .octicon,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item.disabled .node-item,
   body[class="page-responsive"] .UnderlineNav-octicon,
   body[class="page-responsive"] .commit-meta a,
   body[class="page-responsive"] .discussion-header .branches,
@@ -4358,7 +4372,9 @@
   .tree-browser-result[aria-selected=true] .octicon-chevron-right,
   .zeroclipboard-link, [open] > .btn-outline .Counter, a, a.branch-name,
   a.tabnav-extra:hover, a.task-progress:hover,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item-row .node-item,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item,
+  body.gitako-ready .gitako-side-bar a,
+  body.gitako-ready .gitako-toggle-show-button-wrapper.collapsed .action-icon,
   body.status .components-container .component-inner-container.status-blue .component-status,
   body.status .components-container .component-inner-container.status-blue .icon-indicator,
   body.status .incident-history .impact-maintenance,
@@ -4499,7 +4515,6 @@
   .timeline-comment-header-text code a, .timeout h3, .toolbar-item,
   .toolbar-item .menu-target, .two-factor-toggle .two-factor-status,
   .type-icon-state-none, .user-status-org-button .user-status-org-detail,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar,
   body.status .lead,
   body.zh_logged_in .discussion-sidebar-item .zhc-sidebar-pipeline-selector__label,
   body.zh_logged_in .discussion-sidebar-item .zhc-sidebar-selector-button,
@@ -4738,7 +4753,8 @@
   .toc-select .select-menu-item-text, .token-scope,
   .topic-tag-contrast .delete-topic-link, .url-box p strong, .user-mention,
   .user-status-emoji-tab[role=tab][aria-selected=true],
-  .user-status-message-wrapper, body, body.status,
+  .user-status-message-wrapper, body, body.gitako-ready .gitako-side-bar body,
+  body.status,
   body.status #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link,
   body.status .color-primary, body.status .color-primary:hover,
   body.status .incident-history .impact-none,
@@ -4866,7 +4882,8 @@
   }
   /* remap-css rule for "background: #f1f8ff" */
   #site-search-results .search-result:hover, .ais-Hits-item.active,
-  .ais-Hits-item:hover, .commit-tease .AvatarStack-body {
+  .ais-Hits-item:hover, .commit-tease .AvatarStack-body,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar {
     background: #182030;
   }
   /* remap-css rule for "background-color: #f1f8ff" */
@@ -4893,7 +4910,6 @@
   .timeline-comment.current-user .timeline-comment-header, .topic-tag,
   .topic-tag-action, .topic-tag-action .add-topic-button,
   .topic-tag-action .remove-topic-button,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar,
   body[class="page-responsive"] .Box--blue .Box-header,
   body[class="page-responsive"] .Box-header--blue,
   body[class="page-responsive"] .Box-row--blue,
@@ -4980,10 +4996,6 @@
   body.status .border-blue-light,
   body[class="page-responsive"] .border-blue-light {
     border-color: #246 !important;
-  }
-  /* remap-css rule for "border-bottom: 1px solid #c8e1ff" */
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar {
-    border-bottom-color: #246;
   }
   /* remap-css rule for "border-color: #c0d3eb" */
   .timeline-comment.current-user,
@@ -5264,10 +5276,6 @@
   table.files td.icon {
     color: /*[[base-color]]*/ #4f8cc9;
   }
-  /* remap-css rule for "color: #0366d6d0" */
-  body.gitako-ready .gitako-toggle-show-button-wrapper.collapsed .action-icon {
-    color: /*[[base-color]]*/ #4f8cc9;
-  }
   /* remap-css rule for "background-color: #79b8ff" */
   .loader-bar, .progress-pjax-loader > .progress-pjax-loader-bar,
   .topic-tag-contrast .delete-topic-link:hover {
@@ -5476,7 +5484,7 @@
   .Label--draft,
   .marketplace-plan-dollar-field-container.is-errored .form-control,
   .timeline-comment-label-spammy,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control.error,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper .search-input.error,
   body[class="page-responsive"] .Box--danger,
   body[class="page-responsive"] .Box--danger .Box-body:last-of-type,
   body[class="page-responsive"] .Box--danger .Box-row:first-of-type {
@@ -6291,7 +6299,8 @@
   .select-menu-item:focus .octicon, .select-menu-item:hover .octicon,
   .select-menu-item[aria-checked=true] .octicon-check, .stale-files-tab-link,
   .subnav-search-context .select-menu-item-icon, .table-list-milestones .stat a,
-  a.task-progress:hover .octicon, body.status .ak-editor-wrapper pre code,
+  a.task-progress:hover .octicon, body.gitako-ready .gitako-side-bar legend,
+  body.status .ak-editor-wrapper pre code,
   body.status .domain-helper .domain-header #domain-folder,
   body.status .markdown-display pre code, body.status a.no-link,
   body.status a.no-link:hover, body.status legend,
@@ -6361,7 +6370,9 @@
     color: inherit;
   }
   #graphiql ::-webkit-input-placeholder, .input-dark::-webkit-input-placeholder,
-  ::-webkit-input-placeholder, body.status ::-webkit-input-placeholder,
+  ::-webkit-input-placeholder,
+  body.gitako-ready .gitako-side-bar ::-webkit-input-placeholder,
+  body.status ::-webkit-input-placeholder,
   body[class="page-responsive"] .input-dark::-webkit-input-placeholder,
   html[prefix] ::-webkit-input-placeholder {
     color: inherit;
@@ -6419,9 +6430,8 @@
   .upload-enabled.focused #q, .upload-enabled.focused .ais-SearchBox-input,
   .upload-enabled.focused .form-control,
   :target .discussion-nested-comment-group .timeline-comment,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .access-token-input-control .access-token-input,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-settings-bar .toggle-shortcut-input-control .toggle-shortcut-input,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper input[type="text"].form-control,
+  :target .nested-discussion-timeline-comment,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper .search-input,
   body.intent-mouse [role=button]:focus,
   body.intent-mouse [role=tabpanel][tabindex="0"]:focus,
   body.intent-mouse a:focus, body.intent-mouse button:focus,
@@ -6561,23 +6571,25 @@
   .repository-merge-features .form-group.errored .error, .rule,
   .select-menu-tabs .select-menu-tab-nav, .select-menu-tabs a, .subnav-btn,
   .subnav-btn:hover, body,
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item-row .node-item .go-to-button,
-  body.status .cpt-button.style-outline, body.status abbr, body.status address,
-  body.status article, body.status aside, body.status audio, body.status b,
-  body.status blockquote, body.status canvas, body.status caption,
-  body.status cite, body.status code, body.status dd, body.status del,
-  body.status details, body.status dfn, body.status div, body.status dl,
-  body.status dt, body.status em, body.status fieldset, body.status figcaption,
-  body.status figure, body.status footer, body.status form, body.status h1,
-  body.status h2, body.status h3, body.status h4, body.status h5, body.status h6,
-  body.status header, body.status hgroup, body.status html, body.status i,
-  body.status iframe, body.status img, body.status ins, body.status kbd,
-  body.status label, body.status legend, body.status li, body.status mark,
-  body.status menu, body.status nav, body.status object, body.status ol,
-  body.status p, body.status pre, body.status q, body.status samp,
-  body.status section, body.status small, body.status span, body.status strong,
-  body.status sub, body.status summary, body.status sup, body.status time,
-  body.status ul, body.status var, body.status video,
+  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item .go-to-button,
+  body.gitako-ready .gitako-side-bar .rule,
+  body.gitako-ready .gitako-side-bar hr, body.status .cpt-button.style-outline,
+  body.status abbr, body.status address, body.status article, body.status aside,
+  body.status audio, body.status b, body.status blockquote, body.status canvas,
+  body.status caption, body.status cite, body.status code, body.status dd,
+  body.status del, body.status details, body.status dfn, body.status div,
+  body.status dl, body.status dt, body.status em, body.status fieldset,
+  body.status figcaption, body.status figure, body.status footer,
+  body.status form, body.status h1, body.status h2, body.status h3,
+  body.status h4, body.status h5, body.status h6, body.status header,
+  body.status hgroup, body.status html, body.status i, body.status iframe,
+  body.status img, body.status ins, body.status kbd, body.status label,
+  body.status legend, body.status li, body.status mark, body.status menu,
+  body.status nav, body.status object, body.status ol, body.status p,
+  body.status pre, body.status q, body.status samp, body.status section,
+  body.status small, body.status span, body.status strong, body.status sub,
+  body.status summary, body.status sup, body.status time, body.status ul,
+  body.status var, body.status video,
   body.zh_logged_in .zhc-dropdown__clear-filter,
   body.zh_logged_in .zhc-merge-repo-finder__cancel,
   body.zh_logged_in .zhc-selection-list__cancel,
@@ -6612,7 +6624,7 @@
   .ghh-theme-classic .ghh-readme pre code, .ghh-theme-classic .ghh-readme pre tt,
   .inline-form .btn-plain, .markdown-body .emoji, .markdown-body pre code,
   .markdown-body pre tt, .markdown-body table img, .tabnav-tab, a,
-  body.status .ak-editor-wrapper pre code,
+  body.gitako-ready .gitako-side-bar a, body.status .ak-editor-wrapper pre code,
   body.status .cpt-tabs:not(.unstyled) li:not(.active) a:hover.disabled,
   body.status .markdown-display pre code, body.status a,
   body.status pre.code-display code,
