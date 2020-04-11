@@ -2,7 +2,7 @@ name: regenerate
 
 on:
   schedule:
-    - cron:  "0 */3 * * *"
+    - cron: "0 */1 * * *"
 
 jobs:
   regenerate:
@@ -23,7 +23,8 @@ jobs:
             npm test || exit 1
             git config user.name "$GITHUB_ACTOR"
             git config user.email "$GITHUB_ACTOR@github.com"
+            git remote set-url origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
             git commit -am "automated regeneration"
             npm run patch
-            git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" --tags origin master
+            git push --tags origin master
           fi
