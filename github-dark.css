@@ -205,9 +205,9 @@
   .select-menu-tabs .select-menu-tab-nav[aria-selected=true],
   .select-menu-tabs a.selected, .select-menu-tabs a[aria-selected=true],
   .setup-info-module, .social-count, .steps li.current, .tabnav-tab.selected,
-  .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true], .theme-picker,
-  .theme-picker-spinner, .thread-subscription-status, .timeline-comment,
-  .user-profile-nav, .user-profile-sticky-bar::after,
+  .tabnav-tab[aria-current], .tabnav-tab[aria-selected=true], .team-octicon,
+  .theme-picker, .theme-picker-spinner, .thread-subscription-status,
+  .timeline-comment, .user-profile-nav, .user-profile-sticky-bar::after,
   [open] > .btn-outline .Counter, body, body.gitako-ready .gitako-side-bar body,
   body.status #uptime-tooltip .tooltip-box,
   body.status ._2NFgh0Z6tkGorUToiId47k .status-dropdown__option::before,
@@ -1322,8 +1322,8 @@
   .composer.composer-responsive .timeline-comment::after,
   .composer.composer-responsive .timeline-comment::before, .input-dark,
   .is-pending .timeline-comment--caret::after,
-  .is-pending .timeline-comment--caret::before,
-  .timeline-comment--caret.current-user::after,
+  .is-pending .timeline-comment--caret::before, .team-collaboration-box::after,
+  .team-collaboration-box::before, .timeline-comment--caret.current-user::after,
   .timeline-comment--caret.current-user::before,
   .timeline-comment--caret.is-internal::after,
   .timeline-comment--caret.is-internal::before,
@@ -1497,6 +1497,8 @@
   .dropdown-signed-commit .dropdown-menu-w::after, .sponsors-popover::after,
   .sponsors-popover::before, .subnav-btn:hover, .subnav-primary,
   .subnav-primary.selected, .subnav-primary:hover,
+  .team-collaboration-box--left::after, .team-collaboration-box--left::before,
+  .team-collaboration-box--right::after, .team-collaboration-box--right::before,
   body.status .cpt-tabs:not(.unstyled) li.active a,
   body.status .layout-content.status.status-full-history .history-nav a.current,
   body.zh_logged_in .zhc-merging-tool-repo-dropdown .zhc-selection-list__list .zhc-tooltip-wrapper:last-child .zhc-selection-item,
@@ -1992,13 +1994,15 @@
   #graphiql .markdown-body kbd, #graphiql kbd, .UnderlineNav-item:focus,
   .UnderlineNav-item:hover,
   .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-border,
-  .markdown-body kbd, body.gitako-ready .gitako-side-bar kbd,
+  .markdown-body kbd, .team-collaboration-box::before,
+  body.gitako-ready .gitako-side-bar kbd,
   body[class="page-responsive"] .UnderlineNav-item:focus,
   body[class="page-responsive"] .UnderlineNav-item:hover, kbd {
     border-bottom-color: #404040;
   }
   /* remap-css rule for "border-left-color: #d1d5da" */
-  .ghh-theme-github .tooltipster-left .tooltipster-arrow-border {
+  .ghh-theme-github .tooltipster-left .tooltipster-arrow-border,
+  .team-collaboration-box--left::before {
     border-left-color: #404040;
   }
   /* remap-css rule for "border-right-color: #d1d5da" */
@@ -2008,7 +2012,7 @@
   .composer.composer-responsive .timeline-comment::before,
   .ghh-theme-github .tooltipster-right .tooltipster-arrow-border,
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body::before,
-  .timeline-comment--caret::before {
+  .team-collaboration-box--right::before, .timeline-comment--caret::before {
     border-right-color: #404040;
   }
   /* remap-css rule for "border: 1px solid #d1d5da" */
@@ -3191,7 +3195,8 @@
   #graphiql .Popover-message::after, #graphiql .dropdown-menu::after,
   .dropdown-menu::after,
   .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-background,
-  .gist-banner, body.status #uptime-tooltip .pointer-container .pointer-smaller,
+  .gist-banner, .team-collaboration-box::after,
+  body.status #uptime-tooltip .pointer-container .pointer-smaller,
   body.status #uptime-tooltip .pointer-smaller,
   body.status .popover.bottom .arrow::after,
   body.zh_logged_in .zh-epic-creator-tab.selected,
@@ -3212,7 +3217,7 @@
   .Popover-message--right::after, .billing-box-progressBars span:nth-child(2),
   .boxed-group .tabnav.heading li:first-child .selected,
   .ghh-theme-github .tooltipster-left .tooltipster-arrow-background,
-  body.status .popover.left .arrow::after,
+  .team-collaboration-box--left::after, body.status .popover.left .arrow::after,
   body.zh_logged_in .zhc-info-alert--pointer--right::after,
   body.zh_logged_in .zhc-tooltip--info-tip.zhc-tooltip--left .zhc-tooltip__content::before,
   body[class="page-responsive"] .pagination a,
@@ -3229,6 +3234,7 @@
   .composer.composer-responsive .timeline-comment::after,
   .ghh-theme-github .tooltipster-right .tooltipster-arrow-background,
   .new-discussion-timeline .composer .timeline-comment::after,
+  .team-collaboration-box--right::after,
   body.status .popover.right .arrow::after,
   body.zh_logged_in .zhc-info-alert--pointer--left::after,
   body.zh_logged_in .zhc-pr-issue-connector__info::after,
@@ -4299,7 +4305,7 @@
     fill: #757575;
   }
   /* remap-css rule for "fill: #0366d6" */
-  .graphs .dot.padded circle:hover, .map-background, .pricing-confetti {
+  .graphs .dot.padded circle:hover, .map-background {
     fill:  /*[[base-color]]*/ #4f8cc9;
   }
   /* remap-css rule for "color: #0366d6" */
@@ -4476,8 +4482,9 @@
   .hx_btn-discussion-bumped:disabled:hover, .integration-meta-head,
   .intgr-admin-link .octicon, .intgrs-lstng-item-description,
   .issues-reset-query, .keyboard-mappings .keys, .label-characters-remaining,
-  .lead, .lfs-data-icon, .list-group-item .list-group-item-summary a,
-  .listgroup-item, .logo-placeholder, .logo-upload-container .upload-state p,
+  .lead, .lead-mktg-fluid, .lfs-data-icon,
+  .list-group-item .list-group-item-summary a, .listgroup-item,
+  .logo-placeholder, .logo-upload-container .upload-state p,
   .manage-member-meta-item, .manage-member-meta-item .btn-link,
   .manage-member-meta-item > .octicon, .manage-repo-access-lead,
   .marketing .pagehead p, .marketplace-product-callout .branch-action-item-icon,
@@ -5566,9 +5573,9 @@
     background-color: #f3582c !important;
   }
   /* remap-css rule for "background: #fb8532" */
-  .actions-particle-circle-orange, .actions-particle-circle-orange-2,
   .gpr-circle-orange, .gpr-circle-orange-2, .mobile-particle-circle-orange,
-  .mobile-particle-square-orange {
+  .mobile-particle-square-orange, .particle-circle-orange,
+  .particle-circle-orange-2 {
     background: #f3582c;
   }
   /* remap-css rule for "background: #fb8532 !important" */
@@ -5865,10 +5872,10 @@
     background-color: #cb4 !important;
   }
   /* remap-css rule for "background: #ffdf5d" */
-  .CheckStep-line .dt-fm, .actions-particle-square-yellow,
-  .actions-particle-square-yellow-2, .gpr-square-yellow, .gpr-square-yellow-2,
+  .CheckStep-line .dt-fm, .gpr-square-yellow, .gpr-square-yellow-2,
   .mobile-particle-square-orange, .mobile-particle-square-pink,
-  .mobile-particle-square-yellow {
+  .mobile-particle-square-yellow, .particle-square-yellow,
+  .particle-square-yellow-2 {
     background: #cb4;
   }
   /* remap-css rule for "background-color: #ffdf5d" */
@@ -6765,7 +6772,17 @@
   .ais-SearchBox-reset, .blankslate-clean-background, .btn-invisible.selected,
   .btn-invisible.zeroclipboard-is-active, .btn-invisible.zeroclipboard-is-hover,
   .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover,
-  .btn-invisible[aria-selected=true],
+  .btn-invisible[aria-selected=true], .btn-outline-mktg-fluid,
+  .btn-outline-mktg-fluid.hover, .btn-outline-mktg-fluid.selected,
+  .btn-outline-mktg-fluid:active, .btn-outline-mktg-fluid:hover,
+  .btn-outline-mktg-fluid[aria-selected=true], .btn-purple-outline-mktg-fluid,
+  .btn-purple-outline-mktg-fluid.hover, .btn-purple-outline-mktg-fluid.selected,
+  .btn-purple-outline-mktg-fluid:active, .btn-purple-outline-mktg-fluid:hover,
+  .btn-purple-outline-mktg-fluid[aria-selected=true],
+  .btn-white-outline-mktg-fluid, .btn-white-outline-mktg-fluid.hover,
+  .btn-white-outline-mktg-fluid.selected, .btn-white-outline-mktg-fluid:active,
+  .btn-white-outline-mktg-fluid:hover,
+  .btn-white-outline-mktg-fluid[aria-selected=true],
   .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   .dropdown-signout, .file .empty, .flash-close, .header-search-input,
   .kb-konami-dialog, .konami, .konami .enter-link:hover, .konami .key.complete,
@@ -6776,7 +6793,9 @@
   .search-form-fluid .search-page-input, .signed-commit-badge, .tag-input input,
   .theme-toggle, .toolbar-commenting .dropdown-item, .toolbar-item,
   .toolbar-item .menu-target, .tree-browser-result mark, .user-list li em,
-  .wiki-footer .markdown-body img, .zeroclipboard-link, body.status .cpt-toggle,
+  .wiki-footer .markdown-body img, .zeroclipboard-link,
+  [open] > .btn-outline-mktg-fluid, [open] > .btn-purple-outline-mktg-fluid,
+  [open] > .btn-white-outline-mktg-fluid, body.status .cpt-toggle,
   body.zh_logged_in .DateInput, body.zh_logged_in .DateInput .DateInput_input,
   body.zh_logged_in .ui-dialog .ui-dialog-content,
   body.zh_logged_in .ui-spinner-input, body.zh_logged_in .ui-tabs .ui-tabs-panel,
@@ -6798,6 +6817,9 @@
     background: none;
   }
   /* remap-css rule for "background: none !important" */
+  .btn-invisible-mktg-fluid, .btn-invisible-mktg-fluid::before,
+  .btn-invisible-mktg-fluid:hover, .btn-sm-invisible-mktg-fluid,
+  .btn-sm-invisible-mktg-fluid::before, .btn-sm-invisible-mktg-fluid:hover,
   html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .navigation-focus td {
