@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.44
+@version     2.0.45
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.44 (2020-04-14) */
+/*! Github Dark v2.0.45 (2020-04-15) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -1213,6 +1213,7 @@
   .btn.disabled, .btn:disabled, .btn[aria-disabled=true], .filter-item .bar,
   .pagination a:focus, .pagination a:hover, .pagination em:focus,
   .pagination em:hover, .pagination span:focus, .pagination span:hover,
+  .radio-input:disabled + .radio-label,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn,
   body[class="page-responsive"] .btn,
   body[class="page-responsive"] .btn-danger.disabled,
@@ -4187,7 +4188,8 @@
   .oauth-permissions-details.none .permission-title,
   .page-new-repo .form-checkbox.disabled, .payment-history .refunded .status,
   .plan-choice-exp, .profile-timeline-card .issue-meta-section .octicon,
-  .project-card blockquote, .repo_refresh-file-tree-icon,
+  .project-card blockquote, .radio-input:disabled + .radio-label,
+  .repo_refresh-file-tree-icon,
   .repository-lang-stats ol.repository-lang-stats-numbers li > a,
   .repository-lang-stats ol.repository-lang-stats-numbers li > span,
   .repository-settings-actions [role=tab][aria-selected=true] .UnderlineNav-octicon,
@@ -4277,7 +4279,7 @@
   .home-hero-signup .form-control-note .notice-highlight, .neutral-check,
   .news .alert .octicon, .news .alert .time, .news .alert .title .subtle,
   .org-insights-cards .org-insights-card-legend, .page-new-repo .octicon-repo,
-  .repohead h1 .octicon, .shelf-dismiss,
+  .radio-label .octicon, .repohead h1 .octicon, .shelf-dismiss,
   .signed-commit-header .octicon-unverified, .step .step-title::before,
   .step--completed, .svg-tip, .task-progress-counts,
   .team-member-list .invite-icon, .team-member-list-avatar .octicon,
@@ -8879,6 +8881,9 @@
   body[class="page-responsive"] .bg-blue-light,
   .repository-content > .Box--condensed > .Box-body.bg-blue-light {
     background: #182030 !important;
+  }
+  aside [style*="background-color: #4764f1"] .text-white {
+    background-color: #182030 !important;
   }
   .repo-file-upload-progress .repo-file-upload-meter, .btn.btn-blue:hover,
   .topic-tag-link:hover, .delete-topic-button:hover,
