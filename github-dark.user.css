@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.46
+@version     2.0.47
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.46 (2020-04-16) */
+/*! Github Dark v2.0.47 (2020-04-16) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -5874,6 +5874,16 @@
   body[class="page-responsive"] .color-green-8 {
     color: #6cc644 !important;
   }
+  /* remap-css rule for "color: #144620" */
+  .form-group.successed .success,
+  body[class="page-responsive"] .form-group.successed .success {
+    color: #34d058;
+  }
+  /* remap-css rule for "color: #144620 !important" */
+  #graphiql .color-green-9, .color-green-9,
+  body[class="page-responsive"] .color-green-9 {
+    color: #34d058 !important;
+  }
   /* remap-css rule for "background-color: #28a745" */
   #graphiql .Toast--success .Toast-icon, #graphiql .btn-primary,
   #graphiql .btn-primary-mktg:hover, .Toast--success .Toast-icon,
@@ -5999,6 +6009,11 @@
   .timeline-comment.current-user.timeline-chosen-answer::before,
   .timeline-comment.timeline-chosen-answer::before {
     border-right-color: #28a745;
+  }
+  /* remap-css rule for "border-bottom-color: #dcffe4" */
+  .form-group.successed .success::after,
+  body[class="page-responsive"] .form-group.successed .success::after {
+    border-bottom-color: #002800;
   }
   /* remap-css rule for "background: linear-gradient(#34d058, #28a745)" */
   html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
