@@ -273,6 +273,7 @@ const mappings = {
   // green
   "color: #28a745": "color: #6cc644",
   "color: #165c26": "color: #6cc644",
+  "color: #144620": "color: #34d058",
   "$background: #28a745": "#373",
   "$background: #2cbe4e": "#373",
   "$background: #dcffe4": "#002800",
