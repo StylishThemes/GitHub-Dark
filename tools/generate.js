@@ -283,6 +283,7 @@ const mappings = {
   "fill: #22863a": "fill: #6cc644",
   "$border: #34d058": "#34d058",
   "$border: #a2cbac": "#28a745",
+  "$border: #dcffe4": "#002800",
   "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
 
   // yellow
