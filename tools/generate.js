@@ -51,6 +51,7 @@ const mappings = {
   "$background: linear-gradient(#ececec, #d5d5d5)": "linear-gradient(#404040, #383838)", // graphql explorer
   "$background: rgba(27,31,35,.1)": "rgba(0,0,0,.1)",
   "$background: rgba(27,31,35,.15)": "rgba(0,0,0,.15)",
+  "$background: initial": "initial",
 
   // ==========================================================================
   // Border
