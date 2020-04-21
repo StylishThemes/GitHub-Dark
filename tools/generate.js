@@ -49,6 +49,7 @@ const mappings = {
   "$background: linear-gradient(#fdfdfd, #d2d3d6)": "linear-gradient(#303030, #282828)", // graphql explorer
   "$background: linear-gradient(#e6e6e6, #c3c3c3)": "linear-gradient(#404040, #383838)", // graphql explorer
   "$background: linear-gradient(#ececec, #d5d5d5)": "linear-gradient(#404040, #383838)", // graphql explorer
+  "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: rgba(27,31,35,.1)": "rgba(0,0,0,.1)",
   "$background: rgba(27,31,35,.15)": "rgba(0,0,0,.15)",
   "$background: initial": "initial",
@@ -66,6 +67,7 @@ const mappings = {
   "$border: #444d56": "#484848",
   "$border: #484848": "#afafaf", // github blog
   "$border: #959da5": "#484848",
+  "$border: #bbb": "#484848",
   "$border: #c3c8cf": "#484848",
   "$border: #dfe2e5": "#343434",
   "$border: #d1d5da": "#404040",
