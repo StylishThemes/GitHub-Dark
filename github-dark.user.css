@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.51
+@version     2.0.52
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.51 (2020-04-20) */
+/*! Github Dark v2.0.52 (2020-04-21) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -1516,6 +1516,11 @@
   #graphiql .graphiql-container .toolbar-button:active {
     background: linear-gradient(#404040, #383838);
   }
+  /* remap-css rule for "background-image: linear-gradient(#ccc,#d5d5d5)" */
+  .clone-url-button > .clone-url-link.selected,
+  .clone-url-button > .clone-url-link.selected:hover {
+    background-image: linear-gradient(#303030, #282828);
+  }
   /* remap-css rule for "background-color: rgba(27,31,35,.1)" */
   #graphiql .btn .Counter, .btn .Counter {
     background-color: rgba(0, 0, 0, .1);
@@ -2132,6 +2137,27 @@
   /* remap-css rule for "border-left: 1px solid #959da5" */
   .branch-a-b-count .count-half:last-child {
     border-left-color: #484848;
+  }
+  /* remap-css rule for "border-color: #bbb" */
+  .clone-url-button > .clone-url-link.selected,
+  .clone-url-button > .clone-url-link.selected:hover,
+  body.status ._2NFgh0Z6tkGorUToiId47k [class^="Content__ChildWrapper"] > [class^="Content"],
+  body.status ._3c5eahGieigDTmRHO-d7l3 [class^="Content__ChildWrapper"] > [class^="Content"],
+  body.status .cpt-button.style-outline.color-grey {
+    border-color: #484848;
+  }
+  /* remap-css rule for "border-bottom-color: #bbb" */
+  html[prefix] .markdown-body kbd {
+    border-bottom-color: #484848;
+  }
+  /* remap-css rule for "border: 1px solid #bbb" */
+  body.status ._1JN3aEKlPD7X5jqB1dXYzx input,
+  body.status .chzn-container-single .chzn-single,
+  body.status .cpt-admin-simple-search-form button,
+  body.status .grouped-items-selector, body.status input[type="email"],
+  body.status input[type="number"], body.status input[type="password"],
+  body.status input[type="text"], body.status select, body.status textarea {
+    border-color: #484848;
   }
   /* remap-css rule for "border: 1px solid #c3c8cf" */
   #graphiql .drag-and-drop, #graphiql .previewable-comment-form .comment,
@@ -9078,12 +9104,6 @@
   }
   main [style="background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));"] {
     background: linear-gradient(to top, #181818, transparent) !important;
-  }
-  .clone-url-button + .clone-url-button > .clone-url-link {
-    box-shadow: 1px 0 0 #333 !important;
-  }
-  .clone-url-button.selected > .clone-url-link {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .3) inset !important;
   }
   .ScreenshotCarousel-navitem.selected {
     box-shadow: inset 0 0 10px rgba(255, 255, 255, .05) !important;
