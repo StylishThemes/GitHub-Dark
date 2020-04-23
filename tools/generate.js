@@ -221,6 +221,7 @@ const mappings = {
   "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
   "$background: linear-gradient(-180deg,#0679fc,#0361cc 90%)": "linear-gradient(to bottom,#283040,#182030)",
   "$background: linear-gradient(90deg,#257bf9,#2426ca)": "linear-gradient(90deg,#283040,#182030)",
+  "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
