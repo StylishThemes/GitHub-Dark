@@ -104,6 +104,7 @@ const mappings = {
   `, // graphql explorer
   "box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.7),inset 0 1px #fff": "box-shadow: 0 0 0 .1px #343434", // graphql explorer
   "box-shadow: 0 1px 0 #fff": "box-shadow: 0 0 0 1px #484848", // graphql explorer
+  "box-shadow: inset 1px 0 0 #fff": "box-shadow: inset 1px 0 0 #181818", //
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
      box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
