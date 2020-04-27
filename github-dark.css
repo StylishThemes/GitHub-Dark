@@ -1373,7 +1373,9 @@
   #graphiql .input-dark, .branch-action-body::after, .branch-action-body::before,
   .commit-form::after, .commit-form::before,
   .composer.composer-responsive .timeline-comment::after,
-  .composer.composer-responsive .timeline-comment::before, .input-dark,
+  .composer.composer-responsive .timeline-comment::before,
+  .dropdown-menu-e::after, .dropdown-menu-e::before, .dropdown-menu-w::after,
+  .dropdown-menu-w::before, .input-dark,
   .is-pending .timeline-comment--caret::after,
   .is-pending .timeline-comment--caret::before, .team-collaboration-box::after,
   .team-collaboration-box::before, .timeline-comment--caret.current-user::after,
@@ -1547,9 +1549,9 @@
   .Popover-message--right-bottom::after, .Popover-message--right-bottom::before,
   .Popover-message--right-top::after, .Popover-message--right-top::before,
   .Popover-message--right::after, .Popover-message--right::before,
-  .dropdown-signed-commit .dropdown-menu-w::after, .sponsors-popover::after,
-  .sponsors-popover::before, .subnav-btn:hover, .subnav-primary,
-  .subnav-primary.selected, .subnav-primary:hover,
+  .dropdown-caret, .dropdown-signed-commit .dropdown-menu-w::after,
+  .sponsors-popover::after, .sponsors-popover::before, .subnav-btn:hover,
+  .subnav-primary, .subnav-primary.selected, .subnav-primary:hover,
   .team-collaboration-box--left::after, .team-collaboration-box--left::before,
   .team-collaboration-box--right::after, .team-collaboration-box--right::before,
   body.status .cpt-tabs:not(.unstyled) li.active a,
@@ -1560,12 +1562,12 @@
     border-bottom-color: transparent;
   }
   /* remap-css rule for "border-left-color: transparent" */
-  #graphiql .dropdown-caret,
+  #graphiql .dropdown-caret, .dropdown-caret,
   body.zh_logged_in .zhc-sidebar-nav-item--is-secondary-active {
     border-left-color: transparent;
   }
   /* remap-css rule for "border-right-color: transparent" */
-  #graphiql .dropdown-caret {
+  #graphiql .dropdown-caret, .dropdown-caret {
     border-right-color: transparent;
   }
   /* remap-css rule for "border: 1px solid transparent" */
@@ -1802,7 +1804,8 @@
   #graphiql .Popover-message--right-top::before,
   #graphiql .Popover-message--right::before, #graphiql .dropdown-menu-w::before,
   .Popover-message--right-bottom::before, .Popover-message--right-top::before,
-  .Popover-message--right::before, .topic-tag-contrast .delete-topic-link {
+  .Popover-message--right::before, .dropdown-menu-w::before,
+  .topic-tag-contrast .delete-topic-link {
     border-left-color: rgba(200, 200, 200, .15);
   }
   /* remap-css rule for "border-right-color: rgba(27,31,35,.15)" */
@@ -1810,7 +1813,7 @@
   #graphiql .Popover-message--left-top::before,
   #graphiql .Popover-message--left::before, #graphiql .dropdown-menu-e::before,
   .Popover-message--left-bottom::before, .Popover-message--left-top::before,
-  .Popover-message--left::before {
+  .Popover-message--left::before, .dropdown-menu-e::before {
     border-right-color: rgba(200, 200, 200, .15);
   }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.15)" */
@@ -3287,7 +3290,7 @@
   #graphiql .Popover-message--right::after, #graphiql .dropdown-menu-w::after,
   .Popover-message--right-bottom::after, .Popover-message--right-top::after,
   .Popover-message--right::after, .billing-box-progressBars span:nth-child(2),
-  .boxed-group .tabnav.heading li:first-child .selected,
+  .boxed-group .tabnav.heading li:first-child .selected, .dropdown-menu-w::after,
   .ghh-theme-github .tooltipster-left .tooltipster-arrow-background,
   .team-collaboration-box--left::after, body.status .popover.left .arrow::after,
   body.zh_logged_in .zhc-info-alert--pointer--right::after,
@@ -3304,6 +3307,7 @@
   .Popover-message--left-bottom::after, .Popover-message--left-top::after,
   .Popover-message--left::after, .branch-action-body::after, .commit-form::after,
   .composer.composer-responsive .timeline-comment::after,
+  .dropdown-menu-e::after,
   .ghh-theme-github .tooltipster-right .tooltipster-arrow-background,
   .new-discussion-timeline .composer .timeline-comment::after,
   .team-collaboration-box--right::after,
