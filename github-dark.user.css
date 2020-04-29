@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.56
+@version     2.0.57
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.56 (2020-04-27) */
+/*! Github Dark v2.0.57 (2020-04-29) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -651,7 +651,6 @@
   body.zh_logged_in .zhc-repo-overlay, body.zh_logged_in .zhc-report-card,
   body.zh_logged_in .zhc-report-tabs,
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-content .zhc-roadmap-body,
-  body.zh_logged_in .zhc-roadmap-progress__bar,
   body.zh_logged_in .zhc-roadmap-sidebar, body.zh_logged_in .zhc-search,
   body.zh_logged_in .zhc-search-bar__input,
   body.zh_logged_in .zhc-selection-filter,
@@ -3172,6 +3171,7 @@
   body.zh_logged_in .zhc-release-progress__stats,
   body.zh_logged_in .zhc-repo-notifications__load-more,
   body.zh_logged_in .zhc-roadmap-add-epics-dropdown__footer,
+  body.zh_logged_in .zhc-roadmap-row.zhc-roadmap-row--size-large,
   body.zh_logged_in .zhc-selection-list--footer,
   body.zh_logged_in .zhc-selection-list--issue-card-actions .zhc-issue-card__actions__quick-action-section,
   body.zh_logged_in .zhc-selection-list__footer,
@@ -3228,6 +3228,8 @@
   body.zh_logged_in .zhc-roadmap .zhc-roadmap-header,
   body.zh_logged_in .zhc-roadmap-body-empty,
   body.zh_logged_in .zhc-roadmap-date-strip, body.zh_logged_in .zhc-roadmap-row,
+  body.zh_logged_in .zhc-roadmap-row.zhc-roadmap-row--modifier-last-sub-item,
+  body.zh_logged_in .zhc-roadmap-row.zhc-roadmap-row--size-large,
   body.zh_logged_in .zhc-roadmap-subheader,
   body.zh_logged_in .zhc-roadmap__title,
   body.zh_logged_in .zhc-selection-list--issue-card-actions .zhc-issue-card__actions__dependency-section,
@@ -3867,7 +3869,6 @@
   body.zh_logged_in .zh-reports .btn, body.zh_logged_in .zh-reports .btn:hover,
   body.zh_logged_in .zh-select-menu-header .zh-select-menu-title,
   body.zh_logged_in .zhc-account-settings__arrow,
-  body.zh_logged_in .zhc-account-settings__members .zhu-font-bold,
   body.zh_logged_in .zhc-account-settings__section h3,
   body.zh_logged_in .zhc-account-settings__section strong,
   body.zh_logged_in .zhc-add-comment__username,
@@ -3888,6 +3889,7 @@
   body.zh_logged_in .zhc-collapsible-control:hover.zhc-collapsible-control--grey:not(.zhc-collapsible-control--border),
   body.zh_logged_in .zhc-comment__username,
   body.zh_logged_in .zhc-control-chart-report__chart_stat .zhc-chart-emphasis,
+  body.zh_logged_in .zhc-dashboard-enterprise-container .zhu-font-bold,
   body.zh_logged_in .zhc-dependency-item-simple__header,
   body.zh_logged_in .zhc-empty-state h1,
   body.zh_logged_in .zhc-enterprise-manage-plan__item .zhu-font-bold,
@@ -6923,7 +6925,7 @@
   body[class="page-responsive"] .HeaderMenu-link,
   body[class="page-responsive"] .details-overlay[open] > summary::before,
   body[class="page-responsive"] .markdown-body pre > code,
-  details:not(.toc-dropdown)[open] > summary::before, hr {
+  details.close-when-clicked-outside[open] > summary::before, hr {
     background: transparent;
   }
   .integrations-select-repos::-webkit-scrollbar-track-piece {
@@ -7098,7 +7100,8 @@
   .content-attachment-details[open] .max--md .content-attachment-content--gradient,
   .dropdown-signout, .file .empty, .flash-close, .header-search-input,
   .kb-konami-dialog, .konami, .konami .enter-link:hover, .konami .key.complete,
-  .konami-overlay,
+  .konami-overlay, .markdown-body table.slim code,
+  .markdown-body table.slim tr:nth-child(2n),
   .notifications-list-item .notification-list-item-unread-indicator,
   .notifications-sso-prompt a,
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed),
