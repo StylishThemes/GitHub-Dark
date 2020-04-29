@@ -774,6 +774,7 @@
   .capped-card-content,
   .gist-quicksearch-results .gist-quicksearch-result-header,
   .gistsearch-aside .filter-list li span.bar, .markdown-body .csv-data th,
+  .page-nav-item:hover,
   .page-responsive .previewable-comment-form .comment-form-head.tabnav,
   .payment-history .failed, .payment-history .refunded,
   .previewable-comment-form .comment-form-head.tabnav, .select-menu-divider,
@@ -1058,7 +1059,7 @@
   .pricing-testimonial-logo-active,
   .release-timeline-tags .tag-timeline-date::after, .reverse-progress-bar,
   .reverse-progress-container, .sponsors-discussion::after,
-  body[class="page-responsive"] .markdown-body hr,
+  .workspaces-develop-time, body[class="page-responsive"] .markdown-body hr,
   body[class="page-responsive"] .reverse-progress-bar,
   body[class="page-responsive"] .reverse-progress-container {
     background-color: #343434;
@@ -1305,6 +1306,11 @@
   .clone-url-button > .clone-url-link.selected,
   .clone-url-button > .clone-url-link.selected:hover {
     background-image: linear-gradient(#303030, #282828);
+  }
+  /* remap-css rule for "background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)" */
+  .btn.hover, .btn:hover, body[class="page-responsive"] .btn.hover,
+  body[class="page-responsive"] .btn:hover {
+    background-image: linear-gradient(#404040, #383838);
   }
   /* remap-css rule for "background-color: rgba(27,31,35,.1)" */
   #graphiql .btn .Counter, .btn .Counter {
@@ -1775,13 +1781,13 @@
   body[class="page-responsive"] .flash.flash-error,
   body[class="page-responsive"] .flash.flash-warn,
   body[class="page-responsive"] .render-notice {
-    border-color: rgba(200, 200, 200, .15);
+    border-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.15) !important" */
   #graphiql .border-black-fade, .border-black-fade,
   body.status .border-black-fade,
   body[class="page-responsive"] .border-black-fade {
-    border-color: rgba(200, 200, 200, .15) !important;
+    border-color: rgba(180, 180, 180, .1) !important;
   }
   /* remap-css rule for "border-top-color: rgba(27,31,35,.15)" */
   #graphiql .Popover-message--bottom-left::before,
@@ -1789,14 +1795,14 @@
   #graphiql .Popover-message--bottom::before,
   .Popover-message--bottom-left::before, .Popover-message--bottom-right::before,
   .Popover-message--bottom::before, .sponsors-popover::before {
-    border-top-color: rgba(200, 200, 200, .15);
+    border-top-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-bottom-color: rgba(27,31,35,.15)" */
   #graphiql .Popover-message::before, #graphiql .dropdown-menu::before,
   .diffbar-range-menu .in-range:not(.is-range-selected), .dropdown-menu::before,
   body[class="page-responsive"] .dropdown-menu::before,
   html[prefix] .site-header-nav .dropdown-menu::before {
-    border-bottom-color: rgba(200, 200, 200, .15);
+    border-bottom-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-left-color: rgba(27,31,35,.15)" */
   #graphiql .Popover-message--right-bottom::before,
@@ -1805,7 +1811,7 @@
   .Popover-message--right-bottom::before, .Popover-message--right-top::before,
   .Popover-message--right::before, .dropdown-menu-w::before,
   .topic-tag-contrast .delete-topic-link {
-    border-left-color: rgba(200, 200, 200, .15);
+    border-left-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-right-color: rgba(27,31,35,.15)" */
   #graphiql .Popover-message--left-bottom::before,
@@ -1813,7 +1819,7 @@
   #graphiql .Popover-message--left::before, #graphiql .dropdown-menu-e::before,
   .Popover-message--left-bottom::before, .Popover-message--left-top::before,
   .Popover-message--left::before, .dropdown-menu-e::before {
-    border-right-color: rgba(200, 200, 200, .15);
+    border-right-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.15)" */
   #graphiql .Label--outline, #graphiql .dropdown-menu, #graphiql .flash,
@@ -1824,20 +1830,20 @@
   body[class="page-responsive"] .Label--outline,
   body[class="page-responsive"] .dropdown-menu,
   html[prefix] .site-header-nav .dropdown-menu {
-    border-color: rgba(200, 200, 200, .15);
+    border-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-top: 1px solid rgba(27,31,35,.15)" */
   .commit-desc + .commit-branches, .full-commit .commit-meta {
-    border-top-color: rgba(200, 200, 200, .15);
+    border-top-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-bottom: 1px solid rgba(27,31,35,.15)" */
   body[class="page-responsive"] .flash {
-    border-bottom-color: rgba(200, 200, 200, .15);
+    border-bottom-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "border-top: 8px solid rgba(27,31,35,.15)" */
   #graphiql .dropdown-menu-ne::before, .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne::before {
-    border-top-color: rgba(200, 200, 200, .15);
+    border-top-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
   #graphiql .btn-blue.disabled, #graphiql .btn-blue:disabled,
@@ -1858,32 +1864,85 @@
   body[class="page-responsive"] .btn.disabled,
   body[class="page-responsive"] .btn:disabled,
   body[class="page-responsive"] .btn[aria-disabled=true] {
-    border-color: rgba(200, 200, 200, .2);
+    border-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.2)" */
   #graphiql .btn, #graphiql .social-count, .btn, .social-count,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn,
   body[class="page-responsive"] .btn {
-    border-color: rgba(200, 200, 200, .2);
+    border-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.2) !important" */
   body.status .flat-button, body.status .history-header .show-filter {
-    border-color: rgba(200, 200, 200, .2) !important;
+    border-color: rgba(180, 180, 180, .15) !important;
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
+  #graphiql .input-dark.focus, #graphiql .input-dark:focus, .input-dark.focus,
+  .input-dark:focus, .shelf-dismiss .close-button:hover,
+  body[class="page-responsive"] .input-dark.focus,
+  body[class="page-responsive"] .input-dark:focus {
+    border-color: rgba(180, 180, 180, .25);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.35)" */
+  #graphiql .btn.hover, #graphiql .btn.selected, #graphiql .btn:active,
+  #graphiql .btn:hover, #graphiql [open] > .btn, .btn.hover, .btn.selected,
+  .btn:active, .btn:hover, .btn[aria-selected=true], [open] > .btn,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:active,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:hover,
+  body[class="page-responsive"] .btn.hover,
+  body[class="page-responsive"] .btn.selected,
+  body[class="page-responsive"] .btn:active,
+  body[class="page-responsive"] .btn:hover,
+  body[class="page-responsive"] .btn[aria-selected=true],
+  body[class="page-responsive"] [open] > .btn {
+    border-color: rgba(180, 180, 180, .3);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
+  #graphiql .btn-blue.hover, #graphiql .btn-blue.selected,
+  #graphiql .btn-blue:active, #graphiql .btn-blue:hover,
+  #graphiql .btn-danger.selected, #graphiql .btn-danger:active,
+  #graphiql .btn-danger:hover, #graphiql .btn-primary.hover,
+  #graphiql .btn-primary.selected, #graphiql .btn-primary:active,
+  #graphiql .btn-primary:hover, #graphiql [open] > .btn-blue,
+  #graphiql [open] > .btn-danger, #graphiql [open] > .btn-primary,
+  .btn-blue.hover, .btn-blue.selected, .btn-blue:active, .btn-blue:hover,
+  .btn-blue[aria-selected=true], .btn-blurple.hover, .btn-blurple.selected,
+  .btn-blurple:active, .btn-blurple:hover, .btn-blurple[aria-selected=true],
+  .btn-danger.selected, .btn-danger:active, .btn-danger:hover,
+  .btn-danger[aria-selected=true], .btn-primary.hover, .btn-primary.selected,
+  .btn-primary:active, .btn-primary:hover, .btn-primary[aria-selected=true],
+  .btn-purple.hover, .btn-purple.selected, .btn-purple:active, .btn-purple:hover,
+  [open] > .btn-blue, [open] > .btn-blurple, [open] > .btn-danger,
+  [open] > .btn-primary, [open] > .btn-purple,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:active,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:hover,
+  body[class="page-responsive"] .btn-danger.selected,
+  body[class="page-responsive"] .btn-danger:active,
+  body[class="page-responsive"] .btn-danger:hover,
+  body[class="page-responsive"] .btn-danger[aria-selected=true],
+  body[class="page-responsive"] .btn-primary.hover,
+  body[class="page-responsive"] .btn-primary.selected,
+  body[class="page-responsive"] .btn-primary:active,
+  body[class="page-responsive"] .btn-primary:hover,
+  body[class="page-responsive"] .btn-primary[aria-selected=true],
+  body[class="page-responsive"] [open] > .btn-danger,
+  body[class="page-responsive"] [open] > .btn-primary {
+    border-color: rgba(180, 180, 180, .4);
   }
   /* remap-css rule for "border-color: rgba(0,0,0,.125)" */
   body.status .layout-content.status .border-color,
   body.status .layout-content.status.status-index .unresolved-incidents .unresolved-incident.impact-none .updates,
   body.status .markdown-display table, body.status .tooltip-base, body.status hr {
-    border-color: rgba(200, 200, 200, .125);
+    border-color: rgba(180, 180, 180, .125);
   }
   /* remap-css rule for "border-bottom-color: rgba(0,0,0,.125)" */
   .exploregrid-item {
-    border-bottom-color: rgba(200, 200, 200, .125);
+    border-bottom-color: rgba(180, 180, 180, .125);
   }
   /* remap-css rule for "border-bottom: 1px solid rgba(0,0,0,.125)" */
   body.status .header,
   body.status .updates-dropdown-container .updates-dropdown-nav::before {
-    border-bottom-color: rgba(200, 200, 200, .125);
+    border-bottom-color: rgba(180, 180, 180, .125);
   }
   /* remap-css rule for "border-color: #444d56" */
   #graphiql .dropdown-menu-dark, .Box--overlay, .IconNav-item.selected,
@@ -3442,13 +3501,13 @@
   body:not(.intent-mouse) .hx_focus-input:focus + .hx_focus-target,
   body[class="page-responsive"] .btn.focus,
   body[class="page-responsive"] .btn:focus {
-    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
-    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .5);
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5);
   }
   /* remap-css rule for "box-shadow: 0 0 0 .2em rgba(3,102,214,.3) !important" */
   .project-card.moving, .project-card:focus {
-    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3) !important;
-    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3) !important;
+    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .5) !important;
+    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5) !important;
   }
   /* remap-css rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
   .discussion-nested-comment-timeline-item:target, .file:target,
@@ -3840,7 +3899,7 @@
     color: #afafaf;
   }
   /* remap-css rule for "color: #444d56 !important" */
-  #graphiql .color-gray-7, .color-gray-7,
+  #graphiql .color-gray-7, .color-gray-7, .page-nav-item:hover,
   body[class="page-responsive"] .color-gray-7 {
     color: #afafaf !important;
   }
@@ -4054,7 +4113,7 @@
   .oauth-permissions-details.default:not(.delete) .access-details,
   .oauth-permissions-details.default:not(.delete) .permission-title,
   .oauth-permissions-details.none .access-details,
-  .oauth-permissions-details.none .permission-title,
+  .oauth-permissions-details.none .permission-title, .page-nav-item,
   .page-new-repo .form-checkbox.disabled, .payment-history .refunded .status,
   .plan-choice-exp, .profile-timeline-card .issue-meta-section .octicon,
   .project-card blockquote, .radio-input:disabled + .radio-label,
@@ -4153,6 +4212,7 @@
   .signed-commit-header .octicon-unverified, .step .step-title::before,
   .step--completed, .svg-tip, .task-progress-counts,
   .team-member-list .invite-icon, .team-member-list-avatar .octicon,
+  .workspaces-subtitle,
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item.disabled .node-item,
   body[class="page-responsive"] .UnderlineNav-octicon,
   body[class="page-responsive"] .commit-meta a,
@@ -5879,9 +5939,35 @@
   body[class="page-responsive"] .form-group.successed .success::after {
     border-bottom-color: #002800;
   }
+  /* remap-css rule for "background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%)" */
+  .btn-primary.hover, .btn-primary:hover,
+  body[class="page-responsive"] .btn-primary.hover,
+  body[class="page-responsive"] .btn-primary:hover {
+    background-image: linear-gradient(180deg, #373 5%, #060 100%);
+  }
+  /* remap-css rule for "background-image: linear-gradient(-180deg, #34d058, #28a745 90%)" */
+  .btn-primary, body[class="page-responsive"] .btn-primary {
+    background-image: linear-gradient(180deg, #383 0%, #170 50%);
+  }
+  /* remap-css rule for "background-color: #94d3a2" */
+  #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled,
+  .btn-primary.disabled, .btn-primary:disabled, .btn-primary[aria-disabled=true],
+  body[class="page-responsive"] .btn-primary.disabled,
+  body[class="page-responsive"] .btn-primary:disabled,
+  body[class="page-responsive"] .btn-primary[aria-disabled=true] {
+    background-color: #040;
+  }
   /* remap-css rule for "background: linear-gradient(#34d058, #28a745)" */
   html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
     background: linear-gradient(#34d058, #28a745);
+  }
+  /* remap-css rule for "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)" */
+  #graphiql .btn-primary.focus, #graphiql .btn-primary:focus,
+  .ClipboardButton.ClipboardButton--success,
+  .ClipboardButton.ClipboardButton--success:focus, .btn-primary.focus,
+  .btn-primary:focus, body[class="page-responsive"] .btn-primary.focus,
+  body[class="page-responsive"] .btn-primary:focus {
+    box-shadow: 0 0 0 .2em #3737;
   }
   /* remap-css rule for "color: rgba(47,38,6,.5)" */
   .u2f-registration-icon {
@@ -6521,10 +6607,12 @@
   .blankslate-clean-background, .btn-blue.disabled, .btn-blue:disabled,
   .btn-blue[aria-disabled=true], .btn-blurple.disabled, .btn-blurple:disabled,
   .btn-blurple[aria-disabled=true], .btn-danger.disabled, .btn-danger:disabled,
-  .btn-danger[aria-disabled=true], .btn-invisible.selected,
+  .btn-danger[aria-disabled=true], .btn-invisible-mktg-fluid.focus,
+  .btn-invisible-mktg-fluid:focus, .btn-invisible.selected,
   .btn-invisible.zeroclipboard-is-active, .btn-invisible.zeroclipboard-is-hover,
   .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover,
-  .btn-invisible[aria-selected=true], .btn-outline.disabled,
+  .btn-invisible[aria-selected=true], .btn-lg-invisible-mktg-fluid.focus,
+  .btn-lg-invisible-mktg-fluid:focus, .btn-outline.disabled,
   .btn-outline:disabled, .btn-outline[aria-disabled=true], .btn-primary.disabled,
   .btn-primary:disabled, .btn-primary[aria-disabled=true], .btn-purple.disabled,
   .btn-purple:disabled, .btn.disabled, .btn:disabled, .btn[aria-disabled=true],
@@ -6535,7 +6623,8 @@
   .kb-konami-dialog, .page-responsive .HeaderMenu--logged-out,
   .page-responsive .HeaderMenu--logged-out .dropdown-menu,
   .project-full-screen .card-filter-input, .search-form-fluid .search-page-input,
-  .search-form-fluid .search-page-input:focus, .tag-input input,
+  .search-form-fluid .search-page-input:focus,
+  .section-workspaces-develop-night .workspaces-sun, .tag-input input,
   .tag-input input:focus,
   .team-discussion-new-post .review-thread-reply-button:disabled,
   .team-label-ldap, .tree-finder-input, .tree-finder-input:focus,
@@ -6919,8 +7008,8 @@
   }
   /* remap-css rule for "background: none !important" */
   .btn-invisible-mktg-fluid, .btn-invisible-mktg-fluid::before,
-  .btn-invisible-mktg-fluid:hover, .btn-sm-invisible-mktg-fluid,
-  .btn-sm-invisible-mktg-fluid::before, .btn-sm-invisible-mktg-fluid:hover,
+  .btn-invisible-mktg-fluid:hover, .btn-lg-invisible-mktg-fluid,
+  .btn-lg-invisible-mktg-fluid::before, .btn-lg-invisible-mktg-fluid:hover,
   html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .navigation-focus td {
@@ -7405,7 +7494,7 @@
     box-shadow: 0 1px 15px #fff !important;
   }
   /* remove shadow */
-  h1, h2, h3, h4, pre, pre *, code, tt, li, p, th, .news, .btn,
+  h1, h2, h3, h4, pre, pre *, code, tt, li, p, th, .news,
   .metabox em.placeholder, table.notifications, #download_button, .comment-count,
   em.date, input.search, #user-links, .upper_footer, .switcher > span::after,
   .upgrades td, .description, .nav-bar-tabs, .pagination span,
@@ -7641,10 +7730,10 @@
   .CodeMirror-dialog-top, .project-card:hover:not(:focus) {
     border-color: #484848 !important;
   }
-  .btn, pre, h1, h2, h3, table, table tr, table td, table th, blockquote,
-  .pulse-graph, .minibutton, .social-count, .discusion-topic-infobar, .box-body,
-  .logo-box, .developer-program-badge, .vcard-details, .vcard-stats,
-  .auth-form-header, .nav-bar-tabs .section-title, .pagination a:last-child,
+  pre, h1, h2, h3, table, table tr, table td, table th, blockquote, .pulse-graph,
+  .minibutton, .social-count, .discusion-topic-infobar, .box-body, .logo-box,
+  .developer-program-badge, .vcard-details, .vcard-stats, .auth-form-header,
+  .nav-bar-tabs .section-title, .pagination a:last-child,
   .pagination span:first-child, .boxed-group-list > li, .toolbar-bordered,
   .pagination span:last-child, .dashboard-tabs, .graphs, .graph, .sub-nav,
   .audit-search-clear, .repo-list-item, .email-signature-reply, footer,
@@ -8076,35 +8165,10 @@
     background: #222 !important;
     border-color: #343434 !important;
   }
-  .btn:disabled, .btn.disabled, button.button:disabled,
-  button.button:disabled:hover, button.button.disabled,
-  button.button.disabled:hover, button.minibutton:disabled,
-  button.minibutton:disabled:hover, button.minibutton.disabled,
-  span.minibutton.disabled, a.minibutton.disabled,
-  button.minibutton.disabled:hover, a.minibutton:disabled:hover,
-  a.minibutton.disabled:hover, span.minibutton:disabled:hover,
-  span.minibutton.disabled:hover, .search-result-group,
-  .gist-quicksearch-result-group {
+  .search-result-group, .gist-quicksearch-result-group {
     background: #282828 !important;
     border-color: rgba(68, 68, 68, .5) !important;
     color: #555 !important;
-  }
-  .btn:disabled:hover, .btn.disabled:hover {
-    background: #282828 !important;
-    border-color: rgba(68, 68, 68, .5) !important;
-  }
-  /* GitHub Bug, see https://github.com/StylishThemes/GitHub-Dark/commit/c6796282bd5593c4acbf305abb850b0debaf774b */
-  .btn-link:disabled:hover {
-    color: rgba(148, 148, 148, .5) !important;
-    background: none !important;
-  }
-  .btn-outline:disabled, .btn-outline:disabled:hover, .btn-outline.disabled,
-  .btn-outline.disabled:hover, .btn.btn-outline:disabled,
-  .btn.btn-outline:disabled:hover, .btn.btn-outline.disabled,
-  .btn.btn-outline.disabled:hover {
-    background: #222 !important;
-    border-color: #343434 !important;
-    color: #444 !important;
   }
   #network .current-repository {
     background: #343434 !important;
@@ -8306,9 +8370,9 @@
   .issue .summary, .hidden-text-expander a, .view-modes, .standard_form,
   #reply_body, #commit div, #commit td, #commit tr, #commit .envelope,
   .file-minibutton, .context-pane .title, .browser .listing:hover,
-  #dashboard .repos, .date_selector .btn, .list-module .list-body,
-  .list-module a, .label-permissions, .tree-browser th, .browser .listing.closed,
-  .starting-comment, .section-nav a:hover, .chzn-drop, .module .inner,
+  #dashboard .repos, .list-module .list-body, .list-module a, .label-permissions,
+  .tree-browser th, .browser .listing.closed, .starting-comment,
+  .section-nav a:hover, .chzn-drop, .module .inner,
   .team-repositories-blankslate,
   .discussion-event-status-head_ref_deleted .discussion-item-icon, .pull-head,
   .tabs, #browser td, #issues_next li.selected, .avatarname img, #readme .name,
@@ -8851,24 +8915,16 @@
     background: linear-gradient(to bottom, rgba(25, 25, 25, .8) 1%, transparent 80%) !important;
   }
   /* light grey gradient */
-  .btn:hover, .btn:active, .btn.zeroclipboard-is-hover,
-  .btn.zeroclipboard-is-active, .minibutton:hover, .minibutton:active,
-  .minibutton.zeroclipboard-is-hover, .minibutton.zeroclipboard-is-active.kbd,
   .signup-button:hover, a.signin:hover, .hero .textographic,
   .hero .screenographic, .pagination span.current, .box-action:active,
-  .btn:active, .btn.selected, .btn.selected:hover, .btn.zeroclipboard-is-active,
-  .minibutton:active, .minibutton.selected, .minibutton.selected:hover,
-  .minibutton.zeroclipboard-is-active, button.button:hover, a.button:hover,
-  span.button:hover, button.minibutton:hover, a.minibutton:hover,
-  span.minibutton:hover, .clone-url-button.selected > .clone-url-link,
   .clone-url-button.selected > .clone-url-link:hover, ul#bootcamp li a:hover h4,
   [open] > .btn {
     background: linear-gradient(#303030, #282828) !important;
     border-color: #484848 !important;
   }
   /* dark grey gradient */
-  .btn, input.btn, header.nav-bar, .bubble .bubble-title, kbd, a.feed,
-  .list-browser-filterbar, .gobutton, .comment-header, .pagehead ul.tabs li a,
+  header.nav-bar, .bubble .bubble-title, kbd, a.feed, .list-browser-filterbar,
+  .gobutton, .comment-header, .pagehead ul.tabs li a,
   .login_form input[type="submit"], .top-bar, ul#bootcamp li a h4,
   #gists .context-menu-container, body#com #header, .white-nav .selected span,
   .filter-tab, #header-wrapper, #header-wrapper .nav, .pagination span,
@@ -9049,7 +9105,7 @@
   .gh-header-meta .author, .timeline-commits .author,
   .sidebar-assignee .assignee, .rss-subscribe, .sidebar-module h3.disable span,
   .octotip, .billing-section .section-content, #readme span.name,
-  .steps li.current, .subnav-search-context .btn, .context-loader, .box-title a,
+  .steps li.current, .context-loader, .box-title a,
   .branch-infobar .lightweight-actions > li a:hover,
   .discussion-item-ref-title .title-link, .org-teams-list .team, .ace-github,
   a.pagehead-nav-item.selected, a.pagehead-nav-item:hover,
@@ -9240,8 +9296,7 @@
   .mini-icon-public-repo::before, .mini-icon-pull-request,
   .mini-icon-remove-close, .mini-icon-link, .task-progress .octicon,
   .milestone-link .octicon, .site-footer .octicon-mark-github, .steps li,
-  .pagination .gap, .octicon-btn.disabled, .octicon-btn.disabled:hover,
-  .branch-delete.disabled, .date_selector td.unselected_month,
+  .pagination .gap, .branch-delete.disabled, .date_selector td.unselected_month,
   .bootcamp .desc h2,
   .issues-listing .table-list-issues .issue-comments-link.no-comment,
   .diffstat-bar, .issue-comments-no-comment,
@@ -9558,28 +9613,6 @@
   /* bright green background */
   .block-diff-added, .text-diff-added .block-diff-neutral {
     background: #6cc644 !important;
-  }
-  /* interactive button - bright border */
-  .btn-primary:not(.compare-button):not(.btn-outline):not([disabled]):not(.disabled),
-  .button.primary, .btn-theme-green, .btn-primary-mktg {
-    background: linear-gradient(180deg, #373 5%, #060 100%) !important;
-    border-color: #193 !important;
-  }
-  .button.primary:disabled, .button.primary.disabled, .btn-primary:disabled,
-  .btn-primary.disabled, .button.primary:disabled:hover,
-  .button.primary.disabled:hover, .btn-primary:disabled:hover,
-  .btn-primary.disabled:hover {
-    background: linear-gradient(0deg, #030 5%, #040 100%) !important;
-    border-color: #041 !important;
-    color: rgba(255, 255, 255, .3) !important;
-    opacity: .7;
-  }
-  /* Green hovered */
-  .btn-primary:not(:disabled):not(.disabled):not(.compare-button):not(.btn-outline):hover,
-  .button.primary:not(:disabled):hover, .btn-theme-green:hover,
-  .btn-primary-mktg:hover {
-    background: linear-gradient(180deg, #383 0%, #170 50%) !important;
-    border-color: #493 !important;
   }
   .noproblems .pageheader_wrap, a.new-repo:hover {
     background: #373 !important;
@@ -11551,15 +11584,7 @@
   .text-inherit {
     color: inherit !important;
   }
-  .btn:disabled, .btn.disabled, .btn-primary:disabled, .btn-primary.disabled,
-  .btn-purple:disabled, .btn-purple.disabled, .btn-blue:disabled,
-  .btn-blue.disabled, .btn-danger:disabled, .btn-danger.disabled,
-  .btn-outline:disabled, .btn-outline.disabled,
-  .upload-enabled.focused .form-control, .btn-orange:disabled,
-  .btn-orange.disabled, .btn-outline-purple:disabled,
-  .btn-outline-purple.disabled, .btn-outline-orange:disabled,
-  .btn-outline-orange.disabled, .btn-outline-green:disabled,
-  .btn-outline-green.disabled, .Header .header-search-wrapper,
+  .upload-enabled.focused .form-control, .Header .header-search-wrapper,
   .Header .header-search-wrapper.focus, .page-responsive .HeaderMenu--logged-out,
   .page-responsive .HeaderMenu--logged-out .dropdown-menu {
     box-shadow: none;
