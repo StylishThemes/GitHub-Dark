@@ -53,6 +53,7 @@ const mappings = {
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
   "$background: rgba(27,31,35,.1)": "rgba(0,0,0,.1)",
   "$background: rgba(27,31,35,.15)": "rgba(0,0,0,.15)",
+  "$background: #e9ecef": "#404040",
   "$background: initial": "initial",
 
   // ==========================================================================
