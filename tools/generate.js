@@ -191,6 +191,7 @@ const mappings = {
   "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
   "color: rgba(27,31,35,.6)": "color: rgba(230,230,230,.6)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
+  "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
   "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
