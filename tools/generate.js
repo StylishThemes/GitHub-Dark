@@ -194,7 +194,7 @@ const mappings = {
   "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
-  "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
+  "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.4)",
 
   "fill: #959da5": "fill: #757575",
   "fill: #0366d6": "fill:  /*[[base-color]]*/ #4f8cc9",
