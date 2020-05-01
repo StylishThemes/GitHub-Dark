@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.60
+@version     2.0.61
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.60 (2020-04-30) */
+/*! Github Dark v2.0.61 (2020-05-01) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -1997,6 +1997,90 @@
   body.zh_logged_in .zhc-info-alert--pointer::before {
     border-color: transparent;
   }
+  /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
+  #graphiql .btn-blue.hover, #graphiql .btn-blue.selected,
+  #graphiql .btn-blue:active, #graphiql .btn-blue:hover,
+  #graphiql .btn-danger.selected, #graphiql .btn-danger:active,
+  #graphiql .btn-danger:hover, #graphiql .btn-primary.hover,
+  #graphiql .btn-primary.selected, #graphiql .btn-primary:active,
+  #graphiql .btn-primary:hover, #graphiql [open] > .btn-blue,
+  #graphiql [open] > .btn-danger, #graphiql [open] > .btn-primary,
+  .btn-blue.hover, .btn-blue.selected, .btn-blue:active, .btn-blue:hover,
+  .btn-blue[aria-selected=true], .btn-blurple.hover, .btn-blurple.selected,
+  .btn-blurple:active, .btn-blurple:hover, .btn-blurple[aria-selected=true],
+  .btn-danger.selected, .btn-danger:active, .btn-danger:hover,
+  .btn-danger[aria-selected=true], .btn-primary.hover, .btn-primary.selected,
+  .btn-primary:active, .btn-primary:hover, .btn-primary[aria-selected=true],
+  .btn-purple.hover, .btn-purple.selected, .btn-purple:active, .btn-purple:hover,
+  [open] > .btn-blue, [open] > .btn-blurple, [open] > .btn-danger,
+  [open] > .btn-primary, [open] > .btn-purple,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:active,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:hover,
+  body[class="page-responsive"] .btn-danger.selected,
+  body[class="page-responsive"] .btn-danger:active,
+  body[class="page-responsive"] .btn-danger:hover,
+  body[class="page-responsive"] .btn-danger[aria-selected=true],
+  body[class="page-responsive"] .btn-primary.hover,
+  body[class="page-responsive"] .btn-primary.selected,
+  body[class="page-responsive"] .btn-primary:active,
+  body[class="page-responsive"] .btn-primary:hover,
+  body[class="page-responsive"] .btn-primary[aria-selected=true],
+  body[class="page-responsive"] [open] > .btn-danger,
+  body[class="page-responsive"] [open] > .btn-primary {
+    border-color: rgba(180, 180, 180, .4);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.35)" */
+  #graphiql .btn.hover, #graphiql .btn.selected, #graphiql .btn:active,
+  #graphiql .btn:hover, #graphiql [open] > .btn, .btn.hover, .btn.selected,
+  .btn:active, .btn:hover, .btn[aria-selected=true], [open] > .btn,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:active,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:hover,
+  body[class="page-responsive"] .btn.hover,
+  body[class="page-responsive"] .btn.selected,
+  body[class="page-responsive"] .btn:active,
+  body[class="page-responsive"] .btn:hover,
+  body[class="page-responsive"] .btn[aria-selected=true],
+  body[class="page-responsive"] [open] > .btn {
+    border-color: rgba(180, 180, 180, .3);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
+  #graphiql .input-dark.focus, #graphiql .input-dark:focus, .input-dark.focus,
+  .input-dark:focus, .shelf-dismiss .close-button:hover,
+  body[class="page-responsive"] .input-dark.focus,
+  body[class="page-responsive"] .input-dark:focus {
+    border-color: rgba(180, 180, 180, .25);
+  }
+  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
+  #graphiql .btn-blue.disabled, #graphiql .btn-blue:disabled,
+  #graphiql .btn-danger.disabled, #graphiql .btn-danger:disabled,
+  #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled,
+  #graphiql .btn.disabled, #graphiql .btn:disabled, .btn-blue.disabled,
+  .btn-blue:disabled, .btn-blue[aria-disabled=true], .btn-blurple.disabled,
+  .btn-blurple:disabled, .btn-blurple[aria-disabled=true], .btn-danger.disabled,
+  .btn-danger:disabled, .btn-danger[aria-disabled=true], .btn-primary.disabled,
+  .btn-primary:disabled, .btn-primary[aria-disabled=true], .btn-purple.disabled,
+  .btn-purple:disabled, .btn.disabled, .btn:disabled, .btn[aria-disabled=true],
+  body[class="page-responsive"] .btn-danger.disabled,
+  body[class="page-responsive"] .btn-danger:disabled,
+  body[class="page-responsive"] .btn-danger[aria-disabled=true],
+  body[class="page-responsive"] .btn-primary.disabled,
+  body[class="page-responsive"] .btn-primary:disabled,
+  body[class="page-responsive"] .btn-primary[aria-disabled=true],
+  body[class="page-responsive"] .btn.disabled,
+  body[class="page-responsive"] .btn:disabled,
+  body[class="page-responsive"] .btn[aria-disabled=true] {
+    border-color: rgba(180, 180, 180, .15);
+  }
+  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2)" */
+  #graphiql .btn, #graphiql .social-count, .btn, .social-count,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn,
+  body[class="page-responsive"] .btn {
+    border-color: rgba(180, 180, 180, .15);
+  }
+  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2) !important" */
+  body.status .flat-button, body.status .history-header .show-filter {
+    border-color: rgba(180, 180, 180, .15) !important;
+  }
   /* remap-css rule for "border-color: rgba(27,31,35,.15)" */
   #graphiql .btn-outline.disabled, #graphiql .btn-outline:disabled,
   #graphiql .flash-error, #graphiql .flash-success, #graphiql .flash-warn,
@@ -2069,90 +2153,6 @@
   #graphiql .dropdown-menu-ne::before, .dropdown-menu-ne::before,
   body[class="page-responsive"] .dropdown-menu-ne::before {
     border-top-color: rgba(180, 180, 180, .15);
-  }
-  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
-  #graphiql .btn-blue.disabled, #graphiql .btn-blue:disabled,
-  #graphiql .btn-danger.disabled, #graphiql .btn-danger:disabled,
-  #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled,
-  #graphiql .btn.disabled, #graphiql .btn:disabled, .btn-blue.disabled,
-  .btn-blue:disabled, .btn-blue[aria-disabled=true], .btn-blurple.disabled,
-  .btn-blurple:disabled, .btn-blurple[aria-disabled=true], .btn-danger.disabled,
-  .btn-danger:disabled, .btn-danger[aria-disabled=true], .btn-primary.disabled,
-  .btn-primary:disabled, .btn-primary[aria-disabled=true], .btn-purple.disabled,
-  .btn-purple:disabled, .btn.disabled, .btn:disabled, .btn[aria-disabled=true],
-  body[class="page-responsive"] .btn-danger.disabled,
-  body[class="page-responsive"] .btn-danger:disabled,
-  body[class="page-responsive"] .btn-danger[aria-disabled=true],
-  body[class="page-responsive"] .btn-primary.disabled,
-  body[class="page-responsive"] .btn-primary:disabled,
-  body[class="page-responsive"] .btn-primary[aria-disabled=true],
-  body[class="page-responsive"] .btn.disabled,
-  body[class="page-responsive"] .btn:disabled,
-  body[class="page-responsive"] .btn[aria-disabled=true] {
-    border-color: rgba(180, 180, 180, .15);
-  }
-  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2)" */
-  #graphiql .btn, #graphiql .social-count, .btn, .social-count,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn,
-  body[class="page-responsive"] .btn {
-    border-color: rgba(180, 180, 180, .15);
-  }
-  /* remap-css rule for "border: 1px solid rgba(27,31,35,.2) !important" */
-  body.status .flat-button, body.status .history-header .show-filter {
-    border-color: rgba(180, 180, 180, .15) !important;
-  }
-  /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
-  #graphiql .input-dark.focus, #graphiql .input-dark:focus, .input-dark.focus,
-  .input-dark:focus, .shelf-dismiss .close-button:hover,
-  body[class="page-responsive"] .input-dark.focus,
-  body[class="page-responsive"] .input-dark:focus {
-    border-color: rgba(180, 180, 180, .25);
-  }
-  /* remap-css rule for "border-color: rgba(27,31,35,.35)" */
-  #graphiql .btn.hover, #graphiql .btn.selected, #graphiql .btn:active,
-  #graphiql .btn:hover, #graphiql [open] > .btn, .btn.hover, .btn.selected,
-  .btn:active, .btn:hover, .btn[aria-selected=true], [open] > .btn,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:active,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:hover,
-  body[class="page-responsive"] .btn.hover,
-  body[class="page-responsive"] .btn.selected,
-  body[class="page-responsive"] .btn:active,
-  body[class="page-responsive"] .btn:hover,
-  body[class="page-responsive"] .btn[aria-selected=true],
-  body[class="page-responsive"] [open] > .btn {
-    border-color: rgba(180, 180, 180, .3);
-  }
-  /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
-  #graphiql .btn-blue.hover, #graphiql .btn-blue.selected,
-  #graphiql .btn-blue:active, #graphiql .btn-blue:hover,
-  #graphiql .btn-danger.selected, #graphiql .btn-danger:active,
-  #graphiql .btn-danger:hover, #graphiql .btn-primary.hover,
-  #graphiql .btn-primary.selected, #graphiql .btn-primary:active,
-  #graphiql .btn-primary:hover, #graphiql [open] > .btn-blue,
-  #graphiql [open] > .btn-danger, #graphiql [open] > .btn-primary,
-  .btn-blue.hover, .btn-blue.selected, .btn-blue:active, .btn-blue:hover,
-  .btn-blue[aria-selected=true], .btn-blurple.hover, .btn-blurple.selected,
-  .btn-blurple:active, .btn-blurple:hover, .btn-blurple[aria-selected=true],
-  .btn-danger.selected, .btn-danger:active, .btn-danger:hover,
-  .btn-danger[aria-selected=true], .btn-primary.hover, .btn-primary.selected,
-  .btn-primary:active, .btn-primary:hover, .btn-primary[aria-selected=true],
-  .btn-purple.hover, .btn-purple.selected, .btn-purple:active, .btn-purple:hover,
-  [open] > .btn-blue, [open] > .btn-blurple, [open] > .btn-danger,
-  [open] > .btn-primary, [open] > .btn-purple,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:active,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:hover,
-  body[class="page-responsive"] .btn-danger.selected,
-  body[class="page-responsive"] .btn-danger:active,
-  body[class="page-responsive"] .btn-danger:hover,
-  body[class="page-responsive"] .btn-danger[aria-selected=true],
-  body[class="page-responsive"] .btn-primary.hover,
-  body[class="page-responsive"] .btn-primary.selected,
-  body[class="page-responsive"] .btn-primary:active,
-  body[class="page-responsive"] .btn-primary:hover,
-  body[class="page-responsive"] .btn-primary[aria-selected=true],
-  body[class="page-responsive"] [open] > .btn-danger,
-  body[class="page-responsive"] [open] > .btn-primary {
-    border-color: rgba(180, 180, 180, .4);
   }
   /* remap-css rule for "border-color: rgba(0,0,0,.125)" */
   body.status .layout-content.status .border-color,
@@ -4649,33 +4649,33 @@
   body[class="page-responsive"] .reponav-item,
   body[class="page-responsive"] .reponav-wrapper .reponav,
   body[class="page-responsive"] .reponav-wrapper .reponav-item {
-    color: hsla(0, 0%, 100%, .75);
+    color: hsla(0, 0%, 100%, .4);
   }
   body[class="page-responsive"] .header-search-input::-webkit-input-placeholder {
-    color: hsla(0, 0%, 100%, .75);
+    color: hsla(0, 0%, 100%, .4);
   }
   .CheckRun-search-input:-ms-input-placeholder,
   .CheckRun-search-input::-ms-input-placeholder,
   .header-search-input:-ms-input-placeholder,
   .header-search-input::-ms-input-placeholder {
-    color: hsla(0, 0%, 100%, .75);
+    color: hsla(0, 0%, 100%, .4);
   }
   /* remap-css rule for "color: hsla(0,0%,100%,.75) !important" */
   .HeaderMenu--logged-out .header-search-input::placeholder,
   .page-responsive .HeaderMenu--logged-out .header-search-input::placeholder,
   .project-full-screen .project-header .project-header-link,
   body[class="page-responsive"] .HeaderMenu--logged-out .header-search-input::placeholder {
-    color: hsla(0, 0%, 100%, .75) !important;
+    color: hsla(0, 0%, 100%, .4) !important;
   }
   .page-responsive .HeaderMenu--logged-out .header-search-input::-webkit-input-placeholder,
   body[class="page-responsive"] .HeaderMenu--logged-out .header-search-input::-webkit-input-placeholder {
-    color: hsla(0, 0%, 100%, .75) !important;
+    color: hsla(0, 0%, 100%, .4) !important;
   }
   .HeaderMenu--logged-out .header-search-input:-ms-input-placeholder,
   .HeaderMenu--logged-out .header-search-input::-ms-input-placeholder,
   .page-responsive .HeaderMenu--logged-out .header-search-input:-ms-input-placeholder,
   .page-responsive .HeaderMenu--logged-out .header-search-input::-ms-input-placeholder {
-    color: hsla(0, 0%, 100%, .75) !important;
+    color: hsla(0, 0%, 100%, .4) !important;
   }
   /* remap-css rule for "fill: #959da5" */
   .activity-overview-percentage, .contrib-person .midlabel,
@@ -6171,15 +6171,26 @@
   body[class="page-responsive"] .form-group.successed .success::after {
     border-bottom-color: #002800;
   }
+  /* remap-css rule for "background-image: linear-gradient(-180deg, #34d058, #28a745 90%)" */
+  .btn-primary, body[class="page-responsive"] .btn-primary {
+    background-image: linear-gradient(180deg, #373 0%, #060 100%);
+  }
   /* remap-css rule for "background-image: linear-gradient(-180deg, #2fcb53, #269f42 90%)" */
   .btn-primary.hover, .btn-primary:hover,
   body[class="page-responsive"] .btn-primary.hover,
   body[class="page-responsive"] .btn-primary:hover {
-    background-image: linear-gradient(180deg, #373 5%, #060 100%);
+    background-image: linear-gradient(180deg, #484 5%, #171 100%);
   }
-  /* remap-css rule for "background-image: linear-gradient(-180deg, #34d058, #28a745 90%)" */
-  .btn-primary, body[class="page-responsive"] .btn-primary {
-    background-image: linear-gradient(180deg, #383 0%, #170 50%);
+  /* remap-css rule for "background-color: #279f43" */
+  #graphiql .btn-primary.selected, #graphiql .btn-primary:active,
+  #graphiql [open] > .btn-primary, .btn-primary.selected, .btn-primary:active,
+  .btn-primary[aria-selected=true], [open] > .btn-primary,
+  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:active,
+  body[class="page-responsive"] .btn-primary.selected,
+  body[class="page-responsive"] .btn-primary:active,
+  body[class="page-responsive"] .btn-primary[aria-selected=true],
+  body[class="page-responsive"] [open] > .btn-primary {
+    background: linear-gradient(180deg, #595 0%, #283 100%);
   }
   /* remap-css rule for "background-color: #94d3a2" */
   #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled,
@@ -6187,7 +6198,7 @@
   body[class="page-responsive"] .btn-primary.disabled,
   body[class="page-responsive"] .btn-primary:disabled,
   body[class="page-responsive"] .btn-primary[aria-disabled=true] {
-    background-color: #040;
+    background: #040;
   }
   /* remap-css rule for "background: linear-gradient(#34d058, #28a745)" */
   html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
@@ -7253,128 +7264,6 @@
   .form-group .form-field-hover {
     background-color: transparent;
   }
-  /* remap-css rule for "background-image: none" */
-  #graphiql .btn-blue.disabled, #graphiql .btn-blue.selected,
-  #graphiql .btn-blue:active, #graphiql .btn-blue:disabled,
-  #graphiql .btn-danger.disabled, #graphiql .btn-danger.selected,
-  #graphiql .btn-danger:active, #graphiql .btn-danger:disabled,
-  #graphiql .btn-invisible, #graphiql .btn-outline,
-  #graphiql .btn-outline.selected, #graphiql .btn-outline:active,
-  #graphiql .btn-outline:hover, #graphiql .btn-primary.disabled,
-  #graphiql .btn-primary.selected, #graphiql .btn-primary:active,
-  #graphiql .btn-primary:disabled, #graphiql .btn-transparent,
-  #graphiql .btn-transparent:active, #graphiql .btn-transparent:hover,
-  #graphiql .btn.disabled, #graphiql .btn.selected, #graphiql .btn:active,
-  #graphiql .btn:disabled, #graphiql [open] > .btn, #graphiql [open] > .btn-blue,
-  #graphiql [open] > .btn-danger, #graphiql [open] > .btn-outline,
-  #graphiql [open] > .btn-primary, .CheckRun-search .btn,
-  .CheckRun-search .btn[disabled], .btn-blue.disabled, .btn-blue.selected,
-  .btn-blue:active, .btn-blue:disabled, .btn-blue[aria-disabled=true],
-  .btn-blue[aria-selected=true], .btn-blurple.disabled, .btn-blurple.selected,
-  .btn-blurple:active, .btn-blurple:disabled, .btn-blurple[aria-disabled=true],
-  .btn-blurple[aria-selected=true], .btn-danger.disabled, .btn-danger.selected,
-  .btn-danger:active, .btn-danger:disabled, .btn-danger[aria-disabled=true],
-  .btn-danger[aria-selected=true], .btn-invisible, .btn-outline,
-  .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
-  .btn-outline[aria-selected=true], .btn-primary.disabled, .btn-primary.selected,
-  .btn-primary:active, .btn-primary:disabled, .btn-primary[aria-disabled=true],
-  .btn-primary[aria-selected=true], .btn-purple.disabled, .btn-purple.selected,
-  .btn-purple:active, .btn-purple:disabled, .btn-secret.selected,
-  .btn-secret:active, .btn-transparent, .btn-transparent:active,
-  .btn-transparent:hover, .btn.disabled, .btn.selected, .btn:active,
-  .btn:disabled, .btn[aria-disabled=true], .btn[aria-selected=true],
-  .clone-url-button > .clone-url-link:active,
-  .oauth-permissions-details.open a.btn-sm,
-  .topic-input-container .tag-input .tag-input-inner, [open] > .btn,
-  [open] > .btn-blue, [open] > .btn-blurple, [open] > .btn-danger,
-  [open] > .btn-outline, [open] > .btn-primary, [open] > .btn-purple,
-  body.zh_logged_in .btn.zh-multi-repo-show-all-btn,
-  body.zh_logged_in .btn.zh-multi-repo-show-all-btn:hover,
-  body.zh_logged_in .btn.zh-multi-repo-show-one-btn,
-  body.zh_logged_in .btn.zh-multi-repo-show-one-btn:hover,
-  body.zh_logged_in .dropdown-menu > .active > a > [class*=" icon-"],
-  body.zh_logged_in .dropdown-menu > .active > a > [class^="icon-"],
-  body.zh_logged_in .dropdown-menu > li > a:hover > [class*=" icon-"],
-  body.zh_logged_in .dropdown-menu > li > a:hover > [class^="icon-"],
-  body.zh_logged_in .dropdown-submenu:hover > a > [class*=" icon-"],
-  body.zh_logged_in .dropdown-submenu:hover > a > [class^="icon-"],
-  body.zh_logged_in .icon-white,
-  body.zh_logged_in .nav-list > .active > a > [class*=" icon-"],
-  body.zh_logged_in .nav-list > .active > a > [class^="icon-"],
-  body.zh_logged_in .nav-pills > .active > a > [class*=" icon-"],
-  body.zh_logged_in .nav-pills > .active > a > [class^="icon-"],
-  body.zh_logged_in .navbar-inverse .nav > .active > a > [class*=" icon-"],
-  body.zh_logged_in .navbar-inverse .nav > .active > a > [class^="icon-"],
-  body.zh_logged_in .ui-datepicker .ui-datepicker-buttonpane,
-  body.zh_logged_in .ui-dialog .ui-dialog-buttonpane,
-  body.zh_logged_in .zh-board-menu-item .btn.disabled,
-  body.zh_logged_in .zh-board-menu-item .btn.disabled:hover,
-  body.zh_logged_in .zh-btn:active, body.zh_logged_in .zh-epic-btn:active,
-  body.zh_logged_in .zh-onboarding-modal__buttons .btn.btn--onboarding-cta,
-  body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn,
-  body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn:hover,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn-primary:active,
-  body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .btn:active,
-  body.zh_logged_in .zhc-chart-legend .zhc-dropdown .zhc-selection-button,
-  body.zh_logged_in .zhc-dropdown__clear-filter:hover,
-  body.zh_logged_in [class*=" icon-"], body.zh_logged_in [class^="icon-"],
-  body[class="page-responsive"] .btn-danger.disabled,
-  body[class="page-responsive"] .btn-danger.selected,
-  body[class="page-responsive"] .btn-danger:active,
-  body[class="page-responsive"] .btn-danger:disabled,
-  body[class="page-responsive"] .btn-danger[aria-disabled=true],
-  body[class="page-responsive"] .btn-danger[aria-selected=true],
-  body[class="page-responsive"] .btn-primary.disabled,
-  body[class="page-responsive"] .btn-primary.selected,
-  body[class="page-responsive"] .btn-primary:active,
-  body[class="page-responsive"] .btn-primary:disabled,
-  body[class="page-responsive"] .btn-primary[aria-disabled=true],
-  body[class="page-responsive"] .btn-primary[aria-selected=true],
-  body[class="page-responsive"] .btn.disabled,
-  body[class="page-responsive"] .btn.selected,
-  body[class="page-responsive"] .btn:active,
-  body[class="page-responsive"] .btn:disabled,
-  body[class="page-responsive"] .btn[aria-disabled=true],
-  body[class="page-responsive"] .btn[aria-selected=true],
-  body[class="page-responsive"] .cross-reference .bubble-title.private,
-  body[class="page-responsive"] .diff-view .file:target .meta,
-  body[class="page-responsive"] .emoji-picker-emoji-width,
-  body[class="page-responsive"] .notification-shelf .btn-outline,
-  body[class="page-responsive"] [open] > .btn,
-  body[class="page-responsive"] [open] > .btn-danger,
-  body[class="page-responsive"] [open] > .btn-primary, html[prefix] .btn,
-  html[prefix] .btn-blue:active, html[prefix] .btn-danger.selected,
-  html[prefix] .btn-danger:active, html[prefix] .btn-orange:active,
-  html[prefix] .btn-outline, html[prefix] .btn-outline.disabled,
-  html[prefix] .btn-outline.disabled:hover, html[prefix] .btn-outline.selected,
-  html[prefix] .btn-outline.zeroclipboard-is-active,
-  html[prefix] .btn-outline.zeroclipboard-is-hover,
-  html[prefix] .btn-outline:active, html[prefix] .btn-outline:disabled,
-  html[prefix] .btn-outline:disabled:hover, html[prefix] .btn-outline:hover,
-  html[prefix] .btn-primary.selected,
-  html[prefix] .btn-primary.zeroclipboard-is-active,
-  html[prefix] .btn-primary:active, html[prefix] .btn-purple:active,
-  html[prefix] .btn-themed:active, html[prefix] .btn.disabled,
-  html[prefix] .btn.disabled:hover, html[prefix] .btn.selected,
-  html[prefix] .btn.zeroclipboard-is-active, html[prefix] .btn:active,
-  html[prefix] .btn:disabled, html[prefix] .btn:disabled:hover,
-  html[prefix] .btn:hover, html[prefix] [class*=btn-outline],
-  html[prefix] [class*=btn-outline].disabled,
-  html[prefix] [class*=btn-outline].disabled:hover,
-  html[prefix] [class*=btn-outline].selected,
-  html[prefix] [class*=btn-outline].zeroclipboard-is-active,
-  html[prefix] [class*=btn-outline].zeroclipboard-is-hover,
-  html[prefix] [class*=btn-outline]:active,
-  html[prefix] [class*=btn-outline]:disabled,
-  html[prefix] [class*=btn-outline]:disabled:hover,
-  html[prefix] [class*=btn-outline]:hover {
-    background-image: none;
-  }
-  /* remap-css rule for "background-image: none !important" */
-  body.zh_logged_in .zhc-btn--danger,
-  body.zh_logged_in .zhc-btn--danger-bordered {
-    background-image: none !important;
-  }
   /* end remap-css rules */
   body, body.bg-gray {
     background-color: #202020 !important;
@@ -7584,14 +7473,14 @@
   input[type="radio"]:hover:active, input[type="checkbox"]:disabled,
   input[type="checkbox"]:hover:disabled,
   input[type="checkbox"]:hover:active:disabled {
-    -webkit-appearance: none !important;
-       -moz-appearance: none !important;
-            appearance: none !important;
-    background-color: #181818 !important;
-    border: 1px solid #484848 !important;
-    color: #eee !important;
-    height: 1em !important;
-    width: 1em !important;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: #181818;
+    border: 1px solid #484848;
+    color: #eee;
+    height: 14px;
+    width: 14px;
   }
   input[type="radio"] {
     border-radius: 100% !important;
