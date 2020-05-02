@@ -298,9 +298,9 @@ const mappings = {
   "$border: #34d058": "#34d058",
   "$border: #a2cbac": "#28a745",
   "$border: #dcffe4": "#002800",
-  "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 100%)", // btn-primary
-  "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 100%)", // btn-primary :hover
-  "background-color: #279f43": "background: linear-gradient(180deg, #595 0%, #283 100%)", // btn-primary:active
+  "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 100%)", // .btn-primary
+  "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 100%)", // .btn-primary :hover
+  "background-color: #279f43": "background: linear-gradient(180deg, #595 0%, #283 100%)", // .btn-primary:active
   "background-color: #94d3a2": "background: #040", // .btn-primary.disabled
   "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
   "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)": "box-shadow: 0 0 0 .2em #3737",
@@ -452,7 +452,8 @@ const remapOpts = {
 };
 
 async function main() {
-  const generatedCss = await remapCss(await fetchCss(sources), mappings, remapOpts);
+  let generatedCss = await remapCss(await fetchCss(sources), mappings, remapOpts);
+  generatedCss = `  /* begin remap-css rules */\n${generatedCss}\n  /* end remap-css rules */`;
   await writeFile(cssFile, (await readFile(cssFile, "utf8")).replace(replaceRe, generatedCss));
 }
 
