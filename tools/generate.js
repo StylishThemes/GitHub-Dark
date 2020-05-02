@@ -298,8 +298,8 @@ const mappings = {
   "$border: #34d058": "#34d058",
   "$border: #a2cbac": "#28a745",
   "$border: #dcffe4": "#002800",
-  "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 100%)", // .btn-primary
-  "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 100%)", // .btn-primary :hover
+  "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 90%)", // .btn-primary
+  "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 90%)", // .btn-primary :hover
   "background-color: #279f43": "background: linear-gradient(180deg, #595 0%, #283 100%)", // .btn-primary:active
   "background-color: #94d3a2": "background: #040", // .btn-primary.disabled
   "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
@@ -363,7 +363,11 @@ const mappings = {
 };
 
 const sources = [
-  {url: "https://github.com"},
+  {
+    url: "https://github.com",
+    prefix: "body.env-production",
+    match: ["body", ".env-production"],
+  },
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://lab.github.com"},
