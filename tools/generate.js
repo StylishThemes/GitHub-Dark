@@ -288,7 +288,8 @@ const mappings = {
   "color: #28a745": "color: #6cc644",
   "color: #165c26": "color: #6cc644",
   "color: #144620": "color: #34d058",
-  "$background: #28a745": "#373",
+  "background-color: #28a745": "background-color: #373; background-image: none",
+  "background: #28a745": "background: #373",
   "$background: #2cbe4e": "#373",
   "$background: #dcffe4": "#002800",
   "$background: #f0fff4": "#002800",
@@ -363,11 +364,7 @@ const mappings = {
 };
 
 const sources = [
-  {
-    url: "https://github.com",
-    prefix: "env-production",
-    match: ["body", ".env-production"],
-  },
+  {url: "https://github.com"},
   {url: "https://gist.github.com"},
   {url: "https://help.github.com"},
   {url: "https://lab.github.com"},
