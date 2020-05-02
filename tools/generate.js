@@ -365,7 +365,7 @@ const mappings = {
 const sources = [
   {
     url: "https://github.com",
-    prefix: "body.env-production",
+    prefix: "env-production",
     match: ["body", ".env-production"],
   },
   {url: "https://gist.github.com"},
