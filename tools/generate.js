@@ -450,6 +450,7 @@ const remapOpts = {
   lineLength: 76,
   comments: true,
   stylistic: true,
+  validate: true,
 };
 
 async function main() {
