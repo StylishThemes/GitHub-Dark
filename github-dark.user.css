@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.63
+@version     2.0.64
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.63 (2020-05-04) */
+/*! Github Dark v2.0.64 (2020-05-05) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -269,12 +269,11 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn.disabled, .btn:disabled, .btn[aria-disabled="true"] {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #279f43", "border-color: rgba(27,31,35,.5)" */
   .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected="true"],
@@ -282,35 +281,32 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   .btn-primary.disabled, .btn-primary:disabled,
   .btn-primary[aria-disabled="true"] {
     color: hsla(0, 0%, 100%, .25);
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-blue.selected, .btn-blue:active, .btn-blue[aria-selected="true"],
   [open] > .btn-blue {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)" */
   .btn-blue.disabled, .btn-blue:disabled, .btn-blue[aria-disabled="true"] {
     color: hsla(0, 0%, 100%, .25);
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-danger.selected, .btn-danger:active, .btn-danger[aria-selected="true"],
   [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled="true"] {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #0366d6", "border-color: #0366d6" */
   .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
@@ -326,26 +322,23 @@
     color: /*[[base-color]]*/;
     background-color: #181818;
   }
-  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled="true"] {
     color: rgba(230, 230, 230, .3);
     background-color: #181818;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: initial" */
   .btn-link {
     background-color: initial;
   }
-  /* remap-css rule for "color: #0366d6", "background: none", "box-shadow: none" */
+  /* remap-css rule for "color: #0366d6" */
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
   .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
   .btn-invisible:focus, .btn-invisible:hover,
   .btn-invisible[aria-selected="true"] {
     color: /*[[base-color]]*/;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #586069" */
   .hfields .form-group .form-group-header label, .hfields .form-group dt label {
@@ -548,6 +541,12 @@
   .link-gray-dark:hover, .link-hover-blue:hover {
     color: /*[[base-color]]*/ !important;
   }
+  /* remap-css rule for "background-color: initial" */
+  @keyframes blink {
+    50% {
+      background-color: initial;
+    }
+  }
   /* remap-css rule for "border: 1px dashed #fff" */
   image-crop .crop-box {
     border-color: #181818;
@@ -573,13 +572,6 @@
     background-color: #202020;
     border-color: #404040;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.intent-mouse [role="button"]:focus,
-  body.intent-mouse [role="tabpanel"][tabindex="0"]:focus,
-  body.intent-mouse a:focus, body.intent-mouse button:focus,
-  body.intent-mouse summary:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "background-color: #fffbdd" */
   .conflict-gutter-marker {
     background-color: #261d08;
@@ -587,10 +579,6 @@
   /* remap-css rule for "background-color: #d73a49" */
   .conflict-gutter-marker::after, .conflict-gutter-marker::before {
     background-color: #f44;
-  }
-  /* remap-css rule for "background-color: none" */
-  .form-group .form-field-hover {
-    background-color: transparent;
   }
   /* remap-css rule for "border: 1px solid #959da5" */
   .form-group:hover .form-field-hover, .placeholder-box {
@@ -608,10 +596,9 @@
   .gollum-editor .comment-form-head.tabnav {
     border-color: #343434;
   }
-  /* remap-css rule for "color: #0366d6", "background: none" */
+  /* remap-css rule for "color: #0366d6" */
   .zeroclipboard-link {
     color: /*[[base-color]]*/;
-    background: none;
   }
   /* remap-css rule for "background-color: #fff" */
   .auth-form-body {
@@ -708,21 +695,13 @@
   .feature-preview-indicator {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
-  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)", "box-shadow: none" */
+  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)" */
   .header-search-wrapper {
     background-color: hsla(0, 0%, 100%, .05);
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: hsla(0,0%,100%,.175)", "box-shadow: none" */
+  /* remap-css rule for "background-color: hsla(0,0%,100%,.175)" */
   .header-search-wrapper.focus {
     background-color: hsla(0, 0%, 100%, .1);
-    box-shadow: none;
-  }
-  /* remap-css rule for "color: inherit", "background: none", "box-shadow: none" */
-  .header-search-input {
-    color: inherit;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   .header-search-input:-ms-input-placeholder {
@@ -735,10 +714,6 @@
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   .header-search-input::placeholder {
     color: hsla(0, 0%, 100%, .25);
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .header-search-input:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #24292e !important", "background-color: #fafbfc" */
   .jump-to-field-active {
@@ -786,37 +761,6 @@
   /* remap-css rule for "color: #586069" */
   .lead-mktg-fluid {
     color: #afafaf;
-  }
-  /* remap-css rule for "background: none" */
-  .btn-outline-mktg-fluid, .btn-outline-mktg-fluid.hover,
-  .btn-outline-mktg-fluid.selected, .btn-outline-mktg-fluid:active,
-  .btn-outline-mktg-fluid:hover, .btn-outline-mktg-fluid[aria-selected="true"],
-  .btn-purple-outline-mktg-fluid, .btn-purple-outline-mktg-fluid.hover,
-  .btn-purple-outline-mktg-fluid.selected, .btn-purple-outline-mktg-fluid:active,
-  .btn-purple-outline-mktg-fluid:hover,
-  .btn-purple-outline-mktg-fluid[aria-selected="true"],
-  .btn-white-outline-mktg-fluid, .btn-white-outline-mktg-fluid.hover,
-  .btn-white-outline-mktg-fluid.selected, .btn-white-outline-mktg-fluid:active,
-  .btn-white-outline-mktg-fluid:hover,
-  .btn-white-outline-mktg-fluid[aria-selected="true"],
-  [open] > .btn-outline-mktg-fluid, [open] > .btn-purple-outline-mktg-fluid,
-  [open] > .btn-white-outline-mktg-fluid {
-    background: none;
-  }
-  /* remap-css rule for "background: none !important" */
-  .btn-invisible-mktg-fluid, .btn-invisible-mktg-fluid::before,
-  .btn-invisible-mktg-fluid:hover, .btn-lg-invisible-mktg-fluid,
-  .btn-lg-invisible-mktg-fluid::before, .btn-lg-invisible-mktg-fluid:hover {
-    background: none !important;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .btn-invisible-mktg-fluid.focus, .btn-invisible-mktg-fluid:focus,
-  .btn-lg-invisible-mktg-fluid.focus, .btn-lg-invisible-mktg-fluid:focus {
-    box-shadow: none;
-  }
-  /* remap-css rule for "background: none" */
-  .page-nav .page-nav-trigger {
-    background: none;
   }
   /* remap-css rule for "color: #6a737d" */
   .page-nav-item {
@@ -991,10 +935,6 @@
   /* remap-css rule for "background-color: #e1e4e8" */
   .workspaces-develop-time {
     background-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .section-workspaces-develop-night .workspaces-sun {
-    box-shadow: none;
   }
   /* remap-css rule for "color: hsla(0,0%,100%,.6)" */
   .jumbotron-codelines {
@@ -1228,12 +1168,6 @@
   .DeveloperVideo-data {
     background: #181818;
   }
-  /* remap-css rule for "background: none" */
-  @media (min-width: 768px) {
-    .DeveloperVideo-data {
-      background: none;
-    }
-  }
   /* remap-css rule for "border-top: 1px solid #2f363d" */
   .btf-border {
     border-top-color: #282828;
@@ -1315,11 +1249,6 @@
     background-color: /*[[base-color]]*/;
     color: #fff;
   }
-  /* remap-css rule for "color: inherit !important" */
-  .autocomplete-item.navigation-focus *, .autocomplete-item.selected *,
-  .autocomplete-item:hover *, .autocomplete-item[aria-selected="true"] * {
-    color: inherit !important;
-  }
   /* remap-css rule for "background: #fff", "border: 1px solid #e1e4e8", "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
   .suggester {
     background: #181818;
@@ -1344,7 +1273,7 @@
   .Header {
     background-color: #181818;
   }
-  /* remap-css rule for "color: #586069", "background-color: initial", "border: 1px solid rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: #586069", "background-color: initial", "border: 1px solid rgba(27,31,35,.15)" */
   .Label--outline {
     background-color: initial;
   }
@@ -1424,11 +1353,10 @@
     color: #d2d2d2;
     background-color: #181818;
   }
-  /* remap-css rule for "border-color: #e1e4e8", "box-shadow: none" */
+  /* remap-css rule for "border-color: #e1e4e8" */
   @media (min-width: 544px) {
     .SelectMenu-tab[aria-selected="true"] {
       border-color: #343434;
-      box-shadow: none;
     }
   }
   /* remap-css rule for "border-bottom: 1px solid #eaecef" */
@@ -1519,10 +1447,6 @@
   .boxed-group .heading, .boxed-group > h3 {
     background-color: #202020;
     border-color: rgba(180, 180, 180, .1);
-  }
-  /* remap-css rule for "color: inherit" */
-  .boxed-group .heading a, .boxed-group > h3 a {
-    color: inherit;
   }
   /* remap-css rule for "color: #586069" */
   .boxed-group .heading a.boxed-group-breadcrumb,
@@ -1666,10 +1590,6 @@
   .select-menu-item.excluded {
     background-color: #202020;
   }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item:focus .octicon, .select-menu-item:hover .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #0366d6" */
   .select-menu-item.navigation-focus,
   .select-menu-item.navigation-focus .description-inline,
@@ -1704,10 +1624,6 @@
   .select-menu-item[disabled]:hover .description {
     color: hsla(0, 0%, 100%, .4);
   }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item input:checked + .octicon-check {
-    color: inherit;
-  }
   /* remap-css rule for "color: #24292e" */
   .select-menu-item.selected,
   details-menu .select-menu-item[aria-checked="true"],
@@ -1726,25 +1642,9 @@
   details-menu .select-menu-item[aria-selected="true"] > .octicon {
     color: #d2d2d2;
   }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item.selected .octicon-check,
-  .select-menu-item.selected .octicon-circle-slash,
-  .select-menu-item.selected .select-menu-item-text .octicon-x,
-  details-menu .select-menu-item[aria-checked="true"] .octicon-check,
-  details-menu .select-menu-item[aria-checked="true"] .octicon-circle-slash,
-  details-menu .select-menu-item[aria-checked="true"] .select-menu-item-text .octicon-x,
-  details-menu .select-menu-item[aria-selected="true"] .octicon-check,
-  details-menu .select-menu-item[aria-selected="true"] .octicon-circle-slash,
-  details-menu .select-menu-item[aria-selected="true"] .select-menu-item-text .octicon-x {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: initial !important" */
   .select-menu.label-select-menu .select-menu-item:active {
     background-color: initial !important;
-  }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item-text mark {
-    color: inherit;
   }
   /* remap-css rule for "color: #6a737d", "border-bottom: 1px solid #e1e4e8" */
   .table-list {
@@ -1919,10 +1819,6 @@
   .full-commit .branches-list li.pull-request {
     color: #949494;
   }
-  /* remap-css rule for "color: inherit" */
-  .full-commit .branches-list li a {
-    color: inherit;
-  }
   /* remap-css rule for "background: #fff", "border-top: 1px solid rgba(27,31,35,.15)" */
   .full-commit .commit-meta {
     background: #181818;
@@ -1944,10 +1840,6 @@
   /* remap-css rule for "color: #6a737d" */
   .branches-tag-list li.loading {
     color: #949494;
-  }
-  /* remap-css rule for "color: inherit" */
-  .branches-tag-list li .ellipsis-expander, .branches-tag-list li a {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #d3e2f4" */
   .branches-tag-list li .ellipsis-expander {
@@ -1987,10 +1879,9 @@
   .signed-commit-header .octicon-unverified {
     color: #757575;
   }
-  /* remap-css rule for "color: #586069", "background: none", "border: 1px solid #e1e4e8" */
+  /* remap-css rule for "color: #586069", "border: 1px solid #e1e4e8" */
   .signed-commit-badge {
     color: #afafaf;
-    background: none;
     border-color: #343434;
   }
   /* remap-css rule for "color: #24292e" */
@@ -2227,14 +2118,6 @@
   .discussion-sidebar-toggle:hover {
     color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "color: inherit" */
-  .discussion-sidebar-toggle:hover .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  button.discussion-sidebar-toggle {
-    background: none;
-  }
   /* remap-css rule for "color: #586069" */
   .sidebar-assignee .assignee {
     color: #afafaf;
@@ -2413,10 +2296,6 @@
   .timeline-comment-header .author {
     color: #afafaf;
   }
-  /* remap-css rule for "color: inherit" */
-  .comment-type-icon {
-    color: inherit;
-  }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.15)" */
   .timeline-comment-label {
     border-color: rgba(180, 180, 180, .1);
@@ -2557,43 +2436,17 @@
   .footer-octicon:hover {
     color: #757575;
   }
-  /* remap-css rule for "background: none", "box-shadow: none" */
-  .kb-konami-dialog {
-    background: none;
-    box-shadow: none;
-  }
-  /* remap-css rule for "border: 1px solid #fff" */
-  .kb-konami-dialog .Box-btn-octicon {
-    border-color: #181818;
-  }
-  /* remap-css rule for "background: none" */
-  .konami, .konami-overlay {
-    background: none;
-  }
-  /* remap-css rule for "background: none", "border: solid #fff" */
-  .konami .key.complete {
-    background: none;
+  /* remap-css rule for "border: solid #fff" */
+  .kb-konami-dialog .Box-btn-octicon, .konami .key.complete {
     border-color: #181818;
   }
   /* remap-css rule for "color: #24292e" */
-  .konami .enter-link, .konami .key.active {
-    color: #d2d2d2;
-  }
-  /* remap-css rule for "background: none" */
-  .konami .enter-link:hover {
-    background: none;
-  }
-  /* remap-css rule for "color: #24292e" */
-  .team-mention, .user-mention {
+  .konami .enter-link, .konami .key.active, .team-mention, .user-mention {
     color: #d2d2d2;
   }
   /* remap-css rule for "border-bottom: 1px solid #e1e4e8" */
   .pagehead {
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "color: inherit" */
-  .pagehead-heading {
-    color: inherit;
   }
   /* remap-css rule for "color: #24292e" */
   .pagehead-actions > li {
@@ -2626,10 +2479,6 @@
     color: #d2d2d2;
     background-color: #181818;
   }
-  /* remap-css rule for "color: inherit" */
-  .pagehead-tabs-item.selected > .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "color: #586069" */
   .repohead h1 {
     color: #afafaf;
@@ -2659,23 +2508,14 @@
   /* remap-css rule for "color: #24292e", "background-color: #fff" */
   .reponav-item.selected {
     color: #d2d2d2;
-    background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  .reponav-item.selected .octicon {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #24292e" */
-  .reponav-wrapper {
+  .reponav-item.selected, .reponav-wrapper {
     background-color: #181818;
   }
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   .reponav-wrapper .reponav, .reponav-wrapper .reponav-item {
     color: hsla(0, 0%, 100%, .25);
-  }
-  /* remap-css rule for "color: inherit" */
-  .reponav-wrapper .reponav-item .Counter {
-    color: inherit;
   }
   /* remap-css rule for "background-color: initial" */
   .reponav-wrapper .reponav-item.selected {
@@ -2786,10 +2626,6 @@
   .render-container {
     background: #383838;
   }
-  /* remap-css rule for "background: none" */
-  .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
-    background: none;
-  }
   /* remap-css rule for "color: #444d56", "background-color: #f6f8fa", "border-color: rgba(27,31,35,.15)" */
   .render-notice {
     color: #afafaf;
@@ -2799,10 +2635,6 @@
   /* remap-css rule for "background: #f1f8ff" */
   .commit-tease .AvatarStack-body {
     background: #182030;
-  }
-  /* remap-css rule for "background: none" */
-  .content-attachment-details[open] .max--md .content-attachment-content--gradient {
-    background: none;
   }
   /* remap-css rule for "color: #586069" */
   .marketing .pagehead p {
@@ -2841,12 +2673,11 @@
   .btn-blurple:hover, .btn-blurple[aria-selected="true"], [open] > .btn-blurple {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)" */
   .btn-blurple.disabled, .btn-blurple:disabled,
   .btn-blurple[aria-disabled="true"] {
     color: hsla(0, 0%, 100%, .25);
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   .btn-blurple .Counter {
@@ -2879,11 +2710,6 @@
   /* remap-css rule for "color: rgba(27,31,35,.7)" */
   .integrations-install-target .octicon-lock {
     color: rgba(230, 230, 230, .7);
-  }
-  /* remap-css rule for "color: inherit" */
-  .integrations-install-target .navigation-focus .octicon-lock,
-  .integrations-install-target [aria-selected="true"].octicon-lock {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #fafbfc" */
   .listgroup-item.disabled {
@@ -3249,7 +3075,7 @@
   .branch-action-state-closed-dirty .branch-action-icon,
   .branch-action-state-dirty .branch-action-icon,
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "border-color: #d1d5da" */
   .branch-action-state-closed-dirty .branch-action-body,
@@ -3282,7 +3108,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .completeness-indicator-problem {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #fffbdd", "border: 1px solid rgba(27,31,35,.15)" */
   .RecentBranches {
@@ -3487,10 +3313,6 @@
   .code-list .code-list-item + .code-list-item {
     border-top-color: #343434;
   }
-  /* remap-css rule for "color: inherit" */
-  .code-list .blob-num a {
-    color: inherit;
-  }
   /* remap-css rule for "color: #0366d6" */
   .code-list .blob-num a:hover {
     color: /*[[base-color]]*/;
@@ -3520,15 +3342,6 @@
   /* remap-css rule for "border-top: 1px solid #e1e4e8" */
   .codesearch-results .repo-list-item + .repo-list-item {
     border-top-color: #343434;
-  }
-  /* remap-css rule for "background: none", "box-shadow: none" */
-  .search-form-fluid .search-page-input {
-    background: none;
-    box-shadow: none;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .search-form-fluid .search-page-input:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #586069", "background: #fff", "border-color: #e1e4e8" */
   @media (max-width: 544px) {
@@ -3637,10 +3450,9 @@
   .dashboard-notice .coupon {
     background: #181818;
   }
-  /* remap-css rule for "background-color: #fff", "box-shadow: none" */
+  /* remap-css rule for "background-color: #fff" */
   .dashboards-overview-cards .blankslate {
     background-color: #181818;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #cb2431" */
   .dashboards-overview-cards .octicon-arrow-down {
@@ -3701,18 +3513,10 @@
     background-color: #002800;
     border-bottom-color: #28a745;
   }
-  /* remap-css rule for "box-shadow: none" */
-  :target .discussion-nested-comment-group .timeline-comment {
-    box-shadow: none;
-  }
   /* remap-css rule for "box-shadow: 0 0 0 .2em #c8e1ff" */
   .discussion-nested-comment-timeline-item:target {
     box-shadow: 0 0 0 .2em rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
-  }
-  /* remap-css rule for "box-shadow: none" */
-  :target .nested-discussion-timeline-comment {
-    box-shadow: none;
   }
   /* remap-css rule for "fill: #22863a" */
   .icon-discussion-answered, .icon-discussion-answered path {
@@ -3821,10 +3625,6 @@
   .file .image canvas, .file .image img {
     border-color: #181818;
   }
-  /* remap-css rule for "background: none" */
-  .file .empty {
-    background: none;
-  }
   /* remap-css rule for "background-color: #fafbfc", "border-bottom: 1px solid #e1e4e8" */
   .file-header {
     background-color: #181818;
@@ -3931,10 +3731,9 @@
   .discussion-post .reply-comments-holder::before {
     background-color: #343434;
   }
-  /* remap-css rule for "background-color: #f6f8fa", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f6f8fa" */
   .team-discussion-new-post .review-thread-reply-button:disabled {
     background-color: #202020;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #a3aab1" */
   .team-project-suggestion-number {
@@ -4040,15 +3839,11 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .issues-reset-query-icon {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "color: #555" */
   .table-list-milestones .stat {
     color: #bebebe;
-  }
-  /* remap-css rule for "color: inherit" */
-  .table-list-milestones .stat a {
-    color: inherit;
   }
   /* remap-css rule for "color: #586069" */
   .table-list-milestones .stat-label {
@@ -4063,24 +3858,10 @@
   a.task-progress:hover {
     color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "color: inherit" */
-  a.task-progress:hover .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #0366d6" */
   a.task-progress:hover .progress-bar .progress {
     background-color: /*[[base-color]]*/;
     color: #fff;
-  }
-  /* remap-css rule for "color: inherit" */
-  .milestone-link:hover .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit !important" */
-  .label-select-menu .selected .select-menu-item-icon,
-  .label-select-menu [aria-checked="mixed"] .select-menu-item-icon,
-  .label-select-menu [aria-checked="true"] .select-menu-item-icon {
-    color: inherit !important;
   }
   /* remap-css rule for "color: #6a737d" */
   .label-select-menu .selected .octicon-circle-slash,
@@ -4094,20 +3875,12 @@
   .label-select-menu [aria-checked="true"]:active {
     background-color: initial !important;
   }
-  /* remap-css rule for "color: inherit", "background-color: #f4f4f4" */
+  /* remap-css rule for "background-color: #f4f4f4" */
   .label-select-menu .select-menu-item.navigation-focus,
   .label-select-menu .select-menu-item:focus,
   .label-select-menu .select-menu-item:hover,
   .label-select-menu .select-menu-item[aria-selected="true"] {
-    color: inherit;
     background-color: #242424;
-  }
-  /* remap-css rule for "color: inherit" */
-  .label-select-menu .select-menu-item.navigation-focus .label-options-icon,
-  .label-select-menu .select-menu-item:focus .label-options-icon,
-  .label-select-menu .select-menu-item:hover .label-options-icon,
-  .label-select-menu .select-menu-item[aria-selected="true"] .label-options-icon {
-    color: inherit;
   }
   /* remap-css rule for "border-right: 1px solid #eee" */
   .subnav .btn + .issues-search {
@@ -4343,10 +4116,9 @@
   .notification-thread-subscription:first-child {
     border-top-color: #404040;
   }
-  /* remap-css rule for "color: #586069", "background: none" */
+  /* remap-css rule for "color: #586069" */
   .notifications-sso-prompt a {
     color: #afafaf;
-    background: none;
   }
   /* remap-css rule for "color: #0366d6" */
   .notifications-sso-prompt em {
@@ -4470,10 +4242,6 @@
   /* remap-css rule for "color: #24292e !important" */
   .notifications-list-item.navigation-focus .notification-list-item-link {
     color: #d2d2d2 !important;
-  }
-  /* remap-css rule for "background: none" */
-  .notifications-list-item .notification-list-item-unread-indicator {
-    background: none;
   }
   /* remap-css rule for "background-color: #fff" */
   .notifications-list-item.notification-unread {
@@ -4874,10 +4642,6 @@
   .theme-picker-thumbs {
     border-bottom-color: #343434;
   }
-  /* remap-css rule for "background: none" */
-  .theme-toggle {
-    background: none;
-  }
   /* remap-css rule for "border: 1px solid #ddd" */
   .theme-selector-thumbnail {
     border-color: #343434;
@@ -4916,11 +4680,10 @@
   .pinned-gist-blob-num:hover {
     color: rgba(230, 230, 230, .3);
   }
-  /* remap-css rule for "color: #24292e !important", "background: none", "border-right: 2px solid #e1e4e8", "border-right-color: #d73a49", "border-bottom: 2px solid #d73a49", "border: 4px solid #d1d5da", "border: 4px solid #d73a49", "color: #1b1f23", "color: #28a745", "color: #6f42c1", "border: 1px solid #6f42c1", "color: #cb2431" */
+  /* remap-css rule for "color: #24292e !important", "border-right: 2px solid #e1e4e8", "border-right-color: #d73a49", "border-bottom: 2px solid #d73a49", "border: 4px solid #d1d5da", "border: 4px solid #d73a49", "color: #1b1f23", "color: #28a745", "color: #6f42c1", "border: 1px solid #6f42c1", "color: #cb2431" */
   @media print {
     .btn:not(.btn-outline) {
       color: #d2d2d2 !important;
-      background: none;
     }
     .blob-num {
       border-right-color: #343434;
@@ -4939,7 +4702,6 @@
     }
     .State {
       color: #afafaf;
-      background: none;
     }
     .State--green {
       color: #6cc644;
@@ -4976,11 +4738,10 @@
   .project-full-screen .project-header .project-header-link {
     color: hsla(0, 0%, 100%, .25) !important;
   }
-  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)", "box-shadow: none", "background-color: hsla(0,0%,100%,.175)" */
+  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)", "background-color: hsla(0,0%,100%,.175)" */
   @media (min-width: 544px) {
     .project-full-screen .card-filter-input {
       background-color: hsla(0, 0%, 100%, .05);
-      box-shadow: none;
     }
     .project-full-screen .card-filter-input:focus {
       background-color: hsla(0, 0%, 100%, .1);
@@ -5058,7 +4819,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .projects-reset-query-icon {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #fff", "border-top: 1px solid #d1d5da" */
   .projects-comment-form .comment-form-head .toolbar-commenting {
@@ -5128,10 +4889,6 @@
   .stale-files-tab {
     color: #f3582c;
   }
-  /* remap-css rule for "color: inherit" */
-  .stale-files-tab-link {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #fff" */
   .diffbar, .pr-toolbar.is-stuck {
     background-color: #181818;
@@ -5155,10 +4912,6 @@
   .diffbar-range-menu .is-range-selected {
     color: #bba257;
     background-color: #261d08;
-  }
-  /* remap-css rule for "color: inherit" */
-  .diffbar-range-menu .is-range-selected .description {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #fff5b1" */
   .diffbar-range-menu .is-last-in-range {
@@ -5378,10 +5131,6 @@
   .clone-url-button + .clone-url-button > .clone-url-link {
     box-shadow: inset 1px 0 0 #181818;
   }
-  /* remap-css rule for "box-shadow: none" */
-  .clone-url-button + .clone-url-button > .clone-url-link:hover {
-    box-shadow: none;
-  }
   /* remap-css rule for "color: #333", "background-image: linear-gradient(#ccc,#d5d5d5)", "border-color: #bbb" */
   .clone-url-button > .clone-url-link.selected,
   .clone-url-button > .clone-url-link.selected:hover {
@@ -5408,10 +5157,6 @@
   /* remap-css rule for "color: #0366d6" */
   .numbers-summary li > a:hover {
     color: /*[[base-color]]*/;
-  }
-  /* remap-css rule for "color: inherit" */
-  .numbers-summary li > a:hover .num {
-    color: inherit;
   }
   /* remap-css rule for "color: #6a737d" */
   .numbers-summary .octicon {
@@ -5476,10 +5221,6 @@
   .branch-infobar .muted-link .octicon {
     color: #757575;
   }
-  /* remap-css rule for "color: inherit" */
-  .branch-infobar .muted-link:hover .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "border: 1px solid #dfe2e5" */
   .prereceive-feedback {
     border-color: #343434;
@@ -5496,10 +5237,9 @@
   .edit-profile-avatar .drag-and-drop {
     color: #949494;
   }
-  /* remap-css rule for "border: 1px dashed #d73a49", "box-shadow: none" */
+  /* remap-css rule for "border: 1px dashed #d73a49" */
   .avatar-upload .flash {
     border-color: #b00;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #586069" */
   .avatar-upload .upload-state p {
@@ -5757,10 +5497,6 @@
       background-color: initial;
     }
   }
-  /* remap-css rule for "color: inherit" */
-  .repository-merge-features .form-group.errored label {
-    color: inherit;
-  }
   /* remap-css rule for "color: #cb2431", "background: transparent" */
   .repository-merge-features .form-group.errored .error {
     color: #f44;
@@ -5942,24 +5678,14 @@
   .business-sso .sso-recovery-callout, .org-sso .sso-recovery-callout {
     border-color: #404040;
   }
-  /* remap-css rule for "background: none", "box-shadow: none" */
-  .tag-input input {
-    background: none;
-    box-shadow: none;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .tag-input input:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "border: 1px solid transparent" */
   .reorderable-task-lists .markdown-body .task-list-item {
     border-color: transparent;
   }
-  /* remap-css rule for "color: #586069", "border: 1px solid #eaeaea", "box-shadow: none" */
+  /* remap-css rule for "color: #586069", "border: 1px solid #eaeaea" */
   .team-label-ldap {
     color: #afafaf;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background: #f6f8fa" */
   .team-member-ellipsis:hover {
@@ -5977,7 +5703,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .token-scanning-reset-query-icon {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background: #f6f8fa", "border-bottom: 1px solid #dfe2e5" */
   table.capped-list th {
@@ -5999,32 +5725,20 @@
   .traffic-graph-stats {
     border-top-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  .tree-finder-input, .tree-finder-input:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "background-color: #fff !important" */
   .tree-browser-result[aria-selected="true"] {
     background-color: #181818 !important;
   }
-  /* remap-css rule for "color: #0366d6", "background: none" */
+  /* remap-css rule for "color: #0366d6" */
+  .toolbar-commenting .dropdown-item:focus,
+  .toolbar-commenting .dropdown-item:hover,
   .tree-browser-result[aria-selected="true"] .octicon-chevron-right,
   .tree-browser-result mark {
     color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "background: none" */
-  .toolbar-commenting .dropdown-item, .tree-browser-result mark {
-    background: none;
-  }
-  /* remap-css rule for "color: #0366d6" */
-  .toolbar-commenting .dropdown-item:focus,
-  .toolbar-commenting .dropdown-item:hover {
-    color: /*[[base-color]]*/;
-  }
-  /* remap-css rule for "color: #586069", "background: none" */
+  /* remap-css rule for "color: #586069" */
   .toolbar-item, .toolbar-item .menu-target {
     color: #afafaf;
-    background: none;
   }
   /* remap-css rule for "color: #0366d6" */
   .toolbar-item .menu-target:focus, .toolbar-item .menu-target:hover,
@@ -6062,10 +5776,6 @@
   /* remap-css rule for "background-color: #cb2431" */
   .follow-list .flagged-banner {
     background-color: #911;
-  }
-  /* remap-css rule for "color: inherit" */
-  .follow-list .follow-list-name a {
-    color: inherit;
   }
   /* remap-css rule for "color: #586069" */
   .follow-list .follow-list-info {
@@ -6114,30 +5824,14 @@
   .toggle-user-status-edit:hover .user-status-message-wrapper {
     color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "background: none" */
-  .wiki-footer .markdown-body img {
-    background: none;
-  }
   /* remap-css rule for "border: 1px solid rgba(27,31,35,.15)" */
   .ColorSwatch {
     border-color: rgba(180, 180, 180, .1);
-  }
-  /* remap-css rule for "color: inherit !important" */
-  .color-inherit {
-    color: inherit !important;
   }
   /* remap-css rule for "border: 2px solid #fff", "background-color: #fff" */
   .hx_flex-avatar-stack-item .avatar {
     border-color: #181818;
     background-color: #181818;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .hx_badge-search-container .hx_badge-input {
-    box-shadow: none;
-  }
-  /* remap-css rule for "box-shadow: none !important" */
-  .hx_badge-search-container .hx_badge-input:focus {
-    box-shadow: none !important;
   }
   /* remap-css rule for "background-color: #0366d6 !important", "border-color: #0366d6 !important" */
   .hx_badge[aria-pressed="true"] {
@@ -6173,10 +5867,6 @@
   /* remap-css rule for "color: #959da5" */
   .SelectMenu-item:disabled, .SelectMenu-item[aria-disabled="true"] {
     color: #757575;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .Box--responsive .Box-row--unread {
-    box-shadow: none;
   }
   /* remap-css rule for "background-image: linear-gradient(#54a3ff,#006eed)" */
   .Box--responsive .Box-row--unread::before {
@@ -6223,9 +5913,8 @@
   .Toast--loading .Toast-icon {
     background-color: #343434;
   }
-  /* remap-css rule for "color: inherit", "background: #fff" */
+  /* remap-css rule for "background: #fff" */
   .details-overlay[open] > .dropdown-item:hover {
-    color: inherit;
     background: #181818;
   }
   /* remap-css rule for "color: #586069", "background-color: initial" */
@@ -6259,17 +5948,9 @@
   .page-gist-edit .octicon-gist-secret {
     color: rgba(204, 187, 68, .5);
   }
-  /* remap-css rule for "color: inherit" */
-  .page-gist-edit .btn-toggle-visibility .octicon-gist-secret {
-    color: inherit;
-  }
   /* remap-css rule for "color: #586069" */
   .gist-revisions-list .gist-revision-meta {
     color: #afafaf;
-  }
-  /* remap-css rule for "background: none" */
-  .user-list li em {
-    background: none;
   }
   /* remap-css rule for "background-color: #28a745" */
   .user-list li .actions .status-modified {
@@ -6337,12 +6018,11 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn.disabled, .btn:disabled, .btn[aria-disabled="true"] {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #279f43", "border-color: rgba(27,31,35,.5)" */
   .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected="true"],
@@ -6350,33 +6030,30 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   .btn-primary.disabled, .btn-primary:disabled,
   .btn-primary[aria-disabled="true"] {
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-blue.selected, .btn-blue:active, .btn-blue[aria-selected="true"],
   [open] > .btn-blue {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
   .btn-blue.disabled, .btn-blue:disabled, .btn-blue[aria-disabled="true"] {
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-danger.selected, .btn-danger:active, .btn-danger[aria-selected="true"],
   [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled="true"] {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #0366d6", "border-color: #0366d6" */
   .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
@@ -6392,27 +6069,24 @@
     color: /*[[base-color]]*/;
     background-color: #181818;
   }
-  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled="true"] {
     color: rgba(230, 230, 230, .3);
     background-color: #181818;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: rgba(88,96,105,.5)" */
   .btn-link:disabled, .btn-link:disabled:hover, .btn-link[aria-disabled="true"],
   .btn-link[aria-disabled="true"]:hover {
     color: rgba(148, 148, 148, .5);
   }
-  /* remap-css rule for "color: #0366d6", "background: none", "box-shadow: none" */
+  /* remap-css rule for "color: #0366d6" */
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
   .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
   .btn-invisible:focus, .btn-invisible:hover,
   .btn-invisible[aria-selected="true"] {
     color: /*[[base-color]]*/;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #959da5" */
   .btn-octicon.disabled, .btn-octicon.disabled:hover,
@@ -6463,11 +6137,6 @@
   .form-group .ais-SearchBox-input, .form-group .ais-SearchBox-input:focus,
   .form-group .form-control, .form-group .form-control:focus {
     background-color: #181818;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .upload-enabled.focused .ais-SearchBox-input,
-  .upload-enabled.focused .form-control {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #24292e", "background-color: #fff" */
   .menu-item.selected, .menu-item[aria-current],
@@ -6520,10 +6189,6 @@
   .text-blue-mktg {
     color: /*[[base-color]]*/ !important;
   }
-  /* remap-css rule for "color: inherit" */
-  .Bump-link--hover .Bump-link-symbol {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #032f62 !important" */
   .bg-blue-dark {
     background-color: #182030 !important;
@@ -6566,18 +6231,9 @@
   .procedural-image-wrapper img {
     border-color: #343434;
   }
-  /* remap-css rule for "background: none" */
-  .ais-SearchBox-reset {
-    background: none;
-  }
   /* remap-css rule for "background: #f1f8ff" */
   .ais-Hits-item.active, .ais-Hits-item:hover {
     background: #182030;
-  }
-  /* remap-css rule for "background: none", "color: inherit" */
-  .ais-Highlight-highlighted, mark {
-    background: none;
-    color: inherit;
   }
   /* remap-css rule for "color: #0366d6" */
   .search-result-title .ais-Highlight-highlighted, .search-result-title mark {
@@ -6593,7 +6249,7 @@
       background: #181818;
     }
     header .search-overlay-desktop.js-open {
-      background: rgba(0, 0, 0, .15);
+      background: rgba(180, 180, 180, .22);
     }
   }
   /* remap-css rule for "color: #24292e" */
@@ -6616,16 +6272,8 @@
   .hljs {
     background: #202020;
   }
-  /* remap-css rule for "color: #333" */
-  .hljs, .hljs-keyword, .hljs-selector-tag, .hljs-subst {
-    color: #bebebe;
-  }
-  /* remap-css rule for "background: none" */
-  .markdown-body table.slim code, .markdown-body table.slim tr:nth-child(2n) {
-    background: none;
-  }
   /* remap-css rule for "color: #000" */
-  mark {
+  .hljs, .hljs-keyword, .hljs-selector-tag, .hljs-subst, mark {
     color: #bebebe;
   }
   /* remap-css rule for "background: transparent", "border-bottom: 1px solid #dfe2e5" */
@@ -6662,12 +6310,11 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn.disabled, .btn:disabled {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #28a745", "background-image: linear-gradient(-180deg, #34d058, #28a745 90%)" */
   .btn-primary {
@@ -6687,23 +6334,21 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   .btn-primary.disabled, .btn-primary:disabled {
     color: hsla(0, 0%, 100%, .25);
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-purple.hover, .btn-purple.selected, .btn-purple:active, .btn-purple:hover,
   [open] > .btn-purple {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)" */
   .btn-purple.disabled, .btn-purple:disabled {
     color: hsla(0, 0%, 100%, .25);
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   .btn-purple .Counter {
@@ -6718,21 +6363,19 @@
   [open] > .btn-blue {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "border-color: rgba(27,31,35,.2)" */
   .btn-blue.disabled, .btn-blue:disabled {
     color: hsla(0, 0%, 100%, .25);
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.5)" */
   .btn-danger.selected, .btn-danger:active, [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn-danger.disabled, .btn-danger:disabled {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #0366d6", "border-color: #0366d6" */
   .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
@@ -6747,12 +6390,11 @@
     color: /*[[base-color]]*/;
     background-color: #181818;
   }
-  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
   .btn-outline.disabled, .btn-outline:disabled {
     color: rgba(230, 230, 230, .3);
     background-color: #181818;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #444d56", "background: #dfe2e5" */
   .ellipsis-expander, .hidden-text-expander a {
@@ -6786,10 +6428,6 @@
   .form-group.warn .error::after, .form-group.warn .error::before,
   .form-group.warn .warning::after, .form-group.warn .warning::before {
     border-color: transparent;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .upload-enabled.focused .form-control {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #24292e", "background-color: #fff", "border-color: #d1d5da" */
   .tabnav-tab.selected {
@@ -6984,11 +6622,6 @@
   .blankslate-icon {
     color: #757575;
   }
-  /* remap-css rule for "background: none", "box-shadow: none" */
-  .blankslate-clean-background {
-    background: none;
-    box-shadow: none;
-  }
   /* remap-css rule for "color: rgba(27,31,35,.6)" */
   .branch-name {
     color: rgba(230, 230, 230, .6);
@@ -7002,12 +6635,11 @@
     color: #afafaf;
     background-color: #343434;
   }
-  /* remap-css rule for "color: #586069", "background-color: transparent", "border: 1px solid rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: #586069", "background-color: transparent", "border: 1px solid rgba(27,31,35,.15)" */
   .Label--outline {
     color: #afafaf;
     background-color: transparent;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #28a745", "border: 1px solid #34d058" */
   .Label--outline-green {
@@ -7016,7 +6648,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .Label--gray-darker {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #d15704" */
   .Label--orange {
@@ -7024,7 +6656,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .state, .State {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #2cbe4e" */
   .State--green {
@@ -7038,22 +6670,19 @@
   .State--red {
     background-color: #911;
   }
-  /* remap-css rule for "color: #586069" */
+  /* remap-css rule for "color: #586069", "background-color: rgba(27,31,35,.08)" */
   .Counter {
     color: #afafaf;
+    background-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "color: #24292e", "background-color: rgba(27,31,35,.15)" */
   .Counter--gray-light {
     color: #d2d2d2;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(180, 180, 180, .22);
   }
   /* remap-css rule for "background-color: #6a737d" */
   .Counter--gray {
-    background-color: #303030;
-  }
-  /* remap-css rule for "color: inherit" */
-  .markdown-body a:not([href]) {
-    color: inherit;
+    background-color: #555;
   }
   /* remap-css rule for "color: #cb2431" */
   .markdown-body .absent {
@@ -7222,11 +6851,6 @@
     background-color: /*[[base-color]]*/;
     color: #fff;
   }
-  /* remap-css rule for "color: inherit" */
-  .dropdown-item.selected > .octicon, .dropdown-item:focus > .octicon,
-  .dropdown-item:hover > .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #79b8ff" */
   .loader-bar {
     background-color: /*[[base-color]]*/;
@@ -7291,10 +6915,6 @@
   /* remap-css rule for "border-top-color: #fff" */
   .select-menu-button.primary::after {
     border-top-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  .select-menu .select-menu-clear-item .octicon {
-    color: inherit;
   }
   /* remap-css rule for "border: 1px solid transparent" */
   .select-menu-loading-overlay {
@@ -7379,9 +6999,8 @@
   .select-menu-blankslate h3 {
     color: #d2d2d2;
   }
-  /* remap-css rule for "color: inherit", "border-bottom: 1px solid #eaecef" */
+  /* remap-css rule for "border-bottom: 1px solid #eaecef" */
   .select-menu-item {
-    color: inherit;
     border-bottom-color: #343434;
   }
   /* remap-css rule for "color: #6a737d" */
@@ -7416,11 +7035,6 @@
   .select-menu-item[aria-selected="true"].disabled .description {
     color: hsla(0, 0%, 100%, .4);
   }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item[aria-checked="true"] .octicon-check,
-  .select-menu-item input:checked + .octicon-check {
-    color: inherit;
-  }
   /* remap-css rule for "color: #24292e" */
   .select-menu-item.selected {
     color: #d2d2d2;
@@ -7433,18 +7047,9 @@
   .select-menu-item.selected > .octicon {
     color: #d2d2d2;
   }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item.selected .octicon-check,
-  .select-menu-item.selected .select-menu-item-text .octicon-x {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: transparent !important" */
   .select-menu.label-select-menu .select-menu-item:active {
     background-color: transparent !important;
-  }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-item a {
-    color: inherit;
   }
   /* remap-css rule for "color: #24292e", "background-color: #f1f8ff" */
   .select-menu-item-parent.navigation-focus,
@@ -7464,10 +7069,6 @@
   /* remap-css rule for "color: #444d56" */
   .select-menu-action {
     color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  .select-menu-action > .octicon {
-    color: inherit;
   }
   /* remap-css rule for "color: #0366d6" */
   .select-menu-action:hover {
@@ -7517,14 +7118,6 @@
   /* remap-css rule for "color: #1b1f23" */
   mark {
     color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  legend {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  ::-webkit-input-placeholder {
-    color: inherit;
   }
   /* remap-css rule for "color: #0366d6" */
   a {
@@ -7645,7 +7238,7 @@
   /* remap-css rule for "color: #586069", "background-color: rgba(27,31,35,.1)" */
   .btn .Counter {
     color: #afafaf;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(180, 180, 180, .17);
   }
   /* remap-css rule for "color: #24292e", "background-color: #eff3f6", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
   .btn {
@@ -7668,12 +7261,11 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn.disabled, .btn:disabled {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #28a745" */
   .btn-primary {
@@ -7693,11 +7285,10 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   .btn-primary.disabled, .btn-primary:disabled {
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   .btn-primary .Counter {
@@ -7712,10 +7303,9 @@
   [open] > .btn-blue {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
   .btn-blue.disabled, .btn-blue:disabled {
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   .btn-blue .Counter {
@@ -7741,11 +7331,10 @@
   [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   .btn-danger.disabled, .btn-danger:disabled {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   .btn-outline {
@@ -7769,12 +7358,11 @@
   .btn-outline:focus {
     border-color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
   .btn-outline.disabled, .btn-outline:disabled {
     color: rgba(230, 230, 230, .3);
     background-color: #181818;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: transparent" */
   .btn-link {
@@ -7787,16 +7375,13 @@
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   .btn-invisible {
-    color: /*[[base-color]]*/;
     background-color: #181818;
   }
-  /* remap-css rule for "color: #0366d6", "background: none", "box-shadow: none" */
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
-  .btn-invisible:focus, .btn-invisible:hover {
+  /* remap-css rule for "color: #0366d6" */
+  .btn-invisible, .btn-invisible.selected,
+  .btn-invisible.zeroclipboard-is-active, .btn-invisible.zeroclipboard-is-hover,
+  .btn-invisible:active, .btn-invisible:focus, .btn-invisible:hover {
     color: /*[[base-color]]*/;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #586069", "background: transparent" */
   .btn-octicon {
@@ -7858,22 +7443,6 @@
   /* remap-css rule for "border-color: transparent" */
   .input-dark {
     border-color: transparent;
-  }
-  /* remap-css rule for "color: inherit" */
-  .input-dark::-webkit-input-placeholder {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  .input-dark:-ms-input-placeholder {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  .input-dark::-ms-input-placeholder {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  .input-dark::placeholder {
-    color: inherit;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
   .input-dark.focus, .input-dark:focus {
@@ -8007,10 +7576,6 @@
   .upload-enabled.focused {
     box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .upload-enabled.focused #q, .upload-enabled.focused .form-control {
-    box-shadow: none;
   }
   /* remap-css rule for "border: 1px solid #c3c8cf" */
   .previewable-comment-form .comment {
@@ -8197,10 +7762,6 @@
   .subnav-search-context .btn {
     color: #afafaf;
   }
-  /* remap-css rule for "color: inherit" */
-  .subnav-search-context .select-menu-item-icon {
-    color: inherit;
-  }
   /* remap-css rule for "border-bottom: 1px solid #e1e4e8" */
   .UnderlineNav {
     border-bottom-color: #343434;
@@ -8268,31 +7829,27 @@
   .flash {
     color: #9daccc;
     background-color: #182030;
-    border-color: rgba(180, 180, 180, .1);
-  }
-  /* remap-css rule for "color: inherit", "background: none" */
-  .flash-close {
-    color: inherit;
-    background: none;
   }
   /* remap-css rule for "color: #735c0f", "background-color: #fffbdd", "border-color: rgba(27,31,35,.15)" */
+  .flash, .flash-warn {
+    border-color: rgba(180, 180, 180, .1);
+  }
   .flash-warn {
     color: #bba257;
     background-color: #261d08;
   }
   /* remap-css rule for "color: #86181d", "background-color: #ffdce0", "border-color: rgba(27,31,35,.15)" */
-  .flash-error, .flash-warn {
-    border-color: rgba(180, 180, 180, .1);
-  }
   .flash-error {
     color: #f44;
     background-color: #300;
   }
   /* remap-css rule for "color: #165c26", "background-color: #dcffe4", "border-color: rgba(27,31,35,.15)" */
+  .flash-error, .flash-success {
+    border-color: rgba(180, 180, 180, .1);
+  }
   .flash-success {
     color: #6cc644;
     background-color: #002800;
-    border-color: rgba(180, 180, 180, .1);
   }
   /* remap-css rule for "background-color: #fffbdd" */
   .warning {
@@ -8332,10 +7889,6 @@
     color: #bebebe;
     background-color: #181818;
     border-color: #181818;
-  }
-  /* remap-css rule for "fill: currentcolor" */
-  .octicon {
-    fill: currentcolor;
   }
   /* remap-css rule for "background-color: #e1e4e8" */
   .Progress, .TimelineItem::before {
@@ -8516,10 +8069,6 @@
   .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
   }
-  /* remap-css rule for "box-shadow: none !important" */
-  .box-shadow-none {
-    box-shadow: none !important;
-  }
   /* remap-css rule for "background-color: #0366d6 !important" */
   .bg-blue {
     background-color: /*[[base-color]]*/ !important;
@@ -8608,7 +8157,7 @@
   }
   /* remap-css rule for "background-color: #6a737d !important" */
   .bg-gray-5 {
-    background-color: #303030 !important;
+    background-color: #555 !important;
   }
   /* remap-css rule for "color: #586069 !important" */
   .color-gray-6 {
@@ -8802,10 +8351,6 @@
   .text-purple {
     color: #8368aa !important;
   }
-  /* remap-css rule for "color: inherit !important" */
-  .text-inherit {
-    color: inherit !important;
-  }
   /* remap-css rule for "color: #586069 !important" */
   .link-gray {
     color: #afafaf !important;
@@ -8872,14 +8417,6 @@
     background-color: /*[[base-color]]*/;
     color: #fff;
   }
-  /* remap-css rule for "color: inherit" */
-  .dropdown-item:focus > .octicon, .dropdown-item:hover > .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  .dropdown-signout {
-    background: none;
-  }
   /* remap-css rule for "border-top: 1px solid #e1e4e8" */
   .dropdown-divider {
     border-top-color: #343434;
@@ -8940,10 +8477,6 @@
   /* remap-css rule for "border-top-color: #444d56" */
   .dropdown-menu-dark .dropdown-divider {
     border-top-color: #484848;
-  }
-  /* remap-css rule for "color: inherit" */
-  .dropdown-menu-dark .dropdown-item {
-    color: inherit;
   }
   /* remap-css rule for "background: #f1f8ff" */
   #site-search-results .search-result:hover {
@@ -9046,19 +8579,10 @@
     background: linear-gradient(#404040, #383838);
   }
   /* remap-css rule for "background: #fff" */
+  #graphiql .graphiql-container .doc-explorer,
   #graphiql .graphiql-container .execute-options,
   #graphiql .graphiql-container .toolbar-menu-items,
   #graphiql .graphiql-container .toolbar-select-options {
-    background: #181818;
-  }
-  /* remap-css rule for "background: none" */
-  @keyframes blink {
-    50% {
-      background: none;
-    }
-  }
-  /* remap-css rule for "background: #fff" */
-  #graphiql .graphiql-container .doc-explorer {
     background: #181818;
   }
   /* remap-css rule for "color: #3b5998" */
@@ -9109,10 +8633,6 @@
   #graphiql .graphiql-container .search-box {
     border-bottom-color: #343434;
   }
-  /* remap-css rule for "fill: currentcolor" */
-  #graphiql .octicon {
-    fill: currentcolor;
-  }
   /* remap-css rule for "background-color: transparent" */
   #graphiql a {
     background-color: transparent;
@@ -9120,14 +8640,6 @@
   /* remap-css rule for "color: #000" */
   #graphiql mark {
     color: #bebebe;
-  }
-  /* remap-css rule for "color: inherit" */
-  #graphiql legend {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  #graphiql ::-webkit-input-placeholder {
-    color: inherit;
   }
   /* remap-css rule for "color: #24292e", "background-color: #fff" */
   #graphiql body {
@@ -9254,7 +8766,7 @@
   /* remap-css rule for "color: #586069", "background-color: rgba(27,31,35,.1)" */
   #graphiql .btn .Counter {
     color: #afafaf;
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(180, 180, 180, .17);
   }
   /* remap-css rule for "color: #24292e", "background-color: #eff3f6", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
   #graphiql .btn {
@@ -9277,12 +8789,11 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   #graphiql .btn.disabled, #graphiql .btn:disabled {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #28a745" */
   #graphiql .btn-primary {
@@ -9303,11 +8814,10 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   #graphiql .btn-primary.disabled, #graphiql .btn-primary:disabled {
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   #graphiql .btn-primary .Counter {
@@ -9323,10 +8833,9 @@
   #graphiql [open] > .btn-blue {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "border-color: rgba(27,31,35,.2)" */
   #graphiql .btn-blue.disabled, #graphiql .btn-blue:disabled {
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   #graphiql .btn-blue .Counter {
@@ -9352,11 +8861,10 @@
   #graphiql .btn-danger:hover, #graphiql [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   #graphiql .btn-danger.disabled, #graphiql .btn-danger:disabled {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   #graphiql .btn-outline {
@@ -9381,12 +8889,11 @@
   #graphiql .btn-outline:focus {
     border-color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
   #graphiql .btn-outline.disabled, #graphiql .btn-outline:disabled {
     color: rgba(230, 230, 230, .3);
     background-color: #181818;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: transparent" */
   #graphiql .btn-link {
@@ -9399,18 +8906,15 @@
   }
   /* remap-css rule for "color: #0366d6", "background-color: #fff" */
   #graphiql .btn-invisible {
-    color: /*[[base-color]]*/;
     background-color: #181818;
   }
-  /* remap-css rule for "color: #0366d6", "background: none", "box-shadow: none" */
-  #graphiql .btn-invisible.selected,
+  /* remap-css rule for "color: #0366d6" */
+  #graphiql .btn-invisible, #graphiql .btn-invisible.selected,
   #graphiql .btn-invisible.zeroclipboard-is-active,
   #graphiql .btn-invisible.zeroclipboard-is-hover,
   #graphiql .btn-invisible:active, #graphiql .btn-invisible:focus,
   #graphiql .btn-invisible:hover {
     color: /*[[base-color]]*/;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #586069", "background: transparent" */
   #graphiql .btn-octicon {
@@ -9472,10 +8976,6 @@
   /* remap-css rule for "border-color: transparent" */
   #graphiql .input-dark {
     border-color: transparent;
-  }
-  /* remap-css rule for "color: inherit" */
-  #graphiql .input-dark::placeholder {
-    color: inherit;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
   #graphiql .input-dark.focus, #graphiql .input-dark:focus {
@@ -9600,10 +9100,6 @@
   #graphiql .upload-enabled.focused {
     box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
-  }
-  /* remap-css rule for "box-shadow: none" */
-  #graphiql .upload-enabled.focused .form-control {
-    box-shadow: none;
   }
   /* remap-css rule for "border: 1px solid #c3c8cf" */
   #graphiql .previewable-comment-form .comment {
@@ -9782,10 +9278,6 @@
   /* remap-css rule for "color: #444d56" */
   #graphiql .subnav-search-context .btn {
     color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  #graphiql .subnav-search-context .select-menu-item-icon {
-    color: inherit;
   }
   /* remap-css rule for "border-bottom: 1px solid #e1e4e8" */
   #graphiql .UnderlineNav {
@@ -10003,10 +9495,6 @@
   #graphiql .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
   }
-  /* remap-css rule for "box-shadow: none !important" */
-  #graphiql .box-shadow-none {
-    box-shadow: none !important;
-  }
   /* remap-css rule for "background-color: #fff !important" */
   #graphiql .bg-white {
     background-color: #181818 !important;
@@ -10099,7 +9587,7 @@
   }
   /* remap-css rule for "background-color: #6a737d !important" */
   #graphiql .bg-gray-5 {
-    background-color: #303030 !important;
+    background-color: #555 !important;
   }
   /* remap-css rule for "color: #586069 !important" */
   #graphiql .color-gray-6 {
@@ -10295,10 +9783,6 @@
   #graphiql .text-purple {
     color: #8368aa !important;
   }
-  /* remap-css rule for "color: inherit !important" */
-  #graphiql .text-inherit {
-    color: inherit !important;
-  }
   /* remap-css rule for "color: #586069 !important" */
   #graphiql .link-gray {
     color: #afafaf !important;
@@ -10340,11 +9824,6 @@
     color: #9daccc;
     background-color: #182030;
     border-color: rgba(180, 180, 180, .1);
-  }
-  /* remap-css rule for "color: inherit", "background: none" */
-  #graphiql .flash-close {
-    color: inherit;
-    background: none;
   }
   /* remap-css rule for "color: #735c0f", "background-color: #fffbdd", "border-color: rgba(27,31,35,.15)" */
   #graphiql .flash-warn {
@@ -10462,15 +9941,6 @@
     background-color: /*[[base-color]]*/;
     color: #fff;
   }
-  /* remap-css rule for "color: inherit" */
-  #graphiql .dropdown-item:focus > .octicon,
-  #graphiql .dropdown-item:hover > .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  #graphiql .dropdown-signout {
-    background: none;
-  }
   /* remap-css rule for "border-top: 1px solid #e1e4e8" */
   #graphiql .dropdown-divider {
     border-top-color: #343434;
@@ -10532,10 +10002,6 @@
   #graphiql .dropdown-menu-dark .dropdown-divider {
     border-top-color: #484848;
   }
-  /* remap-css rule for "color: inherit" */
-  #graphiql .dropdown-menu-dark .dropdown-item {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #24292e" */
   #graphiql .Header {
     background-color: #181818;
@@ -10545,12 +10011,11 @@
     color: #afafaf;
     background-color: #343434;
   }
-  /* remap-css rule for "color: #586069", "background-color: transparent", "border: 1px solid rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: #586069", "background-color: transparent", "border: 1px solid rgba(27,31,35,.15)" */
   #graphiql .Label--outline {
     color: #afafaf;
     background-color: transparent;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #28a745", "border: 1px solid #34d058" */
   #graphiql .Label--outline-green {
@@ -10559,7 +10024,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   #graphiql .Label--gray-darker {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #d15704" */
   #graphiql .Label--orange {
@@ -10567,7 +10032,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   #graphiql .state, #graphiql .State {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #2cbe4e" */
   #graphiql .State--green {
@@ -10581,18 +10046,19 @@
   #graphiql .State--red {
     background-color: #911;
   }
-  /* remap-css rule for "color: #586069" */
+  /* remap-css rule for "color: #586069", "background-color: rgba(27,31,35,.08)" */
   #graphiql .Counter {
     color: #afafaf;
+    background-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "color: #24292e", "background-color: rgba(27,31,35,.15)" */
   #graphiql .Counter--gray-light {
     color: #d2d2d2;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(180, 180, 180, .22);
   }
   /* remap-css rule for "background-color: #6a737d" */
   #graphiql .Counter--gray {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "color: #586069" */
   #graphiql .diffstat {
@@ -10617,10 +10083,6 @@
     border-color: #404040;
     border-bottom-color: #404040;
     box-shadow: inset 0 -2px 0 #383838;
-  }
-  /* remap-css rule for "color: inherit" */
-  #graphiql .markdown-body a:not([href]) {
-    color: inherit;
   }
   /* remap-css rule for "color: #cb2431" */
   #graphiql .markdown-body .absent {
@@ -10823,11 +10285,10 @@
     color: #d2d2d2;
     background-color: #181818;
   }
-  /* remap-css rule for "border-color: #e1e4e8", "box-shadow: none" */
+  /* remap-css rule for "border-color: #e1e4e8" */
   @media (min-width: 544px) {
     #graphiql .SelectMenu-tab[aria-selected="true"] {
       border-color: #343434;
-      box-shadow: none;
     }
   }
   /* remap-css rule for "background-color: #fff" */
@@ -11017,25 +10478,9 @@
   html[prefix] mark {
     color: #bebebe;
   }
-  /* remap-css rule for "color: inherit" */
-  html[prefix] legend {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  html[prefix] ::-webkit-input-placeholder {
-    color: inherit;
-  }
   /* remap-css rule for "border-bottom: 1px solid #ddd" */
   html[prefix] .rule, html[prefix] hr {
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "fill: currentcolor" */
-  html[prefix] .octicon {
-    fill: currentcolor;
-  }
-  /* remap-css rule for "box-shadow: none !important" */
-  html[prefix] .box-shadow-none {
-    box-shadow: none !important;
   }
   /* remap-css rule for "background-color: #fff !important" */
   html[prefix] .bg-white {
@@ -11052,10 +10497,6 @@
   /* remap-css rule for "color: #333 !important" */
   html[prefix] .text-gray-dark {
     color: #bebebe !important;
-  }
-  /* remap-css rule for "color: inherit !important" */
-  html[prefix] .text-inherit {
-    color: inherit !important;
   }
   /* remap-css rule for "color: #767676 !important" */
   html[prefix] .link-gray {
@@ -11148,11 +10589,6 @@
   /* remap-css rule for "background: #fff" */
   html[prefix] .btn-primary .counter {
     background: #181818;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  html[prefix] .btn-primary.disabled, html[prefix] .btn-primary.disabled:hover,
-  html[prefix] .btn-primary:disabled, html[prefix] .btn-primary:disabled:hover {
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #efefef" */
   html[prefix] .btn-danger.disabled, html[prefix] .btn-danger.disabled:hover,
@@ -11318,11 +10754,6 @@
   html[prefix] .subnav-search-context .btn {
     color: #bebebe;
   }
-  /* remap-css rule for "color: inherit" */
-  html[prefix] .flash-close,
-  html[prefix] .subnav-search-context .select-menu-item-icon {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #fff" */
   html[prefix] .avatar-child {
     background-color: #181818;
@@ -11352,14 +10783,6 @@
   html[prefix] .blankslate code {
     background: #181818;
     border-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  html[prefix] .blankslate-clean-background {
-    box-shadow: none;
-  }
-  /* remap-css rule for "color: inherit" */
-  html[prefix] .markdown-body a:not([href]) {
-    color: inherit;
   }
   /* remap-css rule for "color: #555", "border-bottom-color: #bbb" */
   html[prefix] .markdown-body kbd {
@@ -11512,19 +10935,10 @@
   html[prefix] .text-default {
     color: #767676 !important;
   }
-  /* remap-css rule for "color: inherit !important" */
-  html[prefix] .link-no-style, html[prefix] .link-no-style:hover {
-    color: inherit !important;
-  }
   /* remap-css rule for "color: #767676", "background-color: #eee" */
   html[prefix] .btn {
     color: #767676;
     background-color: #242424;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  html[prefix] .btn.disabled, html[prefix] .btn.disabled:hover,
-  html[prefix] .btn:disabled, html[prefix] .btn:disabled:hover {
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: transparent", "border: 1px solid #e5e5e5" */
   html[prefix] [class*="btn-outline"] {
@@ -11927,10 +11341,9 @@
   body.status ._3c5eahGieigDTmRHO-d7l3 .status-dropdown__option::before {
     background-color: #181818;
   }
-  /* remap-css rule for "color: inherit", "background-color: transparent" */
+  /* remap-css rule for "background-color: transparent" */
   body.status .ak-editor-wrapper pre code,
   body.status .markdown-display pre code {
-    color: inherit;
     background-color: transparent;
   }
   /* remap-css rule for "border: 1px solid #ddd" */
@@ -11994,10 +11407,6 @@
   body.status .well {
     border-color: #343434;
   }
-  /* remap-css rule for "color: inherit" */
-  body.status a.no-link, body.status a.no-link:hover {
-    color: inherit;
-  }
   /* remap-css rule for "border-top: 1px solid #e5e5e5" */
   body.status hr {
     border-top-color: #343434;
@@ -12006,9 +11415,8 @@
   body.status pre.code-display {
     background-color: #202020;
   }
-  /* remap-css rule for "color: inherit", "background-color: transparent" */
+  /* remap-css rule for "background-color: transparent" */
   body.status pre.code-display code {
-    color: inherit;
     background-color: transparent;
   }
   /* remap-css rule for "border: 1px solid #bbb" */
@@ -12113,17 +11521,9 @@
   body.status .es-highlight {
     color: #949494;
   }
-  /* remap-css rule for "box-shadow: none !important" */
-  body.status #es-search-field {
-    box-shadow: none !important;
-  }
   /* remap-css rule for "border: 1px solid #bbb" */
   body.status .grouped-items-selector {
     border-color: #484848;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.status .grouped-items-selector.inline {
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: #ddd" */
   body.status .grouped-items-selector.inline .border-color {
@@ -12268,15 +11668,7 @@
   /* remap-css rule for "background-color: #fff" */
   body.status .cpt-tabs:not(.unstyled).mobile li.active a,
   body.status .cpt-tabs:not(.unstyled).mobile li:not(.active) a:hover,
-  body.status .cpt-tabs:not(.unstyled).mobile li a {
-    background-color: #181818;
-  }
-  /* remap-css rule for "box-shadow: none", "background: none" */
-  body.status .cpt-toggle {
-    box-shadow: none;
-    background: none;
-  }
-  /* remap-css rule for "background-color: #fff" */
+  body.status .cpt-tabs:not(.unstyled).mobile li a,
   body.status .cpt-toggle .bubble {
     background-color: #181818;
   }
@@ -12313,9 +11705,8 @@
   body.status .cpt-button .caret {
     border-top-color: #181818;
   }
-  /* remap-css rule for "box-shadow: none", "background: transparent" */
+  /* remap-css rule for "background: transparent" */
   body.status .cpt-button.style-outline {
-    box-shadow: none;
     background: transparent;
   }
   /* remap-css rule for "border-color: #fff" */
@@ -12325,14 +11716,6 @@
   /* remap-css rule for "border-color: #bbb" */
   body.status .cpt-button.style-outline.color-grey {
     border-color: #484848;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.status .cpt-button.disabled {
-    box-shadow: none;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.status .domain-helper .domain-header #domain-folder {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #eee" */
   body.status .domain-helper .dns-records .dns-records-header {
@@ -12387,13 +11770,9 @@
   }
   /* remap-css rule for "background-color: #fff" */
   body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip,
-  body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip #box-arrow {
-    background-color: #181818;
-  }
-  /* remap-css rule for "background-color: #fff", "box-shadow: none" */
+  body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip #box-arrow,
   body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip .tooltip-box {
     background-color: #181818;
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: #e0e0e0", "color: #333" */
   body.status .layout-content.status-internal {
@@ -12429,14 +11808,6 @@
   /* remap-css rule for "color: #000" */
   body.status mark {
     color: #bebebe;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.status legend {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.status ::-webkit-input-placeholder {
-    color: inherit;
   }
   /* remap-css rule for "border-bottom: 1px solid #dfe2e5" */
   body.status .rule, body.status hr {
@@ -12514,10 +11885,6 @@
   /* remap-css rule for "box-shadow: 0 1px 5px rgba(27,31,35,.15) !important" */
   body.status .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
-  }
-  /* remap-css rule for "box-shadow: none !important" */
-  body.status .box-shadow-none {
-    box-shadow: none !important;
   }
   /* remap-css rule for "background-color: #fff !important" */
   body.status .bg-white {
@@ -12609,10 +11976,6 @@
   body.status .text-purple {
     color: #8368aa !important;
   }
-  /* remap-css rule for "color: inherit !important" */
-  body.status .text-inherit {
-    color: inherit !important;
-  }
   /* remap-css rule for "color: #dbab09 !important" */
   body.status .bg-pending, body.status .text-pending {
     color: #cb4 !important;
@@ -12652,10 +12015,6 @@
   /* remap-css rule for "background-color: #f6f8fa" */
   body {
     background-color: #202020;
-  }
-  /* remap-css rule for "fill: currentcolor" */
-  body.status .octicon {
-    fill: currentcolor;
   }
   /* remap-css rule for "border-color: rgba(0,0,0,.125)" */
   body.status .layout-content.status .border-color,
@@ -12865,7 +12224,7 @@
   }
   /* remap-css rule for "background: #6a737d" */
   body.status .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
-    background: #303030;
+    background: #555;
   }
   /* remap-css rule for "border-right: 1px solid #e1e4e8 !important", "border-left: 1px solid #e1e4e8 !important" */
   body[class="page-responsive"] .border-x {
@@ -13017,10 +12376,6 @@
   body[class="page-responsive"] .box-shadow-medium {
     box-shadow: 0 1px 5px #000 !important;
   }
-  /* remap-css rule for "box-shadow: none !important" */
-  body[class="page-responsive"] .box-shadow-none {
-    box-shadow: none !important;
-  }
   /* remap-css rule for "background-color: #fff !important" */
   body[class="page-responsive"] .bg-white {
     background-color: #181818 !important;
@@ -13113,7 +12468,7 @@
   }
   /* remap-css rule for "background-color: #6a737d !important" */
   body[class="page-responsive"] .bg-gray-5 {
-    background-color: #303030 !important;
+    background-color: #555 !important;
   }
   /* remap-css rule for "color: #586069 !important" */
   body[class="page-responsive"] .color-gray-6 {
@@ -13314,10 +12669,6 @@
   body[class="page-responsive"] .text-purple {
     color: #8368aa !important;
   }
-  /* remap-css rule for "color: inherit !important" */
-  body[class="page-responsive"] .text-inherit {
-    color: inherit !important;
-  }
   /* remap-css rule for "color: #586069 !important" */
   body[class="page-responsive"] .link-gray {
     color: #afafaf !important;
@@ -13379,14 +12730,6 @@
   /* remap-css rule for "border-color: transparent" */
   body[class="page-responsive"] .input-dark {
     border-color: transparent;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .input-dark::-webkit-input-placeholder {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .input-dark::placeholder {
-    color: inherit;
   }
   /* remap-css rule for "border-color: rgba(27,31,35,.3)" */
   body[class="page-responsive"] .input-dark.focus,
@@ -13514,12 +12857,11 @@
     color: #afafaf;
     background-color: #343434;
   }
-  /* remap-css rule for "color: #586069", "background-color: initial", "border: 1px solid rgba(27,31,35,.15)", "box-shadow: none" */
+  /* remap-css rule for "color: #586069", "background-color: initial", "border: 1px solid rgba(27,31,35,.15)" */
   body[class="page-responsive"] .Label--outline {
     color: #afafaf;
     background-color: initial;
     border-color: rgba(180, 180, 180, .1);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #28a745", "border: 1px solid #34d058" */
   body[class="page-responsive"] .Label--outline-green {
@@ -13528,7 +12870,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   body[class="page-responsive"] .Label--gray-darker {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #d15704" */
   body[class="page-responsive"] .Label--orange {
@@ -13536,7 +12878,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   body[class="page-responsive"] .state, body[class="page-responsive"] .State {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #2cbe4e" */
   body[class="page-responsive"] .State--green {
@@ -13550,18 +12892,19 @@
   body[class="page-responsive"] .State--red {
     background-color: #911;
   }
-  /* remap-css rule for "color: #586069" */
+  /* remap-css rule for "color: #586069", "background-color: rgba(27,31,35,.08)" */
   body[class="page-responsive"] .Counter {
     color: #afafaf;
+    background-color: rgba(180, 180, 180, .15);
   }
   /* remap-css rule for "color: #24292e", "background-color: rgba(27,31,35,.15)" */
   body[class="page-responsive"] .Counter--gray-light {
     color: #d2d2d2;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(180, 180, 180, .22);
   }
   /* remap-css rule for "background-color: #6a737d" */
   body[class="page-responsive"] .Counter--gray {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "color: #586069" */
   body[class="page-responsive"] .diffstat {
@@ -13613,15 +12956,6 @@
     background-color: /*[[base-color]]*/;
     color: #fff;
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .dropdown-item:focus > .octicon,
-  body[class="page-responsive"] .dropdown-item:hover > .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  body[class="page-responsive"] .dropdown-signout {
-    background: none;
-  }
   /* remap-css rule for "border-top: 1px solid #e1e4e8" */
   body[class="page-responsive"] .dropdown-divider {
     border-top-color: #343434;
@@ -13663,10 +12997,6 @@
   body[class="page-responsive"] .dropdown-menu-dark .dropdown-divider {
     border-top-color: #484848;
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .dropdown-menu-dark .dropdown-item {
-    color: inherit;
-  }
   /* remap-css rule for "border-bottom: 1px solid #eaecef" */
   body[class="page-responsive"] .subnav-bordered {
     border-bottom-color: #343434;
@@ -13700,10 +13030,6 @@
   /* remap-css rule for "color: #444d56" */
   body[class="page-responsive"] .subnav-search-context .btn {
     color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .subnav-search-context .select-menu-item-icon {
-    color: inherit;
   }
   /* remap-css rule for "border-bottom: 1px solid #e1e4e8" */
   body[class="page-responsive"] .UnderlineNav {
@@ -13749,10 +13075,6 @@
     background-color: #181818;
     border-color: #404040;
     box-shadow: inset 0 -2px 0 #383838;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .markdown-body a:not([href]) {
-    color: inherit;
   }
   /* remap-css rule for "color: #cb2431" */
   body[class="page-responsive"] .markdown-body .absent {
@@ -13961,17 +13283,9 @@
   body[class="page-responsive"] .Box-body .help {
     color: #afafaf;
   }
-  /* remap-css rule for "background: none" */
-  body[class="page-responsive"] .content-attachment-details[open] .max--md .content-attachment-content--gradient {
-    background: none;
-  }
   /* remap-css rule for "background: #dfe2e5" */
   body[class="page-responsive"] .render-container {
     background: #383838;
-  }
-  /* remap-css rule for "background: none" */
-  body[class="page-responsive"] .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
-    background: none;
   }
   /* remap-css rule for "color: #444d56", "background-color: #f6f8fa", "border-color: rgba(27,31,35,.15)" */
   body[class="page-responsive"] .render-notice {
@@ -13982,10 +13296,6 @@
   /* remap-css rule for "border-bottom: 1px solid #e1e4e8" */
   body[class="page-responsive"] .pagehead {
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .pagehead-heading {
-    color: inherit;
   }
   /* remap-css rule for "color: #24292e" */
   body[class="page-responsive"] .pagehead-actions > li {
@@ -14017,10 +13327,6 @@
   body[class="page-responsive"] .pagehead-tabs-item.selected {
     color: #d2d2d2;
     background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .pagehead-tabs-item.selected > .octicon {
-    color: inherit;
   }
   /* remap-css rule for "color: #586069" */
   body[class="page-responsive"] .repohead h1 {
@@ -14054,18 +13360,10 @@
     color: #d2d2d2;
     background-color: #181818;
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .reponav-item.selected .octicon {
-    color: inherit;
-  }
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   body[class="page-responsive"] .reponav-wrapper .reponav,
   body[class="page-responsive"] .reponav-wrapper .reponav-item {
     color: hsla(0, 0%, 100%, .25);
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .reponav-wrapper .reponav-item .Counter {
-    color: inherit;
   }
   /* remap-css rule for "background-color: initial" */
   body[class="page-responsive"] .reponav-wrapper .reponav-item.selected {
@@ -14132,16 +13430,11 @@
   .page-responsive .HeaderMenu--logged-out {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: initial", "box-shadow: none" */
+  /* remap-css rule for "background-color: initial" */
   @media (min-width: 1012px) {
     .page-responsive .HeaderMenu--logged-out {
       background-color: initial;
-      box-shadow: none;
     }
-  }
-  /* remap-css rule for "box-shadow: none" */
-  .page-responsive .HeaderMenu--logged-out .dropdown-menu {
-    box-shadow: none;
   }
   /* remap-css rule for "border: 1px solid #eaecef" */
   .page-responsive .HeaderMenu--logged-out .header-search-wrapper {
@@ -14150,12 +13443,6 @@
   /* remap-css rule for "color: #24292e" */
   .page-responsive .HeaderMenu--logged-out .header-search-input {
     color: #d2d2d2;
-  }
-  /* remap-css rule for "color: inherit" */
-  @media (min-width: 1012px) {
-    .page-responsive .HeaderMenu--logged-out .header-search-input {
-      color: inherit;
-    }
   }
   /* remap-css rule for "color: #586069 !important" */
   .page-responsive .HeaderMenu--logged-out .header-search-input::-webkit-input-placeholder {
@@ -14239,21 +13526,13 @@
   body[class="page-responsive"] .feature-preview-indicator {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
-  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)", "box-shadow: none" */
+  /* remap-css rule for "background-color: hsla(0,0%,100%,.125)" */
   body[class="page-responsive"] .header-search-wrapper {
     background-color: hsla(0, 0%, 100%, .05);
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: hsla(0,0%,100%,.175)", "box-shadow: none" */
+  /* remap-css rule for "background-color: hsla(0,0%,100%,.175)" */
   body[class="page-responsive"] .header-search-wrapper.focus {
     background-color: hsla(0, 0%, 100%, .1);
-    box-shadow: none;
-  }
-  /* remap-css rule for "color: inherit", "background: none", "box-shadow: none" */
-  body[class="page-responsive"] .header-search-input {
-    color: inherit;
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   body[class="page-responsive"] .header-search-input::-webkit-input-placeholder {
@@ -14262,10 +13541,6 @@
   /* remap-css rule for "color: hsla(0,0%,100%,.75)" */
   body[class="page-responsive"] .header-search-input::placeholder {
     color: hsla(0, 0%, 100%, .25);
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body[class="page-responsive"] .header-search-input:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #24292e !important", "background-color: #fafbfc" */
   body[class="page-responsive"] .jump-to-field-active {
@@ -14311,17 +13586,9 @@
     color: #d2d2d2;
     background-color: #181818;
   }
-  /* remap-css rule for "background: none" */
-  body[class="page-responsive"] button {
-    background: none;
-  }
   /* remap-css rule for "color: #0366d6" */
   body[class="page-responsive"] a {
     color: /*[[base-color]]*/;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] a:active {
-    color: inherit;
   }
   /* remap-css rule for "background: #e1e4e8", "border-color: transparent" */
   body[class="page-responsive"] hr {
@@ -14375,20 +13642,8 @@
   body[class="page-responsive"] footer li {
     color: #757575;
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] footer .switch-to-desktop,
-  body[class="page-responsive"] footer li a {
-    color: inherit;
-  }
   /* remap-css rule for "color: #586069" */
-  body[class="page-responsive"] .protip {
-    color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .switcher-toggle {
-    color: inherit;
-  }
-  /* remap-css rule for "color: #586069" */
+  body[class="page-responsive"] .protip,
   body[class="page-responsive"] .switcher-icon,
   body[class="page-responsive"] .switcher-icon-close,
   body[class="page-responsive"] .switcher-icon-open,
@@ -14469,10 +13724,6 @@
   body[class="page-responsive"] .list-item.read .list-item-title {
     color: #afafaf;
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .list-item mark {
-    color: inherit;
-  }
   /* remap-css rule for "color: #0366d6" */
   body[class="page-responsive"] .list-item-title {
     color: /*[[base-color]]*/;
@@ -14482,11 +13733,6 @@
     color: #afafaf;
     background-color: #202020;
     border-top-color: #343434;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .list-heading .btn-link,
-  body[class="page-responsive"] .list-heading a {
-    color: inherit;
   }
   /* remap-css rule for "color: #c6cbd1" */
   body[class="page-responsive"] .list-action-form > .btn-link {
@@ -14560,14 +13806,13 @@
     background-color: #404040;
     border-color: rgba(180, 180, 180, .3);
   }
-  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   body[class="page-responsive"] .btn.disabled,
   body[class="page-responsive"] .btn:disabled,
   body[class="page-responsive"] .btn[aria-disabled="true"] {
     color: rgba(210, 210, 210, .4);
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #28a745", "background-image: linear-gradient(-180deg, #34d058, #28a745 90%)" */
   body[class="page-responsive"] .btn-primary {
@@ -14594,14 +13839,13 @@
     background: linear-gradient(180deg, #595 0%, #283 100%);
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "color: hsla(0,0%,100%,.75)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
   body[class="page-responsive"] .btn-primary.disabled,
   body[class="page-responsive"] .btn-primary:disabled,
   body[class="page-responsive"] .btn-primary[aria-disabled="true"] {
     color: hsla(0, 0%, 100%, .25);
     background: #040;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body[class="page-responsive"] .btn-primary .Counter {
@@ -14628,13 +13872,12 @@
   body[class="page-responsive"] [open] > .btn-danger {
     border-color: rgba(180, 180, 180, .4);
   }
-  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)", "box-shadow: none" */
+  /* remap-css rule for "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
   body[class="page-responsive"] .btn-danger.disabled,
   body[class="page-responsive"] .btn-danger:disabled,
   body[class="page-responsive"] .btn-danger[aria-disabled="true"] {
     background-color: #343434;
     border-color: rgba(180, 180, 180, .15);
-    box-shadow: none;
   }
   /* remap-css rule for "color: #0366d6", "background-color: initial" */
   body[class="page-responsive"] .btn-link {
@@ -14671,10 +13914,6 @@
   /* remap-css rule for "color: #a3aab1" */
   body[class="page-responsive"] .diff-view .file .meta .octicon-file {
     color: #757575;
-  }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .diff-view .file .file-label a {
-    color: inherit;
   }
   /* remap-css rule for "color: #444d56" */
   body[class="page-responsive"] .diff-view .file .empty {
@@ -15069,7 +14308,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   body[class="page-responsive"] .pagination .current {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "color: #c6cbd1" */
   body[class="page-responsive"] .pagination .disabled,
@@ -15192,18 +14431,10 @@
   body[class="page-responsive"] .reponav-item {
     color: hsla(0, 0%, 100%, .25);
   }
-  /* remap-css rule for "color: inherit" */
-  body[class="page-responsive"] .reponav-item .Counter {
-    color: inherit;
-  }
   /* remap-css rule for "color: #586069", "background: #24292e" */
   body[class="page-responsive"] .server-stats {
     color: #afafaf;
     background: #181818;
-  }
-  /* remap-css rule for "fill: currentcolor" */
-  body[class="page-responsive"] .octicon {
-    fill: currentcolor;
   }
   /* remap-css rule for "color: #586069", "background-color: #fff", "border-top: 1px solid #e1e4e8" */
   body[class="page-responsive"] .inbox-unavailable,
@@ -15317,16 +14548,8 @@
     border-top-color: #343434;
   }
   /* remap-css rule for "color: #666" */
-  body[data-render-url] .render-message a {
-    color: #949494;
-  }
-  /* remap-css rule for "background: none" */
-  body[data-render-url] .render-view-modes {
-    background: none;
-  }
-  /* remap-css rule for "background: none", "color: #666" */
+  body[data-render-url] .render-message a,
   body[data-render-url] .render-view-modes li {
-    background: none;
     color: #949494;
   }
   /* remap-css rule for "border-top: 1px solid #fff" */
@@ -15358,17 +14581,9 @@
     background-color: #181818;
     border-color: #404040;
   }
-  /* remap-css rule for "background: none" */
-  html.refined-github .dashboard .js-all-activity-header + div .Box {
-    background: none;
-  }
   /* remap-css rule for "border-top: 1px solid #e1e4e8" */
   html.refined-github .dashboard-rollup-items .body {
     border-top-color: #343434;
-  }
-  /* remap-css rule for "color: inherit" */
-  html.refined-github .mergeability-details .js-details-container .status-meta {
-    color: inherit;
   }
   /* remap-css rule for "color: #666" */
   html.refined-github body > .footer li a {
@@ -15378,12 +14593,6 @@
   html.refined-github .repository-content #readme:not(.blob) .Box-header {
     background-color: transparent;
   }
-  /* remap-css rule for "background: none !important" */
-  html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
-  html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
-  html.refined-github .rgh-no-navigation-highlight .navigation-focus td {
-    background: none !important;
-  }
   /* remap-css rule for "background: linear-gradient(#34d058, #28a745)" */
   html.refined-github .notification-indicator[data-ga-click$=":read"] .unread {
     background: linear-gradient(#34d058, #28a745);
@@ -15392,19 +14601,10 @@
   html.refined-github .rgh-useless-comments-note {
     color: #afafaf;
   }
-  /* remap-css rule for "color: inherit" */
-  html.refined-github .repohead h1 .commit-build-statuses .octicon {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none", "border-color: currentcolor", "background-color: #24292e" */
+  /* remap-css rule for "border-color: currentcolor", "background-color: #24292e" */
   html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches {
-    background: none;
     border-color: currentcolor;
     background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches-item {
-    color: inherit;
   }
   /* remap-css rule for "border-top: 1px solid #e1e4e8", "border-bottom: 1px solid #e1e4e8" */
   html.refined-github button.reaction-summary-item {
@@ -15426,34 +14626,9 @@
   html.refined-github .rgh-split-issue-pr-combined.selected:hover {
     background-color: #202020;
   }
-  /* remap-css rule for "color: inherit" */
-  html.refined-github .rgh-comments-indicator button {
-    color: inherit;
-  }
   /* remap-css rule for "border: 1px solid #c0d3eb" */
   html.refined-github .rgh-collaborator {
     border-color: #246;
-  }
-  /* remap-css rule for "color: inherit" */
-  html.refined-github button.rgh-quick-mention:not(:hover):not(:focus) {
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .ui-dialog .ui-dialog-content {
-    background: none;
-  }
-  /* remap-css rule for "background: none", "color: inherit" */
-  body.zh_logged_in .ui-spinner-input {
-    background: none;
-    color: inherit;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .ui-tabs .ui-tabs-panel {
-    background: none;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .sidebar-zh-estimate .select-menu .zh-select-menu-clear-item .octicon {
-    color: inherit;
   }
   /* remap-css rule for "border-top: 1px solid #eee" */
   body.zh_logged_in #new_issue .discussion-sidebar h3 {
@@ -15489,10 +14664,9 @@
   body.zh_logged_in .zh-estimate-create-item {
     border-top-color: #343434;
   }
-  /* remap-css rule for "color: inherit", "background-color: #f4f4f4" */
+  /* remap-css rule for "background-color: #f4f4f4" */
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus,
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus.selected {
-    color: inherit;
     background-color: #242424;
   }
   /* remap-css rule for "background-color: #f5f5f5" */
@@ -15521,10 +14695,6 @@
   body.zh_logged_in .zh-pipeline-heading-container {
     background: #242424;
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none !important" */
-  body.zh_logged_in .zh-pipeline-heading-edit {
-    box-shadow: none !important;
   }
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zh-power .zh-pipeline-options {
@@ -15653,12 +14823,11 @@
     border-color: transparent;
     background-color: transparent;
   }
-  /* remap-css rule for "background-color: #fff", "border: 1px solid #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #fff", "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn.selected,
   body.zh_logged_in .zh-repo-switcher .zh-repo-switcher-btn:hover {
     background-color: #181818;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zh-timeline-comment {
@@ -15788,10 +14957,9 @@
   body.zh_logged_in .zh-epic-issue-progress-text strong {
     color: #bebebe;
   }
-  /* remap-css rule for "border-bottom: 1px solid #eee", "color: inherit" */
+  /* remap-css rule for "border-bottom: 1px solid #eee" */
   body.zh_logged_in .zh-select-menu-item {
     border-bottom-color: #343434;
-    color: inherit;
   }
   /* remap-css rule for "background-color: #0366d6" */
   body.zh_logged_in .zh-select-menu-item.navigation-focus,
@@ -15811,10 +14979,6 @@
   /* remap-css rule for "color: #586069" */
   body.zh_logged_in .zh-discussion-sidebar-heading {
     color: #afafaf;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .zh-discussion-sidebar-toggle {
-    background: none;
   }
   /* remap-css rule for "background-color: #f5f5f5" */
   body.zh_logged_in .zh-select-menu-footer {
@@ -16028,10 +15192,9 @@
     background-color: #202020;
     border-color: #343434;
   }
-  /* remap-css rule for "color: inherit", "background-color: #f4f4f4" */
+  /* remap-css rule for "background-color: #f4f4f4" */
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus,
   body.zh_logged_in .zh-webapp.zh-epic-creator-page-visible .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus.selected {
-    color: inherit;
     background-color: #242424;
   }
   /* remap-css rule for "background-color: #f5f5f5" */
@@ -16055,37 +15218,19 @@
     color: #bebebe;
   }
   /* remap-css rule for "background-color: #fff" */
+  body.zh_logged_in .SingleDatePicker_picker,
+  body.zh_logged_in .SingleDatePicker_picker__fullScreenPortal,
   body.zh_logged_in .SingleDatePickerInput {
     background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .SingleDatePickerInput_calendarIcon,
-  body.zh_logged_in .SingleDatePickerInput_clearDate {
-    color: inherit;
-  }
-  /* remap-css rule for "background-color: #fff" */
-  body.zh_logged_in .SingleDatePicker_picker,
-  body.zh_logged_in .SingleDatePicker_picker__fullScreenPortal {
-    background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .DayPickerKeyboardShortcuts_buttonReset,
-  body.zh_logged_in .SingleDatePicker_closeButton {
-    color: inherit;
   }
   /* remap-css rule for "background: #fff" */
   body.zh_logged_in .CalendarDay__default,
   body.zh_logged_in .DayPickerKeyboardShortcuts_panel {
     background: #181818;
   }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .CalendarDay__default:hover {
-    color: inherit;
-  }
-  /* remap-css rule for "background: #f4f5f5", "color: inherit" */
+  /* remap-css rule for "background: #f4f5f5" */
   body.zh_logged_in .CalendarDay__hovered_offset {
     background: #242424;
-    color: inherit;
   }
   /* remap-css rule for "background: #fff" */
   body.zh_logged_in .CalendarDay__blocked_minimum_nights,
@@ -16103,17 +15248,10 @@
     background-color: #181818;
   }
   /* remap-css rule for "background: #fff" */
-  body.zh_logged_in .DayPicker, body.zh_logged_in .DayPicker__horizontal,
+  body.zh_logged_in .DateInput, body.zh_logged_in .DayPicker,
+  body.zh_logged_in .DayPicker__horizontal,
+  body.zh_logged_in .DayPicker_weekHeader__verticalScrollable,
   body.zh_logged_in .DayPickerNavigation_button__verticalDefault {
-    background: #181818;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .DayPicker_portal__horizontal {
-    box-shadow: none;
-  }
-  /* remap-css rule for "background: #fff" */
-  body.zh_logged_in .DateInput,
-  body.zh_logged_in .DayPicker_weekHeader__verticalScrollable {
     background: #181818;
   }
   /* remap-css rule for "background-color: #fff", "border-bottom: 2px solid transparent" */
@@ -16126,26 +15264,10 @@
     background: #181818;
   }
   /* remap-css rule for "background-color: #fff" */
+  body.zh_logged_in .DateRangePicker_picker,
+  body.zh_logged_in .DateRangePicker_picker__fullScreenPortal,
   body.zh_logged_in .DateRangePickerInput {
     background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .DateRangePickerInput_calendarIcon,
-  body.zh_logged_in .DateRangePickerInput_clearDates {
-    color: inherit;
-  }
-  /* remap-css rule for "background-color: #fff" */
-  body.zh_logged_in .DateRangePicker_picker,
-  body.zh_logged_in .DateRangePicker_picker__fullScreenPortal {
-    background-color: #181818;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .DateRangePicker_closeButton {
-    color: inherit;
-  }
-  /* remap-css rule for "fill: currentcolor" */
-  body.zh_logged_in .ReactVirtualized__Table__sortableHeaderIcon {
-    fill: currentcolor;
   }
   /* remap-css rule for "border-bottom: 1px solid #ddd" */
   body.zh_logged_in .zhc-markdown h1, body.zh_logged_in .zhc-markdown h2 {
@@ -16487,10 +15609,6 @@
   body.zh_logged_in .zhc-input--disabled {
     background: #242424;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-input--error:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "background-color: #f4f4f4", "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhu-blankslate {
     background-color: #242424;
@@ -16499,10 +15617,6 @@
   /* remap-css rule for "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhu-checkbox {
     border-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhu-checkbox:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333 !important" */
   body.zh_logged_in .zhu-color-text {
@@ -16680,10 +15794,6 @@
     background-color: #181818;
     border-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-board-loading__message .zhc-spinner-outline {
-    box-shadow: none;
-  }
   /* remap-css rule for "background-color: #f8f8f8" */
   body.zh_logged_in .zhc-board-onboarding--mobile {
     background-color: #202020;
@@ -16761,30 +15871,27 @@
   body.zh_logged_in .zhc-button:hover {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button[disabled],
   body.zh_logged_in .zhc-button[disabled]:active,
   body.zh_logged_in .zhc-button[disabled]:focus,
   body.zh_logged_in .zhc-button[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
-  /* remap-css rule for "color: #333", "background-color: transparent", "border-color: transparent", "box-shadow: none" */
+  /* remap-css rule for "color: #333", "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button.zhc-button--variant-text {
     color: #bebebe;
     background-color: transparent;
     border-color: transparent;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333", "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button.zhc-button--variant-text:active,
@@ -16794,29 +15901,26 @@
     background-color: transparent;
     border-color: transparent;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-primary[disabled],
   body.zh_logged_in .zhc-button--color-primary[disabled]:active,
   body.zh_logged_in .zhc-button--color-primary[disabled]:focus,
   body.zh_logged_in .zhc-button--color-primary[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: transparent", "border-color: transparent", "box-shadow: none" */
+  /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text {
     background-color: transparent;
     border-color: transparent;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text:active,
@@ -16830,14 +15934,13 @@
     background-color: #181818;
     border-color: #8368aa;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-outlined[disabled],
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-outlined[disabled]:active,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-outlined[disabled]:focus,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-outlined[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff", "border-color: #5e60ba" */
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-outlined:active,
@@ -16858,30 +15961,27 @@
   body.zh_logged_in .zhc-button--color-secondary:hover {
     background-color: #343434;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary[disabled],
   body.zh_logged_in .zhc-button--color-secondary[disabled]:active,
   body.zh_logged_in .zhc-button--color-secondary[disabled]:focus,
   body.zh_logged_in .zhc-button--color-secondary[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
-  /* remap-css rule for "color: #666", "background-color: transparent", "border-color: transparent", "box-shadow: none" */
+  /* remap-css rule for "color: #666", "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text {
     color: #949494;
     background-color: transparent;
     border-color: transparent;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333", "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text:active,
@@ -16898,14 +15998,13 @@
     color: #bebebe;
     border-color: #343434;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined[disabled],
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined[disabled]:active,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined[disabled]:focus,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined:active,
@@ -16913,29 +16012,26 @@
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined:hover {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-action[disabled],
   body.zh_logged_in .zhc-button--color-action[disabled]:active,
   body.zh_logged_in .zhc-button--color-action[disabled]:focus,
   body.zh_logged_in .zhc-button--color-action[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: transparent", "border-color: transparent", "box-shadow: none" */
+  /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text {
     background-color: transparent;
     border-color: transparent;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text:active,
@@ -16948,14 +16044,13 @@
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined[disabled],
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined[disabled]:active,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined[disabled]:focus,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined:active,
@@ -16963,29 +16058,26 @@
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-outlined:hover {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-danger[disabled],
   body.zh_logged_in .zhc-button--color-danger[disabled]:active,
   body.zh_logged_in .zhc-button--color-danger[disabled]:focus,
   body.zh_logged_in .zhc-button--color-danger[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: transparent", "border-color: transparent", "box-shadow: none" */
+  /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text {
     background-color: transparent;
     border-color: transparent;
-    box-shadow: none;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: transparent", "border-color: transparent" */
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text:active,
@@ -16998,14 +16090,13 @@
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined {
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9", "box-shadow: none" */
+  /* remap-css rule for "background-color: #f8f8f8", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined[disabled],
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined[disabled]:active,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined[disabled]:focus,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-outlined:active,
@@ -17027,10 +16118,6 @@
     background-color: #181818;
     background-color: #202020;
     border-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-button-group > * {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-cancellation-notice__text {
@@ -17174,10 +16261,6 @@
   body.zh_logged_in .zhc-checkout-box__input {
     border-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-checkout-box__input input:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-checkout-box__input-button {
     color: #949494;
@@ -17274,12 +16357,6 @@
   body.zh_logged_in .zhc-consent-form__checkbox {
     background-color: #202020;
   }
-  /* remap-css rule for "box-shadow: none" */
-  @media (min-width: 1020px) {
-    body.zh_logged_in .zhc-control-chart .zhc-control-chart__left-axis {
-      box-shadow: none;
-    }
-  }
   /* remap-css rule for "background-color: transparent" */
   body.zh_logged_in .zhc-control-chart-report .zhc-dropdown--ccr-pipelines .zhc-selection-item--is-disabled {
     background-color: transparent;
@@ -17287,12 +16364,6 @@
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-control-chart-report__chart_stat .zhc-chart-emphasis {
     color: #bebebe;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  @media (min-width: 1020px) {
-    body.zh_logged_in .zhc-cumulative-chart__left-axis {
-      box-shadow: none;
-    }
   }
   /* remap-css rule for "border: 1px solid" */
   body.zh_logged_in .zhc-color-square {
@@ -17340,20 +16411,9 @@
     }
   }
   /* remap-css rule for "color: #666" */
+  body.zh_logged_in .DateInput,
+  body.zh_logged_in .DateInput .DateInput_displayText__has-input,
   body.zh_logged_in .DateRangePickerInput_arrow::after {
-    color: #949494;
-  }
-  /* remap-css rule for "background: none", "color: #666" */
-  body.zh_logged_in .DateInput {
-    background: none;
-    color: #949494;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .DateInput .DateInput_input {
-    background: none;
-  }
-  /* remap-css rule for "color: #666" */
-  body.zh_logged_in .DateInput .DateInput_displayText__has-input {
     color: #949494;
   }
   /* remap-css rule for "color: #666", "border: 1px solid #e9e9e9" */
@@ -17398,10 +16458,6 @@
     body.zh_logged_in .zhc-dependency-issue-selector__search .zhc-search {
       background-color: transparent;
     }
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-dependency-issue-selector__search .zhc-search input[type="text"]:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zhc-dependency-issue-selector__issues__container {
@@ -17560,10 +16616,6 @@
   body.zh_logged_in .zhc-integrations .zhc-integrations-section input {
     background: #242424;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-integrations-section .zhc-integrations-section__form--error input:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-integrations-section .zhc-integrations-section__form-label {
     color: #949494;
@@ -17623,10 +16675,6 @@
   /* remap-css rule for "border-bottom: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-invitees-list {
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-invitees-list input:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-invitee-input {
@@ -17691,10 +16739,6 @@
     background-color: #202020;
     border-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-issue-cards:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "background: #f4f4f4" */
   body.zh_logged_in .zhc-issue-cards::-webkit-scrollbar-track {
     background: #242424;
@@ -17744,7 +16788,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   body.zh_logged_in .zhc-discussion-events__icon--grey-dark {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #24292e" */
   body.zh_logged_in .zhc-discussion-events__icon--grey-darker {
@@ -17790,22 +16834,8 @@
     border-color: #343434;
   }
   /* remap-css rule for "color: #333" */
-  body.zh_logged_in .zhc-issue-item__title {
-    color: #bebebe;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .zhc-sidebar-assignee-selector .zhc-sidebar-assignee-selector_active_assignees {
-    background: none;
-  }
-  /* remap-css rule for "color: #333" */
-  body.zh_logged_in .zhc-sidebar-assign-yourself--read-only:hover {
-    color: #bebebe;
-  }
-  /* remap-css rule for "background: none" */
-  body.zh_logged_in .zhc-sidebar-selector {
-    background: none;
-  }
-  /* remap-css rule for "color: #333" */
+  body.zh_logged_in .zhc-issue-item__title,
+  body.zh_logged_in .zhc-sidebar-assign-yourself--read-only:hover,
   body.zh_logged_in .zhc-sidebar-epic-selector .zhc-sidebar-active-epics a,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__label {
     color: #bebebe;
@@ -17815,15 +16845,8 @@
     color: #afafaf;
   }
   /* remap-css rule for "color: #333" */
-  body.zh_logged_in .zhc-sidebar-active-pipeline__name {
-    color: #bebebe;
-  }
-  /* remap-css rule for "color: #333", "background: none" */
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button {
-    color: #bebebe;
-    background: none;
-  }
-  /* remap-css rule for "color: #333" */
+  body.zh_logged_in .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:active,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:active .zhc-sidebar-active-pipeline__name,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button--disabled:focus,
@@ -17841,12 +16864,8 @@
   body.zh_logged_in .discussion-sidebar-item .zhc-sidebar-selector-button {
     color: #afafaf;
   }
-  /* remap-css rule for "color: #333", "background: none" */
-  body.zh_logged_in .zhc-sidebar-selector-button {
-    color: #bebebe;
-    background: none;
-  }
   /* remap-css rule for "color: #333" */
+  body.zh_logged_in .zhc-sidebar-selector-button,
   body.zh_logged_in .zhc-sidebar-selector-button--no-hover:active .zhc-sidebar-selector-button__heading,
   body.zh_logged_in .zhc-sidebar-selector-button--no-hover:focus .zhc-sidebar-selector-button__heading,
   body.zh_logged_in .zhc-sidebar-selector-button--no-hover:hover .zhc-sidebar-selector-button__heading,
@@ -17902,12 +16921,6 @@
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-item-table__meta-title {
     color: #949494;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-link-button:active,
-  body.zh_logged_in .zhc-link-button:focus,
-  body.zh_logged_in .zhc-link-button:hover {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #000" */
   body.zh_logged_in .zhc-loading__header {
@@ -18038,11 +17051,10 @@
     border-color: #343434;
     background-color: #181818;
   }
-  /* remap-css rule for "background-color: #e9e9e9", "border: 1px solid #ddd", "box-shadow: none" */
+  /* remap-css rule for "background-color: #e9e9e9", "border: 1px solid #ddd" */
   body.zh_logged_in .zhc-merging-tool-pipeline-card--is-dragging .zhc-merging-tool-pipeline-card__body {
     background-color: #343434;
     border-color: #343434;
-    box-shadow: none;
   }
   /* remap-css rule for "border: 1px solid #e9e9e9", "background-color: #f8f8f8" */
   body.zh_logged_in .zhc-merging-tool-pipeline-card__body {
@@ -18172,10 +17184,6 @@
   /* remap-css rule for "background: #f8f8f8" */
   body.zh_logged_in .zhc-app-notification:hover {
     background: #202020;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-app-notification:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-app-notification__title,
@@ -18310,10 +17318,6 @@
   /* remap-css rule for "background: #f4f4f4" */
   body.zh_logged_in .zhc-pipeline-header {
     background: #242424;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-pipeline-header__form__edit {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-pipeline-header__meta {
@@ -18560,9 +17564,8 @@
   body.zh_logged_in .zhc-selection-button--active-filter.zhc-selection-button--active-filter {
     border-color: #8368aa;
   }
-  /* remap-css rule for "color: inherit", "border: 1px solid transparent" */
+  /* remap-css rule for "border: 1px solid transparent" */
   body.zh_logged_in .zhc-selection-item {
-    color: inherit;
     border-color: transparent;
   }
   /* remap-css rule for "background-color: #f4f4f4", "border-color: #e9e9e9" */
@@ -18769,10 +17772,6 @@
   body.zh_logged_in .zhc-shortcuts-guide__nav-item:hover {
     background-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-shortcuts-guide__nav-item:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-shortcuts-guide__section {
     color: #949494;
@@ -18795,9 +17794,8 @@
     color: #949494;
     border-color: transparent;
   }
-  /* remap-css rule for "color: inherit", "background-color: #f4f4f4", "border-color: #e9e9e9" */
+  /* remap-css rule for "background-color: #f4f4f4", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-board-settings-item:hover {
-    color: inherit;
     background-color: #242424;
     border-color: #343434;
   }
@@ -18887,10 +17885,6 @@
     color: #949494;
     border-color: transparent;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-sidebar-profile__item:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "background-color: #f4f4f4", "border-color: #e9e9e9" */
   body.zh_logged_in .zhc-sidebar-profile__item:hover {
     background-color: #242424;
@@ -18915,10 +17909,6 @@
   body.zh_logged_in .zhc-sidebar--is-wide-screen .zhc-sidebar__footer,
   body.zh_logged_in .zhc-sidebar:not(.zhc-sidebar--is-wide-screen):hover .zhc-sidebar__footer {
     border-top-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-sidebar a:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "background-color: transparent" */
   body.zh_logged_in .zhc-sidebar__overlay {
@@ -18955,10 +17945,6 @@
   /* remap-css rule for "background-color: #fff" */
   body.zh_logged_in .zhc-spinner:not(.zhc-spinner--no-outline) {
     background-color: #181818;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-spinner--purple {
-    box-shadow: none;
   }
   /* remap-css rule for "background: #fff", "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-status-tag {
@@ -19071,10 +18057,6 @@
   body.zh_logged_in .zhc-team-members__searchbar input {
     background-color: #202020;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-team-members__searchbar input:focus {
-    box-shadow: none;
-  }
   /* remap-css rule for "border-bottom: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-team-member {
     border-bottom-color: #343434;
@@ -19154,16 +18136,6 @@
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-username {
     color: #bebebe;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .zhc-username--is-deleted {
-    color: inherit;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  @media (min-width: 1020px) {
-    body.zh_logged_in .zhc-chart-velocity__left-axis {
-      box-shadow: none;
-    }
   }
   /* remap-css rule for "background-color: #f8f8f8", "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-workspace-form-input__text-input {
@@ -19252,10 +18224,6 @@
   body.zh_logged_in .zhc-workspace-switcher-search__input {
     background-color: #202020;
     border-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-workspace-switcher-search__input:focus {
-    box-shadow: none;
   }
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-workspace-switcher-query-info,
@@ -19393,10 +18361,6 @@
   body.zh_logged_in .zhc-team-members-page__search {
     border-bottom-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-roadmap-calendar.zhc-popover .DateRangePicker .DateRangePicker_picker .DayPicker.DayPicker__horizontal {
-    box-shadow: none;
-  }
   /* remap-css rule for "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-roadmap-onboarding__fake-add-button {
     border-color: #343434;
@@ -19426,10 +18390,6 @@
   /* remap-css rule for "background: #f4f4f4" */
   body.zh_logged_in .zhc-roadmap-sidebar-empty-placeholder__bottomLine {
     background: #242424;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .zhc-roadmap-item-title__text .zhc-roadmap-item-title__link {
-    color: inherit;
   }
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-roadmap-item-title__no-epics-string {
@@ -19562,14 +18522,6 @@
   body.zh_logged_in .zhc-roadmap-sidebar__body {
     border-color: #343434;
   }
-  /* remap-css rule for "box-shadow: none" */
-  body.zh_logged_in .zhc-roadmap-sidebar__body--empty {
-    box-shadow: none;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .zhc-roadmap-title__link {
-    color: inherit;
-  }
   /* remap-css rule for "color: #333" */
   body.zh_logged_in .zhc-roadmap-title--color-default {
     color: #bebebe;
@@ -19577,10 +18529,6 @@
   /* remap-css rule for "color: #666" */
   body.zh_logged_in .zhc-roadmap-title--color-primary {
     color: #949494;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.zh_logged_in .zhc-roadmap-title--color-inherit {
-    color: inherit;
   }
   /* remap-css rule for "background-color: #f8f8f8", "border-bottom: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-roadmap__title {
@@ -19624,11 +18572,6 @@
   /* remap-css rule for "background-color: transparent" */
   body.zh_logged_in .zhc-toast .zhc-btn--zhc-toast__button {
     background-color: transparent;
-  }
-  /* remap-css rule for "background: none", "box-shadow: none" */
-  body.zh_logged_in .zhc-toast--no-background {
-    background: none;
-    box-shadow: none;
   }
   /* remap-css rule for "color: #333", "border: 1px solid #ddd" */
   body.zh_logged_in .zh-form-control, body.zh_logged_in .zh-form-control-small {
@@ -19706,10 +18649,6 @@
   html.ghh-theme-classic .ghh a {
     color: /*[[base-color]]*/;
   }
-  /* remap-css rule for "fill: currentcolor" */
-  html.ghh-theme-classic .ghh .octicon {
-    fill: currentcolor;
-  }
   /* remap-css rule for "background-color: transparent" */
   html.ghh-theme-classic .windows .ghh ::-webkit-scrollbar {
     background-color: transparent;
@@ -19721,11 +18660,6 @@
   /* remap-css rule for "background-color: transparent" */
   html.ghh-theme-classic .windows .ghh ::-webkit-scrollbar-corner {
     background-color: transparent;
-  }
-  /* remap-css rule for "color: inherit" */
-  html.ghh-theme-classic .ghh-issue-body a:not([href]),
-  html.ghh-theme-classic .ghh-readme a:not([href]) {
-    color: inherit;
   }
   /* remap-css rule for "color: #6a737d" */
   html.ghh-theme-classic .ghh-issue-body blockquote,
@@ -19783,13 +18717,6 @@
   .ghh-theme-classic .ghh-readme .bg-white {
     background-color: transparent !important;
   }
-  /* remap-css rule for "color: inherit" */
-  html.ghh-theme-classic .ghh-commit-meta .commit-ref,
-  html.ghh-theme-classic .ghh-commit-meta .commit-ref .user,
-  html.ghh-theme-classic .ghh-pull-meta .commit-ref,
-  html.ghh-theme-classic .ghh-pull-meta .commit-ref .user {
-    color: inherit;
-  }
   /* remap-css rule for "background-color: #0366d6" */
   html.ghh-theme-classic .ghh button.ghh-primary:hover {
     background-color: /*[[base-color]]*/;
@@ -19809,7 +18736,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   html.ghh-theme-classic .ghh .ghh-state-draft {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "color: #dbab09" */
   html.ghh-theme-classic .ghh .ghh-state-warning {
@@ -19830,7 +18757,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   html.ghh-theme-classic .ghh-pull-meta .ghh-reviews .ghh-state-icon-problem {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "background-color: #fff" */
   html.ghh-theme-classic .ghh-overlay form {
@@ -19934,7 +18861,7 @@
   }
   /* remap-css rule for "background-color: #6a737d" */
   .ghh-theme-github .ghh-reviews .ghh-state-icon-problem {
-    background-color: #303030;
+    background-color: #555;
   }
   /* remap-css rule for "border: 2px solid transparent" */
   body.gitako-ready #nprogress .spinner-icon {
@@ -19978,14 +18905,6 @@
   /* remap-css rule for "color: #1b1f23" */
   body.gitako-ready .gitako-side-bar mark {
     color: #afafaf;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.gitako-ready .gitako-side-bar legend {
-    color: inherit;
-  }
-  /* remap-css rule for "color: inherit" */
-  body.gitako-ready .gitako-side-bar ::-webkit-input-placeholder {
-    color: inherit;
   }
   /* remap-css rule for "color: #24292e", "background-color: #fff" */
   body.gitako-ready .gitako-side-bar body {
@@ -20035,10 +18954,6 @@
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .meta-bar {
     background: #182030;
     border-bottom-color: #343434;
-  }
-  /* remap-css rule for "box-shadow: none" */
-  body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper .search-input {
-    box-shadow: none;
   }
   /* remap-css rule for "border-color: #d73a49" */
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper .search-input.error {
@@ -20630,8 +19545,8 @@
   .gist-quicksearch-result-group, .listgroup, .listgroup-item + .listgroup-item,
   .user-key-badge, .newsfeed-placeholder, .progress-bar-inline .progress-bar,
   .menu-heading, body .border-gray-dark, .discussion-item-review .blob-wrapper,
-  .bot-identifier, .counter, .Counter, div.marketplace-product-callout,
-  .CodeMirror-dialog-top, .project-card:hover:not(:focus) {
+  .bot-identifier, div.marketplace-product-callout, .CodeMirror-dialog-top,
+  .project-card:hover:not(:focus) {
     border-color: #484848 !important;
   }
   pre, h1, h2, h3, table, table tr, table td, table th, blockquote, .pulse-graph,
@@ -21654,7 +20569,7 @@
   .subnav-bar > ul > li > ul > li > a:hover, .issue.active, .orgs-nav .count,
   .task-progress .progress-bar .progress,
   .oauth-connection-illustration .oauth-image,
-  .manage-repo-access-wrapper::before, .counter, .Counter, .block-diff-neutral,
+  .manage-repo-access-wrapper::before, .block-diff-neutral,
   .oauth-permissions-details .permission-summary em.highlight,
   .marketplace-product-callout .branch-action-item-icon {
     background: #444 !important;
@@ -21974,10 +20889,10 @@
   .org-settings-team-type, .org-settings-team-count, .intgrs-lstng-item-header,
   .octokit-language span, .site-header-nav a, .menu-item.selected, article h2,
   #message-list h1, #message-list h3, .graph-page h1, .graph-page h3,
-  .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon,
-  .counter, .Counter, .state, .State, .dashboard-notice h2,
-  .site-header-dark .site-header .site-header-link, .version-picker a:hover,
-  .markdown-format .octicon-link, .Box-row--hover-blue.link-gray:hover,
+  .prose-diff.collapsed .rich-diff-level-zero.expandable:hover .octicon, .state,
+  .State, .dashboard-notice h2, .site-header-dark .site-header .site-header-link,
+  .version-picker a:hover, .markdown-format .octicon-link,
+  .Box-row--hover-blue.link-gray:hover,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-octicon,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-octicon,
   .markdown-body strong, .markdown-format strong, .btn-danger:hover,
@@ -22984,29 +21899,6 @@
     cursor: auto !important;
   }
   /* rules for the new responsive layout */
-  @media (max-width: 767px) {
-    .nav-mobile-dropdown.js-open {
-      background: #222;
-      box-shadow: 0 1px 15px rgba(27, 31, 35, .15);
-    }
-    .tabnav--responsive .tabnav-tab {
-      background-color: #202020;
-      border: 1px solid #343434;
-    }
-    .tabnav--responsive .tabnav-tab:first-child {
-      border-left: 1px solid #343434;
-    }
-    .tabnav--responsive .tabnav-tab.selected,
-    .tabnav--responsive .tabnav-tab[aria-selected=true] {
-      background-color: #181818;
-    }
-    .release-entry {
-      border-bottom: 1px solid #343434 !important;
-    }
-    .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
-      background: #181818;
-    }
-  }
   @media (min-width: 768px) {
     .release-main-section {
       border-left: 2px solid #343434 !important;
@@ -23018,11 +21910,6 @@
   @media (max-width: 1012px) {
     .reponav-wrapper {
       background: #181818 !important;
-    }
-  }
-  @media (min-width:1012px) {
-    .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
-      background: transparent;
     }
   }
   @media (min-width: 1013px) {
