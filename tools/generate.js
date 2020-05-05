@@ -17,6 +17,7 @@ const mappings = {
   "$background: #fdfdfd": "#181818",
   "$background: #fafafb": "#181818",
   "$background: #fafbfc": "#181818", // .bg-gray-light
+  "$background: #f9f9f9": "#181818",
   "$background: #efefef": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
   "$background: #f6f8fa": "#202020",
@@ -25,19 +26,20 @@ const mappings = {
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#343434",
   "$background: #eaecef": "#343434",
+  "$background: #e9ecef": "#404040",
+  "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
   "$background: #e1e4e8": "#343434",
-  "$background: #e9e9e9": "#343434", // zenhub
   "$background: #dfe2e5": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
   "$background: #d1d5da": "#404040",
   "$background: #c6cbd1": "#484848",
-  "$background: #6a737d": "#555",
-  "$background: #24292e": "#181818",
-  "$background: #f9f9f9": "#181818",
-  "$background: #2f363d": "#282828",
+  "$background: #6a737d": "#aaa",
   "$background: #586069": "#343434",
+  "$background: #2f363d": "#282828",
+  "$background: #24292e": "#181818",
+
   "$background: rgba(225,228,232,0.31)": "#282828",
   "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
   "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
@@ -56,7 +58,6 @@ const mappings = {
   "$background: rgba(27,31,35,.1)": "rgba(180,180,180,.17)",
   "$background: rgba(27,31,35,.15)": "rgba(180,180,180,.22)",
 
-  "$background: #e9ecef": "#404040",
   "$background: initial": "initial",
 
   // ==========================================================================
@@ -165,19 +166,22 @@ const mappings = {
 
   "$border: currentcolor": "currentcolor",
 
-  "color: #000": "color: #bebebe",
-  "color: #1b1f23": "color: #afafaf",
-  "color: #141823": "color: #ddd", // graphql explorer
+  "color: #000": "color: #dcdcdc",
+  "color: #1b1f23": "color: #dcdcdc",
+  "color: #141823": "color: #dcdcdc", // graphql explorer
+  "color: #24292e": "color: #bebebe",
+  "color: #2f363d": "color: #bebebe",
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
-  "color: #555": "color: #bebebe", // graphql explorer
+  "color: #555": "color: #afafaf", // graphql explorer
+  "color: #586069": "color: #afafaf",
   "color: #666": "color: #949494",
   "color: #6a737d": "color: #949494",
-  "color: #959da5": "color: #757575",
+  "color: #959da5": "color: #767676",
   "color: #767676": "color: #767676",
-  "color: #a3aab1": "color: #757575",
-  "color: #808891": "color: #999",
+  "color: #808891": "color: #767676",
+  "color: #a3aab1": "color: #767676",
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
   "color: #d1d5da": "color: #404040",
@@ -204,14 +208,12 @@ const mappings = {
   "fill: #0366d6": "fill:  /*[[base-color]]*/ #4f8cc9",
   "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
 
-  "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9", // needs to be after #333
-  "color: #586069": "color: #afafaf", // needs to be after #0366d6 for RGH "more" button
+  "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1f61a0": "color: /*[[base-color]]*/ #4f8cc9", //  graphql explorer
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
-  "color: #24292e": "color: #d2d2d2",
+
   "stroke: #24292e": "stroke: #d2d2d2",
-  "color: #2f363d": "color: #bebebe",
 
   // blue
   "color: #032f62": "color: #9daccc",
