@@ -33,7 +33,7 @@ const mappings = {
   "$background: #d3e2f4": "#383838",
   "$background: #d1d5da": "#404040",
   "$background: #c6cbd1": "#484848",
-  "$background: #6a737d": "#303030",
+  "$background: #6a737d": "#555",
   "$background: #24292e": "#181818",
   "$background: #f9f9f9": "#181818",
   "$background: #2f363d": "#282828",
@@ -51,8 +51,11 @@ const mappings = {
   "$background: linear-gradient(#ececec, #d5d5d5)": "linear-gradient(#404040, #383838)", // graphql explorer
   "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
-  "$background: rgba(27,31,35,.1)": "rgba(0,0,0,.1)",
-  "$background: rgba(27,31,35,.15)": "rgba(0,0,0,.15)",
+
+  "$background: rgba(27,31,35,.08)": "rgba(180,180,180,.15)",
+  "$background: rgba(27,31,35,.1)": "rgba(180,180,180,.17)",
+  "$background: rgba(27,31,35,.15)": "rgba(180,180,180,.22)",
+
   "$background: #e9ecef": "#404040",
   "$background: initial": "initial",
 
