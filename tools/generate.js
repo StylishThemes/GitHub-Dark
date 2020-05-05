@@ -160,7 +160,6 @@ const mappings = {
   // Color / Background
   // ==========================================================================
 
-  "fill: currentcolor": "fill: currentcolor", // needs to come before color variants
   "$border: currentcolor": "currentcolor",
 
   "color: #000": "color: #bebebe",
@@ -354,13 +353,7 @@ const mappings = {
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
 
-  "color: inherit": "color: inherit",
-  "box-shadow: none": "box-shadow: none",
   "$background: transparent": "transparent",
-
-  // not using $background to remap invalid 'background-color: none'
-  "background: none": "background: none",
-  "background-color: none": "background-color: transparent"
 };
 
 const sources = [
