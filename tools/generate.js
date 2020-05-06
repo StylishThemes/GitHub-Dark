@@ -11,7 +11,7 @@ const mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
-  "$background: #fff": "#181818",
+  "$background: #fff": "#181818; background-image: none",
   "$background: #ffe": "#242424",
   "$background: #eee": "#242424", // graphql explorer
   "$background: #fdfdfd": "#181818",
@@ -240,7 +240,7 @@ const mappings = {
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
   "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
-  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff",
+  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff; background-image: none",
   "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
@@ -362,15 +362,10 @@ const mappings = {
 };
 
 const sources = [
-  {url: "https://github.com"},
-  {url: "https://gist.github.com"},
-  {url: "https://help.github.com"},
-  {url: "https://lab.github.com"},
-  {url: "https://support.github.com"},
   {
-    url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
-    prefix: `#graphiql`,
-    match: ["#graphiql", ".graphiql-ide"],
+    url: "https://www.githubstatus.com",
+    prefix: "body.status",
+    match: ["body", ".status"],
   },
   {
     url: "https://developer.github.com",
@@ -378,9 +373,9 @@ const sources = [
     match: ["html", "[prefix]"],
   },
   {
-    url: "https://www.githubstatus.com",
-    prefix: "body.status",
-    match: ["body", ".status"],
+    url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
+    prefix: `#graphiql`,
+    match: ["#graphiql", ".graphiql-ide"],
   },
   {
     url: "https://github.com/StylishThemes/GitHub-Dark",
@@ -388,6 +383,11 @@ const sources = [
     match: ["body", ".page-responsive"],
     fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Mobile Safari/537.36"}},
   },
+  {url: "https://support.github.com"},
+  {url: "https://lab.github.com"},
+  {url: "https://help.github.com"},
+  {url: "https://gist.github.com"},
+  {url: "https://github.com"},
   {
     url: [
       "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
