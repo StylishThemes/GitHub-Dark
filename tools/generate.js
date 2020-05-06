@@ -54,9 +54,9 @@ const mappings = {
   "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
 
-  "$background: rgba(27,31,35,.08)": "rgba(180,180,180,.15)",
-  "$background: rgba(27,31,35,.1)": "rgba(180,180,180,.17)",
-  "$background: rgba(27,31,35,.15)": "rgba(180,180,180,.22)",
+  "$background: rgba(27,31,35,.08)": "rgba(200,200,200,.15)",
+  "$background: rgba(27,31,35,.1)": "rgba(200,200,200,.17)",
+  "$background: rgba(27,31,35,.15)": "rgba(200,200,200,.22)",
 
   "$background: initial": "initial",
 
@@ -65,15 +65,15 @@ const mappings = {
   // ==========================================================================
   "$border: transparent": "transparent", // needs to come before the color variants
 
-  "$border: rgba(27,31,35,.5)": "rgba(180,180,180,.4)",
-  "$border: rgba(27,31,35,.35)": "rgba(180,180,180,.3)",
-  "$border: rgba(27,31,35,.3)": "rgba(180,180,180,.25)",
-  "$border: rgba(27,31,35,.25)": "rgba(180,180,180,.2)",
-  "$border: rgba(27,31,35,.2)": "rgba(180,180,180,.15)",
-  "$border: rgba(27,31,35,.15)": "rgba(180,180,180,.1)",
-  "$border: rgba(27,31,35,.1)": "rgba(180,180,180,.05)",
+  "$border: rgba(27,31,35,.5)": "rgba(200,200,200,.3)",
+  "$border: rgba(27,31,35,.35)": "rgba(200,200,200,.3)",
+  "$border: rgba(27,31,35,.3)": "rgba(200,200,200,.25)",
+  "$border: rgba(27,31,35,.25)": "rgba(200,200,200,.2)",
+  "$border: rgba(27,31,35,.2)": "rgba(200,200,200,.15)",
+  "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.1)",
+  "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.05)",
 
-  "$border: rgba(0,0,0,.125)": "rgba(180,180,180,.125)",
+  "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
 
   "$border: #444d56": "#484848",
   "$border: #484848": "#afafaf", // github blog
@@ -99,7 +99,7 @@ const mappings = {
   "$border: #fff": "#181818",
   "$border: #2f363d": "#282828",
 
-  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(180,180,180,.15)",
+  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border: 1px solid": "border-color: #181818",
@@ -166,10 +166,10 @@ const mappings = {
 
   "$border: currentcolor": "currentcolor",
 
-  "color: #000": "color: #dcdcdc",
+  "color: #000": "color: #f0f0f0",
   "color: #1b1f23": "color: #dcdcdc",
   "color: #141823": "color: #dcdcdc", // graphql explorer
-  "color: #24292e": "color: #bebebe",
+  "color: #24292e": "color: #bebebe", // .btn
   "color: #2f363d": "color: #bebebe",
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
