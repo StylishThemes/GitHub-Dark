@@ -35,7 +35,7 @@ const mappings = {
   "$background: #d3e2f4": "#383838",
   "$background: #d1d5da": "#404040",
   "$background: #c6cbd1": "#484848",
-  "$background: #6a737d": "#aaa",
+  "$background: #6a737d": "#444",
   "$background: #586069": "#343434",
   "$background: #2f363d": "#282828",
   "$background: #24292e": "#181818",
