@@ -52,7 +52,6 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ## Supported GitHub Extensions
 
 💾 [Gitako](https://github.com/EnixCoda/Gitako)<br>
-💾 [GitHub Awesome Autocomplete](https://github.com/algolia/github-awesome-autocomplete)<br>
 💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard)<br>
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
