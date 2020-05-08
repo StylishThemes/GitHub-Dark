@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.70
+@version     2.0.71
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.70 (2020-05-07) */
+/*! Github Dark v2.0.71 (2020-05-08) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -7407,7 +7407,8 @@
     }
   }
   /* source #6: "color: #24292e" */
-  .markdown-body .lead-mktg p, div.light-bg a, div.light-bg a h4 {
+  .extended-markdown.note pre code, .markdown-body .lead-mktg p, div.light-bg a,
+  div.light-bg a h4 {
     color: #bebebe;
   }
   /* source #6: "color: #586069" */
@@ -19194,6 +19195,11 @@
     background-color: #242424;
     border-color: #343434;
   }
+  /* source #12: "background-color: transparent", "border-color: transparent" */
+  body.zh_logged_in .zh-menu-content__item--disabled:hover {
+    background-color: transparent;
+    border-color: transparent;
+  }
   /* source #13: "background: rgba(0,0,0,.8)" */
   html.ghh-theme-classic .tooltipster-box {
     background: #242424;
@@ -21468,7 +21474,6 @@
   #message-list h1, #message-list h3, .graph-page h1, .graph-page h3, .state,
   .State, .dashboard-notice h2, .site-header-dark .site-header .site-header-link,
   .version-picker a:hover, .markdown-format .octicon-link,
-  .Box-row--hover-blue.link-gray:hover,
   .jump-to-suggestions-results-container .navigation-focus .jump-to-octicon,
   .jump-to-suggestions-results-container [aria-selected="true"] .jump-to-octicon,
   .markdown-body strong, .markdown-format strong, .btn-danger:hover,
@@ -21549,8 +21554,6 @@
   .check-annotation code pre, .Header-link {
     color: #bebebe !important;
   }
-  .edit-repository-meta, .field label, .boxed-group-list li, .capped-box,
-  .marketing-nav a, .repository-meta, .gist-item .description, p.explain,
   .news .alert .simple .title, #network .graph-date, .tabnav-widget.text,
   .feature .intro, span.diffstat, span.diffstat a, .commit .commit-branches a,
   #readme .plain, .news blockquote, .news blockquote p, .collection-stat,
@@ -21604,7 +21607,6 @@
   .starred-repo .sort-info, .org-stats, .commandbar .choice,
   .commandbar .loading, .commandbar .description, ul.summary-stats li a,
   .authorship, .sha-block, .gh-header-meta, #last-edit, .setup-header .lead a,
-  .repository-meta .edit-link a, .meta li, .who_when a,
   .mini-icon-remove-close:hover, .section-heading-title .separator, .hook-list a,
   .github-jobs-promotion a.jobs-logo, .org-teams-list .team-meta,
   .repo-list-item .repo-description, .branch-infobar .lightweight-actions > li a,
@@ -21616,8 +21618,8 @@
   .commits-list-item .commits-comments-link, .commits-list-item .commit-meta,
   .issues-listing .table-list-issues .issue-comments-link,
   .issues-listing .table-list-issues .issue-meta-section a, .labels-list-action,
-  table.tag-list p a, table.tag-list td.date a, .muted-link, a.muted-link,
-  .render-view-modes li, .site-footer, .site-footer .octicon-mark-github:hover,
+  table.tag-list p a, table.tag-list td.date a, .render-view-modes li,
+  .site-footer, .site-footer .octicon-mark-github:hover,
   .repo-list-stats .repo-list-stat-item, .range-editor span.flag .octicon,
   .commit-info .commit-meta a, .notifications .read a,
   .auth-form-header .octicon, .releases-tag-list p a, .history-link a,
@@ -22941,9 +22943,8 @@
   .drag-and-drop-error-info a, .link-mktg:hover {
     color: /*[[base-color]]*/;
   }
-  .text-blue, .link-gray:hover, .link-gray-dark:hover, .link-hover-blue:hover,
-  .muted-link:hover, .btn-outline-mktg:hover, a:not(.btn-mktg):hover,
-  a:hover .hover-link {
+  .text-blue, .link-hover-blue:hover, .btn-outline-mktg:hover,
+  a:not(.btn-mktg):hover, a:hover .hover-link {
     color: /*[[base-color]]*/ !important;
   }
   .btn .Counter, .form-checkbox .note, .hfields .form-group dt label,
