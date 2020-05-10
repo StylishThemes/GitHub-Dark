@@ -26,7 +26,7 @@ jobs:
 
       - name: Push
         run: |
-          if [[ $(git status --porcelain) ]]; then
+          if [[ $(git status --porcelain --untracked-files=no) ]]; then
             git fetch && git fetch --tags
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
