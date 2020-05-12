@@ -12,7 +12,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          fetch-depth: 0
 
       - name: Setup node
         uses: actions/setup-node@v1
@@ -28,7 +27,7 @@ jobs:
       - name: Push
         run: |
           if [[ $(git status --porcelain --untracked-files=no) ]]; then
-            git fetch --tags
+            git fetch --unshallow --tags
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -am "automated regeneration"
