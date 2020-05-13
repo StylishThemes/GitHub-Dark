@@ -363,32 +363,52 @@ const mappings = {
 
 const sources = [
   {
+    name: "githubstatus.com",
     url: "https://www.githubstatus.com",
     prefix: "body.status",
     match: ["body", ".status"],
   },
   {
+    name: "developer.github.com",
     url: "https://developer.github.com",
     prefix: "html[prefix]",
     match: ["html", "[prefix]"],
   },
   {
+    name: "graphql.github.com",
     url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
     prefix: `#graphiql`,
     match: ["#graphiql", ".graphiql-ide"],
   },
   {
+    name: "github.com mobile",
     url: "https://github.com/StylishThemes/GitHub-Dark",
     prefix: `body[class="page-responsive"]`,
     match: ["body", ".page-responsive"],
     fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Mobile Safari/537.36"}},
   },
-  {url: "https://support.github.com"},
-  {url: "https://lab.github.com"},
-  {url: "https://help.github.com"},
-  {url: "https://gist.github.com"},
-  {url: "https://github.com"},
   {
+    name: "support.github.com",
+    url: "https://support.github.com",
+  },
+  {
+    name: "lab.github.com",
+    url: "https://lab.github.com",
+  },
+  {
+    name: "help.github.com",
+    url: "https://help.github.com",
+  },
+  {
+    name: "gist.github.com",
+    url: "https://gist.github.com"
+  },
+  {
+    name: "github.com",
+    url: "https://github.com"
+  },
+  {
+    name: "pdf viewer",
     url: [
       "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
       "https://render.githubusercontent.com/diff/img?commit=0fabf58a4b0a00d048d06113a063738afb674ed7&enc_url1=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f306661626635386134623061303064303438643036313133613036333733386166623637346564372f696d616765732f73637265656e73686f74732f6265666f72652e706e67&enc_url2=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f613434323536373337663932303861633263393435613266633561633133666562343536336262332f696d616765732f73637265656e73686f74732f6265666f72652e706e67",
@@ -397,27 +417,32 @@ const sources = [
     match: ["body", "[data-render-url]"],
   },
   {
+    name: "refined-github",
     crx: "hlepfoohegkhhmjieoechaddaejaokhf", // refined-github
     prefix: `html.refined-github`,
     match: ["html", "refined-github"],
     contentScriptsOnly: true,
   },
   {
+    name: "zenhub",
     crx: "ogcgkffhplmphkaahpmffcafajaocjbd", // zenhub
     prefix: `body.zh_logged_in`,
     match: ["body", ".zh_logged_in"],
   },
   {
+    name: "github hovercard",
     crx: "mmoahbbnojgkclgceahhakhnccimnplk", // github hovercard
     prefix: `html.ghh-theme-classic`,
     match: ["html", ".ghh-theme-"],
   },
   {
-    crx: "giljefjcheohhamkjphiebfjnlphnokk", // Gitako
+    name: "gitako",
+    crx: "giljefjcheohhamkjphiebfjnlphnokk", // gitako
     prefix: `body.gitako-ready`,
     match: ["body", ".gitako-ready"],
   },
   {
+    name: "npmhub",
     crx: "kbbbjimdjbjclaebffknlabpogocablj" // npmhub
   }
 ];
@@ -449,6 +474,7 @@ const remapOpts = {
   comments: true,
   stylistic: true,
   validate: true,
+  sourceNames: true,
 };
 
 async function main() {
