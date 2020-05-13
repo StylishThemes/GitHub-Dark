@@ -474,7 +474,6 @@ const remapOpts = {
   comments: true,
   stylistic: true,
   validate: true,
-  sourceNames: true,
 };
 
 async function main() {
