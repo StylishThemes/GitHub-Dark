@@ -4840,6 +4840,11 @@
   body[class="page-responsive"] .Box-row {
     border-top-color: #343434;
   }
+  /* github.com mobile: "box-shadow: inset 2px 0 0 #0366d6" */
+  body[class="page-responsive"] .Box-row.Box-row--unread,
+  body[class="page-responsive"] .Box-row.unread {
+    box-shadow: inset 2px 0 0 #eee;
+  }
   /* github.com mobile: "color: #0366d6" */
   body[class="page-responsive"] .Box-row.navigation-focus .Box-row--drag-button {
     color: /*[[base-color]]*/ #4f8cc9;
@@ -7284,6 +7289,10 @@
   .Box-row {
     border-top-color: #343434;
   }
+  /* github.com: "box-shadow: inset 2px 0 0 #0366d6" */
+  .Box-row.Box-row--unread, .Box-row.unread {
+    box-shadow: inset 2px 0 0 #eee;
+  }
   /* github.com: "color: #0366d6" */
   .Box-row.navigation-focus .Box-row--drag-button {
     color: /*[[base-color]]*/ #4f8cc9;
@@ -9708,6 +9717,10 @@
   /* github.com: "border-right: 1px solid #eaecef" */
   .table-list-bordered .table-list-cell:last-child {
     border-right-color: #343434;
+  }
+  /* github.com: "box-shadow: inset 2px 0 0 #0366d6" */
+  .table-list-item.unread .table-list-cell:first-child {
+    box-shadow: inset 2px 0 0 #eee;
   }
   /* github.com: "border-top: 1px solid #eaecef" */
   .table-list-cell {
@@ -12319,9 +12332,10 @@
     color: #bebebe !important;
     background-color: #343434 !important;
   }
-  /* github.com: "background-color: #f1f8ff !important" */
+  /* github.com: "background-color: #f1f8ff !important", "box-shadow: inset 2px 0 0 #0366d6" */
   .notifications-list-item.navigation-focus {
     background-color: #182030 !important;
+    box-shadow: inset 2px 0 0 #eee;
   }
   /* github.com: "color: #24292e !important" */
   .notifications-list-item.navigation-focus .notification-list-item-link {
@@ -13994,10 +14008,13 @@
   .Box--responsive .Box-row--unread::before {
     background-image: linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9);
   }
-  /* github.com: "border: 1px solid #d1d5da" */
+  /* github.com: "border: 1px solid #d1d5da", "box-shadow: inset 2px 0 0 #0366d6" */
   @media (min-width: 544px) {
     .Box--responsive {
       border-color: #404040;
+    }
+    .Box--responsive .Box-row--unread {
+      box-shadow: inset 2px 0 0 #eee;
     }
   }
   /* github.com: "color: #6a737d" */
@@ -19498,6 +19515,10 @@
   /* npmhub: "border-bottom: 1px solid #ddd" */
   .npmhub-deps > li {
     border-bottom-color: #343434;
+  }
+  /* notifications preview: "color: rgb(36,41,46)" */
+  :root:root .NPG-dropdown {
+    color: rgb(210, 210, 210) !important;
   }
   /* notifications preview: "background-color: #e6ebf1" */
   .participating .js-notifications-browser::before {

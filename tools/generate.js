@@ -160,6 +160,8 @@ const mappings = {
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
 
+  "box-shadow: inset 2px 0 0 #0366d6": "box-shadow: inset 2px 0 0 #eee",
+
   // ==========================================================================
   // Color / Background
   // ==========================================================================
@@ -199,6 +201,7 @@ const mappings = {
   "color: rgba(27,31,35,.6)": "color: rgba(230,230,230,.6)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
+  "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
 
   "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.4)",
