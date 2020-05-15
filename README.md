@@ -61,6 +61,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
 💾 [ZenHub](https://www.zenhub.io/)<br>
+💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
