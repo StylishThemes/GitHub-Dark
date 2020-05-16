@@ -199,6 +199,7 @@ const mappings = {
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
   "color: rgba(27,31,35,.6)": "color: rgba(230,230,230,.6)",
+  "color: rgba(27,31,35,.5)": "color: rgba(230,230,230,.5)",
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
   "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
