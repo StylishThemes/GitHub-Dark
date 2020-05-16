@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.79
+@version     2.0.80
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.79 (2020-05-15) */
+/*! Github Dark v2.0.80 (2020-05-16) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -5220,6 +5220,10 @@
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .repohead h1 {
     color: #afafaf;
+  }
+  /* github.com mobile: "color: rgba(27,31,35,.5)" */
+  body[class="page-responsive"] .repohead h1.private .octicon {
+    color: rgba(230, 230, 230, .5);
   }
   /* github.com mobile: "color: #959da5" */
   body[class="page-responsive"] .repohead h1 .octicon {
@@ -10777,6 +10781,10 @@
   .repohead h1 {
     color: #afafaf;
   }
+  /* github.com: "color: rgba(27,31,35,.5)" */
+  .repohead h1.private .octicon {
+    color: rgba(230, 230, 230, .5);
+  }
   /* github.com: "color: #959da5" */
   .repohead h1 .octicon {
     color: #767676;
@@ -13130,6 +13138,10 @@
   .archived-project-cards-pane .project-card .archived-header {
     color: #bba257;
   }
+  /* github.com: "color: rgba(27,31,35,.5)" */
+  .project-pane-close {
+    color: rgba(230, 230, 230, .5);
+  }
   /* github.com: "color: rgba(27,31,35,.7)" */
   .project-pane-close:hover {
     color: rgba(230, 230, 230, .7);
@@ -13155,6 +13167,11 @@
   /* github.com: "border-top: 1px solid #d1d5da" */
   .projects-comment-form .preview-content {
     border-top-color: #404040;
+  }
+  /* github.com: "color: rgba(27,31,35,.5)" */
+  .project-comment-body-hover .octicon-pencil,
+  .project-comment-title-hover .octicon-pencil {
+    color: rgba(230, 230, 230, .5);
   }
   /* github.com: "color: #0366d6" */
   .project-comment-body-hover .octicon-pencil:hover,
@@ -14838,71 +14855,6 @@
       border-right-color: #181818;
       border-bottom-color: transparent;
     }
-  }
-  /* pdf viewer: "border-top: 1px solid #ddd", "border-bottom: 1px solid #ddd" */
-  body[data-render-url] .pdf-page {
-    border-top-color: #343434;
-    border-bottom-color: #343434;
-  }
-  /* pdf viewer: "background: #fff", "border-top: 1px solid #ddd" */
-  body[data-render-url] .click-for-more {
-    background: #181818;
-    background-image: none;
-    border-top-color: #343434;
-  }
-  /* pdf viewer: "color: #333", "background-color: #eee" */
-  body[data-render-url] .click-for-more .button {
-    color: #bebebe;
-    background-color: #242424;
-  }
-  /* pdf viewer: "border: 1px solid #ddd" */
-  body[data-render-url] .is-embedded .render-shell {
-    border-color: #343434;
-  }
-  /* pdf viewer: "background: rgba(0,0,0,.8)", "border: 1px solid #eee" */
-  body[data-render-url] .render-info .message {
-    background: #242424;
-    border-color: #343434;
-  }
-  /* pdf viewer: "color: #4183c4" */
-  body[data-render-url] .render-info .message a {
-    color: rgba(79, 140, 201, .9);
-    color: rgba(/*[[base-color-rgb]]*/, .9);
-  }
-  /* pdf viewer: "color: #000" */
-  body[data-render-url] .render-attribution:hover .symbol,
-  body[data-render-url] .render-health:hover .symbol {
-    color: #f0f0f0;
-  }
-  /* pdf viewer: "border-top: 1px solid #ddd" */
-  body[data-render-url] .render-bar {
-    border-top-color: #343434;
-  }
-  /* pdf viewer: "color: #666" */
-  body[data-render-url] .render-message a,
-  body[data-render-url] .render-view-modes li {
-    color: #949494;
-  }
-  /* pdf viewer: "border-top: 1px solid #fff" */
-  body[data-render-url] .slider .slider-track {
-    border-top-color: #181818;
-  }
-  /* pdf viewer: "border: 1px solid #fff" */
-  body[data-render-url] .render-shell img, body[data-render-url] img.asset {
-    border-color: #181818;
-  }
-  /* pdf viewer: "background-color: #fff" */
-  body[data-render-url] div.border-wrap {
-    background-color: #181818;
-    background-image: none;
-  }
-  /* pdf viewer: "background-color: #eee" */
-  body[data-render-url] .render-shell {
-    background-color: #242424;
-  }
-  /* pdf viewer: "background-color: transparent" */
-  body[data-render-url] .onion-skin .controls .slider {
-    background-color: transparent;
   }
   /* refined-github: "color: #6a737d" */
   html.refined-github .markdown-body del {
@@ -20164,6 +20116,10 @@
     padding: 7px 10px 8px;
     line-height: inherit;
   }
+  /* GitHub Bug: Fix cut-off 'g' letters on user page timeline repo names */
+  .profile-timeline .lh-condensed {
+    line-height: 1.35rem;
+  }
   /* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
   .reponav-item .counter, .reponav-item .Counter {
@@ -20280,8 +20236,7 @@
   .summary-stats li, .columns.equacols.bordered, .file-diffstat, ul.filter-list,
   .news .alert, table.files td, .explore-section, .repolist > li,
   .featured-grid-outer, .gh-header-meta, .theme-picker-thumbs, .team,
-  .billing-section, .sidebar-module ul h3, .headlines li,
-  .discussion-sidebar-item + .discussion-sidebar-item, .markdown-format img,
+  .billing-section, .sidebar-module ul h3, .headlines li, .markdown-format img,
   div#common-issues ul li, .about-facts, .starred-repo, .markdown-example,
   .traffic-graph-stats, .discussion-item + .discussion-item, .bubble,
   .tree-browser, .simple-box-footer, .team-grid .team-members,
@@ -21684,9 +21639,9 @@
   .discussion-item-private, .label-select-menu div.labelstyle-000000.selected,
   .marketplace-plan-emphasis, .header-nav-link, .header-navlink,
   .Header .header-search-scope, a.notification-indicator, .HeaderNavlink,
-  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .project-pane-close:hover,
-  .text-gray-dark, .label-select-menu .select-menu-item:hover,
-  .check-annotation code pre, .Header-link {
+  .UnderlineNav-item:hover, .UnderlineNav-item:focus, .text-gray-dark,
+  .label-select-menu .select-menu-item:hover, .check-annotation code pre,
+  .Header-link {
     color: #bebebe !important;
   }
   .news .alert .simple .title, #network .graph-date, .tabnav-widget.text,
@@ -21771,8 +21726,8 @@
   .boxed-group-inner, .lead, .form-checkbox .note, .bot-identifier,
   .dashboard-notice .dismiss:hover, td.icon .octicon-file-text,
   td.icon .octicon-file-symlink-file, .UnderlineNav-item, .project-header-link,
-  button.project-header-link, td.icon, .project-pane-close, .facebox-close,
-  .tree-browser-result mark, .octicon.text-gray, .notification-actions .age {
+  button.project-header-link, td.icon, .facebox-close, .tree-browser-result mark,
+  .octicon.text-gray, .notification-actions .age {
     color: #949494 !important;
   }
   .timeline-comment-action, #suggestions a, .table-list-header-toggle .btn-link,
