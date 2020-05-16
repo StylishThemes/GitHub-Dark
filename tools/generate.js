@@ -390,26 +390,32 @@ const sources = [
     prefix: `body[class="page-responsive"]`,
     match: ["body", ".page-responsive"],
     fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Mobile Safari/537.36"}},
+    strict: true,
   },
   {
     name: "support.github.com",
     url: "https://support.github.com",
+    strict: true,
   },
   {
     name: "lab.github.com",
     url: "https://lab.github.com",
+    strict: true,
   },
   {
     name: "help.github.com",
     url: "https://help.github.com",
+    strict: true,
   },
   {
     name: "gist.github.com",
-    url: "https://gist.github.com"
+    url: "https://gist.github.com",
+    strict: true,
   },
   {
     name: "github.com",
-    url: "https://github.com"
+    url: "https://github.com",
+    strict: true,
   },
   {
     name: "pdf viewer",
@@ -419,6 +425,7 @@ const sources = [
     ],
     prefix: "body[data-render-url]",
     match: ["body", "[data-render-url]"],
+    strict: true,
   },
   {
     name: "refined-github",
@@ -447,13 +454,13 @@ const sources = [
   },
   {
     name: "npmhub",
-    crx: "kbbbjimdjbjclaebffknlabpogocablj"
+    crx: "kbbbjimdjbjclaebffknlabpogocablj",
   },
   {
     name: "notifications preview",
     crx: "kgilejfahkjidpaclkepbdoeioeohfmj",
     contentScriptsOnly: true,
-  }
+  },
 ];
 
 const ignoreSelectors = [
