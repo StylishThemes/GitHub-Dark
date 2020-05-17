@@ -6167,10 +6167,6 @@
     box-shadow: 0 0 0 2px rgba(79, 140, 201, .3);
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
   }
-  /* support.github.com: "color: #586069" */
-  .hfields .form-group .form-group-header label, .hfields .form-group dt label {
-    color: #afafaf;
-  }
   /* support.github.com: "background-color: #fafbfc" */
   .form-group #q, .form-group .form-control {
     background-color: #181818;
@@ -6179,31 +6175,6 @@
   .form-group #q:focus, .form-group .form-control:focus {
     background-color: #181818;
     background-image: none;
-  }
-  /* support.github.com: "color: #cb2431" */
-  .form-group .form-group-body h4.is-error, .form-group dd h4.is-error {
-    color: #f44;
-  }
-  /* support.github.com: "color: #28a745" */
-  .form-group .form-group-body h4.is-success, .form-group dd h4.is-success {
-    color: #6cc644;
-  }
-  /* support.github.com: "color: #cb2431" */
-  .form-group.required .form-group-header label::after,
-  .form-group.required dt label::after {
-    color: #f44;
-  }
-  /* support.github.com: "border: solid transparent" */
-  .form-group.errored .error::after, .form-group.errored .error::before,
-  .form-group.errored .success::after, .form-group.errored .success::before,
-  .form-group.errored .warning::after, .form-group.errored .warning::before,
-  .form-group.successed .error::after, .form-group.successed .error::before,
-  .form-group.successed .success::after, .form-group.successed .success::before,
-  .form-group.successed .warning::after, .form-group.successed .warning::before,
-  .form-group.warn .error::after, .form-group.warn .error::before,
-  .form-group.warn .success::after, .form-group.warn .success::before,
-  .form-group.warn .warning::after, .form-group.warn .warning::before {
-    border-color: transparent;
   }
   /* support.github.com: "color: #24292e", "background-color: #fff" */
   .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"] {
@@ -6389,13 +6360,6 @@
   ::-webkit-input-placeholder {
     color: #949494;
   }
-  /* lab.github.com: "border: solid transparent" */
-  .form-group.errored .error::after, .form-group.errored .error::before,
-  .form-group.errored .warning::after, .form-group.errored .warning::before,
-  .form-group.warn .error::after, .form-group.warn .error::before,
-  .form-group.warn .warning::after, .form-group.warn .warning::before {
-    border-color: transparent;
-  }
   /* lab.github.com: "color: #24292e", "background-color: #fff", "border-color: #d1d5da" */
   .menu-item.selected, .tabnav-tab.selected {
     color: #bebebe;
@@ -6405,18 +6369,15 @@
   .tabnav-tab.selected {
     border-color: #404040;
   }
-  /* lab.github.com: "background-color: #0366d6" */
-  .filter-item.selected {
-    background-color: /*[[base-color]]*/ #4f8cc9;
-    color: #fff;
-    background-image: none;
-  }
   /* lab.github.com: "background-color: #0366d6", "border-color: #0366d6" */
-  .subnav-item.selected, .subnav-item.selected:focus,
+  .filter-item.selected, .subnav-item.selected, .subnav-item.selected:focus,
   .subnav-item.selected:hover {
     background-color: /*[[base-color]]*/ #4f8cc9;
     color: #fff;
     background-image: none;
+  }
+  .subnav-item.selected, .subnav-item.selected:focus,
+  .subnav-item.selected:hover {
     border-color: /*[[base-color]]*/ #4f8cc9;
   }
   /* lab.github.com: "color: #24292e", "border-bottom-color: #e36209" */
@@ -6675,11 +6636,6 @@
   a {
     background-color: transparent;
   }
-  /* help.github.com: "background: transparent", "border-bottom: 1px solid #dfe2e5" */
-  .rule, hr {
-    background: transparent;
-    border-bottom-color: #343434;
-  }
   /* help.github.com: "color: #444d56", "background-color: #fafbfc", "border: 1px solid #d1d5da", "border-bottom-color: #d1d5da", "box-shadow: inset 0 -1px 0 #d1d5da" */
   kbd {
     border-bottom-color: #404040;
@@ -6702,137 +6658,13 @@
   .Box--danger .Box-row:first-of-type {
     border-color: #b00;
   }
-  /* help.github.com: "color: #24292e", "background-color: #eff3f6", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
-  .btn {
-    background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
-  }
-  /* help.github.com: "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)" */
-  .btn.focus, .btn:focus {
-    box-shadow: 0 0 0 .2em rgba(79, 140, 201, .5);
-    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5);
-  }
-  /* help.github.com: "background-color: #e6ebf1", "border-color: rgba(27,31,35,.35)" */
-  .btn.hover, .btn:hover {
-    background-color: #444;
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "background-color: #e9ecef", "border-color: rgba(27,31,35,.35)" */
-  .btn.selected, .btn:active, .btn[aria-selected="true"], [open] > .btn {
-    background-color: #404040;
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "color: rgba(36,41,46,.4)", "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
-  .btn.disabled, .btn:disabled, .btn[aria-disabled="true"] {
-    color: rgba(210, 210, 210, .4);
-    background-color: #343434;
-    border-color: rgba(200, 200, 200, .15);
-  }
-  /* help.github.com: "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)" */
-  .btn-primary.focus, .btn-primary:focus {
-    box-shadow: 0 0 0 .2em #3737;
-  }
-  /* help.github.com: "border-color: rgba(27,31,35,.5)" */
-  .btn-primary.hover, .btn-primary:hover {
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "background-color: #279f43", "border-color: rgba(27,31,35,.5)" */
-  .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected="true"],
-  [open] > .btn-primary {
-    background: linear-gradient(180deg, #595 0%, #283 100%);
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "background-color: #94d3a2", "border-color: rgba(27,31,35,.2)" */
-  .btn-primary.disabled, .btn-primary:disabled,
-  .btn-primary[aria-disabled="true"] {
-    background: #040;
-    border-color: rgba(200, 200, 200, .15);
-  }
-  /* help.github.com: "border-color: rgba(27,31,35,.5)" */
-  .btn-blue.hover, .btn-blue.selected, .btn-blue:active, .btn-blue:hover,
-  .btn-blue[aria-selected="true"], [open] > .btn-blue {
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "border-color: rgba(27,31,35,.2)" */
-  .btn-blue.disabled, .btn-blue:disabled, .btn-blue[aria-disabled="true"] {
-    border-color: rgba(200, 200, 200, .15);
-  }
   /* help.github.com: "color: #cb2431", "background-color: #fafbfc", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
-  .btn-danger {
+  .btn, .btn-danger {
     background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
-  }
-  /* help.github.com: "border-color: rgba(27,31,35,.5)" */
-  .btn-danger.selected, .btn-danger:active, .btn-danger[aria-selected="true"],
-  [open] > .btn-danger {
-    border-color: rgba(200, 200, 200, .3);
-  }
-  /* help.github.com: "background-color: #eff3f6", "border-color: rgba(27,31,35,.2)" */
-  .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled="true"] {
-    background-color: #343434;
-    border-color: rgba(200, 200, 200, .15);
-  }
-  /* help.github.com: "background-color: #0366d6", "border-color: #0366d6" */
-  .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
-  .btn-outline[aria-selected="true"], [open] > .btn-outline {
-    background-color: /*[[base-color]]*/ #4f8cc9;
-    color: #fff;
-    background-image: none;
-    border-color: /*[[base-color]]*/ #4f8cc9;
-  }
-  /* help.github.com: "color: #0366d6", "background-color: #fff" */
-  .btn-outline.selected .Counter, .btn-outline:active .Counter,
-  .btn-outline:hover .Counter, .btn-outline[aria-selected="true"] .Counter,
-  [open] > .btn-outline .Counter {
-    color: /*[[base-color]]*/ #4f8cc9;
-    background-color: #181818;
-    background-image: none;
-  }
-  /* help.github.com: "color: rgba(27,31,35,.3)", "background-color: #fff", "border-color: rgba(27,31,35,.15)" */
-  .btn-outline.disabled, .btn-outline:disabled,
-  .btn-outline[aria-disabled="true"] {
-    color: rgba(230, 230, 230, .3);
-    background-color: #181818;
-    background-image: none;
-    border-color: rgba(200, 200, 200, .1);
   }
   /* help.github.com: "color: #0366d6", "background-color: transparent" */
   .btn-link {
     background-color: transparent;
-  }
-  /* help.github.com: "color: #0366d6" */
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
-  .btn-invisible:focus, .btn-invisible:hover,
-  .btn-invisible[aria-selected="true"] {
-    color: /*[[base-color]]*/ #4f8cc9;
-  }
-  /* help.github.com: "color: #444d56", "background: #dfe2e5" */
-  .ellipsis-expander, .hidden-text-expander a {
-    color: #afafaf;
-    background: #383838;
-  }
-  /* help.github.com: "background-color: #c6cbd1" */
-  .ellipsis-expander:hover, .hidden-text-expander a:hover {
-    background-color: #484848;
-  }
-  /* help.github.com: "color: #0366d6", "background: #fff", "border: 1px solid #e1e4e8" */
-  .pagination a, .pagination em, .pagination span {
-    color: /*[[base-color]]*/ #4f8cc9;
-    background: #181818;
-    background-image: none;
-    border-color: #343434;
-  }
-  /* help.github.com: "background-color: #eff3f6", "border-color: #e1e4e8" */
-  .pagination a:focus, .pagination a:hover, .pagination em:focus,
-  .pagination em:hover, .pagination span:focus, .pagination span:hover {
-    background-color: #343434;
-    border-color: #343434;
-  }
-  /* help.github.com: "color: #d1d5da", "background-color: #fafbfc" */
-  .pagination .disabled, .pagination .disabled:hover, .pagination .gap,
-  .pagination .gap:hover, .pagination [aria-disabled="true"],
-  .pagination [aria-disabled="true"]:hover {
-    color: #404040;
-    background-color: #181818;
   }
   /* help.github.com: "border: 1px solid #e1e4e8 !important", "border-top: 1px solid #e1e4e8 !important", "border-right: 1px solid #e1e4e8 !important", "border-bottom: 1px solid #e1e4e8 !important", "border-left: 1px solid #e1e4e8 !important" */
   @media (min-width: 544px) {
@@ -6918,10 +6750,6 @@
   .markdown-body h1, .markdown-body h2 {
     border-bottom-color: #343434;
   }
-  /* help.github.com: "border: 1px solid #dfe2e5" */
-  .markdown-body table td, .markdown-body table th {
-    border-color: #343434;
-  }
   /* help.github.com: "background-color: transparent" */
   .markdown-body .emoji, .markdown-body pre code, .markdown-body pre tt,
   .markdown-body table img {
@@ -6974,108 +6802,9 @@
     border-color: transparent;
   }
   /* help.github.com: "background-color: transparent" */
-  .inline-form .btn-plain {
+  .btn-transparent, .filter-list.pjax-active .filter-item,
+  .inline-form .btn-plain, .SideNav-item, .SideNav-subItem, .tabnav-tab {
     background-color: transparent;
-  }
-  /* help.github.com: "color: #24292e", "background-color: #fff" */
-  .menu-item.selected, .menu-item[aria-current],
-  .menu-item[aria-selected="true"] {
-    color: #bebebe;
-    background-color: #181818;
-    background-image: none;
-  }
-  /* help.github.com: "color: #586069", "background-color: transparent", "border: 1px solid transparent" */
-  .tabnav-tab {
-    background-color: transparent;
-  }
-  /* help.github.com: "color: #24292e", "background-color: #fff", "border-color: #d1d5da" */
-  .tabnav-tab.selected, .tabnav-tab[aria-current],
-  .tabnav-tab[aria-selected="true"] {
-    color: #bebebe;
-    background-color: #181818;
-    background-image: none;
-    border-color: #404040;
-  }
-  /* help.github.com: "color: #24292e" */
-  .tabnav-tab:focus, .tabnav-tab:hover {
-    color: #bebebe;
-  }
-  /* help.github.com: "color: #586069", "background-color: transparent" */
-  .filter-list.pjax-active .filter-item {
-    background-color: transparent;
-  }
-  /* help.github.com: "background-color: #0366d6" */
-  .filter-item.selected, .filter-item[aria-current],
-  .filter-item[aria-selected="true"] {
-    background-color: /*[[base-color]]*/ #4f8cc9;
-    color: #fff;
-    background-image: none;
-  }
-  /* help.github.com: "color: #586069", "background-color: transparent", "border-top: 1px solid #e1e4e8" */
-  .SideNav-item {
-    background-color: transparent;
-  }
-  /* help.github.com: "color: #24292e", "background-color: #f6f8fa" */
-  .SideNav-item:focus, .SideNav-item:hover {
-    color: #bebebe;
-    background-color: #202020;
-  }
-  /* help.github.com: "background-color: #d1d5da" */
-  .SideNav-item:focus::before, .SideNav-item:hover::before {
-    background-color: #404040;
-  }
-  /* help.github.com: "color: #0366d6", "background-color: transparent" */
-  .SideNav-subItem {
-    background-color: transparent;
-  }
-  /* help.github.com: "color: #24292e" */
-  .SideNav-subItem:focus, .SideNav-subItem:hover {
-    color: #bebebe;
-  }
-  /* help.github.com: "background-color: #f6f8fa" */
-  .subnav-item:focus, .subnav-item:hover {
-    background-color: #202020;
-  }
-  /* help.github.com: "background-color: #0366d6", "border-color: #0366d6" */
-  .subnav-item.selected, .subnav-item[aria-current],
-  .subnav-item[aria-selected="true"] {
-    background-color: /*[[base-color]]*/ #4f8cc9;
-    color: #fff;
-    background-image: none;
-    border-color: /*[[base-color]]*/ #4f8cc9;
-  }
-  /* help.github.com: "color: #24292e", "border-bottom-color: #d1d5da" */
-  .UnderlineNav-item:focus, .UnderlineNav-item:hover {
-    color: #bebebe;
-    border-bottom-color: #404040;
-  }
-  /* help.github.com: "color: #6a737d" */
-  .UnderlineNav-item:focus .UnderlineNav-octicon,
-  .UnderlineNav-item:hover .UnderlineNav-octicon {
-    color: #949494;
-  }
-  /* help.github.com: "color: #24292e", "border-bottom-color: #e36209" */
-  .UnderlineNav-item.selected, .UnderlineNav-item[aria-current],
-  .UnderlineNav-item[role="tab"][aria-selected="true"] {
-    color: #bebebe;
-    border-bottom-color: #eee;
-  }
-  /* help.github.com: "color: #6a737d" */
-  .UnderlineNav-item.selected .UnderlineNav-octicon,
-  .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
-  .UnderlineNav-item[role="tab"][aria-selected="true"] .UnderlineNav-octicon {
-    color: #949494;
-  }
-  /* help.github.com: "background-color: transparent" */
-  .btn-transparent {
-    background-color: transparent;
-  }
-  /* help.github.com: "color: #2f363d", "background-color: #fff", "border-color: #fff" */
-  .btn-transparent:active, .btn-transparent:hover {
-    color: #bebebe;
-    background-color: #181818;
-    background-image: none;
-    border-color: #181818;
   }
   /* help.github.com: "color: #24292e" */
   .directory-toc h3 a {
