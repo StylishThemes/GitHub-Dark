@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.82
+@version     2.0.83
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,10 +213,10 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.82 (2020-05-19) */
+/*! Github Dark v2.0.83 (2020-05-20) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
-@-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   :root {
     --bg-custom: /*[[bg-custom]]*/;
     --bg-img: /*[[bg-choice]]*/;
@@ -16942,11 +16942,6 @@
   body.zh_logged_in .zhc-issue-card--options-open {
     border-color: #8368aa;
   }
-  /* zenhub: "color: #6a737d" */
-  body.zh_logged_in .zhc-issue-card .zhc-icon--pull-request,
-  body.zh_logged_in .zhc-issue-card .zhc-svg-icon--git-pull-request {
-    color: #949494;
-  }
   /* zenhub: "border-left: 3px solid #5e60ba", "border-top: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-issue-card__action-notification {
     border-left-color: #8368aa;
@@ -20322,8 +20317,8 @@
   article.border.rounded-1, .border-right.border-bottom.border-left,
   .graph-before-activity-overview, .access-form-wrapper, .timeline-comment-group,
   .summarylink-btn, .pinned-item-list-item, .avatar-before-user-status,
-  .profile-timeline-card, table.files tr, .Box:not([style*="background"]),
-  .pinned-issue-item, #wiki-footer .border-dashed, #wiki-rightbar .border-dashed,
+  .profile-timeline-card, .Box:not([style*="background"]), .pinned-issue-item,
+  #wiki-footer .border-dashed, #wiki-rightbar .border-dashed,
   .list-group-item.standalone, .commit-form, .sidebar-progress-bar > .d-flex,
   .pagination-loader-container .discussion-item-header .border,
   .pr-toolbar.is-stuck, .hx_badge-search-container, .file, #search-member,
@@ -20394,7 +20389,7 @@
   .Box-body-row--highlight.navigation-focus, .Box-body-row--highlight:hover,
   .js-current .standalone a, .menu-item:hover,
   .Box-row--focus-gray.navigation-focus, .team-listing .is-open.root-team,
-  .Box-row--hover-gray:hover, table.files tr[aria-selected="true"] td,
+  .Box-row--hover-gray:hover,
   .label-select-menu .select-menu-item.navigation-focus,
   .label-select-menu .select-menu-item:focus,
   .label-select-menu .select-menu-item:hover {
@@ -21030,8 +21025,8 @@
   .chooser-box h3, #forkqueue .instructions, .selector-item.clear:hover,
   #contributors-master svg, .inset-callout h2, .documentation ul.nav,
   .date_selector td.selected, #contributors-master, .context-title,
-  .list-module h2, .bootcamp-help h1, table.files tr.up-tree a:hover,
-  .ellipsis-button:hover, .codesearch-results .repo-list-name em,
+  .list-module h2, .bootcamp-help h1, .ellipsis-button:hover,
+  .codesearch-results .repo-list-name em,
   .codesearch-results .repo-list-description em, .codesearch-cols em,
   ul.bignav li a:hover, ul.smallnav li a:hover, .comments-wrapper, .rackspace,
   .subnav-bar > ul > li > ul > li > a:hover, .issue.active, .orgs-nav .count,
@@ -21732,7 +21727,7 @@
   .discussion-item-review.is-pending .file-header,
   .discussion-item-review.is-pending .comment-form-head.tabnav,
   .timeline-comment.unread-item .timeline-comment-header, .Label.bg-yellow,
-  table.files tr.warning, .code-list-item-private .blob-num {
+  .code-list-item-private .blob-num {
     background-color: #261d08 !important;
     border-color: #542 !important;
     color: #ddd !important;
@@ -22140,7 +22135,7 @@
     color: #555 !important;
   }
   /* no border */
-  .multiple-avatars, .multiple-avatars::before, table.files, table.files tr,
+  .multiple-avatars, .multiple-avatars::before,
   .simple-conversation-list>li:first-child, .gobutton.with-comments .sha,
   .usage-bar dd, .setup-form-container .fieldgroup .fields,
   .inline-comments .line-comments, #gist-form .gist-name-textbox,
@@ -23452,5 +23447,20 @@
 @-moz-document domain("camo.githubusercontent.com") {
   svg {
     background: #222;
+  }
+}
+@-moz-document domain("vscode-auth.github.com") {
+  .footer {
+    background: #202020;
+  }
+  #token {
+    background: #246;
+    border-color: #343434;
+  }
+  .token-did-copy {
+    background: #181818;
+  }
+  .failed {
+    border-color: #343434;
   }
 }
