@@ -116,6 +116,7 @@ const mappings = {
   "box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.7),inset 0 1px #fff": "box-shadow: 0 0 0 .1px #343434", // graphql explorer
   "box-shadow: 0 1px 0 #fff": "box-shadow: 0 0 0 1px #484848", // graphql explorer
   "box-shadow: inset 1px 0 0 #fff": "box-shadow: inset 1px 0 0 #181818", //
+  "box-shadow: inset 0 2px 3px rgba(0,0,0,.075)": "box-shadow: inset 0 2px 3px rgba(255,255,255,.075)", //
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
      box-shadow: 0 0 0 .2em rgba(79,140,201,.5);
@@ -356,7 +357,10 @@ const mappings = {
   "$border: #ec6cb9": "#c49",
   "$background: #ffeef8": "#170711",
 
+  "text-shadow: 0 1px 0 hsla(0,0%,100%,.6)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.6)",
+  "text-shadow: 0 1px 0 hsla(0,0%,100%,.5)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.5)",
   "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
+
   "outline: 1px solid #fff": "outline-color: #222",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
