@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.83
+@version     2.0.84
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.83 (2020-05-20) */
+/*! Github Dark v2.0.84 (2020-05-21) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -705,8 +705,7 @@
   }
   /* githubstatus.com: "background-color: #fff" */
   body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip,
-  body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip #box-arrow,
-  body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip .tooltip-box {
+  body.status .layout-content.status.status-full-history .uptime-calendar #uptime-tooltip #box-arrow {
     background-color: #181818;
     background-image: none;
   }
@@ -4565,6 +4564,10 @@
   /* github.com mobile: "color: #24292e" */
   body[class="page-responsive"] .text-emphasized {
     color: #bebebe;
+  }
+  /* github.com mobile: "text-shadow: 0 1px 0 hsla(0,0%,100%,.5)" */
+  body[class="page-responsive"] .text-shadow-light {
+    text-shadow: 0 1px 0 hsla(0, 0%, 0%, .5);
   }
   /* github.com mobile: "color: #24292e", "background-color: #fff", "border: 1px solid #d1d5da" */
   body[class="page-responsive"] .form-control,
@@ -8444,6 +8447,10 @@
   /* github.com: "color: #24292e" */
   .text-emphasized {
     color: #bebebe;
+  }
+  /* github.com: "text-shadow: 0 1px 0 hsla(0,0%,100%,.5)" */
+  .text-shadow-light {
+    text-shadow: 0 1px 0 hsla(0, 0%, 0%, .5);
   }
   /* github.com: "background-color: initial" */
   @keyframes blink {
@@ -13208,12 +13215,14 @@
   .clone-url-button + .clone-url-button > .clone-url-link {
     box-shadow: inset 1px 0 0 #181818;
   }
-  /* github.com: "color: #333", "background-image: linear-gradient(#ccc,#d5d5d5)", "border-color: #bbb" */
+  /* github.com: "color: #333", "text-shadow: 0 1px 0 hsla(0,0%,100%,.6)", "background-image: linear-gradient(#ccc,#d5d5d5)", "border-color: #bbb", "box-shadow: inset 0 2px 3px rgba(0,0,0,.075)" */
   .clone-url-button > .clone-url-link.selected,
   .clone-url-button > .clone-url-link.selected:hover {
     color: #bebebe;
+    text-shadow: 0 1px 0 hsla(0, 0%, 0%, .6);
     background-image: linear-gradient(#303030, #282828);
     border-color: #484848;
+    box-shadow: inset 0 2px 3px rgba(255, 255, 255, .075);
   }
   /* github.com: "background-color: initial" */
   .timeout {
@@ -23454,7 +23463,7 @@
     background: #202020;
   }
   #token {
-    background: #246;
+    background: #182030;
     border-color: #343434;
   }
   .token-did-copy {
