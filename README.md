@@ -115,20 +115,25 @@ If you would like to contribute to this repository, please...
 
 ## Development
 
-To develop, first install [Node.js](https://nodejs.org) 12 or greater, then install dependencies via `npm install` after which you can use the various commands available:
+First, make sure you have these installed:
 
-- `npm run build`: Runs the `generate` and `usercss` tasks.
-- `npm run usercss`: Build a [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
-- `npm run themes`: Parse all theme files and combine them into minified styles in the `themes` directory.
-- `npm run clean`: Reformat `github-dark.css` to conform the style guide.
-- `npm run lint`: Run Stylelint on `github-dark.css`.
-- `npm run authors`: Regenerate the `AUTHORS` file based on git history.
-- `npm run imagemin`: Minify all images present in the `image` directory.
-- `npm run generate`: Regenerate auto-generated CSS rules based on GitHub's stylesheet. Run this regularly.
-- `npm run patch`: Increment the version on the patch version number, update headers and create a commit.
-- `npm run minor`: Increment the version on the minor version number, update headers and create a commit.
-- `npm run major`: Increment the version on the major version number, update headers and create a commit.
-- `npm run update`: Update and install dependencies.
+- [`node`](https://nodejs.org): version 12 or greater
+- [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
+- `make`: comes with Unix-like OS, on Windows use [this](https://stackoverflow.com/a/54086635/808699)
+
+To get started, run `make deps` after which you can use the following `make` targets:
+
+- `make build`: Runs the `generate` and `usercss` tasks.
+- `make usercss`: Build the [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
+- `make themes`: Parse the theme files and combine them into minified styles in the `themes` directory.
+- `make clean`: Reformat `github-dark.css` to conform the style guide.
+- `make lint`: Run Stylelint on `github-dark.css`.
+- `make authors`: Regenerate the `AUTHORS` file based on git history.
+- `make generate`: Regenerate auto-generated CSS rules compiled from various public sources.
+- `make patch`: Increment the patch version number, update file headers, create a commit and push it to `origin`.
+- `make minor`: Increment the minor version number, update file headers, create a commit and push it to `origin`.
+- `make major`: Increment the major version number, update file headers, create a commit and push it to `origin`.
+- `make update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 

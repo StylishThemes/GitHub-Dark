@@ -19,20 +19,20 @@ jobs:
           node-version: "14"
 
       - name: Install dependencies
-        run: npm install
+        run: make deps
 
       - name: Regenerate
-        run: npm run generate
+        run: make generate
 
       - name: Push
         run: |
           if [[ $(git status --porcelain --untracked-files=no) ]]; then
-            npm test
+            make test
             git fetch --unshallow --quiet --tags
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -am "automated regeneration"
-            npm run patch
+            make patch
           else
             echo "Nothing to commit"
           fi

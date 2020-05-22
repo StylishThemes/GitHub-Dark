@@ -9,20 +9,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "authors": "bash tools/authors.sh",
-    "build": "npm run generate && npm run usercss",
-    "clean": "npm run perfectionist && node tools/clean.js",
-    "generate": "node tools/generate.js && npm run clean",
-    "imagemin": "bash tools/imagemin.sh",
-    "lint": "eslint . && stylelint github-dark.css themes/src",
-    "major": "npm run lint && npm run usercss && versions -p -d -C major github-dark.css github-dark.user.css && git push --tags origin master",
-    "minor": "npm run lint && npm run usercss && versions -p -d -C minor github-dark.css github-dark.user.css && git push --tags origin master",
-    "patch": "npm run lint && npm run usercss && versions -p -d -C patch github-dark.css github-dark.user.css && git push --tags origin master",
-    "perfectionist": "perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250",
-    "test": "npm run lint",
-    "themes": "node tools/themes.js",
-    "update": "updates -cu && npm install",
-    "usercss": "node tools/usercss.js"
+    "test": "make test"
   },
   "devDependencies": {
     "clean-css": "4.2.3",
