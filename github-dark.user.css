@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.84
+@version     2.0.85
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.84 (2020-05-21) */
+/*! Github Dark v2.0.85 (2020-05-22) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -5345,8 +5345,7 @@
     background: transparent;
   }
   /* github.com mobile: "color: hsla(0,0%,100%,.75)" */
-  body[class="page-responsive"] .HeaderMenu-details[open] .HeaderMenu-link,
-  body[class="page-responsive"] .HeaderMenu-link:hover {
+  body[class="page-responsive"] .HeaderMenu-details[open] .HeaderMenu-link {
     color: hsla(0, 0%, 100%, .25);
   }
   /* github.com mobile: "background-image: linear-gradient(#54a3ff,#006eed)" */
@@ -6472,17 +6471,25 @@
   .gh-subheading {
     color: #949494;
   }
-  /* support.github.com: "background-color: #2cbe4e" */
-  .State--open {
-    background-color: #373;
+  /* support.github.com: "background-color: #6f42c1" */
+  #ticket-title .State--open {
+    background-color: #8368aa;
   }
   /* support.github.com: "background-color: #cb2431" */
-  .State--closed {
+  #ticket-title .State--closed {
     background-color: #911;
   }
-  /* support.github.com: "background-color: #6f42c1" */
-  .State--pending {
-    background-color: #8368aa;
+  /* support.github.com: "background-color: #2cbe4e" */
+  #ticket-title .State--pending {
+    background-color: #373;
+  }
+  /* support.github.com: "color: #cb2431" */
+  .octicon-state-closed {
+    color: #f44;
+  }
+  /* support.github.com: "color: #6f42c1" */
+  .octicon-state-open {
+    color: #8368aa;
   }
   /* support.github.com: "color: #333" */
   #ticket-comments .attachment-name a, .attachment-name a:hover,
@@ -8616,12 +8623,6 @@
   .page-responsive .HeaderMenu-link:hover {
     color: #bebebe;
   }
-  /* github.com: "color: hsla(0,0%,100%,.75)" */
-  @media (min-width: 1012px) {
-    .page-responsive .HeaderMenu-link:hover {
-      color: hsla(0, 0%, 100%, .25);
-    }
-  }
   /* github.com: "stroke: #24292e" */
   .page-responsive .HeaderMenu-link .icon-chevon-down-mktg {
     stroke: #d2d2d2;
@@ -8651,7 +8652,7 @@
     background: transparent;
   }
   /* github.com: "color: hsla(0,0%,100%,.75)" */
-  .HeaderMenu-details[open] .HeaderMenu-link, .HeaderMenu-link:hover {
+  .HeaderMenu-details[open] .HeaderMenu-link {
     color: hsla(0, 0%, 100%, .25);
   }
   /* github.com: "background-image: linear-gradient(#54a3ff,#006eed)" */
@@ -11560,6 +11561,10 @@
   .icon-discussion-gray {
     color: #bebebe;
   }
+  /* github.com: "fill: #24292e" */
+  .icon-discussion-gray, .icon-discussion-gray path {
+    fill: #bebebe;
+  }
   /* github.com: "fill: #cb2431" */
   .donut-chart > .action_required, .donut-chart > .cancelled,
   .donut-chart > .error, .donut-chart > .failure, .donut-chart > .timed_out {
@@ -11670,12 +11675,17 @@
   .graphs .dot.padded circle:hover {
     fill: /*[[base-color]]*/;
   }
+  /* github.com: "fill: #24292e" */
+  .graphs .d3-tip {
+    fill: #bebebe;
+  }
   /* github.com: "color: #6a737d" */
   .graphs .dir {
     color: #949494;
   }
-  /* github.com: "stroke: #24292e" */
+  /* github.com: "fill: #24292e", "stroke: #24292e" */
   .graphs .selection .selection {
+    fill: #bebebe;
     stroke: #d2d2d2;
   }
   /* github.com: "color: #586069" */
@@ -12479,14 +12489,13 @@
   .org-insights-cards .repository-lang-stats-graph .language-color {
     border-color: #181818;
   }
-  /* github.com: "color: #666", "background-color: #fafbfc", "border-bottom: 1px solid #eee" */
+  /* github.com: "color: #24292e", "background-color: #fafbfc", "border-bottom: 1px solid #e1e4e8" */
   .orghead {
-    color: #949494;
     background-color: #181818;
     border-bottom-color: #343434;
   }
   /* github.com: "color: #333" */
-  .org-name {
+  .org-name, .orghead {
     color: #bebebe;
   }
   /* github.com: "color: #586069" */
@@ -14355,13 +14364,13 @@
   .text-blue-dark {
     color: #9daccc !important;
   }
-  /* github.com: "color: #d1d5da" */
-  .actions-event-on {
-    color: #404040;
-  }
   /* github.com: "color: #959da5" */
-  .actions-event-event {
+  .actions-event-token {
     color: #767676;
+  }
+  /* github.com: "color: #d1d5da" */
+  .actions-event-token span {
+    color: #404040;
   }
   /* github.com: "color: #0366d6" */
   .actions-template-card:hover .actions-template-repo {
@@ -19912,7 +19921,11 @@
   }
   /* GitHub Bug: Fix cut-off 'g' letters on user page timeline repo names */
   .profile-timeline .lh-condensed {
-    line-height: 1.35rem;
+    line-height: 1.35rem !important;
+  }
+  /* GitHub Bug: Fix cut-off 'g' letters on action workflow list */
+  [id^="check_suite"] .lh-condensed {
+    line-height: 1.35rem !important;
   }
   /* Tweak: Square counters, add 1px padding on bottom to counter uneven font size */
   #conversation_tab_counter, #commits_tab_counter, #files_tab_counter,
@@ -20440,17 +20453,17 @@
   .issue.open.read .summary, .unselected_month, .commits th, #MathJax_Message,
   .chzn-single, .user-commits, .user-commits th, .metabox,
   .ranked-repositories > li, .pagehead ul.actions, #issues_search .comment,
-  #header-wrapper, ul.feature-tabs li.highlight, .pagination,
-  .filterbar .filters li, .starting-comment .body, .list-tip, .commit_oneline,
-  .filterbox, .conversation-list-heading .inner, .autocomplete-results,
-  .new-comments .body, .display tr, .render-container, .boxed-group-table th,
-  .features-highlight, .outline-box-highlighted, .nav-bar-tabs, #watchers li,
-  .browser .listing, .item, .context-pane, .context-loader, .sidebar .module,
-  .tip-body, #assignee, .commit_oneline td, .notifications th, .content table th,
-  .repo-collection>ul, #graph_data .tab.selected, .full-width-divider,
-  .markdown-body .csv-data th, h3.conversation-list-heading strong,
-  .file-commit-form .commit-form, .facebox-footer, .gcr-ext-editor-close,
-  .gcr-ext-editor-header, .logos-download-link,
+  #header-wrapper, ul.feature-tabs li.highlight, .filterbar .filters li,
+  .starting-comment .body, .list-tip, .commit_oneline, .filterbox,
+  .conversation-list-heading .inner, .autocomplete-results, .new-comments .body,
+  .display tr, .render-container, .boxed-group-table th, .features-highlight,
+  .outline-box-highlighted, .nav-bar-tabs, #watchers li, .browser .listing,
+  .item, .context-pane, .context-loader, .sidebar .module, .tip-body, #assignee,
+  .commit_oneline td, .notifications th, .content table th, .repo-collection>ul,
+  #graph_data .tab.selected, .full-width-divider, .markdown-body .csv-data th,
+  h3.conversation-list-heading strong, .file-commit-form .commit-form,
+  .facebox-footer, .gcr-ext-editor-close, .gcr-ext-editor-header,
+  .logos-download-link,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:hover,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:focus,
   .ajax-pagination-form:not(.progressive-timeline-loader-container):not(.pagination-loader-container) .ajax-pagination-btn:active {
@@ -20562,9 +20575,8 @@
   .header .divider-vertical, .ace-github-base16, .markdown-body pre code,
   .markdown-body pre tt, #readme .plain pre, .uploaded-files, .input_area,
   #notebook .highlight, #notebook .highlight pre, .output_area pre,
-  .gist-snippet-meta .gist-count-links>li>a:hover, .markdown-body img,
-  .delete-owners-button:hover, .avatar-child,
-  .session-authentication .header-logged-out,
+  .gist-snippet-meta .gist-count-links>li>a:hover, .delete-owners-button:hover,
+  .avatar-child, .session-authentication .header-logged-out,
   .session-authentication .auth-form-header,
   .timeline-progressive-disclosure-items, #com #footer, .shade-gradient,
   #categories .list, .gist-banner, .main-content, .showcase-page-header,
