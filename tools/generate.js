@@ -332,6 +332,7 @@ const mappings = {
   "$background: #fffbdd": "#261d08",
   "$background: #fcf9e4": "#321", // zenhub blocked banner
   "$background: #ffe3c8": "#261d08",
+  "$background: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
   "$border: #ffd33d": "#bba257", // code link highlight
   "fill: #dbab09": "fill: #cb4",
   "$border: #fffbdd": "#321",
