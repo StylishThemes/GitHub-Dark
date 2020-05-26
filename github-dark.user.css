@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.85
+@version     2.0.86
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.85 (2020-05-22) */
+/*! Github Dark v2.0.86 (2020-05-26) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -4892,7 +4892,7 @@
   }
   /* github.com mobile: "background-color: #0366d6", "border-color: #0366d6" */
   body[class="page-responsive"] .subnav-item.selected,
-  body[class="page-responsive"] .subnav-item[aria-current],
+  body[class="page-responsive"] .subnav-item[aria-current]:not([aria-current="false"]),
   body[class="page-responsive"] .subnav-item[aria-selected="true"] {
     background-color: /*[[base-color]]*/;
     color: #fff;
@@ -4934,14 +4934,14 @@
   }
   /* github.com mobile: "color: #24292e", "border-bottom-color: #e36209" */
   body[class="page-responsive"] .UnderlineNav-item.selected,
-  body[class="page-responsive"] .UnderlineNav-item[aria-current],
+  body[class="page-responsive"] .UnderlineNav-item[aria-current]:not([aria-current="false"]),
   body[class="page-responsive"] .UnderlineNav-item[role="tab"][aria-selected="true"] {
     color: #bebebe;
     border-bottom-color: #eee;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .UnderlineNav-item.selected .UnderlineNav-octicon,
-  body[class="page-responsive"] .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
+  body[class="page-responsive"] .UnderlineNav-item[aria-current]:not([aria-current="false"]) .UnderlineNav-octicon,
   body[class="page-responsive"] .UnderlineNav-item[role="tab"][aria-selected="true"] .UnderlineNav-octicon {
     color: #949494;
   }
@@ -6370,6 +6370,10 @@
   body[class="page-responsive"] .Header {
     background-color: #181818;
   }
+  /* support.github.com: "color: #586069" */
+  .breadcrumb-item-selected, .breadcrumb-item[aria-current] {
+    color: #afafaf;
+  }
   /* support.github.com: "color: #24292e", "background-color: #fff", "border: 1px solid #d1d5da" */
   #q, .form-control, .form-select {
     color: #bebebe;
@@ -6891,6 +6895,14 @@
   .btn-link {
     background-color: transparent;
   }
+  /* help.github.com: "background-color: #0366d6", "border-color: #0366d6" */
+  .pagination .current, .pagination .current:hover, .pagination [aria-current],
+  .pagination [aria-current]:hover {
+    background-color: /*[[base-color]]*/;
+    color: #fff;
+    background-image: none;
+    border-color: /*[[base-color]]*/;
+  }
   /* help.github.com: "border: 1px solid #e1e4e8 !important", "border-top: 1px solid #e1e4e8 !important", "border-right: 1px solid #e1e4e8 !important", "border-bottom: 1px solid #e1e4e8 !important", "border-left: 1px solid #e1e4e8 !important" */
   @media (min-width: 544px) {
     .border-sm {
@@ -7027,8 +7039,79 @@
     border-color: transparent;
   }
   /* help.github.com: "background-color: transparent" */
-  .btn-transparent, .filter-list.pjax-active .filter-item,
-  .inline-form .btn-plain, .SideNav-item, .SideNav-subItem, .tabnav-tab {
+  .inline-form .btn-plain {
+    background-color: transparent;
+  }
+  /* help.github.com: "color: #24292e", "background-color: #fff" */
+  .menu-item.selected, .menu-item[aria-current],
+  .menu-item[aria-selected="true"] {
+    color: #bebebe;
+    background-color: #181818;
+    background-image: none;
+  }
+  /* help.github.com: "color: #586069", "background-color: transparent", "border: 1px solid transparent" */
+  .tabnav-tab {
+    background-color: transparent;
+  }
+  /* help.github.com: "color: #24292e", "background-color: #fff", "border-color: #d1d5da" */
+  .tabnav-tab.selected, .tabnav-tab[aria-current],
+  .tabnav-tab[aria-selected="true"] {
+    color: #bebebe;
+    background-color: #181818;
+    background-image: none;
+    border-color: #404040;
+  }
+  /* help.github.com: "color: #586069", "background-color: transparent" */
+  .filter-list.pjax-active .filter-item {
+    background-color: transparent;
+  }
+  /* help.github.com: "background-color: #0366d6" */
+  .filter-item.selected, .filter-item[aria-current],
+  .filter-item[aria-selected="true"] {
+    background-color: /*[[base-color]]*/;
+    color: #fff;
+    background-image: none;
+  }
+  /* help.github.com: "color: #586069", "background-color: transparent", "border-top: 1px solid #e1e4e8" */
+  .SideNav-item {
+    background-color: transparent;
+  }
+  /* help.github.com: "color: #24292e", "background-color: #fff" */
+  .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"] {
+    color: #bebebe;
+    background-color: #181818;
+    background-image: none;
+  }
+  /* help.github.com: "color: #0366d6", "background-color: transparent" */
+  .SideNav-subItem {
+    background-color: transparent;
+  }
+  /* help.github.com: "color: #24292e" */
+  .SideNav-subItem[aria-current="page"], .SideNav-subItem[aria-selected="true"] {
+    color: #bebebe;
+  }
+  /* help.github.com: "background-color: #0366d6", "border-color: #0366d6" */
+  .subnav-item.selected, .subnav-item[aria-current],
+  .subnav-item[aria-selected="true"] {
+    background-color: /*[[base-color]]*/;
+    color: #fff;
+    background-image: none;
+    border-color: /*[[base-color]]*/;
+  }
+  /* help.github.com: "color: #24292e", "border-bottom-color: #e36209" */
+  .UnderlineNav-item.selected, .UnderlineNav-item[aria-current],
+  .UnderlineNav-item[role="tab"][aria-selected="true"] {
+    color: #bebebe;
+    border-bottom-color: #eee;
+  }
+  /* help.github.com: "color: #6a737d" */
+  .UnderlineNav-item.selected .UnderlineNav-octicon,
+  .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
+  .UnderlineNav-item[role="tab"][aria-selected="true"] .UnderlineNav-octicon {
+    color: #949494;
+  }
+  /* help.github.com: "background-color: transparent" */
+  .btn-transparent {
     background-color: transparent;
   }
   /* help.github.com: "color: #24292e" */
@@ -7325,7 +7408,8 @@
     background-color: #202020;
   }
   /* github.com: "color: #586069" */
-  .breadcrumb-item-selected, .breadcrumb-item[aria-current] {
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current]:not([aria-current="false"]) {
     color: #afafaf;
   }
   /* github.com: "border: 1px solid rgba(27,31,35,.2)" */
@@ -7762,7 +7846,7 @@
     background-color: #202020;
   }
   /* github.com: "color: #24292e", "background-color: #fff" */
-  .menu-item.selected, .menu-item[aria-current],
+  .menu-item.selected, .menu-item[aria-current]:not([aria-current="false"]),
   .menu-item[aria-selected="true"] {
     color: #bebebe;
     background-color: #181818;
@@ -7792,7 +7876,7 @@
     border-color: transparent;
   }
   /* github.com: "color: #24292e", "background-color: #fff", "border-color: #d1d5da" */
-  .tabnav-tab.selected, .tabnav-tab[aria-current],
+  .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current="false"]),
   .tabnav-tab[aria-selected="true"] {
     color: #bebebe;
     background-color: #181818;
@@ -7831,7 +7915,7 @@
     background-color: #343434;
   }
   /* github.com: "background-color: #0366d6" */
-  .filter-item.selected, .filter-item[aria-current],
+  .filter-item.selected, .filter-item[aria-current]:not([aria-current="false"]),
   .filter-item[aria-selected="true"] {
     background-color: /*[[base-color]]*/;
     color: #fff;
@@ -7866,7 +7950,8 @@
     background-image: none;
   }
   /* github.com: "color: #24292e", "background-color: #fff" */
-  .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"] {
+  .SideNav-item[aria-current]:not([aria-current="false"]),
+  .SideNav-item[aria-selected="true"] {
     color: #bebebe;
     background-color: #181818;
     background-image: none;
@@ -7882,7 +7967,8 @@
   }
   /* github.com: "color: #24292e" */
   .SideNav-subItem:focus, .SideNav-subItem:hover,
-  .SideNav-subItem[aria-current="page"], .SideNav-subItem[aria-selected="true"] {
+  .SideNav-subItem[aria-current]:not([aria-current="false"]),
+  .SideNav-subItem[aria-selected="true"] {
     color: #bebebe;
   }
   /* github.com: "border-bottom: 1px solid #eaecef" */
@@ -7899,7 +7985,7 @@
     background-color: #202020;
   }
   /* github.com: "background-color: #0366d6", "border-color: #0366d6" */
-  .subnav-item.selected, .subnav-item[aria-current],
+  .subnav-item.selected, .subnav-item[aria-current]:not([aria-current="false"]),
   .subnav-item[aria-selected="true"] {
     background-color: /*[[base-color]]*/;
     color: #fff;
@@ -7939,14 +8025,15 @@
     color: #949494;
   }
   /* github.com: "color: #24292e", "border-bottom-color: #e36209" */
-  .UnderlineNav-item.selected, .UnderlineNav-item[aria-current],
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]),
   .UnderlineNav-item[role="tab"][aria-selected="true"] {
     color: #bebebe;
     border-bottom-color: #eee;
   }
   /* github.com: "color: #6a737d" */
   .UnderlineNav-item.selected .UnderlineNav-octicon,
-  .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
+  .UnderlineNav-item[aria-current]:not([aria-current="false"]) .UnderlineNav-octicon,
   .UnderlineNav-item[role="tab"][aria-selected="true"] .UnderlineNav-octicon {
     color: #949494;
   }
@@ -7968,8 +8055,8 @@
     border-color: #343434;
   }
   /* github.com: "background-color: #0366d6", "border-color: #0366d6" */
-  .pagination .current, .pagination .current:hover, .pagination [aria-current],
-  .pagination [aria-current]:hover {
+  .pagination .current, .pagination .current:hover,
+  .pagination [aria-current]:not([aria-current="false"]) {
     background-color: /*[[base-color]]*/;
     color: #fff;
     background-image: none;
@@ -10052,6 +10139,10 @@
   /* github.com: "background-color: #ffdce0" */
   .blob-num-deletion {
     background-color: #300;
+  }
+  /* github.com: "background: rgba(255,223,93,.2)" */
+  .selected-line::after {
+    background: rgba(132, 70, 0, .2);
   }
   /* github.com: "border-top: 1px solid #ffd33d" */
   .selected-line.selected-line-top::after {
@@ -14032,11 +14123,6 @@
   .details-overlay[open] > .dropdown-item:hover {
     background: #181818;
     background-image: none;
-  }
-  /* github.com: "color: #586069", "background-color: initial" */
-  .filter-item[aria-current="false"] {
-    color: #afafaf;
-    background-color: initial;
   }
   /* github.com: "color: #959da5" */
   .radio-label .octicon {
@@ -22297,7 +22383,7 @@
     background: #222;
   }
   /* link target lines */
-  .selected-line::after, .blob-code-inner.highlighted {
+  .blob-code-inner.highlighted {
     background: rgba(255, 255, 255, .075) !important;
   }
   .selected-line::after {
