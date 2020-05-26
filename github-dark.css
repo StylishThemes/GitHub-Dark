@@ -131,6 +131,10 @@
     border: 0;
     border-top-color: #343434;
   }
+  /* githubstatus.com: "border-bottom: 1px dotted #ddd" */
+  body.status abbr {
+    border-bottom-color: #343434;
+  }
   /* githubstatus.com: "background-color: #f5f5f5" */
   body.status pre.code-display {
     background-color: #202020;
@@ -1499,10 +1503,11 @@
     background-color: #181818;
     background-image: none;
   }
-  /* developer.github.com: "border-bottom: 1px solid #e5e5e5" */
+  /* developer.github.com: "border-bottom: 1px dotted #e5e5e5" */
   html[prefix] .data-table tbody td, html[prefix] .data-table tbody th,
   html[prefix] .data-table tbody tr:last-child td,
-  html[prefix] .data-table tbody tr:last-child th {
+  html[prefix] .data-table tbody tr:last-child th,
+  html[prefix] abbr[data-original-title], html[prefix] abbr[title] {
     border-bottom-color: #343434;
   }
   /* developer.github.com: "border: 0" */
@@ -12654,6 +12659,10 @@
     background-color: #182030;
     border-color: /*[[base-color]]*/ #4f8cc9;
   }
+  /* github.com: "border-bottom: 1px dotted #959da5" */
+  .issue-keyword {
+    border-bottom-color: #484848;
+  }
   /* github.com: "color: #24292e" */
   .select-menu-item.navigation-focus > .octicon.label-options-icon,
   .select-menu-item[aria-selected="true"] > .octicon.label-options-icon {
@@ -13640,6 +13649,10 @@
   /* github.com: "color: #735c0f" */
   .archived-project-cards-pane .project-card .archived-header {
     color: #bba257;
+  }
+  /* github.com: "border-bottom: 1px dotted #959da5" */
+  .project-pane .redacted-activity {
+    border-bottom-color: #484848;
   }
   /* github.com: "color: rgba(27,31,35,.5)" */
   .project-pane-close {
@@ -17670,19 +17683,19 @@
     color: #949494;
   }
   /* zenhub: "background-color: #fff", "border: 1px solid #e9e9e9" */
-  body.zh_logged_in .zhc-chip--outlined,
-  body.zh_logged_in .zhc-choose-organization__org-list {
-    background-color: #181818;
-    background-image: none;
+  body.zh_logged_in .zhc-chip--outlined {
     border-color: #343434;
   }
-  /* zenhub: "border-top: 2px solid #e9e9e9" */
-  body.zh_logged_in .zhc-choose-organization__section {
-    border-top-color: #343434;
+  /* zenhub: "background-color: #fff" */
+  body.zh_logged_in .zhc-chip--outlined,
+  body.zh_logged_in .zhc-choose-organization {
+    background-color: #181818;
+    background-image: none;
   }
-  /* zenhub: "border: none" */
-  body.zh_logged_in .zhc-choose-organization__section:first-child {
-    border: none;
+  /* zenhub: "border-top: 1px solid #e9e9e9" */
+  body.zh_logged_in .zhc-choose-organization__learn-more,
+  body.zh_logged_in .zhc-choose-organization__section + .zhc-choose-organization__section {
+    border-top-color: #343434;
   }
   /* zenhub: "border: 1px solid transparent" */
   body.zh_logged_in .zhc-organization-item {
@@ -17718,6 +17731,10 @@
   body.zh_logged_in .zhc-collapsible-control {
     border-color: transparent;
   }
+  /* zenhub: "background-color: transparent" */
+  body.zh_logged_in .zhc-collapsible-control--button {
+    background-color: transparent;
+  }
   /* zenhub: "color: #333" */
   body.zh_logged_in .zhc-collapsible-control:hover.zhc-collapsible-control--grey:not(.zhc-collapsible-control--border) {
     color: #bebebe;
@@ -17750,17 +17767,23 @@
   body.zh_logged_in .zhc-confetti-announcement .zhc-confetti-announcement__close:hover {
     color: #949494;
   }
-  /* zenhub: "border: 1px solid #e9e9e9", "background-color: #fff" */
-  body.zh_logged_in .zhc-confirmation-modal, body.zh_logged_in .zhc-consent-form {
+  /* zenhub: "background-color: #fff" */
+  body.zh_logged_in .zhc-confirmation-modal {
     background-color: #181818;
     background-image: none;
   }
+  /* zenhub: "color: #666" */
   body.zh_logged_in .zhc-consent-form {
-    border-color: #343434;
+    color: #949494;
   }
-  /* zenhub: "background-color: #f8f8f8" */
-  body.zh_logged_in .zhc-consent-form__checkbox {
-    background-color: #202020;
+  /* zenhub: "border-top: 1px solid #e9e9e9", "color: #333" */
+  body.zh_logged_in .zhc-consent-form__title {
+    border-top-color: #343434;
+    color: #bebebe;
+  }
+  /* zenhub: "border: 1px solid #e9e9e9" */
+  body.zh_logged_in .zhc-consent-form__checkbox input {
+    border-color: #343434;
   }
   /* zenhub: "box-shadow: none" */
   @media (min-width: 1020px) {
@@ -18913,6 +18936,12 @@
     body.zh_logged_in .zh-onboarding-banner__next-step .zhc-click-text-item {
       background-color: transparent;
     }
+  }
+  /* zenhub: "background: #fff", "border-right: 1px solid #e9e9e9" */
+  body.zh_logged_in .zhc-onboarding-page .zhc-sidebar-container {
+    background: #181818;
+    background-image: none;
+    border-right-color: #343434;
   }
   /* zenhub: "border: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-org-dropdown__toggle-button--bordered {
