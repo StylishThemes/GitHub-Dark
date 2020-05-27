@@ -204,12 +204,6 @@ const mappings = {
   "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
   "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
 
-  // semi-transparent white used in site header, we don't invert these
-  "color: hsla(0,0%,100%,.25)": "color: hsla(0,0%,100%,.25)",
-  "color: hsla(0,0%,100%,.5)": "color: hsla(0,0%,100%,.5)",
-  "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.6)",
-  "color: hsla(0,0%,100%,.75)": "color: hsla(0,0%,100%,.75)",
-
   "fill: #959da5": "fill: #757575",
   "fill: #0366d6": "fill:  /*[[base-color]]*/ #4f8cc9",
   "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
