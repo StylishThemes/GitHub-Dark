@@ -171,7 +171,7 @@ const mappings = {
   "color: #000": "color: #f0f0f0",
   "color: #1b1f23": "color: #dcdcdc",
   "color: #141823": "color: #dcdcdc", // graphql explorer
-  "color: #24292e": "color: #bebebe", // .btn
+  "color: #24292e": "color: #cdcdcd", // .btn
   "color: #2f363d": "color: #bebebe",
   "color: #333": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
