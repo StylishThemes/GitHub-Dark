@@ -63,7 +63,6 @@ const mappings = {
   // ==========================================================================
   // Border
   // ==========================================================================
-  "$border: transparent": "transparent", // needs to come before the color variants
 
   "$border: rgba(27,31,35,.5)": "rgba(200,200,200,.3)",
   "$border: rgba(27,31,35,.35)": "rgba(200,200,200,.3)",
@@ -369,10 +368,9 @@ const mappings = {
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
 
-  "border: 0": "border: 0",
-  "border: none": "border: none",
   "box-shadow: none": "box-shadow: none",
 
+  "$border: transparent": "transparent",
   "$background: none": "none",
   "$background: transparent": "transparent",
 };
