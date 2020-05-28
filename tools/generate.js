@@ -12,28 +12,30 @@ const mappings = {
   // Background
   // ==========================================================================
   "$background: #fff": "#181818; background-image: none",
-  "$background: #ffe": "#242424",
-  "$background: #eee": "#242424", // graphql explorer
+  "$background: #ffe": "#181818",
   "$background: #fdfdfd": "#181818",
   "$background: #fafafb": "#181818",
   "$background: #fafbfc": "#181818", // .bg-gray-light
   "$background: #f9f9f9": "#181818",
-  "$background: #efefef": "#181818",
   "$background: #f8f8f8": "#202020", // zenhub
-  "$background: #f6f8fa": "#202020",
-  "$background: #f5f5f5": "#202020", // gitako
+  "$background: #efefef": "#202020",
+  "$background: #f6f8fa": "#222",
+  "$background: #f5f5f5": "#222", // gitako
   "$background: #f4f5f5": "#242424", // zenhub
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#242424",
+  "$background: #eee": "#242424", // graphql explorer
   "$background: #eaecef": "#343434",
   "$background: #e9ecef": "#404040",
   "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
   "$background: #e1e4e8": "#343434",
   "$background: #dfe2e5": "#383838",
+  "$background: #ddd": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
   "$background: #d1d5da": "#404040",
+  "$background: #ccc": "#484848",
   "$background: #c6cbd1": "#484848",
   "$background: #6a737d": "#444",
   "$background: #586069": "#343434",
