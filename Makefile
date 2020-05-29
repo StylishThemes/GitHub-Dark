@@ -1,47 +1,49 @@
 test: lint
+build: generate usercss
 
-lint:
+deps:
+	yarn
+
+node_modules: yarn.lock
+	$(MAKE) deps
+
+lint: node_modules
 	yarn -s run eslint --color .
 	yarn -s run stylelint --color github-dark.css themes/src
 
 authors:
 	bash tools/authors.sh
 
-build: generate usercss
-
-clean: perfectionist
+clean: node_modules perfectionist
 	node tools/clean.js
 
-generate:
+generate: node_modules
 	node tools/generate.js
-	$(MAKE) -s clean
+	$(MAKE) clean
 
-perfectionist:
+perfectionist: node_modules
 	yarn -s run perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250
 
-themes:
+themes: node_modules
 	node tools/themes.js
 
-deps:
-	yarn
-
-update:
+update: node_modules
 	yarn -s run updates -cu
-	$(MAKE) -s deps
+	$(MAKE) deps
 
-usercss:
+usercss: node_modules
 	node tools/usercss.js
 
-patch: lint usercss
+patch: node_modules lint usercss
 	yarn -s run versions -pdC patch github-dark.css github-dark.user.css
 	git push --tags origin master
 
-minor: lint usercss
+minor: node_modules lint usercss
 	yarn -s run versions -pdC minor github-dark.css github-dark.user.css
 	git push --tags origin master
 
-major: lint usercss
+major: node_modules lint usercss
 	yarn -s run versions -pdC major github-dark.css github-dark.user.css
 	git push --tags origin master
 
-.PHONY: test lint authors build clean generate perfectionist themes deps update usercss patch minor major
+.PHONY: test build deps lint authors clean generate perfectionist themes update usercss patch minor major
