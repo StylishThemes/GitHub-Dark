@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.0.106
+@version     2.0.107
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.0.106 (2020-06-11) */
+/*! Github Dark v2.0.107 (2020-06-11) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -15102,9 +15102,9 @@
   html.refined-github body > .footer li a {
     color: #949494;
   }
-  /* refined-github: "background-color: transparent" */
+  /* refined-github: "background-color: transparent !important" */
   html.refined-github .repository-content #readme:not(.blob) .Box-header {
-    background-color: transparent;
+    background-color: transparent !important;
   }
   /* refined-github: "background: none !important" */
   html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
@@ -15120,11 +15120,16 @@
   html.refined-github .rgh-useless-comments-note {
     color: #afafaf;
   }
-  /* refined-github: "background: none", "border-color: currentcolor", "background-color: #24292e" */
-  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches {
+  /* refined-github: "background: none", "border-color: currentcolor !important", "background-color: #24292e" */
+  html.refined-github .rgh-recently-pushed-branches .Header .RecentBranches,
+  html.refined-github .rgh-recently-pushed-branches [data-url$="recently_touched_branches_list"] .Box {
     background: none;
-    border-color: currentcolor;
+    border-color: currentcolor !important;
     background-color: #181818;
+  }
+  /* refined-github: "border: 1px solid" */
+  html.refined-github .rgh-recently-pushed-branches [data-url$="recently_touched_branches_list"] .btn-link[href$="?expand=1"] {
+    border-color: #181818;
   }
   /* refined-github: "border-top: 1px solid #e1e4e8", "border-bottom: 1px solid #e1e4e8" */
   html.refined-github button.reaction-summary-item {
