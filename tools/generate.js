@@ -104,7 +104,6 @@ const mappings = {
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
-  "border: 1px solid": "border-color: #181818",
   "border-top: 7px solid #fff": "border-top-color: #181818",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
 
