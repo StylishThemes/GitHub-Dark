@@ -1,11 +1,11 @@
 test: lint
+
 build: generate usercss
 
-deps:
-	yarn
+deps: node_modules
 
 node_modules: yarn.lock
-	$(MAKE) deps
+	yarn
 
 lint: node_modules
 	yarn -s run eslint --color .
@@ -29,7 +29,8 @@ themes: node_modules
 
 update: node_modules
 	yarn -s run updates -cu
-	$(MAKE) deps
+	rm -rf node_modules
+	$(MAKE) node_modules
 
 usercss: node_modules
 	node tools/usercss.js
