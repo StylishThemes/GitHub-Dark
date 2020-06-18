@@ -29,7 +29,7 @@ themes: node_modules
 
 update: node_modules
 	yarn -s run updates -cu
-	rm -rf node_modules
+	yarn -s run rimraf node_modules
 	$(MAKE) node_modules
 
 usercss: node_modules
