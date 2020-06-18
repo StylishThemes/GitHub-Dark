@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   push:
@@ -17,19 +17,10 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Setup Stylelint problem matcher
-        uses: xt0rted/stylelint-problem-matcher@v1
-
-      - name: Install dependencies
-        run: make deps
-
-      - name: Run tests
-        run: make test
+      - uses: xt0rted/stylelint-problem-matcher@v1
+      - run: make deps
+      - run: make test

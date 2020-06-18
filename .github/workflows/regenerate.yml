@@ -1,4 +1,4 @@
-name: Regenerate
+name: regenerate
 
 on:
   schedule:
@@ -8,24 +8,15 @@ jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: "14"
-
-      - name: Install dependencies
-        run: make deps
-
-      - name: Regenerate
-        run: make generate
-
-      - name: Push
-        run: |
+      - run: make deps
+      - run: make generate
+      - run: |
           if [[ $(git status --porcelain --untracked-files=no) ]]; then
             make test
             git fetch --unshallow --quiet --tags
