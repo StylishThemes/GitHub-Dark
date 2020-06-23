@@ -9,6 +9,13 @@ const {writeFile, exit} = require("./utils");
 
 const mappings = {
   // ==========================================================================
+  // Color anywhere
+  // ==========================================================================
+
+  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
+
+  // ==========================================================================
   // Background
   // ==========================================================================
   "$background: #fff": "#181818; background-image: none",
@@ -272,7 +279,6 @@ const mappings = {
   "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/ #4f8cc9", // gitako
   "color: #0366d6d0": "color: /*[[base-color]]*/ #4f8cc9", // gitako
   "$background: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
-  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 10px rgba(121,184,255,.7)": `
     box-shadow: 0 0 rgba(79,140,201,.3);
     box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
