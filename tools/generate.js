@@ -152,6 +152,9 @@ const mappings = {
   "box-shadow: inset 0 0 0 1px #e1e4e8,0 2px 4px rgba(0,0,0,.15)": "box-shadow: inset 0 0 0 1px #555",
   "box-shadow: inset 0 0 0 1px #e1e4e8": "box-shadow: inset 0 0 0 1px #555",
   "box-shadow: inset 0 1px 0 0 #e1e4e8": "box-shadow: inset 0 1px 0 0 #555",
+  "box-shadow: inset 0 -1px 0 #e1e4e8": "box-shadow: inset 0 -1px 0 #555",
+
+  "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
 
   "box-shadow: inset 0 -1px 0 #d1d5da": "box-shadow: inset 0 -2px 0 #383838",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
@@ -267,6 +270,7 @@ const mappings = {
   "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/ #4f8cc9", // gitako
   "color: #0366d6d0": "color: /*[[base-color]]*/ #4f8cc9", // gitako
   "$background: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 10px rgba(121,184,255,.7)": `
     box-shadow: 0 0 rgba(79,140,201,.3);
     box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
