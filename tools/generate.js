@@ -17,6 +17,8 @@ const mappings = {
   "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
   "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
+  "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
 
   // ==========================================================================
   // Background
