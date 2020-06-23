@@ -56,9 +56,9 @@ const mappings = {
   "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
 
-  "$background: rgba(27,31,35,.08)": "rgba(200,200,200,.15)",
-  "$background: rgba(27,31,35,.1)": "rgba(200,200,200,.17)",
-  "$background: rgba(27,31,35,.15)": "rgba(200,200,200,.22)",
+  "$background: rgba(27,31,35,.08)": "rgba(220,220,220,.15)",
+  "$background: rgba(27,31,35,.1)": "rgba(220,220,220,.17)",
+  "$background: rgba(27,31,35,.15)": "rgba(220,220,220,.22)",
 
   "$background: initial": "initial",
 
@@ -66,16 +66,16 @@ const mappings = {
   // Border
   // ==========================================================================
 
-  "$border: rgba(27,31,35,.5)": "rgba(200,200,200,.3)",
-  "$border: rgba(27,31,35,.35)": "rgba(200,200,200,.3)",
-  "$border: rgba(27,31,35,.3)": "rgba(200,200,200,.25)",
-  "$border: rgba(27,31,35,.25)": "rgba(200,200,200,.2)",
-  "$border: rgba(27,31,35,.2)": "rgba(200,200,200,.15)",
-  "$border: rgba(27,31,35,.15)": "rgba(200,200,200,.1)",
-  "$border: rgba(27,31,35,.1)": "rgba(200,200,200,.05)",
-  "$border: rgba(27,31,35,.05)": "rgba(200,200,200,.05)",
+  "$border: rgba(27,31,35,.5)": "rgba(220,220,220,.5)",
+  "$border: rgba(27,31,35,.35)": "rgba(220,220,220,.35)",
+  "$border: rgba(27,31,35,.3)": "rgba(220,220,220,.4)",
+  "$border: rgba(27,31,35,.25)": "rgba(220,220,220,.25)",
+  "$border: rgba(27,31,35,.2)": "rgba(220,220,220,.2)",
+  "$border: rgba(27,31,35,.15)": "rgba(220,220,220,.15)",
+  "$border: rgba(27,31,35,.1)": "rgba(220,220,220,.1)",
+  "$border: rgba(27,31,35,.05)": "rgba(220,220,220,.05)",
 
-  "$border: rgba(0,0,0,.125)": "rgba(200,200,200,.125)",
+  "$border: rgba(0,0,0,.125)": "rgba(220,220,220,.125)",
 
   "$border: #444d56": "#484848",
   "$border: #484848": "#afafaf", // github blog
@@ -101,7 +101,7 @@ const mappings = {
   "$border: #fff": "#181818",
   "$border: #2f363d": "#282828",
 
-  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(200,200,200,.15)",
+  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(220,220,220,.15)",
   "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border-top: 7px solid #fff": "border-top-color: #181818",
@@ -167,6 +167,8 @@ const mappings = {
 
   "box-shadow: inset 2px 0 0 #0366d6": "box-shadow: inset 2px 0 0 #eee",
 
+  "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)": "box-shadow: none", // .btn
+  "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)": "box-shadow: none", // .btn-primary
   // ==========================================================================
   // Color / Background
   // ==========================================================================
@@ -312,9 +314,14 @@ const mappings = {
   "$border: #dcffe4": "#002800",
   "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 90%)", // .btn-primary
   "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 90%)", // .btn-primary :hover
-  "$background: #279f43": "#484", // .btn-primary:active
   "background-color: #94d3a2": "background: #040", // .btn-primary.disabled
   "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
+
+  "background-color: #2ea44f": "background-color: #373", // new .btn-primary
+  "background-color: #2c974b": "background-color: #484", // new .btn-primary :hover
+  "background-color: #279f43": "background-color: #484", // new/old .btn-primary:active
+  "background-color: #2a8f47": "background-color: #595", // new .btn-primary.disabled
+
   "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)": "box-shadow: 0 0 0 .2em #3737",
 
   // yellow
@@ -416,6 +423,8 @@ const sources = [
   {
     name: "help.github.com",
     url: "https://help.github.com",
+    prefix: `body.d-lg-flex`,
+    match: ["body", "d-lg-flex"],
     strict: true,
   },
   {
