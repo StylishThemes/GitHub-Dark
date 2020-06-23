@@ -19,6 +19,10 @@ const mappings = {
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
   "$color: #eaf5ff": "#182030", // .full-commit
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
+  "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
+
+  "$color: #eaecef": "#343434",
+  "$color: #e1e4e8": "#343434",
 
   // ==========================================================================
   // Background
@@ -37,11 +41,9 @@ const mappings = {
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#242424",
   "$background: #eee": "#242424", // graphql explorer
-  "$background: #eaecef": "#343434",
   "$background: #e9ecef": "#404040",
   "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
-  "$background: #e1e4e8": "#343434",
   "$background: #dfe2e5": "#383838",
   "$background: #ddd": "#383838",
   "$background: #d6e2f1": "#444",
@@ -101,11 +103,9 @@ const mappings = {
   "$border: #d0d0d0": "#343434", // graphql explorer
   "$border: #d3d6db": "#343434", // graphql explorer
   "$border: #e0e0e0": "#343434", // graphql explorer
-  "$border: #e1e4e8": "#343434",
   "$border: #e5e5e5": "#343434",
   "$border: #e6ebf1": "#343434",
   "$border: #e9e9e9": "#343434", // zenhub
-  "$border: #eaecef": "#343434",
   "$border: #eaeaea": "#343434",
   "$border: #eee": "#343434",
   "$border: #f6f8fa": "#202020",
@@ -161,17 +161,11 @@ const mappings = {
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
   "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
 
-  "box-shadow: inset 0 0 0 1px #e1e4e8,0 2px 4px rgba(0,0,0,.15)": "box-shadow: inset 0 0 0 1px #555",
-  "box-shadow: inset 0 0 0 1px #e1e4e8": "box-shadow: inset 0 0 0 1px #555",
-  "box-shadow: inset 0 1px 0 0 #e1e4e8": "box-shadow: inset 0 1px 0 0 #555",
-  "box-shadow: inset 0 -1px 0 #e1e4e8": "box-shadow: inset 0 -1px 0 #555",
-
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
 
   "box-shadow: inset 0 -1px 0 #d1d5da": "box-shadow: inset 0 -2px 0 #383838",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
 
-  "box-shadow: 0 1px 0 #eaecef": "box-shadow: 0 1px 0 #343434",
   "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset": "box-shadow: #000 0px 0px 0px inset", // status
 
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
@@ -429,6 +423,8 @@ const sources = [
   {
     name: "lab.github.com",
     url: "https://lab.github.com",
+    prefix: `body.height-full`,
+    match: ["body", ".height-full"],
     strict: true,
   },
   {
