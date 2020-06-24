@@ -49,11 +49,11 @@ const mappings = {
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
 
   // red
-  "$color: #cb2431": "#e22",
-  "$color: #b11a04": "#e22", // graphql explorer
-  "$color: #86181d": "#e22",
-  "$color: #d73a49": "#e22",
-  "$color: #cea0a5": "#e22",
+  "$color: #cb2431": "#f22",
+  "$color: #b11a04": "#f22", // graphql explorer
+  "$color: #86181d": "#f22",
+  "$color: #d73a49": "#f22",
+  "$color: #cea0a5": "#f22",
   "$color: #ffdce0": "#300",
 
   // orange
