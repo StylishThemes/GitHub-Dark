@@ -23,6 +23,7 @@ const mappings = {
   "$color: #edeff2": "#343434",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
+  "$color: #d1d5da": "#404040",
 
   // blue (base color)
   "$color: #0366d6": "/*[[base-color]]*/ #4f8cc9", // gitako
@@ -72,7 +73,6 @@ const mappings = {
   "$background: #ddd": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
-  "$background: #d1d5da": "#404040",
   "$background: #ccc": "#484848",
   "$background: #c6cbd1": "#484848",
   "$background: #6a737d": "#444",
@@ -121,7 +121,6 @@ const mappings = {
   "$border: #bbb": "#484848",
   "$border: #c3c8cf": "#484848",
   "$border: #dfe2e5": "#343434",
-  "$border: #d1d5da": "#404040",
   "$border: #ddd": "#343434",
   "$border: #d6d6d6": "#343434", // graphql explorer
   "$border: #d0d0d0": "#343434", // graphql explorer
@@ -182,11 +181,10 @@ const mappings = {
   "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
-  "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
+  "box-shadow: 0 0 5px rgba(27,3,35,.3)": "box-shadow: 0 0 5px #000",
 
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
 
-  "box-shadow: inset 0 -1px 0 #d1d5da": "box-shadow: inset 0 -2px 0 #383838",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
 
   "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset": "box-shadow: #000 0px 0px 0px inset", // status
@@ -220,7 +218,6 @@ const mappings = {
   "color: #a3aab1": "color: #767676",
   "color: #c3c8cf": "color: #5a5a5a",
   "color: #c6cbd1": "color: #5a5a5a",
-  "color: #d1d5da": "color: #404040",
 
   "color: #4183c4": `
     color: rgba(79,140,201,.9);
