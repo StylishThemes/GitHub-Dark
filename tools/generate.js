@@ -418,6 +418,8 @@ const sources = [
   {
     name: "support.github.com",
     url: "https://support.github.com",
+    prefix: `body.dotcom`,
+    match: ["body", ".dotcom"],
     strict: true,
   },
   {
