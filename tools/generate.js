@@ -20,11 +20,13 @@ const mappings = {
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
   "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
   "$color: #f3f4f6": "#242424",
-  "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #edeff2": "#343434",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
 
   // blue (base color)
+  "$color: #0366d6": "/*[[base-color]]*/ #4f8cc9", // gitako
+  "$color: #0366d6d0": "/*[[base-color]]*/ #4f8cc9", // gitako
   "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
 
   // red
@@ -36,6 +38,7 @@ const mappings = {
   "$color: #ffdce0": "#300",
 
   // blue
+  "$color: #eaf5ff": "#182030", // .full-commit
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
 
@@ -135,7 +138,6 @@ const mappings = {
   "$border: #2f363d": "#282828",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(220,220,220,.15)",
-  "border-bottom-color: #e36209": "border-bottom-color: #eee",
 
   "border-top: 7px solid #fff": "border-top-color: #181818",
   "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
@@ -192,8 +194,6 @@ const mappings = {
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
 
-  "box-shadow: inset 2px 0 0 #0366d6": "box-shadow: inset 2px 0 0 #eee",
-
   "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)": "box-shadow: none", // .btn
   "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)": "box-shadow: none", // .btn-primary
   // ==========================================================================
@@ -239,10 +239,8 @@ const mappings = {
   "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
 
   "fill: #959da5": "fill: #757575",
-  "fill: #0366d6": "fill:  /*[[base-color]]*/ #4f8cc9",
   "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
 
-  "color: #0366d6": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #1f61a0": "color: /*[[base-color]]*/ #4f8cc9", //  graphql explorer
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
@@ -276,8 +274,6 @@ const mappings = {
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
   "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
-  "$background: #0366d6": "/*[[base-color]]*/ #4f8cc9; color: #fff; background-image: none",
-  "$border: #0366d6": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
     filter: drop-shadow(-.25em 0 0 rgba(79,140,201,.3));
@@ -297,7 +293,6 @@ const mappings = {
   "$background: linear-gradient(#599bcd,#3072b3)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
   "$border: #2a65a0": "/*[[base-color]]*/ #4f8cc9",
   "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/ #4f8cc9", // gitako
-  "color: #0366d6d0": "color: /*[[base-color]]*/ #4f8cc9", // gitako
   "$background: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 10px rgba(121,184,255,.7)": `
     box-shadow: 0 0 rgba(79,140,201,.3);
