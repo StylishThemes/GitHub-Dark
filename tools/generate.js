@@ -23,7 +23,10 @@ const mappings = {
   "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
   "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
 
-  "$color: #fff": "#181818",
+  "$background: #fff": "#181818",
+  "$border: #fff": "#181818",
+  "$color: #fff": "#fff",
+
   "$color: #f3f4f6": "#242424",
   "$color: #edeff2": "#343434",
   "$color: #eaecef": "#343434",
