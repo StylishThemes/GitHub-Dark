@@ -385,6 +385,11 @@ const mappings = {
   "box-shadow: none": "box-shadow: none",
 
   "$border: transparent": "transparent",
+  "$border: 0": "0",
+  "border-top: 0": "border-top: 0",
+  "border-bottom: 0": "border-bottom: 0",
+  "border-left: 0": "border-left: 0",
+  "border-right: 0": "border-right: 0",
   "$background: none": "none",
   "$background: transparent": "transparent",
 };
