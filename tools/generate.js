@@ -21,6 +21,7 @@ const mappings = {
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
 
+  "$color: #f3f4f6": "#242424",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
 
