@@ -12,18 +12,38 @@ const mappings = {
   // Color anywhere
   // ==========================================================================
 
-  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  // focus line
   "$color: #f9826c": "#fff",
-  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
-  "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
-  "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
-  "$color: #eaf5ff": "#182030", // .full-commit
-  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
-  "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
 
+  // monochrome
+  "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
+  "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
+  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
   "$color: #f3f4f6": "#242424",
+  "$color: #eaf5ff": "#182030", // .full-commit
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
+
+  // blue (base color)
+  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+
+  // red
+  "$color: #cb2431": "#e22",
+  "$color: #b11a04": "#e22", // graphql explorer
+  "$color: #86181d": "#e22",
+  "$color: #d73a49": "#e22",
+  "$color: #cea0a5": "#e22",
+  "$color: #ffdce0": "#300",
+
+  // blue
+  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
+  "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
+
+  // orange
+  "$color: #fb8532": "#fb8532",
+  "$color: #e36209": "#fb8532",
+  "$color: #a04100": "#f3582c",
+  "$color: #d15704": "#f3582c",
 
   // ==========================================================================
   // Background
@@ -285,24 +305,6 @@ const mappings = {
   `,
   "color: #3b5998": "color: /*[[base-color]]*/ #4f8cc9",
   "$border: #3b5998": "/*[[base-color]]*/ #4f8cc9",
-
-  // red
-  "color: #cb2431": "color: #f44",
-  "color: #b11a04": "color: #f44", // graphql explorer
-  "color: #86181d": "color: #f44",
-  "$background: #d73a49": "#f44",
-  "$background: #cb2431": "#911",
-  "$background: #ffdce0": "#300",
-  "fill: #cb2431": "fill: #f44",
-  "$border: #d73a49": "#b00",
-  "$border: #cea0a5": "#f44",
-
-  // orange
-  "$border: #fb8532": "#fb8532",
-  "color: #a04100": "color: #f3582c",
-  "$background: #d15704": "#f3582c",
-  "$background: #fb8532": "#f3582c",
-  "fill: #e36209": "fill: #fb8532",
 
   // green
   "color: #28a745": "color: #6cc644",
