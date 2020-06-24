@@ -42,6 +42,7 @@ const mappings = {
   "$color: #3b5998": "/*[[base-color]]*/ #4f8cc9",
 
   // blue
+  "$color: rgba(3,102,214,.5)": "#264665",
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
   "$color: #eaf5ff": "#182030", // .full-commit
   "$color: #0679fc": "#4f8cc9",
