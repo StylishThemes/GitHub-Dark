@@ -416,13 +416,6 @@ const sources = [
     strict: true,
   },
   {
-    name: "lab.github.com",
-    url: "https://lab.github.com",
-    prefix: `body.height-full`,
-    match: ["body", ".height-full"],
-    strict: true,
-  },
-  {
     name: "help.github.com",
     url: "https://help.github.com",
     prefix: `body.d-lg-flex`,
