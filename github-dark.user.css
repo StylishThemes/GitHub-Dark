@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.1.6
+@version     2.1.7
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.1.6 (2020-06-24) */
+/*! Github Dark v2.1.7 (2020-06-24) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark    */
 /*! License:    https://creativecommons.org/licenses/by-sa/4.0/ */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|lab|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -530,6 +530,10 @@
   body.status .grouped-items-selector.inline .grouped-item.active {
     color: #bebebe;
   }
+  /* githubstatus.com: "rgba(255,255,255,0.8)" */
+  body.status .loader-overlay {
+    background-color: hsla(0, 0%, 100%, .8);
+  }
   /* githubstatus.com: "background-color: #fff" */
   body.status .modal {
     background-color: #181818;
@@ -564,6 +568,10 @@
   /* githubstatus.com: "#fff" */
   body.status .cpt-notification {
     color: #fff;
+  }
+  /* githubstatus.com: "rgba(255,255,255,0.8)" */
+  body.status .cpt-notification .close {
+    color: hsla(0, 0%, 100%, .8);
   }
   /* githubstatus.com: "background-color: #fff", "border: 1px solid transparent" */
   body.status .panel {
@@ -750,10 +758,11 @@
   body.status .cpt-button .caret {
     border-top-color: #181818;
   }
-  /* githubstatus.com: "box-shadow: none", "background: transparent" */
+  /* githubstatus.com: "box-shadow: none", "background: transparent", "rgba(255,255,255,0.8)" */
   body.status .cpt-button.style-outline {
     box-shadow: none;
     background: transparent;
+    border: 2px solid hsla(0, 0%, 100%, .8);
   }
   /* githubstatus.com: "border-color: #fff" */
   body.status .cpt-button.style-outline:hover {
@@ -852,6 +861,10 @@
   body.status .layout-content.status.status-index .unresolved-incidents .unresolved-incident .incident-title a,
   body.status .layout-content.status.status-index .unresolved-incidents .unresolved-incident .incident-title a:hover {
     color: #fff;
+  }
+  /* githubstatus.com: "rgba(255,255,255,0.8)" */
+  body.status .layout-content.status.status-index .page-status .last-updated-stamp {
+    color: hsla(0, 0%, 100%, .8);
   }
   /* githubstatus.com: "#fff", "border-color: transparent" */
   body.status .layout-content.status.status-full-history .show-filter.open {
@@ -960,7 +973,7 @@
   }
   /* githubstatus.com: "#cea0a5" */
   body.status .border-red, body.status .border-red-light {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* githubstatus.com: "border-color: #6f42c1 !important" */
   body.status .border-purple {
@@ -1056,7 +1069,7 @@
   }
   /* githubstatus.com: "#d73a49" */
   body.status .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* githubstatus.com: "#ffdce0" */
   body.status .bg-red-light {
@@ -1084,7 +1097,7 @@
   }
   /* githubstatus.com: "#cb2431" */
   body.status .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* githubstatus.com: "color: #6a737d !important" */
   body.status .text-gray-light {
@@ -1797,9 +1810,10 @@
   html[prefix] .flash-close {
     border: 0;
   }
-  /* developer.github.com: "background-color: #fff" */
+  /* developer.github.com: "background-color: #fff", "rgba(255,255,255,.8)" */
   html[prefix] .avatar-child {
     background-color: #181818;
+    box-shadow: -2px -2px 0 hsla(0, 0%, 100%, .8);
   }
   /* developer.github.com: "background-color: #fff", "border-right: 1px solid #fff" */
   html[prefix] .avatar-stack .avatar {
@@ -2276,6 +2290,10 @@
   html[prefix] .site-header-nav a {
     color: #fff;
   }
+  /* developer.github.com: "rgba(255,255,255,.8)" */
+  html[prefix] .flash-header {
+    color: hsla(0, 0%, 100%, .8);
+  }
   /* developer.github.com: "#fff" */
   html[prefix] .flash-header a {
     color: #fff !important;
@@ -2576,11 +2594,15 @@
     background-color: #182030;
     color: #9daccc;
   }
-  /* developer.github.com: "color: #613a00", "border: 1px solid #dca874", "background-color: #ffe3c8" */
+  /* developer.github.com: "color: #613a00", "border: 1px solid #dca874", "background-color: #ffe3c8", "rgba(255,255,255,.8)" */
   html[prefix] .deprecation-warning {
     color: #bba257;
     border-color: #542;
     background-color: #261d08;
+  }
+  /* developer.github.com: "rgba(255,255,255,.8)" */
+  html[prefix] .deprecation-note, html[prefix] .deprecation-warning {
+    text-shadow: 0 1px 0 hsla(0, 0%, 100%, .8);
   }
   /* developer.github.com: "background: #fff", "border: 1px solid #e5e5e5" */
   html[prefix] .pagination > span, html[prefix] .pagination a,
@@ -2884,7 +2906,7 @@
   /* graphql.github.com: "#d73a49" */
   #graphiql .Box--danger, #graphiql .Box--danger .Box-body:last-of-type,
   #graphiql .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* graphql.github.com: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   #graphiql .Box-header--blue {
@@ -3010,7 +3032,7 @@
   }
   /* graphql.github.com: "#cb2431", "background-color: #fafbfc", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
   #graphiql .btn-danger {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
     background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
   }
@@ -3021,8 +3043,8 @@
   /* graphql.github.com: "#fff", "#cb2431", "#cb2431", "border-color: rgba(27,31,35,.5)" */
   #graphiql .btn-danger:hover {
     color: #fff;
-    background-color: #e22;
-    background-image: linear-gradient(-180deg, #de4450 0%, #e22 90%);
+    background-color: #f22;
+    background-image: linear-gradient(-180deg, #de4450 0%, #f22 90%);
     border-color: rgba(220, 220, 220, .5);
   }
   /* graphql.github.com: "#fff" */
@@ -3118,7 +3140,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "background: transparent", "border: 0" */
   #graphiql .close-button {
@@ -3208,7 +3230,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "color: #28a745" */
   #graphiql .form-group dd h4.is-success {
@@ -3216,7 +3238,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "color: #28a745" */
   #graphiql .form-group.successful .success {
@@ -3249,13 +3271,13 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "#86181d", "#ffdce0", "#cea0a5" */
   #graphiql .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
-    border-color: #e22;
+    border-color: #f22;
   }
   /* graphql.github.com: "#ffdce0" */
   #graphiql .form-group.errored .error::after {
@@ -3263,7 +3285,7 @@
   }
   /* graphql.github.com: "#cea0a5" */
   #graphiql .form-group.errored .error::before {
-    border-bottom-color: #e22;
+    border-bottom-color: #f22;
   }
   /* graphql.github.com: "color: #586069" */
   #graphiql .note {
@@ -3275,8 +3297,8 @@
   }
   /* graphql.github.com: "#cb2431", "#d73a49" */
   #graphiql .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* graphql.github.com: "background-color: transparent", "border: 0" */
   #graphiql .inline-form .btn-plain {
@@ -3292,7 +3314,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "color: #586069" */
   #graphiql .drag-and-drop-error-info {
@@ -3371,7 +3393,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .menu-item.alert .Counter, #graphiql .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "color: #586069", "#e1e4e8" */
   #graphiql .menu-heading {
@@ -3799,7 +3821,7 @@
   }
   /* graphql.github.com: "#cea0a5" */
   #graphiql .border-red, #graphiql .border-red-light {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* graphql.github.com: "border-color: #6f42c1 !important" */
   #graphiql .border-purple {
@@ -3867,7 +3889,7 @@
   }
   /* graphql.github.com: "#d73a49" */
   #graphiql .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* graphql.github.com: "#ffdce0" */
   #graphiql .bg-red-light {
@@ -4095,27 +4117,27 @@
   }
   /* graphql.github.com: "#d73a49" */
   #graphiql .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* graphql.github.com: "#d73a49" */
   #graphiql .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* graphql.github.com: "#86181d" */
   #graphiql .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* graphql.github.com: "#86181d" */
   #graphiql .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* graphql.github.com: "background-color: #f5f0ff !important" */
   #graphiql .bg-purple-0 {
@@ -4139,7 +4161,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* graphql.github.com: "color: #6a737d !important" */
   #graphiql .text-gray-light {
@@ -4240,7 +4262,7 @@
   }
   /* graphql.github.com: "#86181d", "#ffdce0", "border-color: rgba(27,31,35,.15)" */
   #graphiql .flash-error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
     border-color: rgba(220, 220, 220, .15);
   }
@@ -4260,9 +4282,10 @@
   #graphiql .warning {
     background-color: #261d08;
   }
-  /* graphql.github.com: "background-color: #fff" */
+  /* graphql.github.com: "background-color: #fff", "rgba(255,255,255,0.8)" */
   #graphiql .avatar-child {
     background-color: #181818;
+    box-shadow: -2px -2px 0 hsla(0, 0%, 100%, .8);
   }
   /* graphql.github.com: "background: #fff" */
   #graphiql .AvatarStack-body {
@@ -4481,7 +4504,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .State--red {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* graphql.github.com: "color: #586069", "background-color: rgba(27,31,35,.08)" */
   #graphiql .Counter {
@@ -4504,7 +4527,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .diffstat-block-deleted {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* graphql.github.com: "background-color: #2cbe4e" */
   #graphiql .diffstat-block-added {
@@ -4524,7 +4547,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .markdown-body .absent {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "#e1e4e8", "border: 0" */
   #graphiql .markdown-body hr {
@@ -4823,7 +4846,7 @@
   }
   /* graphql.github.com: "#cb2431" */
   #graphiql .Subhead-heading--danger {
-    color: #e22;
+    color: #f22;
   }
   /* graphql.github.com: "color: #586069" */
   #graphiql .Subhead-description {
@@ -4886,7 +4909,7 @@
   }
   /* graphql.github.com: "#d73a49" */
   #graphiql .Toast--error .Toast-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* graphql.github.com: "color: #24292e" */
   #graphiql .Toast--warning .Toast-icon {
@@ -5065,7 +5088,7 @@
   body[class="page-responsive"] .Box--danger,
   body[class="page-responsive"] .Box--danger .Box-body:last-of-type,
   body[class="page-responsive"] .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com mobile: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   body[class="page-responsive"] .Box-header--blue {
@@ -5148,23 +5171,28 @@
   body[class="page-responsive"] .btn-primary[aria-selected="true"] {
     background-color: #595;
   }
-  /* github.com mobile: "background-color: #94d3a2", "border-color: rgba(27,31,35,.1)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
+  /* github.com mobile: "hsla(0,0%,100%,.8)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.1)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   body[class="page-responsive"] .btn-primary.disabled,
   body[class="page-responsive"] .btn-primary:disabled,
   body[class="page-responsive"] .btn-primary[aria-disabled="true"] {
+    color: hsla(0, 0%, 100%, .8);
     background: #040;
     border-color: rgba(220, 220, 220, .1);
     box-shadow: none;
   }
+  /* github.com mobile: "hsla(0,0%,100%,.8)" */
+  body[class="page-responsive"] .btn-primary .octicon {
+    color: hsla(0, 0%, 100%, .8);
+  }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .btn-danger {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#fff", "#cb2431", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   body[class="page-responsive"] .btn-danger:hover,
   body[class="page-responsive"] [open] > .btn-danger {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
     border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
   }
@@ -5293,7 +5321,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background: transparent", "border: 0" */
   body[class="page-responsive"] .close-button {
@@ -5406,7 +5434,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .form-group .form-group-body h4.is-error,
   body[class="page-responsive"] .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .form-group .form-group-body h4.is-success,
@@ -5416,7 +5444,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .form-group.required .form-group-header label::after,
   body[class="page-responsive"] .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .form-group.successful .success {
@@ -5463,11 +5491,11 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .form-group.errored .form-control {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .note {
@@ -5479,8 +5507,8 @@
   }
   /* github.com mobile: "#cb2431", "#d73a49" */
   body[class="page-responsive"] .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* github.com mobile: "background-color: initial", "border: 0" */
   body[class="page-responsive"] .inline-form .btn-plain {
@@ -5496,7 +5524,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .drag-and-drop-error-info {
@@ -5589,7 +5617,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .menu-item.alert .Counter,
   body[class="page-responsive"] .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #1b1f23", "#eaecef" */
   body[class="page-responsive"] .menu-heading {
@@ -6037,7 +6065,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .border-red {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* github.com mobile: "border-color: #6f42c1 !important" */
   body[class="page-responsive"] .border-purple {
@@ -6101,7 +6129,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com mobile: "background-color: #ffd33d !important" */
   body[class="page-responsive"] .bg-yellow {
@@ -6329,27 +6357,27 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com mobile: "background-color: #f5f0ff !important" */
   body[class="page-responsive"] .bg-purple-0 {
@@ -6373,7 +6401,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com mobile: "color: #6a737d !important" */
   body[class="page-responsive"] .text-gray-light {
@@ -6505,7 +6533,7 @@
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .conflict-gutter-marker::after,
   body[class="page-responsive"] .conflict-gutter-marker::before {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "border: 1px solid #959da5" */
   body[class="page-responsive"] .form-group:hover .form-field-hover,
@@ -7232,6 +7260,10 @@
   body[class="page-responsive"] .section-codespaces-develop-night .codespaces-develop-header {
     color: #fff;
   }
+  /* github.com mobile: "hsla(0,0%,100%,.8)" */
+  body[class="page-responsive"] .section-codespaces-develop-night .codespaces-develop-text {
+    color: hsla(0, 0%, 100%, .8) !important;
+  }
   /* github.com mobile: "box-shadow: none" */
   body[class="page-responsive"] .section-codespaces-develop-night .codespaces-sun {
     box-shadow: none;
@@ -7647,9 +7679,10 @@
   body[class="page-responsive"] .suggester li[aria-selected="true"] small {
     color: #fff;
   }
-  /* github.com mobile: "background-color: #fff" */
+  /* github.com mobile: "background-color: #fff", "hsla(0,0%,100%,.8)" */
   body[class="page-responsive"] .avatar-child {
     background-color: #181818;
+    box-shadow: -2px -2px 0 hsla(0, 0%, 100%, .8);
   }
   /* github.com mobile: "background: #fff" */
   body[class="page-responsive"] .AvatarStack-body {
@@ -7843,8 +7876,8 @@
   }
   /* github.com mobile: "#cb2431", "#cb2431" */
   body[class="page-responsive"] .Label--red {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com mobile: "#0366d6", "#0366d6" */
   body[class="page-responsive"] .Label--blue {
@@ -7871,7 +7904,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .State--red {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "background-color: #6f42c1" */
   body[class="page-responsive"] .State--purple {
@@ -7897,7 +7930,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .diffstat-block-deleted {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "background-color: #2cbe4e" */
   body[class="page-responsive"] .diffstat-block-added {
@@ -7916,7 +7949,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .markdown-body .absent {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#e1e4e8", "border: 0" */
   body[class="page-responsive"] .markdown-body hr {
@@ -8229,7 +8262,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .Subhead-heading--danger {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .Subhead-description {
@@ -8293,7 +8326,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .Toast--error .Toast-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "color: #24292e" */
   body[class="page-responsive"] .Toast--warning .Toast-icon {
@@ -8334,7 +8367,7 @@
   /* github.com mobile: "#fff", "#d73a49" */
   body[class="page-responsive"] .boxed-group.dangerzone > h3 {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "border-top: 0" */
   body[class="page-responsive"] .boxed-group.dangerzone .boxed-group-inner {
@@ -8438,7 +8471,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .closed.octicon,
   body[class="page-responsive"] .reverted.octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .open.octicon {
@@ -8459,7 +8492,7 @@
   /* github.com mobile: "#e1e4e8", "#005cc5","#cb2431" */
   body[class="page-responsive"] .reverse-progress-container {
     background-color: #343434;
-    background-image: linear-gradient(90deg, #28a745, #4f8cc9, #3a1d6e, #e22, #f66a0a);
+    background-image: linear-gradient(90deg, #28a745, #4f8cc9, #3a1d6e, #f22, #f66a0a);
   }
   /* github.com mobile: "#e1e4e8" */
   body[class="page-responsive"] .reverse-progress-bar {
@@ -8479,8 +8512,9 @@
   body[class="page-responsive"] .select-menu-button.primary::after {
     border-top-color: #181818;
   }
-  /* github.com mobile: "border: 1px solid transparent" */
+  /* github.com mobile: "hsla(0,0%,100%,.8)", "border: 1px solid transparent" */
   body[class="page-responsive"] .select-menu-loading-overlay {
+    background-color: hsla(0, 0%, 100%, .8);
     border: 1px solid transparent;
   }
   /* github.com mobile: "color: #586069", "background-color: #fff", "border: 1px solid rgba(27,31,35,.15)" */
@@ -8736,7 +8770,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .select-menu-item-text .description-warning {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#0366d6" */
   body[class="page-responsive"] .select-menu-new-item-form .octicon {
@@ -8827,7 +8861,7 @@
   }
   /* github.com mobile: "#86181d", "border: 1px solid rgba(27,31,35,.15)" */
   body[class="page-responsive"] .comment-form-error {
-    color: #e22;
+    color: #f22;
     border-color: rgba(220, 220, 220, .15);
   }
   /* github.com mobile: "color: #586069", "#dfe2e5" */
@@ -8981,7 +9015,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .commit-loader .loader-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border-bottom: 0" */
   body[class="page-responsive"] .commit-build-statuses .dropdown-menu .merge-status-list {
@@ -9029,7 +9063,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .table-of-contents .octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .table-of-contents .octicon-diff-renamed {
@@ -9050,7 +9084,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .toc-select .select-menu-item-icon.octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .toc-select .select-menu-item-icon.octicon-diff-renamed {
@@ -9260,7 +9294,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .submodule-diff-stats .octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .submodule-diff-stats .octicon-diff-added {
@@ -9322,7 +9356,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .thread-subscribe-form.is-error .thread-subscribe-button {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border: 0" */
   body[class="page-responsive"] .sidebar-notifications .thread-subscription-status {
@@ -9508,8 +9542,8 @@
   }
   /* github.com mobile: "#cb2431", "#d73a49" */
   body[class="page-responsive"] .timeline-comment-label-spammy {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .timeline-comment-header-text code a {
@@ -9704,7 +9738,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .pagehead-actions .octicon-mute {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069", "border: 1px solid transparent", "border-top: 3px solid transparent" */
   body[class="page-responsive"] .pagehead-tabs-item {
@@ -9835,7 +9869,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .prose-diff .markdown-body > del,
   body[class="page-responsive"] .prose-diff .rich-diff-level-zero.removed {
-    box-shadow: inset 4px 0 0 #e22;
+    box-shadow: inset 4px 0 0 #f22;
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .prose-diff .changed .removed,
@@ -9845,7 +9879,7 @@
   body[class="page-responsive"] .prose-diff .changed del > div,
   body[class="page-responsive"] .prose-diff .changed del code,
   body[class="page-responsive"] .prose-diff > .markdown-body li ul.removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#d1d5da" */
   body[class="page-responsive"] .prose-diff > .markdown-body li.added.moved-down .octicon,
@@ -9864,7 +9898,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .prose-diff > .markdown-body li:not(.moved).removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border-top: 0", "border-bottom: 0" */
   body[class="page-responsive"] .prose-diff > .markdown-body .added,
@@ -9965,7 +9999,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .hanging-icon-list .octicon-x {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#fff" */
   body[class="page-responsive"] .btn-blurple {
@@ -10075,7 +10109,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .manifest-errors {
-    border-left: 6px solid #e22;
+    border-left: 6px solid #f22;
   }
   /* github.com mobile: "background: #fff", "#fff" */
   body[class="page-responsive"] .not-found-octocat-wrapper::after {
@@ -10105,11 +10139,11 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .alert-label--high {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .graph-canvas .alert-label--high {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com mobile: "#e36209" */
   body[class="page-responsive"] .alert-label--moderate {
@@ -10149,7 +10183,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .credit-card .cvv {
-    border: 2px solid #e22;
+    border: 2px solid #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .credit-card .cvv span {
@@ -10173,7 +10207,7 @@
   }
   /* github.com mobile: "#cb2431", "background-color: #fff" */
   body[class="page-responsive"] .billing-addon-items tr.total-row {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
   }
   /* github.com mobile: "color: #666" */
@@ -10208,7 +10242,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .usage-bar.exceeded .progress {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .lfs-data-icon {
@@ -10246,7 +10280,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .payment-history .failed .status {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .discounted-original-price {
@@ -10488,7 +10522,7 @@
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .branch-action-state-error .branch-action-icon,
   body[class="page-responsive"] .is-merging .branch-action-state-error-if-merging .branch-action-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#e1e4e8" */
   body[class="page-responsive"] .merge-branch-form .commit-form::before {
@@ -10502,7 +10536,7 @@
   /* github.com mobile: "#fff", "#cb2431" */
   body[class="page-responsive"] .completeness-indicator-error {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#fff", "background-color: #6a737d" */
   body[class="page-responsive"] .completeness-indicator-problem {
@@ -10608,11 +10642,11 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .check-annotation-failure::after {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .check-annotation-failure .annotation-title {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background-color: #ffd33d" */
   body[class="page-responsive"] .check-annotation-warning::after {
@@ -10731,7 +10765,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .code-frequency .deletion {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .cadd {
@@ -10739,7 +10773,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .cdel {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#e1e4e8" */
   body[class="page-responsive"] .code-list .file-box {
@@ -10833,7 +10867,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] span.no-nl-marker {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background-color: #fff", "border-top: 0", "border-right: 0", "border-left: 0" */
   body[class="page-responsive"] .select-menu-item {
@@ -10921,7 +10955,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .dashboards-overview-cards .octicon-arrow-down {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#0366d6" */
   body[class="page-responsive"] .dashboards-overview-cards .summary-stats .metric-1 {
@@ -11013,7 +11047,7 @@
   body[class="page-responsive"] .donut-chart > .error,
   body[class="page-responsive"] .donut-chart > .failure,
   body[class="page-responsive"] .donut-chart > .timed_out {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com mobile: "fill: #dbab09" */
   body[class="page-responsive"] .donut-chart > .expected,
@@ -11228,7 +11262,7 @@
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .invalid-topic .delete-topic-button {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background-color: #f1f8ff" */
   body[class="page-responsive"] .topic-tag-action {
@@ -11236,7 +11270,7 @@
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .topic-tag-action.invalid-topic {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d", "background-color: #f1f8ff", "border: 0" */
   body[class="page-responsive"] .topic-tag-action .add-topic-button,
@@ -11260,7 +11294,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .topic-tag-action .remove-topic-button:hover {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "background-image: none" */
   body[class="page-responsive"] .topic-input-container .tag-input .tag-input-inner {
@@ -11327,7 +11361,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .hook-item.failure .icon-for-failure {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .hook-item.inactive .icon-for-inactive,
@@ -11340,7 +11374,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .hook-item .hook-error-message {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background-color: initial" */
   body[class="page-responsive"] .hook-deliveries-list .hook-delivery-item:hover {
@@ -11352,7 +11386,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .hook-deliveries-list .item-status.failure {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .hook-deliveries-list .item-status.pending,
@@ -11366,7 +11400,7 @@
   /* github.com mobile: "#fff", "#d73a49" */
   body[class="page-responsive"] .hook-delivery-response-status {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "background-color: #28a745" */
   body[class="page-responsive"] .hook-delivery-response-status[data-response-status^="2"] {
@@ -11387,7 +11421,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .issue-list .title .closed.octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .issue-list .title .open.octicon {
@@ -11509,7 +11543,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .new-label-color-input:invalid {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border-bottom: 0" */
   body[class="page-responsive"] .repository-lang-stats ol.repository-lang-stats-numbers li {
@@ -11599,7 +11633,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .marketplace-plan-dollar-field-container.is-errored .form-control {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com mobile: "color: #24292e" */
   body[class="page-responsive"] .marketplace-plan-emphasis {
@@ -11829,7 +11863,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .type-icon-state-closed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .type-icon-state-draft {
@@ -12009,7 +12043,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .oauth-delete-repo-permissions .octicon-alert {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .oauth-no-description {
@@ -12034,7 +12068,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .oauth-org-access-details .oauth-org-item.revoked .octicon-x {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .oauth-org-access-details .octicon-check {
@@ -12042,7 +12076,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .oauth-org-access-details .octicon-x.org-access-denied {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #24292e" */
   body[class="page-responsive"] .oauth-application-whitelist .request-info strong {
@@ -12059,7 +12093,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .oauth-application-whitelist .denied-request {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #6a737d" */
   body[class="page-responsive"] .oauth-application-whitelist .edit-link {
@@ -12218,7 +12252,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .audit-type .oauth_access {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#fff" */
   body[class="page-responsive"] .saml-enabled-banner-container {
@@ -12227,7 +12261,7 @@
   /* github.com mobile: "#fff", "#cb2431" */
   body[class="page-responsive"] .saml-settings-form .test-status-indicator-error {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#fff", "background-color: #28a745" */
   body[class="page-responsive"] .saml-settings-form .test-status-indicator-success {
@@ -12315,7 +12349,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .menu-item-danger,
   body[class="page-responsive"] .menu-item-danger.selected {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#fff", "#d73a49" */
   body[class="page-responsive"] .menu-item-danger.navigation-focus,
@@ -12325,7 +12359,7 @@
   body[class="page-responsive"] .menu-item-danger:hover,
   body[class="page-responsive"] .menu-item-danger[aria-selected="true"] {
     color: #fff;
-    background: #e22;
+    background: #f22;
   }
   /* github.com mobile: "color: #959da5" */
   body[class="page-responsive"] .team-member-list-avatar .octicon {
@@ -12337,7 +12371,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .confirm-removal-container .deleting-private-forks-warning .octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border: 1px solid #eaeaea" */
   body[class="page-responsive"] .confirm-removal-list-container {
@@ -12486,7 +12520,7 @@
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .pinned-items-reorder-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #2f363d" */
   body[class="page-responsive"] .pinned-item-name {
@@ -12511,16 +12545,16 @@
       border-right: 2px solid #343434;
     }
     body[class="page-responsive"] .blob-num-deletion {
-      border-right-color: #e22;
+      border-right-color: #f22;
     }
     body[class="page-responsive"] .blob-code-deletion .x {
-      border-bottom: 2px solid #e22;
+      border-bottom: 2px solid #f22;
     }
     body[class="page-responsive"] .diffstat-block-neutral {
       border: 4px solid #404040;
     }
     body[class="page-responsive"] .diffstat-block-deleted {
-      border: 4px solid #e22;
+      border: 4px solid #f22;
     }
     body[class="page-responsive"] .State {
       color: #dcdcdc;
@@ -12534,8 +12568,8 @@
       border-color: #8368aa;
     }
     body[class="page-responsive"] .State--red {
-      color: #e22;
-      border: 1px solid #e22;
+      color: #f22;
+      border: 1px solid #f22;
     }
   }
   /* github.com mobile: "background: transparent" */
@@ -12691,7 +12725,7 @@
   }
   /* github.com mobile: "#86181d" */
   body[class="page-responsive"] .user-profile-bio-message {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "background-color: #fff", "#d1d5da" */
   body[class="page-responsive"] .user-profile-sticky-bar.user-profile-sticky-bar-with-bg::after {
@@ -12700,8 +12734,8 @@
   }
   /* github.com mobile: "#cb2431", "#d73a49" */
   body[class="page-responsive"] .blocked-user-notice {
-    color: #e22;
-    border: 1px solid #e22;
+    color: #f22;
+    border: 1px solid #f22;
   }
   /* github.com mobile: "background-color: #fff", "#d1d5da", "box-shadow: none" */
   body[class="page-responsive"] .user-profile-nav {
@@ -12846,7 +12880,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .authors-and-code .deletions {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069", "#e1e4e8" */
   body[class="page-responsive"] .summary-stats li {
@@ -12867,7 +12901,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .summary-stats li .octicon-issue-closed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .summary-stats li .octicon-issue-opened {
@@ -12892,8 +12926,8 @@
   }
   /* github.com mobile: "#cb2431", "#d73a49" */
   body[class="page-responsive"] .Label--draft {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com mobile: "border-top: 0" */
   body[class="page-responsive"] .uploaded-files.is-populated + .drop-target .drop-target-label {
@@ -12909,7 +12943,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .uploaded-files .remove:hover {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com mobile: "#fff","hsla(0,0%,100%,.5)" */
   body[class="page-responsive"] .upload-progress {
@@ -13168,7 +13202,7 @@
   }
   /* github.com mobile: "#d73a49", "box-shadow: none" */
   body[class="page-responsive"] .avatar-upload .flash {
-    border: 1px dashed #e22;
+    border: 1px dashed #f22;
     box-shadow: none;
   }
   /* github.com mobile: "color: #586069" */
@@ -13205,7 +13239,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .unverified-user-key,
   body[class="page-responsive"] .unverified-user-key-notice {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "border-bottom: 1px solid #ddd" */
   body[class="page-responsive"] .notification-center .overview {
@@ -13226,7 +13260,7 @@
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .logo-upload a.delete:hover,
   body[class="page-responsive"] .logo-upload span.delete:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .logo-upload-container .upload-state p {
@@ -13299,7 +13333,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .two-factor-steps .error-icon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .two-factor-steps .sent-message {
@@ -13330,7 +13364,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .github-access-banner .octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "#eaecef" */
   body[class="page-responsive"] .qr-code-table {
@@ -13360,7 +13394,7 @@
   }
   /* github.com mobile: "#d73a49" */
   body[class="page-responsive"] .session-device .session-state-indicator.revoked {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "#fff" */
   body[class="page-responsive"] .session-device .session-state-indicator.not-recent {
@@ -13376,7 +13410,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .collaborators .collab-remove .remove-link:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #666" */
   body[class="page-responsive"] .collaborators .collab-info {
@@ -13447,7 +13481,7 @@
   }
   /* github.com mobile: "#cb2431", "background: transparent", "border: 0" */
   body[class="page-responsive"] .repository-merge-features .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background: transparent;
     border: 0;
   }
@@ -13507,7 +13541,7 @@
   }
   /* github.com mobile: "#cb2431" */
   body[class="page-responsive"] .setup-form .octicon-alert {
-    color: #e22;
+    color: #f22;
   }
   /* github.com mobile: "color: #28a745" */
   body[class="page-responsive"] .setup-form .octicon-check {
@@ -13877,7 +13911,7 @@
   /* github.com mobile: "#fff", "#cb2431" */
   body[class="page-responsive"] .follow-list .flagged-banner {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .follow-list .follow-list-info {
@@ -14230,7 +14264,7 @@
   /* support.github.com: "#d73a49" */
   body.dotcom .Box--danger, body.dotcom .Box--danger .Box-body:last-of-type,
   body.dotcom .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* support.github.com: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   body.dotcom .Box-header--blue {
@@ -14367,7 +14401,7 @@
   }
   /* support.github.com: "#cb2431", "background-color: #fafbfc", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
   body.dotcom .btn-danger {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
     background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
   }
@@ -14378,8 +14412,8 @@
   /* support.github.com: "#fff", "#cb2431", "#cb2431", "border-color: rgba(27,31,35,.5)" */
   body.dotcom .btn-danger:hover {
     color: #fff;
-    background-color: #e22;
-    background-image: linear-gradient(-180deg, #de4450 0%, #e22 90%);
+    background-color: #f22;
+    background-image: linear-gradient(-180deg, #de4450 0%, #f22 90%);
     border-color: rgba(220, 220, 220, .5);
   }
   /* support.github.com: "#fff" */
@@ -14486,7 +14520,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "background: transparent", "border: 0" */
   body.dotcom .close-button {
@@ -14592,7 +14626,7 @@
   /* support.github.com: "#cb2431" */
   body.dotcom .form-group .form-group-body h4.is-error,
   body.dotcom .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "color: #28a745" */
   body.dotcom .form-group .form-group-body h4.is-success,
@@ -14602,7 +14636,7 @@
   /* support.github.com: "#cb2431" */
   body.dotcom .form-group.required .form-group-header label::after,
   body.dotcom .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "color: #28a745" */
   body.dotcom .form-group.successful .success {
@@ -14659,13 +14693,13 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "#86181d", "#ffdce0", "#cea0a5" */
   body.dotcom .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
-    border-color: #e22;
+    border-color: #f22;
   }
   /* support.github.com: "#ffdce0" */
   body.dotcom .form-group.errored .error::after {
@@ -14673,7 +14707,7 @@
   }
   /* support.github.com: "#cea0a5" */
   body.dotcom .form-group.errored .error::before {
-    border-bottom-color: #e22;
+    border-bottom-color: #f22;
   }
   /* support.github.com: "color: #586069" */
   body.dotcom .note {
@@ -14685,8 +14719,8 @@
   }
   /* support.github.com: "#cb2431", "#d73a49" */
   body.dotcom .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* support.github.com: "background-color: transparent", "border: 0" */
   body.dotcom .inline-form .btn-plain {
@@ -14702,7 +14736,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "color: #586069" */
   body.dotcom .drag-and-drop-error-info {
@@ -14794,7 +14828,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .menu-item.alert .Counter, body.dotcom .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "color: #586069", "#e1e4e8" */
   body.dotcom .menu-heading {
@@ -15051,7 +15085,7 @@
   }
   /* support.github.com: "#86181d", "#ffdce0", "border-color: rgba(27,31,35,.15)" */
   body.dotcom .flash-error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
     border-color: rgba(220, 220, 220, .15);
   }
@@ -15344,7 +15378,7 @@
   }
   /* support.github.com: "#cea0a5" */
   body.dotcom .border-red, body.dotcom .border-red-light {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* support.github.com: "border-color: #6f42c1 !important" */
   body.dotcom .border-purple {
@@ -15413,7 +15447,7 @@
   }
   /* support.github.com: "#d73a49" */
   body.dotcom .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* support.github.com: "#ffdce0" */
   body.dotcom .bg-red-light {
@@ -15641,27 +15675,27 @@
   }
   /* support.github.com: "#d73a49" */
   body.dotcom .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* support.github.com: "#d73a49" */
   body.dotcom .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* support.github.com: "#86181d" */
   body.dotcom .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* support.github.com: "#86181d" */
   body.dotcom .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* support.github.com: "background-color: #f5f0ff !important" */
   body.dotcom .bg-purple-0 {
@@ -15685,7 +15719,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* support.github.com: "color: #6a737d !important" */
   body.dotcom .text-gray-light {
@@ -15899,7 +15933,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom #ticket-title .State--closed {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* support.github.com: "background-color: #2cbe4e" */
   body.dotcom #ticket-title .State--pending {
@@ -15907,7 +15941,7 @@
   }
   /* support.github.com: "#cb2431" */
   body.dotcom .octicon-state-closed {
-    color: #e22;
+    color: #f22;
   }
   /* support.github.com: "color: #6f42c1" */
   body.dotcom .octicon-state-open {
@@ -16026,7 +16060,7 @@
   body.height-full .Box--danger,
   body.height-full .Box--danger .Box-body:last-of-type,
   body.height-full .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* lab.github.com: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   body.height-full .Box-header--blue {
@@ -16166,7 +16200,7 @@
   }
   /* lab.github.com: "#cb2431", "background-color: #fafbfc" */
   body.height-full .btn-danger {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
   }
   /* lab.github.com: "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)" */
@@ -16176,8 +16210,8 @@
   /* lab.github.com: "#fff", "#cb2431", "#cb2431", "border-color: rgba(27,31,35,.5)" */
   body.height-full .btn-danger:hover {
     color: #fff;
-    background-color: #e22;
-    background-image: linear-gradient(-180deg, #de4450, #e22 90%);
+    background-color: #f22;
+    background-image: linear-gradient(-180deg, #de4450, #f22 90%);
     border-color: rgba(220, 220, 220, .5);
   }
   /* lab.github.com: "#fff" */
@@ -16280,7 +16314,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "background: transparent", "border: 0" */
   body.height-full .close-button {
@@ -16385,7 +16419,7 @@
   /* lab.github.com: "#cb2431" */
   body.height-full .form-group .form-group-body h4.is-error,
   body.height-full .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "color: #28a745" */
   body.height-full .form-group .form-group-body h4.is-success,
@@ -16395,7 +16429,7 @@
   /* lab.github.com: "#cb2431" */
   body.height-full .form-group.required .form-group-header label::after,
   body.height-full .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "color: #28a745" */
   body.height-full .form-group.successful .success {
@@ -16452,13 +16486,13 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "#86181d", "#ffdce0", "#cea0a5" */
   body.height-full .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
-    border-color: #e22;
+    border-color: #f22;
   }
   /* lab.github.com: "#ffdce0" */
   body.height-full .form-group.errored .error::after {
@@ -16466,7 +16500,7 @@
   }
   /* lab.github.com: "#cea0a5" */
   body.height-full .form-group.errored .error::before {
-    border-bottom-color: #e22;
+    border-bottom-color: #f22;
   }
   /* lab.github.com: "color: #586069" */
   body.height-full .note {
@@ -16478,8 +16512,8 @@
   }
   /* lab.github.com: "#cb2431", "#d73a49" */
   body.height-full .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* lab.github.com: "background-color: transparent", "border: 0" */
   body.height-full .inline-form .btn-plain {
@@ -16495,7 +16529,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "color: #586069" */
   body.height-full .drag-and-drop-error-info {
@@ -16588,7 +16622,7 @@
   /* lab.github.com: "#cb2431" */
   body.height-full .menu-item.alert .Counter,
   body.height-full .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "color: #586069", "#e1e4e8" */
   body.height-full .menu-heading {
@@ -17033,7 +17067,7 @@
   }
   /* lab.github.com: "#cea0a5" */
   body.height-full .border-red, body.height-full .border-red-light {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* lab.github.com: "border-color: #6f42c1 !important" */
   body.height-full .border-purple {
@@ -17101,7 +17135,7 @@
   }
   /* lab.github.com: "#d73a49" */
   body.height-full .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* lab.github.com: "#ffdce0" */
   body.height-full .bg-red-light {
@@ -17329,27 +17363,27 @@
   }
   /* lab.github.com: "#d73a49" */
   body.height-full .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* lab.github.com: "#d73a49" */
   body.height-full .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* lab.github.com: "#86181d" */
   body.height-full .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* lab.github.com: "#86181d" */
   body.height-full .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* lab.github.com: "background-color: #f5f0ff !important" */
   body.height-full .bg-purple-0 {
@@ -17373,7 +17407,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* lab.github.com: "color: #6a737d !important" */
   body.height-full .text-gray-light {
@@ -17478,7 +17512,7 @@
   }
   /* lab.github.com: "#86181d", "#ffdce0" */
   body.height-full .flash-error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
   }
   /* lab.github.com: "color: #165c26", "background-color: #dcffe4", "border-color: rgba(27,31,35,.15)" */
@@ -17541,9 +17575,10 @@
   body.height-full .suggester li[aria-selected="true"] small {
     color: #fff;
   }
-  /* lab.github.com: "background-color: #fff" */
+  /* lab.github.com: "background-color: #fff", "hsla(0,0%,100%,.8)" */
   body.height-full .avatar-child {
     background-color: #181818;
+    box-shadow: -2px -2px 0 hsla(0, 0%, 100%, .8);
   }
   /* lab.github.com: "background: #fff" */
   body.height-full .AvatarStack-body {
@@ -17692,7 +17727,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .State--red {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* lab.github.com: "color: #586069", "background-color: rgba(27,31,35,.08)" */
   body.height-full .Counter {
@@ -17715,7 +17750,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .diffstat-block-deleted {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* lab.github.com: "background-color: #2cbe4e" */
   body.height-full .diffstat-block-added {
@@ -17734,7 +17769,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .markdown-body .absent {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "#e1e4e8", "border: 0" */
   body.height-full .markdown-body hr {
@@ -18032,7 +18067,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .Subhead-heading--danger {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "color: #586069" */
   body.height-full .Subhead-description {
@@ -18096,7 +18131,7 @@
   }
   /* lab.github.com: "#d73a49" */
   body.height-full .Toast--error .Toast-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* lab.github.com: "color: #24292e" */
   body.height-full .Toast--warning .Toast-icon {
@@ -18291,8 +18326,9 @@
   body.height-full .select-menu-button.primary::after {
     border-top-color: #181818;
   }
-  /* lab.github.com: "border: 1px solid transparent" */
+  /* lab.github.com: "hsla(0,0%,100%,.8)", "border: 1px solid transparent" */
   body.height-full .select-menu-loading-overlay {
+    background-color: hsla(0, 0%, 100%, .8);
     border: 1px solid transparent;
   }
   /* lab.github.com: "color: #586069", "background-color: #fff", "border: 1px solid rgba(27,31,35,.15)" */
@@ -18524,7 +18560,7 @@
   }
   /* lab.github.com: "#cb2431" */
   body.height-full .select-menu-item-text .description-warning {
-    color: #e22;
+    color: #f22;
   }
   /* lab.github.com: "#0366d6" */
   body.height-full .select-menu-new-item-form .octicon {
@@ -18673,7 +18709,7 @@
   body.d-lg-flex .Box--danger,
   body.d-lg-flex .Box--danger .Box-body:last-of-type,
   body.d-lg-flex .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* help.github.com: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   body.d-lg-flex .Box-header--blue {
@@ -18802,7 +18838,7 @@
   }
   /* help.github.com: "#cb2431", "background-color: #fafbfc", "background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
   body.d-lg-flex .btn-danger {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
     background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
   }
@@ -18813,8 +18849,8 @@
   /* help.github.com: "#fff", "#cb2431", "#cb2431", "border-color: rgba(27,31,35,.5)" */
   body.d-lg-flex .btn-danger:hover {
     color: #fff;
-    background-color: #e22;
-    background-image: linear-gradient(-180deg, #de4450 0%, #e22 90%);
+    background-color: #f22;
+    background-image: linear-gradient(-180deg, #de4450 0%, #f22 90%);
     border-color: rgba(220, 220, 220, .5);
   }
   /* help.github.com: "#fff" */
@@ -18923,7 +18959,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "background: transparent", "border: 0" */
   body.d-lg-flex .close-button {
@@ -19197,7 +19233,7 @@
   }
   /* help.github.com: "#cea0a5" */
   body.d-lg-flex .border-red, body.d-lg-flex .border-red-light {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* help.github.com: "border-color: #6f42c1 !important" */
   body.d-lg-flex .border-purple {
@@ -19265,7 +19301,7 @@
   }
   /* help.github.com: "#d73a49" */
   body.d-lg-flex .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* help.github.com: "#ffdce0" */
   body.d-lg-flex .bg-red-light {
@@ -19493,27 +19529,27 @@
   }
   /* help.github.com: "#d73a49" */
   body.d-lg-flex .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* help.github.com: "#d73a49" */
   body.d-lg-flex .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* help.github.com: "#86181d" */
   body.d-lg-flex .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* help.github.com: "#86181d" */
   body.d-lg-flex .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* help.github.com: "background-color: #f5f0ff !important" */
   body.d-lg-flex .bg-purple-0 {
@@ -19537,7 +19573,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* help.github.com: "color: #6a737d !important" */
   body.d-lg-flex .text-gray-light {
@@ -19629,7 +19665,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .markdown-body .absent {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "#e1e4e8", "border: 0" */
   body.d-lg-flex .markdown-body hr {
@@ -19775,7 +19811,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "color: #28a745" */
   body.d-lg-flex .form-group dd h4.is-success {
@@ -19783,7 +19819,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "color: #28a745" */
   body.d-lg-flex .form-group.successful .success {
@@ -19816,13 +19852,13 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "#86181d", "#ffdce0", "#cea0a5" */
   body.d-lg-flex .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background-color: #300;
-    border-color: #e22;
+    border-color: #f22;
   }
   /* help.github.com: "#ffdce0" */
   body.d-lg-flex .form-group.errored .error::after {
@@ -19830,7 +19866,7 @@
   }
   /* help.github.com: "#cea0a5" */
   body.d-lg-flex .form-group.errored .error::before {
-    border-bottom-color: #e22;
+    border-bottom-color: #f22;
   }
   /* help.github.com: "color: #586069" */
   body.d-lg-flex .note {
@@ -19842,8 +19878,8 @@
   }
   /* help.github.com: "#cb2431", "#d73a49" */
   body.d-lg-flex .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* help.github.com: "background-color: transparent", "border: 0" */
   body.d-lg-flex .inline-form .btn-plain {
@@ -19859,7 +19895,7 @@
   }
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "color: #586069" */
   body.d-lg-flex .drag-and-drop-error-info {
@@ -19952,7 +19988,7 @@
   /* help.github.com: "#cb2431" */
   body.d-lg-flex .menu-item.alert .Counter,
   body.d-lg-flex .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* help.github.com: "color: #586069", "#e1e4e8" */
   body.d-lg-flex .menu-heading {
@@ -20597,7 +20633,7 @@
   /* github.com: "#d73a49" */
   .Box--danger, .Box--danger .Box-body:last-of-type,
   .Box--danger .Box-row:first-of-type {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com: "background-color: #f1f8ff", "border-color: #c8e1ff" */
   .Box-header--blue {
@@ -20670,20 +20706,25 @@
   .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected="true"] {
     background-color: #595;
   }
-  /* github.com: "background-color: #94d3a2", "border-color: rgba(27,31,35,.1)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
+  /* github.com: "hsla(0,0%,100%,.8)", "background-color: #94d3a2", "border-color: rgba(27,31,35,.1)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   .btn-primary.disabled, .btn-primary:disabled,
   .btn-primary[aria-disabled="true"] {
+    color: hsla(0, 0%, 100%, .8);
     background: #040;
     border-color: rgba(220, 220, 220, .1);
     box-shadow: none;
   }
+  /* github.com: "hsla(0,0%,100%,.8)" */
+  .btn-primary .octicon {
+    color: hsla(0, 0%, 100%, .8);
+  }
   /* github.com: "#cb2431" */
   .btn-danger {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#fff", "#cb2431", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   .btn-danger:hover, [open] > .btn-danger {
-    background-color: #e22;
+    background-color: #f22;
     box-shadow: none;
   }
   /* github.com: "#fff", "border-color: rgba(27,31,35,.15)" */
@@ -20792,7 +20833,7 @@
   }
   /* github.com: "#cb2431" */
   .btn-octicon-danger:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background: transparent", "border: 0" */
   .close-button {
@@ -20892,7 +20933,7 @@
   }
   /* github.com: "#cb2431" */
   .form-group .form-group-body h4.is-error, .form-group dd h4.is-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .form-group .form-group-body h4.is-success, .form-group dd h4.is-success {
@@ -20901,7 +20942,7 @@
   /* github.com: "#cb2431" */
   .form-group.required .form-group-header label::after,
   .form-group.required dt label::after {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .form-group.successful .success {
@@ -20939,11 +20980,11 @@
   }
   /* github.com: "#cb2431" */
   .form-group.errored .form-control {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com: "#cb2431" */
   .form-group.errored label {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .note {
@@ -20955,8 +20996,8 @@
   }
   /* github.com: "#cb2431", "#d73a49" */
   .status-indicator-failed .octicon-x {
-    color: #e22;
-    fill: #e22;
+    color: #f22;
+    fill: #f22;
   }
   /* github.com: "background-color: initial", "border: 0" */
   .inline-form .btn-plain {
@@ -20972,7 +21013,7 @@
   }
   /* github.com: "#cb2431" */
   .drag-and-drop .error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .drag-and-drop-error-info {
@@ -21062,7 +21103,7 @@
   }
   /* github.com: "#cb2431" */
   .menu-item.alert .Counter, .menu-item .menu-warning {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #1b1f23", "#eaecef" */
   .menu-heading {
@@ -21488,7 +21529,7 @@
   }
   /* github.com: "#d73a49" */
   .border-red {
-    border-color: #e22 !important;
+    border-color: #f22 !important;
   }
   /* github.com: "border-color: #6f42c1 !important" */
   .border-purple {
@@ -21548,7 +21589,7 @@
   }
   /* github.com: "#d73a49" */
   .bg-red {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com: "background-color: #ffd33d !important" */
   .bg-yellow {
@@ -21772,27 +21813,27 @@
   }
   /* github.com: "#d73a49" */
   .color-red-5 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com: "#d73a49" */
   .bg-red-5 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com: "#cb2431" */
   .color-red-6 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com: "#cb2431" */
   .bg-red-6 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com: "#86181d" */
   .color-red-9 {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com: "#86181d" */
   .bg-red-9 {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com: "background-color: #f5f0ff !important" */
   .bg-purple-0 {
@@ -21816,7 +21857,7 @@
   }
   /* github.com: "#cb2431" */
   .text-red {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com: "color: #6a737d !important" */
   .text-gray-light {
@@ -21954,7 +21995,7 @@
   }
   /* github.com: "#d73a49" */
   .conflict-gutter-marker::after, .conflict-gutter-marker::before {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "border: 1px solid #959da5" */
   .form-group:hover .form-field-hover, .placeholder-box {
@@ -22462,9 +22503,10 @@
   .suggester li[aria-selected="true"] small {
     color: #fff;
   }
-  /* github.com: "background-color: #fff" */
+  /* github.com: "background-color: #fff", "hsla(0,0%,100%,.8)" */
   .avatar-child {
     background-color: #181818;
+    box-shadow: -2px -2px 0 hsla(0, 0%, 100%, .8);
   }
   /* github.com: "background: #fff" */
   .AvatarStack-body {
@@ -22650,8 +22692,8 @@
   }
   /* github.com: "#cb2431", "#cb2431" */
   .Label--red {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com: "#0366d6", "#0366d6" */
   .Label--blue {
@@ -22678,7 +22720,7 @@
   }
   /* github.com: "#d73a49" */
   .State--red {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "background-color: #6f42c1" */
   .State--purple {
@@ -22704,7 +22746,7 @@
   }
   /* github.com: "#cb2431" */
   .diffstat-block-deleted {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "background-color: #2cbe4e" */
   .diffstat-block-added {
@@ -22723,7 +22765,7 @@
   }
   /* github.com: "#cb2431" */
   .markdown-body .absent {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#e1e4e8", "border: 0" */
   .markdown-body hr {
@@ -23006,7 +23048,7 @@
   }
   /* github.com: "#cb2431" */
   .Subhead-heading--danger {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .Subhead-description {
@@ -23069,7 +23111,7 @@
   }
   /* github.com: "#d73a49" */
   .Toast--error .Toast-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "color: #24292e" */
   .Toast--warning .Toast-icon {
@@ -23109,7 +23151,7 @@
   /* github.com: "#fff", "#d73a49" */
   .boxed-group.dangerzone > h3 {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "border-top: 0" */
   .boxed-group.dangerzone .boxed-group-inner {
@@ -23209,7 +23251,7 @@
   }
   /* github.com: "#cb2431" */
   .closed.octicon, .reverted.octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .open.octicon {
@@ -23230,7 +23272,7 @@
   /* github.com: "#e1e4e8", "#005cc5","#cb2431" */
   .reverse-progress-container {
     background-color: #343434;
-    background-image: linear-gradient(90deg, #28a745, #4f8cc9, #3a1d6e, #e22, #f66a0a);
+    background-image: linear-gradient(90deg, #28a745, #4f8cc9, #3a1d6e, #f22, #f66a0a);
   }
   /* github.com: "#e1e4e8" */
   .reverse-progress-bar {
@@ -23250,8 +23292,9 @@
   .select-menu-button.primary::after {
     border-top-color: #181818;
   }
-  /* github.com: "border: 1px solid transparent" */
+  /* github.com: "hsla(0,0%,100%,.8)", "border: 1px solid transparent" */
   .select-menu-loading-overlay {
+    background-color: hsla(0, 0%, 100%, .8);
     border: 1px solid transparent;
   }
   /* github.com: "color: #586069", "background-color: #fff", "border: 1px solid rgba(27,31,35,.15)" */
@@ -23491,7 +23534,7 @@
   }
   /* github.com: "#cb2431" */
   .select-menu-item-text .description-warning {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#0366d6" */
   .select-menu-new-item-form .octicon {
@@ -23579,7 +23622,7 @@
   }
   /* github.com: "#86181d", "border: 1px solid rgba(27,31,35,.15)" */
   .comment-form-error {
-    color: #e22;
+    color: #f22;
     border-color: rgba(220, 220, 220, .15);
   }
   /* github.com: "color: #586069", "#dfe2e5" */
@@ -23721,7 +23764,7 @@
   }
   /* github.com: "#cb2431" */
   .commit-loader .loader-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border-bottom: 0" */
   .commit-build-statuses .dropdown-menu .merge-status-list {
@@ -23769,7 +23812,7 @@
   }
   /* github.com: "#cb2431" */
   .table-of-contents .octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .table-of-contents .octicon-diff-renamed {
@@ -23789,7 +23832,7 @@
   }
   /* github.com: "#cb2431" */
   .toc-select .select-menu-item-icon.octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .toc-select .select-menu-item-icon.octicon-diff-renamed {
@@ -23989,7 +24032,7 @@
   }
   /* github.com: "#cb2431" */
   .submodule-diff-stats .octicon-diff-removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .submodule-diff-stats .octicon-diff-added {
@@ -24051,7 +24094,7 @@
   }
   /* github.com: "#cb2431" */
   .thread-subscribe-form.is-error .thread-subscribe-button {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border: 0" */
   .sidebar-notifications .thread-subscription-status {
@@ -24233,8 +24276,8 @@
   }
   /* github.com: "#cb2431", "#d73a49" */
   .timeline-comment-label-spammy {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com: "color: #586069" */
   .timeline-comment-header-text code a {
@@ -24441,7 +24484,7 @@
   }
   /* github.com: "#cb2431" */
   .pagehead-actions .octicon-mute {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069", "border: 1px solid transparent", "border-top: 3px solid transparent" */
   .pagehead-tabs-item {
@@ -24569,14 +24612,14 @@
   }
   /* github.com: "#cb2431" */
   .prose-diff .markdown-body > del, .prose-diff .rich-diff-level-zero.removed {
-    box-shadow: inset 4px 0 0 #e22;
+    box-shadow: inset 4px 0 0 #f22;
   }
   /* github.com: "#cb2431" */
   .prose-diff .changed .removed, .prose-diff .changed .removed > div,
   .prose-diff .changed .removed code, .prose-diff .changed del,
   .prose-diff .changed del > div, .prose-diff .changed del code,
   .prose-diff > .markdown-body li ul.removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#d1d5da" */
   .prose-diff > .markdown-body li.added.moved-down .octicon,
@@ -24595,7 +24638,7 @@
   }
   /* github.com: "#cb2431" */
   .prose-diff > .markdown-body li:not(.moved).removed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border-top: 0", "border-bottom: 0" */
   .prose-diff > .markdown-body .added, .prose-diff > .markdown-body ins,
@@ -24695,7 +24738,7 @@
   }
   /* github.com: "#cb2431" */
   .hanging-icon-list .octicon-x {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#fff" */
   .btn-blurple {
@@ -24800,7 +24843,7 @@
   }
   /* github.com: "#d73a49" */
   .manifest-errors {
-    border-left: 6px solid #e22;
+    border-left: 6px solid #f22;
   }
   /* github.com: "background: #fff", "#fff" */
   .not-found-octocat-wrapper::after {
@@ -24830,11 +24873,11 @@
   }
   /* github.com: "#cb2431" */
   .alert-label--high {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#cb2431" */
   .graph-canvas .alert-label--high {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com: "#e36209" */
   .alert-label--moderate {
@@ -24873,7 +24916,7 @@
   }
   /* github.com: "#d73a49" */
   .credit-card .cvv {
-    border: 2px solid #e22;
+    border: 2px solid #f22;
   }
   /* github.com: "color: #586069" */
   .credit-card .cvv span {
@@ -24897,7 +24940,7 @@
   }
   /* github.com: "#cb2431", "background-color: #fff" */
   .billing-addon-items tr.total-row {
-    color: #e22;
+    color: #f22;
     background-color: #181818;
   }
   /* github.com: "color: #666" */
@@ -24931,7 +24974,7 @@
   }
   /* github.com: "#d73a49" */
   .usage-bar.exceeded .progress {
-    background-color: #e22 !important;
+    background-color: #f22 !important;
   }
   /* github.com: "color: #586069" */
   .lfs-data-icon {
@@ -24967,7 +25010,7 @@
   }
   /* github.com: "#cb2431" */
   .payment-history .failed .status {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .discounted-original-price {
@@ -25199,7 +25242,7 @@
   /* github.com: "#d73a49" */
   .branch-action-state-error .branch-action-icon,
   .is-merging .branch-action-state-error-if-merging .branch-action-icon {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#e1e4e8" */
   .merge-branch-form .commit-form::before {
@@ -25213,7 +25256,7 @@
   /* github.com: "#fff", "#cb2431" */
   .completeness-indicator-error {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#fff", "background-color: #6a737d" */
   .completeness-indicator-problem {
@@ -25320,11 +25363,11 @@
   }
   /* github.com: "#d73a49" */
   .check-annotation-failure::after {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#d73a49" */
   .check-annotation-failure .annotation-title {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background-color: #ffd33d" */
   .check-annotation-warning::after {
@@ -25441,7 +25484,7 @@
   }
   /* github.com: "#cb2431" */
   .code-frequency .deletion {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com: "color: #28a745" */
   .cadd {
@@ -25449,7 +25492,7 @@
   }
   /* github.com: "#cb2431" */
   .cdel {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#e1e4e8" */
   .code-list .file-box {
@@ -25543,7 +25586,7 @@
   }
   /* github.com: "#cb2431" */
   span.no-nl-marker {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background-color: #fff", "border-top: 0", "border-right: 0", "border-left: 0" */
   .select-menu-item {
@@ -25630,7 +25673,7 @@
   }
   /* github.com: "#cb2431" */
   .dashboards-overview-cards .octicon-arrow-down {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#0366d6" */
   .dashboards-overview-cards .summary-stats .metric-1 {
@@ -25716,7 +25759,7 @@
   /* github.com: "#cb2431" */
   .donut-chart > .action_required, .donut-chart > .cancelled,
   .donut-chart > .error, .donut-chart > .failure, .donut-chart > .timed_out {
-    fill: #e22;
+    fill: #f22;
   }
   /* github.com: "fill: #dbab09" */
   .donut-chart > .expected, .donut-chart > .in_progress, .donut-chart > .pending,
@@ -25923,7 +25966,7 @@
   }
   /* github.com: "#86181d" */
   .invalid-topic .delete-topic-button {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background-color: #f1f8ff" */
   .topic-tag-action {
@@ -25931,7 +25974,7 @@
   }
   /* github.com: "#86181d" */
   .topic-tag-action.invalid-topic {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d", "background-color: #f1f8ff", "border: 0" */
   .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button {
@@ -25954,7 +25997,7 @@
   }
   /* github.com: "#d73a49" */
   .topic-tag-action .remove-topic-button:hover {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "background-image: none" */
   .topic-input-container .tag-input .tag-input-inner {
@@ -26021,7 +26064,7 @@
   }
   /* github.com: "#cb2431" */
   .hook-item.failure .icon-for-failure {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .hook-item.inactive .icon-for-inactive, .hook-item.pending .icon-for-pending {
@@ -26033,7 +26076,7 @@
   }
   /* github.com: "#cb2431" */
   .hook-item .hook-error-message {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background-color: initial" */
   .hook-deliveries-list .hook-delivery-item:hover {
@@ -26045,7 +26088,7 @@
   }
   /* github.com: "#cb2431" */
   .hook-deliveries-list .item-status.failure {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .hook-deliveries-list .item-status.pending, .hook-delivery-time {
@@ -26058,7 +26101,7 @@
   /* github.com: "#fff", "#d73a49" */
   .hook-delivery-response-status {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "background-color: #28a745" */
   .hook-delivery-response-status[data-response-status^="2"] {
@@ -26079,7 +26122,7 @@
   }
   /* github.com: "#cb2431" */
   .issue-list .title .closed.octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .issue-list .title .open.octicon {
@@ -26197,7 +26240,7 @@
   }
   /* github.com: "#cb2431" */
   .new-label-color-input:invalid {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border-bottom: 0" */
   .repository-lang-stats ol.repository-lang-stats-numbers li {
@@ -26286,7 +26329,7 @@
   }
   /* github.com: "#d73a49" */
   .marketplace-plan-dollar-field-container.is-errored .form-control {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* github.com: "color: #24292e" */
   .marketplace-plan-emphasis {
@@ -26511,7 +26554,7 @@
   }
   /* github.com: "#cb2431" */
   .type-icon-state-closed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .type-icon-state-draft {
@@ -26688,7 +26731,7 @@
   }
   /* github.com: "#cb2431" */
   .oauth-delete-repo-permissions .octicon-alert {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .oauth-no-description {
@@ -26712,7 +26755,7 @@
   }
   /* github.com: "#cb2431" */
   .oauth-org-access-details .oauth-org-item.revoked .octicon-x {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .oauth-org-access-details .octicon-check {
@@ -26720,7 +26763,7 @@
   }
   /* github.com: "#cb2431" */
   .oauth-org-access-details .octicon-x.org-access-denied {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #24292e" */
   .oauth-application-whitelist .request-info strong {
@@ -26737,7 +26780,7 @@
   }
   /* github.com: "#cb2431" */
   .oauth-application-whitelist .denied-request {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #6a737d" */
   .oauth-application-whitelist .edit-link {
@@ -26893,7 +26936,7 @@
   }
   /* github.com: "#cb2431" */
   .audit-type .oauth_access {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#fff" */
   .saml-enabled-banner-container {
@@ -26902,7 +26945,7 @@
   /* github.com: "#fff", "#cb2431" */
   .saml-settings-form .test-status-indicator-error {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#fff", "background-color: #28a745" */
   .saml-settings-form .test-status-indicator-success {
@@ -26987,7 +27030,7 @@
   }
   /* github.com: "#cb2431" */
   .menu-item-danger, .menu-item-danger.selected {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#fff", "#d73a49" */
   .menu-item-danger.navigation-focus,
@@ -26995,7 +27038,7 @@
   .menu-item-danger.selected[aria-selected="true"], .menu-item-danger:hover,
   .menu-item-danger[aria-selected="true"] {
     color: #fff;
-    background: #e22;
+    background: #f22;
   }
   /* github.com: "color: #959da5" */
   .team-member-list-avatar .octicon {
@@ -27007,7 +27050,7 @@
   }
   /* github.com: "#cb2431" */
   .confirm-removal-container .deleting-private-forks-warning .octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border: 1px solid #eaeaea" */
   .confirm-removal-list-container {
@@ -27163,7 +27206,7 @@
   }
   /* github.com: "#86181d" */
   .pinned-items-reorder-error {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #2f363d" */
   .pinned-item-name {
@@ -27188,16 +27231,16 @@
       border-right: 2px solid #343434;
     }
     .blob-num-deletion {
-      border-right-color: #e22;
+      border-right-color: #f22;
     }
     .blob-code-deletion .x {
-      border-bottom: 2px solid #e22;
+      border-bottom: 2px solid #f22;
     }
     .diffstat-block-neutral {
       border: 4px solid #404040;
     }
     .diffstat-block-deleted {
-      border: 4px solid #e22;
+      border: 4px solid #f22;
     }
     .State {
       color: #dcdcdc;
@@ -27211,8 +27254,8 @@
       border-color: #8368aa;
     }
     .State--red {
-      color: #e22;
-      border: 1px solid #e22;
+      color: #f22;
+      border: 1px solid #f22;
     }
   }
   /* github.com: "background: transparent" */
@@ -27367,7 +27410,7 @@
   }
   /* github.com: "#86181d" */
   .user-profile-bio-message {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "background-color: #fff", "#d1d5da" */
   .user-profile-sticky-bar.user-profile-sticky-bar-with-bg::after {
@@ -27376,8 +27419,8 @@
   }
   /* github.com: "#cb2431", "#d73a49" */
   .blocked-user-notice {
-    color: #e22;
-    border: 1px solid #e22;
+    color: #f22;
+    border: 1px solid #f22;
   }
   /* github.com: "background-color: #fff", "#d1d5da", "box-shadow: none" */
   .user-profile-nav {
@@ -27517,7 +27560,7 @@
   }
   /* github.com: "#cb2431" */
   .authors-and-code .deletions {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069", "#e1e4e8" */
   .summary-stats li {
@@ -27538,7 +27581,7 @@
   }
   /* github.com: "#cb2431" */
   .summary-stats li .octicon-issue-closed {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .summary-stats li .octicon-issue-opened {
@@ -27563,8 +27606,8 @@
   }
   /* github.com: "#cb2431", "#d73a49" */
   .Label--draft {
-    color: #e22;
-    border-color: #e22;
+    color: #f22;
+    border-color: #f22;
   }
   /* github.com: "border-top: 0" */
   .uploaded-files.is-populated + .drop-target .drop-target-label {
@@ -27580,7 +27623,7 @@
   }
   /* github.com: "#cb2431" */
   .uploaded-files .remove:hover {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github.com: "#fff","hsla(0,0%,100%,.5)" */
   .upload-progress {
@@ -27832,7 +27875,7 @@
   }
   /* github.com: "#d73a49", "box-shadow: none" */
   .avatar-upload .flash {
-    border: 1px dashed #e22;
+    border: 1px dashed #f22;
     box-shadow: none;
   }
   /* github.com: "color: #586069" */
@@ -27867,7 +27910,7 @@
   }
   /* github.com: "#cb2431" */
   .unverified-user-key, .unverified-user-key-notice {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "border-bottom: 1px solid #ddd" */
   .notification-center .overview {
@@ -27887,7 +27930,7 @@
   }
   /* github.com: "#cb2431" */
   .logo-upload a.delete:hover, .logo-upload span.delete:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #586069" */
   .logo-upload-container .upload-state p {
@@ -27959,7 +28002,7 @@
   }
   /* github.com: "#cb2431" */
   .two-factor-steps .error-icon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .two-factor-steps .sent-message {
@@ -27989,7 +28032,7 @@
   }
   /* github.com: "#cb2431" */
   .github-access-banner .octicon {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "#eaecef" */
   .qr-code-table {
@@ -28018,7 +28061,7 @@
   }
   /* github.com: "#d73a49" */
   .session-device .session-state-indicator.revoked {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "#fff" */
   .session-device .session-state-indicator.not-recent {
@@ -28034,7 +28077,7 @@
   }
   /* github.com: "#cb2431" */
   .collaborators .collab-remove .remove-link:hover {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #666" */
   .collaborators .collab-info {
@@ -28113,7 +28156,7 @@
   }
   /* github.com: "#cb2431", "background: transparent", "border: 0" */
   .repository-merge-features .form-group.errored .error {
-    color: #e22;
+    color: #f22;
     background: transparent;
     border: 0;
   }
@@ -28173,7 +28216,7 @@
   }
   /* github.com: "#cb2431" */
   .setup-form .octicon-alert {
-    color: #e22;
+    color: #f22;
   }
   /* github.com: "color: #28a745" */
   .setup-form .octicon-check {
@@ -28524,7 +28567,7 @@
   /* github.com: "#fff", "#cb2431" */
   .follow-list .flagged-banner {
     color: #fff;
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github.com: "color: #586069" */
   .follow-list .follow-list-info {
@@ -29139,6 +29182,10 @@
   .section-codespaces-develop-night .codespaces-develop-header {
     color: #fff;
   }
+  /* github.com: "hsla(0,0%,100%,.8)" */
+  .section-codespaces-develop-night .codespaces-develop-text {
+    color: hsla(0, 0%, 100%, .8) !important;
+  }
   /* github.com: "box-shadow: none" */
   .section-codespaces-develop-night .codespaces-sun {
     box-shadow: none;
@@ -29547,7 +29594,7 @@
   }
   /* refined-github: "#cb2431" */
   html.refined-github :root {
-    --github-red: #e22;
+    --github-red: #f22;
   }
   /* refined-github: "color: #6a737d" */
   html.refined-github .markdown-body del {
@@ -34987,6 +35034,10 @@
   html.ghh-theme-classic .ghh button.ghh-primary:hover {
     background-color: /*[[base-color]]*/;
   }
+  /* github hovercard: "rgba(255,255,255,0.8)" */
+  html.ghh-theme-classic .ghh button.ghh-aux {
+    color: hsla(0, 0%, 100%, .8);
+  }
   /* github hovercard: "#fff" */
   html.ghh-theme-classic .ghh .ghh-state,
   html.ghh-theme-classic .ghh button.ghh-aux:hover {
@@ -34998,7 +35049,7 @@
   }
   /* github hovercard: "#cb2431" */
   html.ghh-theme-classic .ghh .ghh-state-closed {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github hovercard: "background-color: #6f42c1" */
   html.ghh-theme-classic .ghh .ghh-state-merged {
@@ -35119,11 +35170,11 @@
   /* github hovercard: "#cb2431" */
   .ghh-theme-github .ghh-commit-meta .text-diff-deleted,
   .ghh-theme-github .ghh-pull-meta .text-diff-deleted {
-    color: #e22 !important;
+    color: #f22 !important;
   }
   /* github hovercard: "#cb2431" */
   .ghh-theme-github .ghh-reviews .ghh-state-alert {
-    color: #e22;
+    color: #f22;
   }
   /* github hovercard: "color: #b08800" */
   .ghh-theme-github .ghh-reviews .ghh-state-warning {
@@ -35131,7 +35182,7 @@
   }
   /* github hovercard: "#cb2431" */
   .ghh-theme-github .ghh-reviews .ghh-state-icon-alert {
-    background-color: #e22;
+    background-color: #f22;
   }
   /* github hovercard: "background-color: #2cbe4e" */
   .ghh-theme-github .ghh-reviews .ghh-state-icon-success {
@@ -35182,7 +35233,7 @@
   }
   /* gitako: "#d73a49" */
   body.gitako-ready .gitako-toggle-show-button-wrapper.error .action-icon {
-    color: #e22;
+    color: #f22;
   }
   /* gitako: "background-color: transparent" */
   body.gitako-ready .gitako-side-bar a {
@@ -35252,7 +35303,7 @@
   }
   /* gitako: "#d73a49" */
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .search-input-wrapper .search-input.error {
-    border-color: #e22;
+    border-color: #f22;
   }
   /* gitako: "background: #fff", "#0366d6", "#eaecef" */
   body.gitako-ready .gitako-side-bar .gitako-side-bar-body .gitako-side-bar-content .file-explorer .node-item {
@@ -37454,48 +37505,6 @@
   }
   .block-diff-deleted, .text-diff-deleted .block-diff-neutral {
     background: #b22 !important;
-  }
-  /* red border */
-  .mergeable-dirty .bubble .mergeable, #message.major, .comment-form-error,
-  .comment-form-stale, .deprecation-notice {
-    border-color: #f44 !important;
-    background: #300 !important;
-  }
-  .release-label.draft, .Box.Box--danger, .Box--danger .Box-row:first-of-type,
-  .Box--danger .Box-body:last-of-type {
-    border-color: #f44 !important;
-  }
-  .error::after {
-    border-bottom-color: #300 !important;
-  }
-  .error::before {
-    border-bottom-color: #f44 !important;
-  }
-  .mergeable-dirty .bubble::after {
-    border-right-color: #911 !important;
-  }
-  /*  red text */
-  .btn-danger, .text-failure, .text-error, a:not(.octicon-btn).danger,
-  .deletions, .cdel, .gd .diff-line-num, .authors-and-code .deletions,
-  .diffstat .diffstat-bar.diff-deleted, span.diffstat .diffstat-bar i.minus,
-  .icon-for-failure, ul.summary-stats li .octicon-issue-closed, .branch-delete,
-  #toc .octicon-diff-removed, .highlight .gd, .uploaded-files .remove:hover,
-  .collaborators .collab-remove .remove-link:hover, .minibutton.danger,
-  .octicon-btn-danger:hover, .text-danger, .type-icon-state-closed,
-  .delete-owners-button:hover, .dangerzone-module h4, .deprecation-notice a,
-  .billing-addon-items tr.total-row *, .comment-form-error, .comment-form-stale,
-  .markdown-body .absent, .text-red, .release-label.draft,
-  input[id="label-color-"]:invalid,
-  body[class="page-responsive"] .color-icons .closed {
-    color: #f44 !important;
-  }
-  .deprecation-banner p {
-    color: #f66;
-  }
-  .btn-danger.disabled, .btn-danger:disabled,
-  body[class="page-responsive"] .btn-danger.disabled,
-  body[class="page-responsive"] .btn-danger:disabled {
-    color: rgba(203, 36, 49, .4) !important;
   }
   /* blue purple */
   .btn-blurple {
