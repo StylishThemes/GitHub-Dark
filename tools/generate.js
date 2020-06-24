@@ -20,7 +20,9 @@ const mappings = {
   "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
   "$color: rgba(0,0,0,0.2)": "rgba(255,255,255,0.7)",
-  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
+  "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
+  "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
+
   "$color: #fff": "#181818",
   "$color: #f3f4f6": "#242424",
   "$color: #edeff2": "#343434",
@@ -30,9 +32,18 @@ const mappings = {
   "$color: #d1d5da": "#404040",
 
   // blue (base color)
+  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
   "$color: #0366d6": "/*[[base-color]]*/ #4f8cc9", // gitako
   "$color: #0366d6d0": "/*[[base-color]]*/ #4f8cc9", // gitako
-  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "$color: #3b5998": "/*[[base-color]]*/ #4f8cc9",
+
+  // blue
+  "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
+  "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #0679fc": "#4f8cc9",
+  "$color: #257bf9": "#4f8cc9",
+  "$color: #0361cc": "#4f8cc9",
+  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
 
   // red
   "$color: #cb2431": "#e22",
@@ -41,11 +52,6 @@ const mappings = {
   "$color: #d73a49": "#e22",
   "$color: #cea0a5": "#e22",
   "$color: #ffdce0": "#300",
-
-  // blue
-  "$color: #eaf5ff": "#182030", // .full-commit
-  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
-  "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
 
   // orange
   "$color: #fb8532": "#fb8532",
@@ -83,8 +89,6 @@ const mappings = {
   "$background: #24292e": "#181818",
 
   "$background: rgba(225,228,232,0.31)": "#282828",
-  "$background: hsla(0,0%,100%,.125)": "hsla(0,0%,100%,.05)",
-  "$background: hsla(0,0%,100%,.175)": "hsla(0,0%,100%,.1)",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
   "$background: linear-gradient(#fafafa,#eaeaea)": "linear-gradient(#202020, #181818)",
   "$background: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)": "linear-gradient(-180deg, #202020 0%, #181818 90%)", // status
@@ -257,8 +261,6 @@ const mappings = {
   "$background: #0361cc": "#182030",
   "$background: #05264c": "#182030",
   "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
-  "$background: linear-gradient(-180deg,#0679fc,#0361cc 90%)": "linear-gradient(to bottom,#283040,#182030)",
-  "$background: linear-gradient(90deg,#257bf9,#2426ca)": "linear-gradient(90deg,#283040,#182030)",
   "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
 
   // blue (base-color)
@@ -289,8 +291,6 @@ const mappings = {
     box-shadow: 0 0 rgba(79,140,201,.3);
     box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
   `,
-  "color: #3b5998": "color: /*[[base-color]]*/ #4f8cc9",
-  "$border: #3b5998": "/*[[base-color]]*/ #4f8cc9",
 
   // green
   "color: #28a745": "color: #6cc644",
@@ -361,15 +361,13 @@ const mappings = {
   "$border: #ec6cb9": "#c49",
   "$background: #ffeef8": "#170711",
 
-  "text-shadow: 0 1px 0 hsla(0,0%,100%,.6)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.6)",
-  "text-shadow: 0 1px 0 hsla(0,0%,100%,.5)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.5)",
-
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
 
   "box-shadow: none": "box-shadow: none",
 
   "$border: transparent": "transparent",
+  "border: 1px solid transparent": "border: 1px solid transparent",
   "$border: 0": "0",
   "border-top: 0": "border-top: 0",
   "border-bottom: 0": "border-bottom: 0",
