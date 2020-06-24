@@ -18,11 +18,14 @@ const mappings = {
   // monochrome
   "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
+  "$color: rgba(0,0,0,0.2)": "rgba(255,255,255,0.7)",
   "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
+  "$color: #fff": "#181818",
   "$color: #f3f4f6": "#242424",
   "$color: #edeff2": "#343434",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
+  "$color: #dfe2e5": "#343434",
   "$color: #d1d5da": "#404040",
 
   // blue (base color)
@@ -52,7 +55,6 @@ const mappings = {
   // ==========================================================================
   // Background
   // ==========================================================================
-  "$background: #fff": "#181818; background-image: none",
   "$background: #ffe": "#181818",
   "$background: #fdfdfd": "#181818",
   "$background: #fafafb": "#181818",
@@ -69,7 +71,6 @@ const mappings = {
   "$background: #e9ecef": "#404040",
   "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
-  "$background: #dfe2e5": "#383838",
   "$background: #ddd": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
@@ -120,7 +121,6 @@ const mappings = {
   "$border: #959da5": "#484848",
   "$border: #bbb": "#484848",
   "$border: #c3c8cf": "#484848",
-  "$border: #dfe2e5": "#343434",
   "$border: #ddd": "#343434",
   "$border: #d6d6d6": "#343434", // graphql explorer
   "$border: #d0d0d0": "#343434", // graphql explorer
@@ -133,13 +133,9 @@ const mappings = {
   "$border: #eee": "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
-  "$border: #fff": "#181818",
   "$border: #2f363d": "#282828",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(220,220,220,.15)",
-
-  "border-top: 7px solid #fff": "border-top-color: #181818",
-  "border-color: #dfe2e5 #dfe2e5 #fff": "border-color: #343434 #343434 #181818",
 
   // ==========================================================================
   // Box-Shadow
@@ -148,9 +144,6 @@ const mappings = {
   "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)": `
      box-shadow: 0 0 0 1px #484848;
   `, // graphql explorer
-  "box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.7),inset 0 1px #fff": "box-shadow: 0 0 0 .1px #343434", // graphql explorer
-  "box-shadow: 0 1px 0 #fff": "box-shadow: 0 0 0 1px #484848", // graphql explorer
-  "box-shadow: inset 1px 0 0 #fff": "box-shadow: inset 1px 0 0 #181818",
   "box-shadow: inset 0 2px 3px rgba(0,0,0,.075)": "box-shadow: inset 0 2px 3px rgba(255,255,255,.075)",
 
   "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
@@ -369,9 +362,6 @@ const mappings = {
 
   "text-shadow: 0 1px 0 hsla(0,0%,100%,.6)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.6)",
   "text-shadow: 0 1px 0 hsla(0,0%,100%,.5)": "text-shadow: 0 1px 0 hsla(0,0%,0%,.5)",
-  "text-shadow: 0 1px 0 #fff": "text-shadow: none", // zenhub
-
-  "outline: 1px solid #fff": "outline-color: #222",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
