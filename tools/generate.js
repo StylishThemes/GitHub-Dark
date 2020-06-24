@@ -181,7 +181,7 @@ const mappings = {
   "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
 
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
-  "box-shadow: 0 0 5px rgba(27,3,35,.3)": "box-shadow: 0 0 5px #000",
+  "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
 
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
 
