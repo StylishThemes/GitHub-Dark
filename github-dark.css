@@ -1046,7 +1046,9 @@
   body, body.status #uptime-tooltip .tooltip-box,
   body.status .grouped-items-selector,
   body.status .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
-  body.status .layout-content.status.status-full-history .history-nav a.current {
+  body.status .layout-content.status.status-full-history .history-nav a.current,
+  body.status div[id^="subscribe-modal"],
+  body.status div[id^="subscribe-modal"] .modal-footer {
     background-color: #181818;
   }
   /* githubstatus.com: "border-bottom-color: #fff" */
@@ -1066,7 +1068,8 @@
   body.status .layout-content.status.status-full-history .history-nav a.current,
   body.status .layout-content.status.status-full-history .history-nav a:not(.current):hover,
   body.status .layout-content.status.status-index .components-statuses .component-container .name,
-  body.status .layout-content.status.status-index .incidents-list .incident-title.impact-none a {
+  body.status .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  body.status div[id^="subscribe-modal"] .modal-header .close {
     color: #cdcdcd;
   }
   /* githubstatus.com: "color: #6a737d" */
@@ -1081,12 +1084,18 @@
   /* githubstatus.com: "#e1e4e8" */
   body.status #uptime-tooltip .tooltip-box,
   body.status .layout-content.status .border-color,
-  body.status .markdown-display table, body.status .tooltip-base, body.status hr {
+  body.status .markdown-display table, body.status .tooltip-base,
+  body.status div[id^="subscribe-modal"], body.status hr {
     border-color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
-  body.status .markdown-display table td {
+  body.status .markdown-display table td,
+  body.status div[id^="subscribe-modal"] .modal-footer {
     border-top-color: #343434;
+  }
+  /* githubstatus.com: "#e1e4e8" */
+  body.status div[id^="subscribe-modal"] .modal-header .close:hover {
+    color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
   body.status .markdown-display table td + td,
@@ -1094,7 +1103,8 @@
     border-left-color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
-  body.status #uptime-tooltip .pointer-container .pointer-larger {
+  body.status #uptime-tooltip .pointer-container .pointer-larger,
+  body.status div[id^="subscribe-modal"] .modal-header {
     border-bottom-color: #343434;
   }
   /* githubstatus.com: "background-color: rgba(225,228,232,0.31)" */
@@ -26909,6 +26919,15 @@
   body.zh_logged_in .zh-estimate-create-item {
     border-top-color: #343434;
   }
+  /* zenhub: "border-bottom-color: transparent" */
+  body.zh_logged_in .zh-topbar-item.UnderlineNav-item:not(.selected):not(:hover) {
+    border-bottom-color: transparent;
+  }
+  /* zenhub: "background: none", "#f9826c" */
+  body.zh_logged_in .zh-topbar-item.UnderlineNav-item.selected {
+    background: none;
+    border-bottom-color: #fff;
+  }
   /* zenhub: "background-color: #f4f4f4" */
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus,
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus.selected {
@@ -27131,6 +27150,7 @@
   }
   /* zenhub: "background-color: #fff" */
   body.zh_logged_in .zh-dependency-manager-container.TimelineItem .zhc-dependency,
+  body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-issue-list,
   body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-list {
     background-color: #181818;
   }
@@ -31613,6 +31633,11 @@
   /* zenhub: "border-bottom: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-team-members-page__search {
     border-bottom-color: #343434;
+  }
+  /* zenhub: "background-color: #fff", "border: 1px solid #e9e9e9" */
+  body.zh_logged_in .zhc-epic-issue-list {
+    background-color: #181818;
+    border-color: #343434;
   }
   /* zenhub: "box-shadow: none" */
   body.zh_logged_in .zhc-roadmap-calendar.zhc-popover .DateRangePicker .DateRangePicker_picker .DayPicker.DayPicker__horizontal {
