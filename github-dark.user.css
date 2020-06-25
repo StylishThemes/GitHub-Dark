@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.1.8
+@version     2.1.9
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.1.8 (2020-06-24) */
+/*! Github Dark v2.1.9 (2020-06-25) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark */
 /*! License:    https://opensource.org/licenses/BSD-2-Clause */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -1261,7 +1261,9 @@
   body, body.status #uptime-tooltip .tooltip-box,
   body.status .grouped-items-selector,
   body.status .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
-  body.status .layout-content.status.status-full-history .history-nav a.current {
+  body.status .layout-content.status.status-full-history .history-nav a.current,
+  body.status div[id^="subscribe-modal"],
+  body.status div[id^="subscribe-modal"] .modal-footer {
     background-color: #181818;
   }
   /* githubstatus.com: "border-bottom-color: #fff" */
@@ -1281,7 +1283,8 @@
   body.status .layout-content.status.status-full-history .history-nav a.current,
   body.status .layout-content.status.status-full-history .history-nav a:not(.current):hover,
   body.status .layout-content.status.status-index .components-statuses .component-container .name,
-  body.status .layout-content.status.status-index .incidents-list .incident-title.impact-none a {
+  body.status .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  body.status div[id^="subscribe-modal"] .modal-header .close {
     color: #cdcdcd;
   }
   /* githubstatus.com: "color: #6a737d" */
@@ -1296,12 +1299,18 @@
   /* githubstatus.com: "#e1e4e8" */
   body.status #uptime-tooltip .tooltip-box,
   body.status .layout-content.status .border-color,
-  body.status .markdown-display table, body.status .tooltip-base, body.status hr {
+  body.status .markdown-display table, body.status .tooltip-base,
+  body.status div[id^="subscribe-modal"], body.status hr {
     border-color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
-  body.status .markdown-display table td {
+  body.status .markdown-display table td,
+  body.status div[id^="subscribe-modal"] .modal-footer {
     border-top-color: #343434;
+  }
+  /* githubstatus.com: "#e1e4e8" */
+  body.status div[id^="subscribe-modal"] .modal-header .close:hover {
+    color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
   body.status .markdown-display table td + td,
@@ -1309,7 +1318,8 @@
     border-left-color: #343434;
   }
   /* githubstatus.com: "#e1e4e8" */
-  body.status #uptime-tooltip .pointer-container .pointer-larger {
+  body.status #uptime-tooltip .pointer-container .pointer-larger,
+  body.status div[id^="subscribe-modal"] .modal-header {
     border-bottom-color: #343434;
   }
   /* githubstatus.com: "background-color: rgba(225,228,232,0.31)" */
@@ -4706,9 +4716,10 @@
   #graphiql .Progress {
     background-color: #343434;
   }
-  /* graphql.github.com: "background-color: #f6f8fa" */
+  /* graphql.github.com: "background-color: #f6f8fa", "box-shadow: 0 0 18px rgba(0,0,0,.4)" */
   #graphiql .SelectMenu-modal {
     background-color: #222;
+    box-shadow: 0 0 18px #000;
   }
   /* graphql.github.com: "#d1d5da", "box-shadow: 0 1px 5px rgba(27,31,35,.15)" */
   @media (min-width: 544px) {
@@ -5230,10 +5241,11 @@
     color: #fff;
     border-color: rgba(220, 220, 220, .15);
   }
-  /* github.com mobile: "background-color: #fafbfc", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)" */
+  /* github.com mobile: "rgba(3,102,214,.5)", "background-color: #fafbfc", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)" */
   body[class="page-responsive"] .btn-outline.disabled,
   body[class="page-responsive"] .btn-outline:disabled,
   body[class="page-responsive"] .btn-outline[aria-disabled="true"] {
+    color: #264665;
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
@@ -8820,10 +8832,11 @@
   body[class="page-responsive"] .table-list-header-toggle .select-menu-button:hover {
     color: #cdcdcd;
   }
-  /* github.com mobile: "background-color: #fff", "border-color: #444d56" */
+  /* github.com mobile: "background-color: #fff", "border-color: #444d56", "box-shadow: 0 0 18px rgba(0,0,0,.4)" */
   body[class="page-responsive"] .Box--overlay {
     background-color: #181818;
     border-color: #484848;
+    box-shadow: 0 0 18px #000;
   }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] .Box-body .help,
@@ -15914,10 +15927,11 @@
   body.dotcom #site-search-results .search-result-intro em {
     border-bottom: 1px solid /*[[base-color]]*/;
   }
-  /* support.github.com: "background-color: #fff", "border-color: #444d56" */
+  /* support.github.com: "background-color: #fff", "border-color: #444d56", "box-shadow: 0 0 18px rgba(0,0,0,.4)" */
   body.dotcom details-dialog {
     background-color: #181818;
     border-color: #484848;
+    box-shadow: 0 0 18px #000;
   }
   /* support.github.com: "color: #6a737d" */
   body.dotcom .gh-subheading {
@@ -18112,9 +18126,10 @@
     color: #fff;
     border-color: rgba(220, 220, 220, .15);
   }
-  /* github.com: "background-color: #fafbfc", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)" */
+  /* github.com: "rgba(3,102,214,.5)", "background-color: #fafbfc", "border-color: rgba(27,31,35,.15)", "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)" */
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled="true"] {
+    color: #264665;
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
@@ -20941,10 +20956,11 @@
   .table-list-header-toggle .select-menu-button:hover {
     color: #cdcdcd;
   }
-  /* github.com: "background-color: #fff", "border-color: #444d56" */
+  /* github.com: "background-color: #fff", "border-color: #444d56", "box-shadow: 0 0 18px rgba(0,0,0,.4)" */
   .Box--overlay {
     background-color: #181818;
     border-color: #484848;
+    box-shadow: 0 0 18px #000;
   }
   /* github.com: "color: #586069" */
   .Box-body .help, .breadcrumb {
@@ -27118,6 +27134,15 @@
   body.zh_logged_in .zh-estimate-create-item {
     border-top-color: #343434;
   }
+  /* zenhub: "border-bottom-color: transparent" */
+  body.zh_logged_in .zh-topbar-item.UnderlineNav-item:not(.selected):not(:hover) {
+    border-bottom-color: transparent;
+  }
+  /* zenhub: "background: none", "#f9826c" */
+  body.zh_logged_in .zh-topbar-item.UnderlineNav-item.selected {
+    background: none;
+    border-bottom-color: #fff;
+  }
   /* zenhub: "background-color: #f4f4f4" */
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus,
   body.zh_logged_in .zh-board-menu-itemgroup .zh-select-menu-item.navigation-focus.selected {
@@ -27340,6 +27365,7 @@
   }
   /* zenhub: "background-color: #fff" */
   body.zh_logged_in .zh-dependency-manager-container.TimelineItem .zhc-dependency,
+  body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-issue-list,
   body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-list {
     background-color: #181818;
   }
@@ -31822,6 +31848,11 @@
   /* zenhub: "border-bottom: 1px solid #e9e9e9" */
   body.zh_logged_in .zhc-team-members-page__search {
     border-bottom-color: #343434;
+  }
+  /* zenhub: "background-color: #fff", "border: 1px solid #e9e9e9" */
+  body.zh_logged_in .zhc-epic-issue-list {
+    background-color: #181818;
+    border-color: #343434;
   }
   /* zenhub: "box-shadow: none" */
   body.zh_logged_in .zhc-roadmap-calendar.zhc-popover .DateRangePicker .DateRangePicker_picker .DayPicker.DayPicker__horizontal {
