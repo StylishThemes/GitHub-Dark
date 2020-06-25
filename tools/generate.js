@@ -26,7 +26,6 @@ const mappings = {
 
   "$background: #fff": "#181818",
   "$border: #fff": "#181818",
-  "$color: #fff": "#fff",
 
   "$color: #f3f4f6": "#242424",
   "$color: #edeff2": "#343434",
