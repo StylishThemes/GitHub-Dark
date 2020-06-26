@@ -6,6 +6,7 @@ deps: node_modules
 
 node_modules: yarn.lock
 	yarn
+	@touch node_modules
 
 lint: node_modules
 	yarn -s run eslint --color .
