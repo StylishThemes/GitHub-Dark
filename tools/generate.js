@@ -165,6 +165,11 @@ const mappings = {
      box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
   `,
 
+  "box-shadow: 0 0 0 3px rgba(3,102,214,.3)": `
+     box-shadow: 0 0 0 3px rgba(79,140,201,.3);
+     box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  `,
+
   "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)": `
     box-shadow: 0 0 0 2px rgba(79,140,201,.3);
     box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
