@@ -46,6 +46,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Selected Tab Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
 ⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 ⚙️ [GitHub Tab Size](https://github.com/StylishThemes/GitHub-tab-size)<br>
+⚙️ [GitHub Unrounded](https://github.com/StylishThemes/GitHub-Unrounded)<br>
 ⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
 
 ## Supported GitHub Extensions
