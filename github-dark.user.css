@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.1.14
+@version     2.1.15
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.1.14 (2020-06-25) */
+/*! Github Dark v2.1.15 (2020-06-26) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark */
 /*! License:    https://opensource.org/licenses/BSD-2-Clause */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|help|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -5106,6 +5106,12 @@
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
   }
+  /* github.com mobile: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  body[class="page-responsive"] .btn.focus,
+  body[class="page-responsive"] .btn:focus {
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
   /* github.com mobile: "background-color: #2ea44f", "rgba", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   body[class="page-responsive"] .btn-primary {
     background-color: #373;
@@ -5183,7 +5189,7 @@
   body[class="page-responsive"] .btn-outline.disabled,
   body[class="page-responsive"] .btn-outline:disabled,
   body[class="page-responsive"] .btn-outline[aria-disabled="true"] {
-    color: #264665;
+    color: /*[[base-color]]*/;
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
@@ -5335,6 +5341,11 @@
   body[class="page-responsive"] .social-count:hover {
     color: /*[[base-color]]*/;
   }
+  /* github.com mobile: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  body[class="page-responsive"] .social-count:focus {
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
   /* github.com mobile: "0" */
   body[class="page-responsive"] fieldset {
     border: 0;
@@ -5347,12 +5358,14 @@
     border: 1px solid #343434;
     box-shadow: none;
   }
-  /* github.com mobile: "#0366d6" */
+  /* github.com mobile: "#0366d6", "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
   body[class="page-responsive"] .form-control.focus,
   body[class="page-responsive"] .form-control:focus,
   body[class="page-responsive"] .form-select.focus,
   body[class="page-responsive"] .form-select:focus {
     border-color: /*[[base-color]]*/;
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
   }
   /* github.com mobile: "color: #959da5", "#f3f4f6" */
   body[class="page-responsive"] .form-control[disabled],
@@ -10678,10 +10691,6 @@
     border-right: 0;
     border-left: 0;
   }
-  /* github.com mobile: "color: #cce888" */
-  body[class="page-responsive"] .contrib-square {
-    color: /*[[base-color]]*/;
-  }
   /* github.com mobile: "color: #586069" */
   body[class="page-responsive"] li.contribution .num,
   body[class="page-responsive"] ul.simple-conversation-list a.meta {
@@ -13697,6 +13706,10 @@
     body[class="page-responsive"] .hx_menuitem--focus {
       background-color: #181818;
     }
+  }
+  /* github.com mobile: "0" */
+  body[class="page-responsive"] .hx_create-pr-button:hover {
+    border-right-width: 0;
   }
   /* github.com mobile: "color: rgba(115,92,15,.5)" */
   body[class="page-responsive"] .hx_color-repo-private-icon {
@@ -17781,6 +17794,11 @@
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
   }
+  /* github.com: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  .btn.focus, .btn:focus {
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
   /* github.com: "background-color: #2ea44f", "rgba", "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)" */
   .btn-primary {
     background-color: #373;
@@ -17844,7 +17862,7 @@
   /* github.com: "rgba", "#fafbfc", "rgba", "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)" */
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled="true"] {
-    color: #264665;
+    color: /*[[base-color]]*/;
     background-color: #181818;
     border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
@@ -17982,6 +18000,11 @@
   .social-count:hover {
     color: /*[[base-color]]*/;
   }
+  /* github.com: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  .social-count:focus {
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
   /* github.com: "0" */
   fieldset {
     border: 0;
@@ -17993,10 +18016,12 @@
     border: 1px solid #343434;
     box-shadow: none;
   }
-  /* github.com: "#0366d6" */
+  /* github.com: "#0366d6", "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
   .form-control.focus, .form-control:focus, .form-select.focus,
   .form-select:focus {
     border-color: /*[[base-color]]*/;
+    box-shadow: 0 0 0 3px rgba(79, 140, 201, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
   }
   /* github.com: "color: #959da5", "#f3f4f6" */
   .form-control[disabled], .form-select[disabled] {
@@ -22526,10 +22551,6 @@
     border-right: 0;
     border-left: 0;
   }
-  /* github.com: "color: #cce888" */
-  .contrib-square {
-    color: /*[[base-color]]*/;
-  }
   /* github.com: "color: #586069" */
   li.contribution .num, ul.simple-conversation-list a.meta {
     color: #afafaf;
@@ -25485,6 +25506,10 @@
     .hx_menuitem--focus {
       background-color: #181818;
     }
+  }
+  /* github.com: "0" */
+  .hx_create-pr-button:hover {
+    border-right-width: 0;
   }
   /* github.com: "color: rgba(115,92,15,.5)" */
   .hx_color-repo-private-icon {
@@ -32315,6 +32340,13 @@
   .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
+  /* Tooltip on contribution calendar */
+  .svg-tip {
+    color: #949494;
+  }
+  .svg-tip strong {
+    color: #dcdcdc;
+  }
   .project-card .highlight pre {
     padding: 1em;
     overflow: auto;
@@ -33137,6 +33169,10 @@
   .notification-navigation, .check-annotation code pre,
   .merge-status-item > [style*="#fff"], .pagehead, .pagehead nav {
     background: none !important;
+  }
+  /* Do not remove unless its fixed see https://git.io/Jfjul */
+  .btn-link:disabled:hover {
+    background: none;
   }
   @media (min-width: 1012px) {
     .file-commit-form--full {
