@@ -31,7 +31,8 @@ themes: node_modules
 update: node_modules
 	yarn -s run updates -cu
 	yarn -s run rimraf node_modules
-	$(MAKE) node_modules
+	yarn
+	@touch yarn.lock
 
 usercss: node_modules
 	node tools/usercss.js
