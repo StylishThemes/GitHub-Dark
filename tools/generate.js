@@ -51,11 +51,11 @@ const mappings = {
 
   // red
   "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
-  "$color: #86181d": "#f22",
-  "$color: #b11a04": "#f22", // graphql explorer
-  "$color: #cb2431": "#f22",
-  "$color: #d73a49": "#f22",
-  "$color: #cea0a5": "#f22",
+  "$color: #86181d": "#e03030",
+  "$color: #b11a04": "#e03030", // graphql explorer
+  "$color: #cb2431": "#e03030",
+  "$color: #d73a49": "#e03030",
+  "$color: #cea0a5": "#e03030",
   "$color: #ffdce0": "#300",
 
   // orange
