@@ -62,6 +62,27 @@ const mappings = {
   "$color: #a04100": "#f3582c",
   "$color: #d15704": "#f3582c",
 
+  // yellow / brown
+  "$color: rgba(47,38,6,.5)": "#cb4",
+  "$color: rgba(115,92,15,.5)": "rgba(204,187,68,.5)",
+  "$color: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
+  "$color: #613a00": "#bba257",
+  "$color: #735c0f": "#bba257",
+  "$color: #b08800": "#cb4",
+  "$color: #ca9800": "#cb4", // graphql explorer
+  "$color: #dbab09": "#cb4",
+  "$color: #dca874": "#cb4",
+  "$color: #f9c513": "#cb4",
+  "$color: #ffd33d": "#cb4",
+  "$color: #e5d999": "#542",
+  "$color: #d9d0a5": "#542",
+  "$color: #ffe3c8": "#261d08",
+  "$color: #faebcc": "#261d08", // zenhub
+  "$color: #fcf9e4": "#261d08", // zenhub blocked banner
+  "$color: #fff5b1": "#651",
+  "$color: #fffbdd": "#261d08",
+  "$color: #fffdef": "#261d08",
+
   // ==========================================================================
   // Background
   // ==========================================================================
@@ -326,35 +347,6 @@ const mappings = {
   "background-color: #2a8f47": "background-color: #595", // new .btn-primary.disabled
 
   "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)": "box-shadow: 0 0 0 .2em #3737",
-
-  // yellow
-  "color: rgba(47,38,6,.5)": "color: #cb4",
-  "color: rgba(115,92,15,.5)": "color: rgba(204,187,68,.5)",
-  "color: #dbab09": "color: #cb4",
-  "color: #ca9800": "color: #cb4", // graphql explorer
-  "color: #b08800": "color: #cb4",
-  "color: #735c0f": "color: #bba257",
-  "color: #613a00": "color: #bba257",
-  "$background: #ffd33d": "#cb4",
-  "$background: #ffdf5d": "#cb4",
-  "$background: #dbab09": "#cb4",
-  "$background: #fffdef": "#261d08",
-  "$background: #fffbdd": "#261d08",
-  "$background: #fcf9e4": "#321", // zenhub blocked banner
-  "$background: #ffe3c8": "#261d08",
-  "$background: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
-  "$border: #ffd33d": "#bba257", // code link highlight
-  "fill: #dbab09": "fill: #cb4",
-  "$border: #fffbdd": "#321",
-  "$border: #ffdf5d": "#321",
-  "$border: #fffdef": "#261d08",
-  "$border: #faebcc": "#542", // zenhub
-  "$border: #d9d0a5": "#542",
-  "$border: #dca874": "#542",
-  "$border: #e5d999": "#542",
-
-  // light yellow
-  "$background: #fff5b1": "#651",
 
   // purple
   "color: #8b2bb9": "color: #8368aa", // graphql explorer
