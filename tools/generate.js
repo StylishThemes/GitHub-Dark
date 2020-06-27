@@ -50,6 +50,7 @@ const mappings = {
   "$color: #eaf5ff": "#182030", // .full-commit
 
   // red
+  "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
   "$color: #86181d": "#f22",
   "$color: #b11a04": "#f22", // graphql explorer
   "$color: #cb2431": "#f22",
@@ -83,6 +84,26 @@ const mappings = {
   "$color: #fff5b1": "#651",
   "$color: #fffbdd": "#261d08",
   "$color: #fffdef": "#261d08",
+
+  // green
+  "$color: rgba(108,198,68,.1)": "#002800",
+  "$color: rgba(52,208,88,.4)": "#3737",
+  "$color: #144620": "#6cc644",
+  "$color: #165c26": "#6cc644",
+  "$color: #22863a": "#6cc644",
+  "$color: #2a8f47": "#595", // new .btn-primary.disabled
+  "$color: #2c974b": "#484", // new .btn-primary :hover
+  "$color: #2ea44f": "#373", // new .btn-primary
+  "$color: #269f42": "#595", // .btn-primary :hover
+  "$color: #279f43": "#595", // new/old .btn-primary:active
+  "$color: #28a745": "#595",
+  "$color: #2cbe4e": "#373",
+  "$color: #2fcb53": "#373", // .btn-primary :hover
+  "$color: #34d058": "#373", // .btn-primary
+  "$color: #94d3a2": "#040", // .btn-primary.disabled
+  "$color: #a2cbac": "#040",
+  "$color: #dcffe4": "#002800",
+  "$color: #f0fff4": "#002800",
 
   // ==========================================================================
   // Background
@@ -206,8 +227,6 @@ const mappings = {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
   `,
 
-  "box-shadow: 0 0 0 .2em rgba(203,36,49,.4)": "box-shadow: 0 0 0 .2em rgba(255,68,68,.4)",
-
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
   "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
   "box-shadow: 0 0 18px rgba(0,0,0,.4)": "box-shadow: 0 0 18px #000",
@@ -291,8 +310,6 @@ const mappings = {
   "$border: #c0d3eb": "#224466",
   "$background: #0361cc": "#182030",
   "$background: #05264c": "#182030",
-  "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
-  "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
@@ -322,32 +339,8 @@ const mappings = {
     box-shadow: 0 0 rgba(79,140,201,.3);
     box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
   `,
-
-  // green
-  "color: #28a745": "color: #6cc644",
-  "color: #165c26": "color: #6cc644",
-  "color: #144620": "color: #34d058",
-  "$background: #28a745": "#373",
-  "$background: #2cbe4e": "#373",
-  "$background: #dcffe4": "#002800",
-  "$background: #f0fff4": "#002800",
-  "$background: rgba(108,198,68,.1)": "#002800",
-  "fill: #2cbe4e": "fill: #6cc644",
-  "fill: #22863a": "fill: #6cc644",
-  "$border: #34d058": "#34d058",
-  "$border: #a2cbac": "#28a745",
-  "$border: #dcffe4": "#002800",
-  "$background: linear-gradient(-180deg, #34d058, #28a745 90%)": "linear-gradient(180deg, #373 0%, #060 90%)", // .btn-primary
-  "$background: linear-gradient(-180deg, #2fcb53, #269f42 90%)": "linear-gradient(180deg, #484 5%, #171 90%)", // .btn-primary :hover
-  "background-color: #94d3a2": "background: #040", // .btn-primary.disabled
-  "background: linear-gradient(#34d058, #28a745)": "background: linear-gradient(#34d058, #28a745)", // refined github
-
-  "background-color: #2ea44f": "background-color: #373", // new .btn-primary
-  "background-color: #2c974b": "background-color: #484", // new .btn-primary :hover
-  "background-color: #279f43": "background-color: #484", // new/old .btn-primary:active
-  "background-color: #2a8f47": "background-color: #595", // new .btn-primary.disabled
-
-  "box-shadow: 0 0 0 .2em rgba(52,208,88,.4)": "box-shadow: 0 0 0 .2em #3737",
+  "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
+  "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
 
   // purple
   "color: #8b2bb9": "color: #8368aa", // graphql explorer
