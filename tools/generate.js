@@ -35,32 +35,33 @@ const mappings = {
   "$color: #d1d5da": "#404040",
 
   // blue (base color)
-  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
   "$color: #0366d6": "/*[[base-color]]*/ #4f8cc9", // gitako
   "$color: #0366d6d0": "/*[[base-color]]*/ #4f8cc9", // gitako
   "$color: #3b5998": "/*[[base-color]]*/ #4f8cc9",
-  "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
+  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
-  "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
+  "$color: #0361cc": "#4f8cc9",
   "$color: #0679fc": "#4f8cc9",
   "$color: #257bf9": "#4f8cc9",
-  "$color: #0361cc": "#4f8cc9",
-  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
+  "$color: #eaf5ff": "#182030", // .full-commit
 
   // red
-  "$color: #cb2431": "#f22",
-  "$color: #b11a04": "#f22", // graphql explorer
   "$color: #86181d": "#f22",
+  "$color: #b11a04": "#f22", // graphql explorer
+  "$color: #cb2431": "#f22",
   "$color: #d73a49": "#f22",
   "$color: #cea0a5": "#f22",
   "$color: #ffdce0": "#300",
 
   // orange
-  "$color: #fb8532": "#fb8532",
-  "$color: #e36209": "#fb8532",
   "$color: #a04100": "#f3582c",
   "$color: #d15704": "#f3582c",
+  "$color: #e36209": "#fb8532",
+  "$color: #fb8532": "#fb8532",
 
   // yellow / brown
   "$color: rgba(47,38,6,.5)": "#cb4",
