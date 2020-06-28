@@ -185,8 +185,9 @@
   body.status textarea.error:focus, body.status textarea.error:hover {
     border-color: rgba(255, 0, 0, .5);
   }
-  /* githubstatus.com: "#f4f4f4", "color: #666" */
+  /* githubstatus.com: "white", "#f4f4f4", "color: #666" */
   body.status .controls.append label, body.status .controls.prepend label {
+    box-shadow: 0 1px 0 #181818 inset;
     background-color: #242424;
     color: #949494;
   }
@@ -2441,13 +2442,13 @@
   #graphiql .graphiql-container .footer::before {
     background: #242424;
   }
-  /* graphql.github.com: "#fdfdfd", "linear-gradient(#f9f9f9, #ececec)", "rgba(0,0,0,0.2)", "color: #555" */
+  /* graphql.github.com: "#fdfdfd", "linear-gradient(#f9f9f9, #ececec)", "rgba(0,0,0,0.2)","#fff", "color: #555" */
   #graphiql .graphiql-container .toolbar-button {
     background: #181818;
     background: linear-gradient(#303030, #282828);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .7),
                     0 1px 0 rgba(255, 255, 255, .7),
-                    inset 0 1px #fff;
+                    inset 0 1px #181818;
     color: #afafaf;
   }
   /* graphql.github.com: "linear-gradient(#ececec, #d5d5d5)", "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)" */
@@ -2455,15 +2456,16 @@
     background: linear-gradient(#404040, #383838);
     box-shadow: 0 0 0 1px #484848;
   }
-  /* graphql.github.com: "linear-gradient(#fdfdfd, #d2d3d6)", "0" */
+  /* graphql.github.com: "linear-gradient(#fdfdfd, #d2d3d6)", "0", "#fff" */
   #graphiql .graphiql-container .execute-button {
     background: linear-gradient(#303030, #282828);
     border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 1px 0 #181818;
   }
-  /* graphql.github.com: "linear-gradient(#e6e6e6, #c3c3c3)", "rgba(0,0,0,0.2)" */
+  /* graphql.github.com: "linear-gradient(#e6e6e6, #c3c3c3)", "#fff","rgba(0,0,0,0.2)" */
   #graphiql .graphiql-container .execute-button:active {
     background: linear-gradient(#404040, #383838);
-    box-shadow: 0 1px 0 #fff,
+    box-shadow: 0 1px 0 #181818,
                     inset 0 0 2px rgba(255, 255, 255, .7),
                     inset 0 0 6px rgba(0, 0, 0, .1);
   }
@@ -6957,10 +6959,10 @@
     background: none;
     box-shadow: inset 0 0 0 2px hsla(0, 0%, 0%, .5);
   }
-  /* github.com mobile: "hsla(0,0%,100%,.5)" */
+  /* github.com mobile: "#fff","hsla(0,0%,100%,.5)" */
   body[class="page-responsive"] .btn-white-outline-mktg-fluid.focus,
   body[class="page-responsive"] .btn-white-outline-mktg-fluid:focus {
-    box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px hsla(0, 0%, 0%, .5);
+    box-shadow: inset 0 0 0 2px #181818, 0 0 0 4px hsla(0, 0%, 0%, .5);
   }
   /* github.com mobile: "none" */
   body[class="page-responsive"] .btn-invisible-mktg-fluid,
@@ -7078,6 +7080,10 @@
   /* github.com mobile: "hsla(0,0%,100%,.5)" */
   body[class="page-responsive"] .link-white-mktg {
     box-shadow: 0 1px 0 0 hsla(0, 0%, 0%, .5);
+  }
+  /* github.com mobile: "#fff" */
+  body[class="page-responsive"] .link-white-mktg:hover {
+    box-shadow: 0 1px 0 0 #181818;
   }
   /* github.com mobile: "#f6f8fa" */
   body[class="page-responsive"] .Tile {
@@ -10088,9 +10094,14 @@
   body[class="page-responsive"] .manifest-errors {
     border-left: 6px solid #e03030;
   }
-  /* github.com mobile: "#fff" */
+  /* github.com mobile: "#fff", "#fff" */
   body[class="page-responsive"] .not-found-octocat-wrapper::after {
     background: #181818;
+    box-shadow: 0 4px 0 #181818,
+                    0 8px 0 #181818,
+                    0 12px 0 #181818,
+                    0 16px 0 #181818,
+                    0 20px 0 #181818;
   }
   /* github.com mobile: "color: #333" */
   body[class="page-responsive"] .billing-plans .name {
@@ -10911,9 +10922,10 @@
   body[class="page-responsive"] .contrib-person .midlabel {
     fill: #757575;
   }
-  /* github.com mobile: "#fff" */
+  /* github.com mobile: "#fff", "#fff" */
   body[class="page-responsive"] .coupons .coupon-form-body {
     background-color: #181818;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .075), inset 1px 0 #181818;
   }
   /* github.com mobile: "#0366d6" */
   body[class="page-responsive"] .coupon-icon {
@@ -12975,9 +12987,9 @@
   body[class="page-responsive"] .uploaded-files .remove:hover {
     color: #e03030 !important;
   }
-  /* github.com mobile: "hsla(0,0%,100%,.5)" */
+  /* github.com mobile: "#fff","hsla(0,0%,100%,.5)" */
   body[class="page-responsive"] .upload-progress {
-    box-shadow: 0 1px 1px #fff, inset 0 1px 1px hsla(0, 0%, 0%, .5);
+    box-shadow: 0 1px 1px #181818, inset 0 1px 1px hsla(0, 0%, 0%, .5);
   }
   /* github.com mobile: "#e1e4e8" */
   body[class="page-responsive"] .release-entry {
@@ -13089,6 +13101,10 @@
   body[class="page-responsive"] .clone-url-button > .clone-url-link:active {
     background-color: /*[[base-color]]*/ #4f8cc9;
     background-image: none;
+  }
+  /* github.com mobile: "#fff" */
+  body[class="page-responsive"] .clone-url-button + .clone-url-button > .clone-url-link {
+    box-shadow: inset 1px 0 0 #181818;
   }
   /* github.com mobile: "box-shadow: none" */
   body[class="page-responsive"] .clone-url-button + .clone-url-button > .clone-url-link:hover {
@@ -13421,9 +13437,10 @@
   body[class="page-responsive"] .session-device .session-state-indicator.revoked {
     background-color: #e03030;
   }
-  /* github.com mobile: "#ccc" */
+  /* github.com mobile: "#ccc", "#fff" */
   body[class="page-responsive"] .session-device .session-state-indicator.not-recent {
     background-image: linear-gradient(#aaa, #484848);
+    box-shadow: 0 1px 0 #181818;
   }
   /* github.com mobile: "#0366d6" */
   body[class="page-responsive"] .session-details:hover .octicon {
@@ -22543,9 +22560,14 @@
   .manifest-errors {
     border-left: 6px solid #e03030;
   }
-  /* github.com: "#fff" */
+  /* github.com: "#fff", "#fff" */
   .not-found-octocat-wrapper::after {
     background: #181818;
+    box-shadow: 0 4px 0 #181818,
+                    0 8px 0 #181818,
+                    0 12px 0 #181818,
+                    0 16px 0 #181818,
+                    0 20px 0 #181818;
   }
   /* github.com: "color: #333" */
   .billing-plans .name {
@@ -23350,9 +23372,10 @@
   .contrib-person .midlabel {
     fill: #757575;
   }
-  /* github.com: "#fff" */
+  /* github.com: "#fff", "#fff" */
   .coupons .coupon-form-body {
     background-color: #181818;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .075), inset 1px 0 #181818;
   }
   /* github.com: "#0366d6" */
   .coupon-icon {
@@ -25378,9 +25401,9 @@
   .uploaded-files .remove:hover {
     color: #e03030 !important;
   }
-  /* github.com: "hsla(0,0%,100%,.5)" */
+  /* github.com: "#fff","hsla(0,0%,100%,.5)" */
   .upload-progress {
-    box-shadow: 0 1px 1px #fff, inset 0 1px 1px hsla(0, 0%, 0%, .5);
+    box-shadow: 0 1px 1px #181818, inset 0 1px 1px hsla(0, 0%, 0%, .5);
   }
   /* github.com: "#e1e4e8" */
   .release-entry {
@@ -25488,6 +25511,10 @@
   .clone-url-button > .clone-url-link:active {
     background-color: /*[[base-color]]*/ #4f8cc9;
     background-image: none;
+  }
+  /* github.com: "#fff" */
+  .clone-url-button + .clone-url-button > .clone-url-link {
+    box-shadow: inset 1px 0 0 #181818;
   }
   /* github.com: "box-shadow: none" */
   .clone-url-button + .clone-url-button > .clone-url-link:hover {
@@ -25811,9 +25838,10 @@
   .session-device .session-state-indicator.revoked {
     background-color: #e03030;
   }
-  /* github.com: "#ccc" */
+  /* github.com: "#ccc", "#fff" */
   .session-device .session-state-indicator.not-recent {
     background-image: linear-gradient(#aaa, #484848);
+    box-shadow: 0 1px 0 #181818;
   }
   /* github.com: "#0366d6" */
   .session-details:hover .octicon {
@@ -26604,9 +26632,9 @@
     background: none;
     box-shadow: inset 0 0 0 2px hsla(0, 0%, 0%, .5);
   }
-  /* github.com: "hsla(0,0%,100%,.5)" */
+  /* github.com: "#fff","hsla(0,0%,100%,.5)" */
   .btn-white-outline-mktg-fluid.focus, .btn-white-outline-mktg-fluid:focus {
-    box-shadow: inset 0 0 0 2px #fff, 0 0 0 4px hsla(0, 0%, 0%, .5);
+    box-shadow: inset 0 0 0 2px #181818, 0 0 0 4px hsla(0, 0%, 0%, .5);
   }
   /* github.com: "none" */
   .btn-invisible-mktg-fluid, .btn-invisible-mktg-fluid::before,
@@ -26720,6 +26748,10 @@
   /* github.com: "hsla(0,0%,100%,.5)" */
   .link-white-mktg {
     box-shadow: 0 1px 0 0 hsla(0, 0%, 0%, .5);
+  }
+  /* github.com: "#fff" */
+  .link-white-mktg:hover {
+    box-shadow: 0 1px 0 0 #181818;
   }
   /* github.com: "#f6f8fa" */
   .Tile {
@@ -27374,9 +27406,10 @@
     border-top: 1px solid #343434;
     border-bottom: 1px solid #343434;
   }
-  /* refined-github: "#efefef" */
+  /* refined-github: "#efefef", "#fff" */
   html.refined-github .reaction-summary-item a {
     background: #202020;
+    box-shadow: 0 0 0 2px var(--background, #181818);
   }
   /* refined-github: "#0366d6", "#0366d6" */
   html.refined-github .js-expandable-line:hover .blob-num:not(:hover) + .blob-code,
@@ -29489,6 +29522,10 @@
   body.zh_logged_in .zhc-checkbox-toggle .zhc-checkbox-toggle__input {
     border: 0;
   }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhc-checkout-box__title input[type="radio"] {
+    box-shadow: 0 0 0 1px #5e60ba, inset 0 0 0 3px #181818;
+  }
   /* zenhub: "#e9e9e9" */
   body.zh_logged_in .zhc-checkout-box__input {
     border: 1px solid #343434;
@@ -30886,6 +30923,14 @@
   body.zh_logged_in .zhu-radio-button__container input {
     border-color: #8368aa;
   }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhu-radio-button__container input:checked {
+    box-shadow: inset 0 0 0 1px #181818, inset 0 0 0 8px #5e60ba;
+  }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhu-radio-button__container input:focus {
+    box-shadow: inset 0 0 0 1px #181818, inset 0 0 0 8px #5e60ba, 0 0 5px 2px #5e9ed6;
+  }
   /* zenhub: "transparent", "transparent", "#e9e9e9" */
   body.zh_logged_in .zhc-release-add-repos-dropdown__repo-item {
     border-left: solid 1px transparent;
@@ -31936,9 +31981,10 @@
   body.zh_logged_in .zhc-workspace-switcher-empty__body {
     color: #949494;
   }
-  /* zenhub: "#fff" */
+  /* zenhub: "#fff", "#fff" */
   body.zh_logged_in .zhc-workspace-switcher__header {
     background-color: #181818;
+    box-shadow: 0 0 4px 4px #181818;
   }
   /* zenhub: "border: 1px solid transparent" */
   body.zh_logged_in .zhc-workspace-switcher__header .zhc-org-dropdown {
