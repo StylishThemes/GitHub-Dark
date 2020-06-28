@@ -56,6 +56,8 @@ const mappings = {
   "$color: #cb2431": "#e03030",
   "$color: #d73a49": "#e03030",
   "$color: #cea0a5": "#e03030",
+  "$color: #f97583": "#f88",
+  "$color: #ffeef0": "#300",
   "$color: #ffdce0": "#300",
 
   // orange
@@ -187,6 +189,9 @@ const mappings = {
   "$border: #2f363d": "#282828",
 
   "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(220,220,220,.15)",
+
+  "border-width: 6px": "border-width: 6px", // workaround for tooltip on existing repo name on https://github.com/new
+  "border-width: 5px": "border-width: 5px", // workaround for tooltip on existing repo name on https://github.com/new
 
   // ==========================================================================
   // Box-Shadow
