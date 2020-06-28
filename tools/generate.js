@@ -52,11 +52,11 @@ const mappings = {
 
   // red
   "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
-  "$color: #86181d": "#e03030",
-  "$color: #b11a04": "#e03030", // graphql explorer
-  "$color: #cb2431": "#e03030",
-  "$color: #d73a49": "#e03030",
-  "$color: #cea0a5": "#e03030",
+  "$color: #86181d": "#d82828",
+  "$color: #b11a04": "#d82828", // graphql explorer
+  "$color: #cb2431": "#d82828",
+  "$color: #d73a49": "#d82828",
+  "$color: #cea0a5": "#d82828",
   "$color: #f97583": "#f88",
   "$color: #ffeef0": "#300",
   "$color: #ffdce0": "#300",
@@ -99,7 +99,7 @@ const mappings = {
   "$color: #2ea44f": "#373", // new .btn-primary
   "$color: #269f42": "#595", // .btn-primary :hover
   "$color: #279f43": "#595", // new/old .btn-primary:active
-  "$color: #28a745": "#595",
+  "$color: #28a745": "#373", // green labels
   "$color: #2cbe4e": "#373",
   "$color: #2fcb53": "#373", // .btn-primary :hover
   "$color: #34d058": "#373", // .btn-primary
