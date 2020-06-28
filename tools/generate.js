@@ -99,7 +99,7 @@ const mappings = {
   "$color: #2ea44f": "#373", // new .btn-primary
   "$color: #269f42": "#595", // .btn-primary :hover
   "$color: #279f43": "#595", // new/old .btn-primary:active
-  "$color: #28a745": "#373", // green labels
+  "$color: #28a745": "#484", // green labels, issue icons
   "$color: #2cbe4e": "#373",
   "$color: #2fcb53": "#373", // .btn-primary :hover
   "$color: #34d058": "#373", // .btn-primary
