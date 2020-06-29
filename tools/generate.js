@@ -110,6 +110,23 @@ const mappings = {
   "$color: #dcffe4": "#002800",
   "$color: #f0fff4": "#002800",
 
+  // purple
+  "$color: #6f42c1": "#73589a",
+  "$color: #8b2bb9": "#63488a", // graphql explorer
+  "$color: #8a63d2": "#53387a",
+  "$color: #f8f4ff": "#213",
+  "$color: #f5f0ff": "#213",
+
+  // blurple
+  "$color: #3b41af": "#6570e2",
+  "$color: #5e60ba": "#5560d2", // zenhub
+  "$color: #6570e2": "#4550c2",
+
+  // pink
+  "$color: #99306f": "#e6b",
+  "$color: #ec6cb9": "#c49",
+  "$color: #ffeef8": "#170711",
+
   // ==========================================================================
   // Background
   // ==========================================================================
@@ -347,20 +364,6 @@ const mappings = {
   `,
   "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
   "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
-
-  // purple
-  "color: #8b2bb9": "color: #8368aa", // graphql explorer
-  "color: #6f42c1": "color: #8368aa",
-  "$background: #6f42c1": "#8368aa",
-  "$background: #f8f4ff": "#213",
-  "$background: #f5f0ff": "#213",
-  "$border: #6f42c1": "#8368aa",
-  "$border: #8a63d2": "#8368aa",
-  "$border: #5e60ba": "#8368aa", // zenhub
-
-  // pink
-  "$border: #ec6cb9": "#c49",
-  "$background: #ffeef8": "#170711",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
