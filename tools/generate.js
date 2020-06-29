@@ -368,14 +368,6 @@ const mappings = {
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
 
   "box-shadow: none": "box-shadow: none",
-
-  "$border: transparent": "transparent",
-  "border: 1px solid transparent": "border: 1px solid transparent",
-  "$border: 0": "0",
-  "border-top: 0": "border-top: 0",
-  "border-bottom: 0": "border-bottom: 0",
-  "border-left: 0": "border-left: 0",
-  "border-right: 0": "border-right: 0",
   "$background: none": "none",
   "$background: transparent": "transparent",
 };
