@@ -172,8 +172,6 @@ const mappings = {
   "$background: rgba(27,31,35,.1)": "rgba(220,220,220,.17)",
   "$background: rgba(27,31,35,.15)": "rgba(220,220,220,.22)",
 
-  "$background: initial": "initial",
-
   // ==========================================================================
   // Border
   // ==========================================================================
@@ -186,7 +184,6 @@ const mappings = {
   "$border: rgba(27,31,35,.15)": "rgba(220,220,220,.15)",
   "$border: rgba(27,31,35,.1)": "rgba(220,220,220,.1)",
   "$border: rgba(27,31,35,.05)": "rgba(220,220,220,.05)",
-
   "$border: rgba(0,0,0,.125)": "rgba(220,220,220,.125)",
 
   "$border: #444d56": "#484848",
@@ -207,11 +204,6 @@ const mappings = {
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #2f363d": "#282828",
-
-  "border-top: 8px solid rgba(27,31,35,.15)": "border-top-color: rgba(220,220,220,.15)",
-
-  "border-width: 6px": "border-width: 6px", // workaround for tooltip on existing repo name on https://github.com/new
-  "border-width: 5px": "border-width: 5px", // workaround for tooltip on existing repo name on https://github.com/new
 
   // ==========================================================================
   // Box-Shadow
@@ -255,16 +247,11 @@ const mappings = {
   "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
   "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
   "box-shadow: 0 0 18px rgba(0,0,0,.4)": "box-shadow: 0 0 18px #000",
-
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
-
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
-
   "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset": "box-shadow: #000 0px 0px 0px inset", // status
-
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
-
   "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)": "box-shadow: none", // .btn
   "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)": "box-shadow: none", // .btn-primary
   // ==========================================================================
@@ -314,7 +301,6 @@ const mappings = {
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
 
   "fill: #24292e": "fill: #bebebe",
-
   "stroke: #24292e": "stroke: #d2d2d2",
 
   // blue
@@ -371,6 +357,7 @@ const mappings = {
   // various noop rules to support rules overridden in the original styles
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
+  "$background: initial": "initial",
   "$background: transparent": "transparent",
 };
 
