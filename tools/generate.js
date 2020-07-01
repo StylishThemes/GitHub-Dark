@@ -43,12 +43,12 @@ const mappings = {
   "$color: #0366d6d0": "/*[[base-color]]*/ #4f8cc9", // gitako
   "$color: #3b5998": "/*[[base-color]]*/ #4f8cc9",
   "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
+  "$color: #0361cc": "/*[[base-color]]*/ #4f8cc9",
+  "$color: #0679fc": "/*[[base-color]]*/ #4f8cc9",
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
-  "$color: #0361cc": "#4f8cc9",
-  "$color: #0679fc": "#4f8cc9",
   "$color: #257bf9": "#4f8cc9",
   "$color: #eaf5ff": "#182030", // .full-commit
 
@@ -317,13 +317,13 @@ const mappings = {
   "$background: #c8e1ff": "#224466",
   "$border: #c8e1ff": "#224466",
   "$border: #c0d3eb": "#224466",
-  "$background: #0361cc": "#182030",
   "$background: #05264c": "#182030",
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
   "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
   "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
+  "$background: #0361cc": "/*[[base-color]]*/ #4f8cc9",
   "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
     filter: drop-shadow(-.25em 0 0 rgba(79,140,201,.3));
