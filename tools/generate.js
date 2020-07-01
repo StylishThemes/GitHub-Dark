@@ -396,8 +396,8 @@ const sources = [
     strict: true,
   },
   {
-    name: "help.github.com",
-    url: "https://help.github.com",
+    name: "docs.github.com",
+    url: "https://docs.github.com",
     prefix: `body.d-lg-flex`,
     match: ["body", "d-lg-flex"],
     strict: true,
@@ -465,7 +465,7 @@ const ignoreSelectors = [
   /\spre$/,
   /^.Popover-message:before$/,
   /^.Popover-message:after$/,
-  /^h[1-6] a$/, // conflicting styles from help.github.com
+  /^h[1-6] a$/, // conflicting styles from docs.github.com
   /^\.bg-white$/,
   /^\.CircleBadge$/,
   /^table$/,
