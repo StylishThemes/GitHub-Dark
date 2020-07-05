@@ -7,7 +7,9 @@
 
 ## Getting Involved
 
-There are a number of ways to get involved with the development of this GitHub Dark theme for Stylish. Even if you've never contributed to an Open Source project before, we're always looking for help identifying missing styles or other issues.
+There are a number of ways to get involved with the development of this GitHub Dark theme for Stylus. Even if you've never contributed to an Open Source project before, we're always looking for help identifying missing styles or other issues.
+
+Feel free to help us out in any capacity, StylishThemes is always looking for help with our busy schedule. Open an issue to discuss any related contribution minutia or just to clear up any doubts you may have.
 
 ## How to Report Style issues
 
@@ -63,31 +65,42 @@ If you don't know CSS very well and have found a missing style, please include a
     ----property: value;
     ·property: value;
     ```
+⚠️ Any new additions should be mapped using the built-in generator before adding any manual rules or selectors, please study the [generate.js](./tools/generate.js), if you have any doubts or questions please feel free to open an issue to to start a releated discussion.
 
-* Try to wrap lines at around 80 characters. If at all possible, use "grunt clean" to do the wrapping for you.
-* This style does not have a size limit, but:
-  * Don't add any image URI's to the CSS; instead add the image into the `/images` directory; then point to using the following URL: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
-  * If possible, reduce any added selectors. Remember that Stylish requires an `!important` flag to override default styling, so a selector starting from the body isn't always necessary.
-  * Don't add any inline comments. If you want to make a comment, add it as a note in the commit message.
-  * If your CSS definition already exists within the style, do not add it again! Add your selector to the existing definition.
-* Insert any new CSS selectors in any available slot before the style definition, or on a new line as needed.
+Do not manually edit generated areas, as those additions are lost on running `make build` developemnt script.
+
+Don't include version bumps with your contribution, all releases are handled internally.
+
+## Tips
+
+* Try to wrap lines at around 250 characters. If at all possible, use "make clean" to do the wrapping for you.
+* Don't add any image URI's to the CSS; instead add the image into the `/images` directory; then point to using the following URL: `http://stylishthemes.github.io/Github-Dark/images/`{my-image.png}.
+  * If possible, reduce any added selectors. Remember that Stylus may need an `!important` flag to override default styling, so a selector starting with body isn't always necessary, Use !important only if necessary.
+  * Do add inline comments for manual additions.
+    Also add comment as a note in the commit message body.
+  * If your CSS definition already exists within the style, do not add it again! Add your selector to the existing rule block.
+* Insert any new manual CSS selectors in any available slot before the style definition, or on a new line as needed.
 * If you want to add a new userstyle variable, please open an issue and discuss it with us first.
-* Don't include version bumps with your contribution, all releases are handled internally.
 * If your PR fixes an open issue or replaces another PR, include fixes/closes #issue-nr in your commit message title. [Read more on this](https://help.github.com/en/articles/closing-issues-using-keywords).
 
 
 ## Getting Started
 
 * [Download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip), [fork](https://github.com/StylishThemes/GitHub-Dark/fork) or clone this repository.
-* Use [node.js](http://nodejs.org/) to run `npm install`.
-* Make any changes to the `github-dark.css` file and save.
 
-### Build & test
+First, make sure you have these installed:
 
-* Create or edit your `build.json` file to include any customizations to the style, see the [build wiki page](https://github.com/StylishThemes/GitHub-Dark/wiki/Build) for more details.
-* Run `grunt` to create your custom theme.
-* Copy & paste the CSS from the newly created `github-dark-{theme}-{color}.build.css` file into the Stylus editor to test your changes.
-* Once you are satisfied with the changes, run `grunt clean` to reindent &amp; clean up the CSS.
+- [`node`](https://nodejs.org): version 12 or greater
+- [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
+- `make`: comes with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
+
+### Edit, Build & test
+
+* **Generator entries**, edit the [/tools/generate.js](./tools/generate.js)
+* **Manual entries,** edit the github-dark.css file to include any customizations to the style.
+* Run `make generate` to create generate the added entries added [/tools/generate.js](./tools/generate.js).
+  If GitHub pushed some updates the generator will spew them out, **only include in PR what you wish to add**
+* Once you are satisfied with the changes, run `make clean` to reindent &amp; clean up the CSS.
 * Now you can push the changes of the `github-dark.css` file to your fork and submit a pull request.
-* If you haven't already contributed, then also run `npx grunt authors` to add your name to our list of contributors :smile:
+* If you haven't already contributed, then also run `make authors` to add your name to our list of contributors :smile:
 * And thanks again for contributing!
