@@ -35,11 +35,11 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
 ⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
-⚙️ [GitHub Community Dark](https://github.com/StylishThemes/GitHub-Community-Dark)<br>
+⚙️ [GitHub Community Dark](https://github.com/StylishThemes/Discourse-Dark) - Now part of Discourse Dark<br>
 ⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
-⚙️ [GitHub Dark Calendar Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
-⚙️ [GitHub Dark Diff Color Customizer](https://github.com/StylishThemes/Feature-Override-Styles)<br>
-⚙️ [GitHub Dark Element Borders](https://github.com/StylishThemes/Feature-Override-Styles)<br>
+⚙️ [GitHub Dark Calendar Color Customizer](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-calendar-color-customizer.user.css)<br>
+⚙️ [GitHub Dark Diff Color Customizer](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-diff-color-customizer.user.css)<br>
+⚙️ [GitHub Dark Element Borders](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-element-borders.user.css)<br>
 ⚙️ [GitHub Dark IMG Background Color](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-img-bg-clr.user.css)<br>
 ⚙️ [GitHub Feed Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
 ⚙️ [GitHub FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
@@ -47,6 +47,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 ⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 ⚙️ [GitHub Tab Size](https://github.com/StylishThemes/GitHub-tab-size)<br>
 ⚙️ [GitHub Custom Border Radii](https://github.com/StylishThemes/Feature-Override-Styles/blob/master/github-custom-border-radii.user.css)<br>
+⚙️ [GitHub Dark Custom Blame usercss](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-custom-blame.user.css)
 ⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
 
 ## Supported GitHub Extensions
