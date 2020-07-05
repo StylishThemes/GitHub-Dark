@@ -122,7 +122,9 @@ First, make sure you have these installed:
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
 - `make`: comes with Unix-like OS, on Windows use [this](https://stackoverflow.com/a/54086635/808699)
 
-To get started, run `make deps` after which you can use the following `make` targets:
+To get started, run `make deps` after which you can use the following `make` scripts:
+
+## Development scripts
 
 - `make build`: Runs the `generate` and `usercss` tasks.
 - `make usercss`: Build the [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
@@ -131,10 +133,13 @@ To get started, run `make deps` after which you can use the following `make` tar
 - `make lint`: Run Stylelint on `github-dark.css`.
 - `make authors`: Regenerate the `AUTHORS` file based on git history.
 - `make generate`: Regenerate auto-generated CSS rules compiled from various public sources.
+- `make update`: Update and install dependencies.
+
+## Internal use scripts (not for pull requests)
+
 - `make patch`: Increment the patch version number, update file headers, create a commit and push it to `origin`.
 - `make minor`: Increment the minor version number, update file headers, create a commit and push it to `origin`.
 - `make major`: Increment the major version number, update file headers, create a commit and push it to `origin`.
-- `make update`: Update and install dependencies.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 
