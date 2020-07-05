@@ -110,7 +110,7 @@ Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://add
 
 If you would like to contribute to this repository, please...
 
-1. 👓 Read the [contribution guidelines](./.github/CONTRIBUTING.md).
+1. 👓 Read the [contribution guidelines](.CONTRIBUTING.md).
 1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or [![cloud-download](https://user-images.githubusercontent.com/136959/42401932-9ee9cae0-813d-11e8-8691-16e29a85d3b9.png) download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
 1. 👌 Create a pull request!
 
