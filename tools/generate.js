@@ -111,11 +111,12 @@ const mappings = {
   "$color: #f0fff4": "#002800",
 
   // purple
-  "$color: #6f42c1": "#73589a",
-  "$color: #8b2bb9": "#63488a", // graphql explorer
+  "$color: #6f42c1": "#9378ba",
+  "$color: #8b2bb9": "#73589a", // graphql explorer
   "$color: #8a63d2": "#53387a",
-  "$color: #f8f4ff": "#213",
-  "$color: #f5f0ff": "#213",
+  "$color: #f8f4ff": "#251533",
+  "$color: #f6f1ff": "#231233",
+  "$color: #f5f0ff": "#221133",
 
   // blurple
   "$color: #3b41af": "#6570e2",
@@ -264,6 +265,7 @@ const mappings = {
   "color: #24292e": "color: #cdcdcd", // .btn
   "color: #2f363d": "color: #bebebe",
   "color: #333": "color: #bebebe",
+  "color: #393939": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444d56": "color: #afafaf",
   "color: #555": "color: #afafaf", // graphql explorer
