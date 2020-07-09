@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     2.1.34
+@version     2.1.35
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     BSD-2-Clause
@@ -213,7 +213,7 @@
   } EOT;
 }
 ==/UserStyle== */
-/*! Github Dark v2.1.34 (2020-07-08) */
+/*! Github Dark v2.1.35 (2020-07-09) */
 /*! Repository: https://github.com/StylishThemes/GitHub-Dark */
 /*! License:    https://opensource.org/licenses/BSD-2-Clause */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
@@ -507,6 +507,11 @@
   /* githubstatus.com: "color: #333" */
   body.status .grouped-items-selector.inline .grouped-item.active {
     color: #bebebe;
+  }
+  /* githubstatus.com: "#ddd" */
+  body.status .grouped-items-selector .body .grouped-items .grouped-item,
+  body.status .grouped-items-selector .body .grouped-items .grouped-item.open {
+    border-color: #343434;
   }
   /* githubstatus.com: "rgba(255,255,255,0.8)" */
   body.status .loader-overlay {
@@ -2641,12 +2646,10 @@
   /* graphql.github.com: "color: #444d56", "#fafbfc", "#d1d5da", "#d1d5da", "#d1d5da" */
   #graphiql kbd {
     color: #afafaf;
-    background-color: #181818;
-    border-color: #404040;
     box-shadow: inset 0 -1px 0 #404040;
   }
   /* graphql.github.com: "#fff", "#d1d5da" */
-  #graphiql .Box {
+  #graphiql .Box, #graphiql kbd {
     background-color: #181818;
     border-color: #404040;
   }
@@ -7361,12 +7364,10 @@
   /* support.github.com: "color: #444d56", "#fafbfc", "#d1d5da", "#d1d5da", "#d1d5da" */
   body.dotcom kbd {
     color: #afafaf;
-    background-color: #181818;
-    border-color: #404040;
     box-shadow: inset 0 -1px 0 #404040;
   }
   /* support.github.com: "#fff", "#d1d5da" */
-  body.dotcom .Box {
+  body.dotcom .Box, body.dotcom kbd {
     background-color: #181818;
     border-color: #404040;
   }
@@ -9140,12 +9141,10 @@
   /* docs.github.com: "color: #444d56", "#fafbfc", "#d1d5da", "#d1d5da", "#d1d5da" */
   body.d-lg-flex kbd {
     color: #afafaf;
-    background-color: #181818;
-    border-color: #404040;
     box-shadow: inset 0 -1px 0 #404040;
   }
   /* docs.github.com: "#fff", "#d1d5da" */
-  body.d-lg-flex .Box {
+  body.d-lg-flex .Box, body.d-lg-flex kbd {
     background-color: #181818;
     border-color: #404040;
   }
@@ -26958,7 +26957,7 @@
   .js-tag-input-tag, ul.search-results li .label, .topic-tag-action {
     border: 1px solid #246 !important;
   }
-  .repo-file-upload-progress, .project-updated-message, .delete-topic-button,
+  .repo-file-upload-progress, .project-updated-message,
   .topic-tag-action .add-topic-button, .topic-tag-action .remove-topic-button,
   .commit-desc + .commit-branches,
   .pricing-matrix-table .pricing-matrix-table-dark,
@@ -27062,7 +27061,8 @@
   /* text color */
   html[prefix] .ellipsis-expander:active,
   html[prefix] .hidden-text-expander a:active,
-  html[prefix] .site-header-nav .dropdown-menu a:hover, .btn-blue {
+  html[prefix] .site-header-nav .dropdown-menu a:hover, .btn-blue,
+  .feature-preview-dialog .text-white, .text-white {
     color: #fff !important;
   }
   /* Bright text */
@@ -27072,17 +27072,15 @@
   .discussion-item-changes-marker.is-unread .discussion-item-icon,
   .toc-select .navigation-focus *, .owner-select-target, a.filter-item.selected,
   .filter-item.selected h4, .filter-item.selected .f3,
-  .filter-item.selected .Label--outline-white, .text-white, .octicon.text-white,
+  .filter-item.selected .Label--outline-white, .octicon.text-white,
   .user-status-org-button:hover .user-status-org-detail,
   .user-status-org-button.selected .user-status-org-detail,
   .member-suggestion[aria-selected=true] .octicon,
-  .member-suggestion:hover .octicon,
   .member-suggestion[aria-selected=true] .member-name,
-  .member-suggestion:hover .member-name,
+  .member-suggestion:hover .octicon, .member-suggestion:hover .member-name,
   .diffbar [role^=menuitem]:focus:not(.is-range-selected) .text-emphasized,
   .diffbar [role^=menuitem]:hover:not(.is-range-selected) .text-emphasized,
   .filter-item.selected p, .filter-item:hover .marketplace-plan-per-time,
-  .feature-preview-dialog .text-white,
   .oauth-permissions-details .permission-summary em.highlight, .btn-primary {
     color: #f0f0f0;
   }
