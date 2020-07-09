@@ -18,6 +18,7 @@ const mappings = {
 
   // monochrome
   "$color: rgba(209,213,218,0)": "transparent",
+  "$color: rgba(255,255,255,0)": "transparent",
   "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
   "$color: rgba(149,157,165,.3)": "rgba(0,0,0,.3)", // .box-shadow-extra-large
@@ -212,6 +213,13 @@ const mappings = {
   // Box-Shadow
   // ==========================================================================
 
+  "$box-shadow: rgba(0, 0, 0, 0.15)": "#000",
+  "$box-shadow: rgba(0,0,0,.4)": "#000",
+  "$box-shadow: rgba(27,31,35,.3)": "#000",
+  "$box-shadow: rgba(27,31,35,.15)": "#000",
+  "$box-shadow: rgba(27,31,35,.1)": "#000",
+  "$box-shadow: rgba(27,31,35,.04)": "#000",
+
   "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)": `
      box-shadow: 0 0 0 1px #484848;
   `, // graphql explorer
@@ -247,16 +255,10 @@ const mappings = {
     box-shadow: 0 1px 0 0 /*[[base-color]]*/;
   `,
 
-  "box-shadow: 0 1px 5px rgba(27,31,35,.15)": "box-shadow: 0 1px 5px #000",
-  "box-shadow: 0 0 5px rgba(27,31,35,.3)": "box-shadow: 0 0 5px #000",
-  "box-shadow: 0 0 18px rgba(0,0,0,.4)": "box-shadow: 0 0 18px #000",
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
-  "box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px inset": "box-shadow: #000 0px 0px 0px inset", // status
   "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
   "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
-  "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 hsla(0,0%,100%,.25)": "box-shadow: none", // .btn
-  "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)": "box-shadow: none", // .btn-primary
   // ==========================================================================
   // Color / Background
   // ==========================================================================
@@ -459,7 +461,6 @@ const ignoreSelectors = [
   /^.Popover-message:before$/,
   /^.Popover-message:after$/,
   /^h[1-6] a$/, // conflicting styles from docs.github.com
-  /^\.bg-white$/,
   /^\.CircleBadge$/,
   /^table$/,
   /^.markdown-body del$/, // this in not main page style
