@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
+const esc = require("escape-string-regexp");
 const fetchCss = require("fetch-css");
 const remapCss = require("remap-css");
 const {join} = require("path");
@@ -37,6 +38,7 @@ const mappings = {
   "$color: #e1e4e8": "#343434",
   "$color: #dfe2e5": "#343434",
   "$color: #d1d5da": "#404040",
+  "$color: #c6cbd1": "#5a5a5a",
 
   // blue (base color)
   "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
@@ -152,7 +154,6 @@ const mappings = {
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
   "$background: #ccc": "#484848",
-  "$background: #c6cbd1": "#484848",
   "$background: #6a737d": "#444",
   "$background: #586069": "#343434",
   "$background: #2f363d": "#282828",
@@ -268,6 +269,7 @@ const mappings = {
   "color: #333": "color: #bebebe",
   "color: #393939": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
+  "color: #444": "color: #afafaf",
   "color: #444d56": "color: #afafaf",
   "color: #555": "color: #afafaf", // graphql explorer
   "color: #586069": "color: #afafaf",
@@ -278,7 +280,6 @@ const mappings = {
   "color: #808891": "color: #767676",
   "color: #a3aab1": "color: #767676",
   "color: #c3c8cf": "color: #5a5a5a",
-  "color: #c6cbd1": "color: #5a5a5a",
 
   "color: #4183c4": `
     color: rgba(79,140,201,.9);
@@ -366,43 +367,16 @@ const mappings = {
 
 const sources = [
   {
-    name: "githubstatus.com",
-    url: "https://www.githubstatus.com",
-    prefix: "body.status",
-    match: ["body", ".status"],
-  },
-  {
-    name: "developer.github.com",
-    url: "https://developer.github.com",
-    prefix: "html[prefix]",
-    match: ["html", "[prefix]"],
-  },
-  {
-    name: "graphql.github.com",
-    url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
-    prefix: `#graphiql`,
-    match: ["#graphiql", ".graphiql-ide"],
+    name: "github.com",
+    url: "https://github.com",
+    strict: true,
   },
   {
     name: "github.com mobile",
     url: "https://github.com/StylishThemes/GitHub-Dark/pull/1",
     prefix: `body[class="page-responsive"]`,
     match: ["body", ".page-responsive"],
-    fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Mobile Safari/537.36"}},
-    strict: true,
-  },
-  {
-    name: "support.github.com",
-    url: "https://support.github.com",
-    prefix: `body.dotcom`,
-    match: ["body", ".dotcom"],
-    strict: true,
-  },
-  {
-    name: "docs.github.com",
-    url: "https://docs.github.com",
-    prefix: `body.d-lg-flex`,
-    match: ["body", "d-lg-flex"],
+    fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.87 Mobile Safari/537.36"}},
     strict: true,
   },
   {
@@ -411,19 +385,35 @@ const sources = [
     strict: true,
   },
   {
-    name: "github.com",
-    url: "https://github.com",
-    strict: true,
+    name: "docs.github.com",
+    url: "https://docs.github.com",
   },
   {
-    name: "pdf viewer",
+    name: "developer.github.com",
+    url: "https://developer.github.com",
+  },
+  {
+    name: "graphql.github.com",
+    url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
+  },
+  {
+    name: "support.github.com",
+    url: "https://support.github.com",
+  },
+  {
+    name: "vscode-auth.github.com",
+    url: "https://vscode-auth.github.com",
+  },
+  {
+    name: "githubstatus.com",
+    url: "https://www.githubstatus.com",
+  },
+  {
+    name: "render.githubusercontent.com",
     url: [
       "https://render.githubusercontent.com/view/pdf?enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f74706e2f706466732f623037326638386234633836303762343561303866386236393331633037313630623462316466382f41253230436f75727365253230696e2532304d616368696e652532304c6561726e696e672532302863696d6c2d76305f392d616c6c292e706466",
       "https://render.githubusercontent.com/diff/img?commit=0fabf58a4b0a00d048d06113a063738afb674ed7&enc_url1=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f306661626635386134623061303064303438643036313133613036333733386166623637346564372f696d616765732f73637265656e73686f74732f6265666f72652e706e67&enc_url2=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f613434323536373337663932303861633263393435613266633561633133666562343536336262332f696d616765732f73637265656e73686f74732f6265666f72652e706e67",
     ],
-    prefix: "body[data-render-url]",
-    match: ["body", "[data-render-url]"],
-    strict: true,
   },
   {
     name: "refined-github",
@@ -439,7 +429,7 @@ const sources = [
     match: ["body", ".zh_logged_in"],
   },
   {
-    name: "github hovercard",
+    name: "github-hovercard",
     crx: "mmoahbbnojgkclgceahhakhnccimnplk",
     prefix: `html.ghh-theme-classic`,
     match: ["html", ".ghh-theme-"],
@@ -455,7 +445,7 @@ const sources = [
     crx: "kbbbjimdjbjclaebffknlabpogocablj",
   },
   {
-    name: "notifications preview",
+    name: "notifications-preview",
     crx: "kgilejfahkjidpaclkepbdoeioeohfmj",
     contentScriptsOnly: true,
   },
@@ -472,13 +462,11 @@ const ignoreSelectors = [
   /^\.bg-white$/,
   /^\.CircleBadge$/,
   /^table$/,
-  /^.text-gray-dark$/,
   /^.markdown-body del$/, // this in not main page style
   /:(before|after).+/, // invalid pseudo-elements, they must come last in a chain of
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
 ];
 
-const replaceRe = /.*begin remap-css[\s\S]+end remap-css.*/gm;
 const cssFile = join(__dirname, "..", "github-dark.css");
 
 const remapOpts = {
@@ -491,9 +479,16 @@ const remapOpts = {
 };
 
 async function main() {
-  let generatedCss = await remapCss(await fetchCss(sources), mappings, remapOpts);
-  generatedCss = `  /* begin remap-css rules */\n${generatedCss}\n  /* end remap-css rules */`;
-  await writeFile(cssFile, (await readFile(cssFile, "utf8")).replace(replaceRe, generatedCss));
+  let css = await readFile(cssFile, "utf8");
+
+  for (const source of sources) {
+    let section = await remapCss(await fetchCss([source]), mappings, remapOpts);
+    section = `  /* begin ${source.name} rules */\n${section}\n  /* end ${source.name} rules */`;
+    const re = new RegExp(`.*begin ${esc(source.name)}[\\s\\S]+end ${esc(source.name)}.*`, "gm");
+    css = css.replace(re, section);
+  }
+
+  await writeFile(cssFile, css);
 }
 
 main().then(exit).catch(exit);
