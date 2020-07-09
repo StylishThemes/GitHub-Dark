@@ -481,8 +481,12 @@ const remapOpts = {
 async function main() {
   let css = await readFile(cssFile, "utf8");
 
-  for (const source of sources) {
-    let section = await remapCss(await fetchCss([source]), mappings, remapOpts);
+  const sections = await Promise.all(sources.map(async source => {
+    return remapCss(await fetchCss([source]), mappings, remapOpts);
+  }));
+
+  for (let [index, section] of Object.entries(sections)) {
+    const source = sources[Number(index)];
     section = `  /* begin ${source.name} rules */\n${section}\n  /* end ${source.name} rules */`;
     const re = new RegExp(`.*begin ${esc(source.name)}[\\s\\S]+end ${esc(source.name)}.*`, "gm");
     css = css.replace(re, section);
