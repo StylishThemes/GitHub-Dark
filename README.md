@@ -123,7 +123,7 @@ First, make sure you have these installed:
 
 Edit the files in [`src`](./src) and then run `make build install` to rebuild the style and install it.
 
-## Development scripts
+### Make Targets
 
 - `make`: Alias for `make build`.
 - `make build`: Build `github-dark.user.css` and install it.
@@ -136,12 +136,9 @@ Lesser used tasks include:
 - `make clean`: Reformat source files.
 - `make authors`: Regenerate the `AUTHORS` file based on git history.
 - `make update`: Update and install dependencies.
-
-## Internal use scripts (not for pull requests)
-
-- `make patch`: Increment the patch version number, update file headers, create a commit and push it to `origin`.
-- `make minor`: Increment the minor version number, update file headers, create a commit and push it to `origin`.
-- `make major`: Increment the major version number, update file headers, create a commit and push it to `origin`.
+- `make patch`: Increment the patch version number, create a commit and push it to `origin/master`.
+- `make minor`: Increment the minor version number, create a commit and push it to `origin/master`.
+- `make major`: Increment the major version number, create a commit and push it to `origin/master`.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 
