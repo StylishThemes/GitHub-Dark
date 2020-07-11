@@ -81,7 +81,7 @@ async function getThemes() {
 
 async function main() {
   let css = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
-  css = css.replace("{{version}}", version);
+  css = css.trim().replace("{{version}}", version);
 
   for (const [type, themes] of Object.entries(await getThemes())) {
     const parts = [];
@@ -108,7 +108,7 @@ async function main() {
       }
     }
 
-    css += `${sourceCss}\n`;
+    css += `${sourceCss.trim()}\n`;
   }
 
   await writeFile(resolve(__dirname, "../github-dark.user.css"), css);
