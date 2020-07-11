@@ -34,15 +34,15 @@ update: node_modules
 	yarn -s
 	@touch yarn.lock
 
-patch: node_modules lint usercss
+patch: node_modules lint build
 	yarn -s run versions -pdC patch src/base.css github-dark.user.css
 	git push --tags origin master
 
-minor: node_modules lint usercss
+minor: node_modules lint build
 	yarn -s run versions -pdC minor src/base.css github-dark.user.css
 	git push --tags origin master
 
-major: node_modules lint usercss
+major: node_modules lint build
 	yarn -s run versions -pdC major src/base.css github-dark.user.css
 	git push --tags origin master
 
