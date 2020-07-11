@@ -34,7 +34,6 @@ const replacements = [
   {from: /\/\*\[\[tab-size\]\]\*\/ \d+/g, to: "/*[[tab-size]]*/"},
   {from: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/, to: "/*[[bg-choice]]*/"},
   {from: "/*[[bg-attachment]]*/ fixed", to: "/*[[bg-attachment]]*/"},
-  {from: /\s+\/\* usercss build - remove start[\s\S]+usercss build - remove end \*\/$/m, to: ""},
 ];
 
 const defaults = {
