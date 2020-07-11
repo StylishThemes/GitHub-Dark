@@ -121,7 +121,7 @@ First, make sure you have these installed:
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
 - A Unix-like environment with `make` (on Windows use [this](https://stackoverflow.com/a/54086635/808699))
 
-Edit the files in [`src`](./src) and then run `make` to rebuild the style and install it.
+Edit the files in [`src`](./src) and then run `make build install` to rebuild the style and install it.
 
 ## Development scripts
 

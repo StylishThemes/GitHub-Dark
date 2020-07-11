@@ -5,7 +5,6 @@ test: lint
 build:
 	node tools/clean.js
 	node tools/build.js
-	node tools/install.js
 
 deps: node_modules
 
