@@ -7,8 +7,9 @@ const remapCss = require("remap-css");
 const {readFile, readdir} = require("fs").promises;
 const {resolve, basename} = require("path");
 
-// const clean = require("./clean");
-const {mappings, sources, ignoreSelectors} = require("../src/rules");
+const mappings = require("../src/generator-mappings");
+const sources = require("../src/generator-sources");
+const ignoreSelectors = require("../src/generator-ignores");
 const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
 

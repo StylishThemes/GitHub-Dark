@@ -5,7 +5,6 @@ const perfectionist = require("perfectionist");
 const {readFile} = require("fs").promises;
 const {basename} = require("path");
 const {writeFile, exit, glob} = require("./utils");
-const isCLI = require("is-cli");
 
 const replacements = [
   {from: /\{\/\*!/g, to: "{\n /*!"},
@@ -37,6 +36,4 @@ module.exports = async function main() {
   }
 };
 
-if (isCLI) {
-  module.exports().then(exit).catch(exit);
-}
+module.exports().then(exit).catch(exit);
