@@ -1,12 +1,27 @@
 #!/usr/bin/env node
 "use strict";
 
+const esc = require("escape-string-regexp");
+const fetchCss = require("fetch-css");
+const remapCss = require("remap-css");
 const {readFile, readdir} = require("fs").promises;
-const {resolve} = require("path");
-const {writeFile, exit, glob} = require("./utils");
-const {version} = require("../package.json");
+const {resolve, basename} = require("path");
 
-const sources = glob("src/*.css").sort((a, b) => {
+// const clean = require("./clean");
+const {mappings, sources, ignoreSelectors} = require("../src/rules");
+const {version} = require("../package.json");
+const {writeFile, exit, glob} = require("./utils");
+
+const remapOpts = {
+  ignoreSelectors,
+  indentCss: 2,
+  lineLength: 76,
+  comments: true,
+  stylistic: true,
+  validate: true,
+};
+
+const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (a.endsWith("main.css")) return -1;
   if (b.endsWith("main.css")) return 1;
   if (a.endsWith("base.css")) return -1;
@@ -103,18 +118,33 @@ function makeTabs(css) {
 }
 
 async function main() {
+  const sections = await Promise.all(sources.map(async source => {
+    return remapCss(await fetchCss([source]), mappings, remapOpts);
+  }));
+
   let themes = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
   themes = await processGroup(themes, "GitHub");
   themes = await processGroup(themes, "CodeMirror");
   themes = await processGroup(themes, "Jupyter");
 
   let css = "";
-  for (const source of sources) {
-    let sourceCss = await readFile(source, "utf8");
-    if (source.endsWith("main.css")) {
+  for (const sourceFile of sourceFiles) {
+    let sourceCss = await readFile(sourceFile, "utf8");
+    if (sourceFile.endsWith("main.css")) {
       sourceCss = replaceForUsercss(sourceCss);
       sourceCss = replaceVars(`${themes}${sourceCss}`);
     }
+
+    for (let [index, section] of Object.entries(sections)) {
+      const source = sources[Number(index)];
+      if (basename(source.file) === basename(sourceFile)) {
+        // create replacement regex
+        section = `  /* begin ${source.name} rules */\n${section}\n  /* end ${source.name} rules */`;
+        const re = new RegExp(`.*generated ${esc(source.name)} rules.*`, "gm");
+        sourceCss = sourceCss.replace(re, section);
+      }
+    }
+
     css += `${sourceCss}\n`;
   }
 

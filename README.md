@@ -126,10 +126,8 @@ Edit the files in [`src`](./src) and then run `make` to rebuild the style and in
 ## Development scripts
 
 - `make`: Alias for `make build`.
-- `make build`: Alias for `make generate usercss install`.
-- `make generate`: Regenerate auto-generated CSS based on rules in [`rules.js`](./src/rules.js).
-- `make usercss`: Build the [usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
-- `make install`: Install the style in your default browser.
+- `make build`: Build `github-dark.user.css` and install it.
+- `make install`: Install `github-dark.user.css`.
 - `make lint`: Run linters.
 
 Lesser used tasks include:

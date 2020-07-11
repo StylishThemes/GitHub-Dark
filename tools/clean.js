@@ -5,6 +5,7 @@ const perfectionist = require("perfectionist");
 const {readFile} = require("fs").promises;
 const {basename} = require("path");
 const {writeFile, exit, glob} = require("./utils");
+const isCLI = require("is-cli");
 
 const replacements = [
   {from: /\{\/\*!/g, to: "{\n /*!"},
@@ -17,7 +18,7 @@ const replacements = [
   {from: /\s+domain\(/g, to: " domain("},
 ];
 
-async function main() {
+module.exports = async function main() {
   for (const file of glob("src/*.css")) {
     if (basename(file) === "template.css") continue;
 
@@ -34,6 +35,8 @@ async function main() {
 
     await writeFile(file, css);
   }
-}
+};
 
-main().then(exit).catch(exit);
+if (isCLI) {
+  module.exports().then(exit).catch(exit);
+}

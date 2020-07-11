@@ -37,12 +37,12 @@ module.exports.mappings = {
 
   // blue (base color)
   "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
-  "$color: #0366d6": "/*[[base-color]]*/ #4f8cc9", // gitako
-  "$color: #0366d6d0": "/*[[base-color]]*/ #4f8cc9", // gitako
-  "$color: #3b5998": "/*[[base-color]]*/ #4f8cc9",
-  "$color: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
-  "$color: #0361cc": "/*[[base-color]]*/ #4f8cc9",
-  "$color: #0679fc": "/*[[base-color]]*/ #4f8cc9",
+  "$color: #0366d6": "/*[[base-color]]*/", // gitako
+  "$color: #0366d6d0": "/*[[base-color]]*/", // gitako
+  "$color: #3b5998": "/*[[base-color]]*/",
+  "$color: #79b8ff": "/*[[base-color]]*/",
+  "$color: #0361cc": "/*[[base-color]]*/",
+  "$color: #0679fc": "/*[[base-color]]*/",
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
@@ -215,45 +215,19 @@ module.exports.mappings = {
   "$box-shadow: rgba(27,31,35,.1)": "#000",
   "$box-shadow: rgba(27,31,35,.04)": "#000",
 
-  "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)": `
-     box-shadow: 0 0 0 1px #484848;
-  `, // graphql explorer
+  "box-shadow: 0 1px 0 rgba(255,255,255,0.7),inset 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px 1px 1px rgba(0,0,0,0.12),inset 0 0 5px rgba(0,0,0,0.1)": "box-shadow: 0 0 0 1px #484848", // graphql explorer
   "box-shadow: inset 0 2px 3px rgba(0,0,0,.075)": "box-shadow: inset 0 2px 3px rgba(255,255,255,.075)",
-
-  "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.5);
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5);
-  `,
-
-  "box-shadow: 0 0 0 .2em #c8e1ff": `
-     box-shadow: 0 0 0 .2em rgba(79,140,201,.3);
-     box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3);
-  `,
-
-  "box-shadow: 0 0 0 3px rgba(3,102,214,.3)": `
-     box-shadow: 0 0 0 3px rgba(79,140,201,.3);
-     box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
-  `,
-
-  "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)": `
-    box-shadow: 0 0 0 2px rgba(79,140,201,.3);
-    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
-  `,
-
-  "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": `
-    box-shadow: 0 1px 0 0 rgba(79,140,201,.5);
-    box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
-  `,
-
-  "box-shadow: 0 1px 0 0 #1074e7": `
-    box-shadow: 0 1px 0 0 #4f8cc9;
-    box-shadow: 0 1px 0 0 /*[[base-color]]*/;
-  `,
+  "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)": "box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5)",
+  "box-shadow: 0 0 0 .2em #c8e1ff": "box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .3)",
+  "box-shadow: 0 0 0 3px rgba(3,102,214,.3)": "box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3)",
+  "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)": "box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3)",
+  "box-shadow: 0 1px 0 0 rgba(16,116,231,.5)": "box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5)",
+  "box-shadow: 0 1px 0 0 #1074e7": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
 
   "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)": "box-shadow: none",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
-  "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/ #4f8cc9",
-  "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/ #4f8cc9",
+  "box-shadow: 0 1px 0 0 #0058a2": "box-shadow: 0 1px 0 0 /*[[base-color]]*/",
+  "box-shadow: 0 0 0.2em #c8e1ff": "box-shadow: 0 0 .2em /*[[base-color]]*/",
   // ==========================================================================
   // Color / Background
   // ==========================================================================
@@ -278,14 +252,9 @@ module.exports.mappings = {
   "color: #a3aab1": "color: #767676",
   "color: #c3c8cf": "color: #5a5a5a",
 
-  "color: #4183c4": `
-    color: rgba(79,140,201,.9);
-    color: rgba(/*[[base-color-rgb]]*/,.9);
-  `,
-  "color: #005b9e": `
-    color: rgba(79,140,201,1);
-    color: rgba(/*[[base-color-rgb]]*/,1);
-  `,
+  "color: #4183c4": "color: rgba(/*[[base-color-rgb]]*/,.9)",
+  "color: #005b9e": "color: rgba(/*[[base-color-rgb]]*/,1)",
+
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
   "color: rgba(27,31,35,.6)": "color: rgba(230,230,230,.6)",
@@ -295,10 +264,10 @@ module.exports.mappings = {
   "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
 
   "fill: #959da5": "fill: #757575",
-  "fill: #1074e7": "fill:  /*[[base-color]]*/ #4f8cc9",
+  "fill: #1074e7": "fill:  /*[[base-color]]*/",
 
-  "color: #1074e7": "color: /*[[base-color]]*/ #4f8cc9",
-  "color: #1f61a0": "color: /*[[base-color]]*/ #4f8cc9", //  graphql explorer
+  "color: #1074e7": "color: /*[[base-color]]*/",
+  "color: #1f61a0": "color: /*[[base-color]]*/", //  graphql explorer
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
 
   "fill: #24292e": "fill: #bebebe",
@@ -321,36 +290,25 @@ module.exports.mappings = {
   "$background: #05264c": "#182030",
 
   // blue (base-color)
-  "color: #327fc7": "color: /*[[base-color]]*/ #4f8cc9",
-  "color: #b4d6fe": "color: /*[[base-color]]*/ #4f8cc9", // github hovercard
-  "$background: #4183c4": "/*[[base-color]]*/ #4f8cc9",
-  "$background: #0361cc": "/*[[base-color]]*/ #4f8cc9",
-  "$border: #1074e7": "/*[[base-color]]*/ #4f8cc9",
-  "filter: drop-shadow(-.25em 0 0 #c8e1ff)": `
-    filter: drop-shadow(-.25em 0 0 rgba(79,140,201,.3));
-    filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .3))
-  `,
-  "filter: drop-shadow(0 -.28em 0 #c8e1ff)": `
-    filter: drop-shadow(0 -.28em 0 rgba(79,140,201,.3));
-    filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))
-  `,
-  "filter: drop-shadow(-.28em 0 0 #c8e1ff)": `
-    filter: drop-shadow(-.28em 0 0 rgba(79,140,201,.3));
-    filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3))
-  `,
-  "$border: #2188ff": "/*[[base-color]]*/ #4f8cc9",
-  "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)", // notification icon
-  "color: #cce888": "color: /*[[base-color]]*/ #4f8cc9", // https://github.com/StylishThemes/GitHub-Dark/issues/954
-  "$background: linear-gradient(#599bcd,#3072b3)": "linear-gradient(/*[[base-color]]*/ #4f8cc9, /*[[base-color]]*/ #4f8cc9)",
-  "$border: #2a65a0": "/*[[base-color]]*/ #4f8cc9",
-  "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/ #4f8cc9", // gitako
-  "$background: #79b8ff": "/*[[base-color]]*/ #4f8cc9",
-  "box-shadow: 0 0 10px rgba(121,184,255,.7)": `
-    box-shadow: 0 0 rgba(79,140,201,.3);
-    box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)
-  `,
-  "$background: #005cc2": "/*[[base-color]]*/ #4f8cc9",
-  "$background: #3072b3": "/*[[base-color]]*/ #4f8cc9",
+  "color: #327fc7": "color: /*[[base-color]]*/",
+  "color: #b4d6fe": "color: /*[[base-color]]*/", // github hovercard
+  "$background: #4183c4": "/*[[base-color]]*/",
+  "$background: #0361cc": "/*[[base-color]]*/",
+  "$border: #1074e7": "/*[[base-color]]*/",
+  "filter: drop-shadow(-.25em 0 0 #c8e1ff)": "filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .3))",
+  "filter: drop-shadow(0 -.28em 0 #c8e1ff)": "filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))",
+  "filter: drop-shadow(-.28em 0 0 #c8e1ff)": "filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3))",
+
+  "$border: #2188ff": "/*[[base-color]]*/",
+  "$background: linear-gradient(#54a3ff,#006eed)": "linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/)", // notification icon
+  "color: #cce888": "color: /*[[base-color]]*/", // https://github.com/StylishThemes/GitHub-Dark/issues/954
+  "$background: linear-gradient(#599bcd,#3072b3)": "linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/)",
+  "$border: #2a65a0": "/*[[base-color]]*/",
+  "color: rgba(3, 47, 98, 0.55)": "color: /*[[base-color]]*/", // gitako
+  "$background: #79b8ff": "/*[[base-color]]*/",
+  "box-shadow: 0 0 10px rgba(121,184,255,.7)": "box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)",
+  "$background: #005cc2": "/*[[base-color]]*/",
+  "$background: #3072b3": "/*[[base-color]]*/",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
