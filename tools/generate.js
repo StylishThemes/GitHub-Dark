@@ -85,6 +85,7 @@ const mappings = {
   "$color: #dca874": "#cb4",
   "$color: #f9c513": "#cb4",
   "$color: #ffd33d": "#cb4",
+  "$color: #ffea7f": "#542",
   "$color: #e5d999": "#542",
   "$color: #d9d0a5": "#542",
   "$color: #ffe3c8": "#261d08",
