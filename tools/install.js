@@ -19,9 +19,5 @@ const server = createServer((_, res) => {
 });
 
 server.listen(() => {
-  open(String(Object.assign(new URL("http://x"), {
-    hostname: "localhost",
-    port: server.address().port,
-    pathname: "/github-dark.user.css",
-  })));
+  open(`http://localhost:${server.address().port}/github-dark.user.css`);
 });
