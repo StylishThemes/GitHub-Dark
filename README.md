@@ -129,16 +129,16 @@ Edit the files in [`src`](./src) and then run `make build install` to rebuild th
 - `make build`: Build `github-dark.user.css` and install it.
 - `make install`: Install `github-dark.user.css`.
 - `make lint`: Run linters.
-
-Lesser used tasks include:
-
-- `make themes`: Parse the theme files and combine them into minified styles in the `themes` directory.
 - `make clean`: Reformat source files.
+
+Lesser used targets include:
+
+- `make themes`: Process the theme sources into minified styles in the `themes` directory.
 - `make authors`: Regenerate the `AUTHORS` file based on git history.
 - `make update`: Update and install dependencies.
-- `make patch`: Increment the patch version number, create a commit and push it to `origin/master`.
-- `make minor`: Increment the minor version number, create a commit and push it to `origin/master`.
-- `make major`: Increment the major version number, create a commit and push it to `origin/master`.
+- `make patch`: Increment the patch version, create a commit and push it.
+- `make minor`: Increment the minor version, create a commit and push it.
+- `make major`: Increment the major version, create a commit and push it.
 
 Thanks to all that have [contributed](./AUTHORS) so far!
 
