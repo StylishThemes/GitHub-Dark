@@ -7,14 +7,14 @@ const remapCss = require("remap-css");
 const {readFile, readdir} = require("fs").promises;
 const {resolve, basename} = require("path");
 
-const mappings = require("../src/generator-mappings");
-const sources = require("../src/generator-sources");
-const ignoreSelectors = require("../src/generator-ignores");
+const {mappings} = require("../src/gen/mappings");
+const {sources} = require("../src/gen/sources");
+const {ignores} = require("../src/gen/ignores");
 const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
 
 const remapOpts = {
-  ignoreSelectors,
+  ignoreSelectors: ignores,
   indentCss: 2,
   lineLength: 76,
   comments: true,

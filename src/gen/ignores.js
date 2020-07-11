@@ -1,4 +1,4 @@
-module.exports = [
+module.exports.ignores = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter

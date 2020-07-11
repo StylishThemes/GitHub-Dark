@@ -1,6 +1,6 @@
 const {resolve} = require("path");
 
-module.exports = [
+module.exports.sources = [
   {
     name: "github.com",
     url: "https://github.com",
