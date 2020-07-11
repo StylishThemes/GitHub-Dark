@@ -74,19 +74,18 @@ function extractThemeName(css) {
 
 function buildThemeGroup(themes) {
   const defs = [];
-  themes.forEach(theme => {
+  for (const theme of themes) {
     const name = extractThemeName(theme);
-    defs.push(`  ${name.replace(/\s*/, "")} "${name}" <<<EOT
-  ${theme.replace(/\*\//g, "*\\/").replace(/\n/, "")} EOT;`);
-  });
+    defs.push(`  ${name.replace(/\s*/, "")} "${name}" <<<EOT\n  ${theme.replace(/\*\//g, "*\\/").replace(/\n/, "")} EOT;`);
+  }
   return defs.join("\n");
 }
 
 function replaceVars(css) {
   css = makeTabs(css);
-  Object.keys(defaults).forEach(key => {
-    css = css.replace(`{{${key}}}`, defaults[key]);
-  });
+  for (const [key, value] of Object.entries(defaults)) {
+    css = css.replace(`{{${key}}}`, value);
+  }
   css = css.replace("{{version}}", version);
   return css;
 }
