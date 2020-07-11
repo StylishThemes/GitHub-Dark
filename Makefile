@@ -12,7 +12,7 @@ node_modules: yarn.lock
 
 lint: node_modules
 	yarn -s run eslint --color .
-	yarn -s run stylelint --color github-dark.css themes/src
+	yarn -s run stylelint --color src themes/src
 
 authors:
 	bash tools/authors.sh
@@ -40,15 +40,15 @@ usercss: node_modules
 	node tools/usercss.js
 
 patch: node_modules lint usercss
-	yarn -s run versions -pdC patch github-dark.css github-dark.user.css
+	yarn -s run versions -pdC patch src/base.css github-dark.user.css
 	git push --tags origin master
 
 minor: node_modules lint usercss
-	yarn -s run versions -pdC minor github-dark.css github-dark.user.css
+	yarn -s run versions -pdC minor src/base.css github-dark.user.css
 	git push --tags origin master
 
 major: node_modules lint usercss
-	yarn -s run versions -pdC major github-dark.css github-dark.user.css
+	yarn -s run versions -pdC major src/base.css github-dark.user.css
 	git push --tags origin master
 
 .PHONY: all test build deps lint authors clean generate themes update install usercss patch minor major

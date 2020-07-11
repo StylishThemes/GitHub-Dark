@@ -65,7 +65,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ----property: value;
     ·property: value;
     ```
-⚠️ Any new additions should be mapped using the built-in generator before adding any manual rules or selectors, please study the [generate.js](./tools/generate.js), if you have any doubts or questions please feel free to open an issue to to start a releated discussion.
+⚠️ Any new additions should be mapped using the built-in generator before adding any manual rules or selectors, please study the [rules.js](./src/rules.js), if you have any doubts or questions please feel free to open an issue to to start a releated discussion.
 
 Do not manually edit generated areas, as those additions are lost on running `make build` developemnt script.
 
@@ -96,11 +96,9 @@ First, make sure you have these installed:
 
 ### Edit, Build & test
 
-* **Generator entries**, edit the [/tools/generate.js](./tools/generate.js)
-* **Manual entries,** edit the github-dark.css file to include any customizations to the style.
-* Run `make generate` to create generate the added entries added [/tools/generate.js](./tools/generate.js).
-  If GitHub pushed some updates the generator will spew them out, **only include in PR what you wish to add**
-* Once you are satisfied with the changes, run `make clean` to reindent &amp; clean up the CSS.
-* Now you can push the changes of the `github-dark.css` file to your fork and submit a pull request.
+* **Generator entries**, edit [rules.js](./src/rules.js)
+* **Manual entries,** edit files in [src](./src) file to include any customizations to the style.
+* Run `make` to build and install the new style.
+* Now you can push the changes to your fork and submit a pull request.
 * If you haven't already contributed, then also run `make authors` to add your name to our list of contributors :smile:
 * And thanks again for contributing!
