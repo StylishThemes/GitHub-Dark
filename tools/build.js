@@ -29,13 +29,6 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (b.endsWith("base.css")) return 1;
 });
 
-const replacements = [
-  {from: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g, to: "/*[[base-color]]*/"},
-  {from: /\/\*\[\[tab-size\]\]\*\/ \d+/g, to: "/*[[tab-size]]*/"},
-  {from: /\/\*\[\[bg-choice\]\]\*\/ url\(.*\)/, to: "/*[[bg-choice]]*/"},
-  {from: "/*[[bg-attachment]]*/ fixed", to: "/*[[bg-attachment]]*/"},
-];
-
 const defaults = {
   theme: "twilight",
   themeCM: "twilight",
@@ -50,13 +43,6 @@ const defaults = {
   tab: 4,
   tabSizes: [2, 3, 4, 5, 6, 7, 8]
 };
-
-function replaceForUsercss(css) {
-  for (const replacement of replacements) {
-    css = css.replace(replacement.from, replacement.to);
-  }
-  return css;
-}
 
 async function processGroup(css, name) {
   const themes = await getThemesInFolder(name.toLowerCase());
@@ -131,7 +117,6 @@ async function main() {
   for (const sourceFile of sourceFiles) {
     let sourceCss = await readFile(sourceFile, "utf8");
     if (sourceFile.endsWith("main.css")) {
-      sourceCss = replaceForUsercss(sourceCss);
       sourceCss = replaceVars(`${themes}${sourceCss}`);
     }
 
