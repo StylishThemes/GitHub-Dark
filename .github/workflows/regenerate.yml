@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: "14"
       - run: make deps
-      - run: make generate
+      - run: make build
       - run: |
           if [[ $(git status --porcelain --untracked-files=no) ]]; then
             make test
