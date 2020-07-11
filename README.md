@@ -120,19 +120,24 @@ First, make sure you have these installed:
 
 - [`node`](https://nodejs.org): version 12 or greater
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
-- `make`: comes with Unix-like OS, on Windows use [this](https://stackoverflow.com/a/54086635/808699)
+- A Unix-like environment with `make` (on Windows use [this](https://stackoverflow.com/a/54086635/808699))
 
-To get started, run `make deps` after which you can use the following `make` scripts:
+Edit the files in [`src`](./src) and then run `make` to rebuild the style and install it.
 
 ## Development scripts
 
-- `make build`: Runs the `generate` and `usercss` tasks.
-- `make usercss`: Build the [Usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
+- `make`: Alias for `make build`.
+- `make build`: Alias for `make generate usercss install`.
+- `make generate`: Regenerate auto-generated CSS based on rules in [`rules.js`](./src/rules.js).
+- `make usercss`: Build the [usercss](https://github.com/openstyles/stylus/wiki/Usercss) style.
+- `make install`: Install the style in your default browser.
+- `make lint`: Run linters.
+
+Lesser used tasks include:
+
 - `make themes`: Parse the theme files and combine them into minified styles in the `themes` directory.
-- `make clean`: Reformat `github-dark.css` to conform the style guide.
-- `make lint`: Run Stylelint on `github-dark.css`.
+- `make clean`: Reformat source files.
 - `make authors`: Regenerate the `AUTHORS` file based on git history.
-- `make generate`: Regenerate auto-generated CSS rules compiled from various public sources.
 - `make update`: Update and install dependencies.
 
 ## Internal use scripts (not for pull requests)

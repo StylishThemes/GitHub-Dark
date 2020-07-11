@@ -1,0 +1,162 @@
+@-moz-document regexp("^https?://github\.com/features/(security|actions)") {
+  img[src*="security-vulnerability.svg"],
+  img[src*="security-vulnerability-alert.svg"], img[src*="security-policy.svg"],
+  img[src*="security-workspace-bg.svg"],
+  img[src*="security-workspace-comment-1.svg"],
+  img[src*="security-workspace-comment-2.svg"],
+  img[src*="security-workspace-changes.svg"],
+  img[src*="security-workspace-merge.svg"], .section-security-alerts svg,
+  img[src*="security-dependabot.svg"], img.security-pr-merge,
+  .section-security-patches-graph, img[src*="security-token-scanning.svg"],
+  img[src*="security-lgtm-vulnerability.svg"],
+  img[src*="security-lgtm-alert.svg"], .actions-pr-checks {
+    filter: invert(90%) hue-rotate(-180deg) !important;
+  }
+  .section-security-alerts-graph svg, .section-security-patches-graph {
+    filter: none !important;
+  }
+  [style="background: #fff; box-shadow: 0 10px 50px 30px #fff;"] {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  [stroke="#E1E4E8"] {
+    stroke: #484848;
+  }
+  [stroke="#B08800"] {
+    stroke: #652;
+  }
+  [fill="#FFFDEF"] {
+    fill: #321;
+  }
+  [fill="#6A737D"] {
+    fill: #444;
+  }
+  [fill="white"]:not([d*="M279.27"]) {
+    fill: #111;
+  }
+  [fill="black"] {
+    fill: #eee;
+  }
+  svg.security-hero, .actions-hero {
+    filter: brightness(200%) contrast(80%);
+  }
+  .section-actions-workflow-logs::before, .actions-pricing-private::before {
+    filter: brightness(60%);
+  }
+}
+@-moz-document regexp("^https?://github\.com/(features|security)") {
+  img[src*="img-"], img[src*="security"] {
+    filter: invert(90%) hue-rotate(-180deg) !important;
+  }
+  img[src*="img-share-achievements.png"] {
+    filter: invert(100%) hue-rotate(-85deg) !important;
+  }
+}
+@-moz-document domain("stylishthemes.github.io") {
+  :root {
+    --bg-custom: /*[[bg-custom]]*/;
+    --bg-img: /*[[bg-choice]]*/;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    color: #e0e0e0;
+    background-color: #202020;
+    background-image: var(--bg-img);
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-attachment: /*[[bg-attachment]]*/;
+    /*[[bg-options]]*/
+  }
+  .markdown-body img {
+    background-color: #181818;
+    background: none;
+  }
+  a {
+    color: /*[[base-color]]*/;
+    background-color: transparent;
+  }
+  .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4,
+  .markdown-body h5, .markdown-body h6 {
+    border-bottom: 1px solid #444;
+  }
+  .border-gray-light, hr {
+    border-color: #444 !important;
+  }
+  .markdown-body table th, .markdown-body table td {
+    border: 1px solid #444;
+  }
+  .text-gray {
+    color: #aaa !important;
+  }
+  .markdown-body table tr {
+    background-color: #181818;
+    border-top: 1px solid #444;
+  }
+  .markdown-body table tr:nth-child(2n) {
+    background-color: #202020;
+  }
+  /* style 404 page e.g. http://stylishthemes.github.io/ */
+  p {
+    color: #bebebe;
+  }
+  #suggestions a {
+    color: #9e9e9e;
+  }
+}
+@-moz-document url-prefix("https?://github.com/personal") {
+  .bg-blue-4, .illflow-blue .selected {
+    background: #182030 !important;
+  }
+}
+@-moz-document regexp("^https?://(education|lab)\.github\.com") {
+  .btn-blue {
+    background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, 1), rgba(/*[[base-color-rgb]]*/, .9) 90%) !important;
+  }
+  .btn-blue.hover, .btn.btn-blue:hover {
+    background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, .9), rgba(/*[[base-color-rgb]]*/, .8) 90%) !important;
+    border-color: rgba(/*[[base-color-rgb]]*/, .3) !important;
+  }
+}
+@-moz-document regexp("^https?://(render)\.githubusercontent\.com\/render\/math") {
+  svg {
+    background: #222;
+  }
+  svg #surface1 g[style*="fill"] {
+    fill: #eee !important;
+  }
+}
+@-moz-document domain("camo.githubusercontent.com") {
+  svg {
+    background: #222;
+  }
+}
+@-moz-document regexp("^https?://www\.zuora\.com.*github\.com.*") {
+  /* Styles the payment form iframe */
+  body, label, .popup {
+    background: transparent !important;
+    color: #bebebe !important;
+  }
+  input, select {
+    background: #181818 !important;
+    color: #bebebe !important;
+    border-color: #343434 !important;
+  }
+  select {
+    background: #181818 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAQAAAAua3X8AAAARklEQVR4AWNABWcazjQg8zGl/wNhA15piBL80gglmNKYSjClMZUgpDGVwKXxKBl4QNiRBLxJIKAIBzXhyCIc3YQTDMEkBwBplPJRxEMa4wAAAABJRU5ErkJggg==") no-repeat right 8px center !important;
+    background-size: 8px 10px !important;
+  }
+  input:focus, select:focus {
+    border-color: /*[[base-color]]*/ #4f8cc9 !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075), 0 0 2px /*[[base-color]]*/ #4f8cc9 !important;
+    outline-color: /*[[base-color]]*/ #4f8cc9 !important;
+  }
+  .btn-submit {
+    background: linear-gradient(#407045, #305530) !important;
+    border-color: #083 !important;
+  }
+  .btn-submit:hover {
+    background: linear-gradient(#508055, #407045) !important;
+  }
+}

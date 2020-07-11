@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 
-const glob = require("fast-glob");
-const {join} = require("path");
 const {unlink, readFile} = require("fs").promises;
 const CleanCSS = require("clean-css");
-const {writeFile, exit} = require("./utils");
+const {writeFile, exit, glob} = require("./utils");
 
 const clean = new CleanCSS({
   level: 1,
@@ -26,10 +24,10 @@ function replaceCSSMatches(theme) {
 }
 
 async function main() {
-  let paths = await glob(join(__dirname, "..", "themes", "**", "*.min.css"));
+  let paths = await glob("themes/**/*.min.css");
   await Promise.all(paths.map(path => unlink(path)));
 
-  paths = await glob(join(__dirname, "..", "themes", "src", "*", "*.css"));
+  paths = await glob("themes/src/*/*.css");
   await Promise.all(paths.map(async path => {
     const newPath = path.replace(/[/\\]src[/\\]/, "/").replace(/\.css$/, ".min.css");
     let css = await readFile(path, "utf8");
@@ -37,7 +35,7 @@ async function main() {
     await writeFile(newPath, css);
   }));
 
-  paths = await glob(join(__dirname, "..", "themes", "jupyter", "*"));
+  paths = await glob("themes/jupyter/*");
   await Promise.all(paths.map(async path => {
     let css = await readFile(path, "utf8");
     css = replaceCSSMatches(css);

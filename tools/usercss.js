@@ -2,16 +2,16 @@
 "use strict";
 
 const {readFile, readdir} = require("fs").promises;
-const fastGlob = require("fast-glob");
-const {writeFile, exit} = require("./utils");
+const {resolve} = require("path");
+const {writeFile, exit, glob} = require("./utils");
+const {version} = require("../package.json");
 
-const globSync = (pattern) => fastGlob.sync(pattern, {cwd: __dirname, absolute: true});
-
-const files = {
-  source: globSync("../github-dark.css")[0],
-  usercss: globSync("../github-dark.user.css")[0],
-  template: globSync("./usercss-template.css")[0],
-};
+const sources = glob("src/*.css").sort((a, b) => {
+  if (a.endsWith("main.css")) return -1;
+  if (b.endsWith("main.css")) return 1;
+  if (a.endsWith("base.css")) return -1;
+  if (b.endsWith("base.css")) return 1;
+});
 
 const replacements = [
   {from: /\/\*\[\[base-color\]\]\*\/ #\w{3,6}/g, to: "/*[[base-color]]*/"},
@@ -87,10 +87,7 @@ function replaceVars(css) {
   Object.keys(defaults).forEach(key => {
     css = css.replace(`{{${key}}}`, defaults[key]);
   });
-  const version = css.match(/github\sdark\sv([\d.]+) \(/i);
-  if (version) {
-    css = css.replace("{{version}}", version[1]);
-  }
+  css = css.replace("{{version}}", version);
   return css;
 }
 
@@ -107,18 +104,22 @@ function makeTabs(css) {
 }
 
 async function main() {
-  let themes = await readFile(files.template, "utf8");
+  let themes = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
   themes = await processGroup(themes, "GitHub");
   themes = await processGroup(themes, "CodeMirror");
   themes = await processGroup(themes, "Jupyter");
 
-  let css = await readFile(files.source, "utf8");
-  css = replaceForUsercss(css);
+  let css = "";
+  for (const source of sources) {
+    let sourceCss = await readFile(source, "utf8");
+    if (source.endsWith("main.css")) {
+      sourceCss = replaceForUsercss(sourceCss);
+      sourceCss = replaceVars(`${themes}${sourceCss}`);
+    }
+    css += `${sourceCss}\n`;
+  }
 
-  css = replaceVars(`${themes}${css}`);
-  await writeFile(files.usercss, css);
-
-  console.info("\u001B[32m%s\u001B[0m", "GitHub Dark usercss build complete");
+  await writeFile(resolve(__dirname, "../github-dark.user.css"), css);
 }
 
 main().then(exit).catch(exit);

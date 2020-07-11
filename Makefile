@@ -1,11 +1,13 @@
+all: build
+
 test: lint
 
-build: generate usercss
+build: generate usercss install
 
 deps: node_modules
 
 node_modules: yarn.lock
-	yarn
+	@yarn --pure-lockfile
 	@touch node_modules
 
 lint: node_modules
@@ -15,15 +17,12 @@ lint: node_modules
 authors:
 	bash tools/authors.sh
 
-clean: node_modules perfectionist
+clean: node_modules
 	node tools/clean.js
 
 generate: node_modules
 	node tools/generate.js
-	$(MAKE) clean
-
-perfectionist: node_modules
-	yarn -s run perfectionist github-dark.css github-dark.css --indentSize 2 --maxAtRuleLength 250
+	node tools/clean.js
 
 themes: node_modules
 	node tools/themes.js
@@ -33,6 +32,9 @@ update: node_modules
 	yarn -s run rimraf node_modules
 	yarn
 	@touch yarn.lock
+
+install: node_modules
+	node tools/install.js
 
 usercss: node_modules
 	node tools/usercss.js
@@ -49,4 +51,4 @@ major: node_modules lint usercss
 	yarn -s run versions -pdC major github-dark.css github-dark.user.css
 	git push --tags origin master
 
-.PHONY: test build deps lint authors clean generate perfectionist themes update usercss patch minor major
+.PHONY: all test build deps lint authors clean generate themes update install usercss patch minor major
