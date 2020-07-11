@@ -131,14 +131,12 @@ Edit the files in [`src`](./src) and then run `make build install` to rebuild th
 
 Lesser used targets include:
 
-- `make themes`: Process the theme sources into minified styles in the `themes` directory
+- `make themes`: Regenerate the themes from their sources in the `themes` directory
 - `make authors`: Regenerate the `AUTHORS` file based on git history
-- `make update`: Update and install dependencies
+- `make update`: Update dependencies
 - `make patch`: Increment the patch version, create a commit and push it
 - `make minor`: Increment the minor version, create a commit and push it
 - `make major`: Increment the major version, create a commit and push it
 - `make`: Alias for `make build`
 
-Thanks to all that have [contributed](./AUTHORS) so far!
-
-And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
+Thanks to all that have [contributed](./AUTHORS) so far! And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
