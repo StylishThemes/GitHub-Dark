@@ -24,8 +24,8 @@ const remapOpts = {
 };
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
-  if (a.endsWith("base.css")) return -1;
-  if (b.endsWith("base.css")) return 1;
+  if (a.endsWith("header.css")) return -1;
+  if (b.endsWith("header.css")) return 1;
   if (a.endsWith("main.css")) return -1;
   if (b.endsWith("main.css")) return 1;
 }).filter(file => basename(file) !== "template.css");
