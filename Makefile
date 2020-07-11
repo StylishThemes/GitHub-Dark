@@ -14,16 +14,13 @@ node_modules: yarn.lock
 
 lint: node_modules
 	yarn -s run eslint --color .
-	yarn -s run stylelint --color src themes/src
+	yarn -s run stylelint --color src
 
 authors:
 	bash tools/authors.sh
 
 clean: node_modules
 	node tools/clean.js
-
-themes: node_modules
-	node tools/themes.js
 
 install: node_modules
 	node tools/install.js
@@ -46,4 +43,4 @@ major: node_modules lint build
 	yarn -s run versions -pdC major src/base.css github-dark.user.css
 	git push --tags origin master
 
-.PHONY: all test build deps lint authors clean themes install update patch minor major
+.PHONY: all test build deps lint authors clean install update patch minor major

@@ -131,7 +131,6 @@ Edit the files in [`src`](./src) and then run `make build install` to rebuild th
 
 Lesser used targets include:
 
-- `make themes`: Regenerate the themes from their sources in the `themes` directory
 - `make authors`: Regenerate the `AUTHORS` file based on git history
 - `make update`: Update dependencies
 - `make patch`: Increment the patch version, create a commit and push it
