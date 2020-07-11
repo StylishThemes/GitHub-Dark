@@ -4,22 +4,15 @@
 const esc = require("escape-string-regexp");
 const fetchCss = require("fetch-css");
 const remapCss = require("remap-css");
-const {readFile, readdir} = require("fs").promises;
+const {readFile} = require("fs").promises;
 const {resolve, basename} = require("path");
-const CleanCSS = require("clean-css");
+const cssnano = require("cssnano");
 
 const {mappings} = require("../src/gen/mappings");
 const {sources} = require("../src/gen/sources");
 const {ignores} = require("../src/gen/ignores");
 const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
-
-const clean = new CleanCSS({
-  level: 1,
-  returnPromise: true,
-});
-
-const minify = async css => (await (clean.minify.bind(clean)(css))).styles;
 
 const remapOpts = {
   ignoreSelectors: ignores,
@@ -36,6 +29,11 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (a.endsWith("base.css")) return -1;
   if (b.endsWith("base.css")) return 1;
 }).filter(file => basename(file) !== "template.css");
+
+const minify = async css => {
+  const result = await cssnano.process(css, {from: undefined});
+  return result.css;
+};
 
 function replaceCSSMatches(css) {
   return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
@@ -75,7 +73,7 @@ async function getThemes() {
   }
 
   for (const path of glob("src/themes/jupyter/*.css").sort(sortThemes)) {
-    themes.jupyter[basename(path)] = await minify(await readFile(path, "utf8"));
+    themes.jupyter[basename(path)] = replaceCSSMatches(await minify(await readFile(path, "utf8")));
   }
 
   return themes;
