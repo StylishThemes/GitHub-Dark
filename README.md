@@ -21,7 +21,7 @@
 
 ## Preview
 
-![Preview of GitHub Dark](./images/screenshots/after_blue.png)
+![Preview of GitHub Dark](./images/screenshot.png)
 
 ## Installation
 
