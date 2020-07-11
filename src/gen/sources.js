@@ -78,7 +78,7 @@ module.exports.sources = [
   {
     name: "github-hovercard",
     crx: "mmoahbbnojgkclgceahhakhnccimnplk",
-    prefix: `html.ghh-theme-classic`,
+    prefix: `html[class^="ghh"]`,
     match: ["html", ".ghh-theme-"],
     file: resolve(__dirname, "../src/extensions.css"),
   },

@@ -33,12 +33,13 @@ module.exports.mappings = {
 
   // blue (base color)
   "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
-  "$color: #0366d6": "/*[[base-color]]*/", // gitako
-  "$color: #0366d6d0": "/*[[base-color]]*/", // gitako
   "$color: #3b5998": "/*[[base-color]]*/",
-  "$color: #79b8ff": "/*[[base-color]]*/",
+  "$color: #0366d6d0": "/*[[base-color]]*/", // gitako
   "$color: #0361cc": "/*[[base-color]]*/",
+  "$color: #0366d6": "/*[[base-color]]*/", // gitako
   "$color: #0679fc": "/*[[base-color]]*/",
+  "$color: #79b8ff": "/*[[base-color]]*/",
+  "$color: #b4d6fe": "/*[[base-color]]*/", /* github hovercard */
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
@@ -163,6 +164,7 @@ module.exports.mappings = {
   "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
 
+  "$background: rgba(27,31,35,.05)": "rgba(220,220,220,.1)", // github hovercard
   "$background: rgba(27,31,35,.08)": "rgba(220,220,220,.15)",
   "$background: rgba(27,31,35,.1)": "rgba(220,220,220,.17)",
   "$background: rgba(27,31,35,.15)": "rgba(220,220,220,.22)",
@@ -287,7 +289,6 @@ module.exports.mappings = {
 
   // blue (base-color)
   "color: #327fc7": "color: /*[[base-color]]*/",
-  "color: #b4d6fe": "color: /*[[base-color]]*/", // github hovercard
   "$background: #4183c4": "/*[[base-color]]*/",
   "$background: #0361cc": "/*[[base-color]]*/",
   "$border: #1074e7": "/*[[base-color]]*/",
