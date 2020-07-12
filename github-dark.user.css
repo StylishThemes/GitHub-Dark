@@ -135,7 +135,7 @@
   random "Random Tile" <<<EOT
   url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAABwElEQVR4AY3Vua3gOBgGQQXZhgKYgwHJYAA0Ksu9CAh6hxbTbvFzfx6rNEGlHY6z5KvMw4s43mN2Z5fqYLzKyrfyXhXKnKBdD9n58UWW3Vlb3mOCmWoHHZbdV5lv8t7Ver6ldsfqumVAdbblxxcZVcd7QWq2Y6VsadS4ZTzFDbFa5XivqlxVUFG1Jd6k66u8x0RIOw0cXAiNW2z58bJ5r1LTQtVVuy1x2jK+yLTlxy3v5RogszEXSB0ZF4iYWLbMMUBGPDbvpRQUVUV9kvGU6ynrIe9FOqssJcQ4oqurCjV6ytmqco4SwvGeNCoJaphwSHoK13cyuuU9ZaQI0lB1qB8zT3GL2XjKueU9pR+gH0OlqvGUzHWLQ81O0Dg95L3Uj9qxKx0pr3LdYrnlvQKlUEnV/8v4Xt6bThZROwaO5QfTUyY4GCBWu8Wf/nO4ULtj/li3mE9Z47zlx/WU94Iq7RD5XuZ6ynjIGn9yr1VhFaq2NH9s4bP4Rt5j2NFO5MBXGVsmsD5v3gslYORsd8R1i1rrIUoLKLXlvVhgKH7ApToyhk21TJhbLDvdN151vEetJtKdOtYo4SmnOvhGpjpe+xuj3X723ghdygAAAABJRU5ErkJggg==) EOT;
   custom "Custom" <<<EOT
-  var(--bg-custom) EOT;
+  var(--ghd-bg-custom) EOT;
   none "None" <<<EOT
   none EOT;
 }
@@ -194,11 +194,13 @@
   } EOT;
 }
 ==/UserStyle== */
+:root {
+  --ghd-bg-custom: /*[[bg-custom]]*/;
+  --ghd-bg-img: /*[[bg-choice]]*/;
+  --ghd-code-background: #141414;
+  --ghd-code-color: #ccc;
+}
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
-  :root {
-    --bg-custom: /*[[bg-custom]]*/;
-    --bg-img: /*[[bg-choice]]*/;
-  }
   button {
     color: #b5b5b5;
   }
@@ -20120,7 +20122,7 @@
   /* end github.com rules */
   body, body.bg-gray {
     background-color: #151515 !important;
-    background-image: var(--bg-img) !important;
+    background-image: var(--ghd-bg-img) !important;
     background-clip: border-box !important;
     background-origin: padding-box !important;
     background-attachment: /*[[bg-attachment]]*/ !important;
@@ -22985,14 +22987,14 @@
   #notebook .input_area, .blob-code-context, .markdown-format code, .api pre,
   .api li:not(a) code, .hook-delivery-details pre, .hook-delivery-container pre,
   .code-list .file-box, .CodeMirror, .highlight.bg-gray {
-    background-color: var(--ghd-code-background, #141414) !important;
-    color: var(--ghd-code-color, #ccc) !important;
+    background-color: var(--ghd-code-background) !important;
+    color: var(--ghd-code-color) !important;
   }
   .flash p code {
     background-color: inherit !important;
   }
   .blob-code, .blob-code-inner {
-    color: var(--ghd-code-color, #ccc) !important;
+    color: var(--ghd-code-color) !important;
   }
 }
 @-moz-document domain("developer.github.com") {
@@ -25839,7 +25841,7 @@
   }
   /* Using #fff over currentColor because GH relies on browser default #000 */
   .hljs {
-    color: var(--ghd-code-color, #ccc);
+    color: var(--ghd-code-color);
   }
   .extended-markdown p code {
     background-color: #1e293c !important;
@@ -34154,17 +34156,13 @@
   }
 }
 @-moz-document domain("stylishthemes.github.io") {
-  :root {
-    --bg-custom: /*[[bg-custom]]*/;
-    --bg-img: /*[[bg-choice]]*/;
-  }
   * {
     box-sizing: border-box;
   }
   body {
     color: #e0e0e0;
     background-color: #202020;
-    background-image: var(--bg-img);
+    background-image: var(--ghd-bg-img);
     background-clip: border-box;
     background-origin: padding-box;
     background-attachment: /*[[bg-attachment]]*/;
