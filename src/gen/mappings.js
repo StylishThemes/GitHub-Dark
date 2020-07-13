@@ -43,6 +43,7 @@ module.exports.mappings = {
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
+  "$color: rgba(4,66,137,.2)": "#224466",  // .flash
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: #257bf9": "#4f8cc9",
   "$color: #eaf5ff": "#182030", // .full-commit
