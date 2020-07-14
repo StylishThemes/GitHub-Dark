@@ -2,7 +2,7 @@ all: build
 
 test: lint
 
-build:
+build: node_modules
 	node tools/clean.js
 	node tools/build.js
 
