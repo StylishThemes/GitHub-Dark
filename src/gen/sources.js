@@ -26,31 +26,37 @@ module.exports.sources = [
     name: "docs.github.com",
     url: "https://docs.github.com",
     file: resolve(__dirname, "../src/docs.css"),
+    strict: true,
   },
   {
     name: "developer.github.com",
     url: "https://developer.github.com",
     file: resolve(__dirname, "../src/developer.css"),
+    strict: true,
   },
   {
     name: "graphql.github.com",
     url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
     file: resolve(__dirname, "../src/graphql.css"),
+    strict: true,
   },
   {
     name: "support.github.com",
     url: "https://support.github.com",
     file: resolve(__dirname, "../src/support.css"),
+    strict: true,
   },
   {
     name: "vscode-auth.github.com",
     url: "https://vscode-auth.github.com",
     file: resolve(__dirname, "../src/vscode-auth.css"),
+    strict: true,
   },
   {
     name: "githubstatus.com",
     url: "https://www.githubstatus.com",
     file: resolve(__dirname, "../src/status.css"),
+    strict: true,
   },
   {
     name: "render.githubusercontent.com",
@@ -59,6 +65,7 @@ module.exports.sources = [
       "https://render.githubusercontent.com/diff/img?commit=0fabf58a4b0a00d048d06113a063738afb674ed7&enc_url1=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f306661626635386134623061303064303438643036313133613036333733386166623637346564372f696d616765732f73637265656e73686f74732f6265666f72652e706e67&enc_url2=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5374796c6973685468656d65732f4769744875622d4461726b2f613434323536373337663932303861633263393435613266633561633133666562343536336262332f696d616765732f73637265656e73686f74732f6265666f72652e706e67",
     ],
     file: resolve(__dirname, "../src/render.css"),
+    strict: true,
   },
   {
     name: "refined-github",
