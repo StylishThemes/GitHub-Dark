@@ -32,7 +32,7 @@ module.exports.mappings = {
   "$color: #c6cbd1": "#5a5a5a",
 
   // blue (base color)
-  "$color: rgba(3,102,214,.5)": "/*[[base-color]]*/80",
+  "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
   "$color: #3b5998": "/*[[base-color]]*/",
   "$color: #0366d6d0": "/*[[base-color]]*/", // gitako
   "$color: #0361cc": "/*[[base-color]]*/",
@@ -40,7 +40,7 @@ module.exports.mappings = {
   "$color: #0679fc": "/*[[base-color]]*/",
   "$color: #79b8ff": "/*[[base-color]]*/",
   "$color: #b4d6fe": "/*[[base-color]]*/", /* github hovercard */
-  "$color: #044289": "/*[[base-color]]*/80", // help sidebar
+  "$color: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
