@@ -9,7 +9,6 @@ module.exports.mappings = {
   // monochrome
   "$color: rgba(209,213,218,0)": "transparent",
   "$color: rgba(255,255,255,0)": "transparent",
-  "$color: rgba(220,220,220,.22)": "rgba(36, 36, 36, .22)",
   "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
   "$color: rgba(149,157,165,.3)": "rgba(0,0,0,.3)", // .box-shadow-extra-large
