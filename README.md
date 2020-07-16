@@ -59,7 +59,7 @@
 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)<br>
 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
-💾 [ZenHub](https://www.zenhub.io/)<br>
+💾 [ZenHub](https://www.zenhub.com/)<br>
 💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
