@@ -63,6 +63,7 @@ module.exports.mappings = {
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: #257bf9": "#4f8cc9",
   "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #d2dff0": "#224466", // org discussion reactions
 
   // red
   "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
