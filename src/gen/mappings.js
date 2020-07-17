@@ -272,6 +272,7 @@ module.exports.mappings = {
   "color: rgba(27,31,35,.3)": "color: rgba(230,230,230,.3)",
   "color: rgba(36,41,46,.4)": "color: rgba(210,210,210,.4)",
   "color: rgb(36,41,46)": "color: rgb(210,210,210) !important", // notifications preview
+  "color: hsla(0,0%,100%,.8)": "color: hsla(0,0%,100%,.3)",
 
   "fill: #959da5": "fill: #757575",
 
