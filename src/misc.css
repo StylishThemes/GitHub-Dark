@@ -44,12 +44,15 @@
     filter: brightness(60%);
   }
 }
-@-moz-document regexp("^https?://github\.com/(features|security)") {
+@-moz-document regexp("^https?://github\.com/(features|security).*") {
   img[src*="img-"], img[src*="security"] {
     filter: invert(90%) hue-rotate(-180deg) !important;
   }
   img[src*="img-share-achievements.png"] {
     filter: invert(100%) hue-rotate(-85deg) !important;
+  }
+  .jumbotron-codelines {
+    color: #dcdcdc;
   }
 }
 @-moz-document domain("stylishthemes.github.io") {
