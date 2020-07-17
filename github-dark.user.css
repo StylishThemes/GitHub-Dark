@@ -26075,6 +26075,13 @@
   body.zh_logged_in .zh-issue-event-dark {
     color: #bebebe;
   }
+  /* zenhub: "#5e60ba" */
+  body.zh_logged_in .sidebar-zh-epic .discussion-sidebar-toggle:hover,
+  body.zh_logged_in .sidebar-zh-epic .zh-discussion-sidebar-toggle:hover,
+  body.zh_logged_in .sidebar-zh-estimate .discussion-sidebar-toggle:hover,
+  body.zh_logged_in .sidebar-zh-estimate .zh-discussion-sidebar-toggle:hover {
+    color: #5560d2;
+  }
   /* zenhub: "#e5e5e5" */
   body.zh_logged_in .zh-estimate-create-item {
     border-top-color: #343434;
@@ -26422,10 +26429,13 @@
     background-image: none;
   }
   /* zenhub: "#fff" */
-  body.zh_logged_in .zh-onboarding-highlighted,
-  body.zh_logged_in .zh-select-menu-modal-body .zh-select-menu-modal,
-  body.zh_logged_in .zhe .zh-onboarding-highlighted {
+  body.zh_logged_in .zh-select-menu-modal-body .zh-select-menu-modal {
     background-color: #181818;
+  }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zh-onboarding-highlighted,
+  body.zh_logged_in .zhe .zh-onboarding-highlighted {
+    background-color: #181818 !important;
   }
   /* zenhub: "color: #000" */
   body.zh_logged_in .zhe .zh-onboarding-highlighted .header-nav-link {
@@ -26487,6 +26497,10 @@
   /* zenhub: "none" */
   body.zh_logged_in .zh-discussion-sidebar-toggle {
     background: none;
+  }
+  /* zenhub: "#5e60ba" */
+  body.zh_logged_in .zh-discussion-sidebar-toggle:hover .zhc-svg-icon--extension {
+    color: #5560d2;
   }
   /* zenhub: "#f5f5f5" */
   body.zh_logged_in .zh-select-menu-footer {
@@ -27433,23 +27447,6 @@
   body.zh_logged_in .zhc-board-loading__message .zhc-spinner-outline {
     box-shadow: none;
   }
-  /* zenhub: "color: #fff" */
-  body.zh_logged_in .zhc-board-onboarding,
-  body.zh_logged_in .zhc-board-onboarding .zhc-board-onboarding__footer__cta a {
-    color: #fff;
-  }
-  /* zenhub: "#f8f8f8" */
-  body.zh_logged_in .zhc-board-onboarding--mobile {
-    background-color: #202020;
-  }
-  /* zenhub: "color: #666" */
-  body.zh_logged_in .zhc-board-onboarding--mobile .zhc-board-onboarding__content__text__description {
-    color: #949494;
-  }
-  /* zenhub: "#5e60ba" */
-  body.zh_logged_in .zhc-board-onboarding--mobile .zhc-board-onboarding__footer a {
-    color: #5560d2;
-  }
   /* zenhub: "#f8f8f8", "#e9e9e9" */
   body.zh_logged_in .zhc-breadcrumbs--default .zhc-breadcrumbs__button--active,
   body.zh_logged_in .zhc-breadcrumbs--default .zhc-breadcrumbs__button:hover {
@@ -27532,31 +27529,32 @@
     border-color: #343434;
     box-shadow: none;
   }
-  /* zenhub: "transparent", "box-shadow: none" */
-  body.zh_logged_in .zhc-button--variant-text {
+  /* zenhub: "color: #333", "transparent", "box-shadow: none" */
+  body.zh_logged_in .zhc-button.zhc-button--variant-text {
+    color: #bebebe;
     background-color: transparent;
     box-shadow: none;
-  }
-  /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none", "transparent" */
-  body.zh_logged_in .zhc-button--variant-text[disabled] {
-    background-color: #202020;
-    border-color: #343434;
-    box-shadow: none;
-    background-color: transparent;
   }
   /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none" */
-  body.zh_logged_in .zhc-button--variant-text[disabled]:active,
-  body.zh_logged_in .zhc-button--variant-text[disabled]:focus,
-  body.zh_logged_in .zhc-button--variant-text[disabled]:hover {
+  body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled],
+  body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:active,
+  body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:focus,
+  body.zh_logged_in .zhc-button.zhc-button--variant-text[disabled]:hover {
     background-color: #202020;
     border-color: #343434;
     box-shadow: none;
   }
-  /* zenhub: "transparent" */
-  body.zh_logged_in .zhc-button--variant-text:active,
-  body.zh_logged_in .zhc-button--variant-text:focus,
-  body.zh_logged_in .zhc-button--variant-text:hover {
+  /* zenhub: "color: #333", "transparent", "#e9e9e9" */
+  body.zh_logged_in .zhc-button.zhc-button--variant-text:active,
+  body.zh_logged_in .zhc-button.zhc-button--variant-text:hover {
+    color: #bebebe;
     background-color: transparent;
+    border-color: #343434;
+  }
+  /* zenhub: "transparent", "#e9e9e9" */
+  body.zh_logged_in .zhc-button.zhc-button--variant-text:focus {
+    background-color: transparent;
+    border-color: #343434;
   }
   /* zenhub: "color: #fff", "#5e60ba" */
   body.zh_logged_in .zhc-button--color-primary {
@@ -27578,14 +27576,8 @@
     background-color: transparent;
     box-shadow: none;
   }
-  /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none", "transparent" */
-  body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled] {
-    background-color: #202020;
-    border-color: #343434;
-    box-shadow: none;
-    background-color: transparent;
-  }
   /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none" */
+  body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-primary.zhc-button--variant-text[disabled]:hover {
@@ -27649,14 +27641,8 @@
     background-color: transparent;
     box-shadow: none;
   }
-  /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none", "transparent" */
-  body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled] {
-    background-color: #202020;
-    border-color: #343434;
-    box-shadow: none;
-    background-color: transparent;
-  }
   /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none" */
+  body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text[disabled]:hover {
@@ -27664,15 +27650,17 @@
     border-color: #343434;
     box-shadow: none;
   }
-  /* zenhub: "color: #333", "transparent" */
+  /* zenhub: "color: #333", "transparent", "#e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text:active,
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text:hover {
     color: #bebebe;
     background-color: transparent;
+    border-color: #343434;
   }
-  /* zenhub: "transparent" */
+  /* zenhub: "transparent", "#e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-text:focus {
     background-color: transparent;
+    border-color: #343434;
   }
   /* zenhub: "#fff", "#fff", "color: #333", "#e9e9e9" */
   body.zh_logged_in .zhc-button--color-secondary.zhc-button--variant-outlined {
@@ -27713,14 +27701,8 @@
     background-color: transparent;
     box-shadow: none;
   }
-  /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none", "transparent" */
-  body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled] {
-    background-color: #202020;
-    border-color: #343434;
-    box-shadow: none;
-    background-color: transparent;
-  }
   /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none" */
+  body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-action.zhc-button--variant-text[disabled]:hover {
@@ -27771,14 +27753,8 @@
     background-color: transparent;
     box-shadow: none;
   }
-  /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none", "transparent" */
-  body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled] {
-    background-color: #202020;
-    border-color: #343434;
-    box-shadow: none;
-    background-color: transparent;
-  }
   /* zenhub: "#f8f8f8", "#e9e9e9", "box-shadow: none" */
+  body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled],
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:active,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:focus,
   body.zh_logged_in .zhc-button--color-danger.zhc-button--variant-text[disabled]:hover {
@@ -28547,9 +28523,8 @@
     background-color: #242424;
     border-right-color: #343434;
   }
-  /* zenhub: "#f8f8f8", "#e9e9e9" */
+  /* zenhub: "#e9e9e9" */
   body.zh_logged_in .zhc-grid-table__first-col {
-    background-color: #202020;
     border-right-color: #343434;
   }
   /* zenhub: "#fff" */
@@ -28884,6 +28859,10 @@
     background-color: #181818;
     border-color: #343434;
   }
+  /* zenhub: "#e9e9e9" */
+  body.zh_logged_in .zhc-new-issue-body__dropdown-divider {
+    border-bottom-color: #343434;
+  }
   /* zenhub: "#5e60ba" */
   body.zh_logged_in .zhc-pr-header-info__link {
     color: #5560d2;
@@ -28937,21 +28916,21 @@
     color: #bebebe;
     background: none;
   }
-  /* zenhub: "#5e60ba" */
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button .zhc-svg-icon--gear-github:hover {
-    color: #5560d2;
-  }
   /* zenhub: "color: #666" */
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button .zhc-svg-icon--gear-github:hover,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button .zhc-svg-icon--gear:hover {
     color: #949494;
   }
   /* zenhub: "#5e60ba" */
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button:active,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button:active .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button:active .zhc-svg-icon--extension,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button:focus,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button:focus .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button:focus .zhc-svg-icon--extension,
   body.zh_logged_in .zhc-sidebar-pipeline-selector__button:hover,
-  body.zh_logged_in .zhc-sidebar-pipeline-selector__button:hover .zhc-sidebar-active-pipeline__name {
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button:hover .zhc-sidebar-active-pipeline__name,
+  body.zh_logged_in .zhc-sidebar-pipeline-selector__button:hover .zhc-svg-icon--extension {
     color: #5560d2;
   }
   /* zenhub: "color: #333" */
@@ -28983,8 +28962,11 @@
   }
   /* zenhub: "#5e60ba" */
   body.zh_logged_in .zhc-sidebar-selector-button:active .zhc-sidebar-selector-button__heading,
+  body.zh_logged_in .zhc-sidebar-selector-button:active .zhc-svg-icon--extension,
   body.zh_logged_in .zhc-sidebar-selector-button:focus .zhc-sidebar-selector-button__heading,
-  body.zh_logged_in .zhc-sidebar-selector-button:hover .zhc-sidebar-selector-button__heading {
+  body.zh_logged_in .zhc-sidebar-selector-button:focus .zhc-svg-icon--extension,
+  body.zh_logged_in .zhc-sidebar-selector-button:hover .zhc-sidebar-selector-button__heading,
+  body.zh_logged_in .zhc-sidebar-selector-button:hover .zhc-svg-icon--extension {
     color: #5560d2;
   }
   /* zenhub: "color: #333" */
@@ -28994,9 +28976,7 @@
     color: #bebebe;
   }
   /* zenhub: "color: #666" */
-  body.zh_logged_in .zhc-sidebar-selector-button:active .zhc-svg-icon--gear-github,
-  body.zh_logged_in .zhc-sidebar-selector-button:focus .zhc-svg-icon--gear-github,
-  body.zh_logged_in .zhc-sidebar-selector-button:hover .zhc-svg-icon--gear-github {
+  body.zh_logged_in .zhc-sidebar-selector-button .zhc-svg-icon--gear:hover {
     color: #949494;
   }
   /* zenhub: "color: #333" */
@@ -29454,33 +29434,6 @@
     border-top-color: #343434;
     background-color: #181818;
   }
-  /* zenhub: "color: #fff", "#5e60ba" */
-  body.zh_logged_in .zh-onboarding-banner {
-    color: #fff;
-    background-color: #5560d2;
-  }
-  /* zenhub: "color: #fff !important" */
-  body.zh_logged_in .zh-onboarding-banner .zhc-click-text-item {
-    color: #fff !important;
-  }
-  /* zenhub: "color: #fff" */
-  body.zh_logged_in .zh-onboarding-banner__header__step {
-    color: #fff;
-  }
-  /* zenhub: "#fff" */
-  body.zh_logged_in .zh-onboarding-banner__progress-dot {
-    background-color: #181818;
-  }
-  /* zenhub: "transparent" */
-  @media (max-width: 759px) {
-    body.zh_logged_in .zh-onboarding-banner__next-step .zhc-click-text-item {
-      background-color: transparent;
-    }
-  }
-  /* zenhub: "color: #fff" */
-  body.zh_logged_in .zh-onboarding-banner__navigation a {
-    color: #fff;
-  }
   /* zenhub: "#fff", "#e9e9e9" */
   body.zh_logged_in .zhc-onboarding-page .zhc-sidebar-container {
     background-color: #181818;
@@ -29894,10 +29847,11 @@
   body.zh_logged_in .zhc-selection-list__item__user__text {
     color: #949494;
   }
-  /* zenhub: "#e9e9e9", "rgba(27,31,35,0.15)" */
+  /* zenhub: "#fff", "#e9e9e9", "rgba(27,31,35,0.15)", "#fff" */
   body.zh_logged_in .zhc-selection-list__layout {
     border-color: #343434;
     box-shadow: 0 3px 12px #000;
+    background-color: #181818;
   }
   /* zenhub: "#fff", "#e9e9e9" */
   body.zh_logged_in .zhc-selection-list__item {
@@ -29918,7 +29872,8 @@
     border-top-color: #343434;
   }
   /* zenhub: "color: #333" */
-  body.zh_logged_in .zhc-selection-list__header {
+  body.zh_logged_in .zhc-selection-list__header,
+  body.zh_logged_in .zhc-selection-list__header__close:hover {
     color: #bebebe;
   }
   /* zenhub: "#f8f8f8", "#e9e9e9" */
@@ -29944,7 +29899,7 @@
     border-color: transparent transparent #343434;
   }
   /* zenhub: "#f4f4f4", "#e9e9e9" */
-  body.zh_logged_in .zhc-seleciton-list-action-modifier--is-hovering {
+  body.zh_logged_in .zhc-seleciton-list-action-modifier:hover {
     background-color: #242424;
     border-color: #343434;
   }
@@ -29953,7 +29908,8 @@
     border-color: transparent transparent #343434;
   }
   /* zenhub: "#f4f4f4", "#e9e9e9" */
-  body.zh_logged_in .zhnc-selection-list-item--is-hovering {
+  body.zh_logged_in .zhnc-selection-list-item--is-hovering,
+  body.zh_logged_in .zhnc-selection-list-item:not(.zhnc-selection-list-item--disable-hover):hover {
     background-color: #242424;
     border-color: #343434;
   }
@@ -30489,53 +30445,6 @@
   body.zh_logged_in .zhc-topbar__sidebar-toggle {
     border-right-color: #343434;
   }
-  /* zenhub: "#fff" */
-  body.zh_logged_in .zhc-tutorial-card {
-    background-color: #181818;
-  }
-  /* zenhub: "color: #fff !important" */
-  body.zh_logged_in .zhc-tutorial-card--purple .zhc-tutorial-card__subtitle,
-  body.zh_logged_in .zhc-tutorial-card--purple .zhc-tutorial-card__title {
-    color: #fff !important;
-  }
-  /* zenhub: "color: #333" */
-  body.zh_logged_in .zhc-tutorial-card__title {
-    color: #bebebe;
-  }
-  /* zenhub: "#f8f8f8" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal {
-    background-color: #202020;
-  }
-  /* zenhub: "color: #666" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__header__dismiss {
-    color: #949494;
-  }
-  /* zenhub: "#e9e9e9", "#5e60ba" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__left {
-    background-color: #343434;
-    color: #5560d2;
-  }
-  /* zenhub: "#fff" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__dropdown .zhc-btn {
-    background-color: #181818;
-  }
-  /* zenhub: "#e9e9e9" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__description input,
-  body.zh_logged_in .zhc-tutorial-checklist-modal__description textarea {
-    border-color: #343434;
-  }
-  /* zenhub: "#fff" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__description input {
-    background-color: #181818;
-  }
-  /* zenhub: "color: #666" */
-  body.zh_logged_in .zhc-tutorial-checklist-modal__navigation {
-    color: #949494;
-  }
-  /* zenhub: "color: #fff" */
-  body.zh_logged_in .zhc-tutorial-card--circle--checked {
-    color: #fff;
-  }
   /* zenhub: "#ccc", "color: #fff" */
   body.zh_logged_in .zhc-untitled-tag {
     background-color: #484848;
@@ -30826,14 +30735,92 @@
   body.zh_logged_in .zhc-team-members-page__search {
     border-bottom-color: #343434;
   }
+  /* zenhub: "color: #666" */
+  body.zh_logged_in .zhc-epic-builder__assignee-count {
+    color: #949494;
+  }
   /* zenhub: "#fff", "#e9e9e9" */
   body.zh_logged_in .zhc-epic-issue-list {
     background-color: #181818;
     border-color: #343434;
   }
   /* zenhub: "#f8f8f8" */
-  body.zh_logged_in .zhc-epic-builder-pipeline-cell {
+  body.zh_logged_in .zhc-epic-issue-list-table__cell--dark {
     background-color: #202020;
+  }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhc-epic-issue-list-table__cell--light {
+    background-color: #181818;
+  }
+  /* zenhub: "color: #666" */
+  body.zh_logged_in .zhc-issue-list-table__assignee-count {
+    color: #949494;
+  }
+  /* zenhub: "#f8f8f8" */
+  body.zh_logged_in .zhc-epic-builder-pipeline-cell,
+  body.zh_logged_in .zhc-issue-list-table__first-col {
+    background-color: #202020;
+  }
+  /* zenhub: "color: #fff" */
+  body.zh_logged_in .zhc-floating-tooltip {
+    color: #fff;
+  }
+  /* zenhub: "none", "box-shadow: none" */
+  body.zh_logged_in .zhc-floating-tooltip__popover {
+    background: none;
+    box-shadow: none;
+  }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhc-onboarding-tutorials {
+    background-color: #181818;
+  }
+  /* zenhub: "color: #fff" */
+  body.zh_logged_in .zhc-onboarding-tutorials > header {
+    color: #fff;
+  }
+  /* zenhub: "none", "color: #fff" */
+  body.zh_logged_in .zhc-onboarding-tutorials__close-button {
+    background: none;
+    color: #fff;
+  }
+  /* zenhub: "none", "#e9e9e9" */
+  body.zh_logged_in .zhc-onboarding-tutorials__launch-button {
+    background: none;
+    border-top-color: #343434;
+  }
+  /* zenhub: "#e9e9e9", "#f8f8f8" */
+  body.zh_logged_in .zhc-onboarding-tutorials__launch-button:hover {
+    border-color: #343434;
+    background-color: #202020;
+  }
+  /* zenhub: "#e9e9e9" */
+  body.zh_logged_in .zhc-onboarding-tutorials__help-link {
+    border-top-color: #343434;
+  }
+  /* zenhub: "#fff" */
+  body.zh_logged_in .zhc-onboarding-welcome {
+    background-color: #181818;
+  }
+  /* zenhub: "none", "color: #666" */
+  body.zh_logged_in .zhc-onboarding-welcome__close-button {
+    background: none;
+    color: #949494;
+  }
+  /* zenhub: "color: #333" */
+  body.zh_logged_in .zhc-onboarding-welcome__close-button:hover {
+    color: #bebebe;
+  }
+  /* zenhub: "color: #666" */
+  body.zh_logged_in .zhc-onboarding-welcome__text {
+    color: #949494;
+  }
+  /* zenhub: "color: #333" */
+  body.zh_logged_in .zhc-onboarding-welcome__text b {
+    color: #bebebe;
+  }
+  /* zenhub: "color: #fff" */
+  body.zh_logged_in .zhc-onboarding-highlight__arrow-icon {
+    color: #fff;
   }
   /* zenhub: "box-shadow: none" */
   body.zh_logged_in .zhc-roadmap-calendar.zhc-popover .DateRangePicker .DateRangePicker_picker .DayPicker.DayPicker__horizontal {
@@ -31126,6 +31113,15 @@
   /* zenhub: "box-shadow: none" */
   body.zh_logged_in .zhc-toast-tutorial__action-buttons {
     box-shadow: none;
+  }
+  /* zenhub: "#fff", "color: #666" */
+  body.zh_logged_in .zhc-toast-tutorial__controls button {
+    background-color: #181818;
+    color: #949494;
+  }
+  /* zenhub: "color: #333" */
+  body.zh_logged_in .zhc-toast-tutorial__controls button:hover {
+    color: #bebebe;
   }
   /* zenhub: "#fff", "rgba(27,31,35,0.15)" */
   body.zh_logged_in .zhc-workflows-connection-bar {
