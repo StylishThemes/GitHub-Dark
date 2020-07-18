@@ -18,9 +18,9 @@ module.exports.mappings = {
   "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
   "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
 
-  "$background: #fff": "#181818",
-  "$border: #fff": "#181818",
-  "$box-shadow: #fff": "#181818",
+  "$background: #fff": "#151515",
+  "$border: #fff": "#151515",
+  "$box-shadow: #fff": "#151515",
   "color: #fff": "color: #fff",
 
   "$color: #f3f4f6": "#242424",
