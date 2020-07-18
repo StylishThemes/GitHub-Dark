@@ -248,11 +248,11 @@ module.exports.mappings = {
   "color: #000": "color: #f0f0f0",
   "color: #1b1f23": "color: #dcdcdc",
   "color: #141823": "color: #dcdcdc", // graphql explorer
-  "color: #24292e": "color: #cdcdcd", // .btn
-  "color: #2f363d": "color: #bebebe",
-  "color: #333": "color: #bebebe",
-  "color: #393939": "color: #bebebe",
-  "color: #3c4146": "color: #bebebe",
+  "color: #24292e": "color: #c6c6c6", // .btn
+  "color: #2f363d": "color: #c6c6c6",
+  "color: #333": "color: #c6c6c6",
+  "color: #393939": "color: #c6c6c6",
+  "color: #3c4146": "color: #c6c6c6",
   "color: #444": "color: #afafaf",
   "color: #555": "color: #afafaf", // graphql explorer
   "color: #586069": "color: #afafaf",
@@ -276,12 +276,12 @@ module.exports.mappings = {
 
   "color: rgba(88,96,105,.5)": "color: rgba(148,148,148,.5)",
 
-  "fill: #24292e": "fill: #bebebe",
-  "stroke: #24292e": "stroke: #d2d2d2",
+  "fill: #24292e": "fill: #c6c6c6",
+  "stroke: #24292e": "stroke: #c6c6c6",
 
   // blue
   "color: #032f62": "color: #9daccc",
-  "color: #05264c": "color: #bebebe", // big commit title
+  "color: #05264c": "color: #c6c6c6", // big commit title
   "color: #264c72": "color: #9daccc",
   "$background: #f1f8ff": "#182030",
   "$background: #032f62": "#182030",
