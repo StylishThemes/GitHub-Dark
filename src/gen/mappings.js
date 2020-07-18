@@ -30,6 +30,7 @@ module.exports.mappings = {
   "$color: #dfe2e5": "#343434",
   "$color: #d1d5da": "#404040",
   "$color: #c6cbd1": "#5a5a5a",
+  "$color: #444d56": "#afafaf", // .full-commit .commit-desc pre
 
   // blue (base color)
   "$color: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
@@ -201,7 +202,6 @@ module.exports.mappings = {
   "$border: rgba(27,31,35,.05)": "rgba(220,220,220,.05)",
   "$border: rgba(0,0,0,.125)": "rgba(220,220,220,.125)",
 
-  "$border: #444d56": "#484848",
   "$border: #484848": "#afafaf", // github blog
   "$border: #959da5": "#484848",
   "$border: #bbb": "#484848",
@@ -254,7 +254,6 @@ module.exports.mappings = {
   "color: #393939": "color: #bebebe",
   "color: #3c4146": "color: #bebebe",
   "color: #444": "color: #afafaf",
-  "color: #444d56": "color: #afafaf",
   "color: #555": "color: #afafaf", // graphql explorer
   "color: #586069": "color: #afafaf",
   "color: #666": "color: #9b9b9b",

@@ -2,7 +2,6 @@ module.exports.ignores = [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter
-  /\spre$/,
   /^.Popover-message:before$/,
   /^.Popover-message:after$/,
   /^h[1-6] a$/, // conflicting styles from docs.github.com
