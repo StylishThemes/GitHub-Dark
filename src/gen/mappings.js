@@ -257,8 +257,8 @@ module.exports.mappings = {
   "color: #444d56": "color: #afafaf",
   "color: #555": "color: #afafaf", // graphql explorer
   "color: #586069": "color: #afafaf",
-  "color: #666": "color: #949494",
-  "color: #6a737d": "color: #949494",
+  "color: #666": "color: #9b9b9b",
+  "color: #6a737d": "color: #9b9b9b",
   "color: #959da5": "color: #767676",
   "color: #767676": "color: #767676",
   "color: #808891": "color: #767676",
