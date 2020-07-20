@@ -1,5 +1,13 @@
 module.exports.mappings = {
   // ==========================================================================
+  //                         Short How-to
+  // `$border: value`: Any occurance of `value` in a `border` property.
+  // `$background: value` Any occurance of `value` in a `background` property.
+  // `$box-shadow: value` Any occurance of `value` in a `box-shadow` property.
+  // `$color: value`: Any occurance of `value`.
+  // `color | fill | background | etc: value`: Any occurance of `value` in a `color | fill | background | etc` property.
+  //
+  // ==========================================================================
   // Color anywhere
   // ==========================================================================
 

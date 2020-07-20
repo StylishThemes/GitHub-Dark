@@ -100,30 +100,36 @@
 
 [1]:https://github.com/StylishThemes/GitHub-Dark/pull/568
 
-## Notes
-
-- If you're using a custom domain for GitHub Enterprise, be sure to include it through a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
-
-## Contributions
+## Contributions and Development
 
 If you would like to contribute to this repository, please...
 
-1. 👓 Read the [contribution guidelines](./CONTRIBUTING.md).
-1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork) or [![cloud-download](https://user-images.githubusercontent.com/136959/42401932-9ee9cae0-813d-11e8-8691-16e29a85d3b9.png) download](https://github.com/StylishThemes/GitHub-Dark/archive/master.zip) this repository.
-1. 👌 Create a pull request!
-
-## Development
-
-First, make sure you have these installed:
+1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork)
+1. Make sure you have these installed:
 
 - [`node`](https://nodejs.org): version 12 or greater
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
-- A Unix-like environment with `make` (on Windows use [this](https://stackoverflow.com/a/54086635/808699))
+- `make`: available with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
 
-Edit the files in [`src`](./src) and then run `make build install` to rebuild the style and install it.
+Then run `make deps` to install dependencies.
+
+### Auto generated CSS
+
+Contributing e.g unstyled items, sources, extensions, etc. to name a few.
+
+See and edit the respective files in [/src/gen/](./src/gen/).
+
+And then run `make build install` to rebuild the style and install it test you fixes and PR back.
+
+### Manual override entries
+
+Manual overrides to e.g. generated content or inline HTML styles to name a few;
+
+See and edit respective files in [`src`](./src) and then run `make build install` to rebuild and install the style, to test you fixes and PR back.
 
 ### Make Targets
 
+- `make deps`: Install development dependencies into `Github Dark/node_modules`
 - `make build`: Build `github-dark.user.css`
 - `make install`: Install `github-dark.user.css`
 - `make lint`: Run linters
@@ -133,9 +139,18 @@ Lesser used targets include:
 
 - `make authors`: Regenerate the `AUTHORS` file based on git history
 - `make update`: Update dependencies
+- `make`: Alias for `make build`
+
+Internal use only targets include:
+
 - `make patch`: Increment the patch version, create a commit and push it
 - `make minor`: Increment the minor version, create a commit and push it
 - `make major`: Increment the major version, create a commit and push it
-- `make`: Alias for `make build`
 
-Thanks to all that have [contributed](./AUTHORS) so far! And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
+## Notes
+
+- If you're using a custom domain for GitHub Enterprise, be sure to include it through a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome). See
+
+- Any additions into `github-dark.user.css` are lost on `make build`
+
+Thanks to all our [contributors](./AUTHORS) so far! And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
