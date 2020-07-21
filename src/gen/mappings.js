@@ -320,4 +320,5 @@ module.exports.mappings = {
   "$background: none": "none",
   "$background: initial": "initial",
   "$background: transparent": "transparent",
+  "$border: transparent": "transparent",
 };
