@@ -38,7 +38,12 @@ module.exports.mappings = {
   "$color: #dfe2e5": "#343434",
   "$color: #d1d5da": "#404040",
   "$color: #c6cbd1": "#5a5a5a",
-  "$color: #444d56": "#afafaf", // .full-commit .commit-desc pre
+
+  // #444d56 is used for various dark-ish parts like actions. only invert text color for it
+  "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
+  "$border: #444d56": "#343434",
+  "$background: #444d56": "#343434",
+  "$box-shadow: #444d56": "#343434",
 
   // blue (base color)
   "$color: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
@@ -177,7 +182,7 @@ module.exports.mappings = {
   "$background: #ccc": "#484848",
   "$background: #6a737d": "#444",
   "$background: #586069": "#343434",
-  "$background: #2f363d": "#282828",
+  "$background: #2f363d": "#222",
   "$background: #24292e": "#181818",
 
   "$background: rgba(225,228,232,0.31)": "#282828",
