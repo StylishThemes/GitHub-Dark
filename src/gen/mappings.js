@@ -93,6 +93,7 @@ module.exports.mappings = {
 
   // yellow / brown
   "$color: rgba(47,38,6,.5)": "#cb4",
+  "$color: rgba(176,136,0,.2)": "#bba257", // .flash-warn
   "$color: rgba(115,92,15,.5)": "rgba(204,187,68,.5)",
   "$color: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
   "$color: #613a00": "#bba257",
