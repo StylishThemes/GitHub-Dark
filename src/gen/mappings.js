@@ -322,4 +322,5 @@ module.exports.mappings = {
   "$background: initial": "initial",
   "$background: transparent": "transparent",
   "$border: transparent": "transparent",
+  "$border: currentcolor": "currentcolor",
 };
