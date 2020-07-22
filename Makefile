@@ -31,15 +31,15 @@ update: node_modules
 	yarn -s
 	@touch yarn.lock
 
-patch: node_modules lint
+patch: node_modules lint build
 	yarn -s run versions -pdC patch github-dark.user.css
 	git push --tags origin master
 
-minor: node_modules lint
+minor: node_modules lint build
 	yarn -s run versions -pdC minor github-dark.user.css
 	git push --tags origin master
 
-major: node_modules lint
+major: node_modules lint build
 	yarn -s run versions -pdC major github-dark.user.css
 	git push --tags origin master
 
