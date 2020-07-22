@@ -1352,8 +1352,7 @@
   /* change forground color of disabled things */
   .btn-primary.disabled, .btn-primary:disabled,
   .btn-primary[aria-disabled="true"], .btn.disabled, .btn:disabled,
-  .btn[aria-disabled="true"], .btn-secret.disabled, .btn-secret.disabled:hover,
-  .btn-secret:disabled, .btn-secret:disabled:hover {
+  .btn[aria-disabled="true"] {
     color: hsla(0, 0%, 100%, .3);
   }
   /* svg styling */
@@ -1825,17 +1824,31 @@
     border: 1px solid #542 !important;
     color: #ddd !important;
   }
-  .btn.btn-secret {
-    background: linear-gradient(#321, #210) !important;
-    border-color: #542 !important;
+  /* gist secret button */
+  .btn-secret {
+    background-color: #321;
+    background: linear-gradient(#321, #321);
+    border-color: #542;
   }
-  .btn.btn-secret:hover {
-    background: linear-gradient(#432, #321) !important;
+  .btn-secret:hover {
+    background-color: #432;
+    background: linear-gradient(#432, #432);
+    border-color: #542;
   }
-  .btn.btn-secret[disabled], .btn.btn-secret[disabled]:hover {
-    background: #321 !important;
-    border-color: #542 !important;
-    opacity: .8;
+  .btn-secret.selected, .btn-secret:active {
+    background-color: #432;
+    background-image: none;
+    border-color: #542;
+  }
+  .btn-secret.selected:hover {
+    background-color: #432;
+  }
+  .btn-secret.disabled, .btn-secret.disabled:hover, .btn-secret:disabled,
+  .btn-secret:disabled:hover {
+    color: rgba(102, 102, 102, .5);
+    background-color: rgba(68, 51, 34, .6);
+    background-image: linear-gradient(rgba(68, 51, 34, .3), rgba(68, 51, 34, .3));
+    border-color: rgba(68, 51, 34, .4);
   }
   /* yellow text */
   /* inline style, note this does not work when color is not first */
