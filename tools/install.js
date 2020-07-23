@@ -10,12 +10,12 @@ const file = readFileSync(resolve(__dirname, "../github-dark.user.css"));
 
 const server = createServer((_, res) => {
   res.setHeader("content-type", "text/css");
-  res.end(file);
   res.on("close", () => {
     setTimeout(() => {
       process.exit(0);
     }, 2000);
   });
+  res.end(file);
 });
 
 server.listen(() => {
