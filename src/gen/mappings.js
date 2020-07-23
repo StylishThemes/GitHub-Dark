@@ -141,9 +141,10 @@ module.exports.mappings = {
   "$color: #f0fff4": "#002800",
 
   // purple
-  "$color: #6f42c1": "#9378ba",
+  "$color: #6f42c1": "#73589a",
   "$color: #8b2bb9": "#73589a", // graphql explorer
   "$color: #8a63d2": "#53387a",
+  "$color: #d5c8ed": "#53387a",
   "$color: #f8f4ff": "#251533",
   "$color: #f6f1ff": "#231233",
   "$color: #f5f0ff": "#221133",
