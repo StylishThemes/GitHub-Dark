@@ -25,6 +25,8 @@ module.exports.mappings = {
   "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
   "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
   "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
+  "$color: hsla(0,0%,100%,.125)": "hsla(0,0%,0%,.125)",
+  "$color: hsla(0,0%,100%,.05)": "hsla(0,0%,0%,.05)",
 
   "$background: #fff": "#181818",
   "$border: #fff": "var(--ghd-body-bg-color)",
