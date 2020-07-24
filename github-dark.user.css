@@ -21012,9 +21012,8 @@
     border-color: transparent !important;
   }
   /* darken border */
-  .wiki-wrapper .wiki-empty-box:hover, .render-shell .slider .slider-track,
-  .render-shell .slider-bar, .about-menu-link:hover, .about-menu-link.selected,
-  .pricing-table {
+  .wiki-wrapper .wiki-empty-box:hover, .about-menu-link:hover,
+  .about-menu-link.selected, .pricing-table {
     border-color: #777 !important;
   }
   /* brighten border */
@@ -21232,7 +21231,7 @@
   .content table tr, #search-results, table.files, .mergeable, .org-module,
   .org-add-footer, .branch-infobar, table.capped-list tr:nth-child(2n),
   .team-org-group, #gollum-editor-help-wrapper, .integrations-quality,
-  .showcase-featured .mo-info .featured-grid-outer, .render-shell, .list,
+  .showcase-featured .mo-info .featured-grid-outer, .list,
   .latest-commit .commit-author, .bubble, .tabs > a.selected,
   .oauth-org-access-details .boxed-group-list > li.on, #fullscreen_overlay,
   .branch-action-body, .inline-comment-form, .file-history-tease .participation,
@@ -21391,9 +21390,8 @@
   }
   /* semi-transparent */
   .context-loader.large-format-loader, #graphs .loader, .org-header,
-  .render-shell .slider, .illflow-item:not(.selected):hover,
-  .leaflet-control-attribution, .orghead, .dropdown-toggle:hover,
-  .dropdown-toggle.selected {
+  .illflow-item:not(.selected):hover, .leaflet-control-attribution, .orghead,
+  .dropdown-toggle:hover, .dropdown-toggle.selected {
     background: rgba(20, 20, 20, .4) !important;
   }
   /* repo/page header */
@@ -21708,8 +21706,8 @@
   .leaflet-control-attribution.leaflet-compact-attribution::after,
   img[src$="favicons.githubusercontent.com/github.com"],
   img[src$="favicons.githubusercontent.com/gist.github.com"],
-  img[src$="invertocat.png"], .ghd-invert, .render-shell img.math,
-  #footer .github img, #com span.octicon:not(.octicon-comment-discussion),
+  img[src$="invertocat.png"], .ghd-invert, #footer .github img,
+  #com span.octicon:not(.octicon-comment-discussion),
   .developer-thanks-image img, img[alt="GitHub Support"] {
     filter: invert(100%) hue-rotate(180deg) !important;
   }
@@ -21823,12 +21821,6 @@
   img[src$="profile-joined-github.png"], img[src$="profile-first-repo.png"],
   img[src$="profile-first-issue.png"], .github-jobs-logo strong {
     filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
-  }
-  .render-shell .output_area .output_png img {
-    filter: invert(90.5%) hue-rotate(180deg) saturate(200%) brightness(85%) !important;
-  }
-  .render-shell .output_area .output_png:hover img {
-    filter: none !important;
   }
   /* workaround filter creating a stacking context */
   .contribution-first-issue, .contribution-first-pull-request,
@@ -21993,13 +21985,8 @@
   .hidden-text-expander a:hover {
     background: #555 !important;
   }
-  .labels .label-neutral, li.ssh-key .ssh-key-state-indicator.not-recent,
-  .render-shell > .slider .dragger {
+  .labels .label-neutral, li.ssh-key .ssh-key-state-indicator.not-recent {
     background: #666 !important;
-  }
-  .render-shell > .slider .dragger:hover,
-  .render-shell > .slider .dragger:active, .projects-reset-query-icon {
-    background: #949494 !important;
   }
   /* https://github.com/StylishThemes/GitHub-Dark/search?q=test&unscoped_q=test */
   .Counter--gray {
@@ -22700,14 +22687,6 @@
     background-position: center center !important;
     width: 100% !important;
     background-repeat: no-repeat !important;
-  }
-  /* image preview background */
-  .render-shell .img-view img, .file .image img, .file .image canvas, img.asset {
-    background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAABoaGgAAACwAAAAACgAKAAACEYQdmYcaDNxjEspKndVZbc8UADs=") !important;
-  }
-  .render-shell:hover .img-view img, .file:hover .image img,
-  .file:hover .image canvas, img.asset:hover {
-    background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAAOXl5f///yH5BAAAAAAALAAAAAAKAAoAAAIRhB2ZhxoM3GMSykqd1VltzxQAOw==") !important;
   }
   /* <select> dropdown arrows */
   /* https://github.com/account/upgrade */
@@ -32353,6 +32332,14 @@
   .participating .js-notifications-browser::before {
     background-color: #444;
   }
+  /* notifications-preview: "transparent" */
+  .mark-all-as-read-confirmed label {
+    background-color: transparent;
+  }
+  /* notifications-preview: "#e1e4e8" */
+  .NPG-dropdown .notifications-list-item:hover .notification-list-item-actions .btn {
+    background-color: #343434 !important;
+  }
   /* end notifications-preview rules */
   /* Refined GitHub - https://github.com/sindresorhus/refined-github
    * See #540
@@ -35142,6 +35129,30 @@
     background-color: transparent;
   }
   /* end render.githubusercontent.com rules */
+  body, .render-shell {
+    background: transparent !important;
+  }
+  .render-shell img.math {
+    filter: invert(100%) hue-rotate(180deg) !important;
+  }
+  .render-shell .output_area .output_png img {
+    filter: invert(90.5%) hue-rotate(180deg) saturate(200%) brightness(85%) !important;
+  }
+  .render-shell .output_area .output_png:hover img {
+    filter: none !important;
+  }
+  .render-shell .added-frame, .render-shell .deleted-frame {
+    box-sizing: border-box !important;
+  }
+  .render-shell img, .render-shell canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAABoaGgAAACwAAAAACgAKAAACEYQdmYcaDNxjEspKndVZbc8UADs=") !important;
+  }
+  .render-shell img:hover, .render-shell canvas:hover {
+    background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAAOXl5f///yH5BAAAAAAALAAAAAAKAAoAAAIRhB2ZhxoM3GMSykqd1VltzxQAOw==") !important;
+  }
 }
 @-moz-document domain("githubstatus.com") {
   /* begin githubstatus.com rules */
