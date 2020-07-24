@@ -106,6 +106,8 @@ module.exports.mappings = {
   "$color: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
   "$color: #613a00": "#bba257",
   "$color: #735c0f": "#bba257",
+  "$color: #6d6c60": "#c95", // .compare-pr-placeholder
+  "$color: #9c997d": "#c95", // .compare-pr-placeholder
   "$color: #b08800": "#cb4",
   "$color: #ca9800": "#cb4", // graphql explorer
   "$color: #dbab09": "#cb4",
