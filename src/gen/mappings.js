@@ -322,7 +322,7 @@ module.exports.mappings = {
 
   "color: #cce888": "color: /*[[base-color]]*/", // https://github.com/StylishThemes/GitHub-Dark/issues/954
 
-  "box-shadow: 0 0 10px rgba(121,184,255,.7)": "box-shadow: 0 0 rgba(/*[[base-color-rgb]]*/, .3)",
+  "box-shadow: 0 0 10px rgba(121,184,255,.7)": "box-shadow: 0 0 10px rgba(/*[[base-color-rgb]]*/, .3)",
 
   "$background: rgba(0,0,0,.8)": "#242424", // github hovercard
   "$border: rgba(0,0,0,.8)": "#242424", // github hovercard
