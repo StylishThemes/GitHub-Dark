@@ -1223,56 +1223,7 @@
     filter: invert(1) hue-rotate(180deg) contrast(110%) brightness(110%);
     mix-blend-mode: screen;
   }
-  /* invert problematic emoji */
-  /* images */
-  [alt=":soon:"], [alt=":on:"], [alt=":end:"], [alt=":heavy_dollar_sign:"],
-  [alt=":heavy_multiplication_x:"], [alt=":heavy_plus_sign:"],
-  [alt=":heavy_minus_sign:"], [alt=":heavy_division_sign:"], [alt=":wavy_dash:"],
-  [alt=":curly_loop:"], [alt=":currency_exchange:"], [alt=":top:"],
-  [alt=":back:"], [alt=":zzz:"], [alt=":notes:"], [alt=":musical_score:"],
-  [alt=":black_large_square:"], [alt=":black_medium_small_square:"],
-  [alt=":ant:"], [alt=":musical_note:"], [alt=":loop:"], [alt=":feet:"],
-  [alt=":paw_prints:"],
-  /* unicode */
-  /* some emoji don't need to be inverted on Windows */
-  /* from https://github.com/Dunedan/mbp-2016-linux on Windows*/
-  /* <g-emoji alias="heavy_check_mark"
-    fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png"
-    ios-version="6.0">✔️</g-emoji> */
-  [alias="soon"], [alias="on"], [alias="end"], [alias="heavy_dollar_sign"],
-  [alias="heavy_multiplication_x"],
-  [alias="heavy_plus_sign"], [alias="heavy_minus_sign"],
-  [alias="heavy_division_sign"], [alias="wavy_dash"],
-  [alias="curly_loop"], [alias="currency_exchange"],
-  [alias="top"], [alias="back"], [alias="zzz"], [alias="notes"],
-  [alias="musical_score"], [alias="black_large_square"],
-  [alias="black_medium_small_square"], [alias="ant"], [alias="musical_note"],
-  [alias="loop"], [alias="feet"], [alias="paw_prints"] {
-    filter: invert(100%) hue-rotate(180deg) brightness(80%) !important;
-    background: transparent !important;
-  }
-  .emoji-result [alt="tm"], [alias="tm"] {
-    filter: invert(100%);
-  }
-  [alt=":heavy_check_mark:"], [alias="heavy_check_mark"] {
-    background: transparent !important;
-  }
-  /* Invert problematic emoji fallback images used on Windows */
-  /* use tools/unicode-gen.js to generate */
-  g-emoji[fallback-src$="2795.png"], g-emoji[fallback-src$="2796.png"],
-  g-emoji[fallback-src$="2797.png"], g-emoji[fallback-src$="27b0.png"],
-  g-emoji[fallback-src$="2b1b.png"], g-emoji[fallback-src$="25fe.png"],
-  g-emoji[fallback-src$="1f3b6.png"], g-emoji[fallback-src$="1f3bc.png"],
-  g-emoji[fallback-src$="1f4b1.png"], g-emoji[fallback-src$="1f4b2.png"],
-  g-emoji[fallback-src$="1f519.png"], g-emoji[fallback-src$="1f51a.png"],
-  g-emoji[fallback-src$="1f51b.png"], g-emoji[fallback-src$="1f51c.png"],
-  g-emoji[fallback-src$="1f51d.png"], g-emoji[fallback-src$="1f3b5.png"],
-  g-emoji[fallback-src$="27bf.png"], g-emoji[fallback-src$="1f43e.png"],
-  g-emoji[fallback-src$="1f43e.png"], g-emoji[fallback-src$="a9.png"],
-  g-emoji[fallback-src$="fe0f.png"], g-emoji[fallback-src$="ae.png"],
-  g-emoji[fallback-src$="fe0f.png"], img[src*="resources-logo"], svg.IconNav-img,
-  .container-xl[id] svg
-  /* https://github.com/ten */,
+  img[src*="resources-logo"], svg.IconNav-img, .container-xl[id] svg,
   body.logged-out .col-md-7 svg {
     filter: invert(83%) !important;
   }
