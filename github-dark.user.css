@@ -177,23 +177,6 @@
 @advanced text font-choice "Code Font" Menlo
 @advanced text font-features "Code Font Features" normal
 @advanced text font-size-choice "Code Font Size" 12
-@advanced dropdown code-wrap "Code Wrap" {
-  nowrap "No Wrap" <<<EOT
-  EOT;
-  wrap "Wrap" <<<EOT
-  /* GitHub Bug: Enable wrapping of long code lines *\/
-  body:not(.nowrap) .blob-code-inner,
-  body:not(.nowrap) .markdown-body pre > code,
-  body:not(.nowrap) .markdown-body .highlight > pre {
-    white-space: pre-wrap !important;
-    word-break: break-all !important;
-    overflow-wrap: break-word !important;
-    display: block !important;
-  }
-  body:not(.nowrap) td.blob-code-inner {
-    display: table-cell !important;
-  } EOT;
-}
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   :root {
