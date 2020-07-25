@@ -105,6 +105,8 @@ module.exports.sources = [
     name: "notifications-preview",
     crx: "kgilejfahkjidpaclkepbdoeioeohfmj",
     contentScriptsOnly: true,
+    prefix: `html`,
+    match: ["html"],
     file: resolve(__dirname, "../src/extensions.css"),
   },
 ];
