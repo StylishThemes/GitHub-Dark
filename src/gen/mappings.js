@@ -34,14 +34,17 @@ module.exports.mappings = {
   "color: #fff": "color: #fff",
 
   "$color: #f3f4f6": "#242424",
-  "$color: #edeff2": "#343434",
+  "$color: #eeeeee": "#2c2c2c",
+  "$color: #edeff2": "#2c2c2c",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
   "$color: #dfe2e5": "#343434",
+  "$color: #dddddd": "#343434",
   "$color: #d8dee2": "#343434",
   "$color: #d1d5da": "#404040",
   "$color: #c6cbd1": "#505050",
   "$color: #cccccc": "#5a5a5a",
+  "$color: #bbbbbb": "#606060",
 
   // #444d56 is used for various dark-ish parts like actions. only invert text color for it
   "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
@@ -179,11 +182,9 @@ module.exports.mappings = {
   "$background: #f4f5f5": "#242424", // zenhub
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#242424",
-  "$background: #eee": "#242424", // graphql explorer
   "$background: #e9ecef": "#404040",
   "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
-  "$background: #ddd": "#383838",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
   "$background: #6a737d": "#444",
@@ -224,9 +225,7 @@ module.exports.mappings = {
 
   "$border: #484848": "#afafaf", // github blog
   "$border: #959da5": "#484848",
-  "$border: #bbb": "#484848",
   "$border: #c3c8cf": "#484848",
-  "$border: #ddd": "#343434",
   "$border: #d6d6d6": "#343434", // graphql explorer
   "$border: #d0d0d0": "#343434", // graphql explorer
   "$border: #d3d6db": "#343434", // graphql explorer
@@ -235,7 +234,6 @@ module.exports.mappings = {
   "$border: #e6ebf1": "#343434",
   "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaeaea": "#343434",
-  "$border: #eee": "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",
   "$border: #2f363d": "#282828",
