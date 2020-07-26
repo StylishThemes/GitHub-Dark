@@ -34,10 +34,12 @@ module.exports.mappings = {
   "color: #fff": "color: #fff",
 
   "$color: #f3f4f6": "#242424",
+  "$color: #eff1f3": "#242424",
   "$color: #eeeeee": "#2c2c2c",
   "$color: #edeff2": "#2c2c2c",
   "$color: #eaecef": "#343434",
   "$color: #e1e4e8": "#343434",
+  "$color: #e0e0e0": "#343434",
   "$color: #dfe2e5": "#343434",
   "$color: #dddddd": "#343434",
   "$color: #d8dee2": "#343434",
