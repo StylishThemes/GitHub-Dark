@@ -194,6 +194,8 @@ module.exports.mappings = {
   "$background: #2f363d": "#222",
   "$background: #24292e": "#181818",
   "$background: #3c4146": "#181818",
+  "$background: #f0f5fa": "#202020",
+  "$background: #f8fafd": "#202020",
 
   "$background: rgba(225,228,232,0.31)": "#282828",
   "$background: linear-gradient(180deg,rgba(242,248,254,0),rgba(242,248,254,.47))": "linear-gradient(180deg,#181818,#181818)",
