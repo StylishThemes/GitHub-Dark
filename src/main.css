@@ -844,12 +844,12 @@
   .discussion-sidebar-item .thread-subscription-status,
   .boxed-group.application-show-group .logo-upload, .diagram-icon-small,
   #readme .highlight, .ace-github, .theme-picker, .avatar-stack .avatar,
-  .boxed-group, .prose-diff > .markdown-body ins, .header .divider-vertical,
-  .ace-github-base16, .markdown-body pre code, .markdown-body pre tt,
-  #readme .plain pre, .uploaded-files, .input_area, #notebook .highlight,
-  #notebook .highlight pre, .output_area pre,
-  .gist-snippet-meta .gist-count-links>li>a:hover, .delete-owners-button:hover,
-  .avatar-child, .session-authentication .header-logged-out,
+  .boxed-group, .header .divider-vertical, .ace-github-base16,
+  .markdown-body pre code, .markdown-body pre tt, #readme .plain pre,
+  .uploaded-files, .input_area, #notebook .highlight, #notebook .highlight pre,
+  .output_area pre, .gist-snippet-meta .gist-count-links>li>a:hover,
+  .delete-owners-button:hover, .avatar-child,
+  .session-authentication .header-logged-out,
   .session-authentication .auth-form-header,
   .timeline-progressive-disclosure-items, #com #footer, .shade-gradient,
   #categories .list, .gist-banner, .main-content, .showcase-page-header,
@@ -1165,6 +1165,18 @@
   }
   path.js-diff-placeholder {
     fill: #282828 !important;
+  }
+  .prose-diff .changed .added, .prose-diff .changed ins,
+  .prose-diff .changed ins code, .prose-diff .changed ins pre {
+    background: #002800;
+    border-bottom: 1px solid #373;
+  }
+  .prose-diff .changed .removed, .prose-diff .changed .removed > div,
+  .prose-diff .changed .removed code, .prose-diff .changed .removed pre,
+  .prose-diff .changed del, .prose-diff .changed del > div,
+  .prose-diff .changed del code, .prose-diff .changed del pre {
+    color: #d82828;
+    background: #300;
   }
   #contributors-master svg.viz {
     display: block !important;
