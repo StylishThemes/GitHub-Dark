@@ -1715,12 +1715,17 @@
     position: relative !important;
     z-index: 1 !important;
   }
+  @media (min-width:768px) {
+    .page-responsive .previewable-comment-form .comment-form-head.tabnav {
+      background-color: var(--ghd-bg-color);
+    }
+  }
   /* GitHub Enterprise (GHE) stuff */
   body.enterprise .repohead.experiment-repo-nav {
     background: rgba(24, 24, 24, .4);
   }
   body.enterprise .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
-    background: #202020;
+    background: var(--ghd-bg-color);
   }
   body.enterprise .timeline-comment-wrapper .timeline-comment.current-user::before {
     border-right-color: #246;
@@ -1732,7 +1737,7 @@
     border-right-color: #404040;
   }
   body.enterprise .timeline-new-comment .timeline-comment::after {
-    border-right-color: #202020;
+    border-right-color: var(--ghd-bg-color);
   }
   body.enterprise .commit-tease {
     background-color: #182030;
