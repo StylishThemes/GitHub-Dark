@@ -271,9 +271,6 @@
   table.pricing-table td:first-child {
     text-indent: 9px;
   }
-  .comment-reactions button.btn-link.user-has-reacted {
-    background-color: rgba(/*[[base-color-rgb]]*/, .2) !important;
-  }
   /* HACK: Label colors */
   [class*="IssueLabel"][style*=" color: #f"], .IssueLabel a[style*="color: #f"],
   .issue-card-label[style*=" color: #f"] {
@@ -2022,8 +2019,14 @@
   #header-wrapper, .menu li + li {
     border-bottom: 1px solid #333 !important;
   }
+  .comment-reactions button.btn-link.user-has-reacted {
+    background-color: rgba(/*[[base-color-rgb]]*/, .2);
+  }
   .review-comment .comment-reactions {
     border-top: 0 !important;
+  }
+  .review-comment .reaction-summary-item:not(.add-reaction-btn) {
+    border-color: rgba(/*[[base-color-rgb]]*/, .2);
   }
   /* light grey - breaks in diff (with line numbers) */
   .highlight .expandable-line-num, .highlight .diff-line-num-hunk,
