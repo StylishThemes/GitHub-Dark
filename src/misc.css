@@ -152,7 +152,7 @@
 }
 @-moz-document regexp("^https?://www\.zuora\.com.*github\.com.*") {
   /* Styles the payment form iframe */
-  body, label, .popup {
+  body, label {
     background: transparent !important;
     color: #bebebe !important;
   }
@@ -171,10 +171,19 @@
     outline-color: /*[[base-color]]*/ !important;
   }
   .btn-submit {
-    background: linear-gradient(#407045, #305530) !important;
-    border-color: #083 !important;
+    background-color: #373;
+    background-image: none;
+    border-color: rgba(220, 220, 220, .15);
   }
   .btn-submit:hover {
-    background: linear-gradient(#508055, #407045) !important;
+    background-color: #484;
+    background-image: none;
+  }
+  .popup, #z_hppm_iframe {
+    background-color: var(--ghd-bg-color);
+  }
+  /* fix top white line */
+  .whitespace {
+    margin: -1px !important;
   }
 }

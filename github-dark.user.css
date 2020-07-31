@@ -178,7 +178,7 @@
 @advanced text font-features "Code Font Features" normal
 @advanced text font-size-choice "Code Font Size (e.g. 12px)" default
 ==/UserStyle== */
-@-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
+@-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   :root {
     --ghd-bg-custom: /*[[bg-custom]]*/;
     --ghd-bg-img: /*[[bg-choice]]*/;
@@ -21420,9 +21420,9 @@
   .team-discussions-container, .Collection ~ div[style*="linear-grad"],
   .application-main > div[style*="background"], .AvatarStack-body .avatar,
   .dropdown-toggle, ul.add-member-team-list.table-list, .gh-header,
-  iframe[src*="zuora.com"], .enterprise-prompt, .enterprise-prompt *, .diffbar,
-  .footer .bg-gray-light, button.btn-invisible, button.btn-invisible:hover,
-  .btn.btn-invisible, .btn.btn-invisible:hover,
+  .enterprise-prompt, .enterprise-prompt *, .diffbar, .footer .bg-gray-light,
+  button.btn-invisible, button.btn-invisible:hover, .btn.btn-invisible,
+  .btn.btn-invisible:hover,
   .application-main [style*="background: linear-gradient(#ffffff, #fcfcfc)"],
   section[style="background-color: #fafbfc;"], div[style="background:#fafbfc;"],
   .team-left-column, .render-container.js-actions-page,
@@ -35041,7 +35041,7 @@
 }
 @-moz-document regexp("^https?://www\.zuora\.com.*github\.com.*") {
   /* Styles the payment form iframe */
-  body, label, .popup {
+  body, label {
     background: transparent !important;
     color: #bebebe !important;
   }
@@ -35060,11 +35060,20 @@
     outline-color: /*[[base-color]]*/ !important;
   }
   .btn-submit {
-    background: linear-gradient(#407045, #305530) !important;
-    border-color: #083 !important;
+    background-color: #373;
+    background-image: none;
+    border-color: rgba(220, 220, 220, .15);
   }
   .btn-submit:hover {
-    background: linear-gradient(#508055, #407045) !important;
+    background-color: #484;
+    background-image: none;
+  }
+  .popup, #z_hppm_iframe {
+    background-color: var(--ghd-bg-color);
+  }
+  /* fix top white line */
+  .whitespace {
+    margin: -1px !important;
   }
 }
 @-moz-document domain("render.githubusercontent.com") {
