@@ -15,6 +15,7 @@ const replacements = [
   {from: /\/\*\[\[code-wrap/, to: "/*[[code-wrap"},
   {from: /,\u0020{2,}/g, to: ", "},
   {from: /\s+domain\(/g, to: " domain("},
+  {from: /\s+regexp\(/g, to: " regexp("},
 ];
 
 module.exports = async function main() {
