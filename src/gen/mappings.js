@@ -33,6 +33,7 @@ module.exports.mappings = {
   "$box-shadow: #fff": "var(--ghd-bg-color)",
   "color: #fff": "color: #fff",
 
+  "$color: #f7f7f7": "#202020",
   "$color: #f3f4f6": "#242424",
   "$color: #eff1f3": "#242424",
   "$color: #eeeeee": "#2c2c2c",
