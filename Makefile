@@ -13,7 +13,7 @@ node_modules: yarn.lock
 	@touch node_modules
 
 lint: node_modules
-	yarn -s run eslint --color .
+	yarn -s run eslint --color src/gen tools
 	yarn -s run stylelint --color src
 
 authors:
