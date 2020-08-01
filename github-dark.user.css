@@ -176,13 +176,14 @@
 }
 @advanced text font-choice "Code Font" Menlo
 @advanced text font-features "Code Font Features" normal
-@advanced text font-size-choice "Code Font Size (e.g. 12px)" default
+@advanced text code-font-size "Code Font Size (e.g. 12px)" default
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   :root {
     --ghd-bg-custom: /*[[bg-custom]]*/;
     --ghd-bg-img: /*[[bg-choice]]*/;
     --ghd-bg-color: /*[[bg-color]]*/;
+    --ghd-code-font-size: /*[[code-font-size]]*/;
     --ghd-code-background: #141414;
     --ghd-code-color: #ccc;
   }
@@ -20592,7 +20593,7 @@
   #gist-form .file .input textarea, .blob-code-inner {
     font-family: "/*[[font-choice]]*/", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
     font-feature-settings: /*[[font-features]]*/ !important;
-    font-size: /*[[font-size-choice]]*/ !important;
+    font-size: var(--ghd-code-font-size) !important;
   }
   /* Base link colors */
   table.files .octicon-file-directory,
