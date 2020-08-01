@@ -174,16 +174,12 @@
     -moz-tab-size: 8 !important;
   } EOT;
 }
-@advanced text font-choice "Code Font" Menlo
-@advanced text font-features "Code Font Features" normal
-@advanced text code-font-size "Code Font Size (e.g. 12px)" default
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   :root {
     --ghd-bg-custom: /*[[bg-custom]]*/;
     --ghd-bg-img: /*[[bg-choice]]*/;
     --ghd-bg-color: /*[[bg-color]]*/;
-    --ghd-code-font-size: /*[[code-font-size]]*/;
     --ghd-code-background: #141414;
     --ghd-code-color: #ccc;
   }
@@ -20588,13 +20584,6 @@
     background-attachment: /*[[bg-attachment]]*/ !important;
     /*[[bg-options]]*/
   }
-  /* custom code font */
-  pre, code, tt, kbd:not(.badmono), samp, .blob-code, .file-data pre, .line-data,
-  #gist-form .file .input textarea, .blob-code-inner {
-    font-family: "/*[[font-choice]]*/", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
-    font-feature-settings: /*[[font-features]]*/ !important;
-    font-size: var(--ghd-code-font-size) !important;
-  }
   /* Base link colors */
   table.files .octicon-file-directory,
   table.files .octicon-file-symlink-directory,
@@ -20733,10 +20722,6 @@
   .tree-browser-result mark {
     color: #c6c6c6;
   }
-  /* HACK: Match font-size to rest of the box */
-  .commit-tease > .f6 {
-    font-size: 13px !important;
-  }
   /* people panel org page issue #1041 */
   .auto-search-group input[type="text"][aria-label] {
     background: #181818;
@@ -20870,7 +20855,6 @@
     word-wrap: initial;
   }
   .project-card code {
-    font-size: 85%;
     padding: .2em .4em;
   }
   .markdown-body pre code, .markdown-body pre tt {
@@ -20894,9 +20878,6 @@
   }
   div[style*="background: linear-gradient(to bottom, rgba(246,248,250,0.5) 0%,rgba(246,248,250,1) 100%);"] {
     background: linear-gradient(to bottom, rgba(32, 32, 32, .5) 0%, #202020 100%) !important;
-  }
-  .branch-infobar, .notifications .unread {
-    font-weight: normal !important;
   }
   .profile-timeline-month-heading {
     padding: 2px 5px !important;
