@@ -1,20 +1,21 @@
 /* ==UserStyle==
-@name        GitHub Custom Fonts
-@namespace   StylishThemes
-@version     4.0.0
-@homepageURL https://github.com/StylishThemes/GitHub-Dark
-@updateURL   https://stylishthemes.github.io/GitHub-Dark/github-custom-fonts.user.css
-@license     BSD-2-Clause
-@author      StylishThemes
-@advanced text font-choice "Code Font" Menlo
-@advanced text font-features "Code Font Features" normal
-@advanced text font-size-choice "Code Font Size" 12px
+@name         GitHub Custom Fonts
+@namespace    StylishThemes
+@version      4.0.0
+@homepageURL  https://github.com/StylishThemes/GitHub-Dark
+@updateURL    https://stylishthemes.github.io/GitHub-Dark/github-custom-fonts.user.css
+@license      BSD-2-Clause
+@author       StylishThemes
+@preprocessor default
+@advanced text ghd-font-family "Code Font" Menlo
+@advanced text ghd-font-feature-settings "Code Font Feature Setttings" normal
+@advanced text ghd-font-size "Code Font Size" 12px
 ==/UserStyle== */
 @-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   pre, code, tt, kbd:not(.badmono), samp, .blob-code, .file-data pre, .line-data,
   #gist-form .file .input textarea, .blob-code-inner {
-    font-family: "/*[[font-choice]]*/", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
-    font-feature-settings: /*[[font-features]]*/ !important;
-    font-size: /*[[font-size-choice]]*/ !important;
+    font-family: var(--ghd-font-family), Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+    font-feature-settings: var(--ghd-font-feature-settings) !important;
+    font-size: var(--ghd-font-size) !important;
   }
 }
