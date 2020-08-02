@@ -32,15 +32,15 @@ update: node_modules
 	@touch yarn.lock
 
 patch: node_modules lint build
-	yarn -s run versions -pdC patch github-dark.user.css
+	yarn -s run versions -pdC patch github-dark.user.css github-custom-fonts.user.css
 	git push --tags origin master
 
 minor: node_modules lint build
-	yarn -s run versions -pdC minor github-dark.user.css
+	yarn -s run versions -pdC minor github-dark.user.css github-custom-fonts.user.css
 	git push --tags origin master
 
 major: node_modules lint build
-	yarn -s run versions -pdC major github-dark.user.css
+	yarn -s run versions -pdC major github-dark.user.css github-custom-fonts.user.css
 	git push --tags origin master
 
 .PHONY: all test build deps lint authors clean install update patch minor major
