@@ -36,6 +36,7 @@ module.exports.mappings = {
   "$color: #fcfcfc": "#1d1d1d",
   "$color: #f7f7f7": "#202020",
   "$color: #f3f4f6": "#242424",
+  "$color: #f0f3f6": "#242424",
   "$color: #eff1f3": "#242424",
   "$color: #eeeeee": "#2c2c2c",
   "$color: #edeff2": "#2c2c2c",
@@ -88,6 +89,7 @@ module.exports.mappings = {
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: #257bf9": "#4f8cc9",
   "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #e0f1ff": "#182030",
   "$color: #d2dff0": "#224466", // org discussion reactions
 
   // red
