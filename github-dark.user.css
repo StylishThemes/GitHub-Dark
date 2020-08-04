@@ -36603,17 +36603,19 @@
   /* support.github.com: "color: #444d56", "#fafbfc", "#d1d5da", "#d1d5da", "#d1d5da" */
   kbd {
     color: #afafaf;
+    border-color: #404040;
     box-shadow: inset 0 -1px 0 #404040;
   }
-  /* support.github.com: "#fff", "#d1d5da" */
+  /* support.github.com: "#fff", "#e1e4e8" */
   .Box, kbd {
     background-color: #181818;
-    border-color: #404040;
   }
-  /* support.github.com: "#f6f8fa", "#d1d5da" */
+  /* support.github.com: "#f6f8fa", "#e1e4e8" */
+  .Box, .Box-header {
+    border-color: #343434;
+  }
   .Box-header {
     background-color: #222;
-    border-color: #404040;
   }
   /* support.github.com: "#e1e4e8" */
   .Box-body {
@@ -36705,88 +36707,118 @@
     color: #343434;
   }
   /* support.github.com: "color: #586069" */
-  .breadcrumb-item-selected, .breadcrumb-item[aria-current] {
+  .breadcrumb-item-selected,
+  .breadcrumb-item[aria-current]:not([aria-current=false]) {
     color: #afafaf;
   }
-  /* support.github.com: "rgba(27,31,35,0.2)" */
-  .btn {
-    border-color: rgba(220, 220, 220, .2);
+  /* support.github.com: "color: #6a737d" */
+  .btn .octicon {
+    color: #9b9b9b;
   }
-  /* support.github.com: "color: #586069", "rgba(27,31,35,0.1)" */
+  /* support.github.com: "rgba(27,31,35,0.08)" */
   .btn .Counter {
-    color: #afafaf;
-    background-color: rgba(220, 220, 220, .17);
+    background-color: rgba(220, 220, 220, .15);
   }
-  /* support.github.com: "none" */
-  .btn.selected, .btn:active, .btn[aria-selected=true] {
-    background-image: none;
-  }
-  /* support.github.com: "color: #24292e", "#eff3f6", "linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
+  /* support.github.com: "color: #24292e", "#fafbfc", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.04)" */
   .btn {
     color: #c6c6c6;
+    background-color: #181818;
+    border-color: rgba(220, 220, 220, .15);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .25);
+  }
+  /* support.github.com: "#f3f4f6" */
+  .btn.hover, .btn:hover, [open] > .btn {
     background-color: #242424;
-    background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
   }
-  /* support.github.com: "box-shadow: 0 0 0 .2em rgba(3,102,214,.3)" */
-  .btn.focus, .btn:focus {
-    box-shadow: 0 0 0 .2em rgba(/*[[base-color-rgb]]*/, .5);
-  }
-  /* support.github.com: "#e6ebf1", "#f0f3f6","#e6ebf1", "rgba(27,31,35,0.35)" */
-  .btn.hover, .btn:hover {
-    background-color: #444;
-    background-image: linear-gradient(-180deg, #242424 0%, #444 90%);
-    border-color: rgba(220, 220, 220, .35);
-  }
-  /* support.github.com: "#e9ecef", "none", "rgba(27,31,35,0.35)", "rgba(27,31,35,0.15)" */
-  .btn.selected, .btn:active, .btn[aria-selected=true], [open] > .btn {
-    background-color: #404040;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .35);
-    box-shadow: inset 0 .15em .3em #000;
-  }
-  /* support.github.com: "color: rgba(36,41,46,.4)", "#eff3f6", "none", "rgba(27,31,35,0.2)", "box-shadow: none" */
-  .btn.disabled, .btn:disabled, .btn[aria-disabled=true] {
-    color: rgba(210, 210, 210, .4);
-    background-color: #242424;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .2);
+  /* support.github.com: "#edeff2", "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)" */
+  .btn.selected, .btn:active, .btn[aria-selected=true] {
+    background-color: #2c2c2c;
     box-shadow: none;
   }
-  /* support.github.com: "color: #fff", "#28a745", "#34d058","#28a745" */
+  /* support.github.com: "color: #959da5", "#fafbfc", "rgba(27,31,35,0.15)" */
+  .btn.disabled, .btn:disabled, .btn[aria-disabled=true] {
+    color: #767676;
+    background-color: #181818;
+    border-color: rgba(220, 220, 220, .15);
+  }
+  /* support.github.com: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  .btn.focus, .btn:focus {
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
+  /* support.github.com: "color: #fff", "#2ea44f", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.1)" */
   .btn-primary {
     color: #fff;
+    background-color: #373;
+    border-color: rgba(220, 220, 220, .15);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .03);
+  }
+  /* support.github.com: "#2c974b" */
+  .btn-primary.hover, .btn-primary:hover, [open] > .btn-primary {
     background-color: #484;
-    background-image: linear-gradient(-180deg, #373 0%, #484 90%);
   }
-  /* support.github.com: "rgba(52,208,88,0.4)" */
-  .btn-primary.focus, .btn-primary:focus {
-    box-shadow: 0 0 0 .2em #3737;
-  }
-  /* support.github.com: "#269f42", "#2fcb53","#269f42", "rgba(27,31,35,0.5)" */
-  .btn-primary.hover, .btn-primary:hover {
+  /* support.github.com: "#2a8f47" */
+  .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected=true] {
     background-color: #595;
-    background-image: linear-gradient(-180deg, #373 0%, #595 90%);
-    border-color: rgba(220, 220, 220, .5);
   }
-  /* support.github.com: "#279f43", "none", "rgba(27,31,35,0.5)", "rgba(27,31,35,0.15)" */
-  .btn-primary.selected, .btn-primary:active, .btn-primary[aria-selected=true],
-  [open] > .btn-primary {
-    background-color: #595;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .5);
-    box-shadow: inset 0 .15em .3em #000;
-  }
-  /* support.github.com: "#94d3a2", "none", "rgba(27,31,35,0.2)", "box-shadow: none" */
+  /* support.github.com: "rgba(255,255,255,0.8)", "#94d3a2", "rgba(27,31,35,0.1)", "rgba(27,31,35,0.1)" */
   .btn-primary.disabled, .btn-primary:disabled,
   .btn-primary[aria-disabled=true] {
+    color: hsla(0, 0%, 100%, .8);
     background-color: #040;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .2);
-    box-shadow: none;
+    border-color: rgba(220, 220, 220, .1);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .03);
   }
-  /* support.github.com: "#fff" */
-  .btn-primary .Counter {
+  /* support.github.com: "rgba(255,255,255,0.8)" */
+  .btn-primary .octicon {
+    color: hsla(0, 0%, 100%, .8);
+  }
+  /* support.github.com: "#cb2431" */
+  .btn-danger {
+    color: #d82828;
+  }
+  /* support.github.com: "color: #fff", "#cb2431", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.1)" */
+  .btn-danger:hover, [open] > .btn-danger {
+    background-color: #d82828;
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .03);
+  }
+  /* support.github.com: "color: #fff", "rgba(27,31,35,0.15)" */
+  .btn-danger.selected, .btn-danger:active, .btn-danger:hover,
+  .btn-danger[aria-selected=true], [open] > .btn-danger {
+    color: #fff;
+    border-color: rgba(220, 220, 220, .15);
+  }
+  /* support.github.com: "#fafbfc", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.04)" */
+  .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true] {
     background-color: #181818;
+    border-color: rgba(220, 220, 220, .15);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .25);
+  }
+  /* support.github.com: "rgba(203,36,49,0.4)" */
+  .btn-danger:focus {
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, .4);
+  }
+  /* support.github.com: "#0366d6" */
+  .btn-outline {
+    color: /*[[base-color]]*/;
+  }
+  /* support.github.com: "color: #fff", "#0366d6", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.1)" */
+  .btn-outline:hover, [open] > .btn-outline {
+    background-color: /*[[base-color]]*/;
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .03);
+  }
+  /* support.github.com: "color: #fff", "rgba(27,31,35,0.15)" */
+  .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
+  .btn-outline[aria-selected=true], [open] > .btn-outline {
+    color: #fff;
+    border-color: rgba(220, 220, 220, .15);
+  }
+  /* support.github.com: "rgba(3,102,214,0.5)", "#fafbfc", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.04)" */
+  .btn-outline.disabled, .btn-outline:disabled,
+  .btn-outline[aria-disabled=true] {
+    color: rgba(/*[[base-color-rgb]]*/, .5);
+    background-color: #181818;
+    border-color: rgba(220, 220, 220, .15);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .25);
   }
   /* support.github.com: "color: #fff", "#0361cc", "#0679fc","#0361cc" */
   .btn-blue {
@@ -36805,90 +36837,21 @@
     border-color: rgba(220, 220, 220, .5);
     box-shadow: inset 0 .15em .3em #000;
   }
-  /* support.github.com: "none", "rgba(27,31,35,0.2)", "box-shadow: none" */
+  /* support.github.com: "none", "rgba(27,31,35,0.15)", "box-shadow: none" */
   .btn-blue.disabled, .btn-blue:disabled, .btn-blue[aria-disabled=true] {
     background-image: none;
-    border-color: rgba(220, 220, 220, .2);
+    border-color: rgba(220, 220, 220, .15);
     box-shadow: none;
   }
   /* support.github.com: "#0366d6", "#fff" */
   .btn-blue .Counter {
-    color: /*[[base-color]]*/;
     background-color: #181818;
-  }
-  /* support.github.com: "#cb2431", "#fafbfc", "linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" */
-  .btn-danger {
-    color: #d82828;
-    background-color: #181818;
-    background-image: linear-gradient(-180deg, #202020 0%, #181818 90%);
-  }
-  /* support.github.com: "rgba(203,36,49,0.4)" */
-  .btn-danger:focus {
-    box-shadow: 0 0 0 .2em rgba(255, 68, 68, .4);
-  }
-  /* support.github.com: "color: #fff", "#cb2431", "#cb2431", "rgba(27,31,35,0.5)" */
-  .btn-danger:hover {
-    color: #fff;
-    background-color: #d82828;
-    background-image: linear-gradient(-180deg, #de4450 0%, #d82828 90%);
-    border-color: rgba(220, 220, 220, .5);
-  }
-  /* support.github.com: "color: #fff" */
-  .btn-danger:hover .Counter {
-    color: #fff;
-  }
-  /* support.github.com: "color: #fff", "none", "rgba(27,31,35,0.5)", "rgba(27,31,35,0.15)" */
-  .btn-danger.selected, .btn-danger:active, .btn-danger[aria-selected=true],
-  [open] > .btn-danger {
-    color: #fff;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .5);
-    box-shadow: inset 0 .15em .3em #000;
-  }
-  /* support.github.com: "rgba(203,36,49,0.4)", "#eff3f6", "none", "rgba(27,31,35,0.2)", "box-shadow: none" */
-  .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true] {
-    color: rgba(255, 68, 68, .4);
-    background-color: #242424;
-    background-image: none;
-    border-color: rgba(220, 220, 220, .2);
-    box-shadow: none;
-  }
-  /* support.github.com: "#0366d6", "#fff", "none" */
-  .btn-outline {
-    color: /*[[base-color]]*/;
-    background-color: #181818;
-    background-image: none;
-  }
-  /* support.github.com: "color: #fff", "#0366d6", "none", "#0366d6" */
-  .btn-outline.selected, .btn-outline:active, .btn-outline:hover,
-  .btn-outline[aria-selected=true], [open] > .btn-outline {
-    color: #fff;
-    background-color: /*[[base-color]]*/;
-    background-image: none;
-    border-color: /*[[base-color]]*/;
-  }
-  /* support.github.com: "#0366d6", "#fff" */
-  .btn-outline.selected .Counter, .btn-outline:active .Counter,
-  .btn-outline:hover .Counter, .btn-outline[aria-selected=true] .Counter,
-  [open] > .btn-outline .Counter {
-    color: /*[[base-color]]*/;
-    background-color: #181818;
-  }
-  /* support.github.com: "#0366d6" */
-  .btn-outline:focus {
-    border-color: /*[[base-color]]*/;
-  }
-  /* support.github.com: "color: rgba(27,31,35,.3)", "#fff", "rgba(27,31,35,0.15)", "box-shadow: none" */
-  .btn-outline.disabled, .btn-outline:disabled,
-  .btn-outline[aria-disabled=true] {
-    color: rgba(230, 230, 230, .3);
-    background-color: #181818;
-    border-color: rgba(220, 220, 220, .15);
-    box-shadow: none;
   }
   /* support.github.com: "#0366d6", "transparent" */
-  .btn-link {
+  .btn-blue .Counter, .btn-link {
     color: /*[[base-color]]*/;
+  }
+  .btn-link {
     background-color: transparent;
   }
   /* support.github.com: "color: rgba(88,96,105,.5)" */
@@ -36896,11 +36859,11 @@
   .btn-link[aria-disabled=true]:hover {
     color: rgba(148, 148, 148, .5);
   }
-  /* support.github.com: "#0366d6", "#fff", "none" */
+  /* support.github.com: "#0366d6", "transparent", "box-shadow: none" */
   .btn-invisible {
     color: /*[[base-color]]*/;
-    background-color: #181818;
-    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
   }
   /* support.github.com: "#0366d6", "none", "box-shadow: none" */
   .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
@@ -36947,36 +36910,48 @@
     color: #fff;
     background-color: /*[[base-color]]*/;
   }
-  /* support.github.com: "color: #24292e", "#fff", "rgba(27,31,35,0.2)" */
+  /* support.github.com: "color: #24292e", "#fff", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.04)" */
   .social-count {
     color: #c6c6c6;
     background-color: #181818;
-    border-color: rgba(220, 220, 220, .2);
+    border-color: rgba(220, 220, 220, .15);
+    box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, .25);
   }
   /* support.github.com: "#0366d6" */
   .social-count:hover {
     color: /*[[base-color]]*/;
   }
-  /* support.github.com: "color: #24292e", "#fff", "#d1d5da" */
+  /* support.github.com: "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
+  .social-count:focus {
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
+  /* support.github.com: "color: #24292e", "#fff", "#e1e4e8", "box-shadow: inset 0 1px 0 rgba(225,228,232,.2)" */
   #q, .form-control, .form-select {
     color: #c6c6c6;
     background-color: #181818;
-    border-color: #404040;
+    border-color: #343434;
+    box-shadow: none;
   }
-  /* support.github.com: "#2188ff", "box-shadow: inset 0 1px 2px rgba(27,31,35,.075),0 0 0 .2em rgba(3,102,214,.3)" */
+  /* support.github.com: "#0366d6", "box-shadow: 0 0 0 3px rgba(3,102,214,.3)" */
   #q:focus, .focus#q, .form-control.focus, .form-control:focus,
   .form-select.focus, .form-select:focus {
     border-color: /*[[base-color]]*/;
-    box-shadow: 0 0 0 2px rgba(/*[[base-color-rgb]]*/, .3);
+    box-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+  }
+  /* support.github.com: "color: #959da5", "#f3f4f6" */
+  #q[disabled], .form-control[disabled], .form-select[disabled] {
+    color: #767676;
+    background-color: #242424;
   }
   /* support.github.com: "#fff" */
   .input-contrast, .input-contrast:focus {
     background-color: #181818;
   }
-  /* support.github.com: "color: #fff", "transparent" */
+  /* support.github.com: "color: #fff", "transparent", "box-shadow: none" */
   .input-dark {
     color: #fff;
     border-color: transparent;
+    box-shadow: none;
   }
   /* support.github.com: "rgba(27,31,35,0.3)" */
   .input-dark.focus, .input-dark:focus {
@@ -37007,11 +36982,11 @@
   .hfields .form-group dt label {
     color: #afafaf;
   }
-  /* support.github.com: "#735c0f", "#fffbdd", "#d9d0a5" */
+  /* support.github.com: "#735c0f", "#fffbdd", "#f9c513" */
   .form-warning {
     color: #bba257;
     background-color: #261d08;
-    border-color: #542;
+    border-color: #cb4;
   }
   /* support.github.com: "#fff" */
   .form-group #q, .form-group #q:focus, .form-group .form-control,
@@ -37022,18 +36997,18 @@
   .form-group .form-group-body h4.is-error, .form-group dd h4.is-error {
     color: #d82828;
   }
-  /* support.github.com: "#28a745" */
+  /* support.github.com: "#22863a" */
   .form-group .form-group-body h4.is-success, .form-group dd h4.is-success {
-    color: #484;
+    color: #6cc644;
   }
   /* support.github.com: "#cb2431" */
   .form-group.required .form-group-header label::after,
   .form-group.required dt label::after {
     color: #d82828;
   }
-  /* support.github.com: "#28a745" */
+  /* support.github.com: "#22863a" */
   .form-group.successful .success {
-    color: #484;
+    color: #6cc644;
   }
   /* support.github.com: "transparent" */
   .form-group.errored .error::after, .form-group.errored .error::before,
@@ -37063,37 +37038,43 @@
   .form-group.successed .success::before {
     border-bottom-color: #373;
   }
-  /* support.github.com: "#735c0f", "#fffbdd", "#d9d0a5" */
+  /* support.github.com: "#f9c513" */
+  .form-group.warn #q, .form-group.warn .form-control {
+    border-color: #cb4;
+  }
+  /* support.github.com: "#fff5b1", "#f9c513" */
   .form-group.warn .warning {
-    color: #bba257;
-    background-color: #261d08;
-    border-color: #542;
+    background-color: #651;
+    border-color: #cb4;
   }
-  /* support.github.com: "#fffbdd" */
+  /* support.github.com: "#fff5b1" */
   .form-group.warn .warning::after {
-    border-bottom-color: #261d08;
+    border-bottom-color: #651;
   }
-  /* support.github.com: "#d9d0a5" */
+  /* support.github.com: "#f9c513" */
   .form-group.warn .warning::before {
-    border-bottom-color: #542;
+    border-bottom-color: #cb4;
+  }
+  /* support.github.com: "#cb2431" */
+  .form-group.errored #q, .form-group.errored .form-control {
+    border-color: #d82828;
   }
   /* support.github.com: "#cb2431" */
   .form-group.errored label {
     color: #d82828;
   }
-  /* support.github.com: "#86181d", "#ffdce0", "#cea0a5" */
+  /* support.github.com: "#ffeef0", "#f97583" */
   .form-group.errored .error {
-    color: #d82828;
     background-color: #300;
-    border-color: #d82828;
+    border-color: #f88;
   }
-  /* support.github.com: "#ffdce0" */
+  /* support.github.com: "#ffeef0" */
   .form-group.errored .error::after {
     border-bottom-color: #300;
   }
-  /* support.github.com: "#cea0a5" */
+  /* support.github.com: "#f97583" */
   .form-group.errored .error::before {
-    border-bottom-color: #d82828;
+    border-bottom-color: #f88;
   }
   /* support.github.com: "color: #586069" */
   .note {
@@ -37159,72 +37140,78 @@
   p.explain .octicon {
     color: #767676;
   }
-  /* support.github.com: "color: #24292e", "#d1d5da" */
+  /* support.github.com: "color: #24292e", "#e1e4e8" */
   .radio-label {
     color: #c6c6c6;
-    border-color: #404040;
+    border-color: #343434;
   }
   /* support.github.com: "#0366d6" */
   :checked + .radio-label {
     border-color: /*[[base-color]]*/;
   }
-  /* support.github.com: "#fff", "#d1d5da" */
+  /* support.github.com: "#fff", "#e1e4e8" */
   .menu {
     background-color: #181818;
-    border-color: #404040;
+    border-color: #343434;
   }
-  /* support.github.com: "#e1e4e8" */
+  /* support.github.com: "color: #1b1f23", "#eaecef" */
   .menu-item {
+    color: #dcdcdc;
     border-bottom-color: #343434;
   }
   /* support.github.com: "#f6f8fa" */
-  .menu-item:hover {
+  .menu-item:focus, .menu-item:hover {
     background-color: #222;
   }
-  /* support.github.com: "color: #24292e", "#fff" */
-  .menu-item.selected, .menu-item[aria-current],
-  .menu-item[aria-selected=true] {
-    color: #c6c6c6;
+  /* support.github.com: "#fafbfc" */
+  .menu-item:active {
     background-color: #181818;
   }
-  /* support.github.com: "#e36209" */
-  .menu-item.selected::before, .menu-item[aria-current]::before,
+  /* support.github.com: "#f9826c" */
+  .menu-item.selected::before,
+  .menu-item[aria-current]:not([aria-current=false])::before,
   .menu-item[aria-selected=true]::before {
-    background-color: #fb8532;
+    background-color: #fff;
   }
-  /* support.github.com: "color: #24292e" */
+  /* support.github.com: "color: #959da5" */
   .menu-item .octicon {
-    color: #c6c6c6;
+    color: #767676;
   }
   /* support.github.com: "#cb2431" */
   .menu-item.alert .Counter, .menu-item .menu-warning {
     color: #d82828;
   }
-  /* support.github.com: "color: #586069", "#e1e4e8" */
+  /* support.github.com: "color: #1b1f23", "#eaecef" */
   .menu-heading {
-    color: #afafaf;
+    color: #dcdcdc;
+  }
+  /* support.github.com: "#e1e4e8" */
+  .menu-heading, .tabnav {
     border-bottom-color: #343434;
   }
-  /* support.github.com: "#d1d5da" */
-  .tabnav {
-    border-bottom-color: #404040;
-  }
-  /* support.github.com: "color: #586069", "transparent", "transparent" */
+  /* support.github.com: "color: #24292e", "transparent", "transparent" */
   .tabnav-tab {
-    color: #afafaf;
+    color: #c6c6c6;
     background-color: transparent;
     border-color: transparent;
   }
-  /* support.github.com: "color: #24292e", "#fff", "#d1d5da" */
-  .tabnav-tab.selected, .tabnav-tab[aria-current],
+  /* support.github.com: "#fff", "#e1e4e8" */
+  .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current=false]),
   .tabnav-tab[aria-selected=true] {
-    color: #c6c6c6;
     background-color: #181818;
-    border-color: #404040;
+    border-color: #343434;
   }
-  /* support.github.com: "color: #24292e" */
+  /* support.github.com: "color: #586069" */
   .tabnav-tab:focus, .tabnav-tab:hover {
-    color: #c6c6c6;
+    color: #afafaf;
+  }
+  /* support.github.com: "color: #6a737d" */
+  .tabnav-tab:active {
+    color: #9b9b9b;
+  }
+  /* support.github.com: "color: #959da5" */
+  .tabnav-tab .octicon {
+    color: #767676;
   }
   /* support.github.com: "color: #586069" */
   .tabnav-extra {
@@ -37248,12 +37235,12 @@
   .filter-item {
     color: #afafaf;
   }
-  /* support.github.com: "#eaecef" */
+  /* support.github.com: "#f6f8fa" */
   .filter-item:hover {
-    background-color: #343434;
+    background-color: #222;
   }
   /* support.github.com: "color: #fff", "#0366d6" */
-  .filter-item.selected, .filter-item[aria-current],
+  .filter-item.selected, .filter-item[aria-current]:not([aria-current=false]),
   .filter-item[aria-selected=true] {
     color: #fff;
     background-color: /*[[base-color]]*/;
@@ -37266,9 +37253,9 @@
   .SideNav {
     background-color: #181818;
   }
-  /* support.github.com: "color: #586069", "transparent", "#e1e4e8" */
+  /* support.github.com: "color: #1b1f23", "transparent", "#eaecef" */
   .SideNav-item {
-    color: #afafaf;
+    color: #dcdcdc;
     background-color: transparent;
     border-top-color: #343434;
   }
@@ -37276,28 +37263,19 @@
   .SideNav-item:last-child {
     box-shadow: 0 1px 0 #343434;
   }
-  /* support.github.com: "color: #24292e", "#f6f8fa" */
+  /* support.github.com: "#f6f8fa" */
   .SideNav-item:focus, .SideNav-item:hover {
-    color: #c6c6c6;
     background-color: #222;
   }
-  /* support.github.com: "#d1d5da" */
-  .SideNav-item:focus::before, .SideNav-item:hover::before {
-    background-color: #404040;
-  }
   /* support.github.com: "#fff" */
-  .SideNav-item:active {
+  .SideNav-item:active, .SideNav-item[aria-current]:not([aria-current=false]),
+  .SideNav-item[aria-selected="true"] {
     background-color: #181818;
   }
-  /* support.github.com: "color: #24292e", "#fff" */
-  .SideNav-item[aria-current="page"], .SideNav-item[aria-selected="true"] {
-    color: #c6c6c6;
-    background-color: #181818;
-  }
-  /* support.github.com: "#e36209" */
-  .SideNav-item[aria-current="page"]::before,
+  /* support.github.com: "#f9826c" */
+  .SideNav-item[aria-current]:not([aria-current=false])::before,
   .SideNav-item[aria-selected="true"]::before {
-    background-color: #fb8532;
+    background-color: #fff;
   }
   /* support.github.com: "color: #6a737d" */
   .SideNav-icon {
@@ -37310,7 +37288,7 @@
   }
   /* support.github.com: "color: #24292e" */
   .SideNav-subItem:focus, .SideNav-subItem:hover,
-  .SideNav-subItem[aria-current="page"],
+  .SideNav-subItem[aria-current]:not([aria-current=false]),
   .SideNav-subItem[aria-selected="true"] {
     color: #c6c6c6;
   }
@@ -37318,29 +37296,29 @@
   .subnav-bordered {
     border-bottom-color: #343434;
   }
-  /* support.github.com: "color: #586069", "#e1e4e8" */
+  /* support.github.com: "color: #24292e", "#e1e4e8" */
   .subnav-item {
-    color: #afafaf;
+    color: #c6c6c6;
     border-color: #343434;
   }
   /* support.github.com: "#f6f8fa" */
   .subnav-item:focus, .subnav-item:hover {
     background-color: #222;
   }
-  /* support.github.com: "color: #fff", "#0366d6", "#0366d6" */
-  .subnav-item.selected, .subnav-item[aria-current],
+  /* support.github.com: "color: #fff", "#0366d6", "#005cc5" */
+  .subnav-item.selected, .subnav-item[aria-current]:not([aria-current=false]),
   .subnav-item[aria-selected=true] {
     color: #fff;
     background-color: /*[[base-color]]*/;
-    border-color: /*[[base-color]]*/;
+    border-color: #4f8cc9;
   }
   /* support.github.com: "color: #586069" */
   .subnav-search-input {
     color: #afafaf;
   }
-  /* support.github.com: "#c6cbd1" */
+  /* support.github.com: "color: #959da5" */
   .subnav-search-icon {
-    color: #505050;
+    color: #767676;
   }
   /* support.github.com: "color: #444d56" */
   .subnav-search-context .btn {
@@ -37348,65 +37326,62 @@
   }
   /* support.github.com: "#e1e4e8" */
   .UnderlineNav {
-    border-bottom-color: #343434;
+    box-shadow: inset 0 -1px 0 #343434;
   }
-  /* support.github.com: "color: #586069", "transparent", "transparent" */
+  /* support.github.com: "color: #1b1f23", "transparent", "rgba(209,213,218,0)" */
   .UnderlineNav-item {
-    color: #afafaf;
+    color: #dcdcdc;
     background-color: transparent;
     border-bottom-color: transparent;
   }
-  /* support.github.com: "color: #24292e", "#d1d5da" */
+  /* support.github.com: "#d1d5da" */
   .UnderlineNav-item:focus, .UnderlineNav-item:hover {
-    color: #c6c6c6;
     border-bottom-color: #404040;
   }
-  /* support.github.com: "color: #6a737d" */
-  .UnderlineNav-item:focus .UnderlineNav-octicon,
-  .UnderlineNav-item:hover .UnderlineNav-octicon {
-    color: #9b9b9b;
-  }
-  /* support.github.com: "color: #24292e", "#e36209" */
-  .UnderlineNav-item.selected, .UnderlineNav-item[aria-current],
+  /* support.github.com: "#f9826c" */
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current]:not([aria-current=false]),
   .UnderlineNav-item[role=tab][aria-selected=true] {
-    color: #c6c6c6;
-    border-bottom-color: #fb8532;
+    border-bottom-color: #fff;
   }
-  /* support.github.com: "color: #6a737d" */
+  /* support.github.com: "color: #586069" */
   .UnderlineNav-item.selected .UnderlineNav-octicon,
-  .UnderlineNav-item[aria-current] .UnderlineNav-octicon,
+  .UnderlineNav-item[aria-current]:not([aria-current=false]) .UnderlineNav-octicon,
   .UnderlineNav-item[role=tab][aria-selected=true] .UnderlineNav-octicon {
-    color: #9b9b9b;
+    color: #afafaf;
   }
   /* support.github.com: "color: #959da5" */
   .UnderlineNav-octicon {
     color: #767676;
   }
-  /* support.github.com: "#0366d6", "#fff", "#e1e4e8" */
+  /* support.github.com: "color: #24292e", "transparent" */
   .pagination a, .pagination em, .pagination span {
+    color: #c6c6c6;
+    border-color: transparent;
+  }
+  /* support.github.com: "#eaecef" */
+  .pagination a:active, .pagination a:focus, .pagination a:hover,
+  .pagination em:active, .pagination em:focus, .pagination em:hover,
+  .pagination span:active, .pagination span:focus, .pagination span:hover {
+    border-color: #343434;
+  }
+  /* support.github.com: "#0366d6" */
+  .pagination .next_page, .pagination .previous_page {
     color: /*[[base-color]]*/;
-    background-color: #181818;
-    border-color: #343434;
   }
-  /* support.github.com: "#eff3f6", "#e1e4e8" */
-  .pagination a:focus, .pagination a:hover, .pagination em:focus,
-  .pagination em:hover, .pagination span:focus, .pagination span:hover {
-    background-color: #242424;
-    border-color: #343434;
-  }
-  /* support.github.com: "color: #fff", "#0366d6", "#0366d6" */
-  .pagination .current, .pagination .current:hover, .pagination [aria-current],
-  .pagination [aria-current]:hover {
+  /* support.github.com: "color: #fff", "#0366d6", "transparent" */
+  .pagination .current, .pagination .current:hover,
+  .pagination [aria-current]:not([aria-current=false]) {
     color: #fff;
     background-color: /*[[base-color]]*/;
-    border-color: /*[[base-color]]*/;
+    border-color: transparent;
   }
-  /* support.github.com: "#d1d5da", "#fafbfc" */
+  /* support.github.com: "color: #6a737d", "transparent" */
   .pagination .disabled, .pagination .disabled:hover, .pagination .gap,
   .pagination .gap:hover, .pagination [aria-disabled=true],
   .pagination [aria-disabled=true]:hover {
-    color: #404040;
-    background-color: #181818;
+    color: #9b9b9b;
+    border-color: transparent;
   }
   /* support.github.com: "color: #fff" */
   .tooltipped::after {
@@ -37417,34 +37392,35 @@
     color: #dcdcdc;
     border-color: transparent;
   }
-  /* support.github.com: "color: #032f62", "#dbedff", "rgba(27,31,35,0.15)" */
+  /* support.github.com: "color: #24292e" */
   .flash {
-    color: #9daccc;
-    background-color: #182030;
-    border-color: rgba(220, 220, 220, .15);
+    color: #c6c6c6;
   }
   /* support.github.com: "none" */
   .flash-close {
     background: none;
   }
-  /* support.github.com: "#735c0f", "#fffbdd", "rgba(27,31,35,0.15)" */
+  /* support.github.com: "#dbedff", "rgba(4,66,137,0.2)" */
+  .flash {
+    background-color: #182030;
+    border-color: #246;
+  }
+  /* support.github.com: "rgba(4,66,137,0.6)" */
+  .flash .octicon {
+    color: #4f8cc9;
+  }
+  /* support.github.com: "#fffbdd", "rgba(176,136,0,0.2)" */
   .flash-warn {
-    color: #bba257;
     background-color: #261d08;
+    border-color: #542;
   }
-  /* support.github.com: "#86181d", "#ffdce0", "rgba(27,31,35,0.15)" */
-  .flash-error, .flash-warn {
-    border-color: rgba(220, 220, 220, .15);
+  /* support.github.com: "#b08800" */
+  .flash-warn .octicon {
+    color: #cb4;
   }
-  .flash-error {
-    color: #d82828;
-    background-color: #300;
-  }
-  /* support.github.com: "#165c26", "#dcffe4", "rgba(27,31,35,0.15)" */
+  /* support.github.com: "#dcffe4" */
   .flash-success {
-    color: #6cc644;
     background-color: #002800;
-    border-color: rgba(220, 220, 220, .15);
   }
   /* support.github.com: "#fffbdd" */
   .warning {
@@ -37640,17 +37616,21 @@
   .border-green-light {
     border-color: #040 !important;
   }
-  /* support.github.com: "#cea0a5" */
-  .border-red, .border-red-light {
+  /* support.github.com: "#d73a49" */
+  .border-red {
     border-color: #d82828 !important;
+  }
+  /* support.github.com: "#f97583" */
+  .border-red-light {
+    border-color: #f88 !important;
   }
   /* support.github.com: "#6f42c1" */
   .border-purple {
     border-color: #73589a !important;
   }
-  /* support.github.com: "#d9d0a5" */
+  /* support.github.com: "#f9c513" */
   .border-yellow {
-    border-color: #542 !important;
+    border-color: #cb4 !important;
   }
   /* support.github.com: "#eaecef" */
   #site-search-results .search-result, .border-gray-light {
@@ -37668,17 +37648,21 @@
   .border-white-fade-50 {
     border-color: hsla(0, 0%, 0%, .5) !important;
   }
-  /* support.github.com: "rgba(27,31,35,0.1)" */
+  /* support.github.com: "rgba(27,31,35,0.04)" */
   .box-shadow {
-    box-shadow: 0 1px 1px #000 !important;
+    box-shadow: 0 1px 0 #000 !important;
   }
-  /* support.github.com: "rgba(27,31,35,0.15)" */
+  /* support.github.com: "rgba(149,157,165,0.15)" */
   .box-shadow-medium {
-    box-shadow: 0 1px 5px #000 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .15) !important;
   }
-  /* support.github.com: "rgba(27,31,35,0.15)" */
+  /* support.github.com: "rgba(149,157,165,0.2)" */
   .box-shadow-large {
-    box-shadow: 0 1px 15px #000 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2) !important;
+  }
+  /* support.github.com: "rgba(149,157,165,0.3)" */
+  .box-shadow-extra-large {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, .3) !important;
   }
   /* support.github.com: "box-shadow: none !important" */
   .box-shadow-none {
@@ -37720,7 +37704,7 @@
   .bg-red {
     background-color: #d82828 !important;
   }
-  /* support.github.com: "#ffdce0" */
+  /* support.github.com: "#ffeef0" */
   .bg-red-light {
     background-color: #300 !important;
   }
@@ -38158,9 +38142,9 @@
   .text-gray-dark {
     color: #c6c6c6 !important;
   }
-  /* support.github.com: "#28a745" */
+  /* support.github.com: "#22863a" */
   .text-green {
-    color: #484 !important;
+    color: #6cc644 !important;
   }
   /* support.github.com: "#b08800" */
   .text-yellow {
@@ -38228,11 +38212,11 @@
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
-  /* support.github.com: "#fff", "rgba(27,31,35,0.15)", "rgba(27,31,35,0.15)" */
+  /* support.github.com: "#fff", "#e1e4e8", "rgba(149,157,165,0.2)" */
   .dropdown-menu {
     background-color: #181818;
-    border-color: rgba(220, 220, 220, .15);
-    box-shadow: 0 1px 15px #000;
+    border-color: #343434;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
   }
   /* support.github.com: "transparent", "rgba(27,31,35,0.15)" */
   .dropdown-menu::before {
@@ -38294,12 +38278,12 @@
   .dropdown-menu-ne::after {
     border-top-color: var(--ghd-bg-color);
   }
-  /* support.github.com: "color: #fff", "#2f363d", "#444d56", "rgba(27,31,35,0.15)" */
+  /* support.github.com: "color: #fff", "#2f363d", "#444d56", "rgba(149,157,165,0.2)" */
   .dropdown-menu-dark {
     color: #fff;
     background-color: #222;
     border-color: #343434;
-    box-shadow: 0 1px 15px #000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
   }
   /* support.github.com: "#444d56" */
   .dropdown-menu-dark::before {
@@ -38341,6 +38325,102 @@
   .dropdown-menu-dark.dropdown-menu-ne::after {
     border-color: #282828 transparent transparent;
   }
+  /* support.github.com: "transparent" */
+  .IssueLabel {
+    border-color: transparent;
+  }
+  /* support.github.com: "transparent", "transparent", "#e1e4e8" */
+  .label, .Label {
+    background-color: transparent !important;
+    border-color: #343434;
+  }
+  /* support.github.com: "color: #586069", "#e1e4e8" */
+  .Label--gray, .Label--outline {
+    color: #afafaf;
+    border-color: #343434;
+  }
+  /* support.github.com: "color: #24292e" */
+  .Label--gray-darker {
+    color: #c6c6c6;
+  }
+  /* support.github.com: "#735c0f", "#f9c513" */
+  .Label--yellow {
+    color: #bba257;
+    border-color: #cb4;
+  }
+  /* support.github.com: "#cb2431", "#cb2431" */
+  .Label--red {
+    color: #d82828;
+    border-color: #d82828;
+  }
+  /* support.github.com: "#22863a", "#28a745" */
+  .Label--green, .Label--outline-green {
+    color: #6cc644;
+    border-color: #484;
+  }
+  /* support.github.com: "#0366d6", "#0366d6" */
+  .Label--blue {
+    color: /*[[base-color]]*/;
+    border-color: /*[[base-color]]*/;
+  }
+  /* support.github.com: "#6f42c1", "#8a63d2" */
+  .Label--purple {
+    color: #73589a;
+    border-color: #53387a;
+  }
+  /* support.github.com: "#ec6cb9" */
+  .Label--pink {
+    border-color: #c49;
+  }
+  /* support.github.com: "color: #fff", "#6a737d", "transparent" */
+  .state, .State {
+    color: #fff;
+    background-color: #444;
+    border-color: transparent;
+  }
+  /* support.github.com: "#28a745" */
+  .State--green {
+    background-color: #484;
+  }
+  /* support.github.com: "#d73a49" */
+  .State--red {
+    background-color: #d82828;
+  }
+  /* support.github.com: "#6f42c1" */
+  .State--purple {
+    background-color: #73589a;
+  }
+  /* support.github.com: "color: #24292e", "rgba(209,213,218,0.5)", "transparent" */
+  .Counter {
+    color: #c6c6c6;
+    background-color: rgba(90, 90, 90, .5);
+    border-color: transparent;
+  }
+  /* support.github.com: "color: #6a737d" */
+  .Counter--gray-light {
+    color: #9b9b9b;
+  }
+  /* support.github.com: "color: #fff", "#6a737d" */
+  .Counter--gray {
+    color: #fff;
+    background-color: #444;
+  }
+  /* support.github.com: "color: #586069" */
+  .diffstat {
+    color: #afafaf;
+  }
+  /* support.github.com: "#cb2431" */
+  .diffstat-block-deleted {
+    background-color: #d82828;
+  }
+  /* support.github.com: "#2cbe4e" */
+  .diffstat-block-added {
+    background-color: #373;
+  }
+  /* support.github.com: "#d1d5da" */
+  .diffstat-block-neutral {
+    background-color: #404040;
+  }
   /* support.github.com: "#f1f8ff" */
   #site-search-results .search-result:hover {
     background-color: #182030;
@@ -38363,34 +38443,6 @@
   .gh-subheading {
     color: #9b9b9b;
   }
-  /* support.github.com: "color: #fff" */
-  .State {
-    color: #fff;
-  }
-  /* support.github.com: "#6f42c1" */
-  #ticket-title .State--open {
-    background-color: #73589a;
-  }
-  /* support.github.com: "#cb2431" */
-  #ticket-title .State--closed {
-    background-color: #d82828;
-  }
-  /* support.github.com: "#2cbe4e" */
-  #ticket-title .State--pending {
-    background-color: #373;
-  }
-  /* support.github.com: "#cb2431" */
-  .octicon-state-closed {
-    color: #d82828;
-  }
-  /* support.github.com: "#6f42c1" */
-  .octicon-state-open {
-    color: #73589a;
-  }
-  /* support.github.com: "#2cbe4e" */
-  .octicon-state-pending {
-    color: #373;
-  }
   /* support.github.com: "#d1d5da" */
   #ticket .placeholder.write {
     border-color: #404040;
@@ -38398,6 +38450,22 @@
   /* support.github.com: "#eff1f3","#E0E0E0" */
   #ticket .skeleton {
     background: linear-gradient(to right, #242424 4%, #343434 25%, #242424 36%);
+  }
+  /* support.github.com: "#d73a49" */
+  .octicon.closed {
+    color: #d82828;
+  }
+  /* support.github.com: "color: #6a737d" */
+  .octicon.archived {
+    color: #9b9b9b;
+  }
+  /* support.github.com: "#28a745" */
+  .octicon.open {
+    color: #484;
+  }
+  /* support.github.com: "#6f42c1" */
+  .octicon.pending {
+    color: #73589a;
   }
   /* support.github.com: "color: #333" */
   #ticket-comments .attachment-name a, .attachment-name a:hover,
