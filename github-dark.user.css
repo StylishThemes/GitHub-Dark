@@ -22196,7 +22196,8 @@
   /* box shadow below attach box - https://github.com/StylishThemes/GitHub-Dark/releases/new */
   /* + remove box shadowns on buttons and the like */
   .upload-progress, .social-count, .btn, .btn-outline.disabled,
-  .btn-outline:disabled, .btn-outline[aria-disabled="true"] {
+  .btn-outline:disabled, .btn-outline[aria-disabled="true"], .btn:active,
+  .btn-blue:active {
     box-shadow: none;
   }
   /* https://github.com/team inline HTML fixes */
@@ -24179,12 +24180,17 @@
     color: #fff;
     background-color: /*[[base-color]]*/;
     background-image: linear-gradient(-180deg, /*[[base-color]]*/, /*[[base-color]]*/ 90%);
-    border-color: #eee;
+  }
+  .btn:active, .btn-blue:active {
+    color: #fff;
+    box-shadow: none;
+  }
+  .btn-blue, .btn-blue:hover {
+    border-color: /*[[base-color]]*/;
   }
   .btn-blue:hover {
     color: #fff;
     background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, .9), rgba(/*[[base-color-rgb]]*/, .9) 90%);
-    border-color: #eee;
   }
   .btn.btn-blue.btn-block {
     border-color: #eee;
