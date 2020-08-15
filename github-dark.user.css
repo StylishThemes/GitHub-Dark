@@ -21485,7 +21485,8 @@
   .graph-before-activity-overview, .access-form-wrapper,
   .border-right.border-bottom.border-left, .news .issues_labeled .border,
   table.pricing-table, .two-factor-steps, .project-column,
-  .gist-content .file-box, .branch-action-item.js-transitionable, .prose-diff {
+  .gist-content .file-box, .branch-action-item.js-transitionable, .prose-diff,
+  .listgroup {
     background: #181818;
   }
   /* Expandable review boxes, rendered and loading */
@@ -26322,23 +26323,6 @@
   }
   /* end refined-github rules */
   /* begin zenhub rules */
-  /* zenhub: "none" */
-  body.zh_logged_in .ui-datepicker .ui-datepicker-buttonpane {
-    background-image: none;
-  }
-  /* zenhub: "none" */
-  body.zh_logged_in .ui-dialog .ui-dialog-content {
-    background: none;
-  }
-  /* zenhub: "none" */
-  body.zh_logged_in .ui-dialog .ui-dialog-buttonpane {
-    background-image: none;
-  }
-  /* zenhub: "none" */
-  body.zh_logged_in .ui-spinner-input,
-  body.zh_logged_in .ui-tabs .ui-tabs-panel {
-    background: none;
-  }
   /* zenhub: "#eee" */
   body.zh_logged_in #new_issue .discussion-sidebar h3 {
     border-top-color: #2c2c2c;
@@ -26648,7 +26632,7 @@
   }
   /* zenhub: "#fff" */
   body.zh_logged_in .zh-dependency-manager-container.TimelineItem .zhc-dependency,
-  body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-issue-list,
+  body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-issue-list__container,
   body.zh_logged_in .zh-epic-issue-container.TimelineItem .zhc-epic-list {
     background-color: #181818;
   }
@@ -28976,6 +28960,10 @@
   body.zh_logged_in .zhc-error-page__header__description,
   body.zh_logged_in .zhc-error-page__header__title {
     color: #c6c6c6;
+  }
+  /* zenhub: "#f8f8f8" */
+  body.zh_logged_in .zhc-external-video-embed {
+    background-color: #202020;
   }
   /* zenhub: "color: #fff", "#5e60ba" */
   body.zh_logged_in .zhc-feature-alert {
@@ -31582,8 +31570,14 @@
   body.zh_logged_in .zhc-assignee-cell__count {
     color: #9b9b9b;
   }
-  /* zenhub: "#fff", "#e9e9e9" */
+  /* zenhub: "#fff", "#e9e9e9", "#e9e9e9" */
   body.zh_logged_in .zhc-epic-issue-list {
+    background-color: #181818;
+    border-top-color: #343434;
+    border-bottom-color: #343434;
+  }
+  /* zenhub: "#fff", "#e9e9e9" */
+  body.zh_logged_in .zhc-epic-issue-list__container {
     background-color: #181818;
     border-color: #343434;
   }
@@ -31610,6 +31604,14 @@
   /* zenhub: "#f8f8f8" */
   body.zh_logged_in .zhc-epic-builder-pipeline-cell {
     background-color: #202020;
+  }
+  /* zenhub: "#ddd" */
+  body.zh_logged_in .zhc-button.zhc-modal-close-button {
+    color: #343434;
+  }
+  /* zenhub: "color: #fff" */
+  body.zh_logged_in .zhc-button.zhc-modal-close-button:hover {
+    color: #fff;
   }
   /* zenhub: "#fff" */
   body.zh_logged_in .zhc-onboarding-tutorials {
@@ -31946,6 +31948,7 @@
     color: #c6c6c6;
   }
   /* zenhub: "#fff" */
+  body.zh_logged_in .zhc-large-card-toast,
   body.zh_logged_in .zhc-roadmap-warning {
     background-color: #181818;
   }
@@ -31976,34 +31979,26 @@
   body.zh_logged_in .zhc-progress-update__content {
     color: #5a5a5a;
   }
-  /* zenhub: "#fff" */
-  body.zh_logged_in .zhc-toast-tutorial {
-    background-color: #181818;
+  /* zenhub: "box-shadow: none" */
+  body.zh_logged_in .zhc-tutorial-progress-footer__action-buttons {
+    box-shadow: none;
   }
   /* zenhub: "color: #333" */
-  body.zh_logged_in .zhc-toast-tutorial__content h3 {
+  body.zh_logged_in .zhc-toast-tutorial-card__content h3 {
     color: #c6c6c6;
   }
   /* zenhub: "color: #666" */
-  body.zh_logged_in .zhc-toast-tutorial__content p {
+  body.zh_logged_in .zhc-toast-tutorial-card__content p {
     color: #9b9b9b;
   }
-  /* zenhub: "box-shadow: none" */
-  body.zh_logged_in .zhc-toast-tutorial__action-buttons {
-    box-shadow: none;
-  }
   /* zenhub: "#fff", "color: #666" */
-  body.zh_logged_in .zhc-toast-tutorial__controls button {
+  body.zh_logged_in .zhc-toast-tutorial-card__controls button {
     background-color: #181818;
     color: #9b9b9b;
   }
   /* zenhub: "color: #333" */
-  body.zh_logged_in .zhc-toast-tutorial__controls button:hover {
+  body.zh_logged_in .zhc-toast-tutorial-card__controls button:hover {
     color: #c6c6c6;
-  }
-  /* zenhub: "#f8f8f8" */
-  body.zh_logged_in .zhc-tutorial-video-embed {
-    background-color: #202020;
   }
   /* zenhub: "#fff", "rgba(27,31,35,0.15)" */
   body.zh_logged_in .zhc-workflows-connection-bar {
