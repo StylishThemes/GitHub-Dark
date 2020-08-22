@@ -13,7 +13,7 @@ const server = createServer((_, res) => {
   res.on("close", () => {
     setTimeout(() => {
       process.exit(0);
-    }, 2000);
+    }, 4000);
   });
   res.end(file);
 });
