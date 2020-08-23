@@ -466,6 +466,22 @@
     position: relative;
     top: -1.25px;
   }
+  /* GitHub Bug: Various issues when editing own comment in discussion */
+  .discussion-comment.current-user div.clearfix {
+    background: #182030;
+    border-radius: 3px 3px 0 0;
+  }
+  .discussion-comment .js-inline-comments-container,
+  .discussion-comment .js-resolvable-timeline-thread-container {
+    background: none;
+  }
+  .discussion-comment .review-thread-reply {
+    border-radius: 0 0 3px 3px;
+  }
+  .discussion-comment.current-user .review-thread-reply {
+    background: #182030;
+    border-color: #246;
+  }
   /* Opinionated: Remove excessive header padding */
   .Box-row, .Box-body {
     padding: 8px 12px;
@@ -1756,7 +1772,7 @@
     background-position: -18px 0 !important;
   }
   /* Repo list (https://github.com/{user}?tab=repositories) */
-  .repo-list-item p, .repo-list-item .repo-list-stats, .review-thread-reply {
+  .repo-list-item p, .repo-list-item .repo-list-stats {
     position: relative !important;
     z-index: 1 !important;
   }
