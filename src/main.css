@@ -466,9 +466,24 @@
     position: relative;
     top: -1.25px;
   }
-  /* GitHub Bug: Various issues when editing own comment in discussion */
+  /* Opinionated: Remove excessive box padding */
+  .Box-row, .Box-header, .Box-body {
+    padding: 8px 12px;
+  }
+  /* Opinionated: Realign avatar in repo last commit box */
+  .Box-header .hx_avatar_stack_commit .AvatarStack {
+    position: relative;
+    left: -3px;
+  }
+  .file-header {
+    padding: 4px 6px;
+  }
+  /* Repo files table: Make first border blue */
+  .repository-content .Box.mb-3 .Details .sr-only + .Box-row {
+    border-top-color: #246 !important;
+  }
+  /* Various tweaks to own comments in discussion */
   .discussion-comment.current-user div.clearfix {
-    background: #182030;
     border-radius: 3px 3px 0 0;
   }
   .discussion-comment .js-inline-comments-container,
@@ -482,22 +497,7 @@
     background: #182030;
     border-color: #246;
   }
-  /* GitHub Bug: Make first border blue in repo files table */
-  .repository-content .Box.mb-3 .Details .sr-only + .Box-row {
-    border-top-color: #246 !important;
-  }
-  /* Opinionated: Remove excessive box padding */
-  .Box-row, .Box-header, .Box-body {
-    padding: 8px 12px;
-  }
-  /* Opinionated: Realign avatar in repo last commit box */
-  .Box-header .hx_avatar_stack_commit .AvatarStack {
-    position: relative;
-    left: -3px;
-  }
-  .file-header {
-    padding: 4px 6px;
-  }
+  /* topic tags */
   .topic-tag {
     box-shadow: inset 0 0 0 1px #246 !important;
   }
