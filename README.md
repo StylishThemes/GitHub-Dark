@@ -120,7 +120,7 @@
 If you would like to contribute to this repository, please...
 
 1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork)
-1. Make sure you have these installed:
+2. Make sure you have these installed:
 
 - [`node`](https://nodejs.org): version 12 or greater
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
@@ -131,21 +131,19 @@ Then run `make deps` to install dependencies.
 ⚠️ **Do not edit** the **`github-dark.user.css`** file.
     All **changes are lost** on **`make build`**
 
-### Auto generated CSS
+### Auto-generated CSS
 
-Contributing e.g unstyled items, sources, extensions, etc. to name a few.
+Contributing e.g. unstyled items, sources, extensions, etc. to name a few.
 
-See and edit the respective files in [/src/gen/](./src/gen/).
-
-And then run `make build install` to rebuild the style and install it test you fixes and PR back.
+See and edit the respective files in [/src/gen/](./src/gen/) then run `make build install` to rebuild and reinstall the style, then test your fixes and send a pull request.
 
 ### Manual override entries
 
-Manual overrides to e.g. generated content or inline HTML styles to name a few;
+Manual overrides to e.g. generated content or inline HTML styles to name a few.
 
-See and edit respective files in [`src`](./src) and then run `make build install` to rebuild and install the style, to test you fixes and PR back.
+See and edit respective files in [`src`](./src) then run `make build install` to rebuild and reinstall the style, then test your fixes and send a pull request.
 
-### Make Targets
+### Make targets
 
 - `make deps`: Install development dependencies into `Github Dark/node_modules`
 - `make build`: Build `github-dark.user.css`
@@ -167,7 +165,7 @@ Internal use only targets include:
 
 ## Notes
 
-- If you're using a custom domain for GitHub Enterprise, be sure to include it through a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome). See
+- If you're using a custom domain for GitHub Enterprise, be sure to include it through a `@-moz-document` rule (Firefox) or add it to the `Applies to` section in (Chrome).
 
 Thanks to all our [contributors](./AUTHORS) so far! And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
 
