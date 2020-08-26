@@ -453,10 +453,6 @@
   .branch-action-state-unstable .branch-action-body::after {
     border-right-color: #181818;
   }
-  /* GitHub Bug: Fix alignment of avatars in box headers */
-  .Box-header .Details .ml-n1 {
-    margin-right: -4px !important;
-  }
   /* GitHub Bug: Vertically center ... expander in box headers */
   .Box-header .Details .ellipsis-expander {
     position: relative;
@@ -471,12 +467,32 @@
   .comment-body .blob-wrapper > table {
     width: 100%;
   }
-  /* Opinionated: Remove excessive box padding */
+  /* Opinionated: Remove excessive box padding and adjust avatars to match */
   .Box-row, .Box-header, .Box-body {
     padding: 8px 12px;
   }
   .file-header {
     padding: 4px 6px;
+  }
+  /* https://github.com/vednoc/userstyles.world */
+  /* https://github.com/vednoc/userstyles.world/blob/main/themes */
+  /* https://github.com/vednoc/userstyles.world/blob/main/themes/.gitkeep */
+  .Box-header .avatar[width="24"], .Box-header .avatar-user[width="24"] {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  .Box-header a[rel="author"] .avatar[width="24"],
+  .Box-header a[rel="author"] .avatar-user[width="24"] {
+    top: -1px;
+    left: 2px;
+    margin-right: 4px;
+  }
+  .Box-header .ml-n1 {
+    margin-left: 0 !important;
+    margin-right: -8px !important;
   }
   /* fix close icon when .m-0 class is applied */
   .Box-btn-octicon.btn-octicon.m-0 {
