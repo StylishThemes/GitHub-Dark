@@ -94,15 +94,18 @@ module.exports.mappings = {
   "$color: #d2dff0": "#224466", // org discussion reactions
 
   // red
+  "$color: rgba(158,28,35,.6)": "rgba(255,68,68,.6)", // .flash-error .octicon
   "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
+  "$color: rgba(158,28,35,.2)": "rgba(255,68,68,.2)",
   "$color: #86181d": "#d82828",
   "$color: #b11a04": "#d82828", // graphql explorer
   "$color: #cb2431": "#d82828",
   "$color: #d73a49": "#d82828",
   "$color: #cea0a5": "#d82828",
   "$color: #f97583": "#f88",
-  "$color: #ffeef0": "#300",
   "$color: #ffdce0": "#300",
+  "$color: #ffe3e6": "#300",
+  "$color: #ffeef0": "#300",
 
   // orange
   "$color: #a04100": "#f3582c",
