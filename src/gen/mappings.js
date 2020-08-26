@@ -156,6 +156,7 @@ module.exports.mappings = {
   "$color: #94d3a2": "#040", // .btn-primary.disabled
   "$color: #a2cbac": "#040",
   "$color: #dcffe4": "#002800",
+  "$color: #e6ffed": "#002800",
   "$color: #f0fff4": "#002800",
 
   // purple
