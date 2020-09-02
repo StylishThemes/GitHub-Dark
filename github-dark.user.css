@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     4.0.42
+@version     4.0.43
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     BSD-2-Clause
@@ -3952,58 +3952,77 @@
   .select-menu-item.navigation-focus .description,
   .select-menu-item.navigation-focus .description-inline .description,
   .select-menu-item.navigation-focus .description-inline .description-warning,
+  .select-menu-item.navigation-focus .description-inline .select-menu-item-heading-warning,
   .select-menu-item.navigation-focus .description-inline > .octicon,
   .select-menu-item.navigation-focus .description-warning,
   .select-menu-item.navigation-focus.select-menu-action .description,
   .select-menu-item.navigation-focus.select-menu-action .description-warning,
+  .select-menu-item.navigation-focus.select-menu-action .select-menu-item-heading-warning,
   .select-menu-item.navigation-focus.select-menu-action > .octicon,
+  .select-menu-item.navigation-focus .select-menu-item-heading-warning,
   .select-menu-item.navigation-focus.selected .description,
   .select-menu-item.navigation-focus.selected .description-warning,
+  .select-menu-item.navigation-focus.selected .select-menu-item-heading-warning,
   .select-menu-item.navigation-focus.selected > .octicon,
   .select-menu-item.navigation-focus > .octicon,
   .select-menu-item.navigation-focus[aria-checked=true] .description,
   .select-menu-item.navigation-focus[aria-checked=true] .description-warning,
+  .select-menu-item.navigation-focus[aria-checked=true] .select-menu-item-heading-warning,
   .select-menu-item.navigation-focus[aria-checked=true] > .octicon,
   .select-menu-item:focus .description,
   .select-menu-item:focus .description-inline .description,
   .select-menu-item:focus .description-inline .description-warning,
+  .select-menu-item:focus .description-inline .select-menu-item-heading-warning,
   .select-menu-item:focus .description-inline > .octicon,
   .select-menu-item:focus .description-warning,
   .select-menu-item:focus.select-menu-action .description,
   .select-menu-item:focus.select-menu-action .description-warning,
+  .select-menu-item:focus.select-menu-action .select-menu-item-heading-warning,
   .select-menu-item:focus.select-menu-action > .octicon,
+  .select-menu-item:focus .select-menu-item-heading-warning,
   .select-menu-item:focus.selected .description,
   .select-menu-item:focus.selected .description-warning,
+  .select-menu-item:focus.selected .select-menu-item-heading-warning,
   .select-menu-item:focus.selected > .octicon,
   .select-menu-item:focus > .octicon, .select-menu-item:hover .description,
   .select-menu-item:hover .description-inline .description,
   .select-menu-item:hover .description-inline .description-warning,
+  .select-menu-item:hover .description-inline .select-menu-item-heading-warning,
   .select-menu-item:hover .description-inline > .octicon,
   .select-menu-item:hover .description-warning,
   .select-menu-item:hover.select-menu-action .description,
   .select-menu-item:hover.select-menu-action .description-warning,
+  .select-menu-item:hover.select-menu-action .select-menu-item-heading-warning,
   .select-menu-item:hover.select-menu-action > .octicon,
+  .select-menu-item:hover .select-menu-item-heading-warning,
   .select-menu-item:hover.selected .description,
   .select-menu-item:hover.selected .description-warning,
+  .select-menu-item:hover.selected .select-menu-item-heading-warning,
   .select-menu-item:hover.selected > .octicon,
   .select-menu-item:hover > .octicon,
   .select-menu-item[aria-checked=true]:focus .description,
   .select-menu-item[aria-checked=true]:focus .description-warning,
+  .select-menu-item[aria-checked=true]:focus .select-menu-item-heading-warning,
   .select-menu-item[aria-checked=true]:focus > .octicon,
   .select-menu-item[aria-checked=true]:hover .description,
   .select-menu-item[aria-checked=true]:hover .description-warning,
+  .select-menu-item[aria-checked=true]:hover .select-menu-item-heading-warning,
   .select-menu-item[aria-checked=true]:hover > .octicon,
   .select-menu-item[aria-selected=true] .description-inline .description,
   .select-menu-item[aria-selected=true] .description-inline .description-warning,
+  .select-menu-item[aria-selected=true] .description-inline .select-menu-item-heading-warning,
   .select-menu-item[aria-selected=true] .description-inline > .octicon,
   .select-menu-item[aria-selected=true].select-menu-action .description,
   .select-menu-item[aria-selected=true].select-menu-action .description-warning,
+  .select-menu-item[aria-selected=true].select-menu-action .select-menu-item-heading-warning,
   .select-menu-item[aria-selected=true].select-menu-action > .octicon,
   .select-menu-item[aria-selected=true]:focus .description,
   .select-menu-item[aria-selected=true]:focus .description-warning,
+  .select-menu-item[aria-selected=true]:focus .select-menu-item-heading-warning,
   .select-menu-item[aria-selected=true]:focus > .octicon,
   .select-menu-item[aria-selected=true]:hover .description,
   .select-menu-item[aria-selected=true]:hover .description-warning,
+  .select-menu-item[aria-selected=true]:hover .select-menu-item-heading-warning,
   .select-menu-item[aria-selected=true]:hover > .octicon {
     color: #fff;
   }
@@ -4059,6 +4078,7 @@
     color: #afafaf;
   }
   /* gist.github.com: "#cb2431" */
+  .select-menu-item-heading.select-menu-item-heading-warning,
   .select-menu-item-text .description-warning {
     color: #d82828;
   }
@@ -5635,7 +5655,8 @@
     border-color: #404040;
   }
   /* gist.github.com: "#fafbfc", "#e1e4e8" */
-  .branch-action-body .merge-branch-form, .branch-action-body .merge-message {
+  .branch-action-body .merge-branch-form, .branch-action-body .merge-message,
+  .branch-action-body .queue-branch-form {
     background-color: #181818;
     border-top-color: #343434;
   }
@@ -5707,17 +5728,22 @@
     border-right-color: #f88;
   }
   /* gist.github.com: "#e1e4e8" */
-  .merge-branch-form .commit-form::before {
+  .merge-branch-form .commit-form::before,
+  .queue-branch-form .commit-form::before {
     border-right-color: #343434;
   }
   /* gist.github.com: "#f97583" */
   .merge-branch-form.danger .commit-form,
-  .merge-branch-form.error .commit-form {
+  .merge-branch-form.error .commit-form,
+  .queue-branch-form.danger .commit-form,
+  .queue-branch-form.error .commit-form {
     border-color: #f88;
   }
   /* gist.github.com: "#f97583" */
   .merge-branch-form.danger .commit-form::before,
-  .merge-branch-form.error .commit-form::before {
+  .merge-branch-form.error .commit-form::before,
+  .queue-branch-form.danger .commit-form::before,
+  .queue-branch-form.error .commit-form::before {
     border-right-color: #f88;
   }
   /* gist.github.com: "color: #fff", "#2cbe4e" */
