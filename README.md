@@ -70,13 +70,13 @@
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)<br>
-💾 [npmhub](https://github.com/npmhub/npmhub)<br>
+💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
+💾 [npm-hub](https://github.com/npmhub/npmhub)<br>
 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)<br>
 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
-💾 [ZenHub](https://www.zenhub.com/)<br>
-💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
 💾 [Sourcegraph Browser Extension](https://docs.sourcegraph.com/integration/browser_extension)<br>
+💾 [ZenHub](https://www.zenhub.com/)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
