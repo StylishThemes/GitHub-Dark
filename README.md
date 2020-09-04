@@ -76,6 +76,7 @@
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
 💾 [ZenHub](https://www.zenhub.com/)<br>
 💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
+💾 [Sourcegraph Browser Extension](https://docs.sourcegraph.com/integration/browser_extension)<br>
 
 ## Available Syntax Highlighting Themes ([Demo](https://stylishthemes.github.io/GitHub-Dark/))
 
