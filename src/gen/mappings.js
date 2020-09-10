@@ -21,12 +21,16 @@ module.exports.mappings = {
   "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
   "$color: rgba(149,157,165,.3)": "rgba(0,0,0,.3)", // .box-shadow-extra-large
   "$color: rgba(149,157,165,.15)": "rgba(0,0,0,.15)", // .box-shadow-medium
-  "$color: rgba(0,0,0,0.2)": "rgba(255,255,255,0.7)",
-  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,100%,.8)",
+  "$color: rgba(0,0,0,0.2)": "rgba(255,255,255,.7)",
+  "$color: hsla(0,0%,100%,.875)": "hsla(0,0%,0%,.875)",
+  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,0%,.8)",
   "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
   "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
   "$color: hsla(0,0%,100%,.125)": "hsla(0,0%,0%,.125)",
   "$color: hsla(0,0%,100%,.05)": "hsla(0,0%,0%,.05)",
+  "color: hsla(0,0%,100%,.875)": "color: hsla(0,0%,100%,.125)",
+  "color: hsla(0,0%,100%,.8)": "color: hsla(0,0%,100%,.2)",
+  "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.4)",
 
   "$background: #fff": "#181818",
   "$border: #fff": "var(--ghd-bg-color)",
