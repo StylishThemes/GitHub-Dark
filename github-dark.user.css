@@ -22371,6 +22371,11 @@
     filter: invert(90%) hue-rotate(180deg) contrast(120%) !important;
     mix-blend-mode: exclusion;
   }
+  /* prevent background inverting to bright color on images */
+  /* example: social buttons on https://github.com/facebook/jest#readme */
+  .markdown-body img {
+    background: none !important;
+  }
   div#network.network > div > canvas {
     filter: invert(90%) hue-rotate(180deg) contrast(95%);
   }
