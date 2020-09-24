@@ -184,7 +184,7 @@
     --ghd-code-color: #ccc;
   }
 }
-@-moz-document regexp("^https?://((education|gist|graphql|guides|docs|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   button {
     color: #b5b5b5;
   }
@@ -27284,28 +27284,8 @@
   .octicon-mark-github {
     color: currentcolor;
   }
-  .sidebar {
-    background-color: #1c1c1c;
-    border-right: 1px solid #343434;
-  }
-  .sidebar-category.active {
-    background-color: #242424;
-  }
-  .sidebar-products svg:not([fill]) {
-    fill: #eee;
-  }
-  .sidebar-products a, .sidebar-products .arrow {
-    color: #eee;
-  }
-  .sidebar-guide > a, .sidebar-guide summary a, .sidebar-product > a,
-  .sidebar-product summary a {
-    color: #ccc;
-  }
   body.d-lg-flex .sidebar-products a:hover {
     opacity: 1;
-  }
-  .sidebar-topic a:hover {
-    opacity: .9 !important;
   }
   .btn-blue.hover, .btn.btn-blue:hover {
     background-image: linear-gradient(-180deg, rgba(/*[[base-color-rgb]]*/, .9), rgba(/*[[base-color-rgb]]*/, .8) 90%) !important;
@@ -27316,17 +27296,6 @@
   }
   .border-blue, .border-blue-light {
     border-color: #246 !important;
-  }
-  .markdown-body table tr {
-    background-color: #202020;
-    border-top: 1px solid #444;
-  }
-  .markdown-body table tr:nth-child(2n) {
-    background-color: initial;
-  }
-  .markdown-body table th {
-    background: #202020;
-    box-shadow: 0 3px 0 0 #555;
   }
   .btn-mktg {
     background-color: rgba(/*[[base-color-rgb]]*/, 1);
@@ -27346,6 +27315,18 @@
     color: rgba(/*[[base-color-rgb]]*/, .9);
     border-color: rgba(/*[[base-color-rgb]]*/, .9);
     background-color: transparent;
+  }
+  [stroke="#1277eb"] {
+    stroke: /*[[base-color]]*/;
+  }
+  .sidebar-category.active {
+    background: rgba(255, 255, 255, .04);
+  }
+  .search-overlay-desktop.js-open {
+    background: rgba(0, 0, 0, .4) !important;
+  }
+  g.octocat.header {
+    filter: invert(100%) hue-rotate(180deg);
   }
 }
 @-moz-document domain("github.com"), domain("gist.github.com") {
