@@ -53,6 +53,7 @@ module.exports.mappings = {
   "$color: #d1d5da": "#404040",
   "$color: #c6cbd1": "#505050",
   "$color: #cccccc": "#5a5a5a",
+  "$color: #cfcfcf": "#5a5a5a",
   "$color: #bbbbbb": "#606060",
   "$color: #999999": "#505050",
 
