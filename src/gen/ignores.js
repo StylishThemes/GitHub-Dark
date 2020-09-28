@@ -6,5 +6,5 @@ module.exports.ignores = [
   /^\.CircleBadge--github::after$/,
   /:(before|after).+/, // invalid pseudo-elements, they must come last in a chain of
   /:not\(li\.moved\)/, // invalid :not content (not a simple selector)
-  /&\[open\]/ // invalid css from gitako
+  /&\[open\]/, // invalid css from gitako
 ];
