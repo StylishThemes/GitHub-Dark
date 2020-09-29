@@ -57,6 +57,7 @@ module.exports.mappings = {
   "$color: #cfcfcf": "#5a5a5a",
   "$color: #bbbbbb": "#606060",
   "$color: #999999": "#505050",
+  "$color: #24292e": "#181818", // actions
 
   // #444d56 is used for various dark-ish parts like actions. only invert text color for it
   "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
@@ -207,7 +208,6 @@ module.exports.mappings = {
   "$background: #6a737d": "#444",
   "$background: #586069": "#343434",
   "$background: #2f363d": "#222",
-  "$background: #24292e": "#181818",
   "$background: #3c4146": "#181818",
   "$background: #f0f5fa": "#202020",
   "$background: #f8fafd": "#202020",
