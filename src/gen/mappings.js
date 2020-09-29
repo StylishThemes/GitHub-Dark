@@ -281,6 +281,7 @@ module.exports.mappings = {
   "box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 hsla(0,0%,100%,.03)": "box-shadow: none",
   "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 rgba(255,255,255,.25)": "box-shadow: none",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
+  "box-shadow: 0 8px 24px rgba(0,0,0,.2)": "box-shadow: 0 8px 24px rgba(0,0,0,.4)",
   // ==========================================================================
   // Color / Background
   // ==========================================================================
