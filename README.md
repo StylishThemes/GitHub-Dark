@@ -82,6 +82,7 @@
 
 | Theme                      |   GitHub    |  CodeMirror  |    Jupyter   |
 |----------------------------|:-----------:|:------------:|:------------:|
+| Ayu Mirage                 |      ✔️     |      ❌     |      ❌      |
 | Ambiance                   |      ✔️     |      ✔️     |      ❌      |
 | Base16 Ocean Dark          |      ❌     |      ✔️     |      ✔️      |
 | Chaos                      |      ✔️     |      ❌     |      ❌      |
