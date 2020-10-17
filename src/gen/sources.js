@@ -3,8 +3,15 @@ const {resolve} = require("path");
 module.exports.sources = [
   {
     name: "github.com",
-    url: "https://github.com",
+    url: "https://github.com/",
     strict: true,
+    file: resolve(__dirname, "../src/main.css"),
+  },
+  {
+    name: "github.com logged in",
+    url: "https://github.com/",
+    strict: true,
+    fetchOpts: {headers: {"Cookie": `user_session=${process.env.GHD_GH_USER_SESSION}`, "User-Agent": `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36`}},
     file: resolve(__dirname, "../src/main.css"),
   },
   {
@@ -18,19 +25,19 @@ module.exports.sources = [
   },
   {
     name: "gist.github.com",
-    url: "https://gist.github.com",
+    url: "https://gist.github.com/",
     strict: true,
     file: resolve(__dirname, "../src/main.css"),
   },
   {
     name: "docs.github.com",
-    url: "https://docs.github.com",
+    url: "https://docs.github.com/",
     file: resolve(__dirname, "../src/docs.css"),
     strict: true,
   },
   {
     name: "developer.github.com",
-    url: "https://developer.github.com",
+    url: "https://developer.github.com/",
     file: resolve(__dirname, "../src/developer.css"),
     strict: true,
   },
@@ -42,19 +49,19 @@ module.exports.sources = [
   },
   {
     name: "support.github.com",
-    url: "https://support.github.com",
+    url: "https://support.github.com/",
     file: resolve(__dirname, "../src/support.css"),
     strict: true,
   },
   {
     name: "vscode-auth.github.com",
-    url: "https://vscode-auth.github.com",
+    url: "https://vscode-auth.github.com/",
     file: resolve(__dirname, "../src/vscode-auth.css"),
     strict: true,
   },
   {
     name: "githubstatus.com",
-    url: "https://www.githubstatus.com",
+    url: "https://www.githubstatus.com/",
     file: resolve(__dirname, "../src/status.css"),
     strict: true,
   },

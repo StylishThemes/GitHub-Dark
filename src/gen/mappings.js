@@ -57,7 +57,7 @@ module.exports.mappings = {
   "$color: #cfcfcf": "#5a5a5a",
   "$color: #bbbbbb": "#606060",
   "$color: #999999": "#505050",
-  "$color: #24292e": "#181818", // actions
+  "$color: #24292e": "#c6c6c6", // actions
 
   // #444d56 is used for various dark-ish parts like actions. only invert text color for it
   "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
@@ -89,16 +89,24 @@ module.exports.mappings = {
   "$color: #79b8ff": "/*[[base-color]]*/",
   "$color: #599bcd": "/*[[base-color]]*/",
   "$color: #b4d6fe": "/*[[base-color]]*/", // github hovercard
-  "$color: #c8e1ff": "/*[[base-color]]*/",
 
   // blue
   "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
   "$color: rgba(4,66,137,.2)": "#224466",  // .flash
+  "$color: #032f62": "#9daccc",
+  "$color: #05264c": "#9daccc", // big commit title
+  "$color: #264c72": "#9daccc",
   "$color: #005cc5": "#4f8cc9", // .full-commit .btn
   "$color: #257bf9": "#4f8cc9",
-  "$color: #eaf5ff": "#182030", // .full-commit
-  "$color: #e0f1ff": "#182030",
+  "$color: #97c1da": "#224466",
   "$color: #d2dff0": "#224466", // org discussion reactions
+  "$color: #d8ebf8": "#182030",
+  "$color: #dbedff": "#182030",
+  "$color: #c0d3eb": "#224466",
+  "$color: #c8e1ff": "#224466",
+  "$color: #e0f1ff": "#182030",
+  "$color: #eaf5ff": "#182030", // .full-commit
+  "$color: #f1f8ff": "#182030",
 
   // red
   "$color: rgba(158,28,35,.6)": "rgba(255,68,68,.6)", // .flash-error .octicon
@@ -337,6 +345,7 @@ module.exports.mappings = {
   "$background: #05264c": "#182030",
 
   // blue (base-color)
+  "color: #c8e1ff": "/*[[base-color]]*/",
   "filter: drop-shadow(-.25em 0 0 #c8e1ff)": "filter: drop-shadow(-.25em 0 0 rgba(/*[[base-color-rgb]]*/, .3))",
   "filter: drop-shadow(0 -.28em 0 #c8e1ff)": "filter: drop-shadow(0 -.28em 0 rgba(/*[[base-color-rgb]]*/, .3))",
   "filter: drop-shadow(-.28em 0 0 #c8e1ff)": "filter: drop-shadow(-.28em 0 0 rgba(/*[[base-color-rgb]]*/, .3))",

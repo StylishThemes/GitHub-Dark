@@ -7,9 +7,9 @@ const remapCss = require("remap-css");
 const {readFile} = require("fs").promises;
 const {resolve, basename} = require("path");
 const cssnano = require("cssnano");
+const puppeteer = require("puppeteer");
 
 const {mappings} = require("../src/gen/mappings");
-const {sources} = require("../src/gen/sources");
 const {ignores} = require("../src/gen/ignores");
 const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
@@ -79,6 +79,24 @@ async function getThemes() {
   return themes;
 }
 
+async function login(username, password) {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto("https://github.com/login");
+  await page.type(`form[action="/session"] input[type="text"]`, username);
+  await page.type(`form[action="/session"] input[type="password"]`, password);
+  await page.click(`form[action="/session"] input[type="submit"]`);
+  await page.waitForNavigation();
+
+  for (const cookie of await page.cookies() || {}) {
+    if (cookie.name === "user_session") {
+      return cookie.value;
+    }
+  }
+
+  return null;
+}
+
 async function main() {
   let css = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;
@@ -91,6 +109,13 @@ async function main() {
     }
     css = css.replace(`  {{themes:${type}}}`, parts.join("\n"));
   }
+
+  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) {
+    exit(new Error(`Please set GHD_GH_USERNAME and GHD_GH_PASSWORD environment variables`));
+  }
+
+  process.env.GHD_GH_USER_SESSION = await login(process.env.GHD_GH_USERNAME, process.env.GHD_GH_PASSWORD);
+  const {sources} = require("../src/gen/sources");
 
   const sections = await Promise.all(sources.map(async source => {
     return remapCss(await fetchCss([source]), mappings, remapOpts);

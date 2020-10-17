@@ -16,6 +16,9 @@ jobs:
           node-version: "14"
       - run: make deps
       - run: make build
+        env:
+          GHD_GH_USERNAME: ${{ secrets.GHD_GH_USERNAME }}
+          GHD_GH_PASSWORD: ${{ secrets.GHD_GH_PASSWORD }}
       - run: |
           if [[ $(git status --porcelain --untracked-files=no) ]]; then
             make test
