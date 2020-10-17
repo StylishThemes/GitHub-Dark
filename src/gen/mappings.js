@@ -4,7 +4,7 @@ module.exports = async () => ({
   // `$border: value`: Any occurance of `value` in a `border` property.
   // `$background: value` Any occurance of `value` in a `background` property.
   // `$box-shadow: value` Any occurance of `value` in a `box-shadow` property.
-  // `$color: value`: Any occurance of `value`.
+  // `$value: value`: Any occurance of `value`.
   // `color | fill | background | etc: value`: Any occurance of `value` in a `color | fill | background | etc` property.
   //
   // ==========================================================================
@@ -12,23 +12,23 @@ module.exports = async () => ({
   // ==========================================================================
 
   // focus line
-  "$color: #f9826c": "#fff",
+  "$value: #f9826c": "#fff",
 
   // monochrome
-  "$color: rgba(209,213,218,0)": "transparent",
-  "$color: rgba(255,255,255,0)": "transparent",
-  "$color: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
-  "$color: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
-  "$color: rgba(149,157,165,.3)": "rgba(0,0,0,.3)", // .box-shadow-extra-large
-  "$color: rgba(149,157,165,.15)": "rgba(0,0,0,.15)", // .box-shadow-medium
-  "$color: rgba(0,0,0,0.2)": "rgba(255,255,255,.7)",
-  "$color: hsla(0,0%,100%,.875)": "hsla(0,0%,0%,.875)",
-  "$color: hsla(0,0%,100%,.8)": "hsla(0,0%,0%,.8)",
-  "$color: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
-  "$color: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
-  "$color: hsla(0,0%,100%,.2)": "hsla(0,0%,0%,.2)",
-  "$color: hsla(0,0%,100%,.125)": "hsla(0,0%,0%,.125)",
-  "$color: hsla(0,0%,100%,.05)": "hsla(0,0%,0%,.05)",
+  "$value: rgba(209,213,218,0)": "transparent",
+  "$value: rgba(255,255,255,0)": "transparent",
+  "$value: rgba(209,213,218,.5)": "rgba(90,90,90,.5)",
+  "$value: rgba(149,157,165,.2)": "rgba(0,0,0,.2)", // modal backdrop
+  "$value: rgba(149,157,165,.3)": "rgba(0,0,0,.3)", // .box-shadow-extra-large
+  "$value: rgba(149,157,165,.15)": "rgba(0,0,0,.15)", // .box-shadow-medium
+  "$value: rgba(0,0,0,0.2)": "rgba(255,255,255,.7)",
+  "$value: hsla(0,0%,100%,.875)": "hsla(0,0%,0%,.875)",
+  "$value: hsla(0,0%,100%,.8)": "hsla(0,0%,0%,.8)",
+  "$value: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
+  "$value: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
+  "$value: hsla(0,0%,100%,.2)": "hsla(0,0%,0%,.2)",
+  "$value: hsla(0,0%,100%,.125)": "hsla(0,0%,0%,.125)",
+  "$value: hsla(0,0%,100%,.05)": "hsla(0,0%,0%,.05)",
   "color: hsla(0,0%,100%,.875)": "color: hsla(0,0%,100%,.125)",
   "color: hsla(0,0%,100%,.8)": "color: hsla(0,0%,100%,.2)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.4)",
@@ -38,26 +38,26 @@ module.exports = async () => ({
   "$box-shadow: #fff": "var(--ghd-bg-color)",
   "color: #fff": "color: #fff",
 
-  "$color: #fcfcfc": "#1d1d1d",
-  "$color: #f7f7f7": "#202020",
-  "$color: #f3f4f6": "#242424",
-  "$color: #f0f3f6": "#242424",
-  "$color: #eff1f3": "#242424",
-  "$color: #eeeeee": "#2c2c2c",
-  "$color: #edeff2": "#2c2c2c",
-  "$color: #eaecef": "#343434",
-  "$color: #e1e4e8": "#343434",
-  "$color: #e0e0e0": "#343434",
-  "$color: #dfe2e5": "#404040",
-  "$color: #dddddd": "#404040",
-  "$color: #d8dee2": "#404040",
-  "$color: #d1d5da": "#404040",
-  "$color: #c6cbd1": "#505050",
-  "$color: #cccccc": "#5a5a5a",
-  "$color: #cfcfcf": "#5a5a5a",
-  "$color: #bbbbbb": "#606060",
-  "$color: #999999": "#505050",
-  "$color: #24292e": "#c6c6c6", // actions
+  "$value: #fcfcfc": "#1d1d1d",
+  "$value: #f7f7f7": "#202020",
+  "$value: #f3f4f6": "#242424",
+  "$value: #f0f3f6": "#242424",
+  "$value: #eff1f3": "#242424",
+  "$value: #eeeeee": "#2c2c2c",
+  "$value: #edeff2": "#2c2c2c",
+  "$value: #eaecef": "#343434",
+  "$value: #e1e4e8": "#343434",
+  "$value: #e0e0e0": "#343434",
+  "$value: #dfe2e5": "#404040",
+  "$value: #dddddd": "#404040",
+  "$value: #d8dee2": "#404040",
+  "$value: #d1d5da": "#404040",
+  "$value: #c6cbd1": "#505050",
+  "$value: #cccccc": "#5a5a5a",
+  "$value: #cfcfcf": "#5a5a5a",
+  "$value: #bbbbbb": "#606060",
+  "$value: #999999": "#505050",
+  "$value: #24292e": "#c6c6c6", // actions
 
   // #444d56 is used for various dark-ish parts like actions. only invert text color for it
   "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
@@ -66,132 +66,132 @@ module.exports = async () => ({
   "$box-shadow: #444d56": "#343434",
 
   // blue (base color)
-  "$color: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
-  "$color: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
-  "$color: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
-  "$color: #3b5998": "/*[[base-color]]*/",
-  "$color: #0058a2": "/*[[base-color]]*/",
-  "$color: #005cc2": "/*[[base-color]]*/",
-  "$color: #005b9e": "/*[[base-color]]*/",
-  "$color: #1f61a0": "/*[[base-color]]*/",
-  "$color: #2a65a0": "/*[[base-color]]*/",
-  "$color: #0366d6d0": "/*[[base-color]]*/", // gitako
-  "$color: #0361cc": "/*[[base-color]]*/",
-  "$color: #0366d6": "/*[[base-color]]*/", // gitako
-  "$color: #1074e7": "/*[[base-color]]*/",
-  "$color: #006eed": "/*[[base-color]]*/", // notification icon
-  "$color: #0679fc": "/*[[base-color]]*/",
-  "$color: #3072b3": "/*[[base-color]]*/",
-  "$color: #327fc7": "/*[[base-color]]*/",
-  "$color: #4183c4": "/*[[base-color]]*/",
-  "$color: #2188ff": "/*[[base-color]]*/",
-  "$color: #54a3ff": "/*[[base-color]]*/", // notification icon
-  "$color: #79b8ff": "/*[[base-color]]*/",
-  "$color: #599bcd": "/*[[base-color]]*/",
-  "$color: #b4d6fe": "/*[[base-color]]*/", // github hovercard
+  "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
+  "$value: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
+  "$value: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
+  "$value: #3b5998": "/*[[base-color]]*/",
+  "$value: #0058a2": "/*[[base-color]]*/",
+  "$value: #005cc2": "/*[[base-color]]*/",
+  "$value: #005b9e": "/*[[base-color]]*/",
+  "$value: #1f61a0": "/*[[base-color]]*/",
+  "$value: #2a65a0": "/*[[base-color]]*/",
+  "$value: #0366d6d0": "/*[[base-color]]*/", // gitako
+  "$value: #0361cc": "/*[[base-color]]*/",
+  "$value: #0366d6": "/*[[base-color]]*/", // gitako
+  "$value: #1074e7": "/*[[base-color]]*/",
+  "$value: #006eed": "/*[[base-color]]*/", // notification icon
+  "$value: #0679fc": "/*[[base-color]]*/",
+  "$value: #3072b3": "/*[[base-color]]*/",
+  "$value: #327fc7": "/*[[base-color]]*/",
+  "$value: #4183c4": "/*[[base-color]]*/",
+  "$value: #2188ff": "/*[[base-color]]*/",
+  "$value: #54a3ff": "/*[[base-color]]*/", // notification icon
+  "$value: #79b8ff": "/*[[base-color]]*/",
+  "$value: #599bcd": "/*[[base-color]]*/",
+  "$value: #b4d6fe": "/*[[base-color]]*/", // github hovercard
 
   // blue
-  "$color: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
-  "$color: rgba(4,66,137,.2)": "#224466",  // .flash
-  "$color: #032f62": "#9daccc",
-  "$color: #05264c": "#9daccc", // big commit title
-  "$color: #264c72": "#9daccc",
-  "$color: #005cc5": "#4f8cc9", // .full-commit .btn
-  "$color: #257bf9": "#4f8cc9",
-  "$color: #97c1da": "#224466",
-  "$color: #d2dff0": "#224466", // org discussion reactions
-  "$color: #d8ebf8": "#182030",
-  "$color: #dbedff": "#182030",
-  "$color: #c0d3eb": "#224466",
-  "$color: #c8e1ff": "#224466",
-  "$color: #e0f1ff": "#182030",
-  "$color: #eaf5ff": "#182030", // .full-commit
-  "$color: #f1f8ff": "#182030",
+  "$value: rgba(4,66,137,.6)": "#4f8cc9", // .flash .octicon
+  "$value: rgba(4,66,137,.2)": "#224466",  // .flash
+  "$value: #032f62": "#9daccc",
+  "$value: #05264c": "#9daccc", // big commit title
+  "$value: #264c72": "#9daccc",
+  "$value: #005cc5": "#4f8cc9", // .full-commit .btn
+  "$value: #257bf9": "#4f8cc9",
+  "$value: #97c1da": "#224466",
+  "$value: #d2dff0": "#224466", // org discussion reactions
+  "$value: #d8ebf8": "#182030",
+  "$value: #dbedff": "#182030",
+  "$value: #c0d3eb": "#224466",
+  "$value: #c8e1ff": "#224466",
+  "$value: #e0f1ff": "#182030",
+  "$value: #eaf5ff": "#182030", // .full-commit
+  "$value: #f1f8ff": "#182030",
 
   // red
-  "$color: rgba(158,28,35,.6)": "rgba(255,68,68,.6)", // .flash-error .octicon
-  "$color: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
-  "$color: rgba(158,28,35,.2)": "rgba(255,68,68,.2)",
-  "$color: #86181d": "#d82828",
-  "$color: #b11a04": "#d82828", // graphql explorer
-  "$color: #cb2431": "#d82828",
-  "$color: #d73a49": "#d82828",
-  "$color: #cea0a5": "#d82828",
-  "$color: #f97583": "#f88",
-  "$color: #ffdce0": "#300",
-  "$color: #ffe3e6": "#300",
-  "$color: #ffeef0": "#300",
+  "$value: rgba(158,28,35,.6)": "rgba(255,68,68,.6)", // .flash-error .octicon
+  "$value: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
+  "$value: rgba(158,28,35,.2)": "rgba(255,68,68,.2)",
+  "$value: #86181d": "#d82828",
+  "$value: #b11a04": "#d82828", // graphql explorer
+  "$value: #cb2431": "#d82828",
+  "$value: #d73a49": "#d82828",
+  "$value: #cea0a5": "#d82828",
+  "$value: #f97583": "#f88",
+  "$value: #ffdce0": "#300",
+  "$value: #ffe3e6": "#300",
+  "$value: #ffeef0": "#300",
 
   // orange
-  "$color: #a04100": "#f3582c",
-  "$color: #d15704": "#f3582c",
-  "$color: #e36209": "#fb8532",
-  "$color: #fb8532": "#fb8532",
+  "$value: #a04100": "#f3582c",
+  "$value: #d15704": "#f3582c",
+  "$value: #e36209": "#fb8532",
+  "$value: #fb8532": "#fb8532",
 
   // yellow / brown
-  "$color: rgba(47,38,6,.5)": "#cb4",
-  "$color: rgba(176,136,0,.2)": "#542", // .flash-warn
-  "$color: rgba(115,92,15,.5)": "rgba(204,187,68,.5)",
-  "$color: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
-  "$color: #613a00": "#bba257",
-  "$color: #735c0f": "#bba257",
-  "$color: #6d6c60": "#c95", // .compare-pr-placeholder
-  "$color: #9c997d": "#c95", // .compare-pr-placeholder
-  "$color: #b08800": "#cb4",
-  "$color: #ca9800": "#cb4", // graphql explorer
-  "$color: #dbab09": "#cb4",
-  "$color: #dca874": "#cb4",
-  "$color: #f9c513": "#cb4",
-  "$color: #ffd33d": "#cb4",
-  "$color: #ffea7f": "#542",
-  "$color: #e5d999": "#542",
-  "$color: #d9d0a5": "#542",
-  "$color: #ffe3c8": "#261d08",
-  "$color: #faebcc": "#261d08", // zenhub
-  "$color: #fcf9e4": "#261d08", // zenhub blocked banner
-  "$color: #fff5b1": "#651",
-  "$color: #fffbdd": "#261d08",
-  "$color: #fffdef": "#261d08",
+  "$value: rgba(47,38,6,.5)": "#cb4",
+  "$value: rgba(176,136,0,.2)": "#542", // .flash-warn
+  "$value: rgba(115,92,15,.5)": "rgba(204,187,68,.5)",
+  "$value: rgba(255,223,93,.2)": "rgba(132,70,0,.2)",
+  "$value: #613a00": "#bba257",
+  "$value: #735c0f": "#bba257",
+  "$value: #6d6c60": "#c95", // .compare-pr-placeholder
+  "$value: #9c997d": "#c95", // .compare-pr-placeholder
+  "$value: #b08800": "#cb4",
+  "$value: #ca9800": "#cb4", // graphql explorer
+  "$value: #dbab09": "#cb4",
+  "$value: #dca874": "#cb4",
+  "$value: #f9c513": "#cb4",
+  "$value: #ffd33d": "#cb4",
+  "$value: #ffea7f": "#542",
+  "$value: #e5d999": "#542",
+  "$value: #d9d0a5": "#542",
+  "$value: #ffe3c8": "#261d08",
+  "$value: #faebcc": "#261d08", // zenhub
+  "$value: #fcf9e4": "#261d08", // zenhub blocked banner
+  "$value: #fff5b1": "#651",
+  "$value: #fffbdd": "#261d08",
+  "$value: #fffdef": "#261d08",
 
   // green
-  "$color: rgba(108,198,68,.1)": "#002800",
-  "$color: rgba(52,208,88,.4)": "#3737",
-  "$color: #144620": "#6cc644",
-  "$color: #165c26": "#6cc644",
-  "$color: #22863a": "#6cc644",
-  "$color: #2a8f47": "#595", // new .btn-primary.disabled
-  "$color: #2c974b": "#484", // new .btn-primary :hover
-  "$color: #2ea44f": "#373", // new .btn-primary
-  "$color: #269f42": "#595", // .btn-primary :hover
-  "$color: #279f43": "#595", // new/old .btn-primary:active
-  "$color: #28a745": "#484", // green labels, issue icons
-  "$color: #2cbe4e": "#373",
-  "$color: #2fcb53": "#373", // .btn-primary :hover
-  "$color: #34d058": "#373", // .btn-primary
-  "$color: #94d3a2": "#040", // .btn-primary.disabled
-  "$color: #a2cbac": "#040",
-  "$color: #dcffe4": "#002800",
-  "$color: #e6ffed": "#002800",
-  "$color: #f0fff4": "#002800",
+  "$value: rgba(108,198,68,.1)": "#002800",
+  "$value: rgba(52,208,88,.4)": "#3737",
+  "$value: #144620": "#6cc644",
+  "$value: #165c26": "#6cc644",
+  "$value: #22863a": "#6cc644",
+  "$value: #2a8f47": "#595", // new .btn-primary.disabled
+  "$value: #2c974b": "#484", // new .btn-primary :hover
+  "$value: #2ea44f": "#373", // new .btn-primary
+  "$value: #269f42": "#595", // .btn-primary :hover
+  "$value: #279f43": "#595", // new/old .btn-primary:active
+  "$value: #28a745": "#484", // green labels, issue icons
+  "$value: #2cbe4e": "#373",
+  "$value: #2fcb53": "#373", // .btn-primary :hover
+  "$value: #34d058": "#373", // .btn-primary
+  "$value: #94d3a2": "#040", // .btn-primary.disabled
+  "$value: #a2cbac": "#040",
+  "$value: #dcffe4": "#002800",
+  "$value: #e6ffed": "#002800",
+  "$value: #f0fff4": "#002800",
 
   // purple
-  "$color: #6f42c1": "#73589a",
-  "$color: #8b2bb9": "#73589a", // graphql explorer
-  "$color: #8a63d2": "#53387a",
-  "$color: #d5c8ed": "#53387a",
-  "$color: #f8f4ff": "#251533",
-  "$color: #f6f1ff": "#231233",
-  "$color: #f5f0ff": "#221133",
+  "$value: #6f42c1": "#73589a",
+  "$value: #8b2bb9": "#73589a", // graphql explorer
+  "$value: #8a63d2": "#53387a",
+  "$value: #d5c8ed": "#53387a",
+  "$value: #f8f4ff": "#251533",
+  "$value: #f6f1ff": "#231233",
+  "$value: #f5f0ff": "#221133",
 
   // blurple
-  "$color: #3b41af": "#6570e2",
-  "$color: #5e60ba": "#5560d2", // zenhub
-  "$color: #6570e2": "#4550c2",
+  "$value: #3b41af": "#6570e2",
+  "$value: #5e60ba": "#5560d2", // zenhub
+  "$value: #6570e2": "#4550c2",
 
   // pink
-  "$color: #99306f": "#e6b",
-  "$color: #ec6cb9": "#c49",
-  "$color: #ffeef8": "#170711",
+  "$value: #99306f": "#e6b",
+  "$value: #ec6cb9": "#c49",
+  "$value: #ffeef8": "#170711",
 
   // ==========================================================================
   // Background
@@ -364,4 +364,5 @@ module.exports = async () => ({
   "$background: transparent": "transparent",
   "$border: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
+  "$value: var(--color-border-primary)": "var(--color-border-primary)",
 });

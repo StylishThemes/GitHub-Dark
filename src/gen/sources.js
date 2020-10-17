@@ -5,12 +5,6 @@ module.exports = async (Cookie) => [
     name: "github.com",
     url: "https://github.com/",
     strict: true,
-    file: resolve(__dirname, "../src/main.css"),
-  },
-  {
-    name: "github.com logged in",
-    url: "https://github.com/",
-    strict: true,
     fetchOpts: {headers: {Cookie, "User-Agent": `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36`}},
     file: resolve(__dirname, "../src/main.css"),
   },
