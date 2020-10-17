@@ -13,7 +13,7 @@ module.exports = async (Cookie) => [
     url: "https://github.com/StylishThemes/GitHub-Dark/pull/1",
     prefix: `body[class="page-responsive"]`,
     match: ["body", ".page-responsive"],
-    fetchOpts: {headers: {"User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.87 Mobile Safari/537.36"}},
+    fetchOpts: {headers: {Cookie, "User-Agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.3904.87 Mobile Safari/537.36"}},
     strict: true,
     file: resolve(__dirname, "../src/main.css"),
   },
