@@ -12,7 +12,7 @@ const totpGenerator = require("totp-generator");
 const {serialize} = require("cookie");
 
 const {version} = require("../package.json");
-const {writeFile, exit, glob} = require("./utils");
+const {writeFile, exit, glob, userAgent} = require("./utils");
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (a.endsWith("vars.css")) return -1;
@@ -88,6 +88,7 @@ async function login() {
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
+  await page.setUserAgent(await userAgent());
   await page.goto("https://github.com/login");
   await page.type(`form [type="text"]`, process.env.GHD_GH_USERNAME);
   await page.type(`form [type="password"]`, process.env.GHD_GH_PASSWORD);
