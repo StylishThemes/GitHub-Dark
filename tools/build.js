@@ -4,7 +4,7 @@
 const esc = require("escape-string-regexp");
 const fetchCss = require("fetch-css");
 const remapCss = require("remap-css");
-const {readFile} = require("fs").promises;
+const {readFile} = require("fs/promises");
 const {resolve, basename} = require("path");
 const cssnano = require("cssnano");
 const puppeteer = require("puppeteer");
@@ -46,10 +46,8 @@ function sortThemes(a, b) {
 
 function extractThemeName(css) {
   return css
-    .substring(3, css.indexOf("*/"))
-    .trim()
-    // remove group (e.g. "GitHub: ")
-    .replace(/^.+:\s/, "");
+    .substring(3, css.indexOf("*/")).trim()
+    .replace(/^.+:\s/, ""); // remove group (e.g. "GitHub: ")
 }
 
 async function getThemes() {
@@ -74,6 +72,15 @@ function serializeCookies(cookies) {
   return cookies.map(cookie => serialize(cookie.name, cookie.value)).join(", ");
 }
 
+async function checkCookies(page) {
+  const cookies = await page.cookies() || {};
+  for (const {name, value} of cookies) {
+    if (name === "logged_in" && value === "yes") {
+      return serializeCookies(cookies);
+    }
+  }
+}
+
 async function login() {
   if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) {
     throw new Error(`Please set the GHD_GH_USERNAME and GHD_GH_PASSWORD environment variables`);
@@ -87,26 +94,17 @@ async function login() {
   await page.click(`form [type="submit"]`);
   await page.waitForNavigation();
 
-  let cookies = await page.cookies() || {};
-  for (const {name, value} of cookies) {
-    if (name === "logged_in" && value === "yes") {
-      return serializeCookies(cookies);
-    }
-  }
+  let cookie = await checkCookies(page);
+  if (cookie) return cookie;
 
   if ("GHD_GH_TOTP_SECRET" in process.env) {
-    const totp = totpGenerator(process.env.GHD_GH_TOTP_SECRET);
-    await page.type(`form [type="text"]`, totp);
+    await page.type(`form [type="text"]`, totpGenerator(process.env.GHD_GH_TOTP_SECRET));
     await page.click(`form [type="submit"]`);
     await page.waitForNavigation();
   }
 
-  cookies = await page.cookies() || {};
-  for (const {name, value} of cookies) {
-    if (name === "logged_in" && value === "yes") {
-      return serializeCookies(cookies);
-    }
-  }
+  cookie = await checkCookies(page);
+  if (cookie) return cookie;
 
   throw new Error(`Could not find cookie, login probably failed`);
 }
@@ -147,8 +145,9 @@ async function main() {
     for (let [index, section] of Object.entries(sections)) {
       const source = sources[Number(index)];
       if (basename(source.file) === basename(sourceFile)) {
-        // create replacement regex
-        section = `  /* begin ${source.name} rules */\n${section}\n  /* end ${source.name} rules */`;
+        const prefix = `  /* begin ${source.name} rules */`;
+        const suffix = `  /* end ${source.name} rules */`;
+        section = `${prefix}\n${section}\n${suffix}`;
         const re = new RegExp(`.*generated ${esc(source.name)} rules.*`, "gm");
         sourceCss = sourceCss.replace(re, section);
       }

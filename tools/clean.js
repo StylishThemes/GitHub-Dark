@@ -2,7 +2,7 @@
 "use strict";
 
 const perfectionist = require("perfectionist");
-const {readFile} = require("fs").promises;
+const {readFile} = require("fs/promises");
 const {basename} = require("path");
 const {writeFile, exit, glob} = require("./utils");
 

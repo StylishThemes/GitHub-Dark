@@ -1,7 +1,7 @@
 "use strict";
 
 const fastGlob = require("fast-glob");
-const {writeFile, truncate} = require("fs").promises;
+const {writeFile, truncate} = require("fs/promises");
 const {resolve} = require("path");
 const {platform} = require("os");
 
