@@ -128,11 +128,12 @@ If you would like to contribute to this repository, please...
 - [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
 - `make`: available with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
 
-To retrieve all GitHub styles, a login session is needed unfortunately. Create a dummy GitHub account and set the following environment variables that the build script will use to log in:
+To retrieve all GitHub styles, a login session is needed unfortunately. Create a dummy GitHub account and set the following environment variables which the build script will use to log in:
 
 ```bash
 export GHD_GH_USERNAME=username
 export GHD_GH_PASSWORD=password
+export GHD_GH_TOTP_SECRET=secret # optional depending on location
 ```
 
 Then run `make build` to rebuild the style. Any custom changes should be done in the files in the `src` directory. Do not edit the `.css` files in the project root, these are generated.

@@ -1,4 +1,4 @@
-module.exports.mappings = {
+module.exports = async () => ({
   // ==========================================================================
   //                         Short How-to
   // `$border: value`: Any occurance of `value` in a `border` property.
@@ -364,4 +364,4 @@ module.exports.mappings = {
   "$background: transparent": "transparent",
   "$border: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
-};
+});

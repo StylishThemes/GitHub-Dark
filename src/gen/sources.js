@@ -1,6 +1,6 @@
 const {resolve} = require("path");
 
-module.exports.sources = [
+module.exports = async (Cookie) => [
   {
     name: "github.com",
     url: "https://github.com/",
@@ -11,7 +11,7 @@ module.exports.sources = [
     name: "github.com logged in",
     url: "https://github.com/",
     strict: true,
-    fetchOpts: {headers: {"Cookie": `user_session=${process.env.GHD_GH_USER_SESSION}`, "User-Agent": `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36`}},
+    fetchOpts: {headers: {Cookie, "User-Agent": `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36`}},
     file: resolve(__dirname, "../src/main.css"),
   },
   {

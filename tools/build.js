@@ -8,20 +8,11 @@ const {readFile} = require("fs").promises;
 const {resolve, basename} = require("path");
 const cssnano = require("cssnano");
 const puppeteer = require("puppeteer");
+const totpGenerator = require("totp-generator");
+const {serialize} = require("cookie");
 
-const {mappings} = require("../src/gen/mappings");
-const {ignores} = require("../src/gen/ignores");
 const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
-
-const remapOpts = {
-  ignoreSelectors: ignores,
-  indentCss: 2,
-  lineLength: 76,
-  comments: true,
-  stylistic: true,
-  validate: true,
-};
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (a.endsWith("vars.css")) return -1;
@@ -79,25 +70,62 @@ async function getThemes() {
   return themes;
 }
 
-async function login(username, password) {
+function serializeCookies(cookies) {
+  return cookies.map(cookie => serialize(cookie.name, cookie.value)).join(", ");
+}
+
+async function login() {
+  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) {
+    throw new Error(`Please set the GHD_GH_USERNAME and GHD_GH_PASSWORD environment variables`);
+  }
+
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto("https://github.com/login");
-  await page.type(`form[action="/session"] input[type="text"]`, username);
-  await page.type(`form[action="/session"] input[type="password"]`, password);
-  await page.click(`form[action="/session"] input[type="submit"]`);
+  await page.type(`form [type="text"]`, process.env.GHD_GH_USERNAME);
+  await page.type(`form [type="password"]`, process.env.GHD_GH_PASSWORD);
+  await page.click(`form [type="submit"]`);
   await page.waitForNavigation();
 
-  for (const cookie of await page.cookies() || {}) {
-    if (cookie.name === "user_session") {
-      return cookie.value;
+  let cookies = await page.cookies() || {};
+  for (const {name, value} of cookies) {
+    if (name === "logged_in" && value === "yes") {
+      return serializeCookies(cookies);
     }
   }
 
-  return null;
+  if ("GHD_GH_TOTP_SECRET" in process.env) {
+    const totp = totpGenerator(process.env.GHD_GH_TOTP_SECRET);
+    await page.type(`form [type="text"]`, totp);
+    await page.click(`form [type="submit"]`);
+    await page.waitForNavigation();
+  }
+
+  cookies = await page.cookies() || {};
+  for (const {name, value} of cookies) {
+    if (name === "logged_in" && value === "yes") {
+      return serializeCookies(cookies);
+    }
+  }
+
+  throw new Error(`Could not find cookie, login probably failed`);
 }
 
 async function main() {
+  const cookie = await login();
+  const mappings = await require("../src/gen/mappings")();
+  const ignores = await require("../src/gen/ignores")();
+  const sources = await require("../src/gen/sources")(cookie);
+
+  const remapOpts = {
+    ignoreSelectors: ignores,
+    indentCss: 2,
+    lineLength: 76,
+    comments: true,
+    stylistic: true,
+    validate: true,
+  };
+
   let css = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;
 
@@ -109,13 +137,6 @@ async function main() {
     }
     css = css.replace(`  {{themes:${type}}}`, parts.join("\n"));
   }
-
-  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) {
-    exit(new Error(`Please set GHD_GH_USERNAME and GHD_GH_PASSWORD environment variables`));
-  }
-
-  process.env.GHD_GH_USER_SESSION = await login(process.env.GHD_GH_USERNAME, process.env.GHD_GH_PASSWORD);
-  const {sources} = require("../src/gen/sources");
 
   const sections = await Promise.all(sources.map(async source => {
     return remapCss(await fetchCss([source]), mappings, remapOpts);
