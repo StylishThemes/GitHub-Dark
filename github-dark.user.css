@@ -189,6 +189,8 @@
     --color-auto-white: #181818;
     --color-bg-canvas-mobile: #181818;
     --color-bg-canvas: #181818;
+    --color-bg-canvas-inverse: #181818;
+    --color-header-text: #c6c6c6;
     --color-bg-overlay: #181818;
     --color-bg-primary: #181818;
     --color-bg-secondary: #1a1a1a;
@@ -7665,6 +7667,8 @@
   .project-card code {
     background: #333 !important;
   }
+}
+@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!(generated_pages|codespaces)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   /*[[syntax-theme]]*//*[[syntax-jupyter]]*/
   /* inline code - big blocks */
   .highlight {
@@ -7687,7 +7691,7 @@
     color: var(--ghd-code-color) !important;
   }
 }
-@-moz-document domain("github.com"), domain("gist.github.com") {
+@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!(generated_pages|codespaces)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   .CodeMirror {
     background-color: var(--ghd-code-background) !important;
     color: var(--ghd-code-color) !important;
@@ -28717,6 +28721,38 @@
     color: #afafaf;
   }
   /* end gist.github.com rules */
+  body {
+    background-color: var(--ghd-bg-color) !important;
+    background-image: var(--ghd-bg-img) !important;
+    background-clip: border-box !important;
+    background-origin: padding-box !important;
+    background-attachment: /*[[bg-attachment]]*/ !important;
+    /*[[bg-options]]*/
+  }
+  .Header, .Header-old {
+    border-bottom: 1px solid #343434 !important;
+    background: #181818 !important;
+  }
+  .Header-link {
+    color: #c6c6c6;
+  }
+  .Header-link[data-ga-click]:focus, .Header-link[data-ga-click]:hover,
+  .btn-link .octicon-kebab-horizontal:hover {
+    color: /*[[base-color]]*/;
+  }
+  .page-responsive .repohead, .page-responsive .pagehead,
+  .repohead.bg-gray-light, .pagehead.bg-gray-light, main > .bg-gray-light {
+    background: rgba(20, 20, 20, .4) !important;
+  }
+  .discussion-timeline-actions {
+    background: none !important;
+  }
+  .notification-indicator .mail-status {
+    border-color: #181818;
+  }
+  .social-count {
+    box-shadow: none;
+  }
   .gist-content .file-box {
     background: #181818;
   }
