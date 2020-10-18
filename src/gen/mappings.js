@@ -79,9 +79,9 @@ module.exports = async () => ({
   "$value: #999999": "#767676",
   "$value: #a3aab1": "#767676",
   "$value: #a8bbd0": "#767676",
-  "$value: #bbbbbb": "#606060",
-  "$value: #c3c8cf": "#606060",
-  "$value: #c6cbd1": "#505050",
+  "$value: #bbbbbb": "#767676",
+  "$value: #c3c8cf": "#767676",
+  "$value: #c6cbd1": "#767676",
   "$value: #cccccc": "#5a5a5a",
   "$value: #cfcfcf": "#5a5a5a",
   "$value: #d0d0d0": "#343434", // graphql explorer
