@@ -1,0 +1,47 @@
+@-moz-document domain("github.com"), domain("gist.github.com") {
+  .CodeMirror {
+    background-color: var(--ghd-code-background) !important;
+    color: var(--ghd-code-color) !important;
+  }
+  .CodeMirror-selected {
+    background: rgba(255, 255, 255, .12) !important;
+  }
+  .CodeMirror ::selection {
+    background: rgba(255, 255, 255, .12) !important;
+  }
+  .CodeMirror ::-moz-selection {
+    background: rgba(255, 255, 255, .12) !important;
+  }
+  .CodeMirror-lines {
+    background: none !important;
+  }
+  /* remove margin above codemirror */
+  .file-header.mb-2 {
+    margin-bottom: 0 !important;
+  }
+  .CodeMirror-linebackground.conflict-background,
+  .conflict-background + .CodeMirror-gutter-wrapper .CodeMirror-linenumber {
+    background-color: #380000 !important;
+    border-color: #600 !important;
+  }
+  .CodeMirror-scrollbar-filler {
+    background: #1d1d1d !important;
+  }
+  /* Styles auto-complete popups in the actions workflow editor */
+  .CodeMirror-hints {
+    background: #181818;
+    border-color: #404040;
+    box-shadow: 0 1px 5px #000;
+  }
+  .CodeMirror-hint {
+    color: #d2d2d2;
+  }
+  .CodeMirror-hint-active {
+    color: #f0f0f0;
+    background-color: /*[[base-color]]*/;
+  }
+  .CodeMirror-hint-active .CodeMirror-hint-description {
+    color: #f0f0f0 !important;
+  }
+  /*[[syntax-codemirror]]*/
+}

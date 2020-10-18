@@ -25,7 +25,7 @@ module.exports = async (Cookie) => {
     {
       name: "gist.github.com",
       url: "https://gist.github.com/",
-      file: resolve(__dirname, "../src/main.css"),
+      file: resolve(__dirname, "../src/gist.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
       strict: true,
     },

@@ -23,12 +23,32 @@ module.exports = async () => ({
   "$value: rgba(149,157,165,.15)": "rgba(0,0,0,.15)", // .box-shadow-medium
   "$value: rgba(0,0,0,0.2)": "rgba(255,255,255,.7)",
   "$value: hsla(0,0%,100%,.875)": "hsla(0,0%,0%,.875)",
+  "$value: hsla(0,0%,100%,.85)": "hsla(0,0%,0%,.85)",
   "$value: hsla(0,0%,100%,.8)": "hsla(0,0%,0%,.8)",
+  "$value: hsla(0,0%,100%,.7)": "hsla(0,0%,0%,.7)",
   "$value: hsla(0,0%,100%,.6)": "hsla(0,0%,0%,.6)",
   "$value: hsla(0,0%,100%,.5)": "hsla(0,0%,0%,.5)",
+  "$value: hsla(0,0%,100%,.3)": "hsla(0,0%,0%,.3)",
   "$value: hsla(0,0%,100%,.2)": "hsla(0,0%,0%,.2)",
+  "$value: hsla(0,0%,100%,.15)": "hsla(0,0%,0%,.15)",
   "$value: hsla(0,0%,100%,.125)": "hsla(0,0%,0%,.125)",
+  "$value: hsla(0,0%,100%,.1)": "hsla(0,0%,0%,.1)",
   "$value: hsla(0,0%,100%,.05)": "hsla(0,0%,0%,.05)",
+  "$value: rgba(0,0,0,.125)": "rgba(220,220,220,.125)",
+  "$value: rgba(27,31,35,.05)": "rgba(220,220,220,.05)",
+  "$value: rgba(27,31,35,.06)": "rgba(220,220,220,.06)",
+  "$value: rgba(27,31,35,.08)": "rgba(220,220,220,.15)",
+  "$value: rgba(27,31,35,.1)": "rgba(220,220,220,.1)",
+  "$value: rgba(27,31,35,.15)": "rgba(220,220,220,.15)",
+  "$value: rgba(27,31,35,.2)": "rgba(220,220,220,.2)",
+  "$value: rgba(27,31,35,.25)": "rgba(220,220,220,.25)",
+  "$value: rgba(27,31,35,.3)": "rgba(220,220,220,.4)",
+  "$value: rgba(27,31,35,.35)": "rgba(220,220,220,.35)",
+  "$value: rgba(27,31,35,.5)": "rgba(220,220,220,.5)",
+  "$value: rgba(27,31,35,.6)": "rgba(220,220,220,.6)",
+  "$value: rgba(27,31,35,.7)": "rgba(220,220,220,.7)",
+  "$value: rgba(27,31,35,.85)": "rgba(220,220,220,.85)",
+
   "color: hsla(0,0%,100%,.875)": "color: hsla(0,0%,100%,.125)",
   "color: hsla(0,0%,100%,.8)": "color: hsla(0,0%,100%,.2)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.4)",
@@ -38,29 +58,72 @@ module.exports = async () => ({
   "$box-shadow: #fff": "var(--ghd-bg-color)",
   "color: #fff": "color: #fff",
 
-  "$value: #fcfcfc": "#1d1d1d",
-  "$value: #f7f7f7": "#202020",
-  "$value: #f3f4f6": "#242424",
-  "$value: #f0f3f6": "#242424",
-  "$value: #eff1f3": "#242424",
-  "$value: #eeeeee": "#2c2c2c",
-  "$value: #edeff2": "#2c2c2c",
-  "$value: #eaecef": "#343434",
-  "$value: #e1e4e8": "#343434",
-  "$value: #e0e0e0": "#343434",
-  "$value: #dfe2e5": "#404040",
-  "$value: #dddddd": "#404040",
-  "$value: #d8dee2": "#404040",
-  "$value: #d1d5da": "#404040",
+  "$value: #000000": "#f0f0f0",
+  "$value: #141823": "#dcdcdc", // graphql explorer
+  "$value: #1b1f23": "#dcdcdc",
+  "$value: #24292e": "#c6c6c6", // .btn
+  "$value: #2f363d": "#c6c6c6",
+  "$value: #333333": "#c6c6c6",
+  "$value: #393939": "#c6c6c6",
+  "$value: #3c4146": "#c6c6c6",
+  "$value: #444444": "#afafaf",
+  "$value: #444d56": "#afafaf", // .full-commit .commit-desc pre
+  "$value: #484848": "#afafaf", // github blog
+  "$value: #555555": "#afafaf", // graphql explorer
+  "$value: #586069": "#afafaf",
+  "$value: #666666": "#9b9b9b",
+  "$value: #6a737d": "#9b9b9b",
+  "$value: #767676": "#767676",
+  "$value: #808891": "#767676",
+  "$value: #959da5": "#767676",
+  "$value: #999999": "#767676",
+  "$value: #a3aab1": "#767676",
+  "$value: #a8bbd0": "#767676",
+  "$value: #bbbbbb": "#606060",
+  "$value: #c3c8cf": "#606060",
   "$value: #c6cbd1": "#505050",
   "$value: #cccccc": "#5a5a5a",
   "$value: #cfcfcf": "#5a5a5a",
-  "$value: #bbbbbb": "#606060",
-  "$value: #999999": "#505050",
-  "$value: #24292e": "#c6c6c6", // actions
+  "$value: #d0d0d0": "#343434", // graphql explorer
+  "$value: #d1d5da": "#343434",
+  "$value: #d3d6db": "#343434", // graphql explorer
+  "$value: #d3e2f4": "#383838",
+  "$value: #d6d6d6": "#343434", // graphql explorer
+  "$value: #d6e2f1": "#444",
+  "$value: #d8dee2": "#343434",
+  "$value: #dddddd": "#343434",
+  "$value: #dfe2e5": "#343434",
+  "$value: #e0e0e0": "#343434", // graphql explorer
+  "$value: #e1e4e8": "#343434",
+  "$value: #e5e5e5": "#343434",
+  "$value: #e6ebf1": "#343434",
+  "$value: #e9e9e9": "#343434", // zenhub
+  "$value: #e9ecef": "#343434",
+  "$value: #eaeaea": "#2c2c2c",
+  "$value: #eaecef": "#2c2c2c",
+  "$value: #edeff2": "#2c2c2c",
+  "$value: #eeeeee": "#2c2c2c",
+  "$value: #efefef": "#202020",
+  "$value: #eff1f3": "#242424",
+  "$value: #eff3f6": "#242424",
+  "$value: #f0f3f6": "#242424",
+  "$value: #f0f5fa": "#202020",
+  "$value: #f3f4f6": "#242424",
+  "$value: #f4f4f4": "#242424",
+  "$value: #f4f5f5": "#242424", // zenhub
+  "$value: #f5f5f5": "#222222", // gitako
+  "$value: #f6f8fa": "#202020",
+  "$value: #f7f7f7": "#202020",
+  "$value: #f8f8f8": "#1d1d1d",
+  "$value: #f8fafd": "#202020",
+  "$value: #f9f9f9": "#181818",
+  "$value: #fafafb": "#181818",
+  "$value: #fafbfc": "#181818", // .bg-gray-light
+  "$value: #fcfcfc": "#1d1d1d",
+  "$value: #fdfdfd": "#181818",
+  "$value: #ffe": "#181818",
 
   // #444d56 is used for various dark-ish parts like actions. only invert text color for it
-  "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
   "$border: #444d56": "#343434",
   "$background: #444d56": "#343434",
   "$box-shadow: #444d56": "#343434",
@@ -68,26 +131,28 @@ module.exports = async () => ({
   // blue (base color)
   "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
   "$value: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
-  "$value: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
-  "$value: #3b5998": "/*[[base-color]]*/",
   "$value: #0058a2": "/*[[base-color]]*/",
-  "$value: #005cc2": "/*[[base-color]]*/",
   "$value: #005b9e": "/*[[base-color]]*/",
-  "$value: #1f61a0": "/*[[base-color]]*/",
-  "$value: #2a65a0": "/*[[base-color]]*/",
-  "$value: #0366d6d0": "/*[[base-color]]*/", // gitako
+  "$value: #005cc2": "/*[[base-color]]*/",
+  "$value: #006eed": "/*[[base-color]]*/", // notification icon
+  "$value: #035fc7": "/*[[base-color]]*/",
   "$value: #0361cc": "/*[[base-color]]*/",
   "$value: #0366d6": "/*[[base-color]]*/", // gitako
-  "$value: #1074e7": "/*[[base-color]]*/",
-  "$value: #006eed": "/*[[base-color]]*/", // notification icon
+  "$value: #0366d6d0": "/*[[base-color]]*/", // gitako
+  "$value: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
   "$value: #0679fc": "/*[[base-color]]*/",
+  "$value: #1074e7": "/*[[base-color]]*/",
+  "$value: #1f61a0": "/*[[base-color]]*/",
+  "$value: #2188ff": "/*[[base-color]]*/",
+  "$value: #2a65a0": "/*[[base-color]]*/",
   "$value: #3072b3": "/*[[base-color]]*/",
   "$value: #327fc7": "/*[[base-color]]*/",
+  "$value: #3b5998": "/*[[base-color]]*/",
   "$value: #4183c4": "/*[[base-color]]*/",
-  "$value: #2188ff": "/*[[base-color]]*/",
+  "$value: #4a9eff": "/*[[base-color]]*/",
   "$value: #54a3ff": "/*[[base-color]]*/", // notification icon
-  "$value: #79b8ff": "/*[[base-color]]*/",
   "$value: #599bcd": "/*[[base-color]]*/",
+  "$value: #79b8ff": "/*[[base-color]]*/",
   "$value: #b4d6fe": "/*[[base-color]]*/", // github hovercard
 
   // blue
@@ -112,21 +177,31 @@ module.exports = async () => ({
   "$value: rgba(158,28,35,.6)": "rgba(255,68,68,.6)", // .flash-error .octicon
   "$value: rgba(203,36,49,.4)": "rgba(255,68,68,.4)",
   "$value: rgba(158,28,35,.2)": "rgba(255,68,68,.2)",
-  "$value: #86181d": "#d82828",
+  "$value: #86181d": "#f84848",
+  "$value: #9e1c23": "#f84848",
   "$value: #b11a04": "#d82828", // graphql explorer
+  "$value: #b31d28": "#d82828",
   "$value: #cb2431": "#d82828",
   "$value: #d73a49": "#d82828",
+  "$value: #ea4a5a": "#d82828",
+  "$value: #f97583": "#d82828",
+  "$value: #fdaeb7": "#d82828",
   "$value: #cea0a5": "#d82828",
-  "$value: #f97583": "#f88",
   "$value: #ffdce0": "#300",
   "$value: #ffe3e6": "#300",
   "$value: #ffeef0": "#300",
 
   // orange
   "$value: #a04100": "#f3582c",
+  "$value: #c24e00": "#f3582c",
   "$value: #d15704": "#f3582c",
   "$value: #e36209": "#fb8532",
+  "$value: #f66a0a": "#fb8532",
   "$value: #fb8532": "#fb8532",
+  "$value: #ffab70": "#730",
+  "$value: #ffd1ac": "#730",
+  "$value: #ffebda": "#730",
+  "$value: #fff8f2": "#730",
 
   // yellow / brown
   "$value: rgba(47,38,6,.5)": "#cb4",
@@ -143,6 +218,7 @@ module.exports = async () => ({
   "$value: #dca874": "#cb4",
   "$value: #f9c513": "#cb4",
   "$value: #ffd33d": "#cb4",
+  "$value: #ffdf5d": "#542",
   "$value: #ffea7f": "#542",
   "$value: #e5d999": "#542",
   "$value: #d9d0a5": "#542",
@@ -154,34 +230,46 @@ module.exports = async () => ({
   "$value: #fffdef": "#261d08",
 
   // green
-  "$value: rgba(108,198,68,.1)": "#002800",
+  "$value: rgba(108,198,68,.1)": "#6cc64450",
+  "$value: rgba(23,111,44,0.2)": "#6cc64450",
+  "$value: rgba(23,111,44,.8)": "#3737",
   "$value: rgba(52,208,88,.4)": "#3737",
   "$value: #144620": "#6cc644",
   "$value: #165c26": "#6cc644",
+  "$value: #176f2c": "#6cc644",
   "$value: #22863a": "#6cc644",
-  "$value: #2a8f47": "#595", // new .btn-primary.disabled
-  "$value: #2c974b": "#484", // new .btn-primary :hover
-  "$value: #2ea44f": "#373", // new .btn-primary
   "$value: #269f42": "#595", // .btn-primary :hover
   "$value: #279f43": "#595", // new/old .btn-primary:active
   "$value: #28a745": "#484", // green labels, issue icons
+  "$value: #2a8f47": "#595", // new .btn-primary.disabled
+  "$value: #2c974b": "#484", // new .btn-primary :hover
   "$value: #2cbe4e": "#373",
+  "$value: #2ea44f": "#373", // new .btn-primary
   "$value: #2fcb53": "#373", // .btn-primary :hover
   "$value: #34d058": "#373", // .btn-primary
+  "$value: #85e89d": "#040",
   "$value: #94d3a2": "#040", // .btn-primary.disabled
   "$value: #a2cbac": "#040",
+  "$value: #bef5cb": "#040",
   "$value: #dcffe4": "#002800",
   "$value: #e6ffed": "#002800",
   "$value: #f0fff4": "#002800",
 
   // purple
+  "$value: #29134e": "#9378ba",
+  "$value: #3a1d6e": "#9378ba",
+  "$value: #4c2889": "#9378ba",
+  "$value: #5a32a3": "#73589a",
   "$value: #6f42c1": "#73589a",
-  "$value: #8b2bb9": "#73589a", // graphql explorer
   "$value: #8a63d2": "#53387a",
-  "$value: #d5c8ed": "#53387a",
-  "$value: #f8f4ff": "#251533",
-  "$value: #f6f1ff": "#231233",
+  "$value: #8b2bb9": "#53387a", // graphql explorer
+  "$value: #b392f0": "#53387a",
+  "$value: #d1bcf9": "#221133",
+  "$value: #d5c8ed": "#221133",
+  "$value: #e6dcfd": "#221133",
   "$value: #f5f0ff": "#221133",
+  "$value: #f6f1ff": "#231233",
+  "$value: #f8f4ff": "#251533",
 
   // blurple
   "$value: #3b41af": "#6570e2",
@@ -189,8 +277,15 @@ module.exports = async () => ({
   "$value: #6570e2": "#4550c2",
 
   // pink
+  "$value: #6d224f": "#e6b",
   "$value: #99306f": "#e6b",
+  "$value: #b93a86": "#e6b",
+  "$value: #d03592": "#e6b",
+  "$value: #ea4aaa": "#c49",
   "$value: #ec6cb9": "#c49",
+  "$value: #f692ce": "#c49",
+  "$value: #f9b3dd": "#170711",
+  "$value: #fedbf0": "#170711",
   "$value: #ffeef8": "#170711",
 
   // ==========================================================================
@@ -232,24 +327,9 @@ module.exports = async () => ({
   "$background: linear-gradient(#ccc,#d5d5d5)": "linear-gradient(#303030, #282828)",
   "$background: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%)": "linear-gradient(#404040, #383838)",
 
-  "$background: rgba(27,31,35,.05)": "rgba(220,220,220,.1)", // github hovercard
-  "$background: rgba(27,31,35,.08)": "rgba(220,220,220,.15)",
-  "$background: rgba(27,31,35,.1)": "rgba(220,220,220,.17)",
-  "$background: rgba(27,31,35,.15)": "rgba(220,220,220,.22)",
-
   // ==========================================================================
   // Border
   // ==========================================================================
-
-  "$border: rgba(27,31,35,.5)": "rgba(220,220,220,.5)",
-  "$border: rgba(27,31,35,.35)": "rgba(220,220,220,.35)",
-  "$border: rgba(27,31,35,.3)": "rgba(220,220,220,.4)",
-  "$border: rgba(27,31,35,.25)": "rgba(220,220,220,.25)",
-  "$border: rgba(27,31,35,.2)": "rgba(220,220,220,.2)",
-  "$border: rgba(27,31,35,.15)": "rgba(220,220,220,.15)",
-  "$border: rgba(27,31,35,.1)": "rgba(220,220,220,.1)",
-  "$border: rgba(27,31,35,.05)": "rgba(220,220,220,.05)",
-  "$border: rgba(0,0,0,.125)": "rgba(220,220,220,.125)",
 
   "$border: #484848": "#afafaf", // github blog
   "$border: #959da5": "#484848",
@@ -290,28 +370,10 @@ module.exports = async () => ({
   "box-shadow: 0 1px 0 rgba(27,31,35,.04),inset 0 1px 0 rgba(255,255,255,.25)": "box-shadow: none",
   "box-shadow: inset 0 -1px 0 #959da5": "box-shadow: inset 0 -2px 0 #383838",
   "box-shadow: 0 8px 24px rgba(0,0,0,.2)": "box-shadow: 0 8px 24px rgba(0,0,0,.4)",
+
   // ==========================================================================
   // Color / Background
   // ==========================================================================
-
-  "color: #000": "color: #f0f0f0",
-  "color: #1b1f23": "color: #dcdcdc",
-  "color: #141823": "color: #dcdcdc", // graphql explorer
-  "color: #24292e": "color: #c6c6c6", // .btn
-  "color: #2f363d": "color: #c6c6c6",
-  "color: #333": "color: #c6c6c6",
-  "color: #393939": "color: #c6c6c6",
-  "color: #3c4146": "color: #c6c6c6",
-  "color: #444": "color: #afafaf",
-  "color: #555": "color: #afafaf", // graphql explorer
-  "color: #586069": "color: #afafaf",
-  "color: #666": "color: #9b9b9b",
-  "color: #6a737d": "color: #9b9b9b",
-  "color: #959da5": "color: #767676",
-  "color: #767676": "color: #767676",
-  "color: #808891": "color: #767676",
-  "color: #a3aab1": "color: #767676",
-  "color: #c3c8cf": "color: #5a5a5a",
 
   "color: rgba(27,31,35,.85)": "color: rgba(230,230,230,.85)",
   "color: rgba(27,31,35,.7)": "color: rgba(230,230,230,.7)",
