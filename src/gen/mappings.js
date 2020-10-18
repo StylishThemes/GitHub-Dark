@@ -143,7 +143,6 @@ module.exports = async () => ({
   "$value: #0679fc": "/*[[base-color]]*/",
   "$value: #1074e7": "/*[[base-color]]*/",
   "$value: #1f61a0": "/*[[base-color]]*/",
-  "$value: #2188ff": "/*[[base-color]]*/",
   "$value: #2a65a0": "/*[[base-color]]*/",
   "$value: #3072b3": "/*[[base-color]]*/",
   "$value: #327fc7": "/*[[base-color]]*/",
@@ -161,6 +160,7 @@ module.exports = async () => ({
   "$value: #032f62": "#9daccc",
   "$value: #05264c": "#9daccc", // big commit title
   "$value: #264c72": "#9daccc",
+  "$value: #2188ff": "#4f8cc9",
   "$value: #005cc5": "#4f8cc9", // .full-commit .btn
   "$value: #257bf9": "#4f8cc9",
   "$value: #97c1da": "#224466",
@@ -426,4 +426,5 @@ module.exports = async () => ({
   "$background: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
   "$value: var(--color-border-primary)": "var(--color-border-primary)",
+  "$value: var(--color-auto-blue-4)": "var(--color-auto-blue-4)",
 });
