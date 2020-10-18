@@ -424,7 +424,6 @@ module.exports = async () => ({
   "$background: none": "none",
   "$background: initial": "initial",
   "$background: transparent": "transparent",
-  "$border: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
   "$value: var(--color-border-primary)": "var(--color-border-primary)",
 });
