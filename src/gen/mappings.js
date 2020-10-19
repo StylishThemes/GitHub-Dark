@@ -53,10 +53,9 @@ module.exports = async () => ({
   "color: hsla(0,0%,100%,.8)": "color: hsla(0,0%,100%,.2)",
   "color: hsla(0,0%,100%,.6)": "color: hsla(0,0%,100%,.4)",
 
-  "$background: #fff": "#181818",
+  "$value: #fff": "#181818",
   "$border: #fff": "var(--ghd-bg-color)",
   "$box-shadow: #fff": "var(--ghd-bg-color)",
-  "color: #fff": "color: #fff",
 
   "$value: #000000": "#f0f0f0",
   "$value: #141823": "#dcdcdc", // graphql explorer
