@@ -31,15 +31,15 @@ update: node_modules
 	yarn -s
 	@touch yarn.lock
 
-patch: node_modules lint build
+patch: node_modules lint
 	yarn -s run versions -pdC patch $(wildcard *.user.css)
 	git push --tags origin master
 
-minor: node_modules lint build
+minor: node_modules lint
 	yarn -s run versions -pdC minor $(wildcard *.user.css)
 	git push --tags origin master
 
-major: node_modules lint build
+major: node_modules lint
 	yarn -s run versions -pdC major $(wildcard *.user.css)
 	git push --tags origin master
 
