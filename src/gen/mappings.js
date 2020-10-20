@@ -72,7 +72,7 @@ module.exports = async () => ({
   "$value: #555555": "#afafaf", // graphql explorer
   "$value: #586069": "#afafaf",
   "$value: #666666": "#9b9b9b",
-  "$value: #6a737d": "#767676",
+  "$value: #6a737d": "#9b9b9b", // --color-text-tertiary
   "$value: #767676": "#767676",
   "$value: #808891": "#767676",
   "$value: #959da5": "#767676",
