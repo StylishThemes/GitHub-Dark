@@ -88,7 +88,7 @@
 | Chaos                      |      ✔️     |      ❌     |      ❌      |
 | Clouds Midnight            |      ✔️     |      ❌     |      ❌      |
 | Cobalt                     |      ✔️     |      ✔️     |      ❌      |
-| Dracula                    |      ❌     |      ✔️     |      ✔️      |
+| Dracula                    |      ✔️     |      ✔️     |      ✔️      |
 | GitHub Dark                |      ✔️     |      ❌     |      ✔️      |
 | Idle Fingers               |      ✔️     |      ❌     |      ✔️      |
 | Kr Theme                   |      ✔️     |      ❌     |      ❌      |
