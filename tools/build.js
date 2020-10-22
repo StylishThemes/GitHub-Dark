@@ -3,7 +3,7 @@
 
 const esc = require("escape-string-regexp");
 const fetchCss = require("fetch-css");
-const remapCss = require("../../remap-css");
+const remapCss = require("remap-css");
 const {readFile} = require("fs/promises");
 const {resolve, basename} = require("path");
 const cssnano = require("cssnano");
