@@ -389,6 +389,7 @@ module.exports = async () => ({
 
   "fill: #24292e": "fill: #c6c6c6",
   "stroke: #24292e": "stroke: #c6c6c6",
+  "$background: #24292e": "#181818",
 
   // blue
   "color: #032f62": "color: #9daccc",
