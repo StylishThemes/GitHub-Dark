@@ -89,7 +89,6 @@ async function login() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setUserAgent(await userAgent());
-  await page.setDefaultNavigationTimeout(600000);
   await page.goto("https://github.com/login");
   await page.type(`form [type="text"]`, process.env.GHD_GH_USERNAME);
   await page.type(`form [type="password"]`, process.env.GHD_GH_PASSWORD);
