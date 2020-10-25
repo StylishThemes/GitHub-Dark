@@ -130,6 +130,7 @@ module.exports = async () => ({
 
   // blue (base color)
   "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
+  "$value: rgba(3,102,214,.3)": "rgba(/*[[base-color-rgb]]*/, .3)",
   "$value: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
   "$value: #0058a2": "/*[[base-color]]*/",
   "$value: #005b9e": "/*[[base-color]]*/",
