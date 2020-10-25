@@ -67,6 +67,7 @@ module.exports = async () => ({
   "$value: #393939": "#c6c6c6",
   "$value: #3c4146": "#c6c6c6",
   "$value: #444444": "#afafaf",
+  "$value: #444d56": "#afafaf",
   "$value: #484848": "#afafaf", // github blog
   "$value: #555555": "#afafaf", // graphql explorer
   "$value: #586069": "#afafaf",
@@ -121,10 +122,6 @@ module.exports = async () => ({
   "$value: #fcfcfc": "#1d1d1d",
   "$value: #fdfdfd": "#181818",
   "$value: #ffe": "#181818",
-
-  // #444d56 is used for various dark-ish parts like actions. only invert text color for it
-  "$value: #444d56": "#343434",
-  "color: #444d56": "color: #afafaf", // .full-commit .commit-desc pre
 
   // blue (base color)
   "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
