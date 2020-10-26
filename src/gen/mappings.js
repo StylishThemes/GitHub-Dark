@@ -140,6 +140,7 @@ module.exports = async () => ({
   "$value: #1074e7": "/*[[base-color]]*/",
   "$value: #1f61a0": "/*[[base-color]]*/",
   "$value: #2a65a0": "/*[[base-color]]*/",
+  "$value: #234766": "/*[[base-color]]*/", // gist logged out banner
   "$value: #3072b3": "/*[[base-color]]*/",
   "$value: #327fc7": "/*[[base-color]]*/",
   "$value: #3b5998": "/*[[base-color]]*/",
