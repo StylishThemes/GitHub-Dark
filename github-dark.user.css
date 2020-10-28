@@ -214,6 +214,11 @@
     --color-btn-primary-shadow-selected: none !important;
     --color-btn-primary-text: #fff !important;
     --color-btn-shadow-input-focus: none !important;
+    --color-calendar-graph-day-bg: #282828 !important;
+    --color-calendar-graph-day-L1-bg: /*[[base-color]]*/ !important;
+    --color-calendar-graph-day-L2-bg: /*[[base-color]]*/ !important;
+    --color-calendar-graph-day-L3-bg: /*[[base-color]]*/ !important;
+    --color-calendar-graph-day-L4-bg: /*[[base-color]]*/ !important;
     --color-global-nav-icon: none !important;
     --color-global-nav-logo: none !important;
     --color-global-nav-text: none !important;
@@ -11306,20 +11311,6 @@
   rect[style*="#gradient-"] {
     fill: /*[[base-color]]*/ !important;
   }
-  /* contribution calendar */
-  .calendar-graph rect[fill="#216e39"], .calendar-graph rect[fill="#9be9a8"],
-  .calendar-graph rect[fill="#40c463"], .calendar-graph rect[fill="#30a14e"],
-  .contrib-legend .legend li[style],
-  .contribution-activity-listing .progress-bar[style*="background-color"] {
-    background-color: /*[[base-color]]*/ !important;
-    fill: /*[[base-color]]*/ !important;
-  }
-  .calendar-graph .days-selected rect.day.active {
-    stroke: #ddd !important;
-  }
-  .calendar-graph rect.day:hover {
-    stroke: #fff !important;
-  }
   /* contribution progress bars on user page */
   .contribution-activity-listing .progress-bar[style*="7bc96f"],
   .facebox-close:hover {
@@ -11331,54 +11322,38 @@
   .notifications .read .avatar img {
     opacity: .7;
   }
-  /* contribution calendar/legend - regular colors */
-  .calendar-graph rect[fill="#ebedf0"],
-  .contrib-legend .legend li[style*="#ebedf0"],
-  .js-activity-overview-graph-container [fill="white"] {
-    background-color: #282828 !important;
-    fill: #282828 !important;
+  /* contribution calendar */
+  .contribution-activity-listing .progress-bar[style*="background-color"] {
+    background-color: /*[[base-color]]*/ !important;
+    fill: /*[[base-color]]*/ !important;
   }
-  .calendar-graph rect[fill="#216e39"],
-  .contrib-legend .legend li[style*="#216e39"] {
-    opacity: 1 !important;
+  .contrib-legend .legend li {
+    box-shadow: none !important;
   }
-  .calendar-graph rect[fill="#30a14e"],
-  .contrib-legend .legend li[style*="#30a14e"] {
-    opacity: .75 !important;
+  .calendar-graph .days-selected rect.day.active {
+    stroke: #ddd !important;
   }
-  .calendar-graph rect[fill="#40c463"],
-  .contrib-legend .legend li[style*="#40c463"] {
+  .calendar-graph rect.day:hover {
+    stroke: #fff !important;
+  }
+  .calendar-graph rect.day {
+    outline: none !important;
+  }
+  .calendar-graph rect[fill*="L1-bg"],
+  .contrib-legend .legend li[style*="L1-bg"] {
     opacity: .5 !important;
   }
-  .calendar-graph rect[fill="#9be9a8"],
-  .contrib-legend .legend li[style*="#9be9a8"] {
+  .calendar-graph rect[fill*="L2-bg"],
+  .contrib-legend .legend li[style*="L2-bg"] {
     opacity: .25 !important;
   }
-  /* contribution calendar - halloween colors */
-  .calendar-graph rect[fill="#FFEE4A"], .calendar-graph rect[fill="#FFC501"],
-  .calendar-graph rect[fill="#FE9600"],
-  .contrib-legend .legend li[style*="#FFEE4A"],
-  .contrib-legend li[style*="#FFC501"],
-  .contrib-legend .legend li[style*="#FE9600"] {
-    background-color: #fe9600 !important;
-    fill: #fe9600 !important;
+  .calendar-graph rect[fill*="L3-bg"],
+  .contrib-legend .legend li[style*="L3-bg"] {
+    opacity: .75 !important;
   }
-  .calendar-graph rect[fill="#FFEE4A"],
-  .contrib-legend .legend li[style*="#FFEE4A"] {
-    opacity: .2 !important;
-  }
-  .calendar-graph rect[fill="#FFC501"],
-  .contrib-legend .legend li[style*="#FFC501"] {
-    opacity: .4 !important;
-  }
-  .calendar-graph rect[fill="#FE9600"],
-  .contrib-legend .legend li[style*="#FE9600"] {
-    opacity: .8 !important;
-  }
-  .calendar-graph rect[fill="#03001C"],
-  .contrib-legend .legend li[style*="#03001C"] {
-    background-color: #fc3 !important;
-    fill: #fc3 !important;
+  .calendar-graph rect[fill*="L4-bg"],
+  .contrib-legend .legend li[style*="L4-bg"] {
+    opacity: 1 !important;
   }
   .contrib-person path {
     fill-opacity: .6;
