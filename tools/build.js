@@ -111,16 +111,17 @@ async function login() {
 }
 
 async function main() {
-  const cookie = await login();
-  const mappings = await require("../src/gen/mappings")();
-  const ignores = await require("../src/gen/ignores")();
-  const sources = await require("../src/gen/sources")(cookie);
+  const [mappings, ignores, sources] = await Promise.all([
+    require("../src/gen/mappings")(),
+    require("../src/gen/ignores")(),
+    require("../src/gen/sources")(await login()),
+  ]);
 
   const remapOpts = {
     ignoreSelectors: ignores,
     indentCss: 2,
     lineLength: 76,
-    comments: true,
+    comments: false,
     stylistic: true,
     validate: true,
   };
