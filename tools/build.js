@@ -82,9 +82,7 @@ async function checkCookies(page) {
 }
 
 async function login() {
-  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) {
-    throw new Error(`Please set the GHD_GH_USERNAME and GHD_GH_PASSWORD environment variables`);
-  }
+  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) return "";
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -105,9 +103,7 @@ async function login() {
   }
 
   cookie = await checkCookies(page);
-  if (cookie) return cookie;
-
-  throw new Error(`Could not find cookie, login probably failed`);
+  return cookie || "";
 }
 
 async function main() {
