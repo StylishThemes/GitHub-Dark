@@ -21,17 +21,15 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (b.endsWith("main.css")) return 1;
 }).filter(file => basename(file) !== "template.css");
 
-const minify = async css => {
-  const result = await cssnano.process(css, {from: undefined});
-  return result.css;
-};
+const minify = async css => (await cssnano.process(css, {from: undefined})).css;
 
 function replaceCSSMatches(css) {
   return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
+    const parts = matches.split(/\s*,\s*/);
+    const last = parts.length - 1;
+
     let result = "";
-    const m = matches.split(/\s*,\s*/);
-    const last = m.length - 1;
-    m.forEach((match, index) => {
+    parts.forEach((match, index) => {
       result += `${match} ${selector.trim()}${index >= last && separator === "{" ? " {" : ", "}`;
     });
     return result;
@@ -68,15 +66,11 @@ async function getThemes() {
   return themes;
 }
 
-function serializeCookies(cookies) {
-  return cookies.map(cookie => serialize(cookie.name, cookie.value)).join(", ");
-}
-
 async function checkCookies(page) {
   const cookies = await page.cookies() || {};
   for (const {name, value} of cookies) {
     if (name === "logged_in" && value === "yes") {
-      return serializeCookies(cookies);
+      return cookies.map(cookie => serialize(cookie.name, cookie.value)).join(", ");
     }
   }
 }
