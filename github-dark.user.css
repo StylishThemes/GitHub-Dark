@@ -8123,8 +8123,8 @@
   }
   /* semi-transparent */
   .context-loader.large-format-loader, #graphs .loader, .org-header,
-  .illflow-item:not(.selected):hover, .leaflet-control-attribution, .orghead,
-  .dropdown-toggle:hover, .dropdown-toggle.selected {
+  .illflow-item:not(.selected):hover, .orghead, .dropdown-toggle:hover,
+  .dropdown-toggle.selected {
     background: rgba(20, 20, 20, .4) !important;
   }
   /* repo/page header */
@@ -8338,8 +8338,7 @@
   .swipe .swipe-frame .swipe-bar .bottom-handle,
   .onion-skin .controls .transparent, .onion-skin .controls .opaque,
   .onion-skin .controls .slider .slider-track,
-  .onion-skin .controls .slider .slider-track .dragger, .leaflet-control-zoom a,
-  .leaflet-control-attribution.leaflet-compact-attribution::after,
+  .onion-skin .controls .slider .slider-track .dragger,
   img[src$="favicons.githubusercontent.com/github.com"],
   img[src$="invertocat.png"], .ghd-invert, #footer .github img,
   #com span.octicon:not(.octicon-comment-discussion),
@@ -8410,7 +8409,8 @@
   img[data-canonical-src*="saucelabs.com/browser-matrix"],
   img[src*="images/modules/checks"], img[src$="profile-first-pr.png"],
   img[src$="profile-joined-github.png"], img[src$="profile-first-repo.png"],
-  img[src$="profile-first-issue.png"], .github-jobs-logo strong {
+  img[src$="profile-first-issue.png"], .github-jobs-logo strong, .leaflet-bar,
+  .leaflet-control-attribution {
     filter: invert(90.5%) hue-rotate(180deg) saturate(200%) !important;
   }
   /* workaround filter creating a stacking context */
@@ -24805,11 +24805,11 @@
     background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAABoaGgAAACwAAAAACgAKAAACEYQdmYcaDNxjEspKndVZbc8UADs=") !important;
   }
   /* https://github.com/StylishThemes/GitHub-Dark/issues/1209 */
-  .render-shell img:not([src$=".svg" i]) {
+  .render-shell img:not([src$=".svg" i]):not(.leaflet-tile) {
     width: 100% !important;
     height: 100% !important;
   }
-  .render-shell img:hover, .render-shell canvas:hover {
+  .render-shell img:not(.leaflet-tile):hover, .render-shell canvas:hover {
     background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAAOXl5f///yH5BAAAAAAALAAAAAAKAAoAAAIRhB2ZhxoM3GMSykqd1VltzxQAOw==") !important;
   }
 }
