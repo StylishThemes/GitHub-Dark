@@ -7,12 +7,9 @@ const remapCss = require("remap-css");
 const {readFile} = require("fs/promises");
 const {resolve, basename} = require("path");
 const cssnano = require("cssnano");
-const puppeteer = require("puppeteer");
-const totpGenerator = require("totp-generator");
-const {serialize} = require("cookie");
 
 const {version} = require("../package.json");
-const {writeFile, exit, glob, userAgent} = require("./utils");
+const {writeFile, exit, glob} = require("./utils");
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (a.endsWith("vars.css")) return -1;
@@ -66,45 +63,11 @@ async function getThemes() {
   return themes;
 }
 
-async function checkCookies(page) {
-  const cookies = await page.cookies() || {};
-  for (const {name, value} of cookies) {
-    if (name === "logged_in" && value === "yes") {
-      return cookies.map(cookie => serialize(cookie.name, cookie.value)).join(", ");
-    }
-  }
-}
-
-async function login() {
-  if (!("GHD_GH_USERNAME" in process.env) || !("GHD_GH_PASSWORD" in process.env)) return "";
-
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.setUserAgent(await userAgent());
-  await page.goto("https://github.com/login");
-  await page.type(`form [type="text"]`, process.env.GHD_GH_USERNAME);
-  await page.type(`form [type="password"]`, process.env.GHD_GH_PASSWORD);
-  await page.click(`form [type="submit"]`);
-  await page.waitForNavigation();
-
-  let cookie = await checkCookies(page);
-  if (cookie) return cookie;
-
-  if ("GHD_GH_TOTP_SECRET" in process.env) {
-    await page.type(`form [type="text"]`, totpGenerator(process.env.GHD_GH_TOTP_SECRET));
-    await page.click(`form [type="submit"]`);
-    await page.waitForNavigation();
-  }
-
-  cookie = await checkCookies(page);
-  return cookie || "";
-}
-
 async function main() {
   const [mappings, ignores, sources] = await Promise.all([
     require("../src/gen/mappings")(),
     require("../src/gen/ignores")(),
-    require("../src/gen/sources")(await login()),
+    require("../src/gen/sources")(),
   ]);
 
   const remapOpts = {

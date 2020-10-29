@@ -14,13 +14,6 @@ module.exports = async (Cookie) => {
       strict: true,
     },
     {
-      name: "github-logged-out",
-      url: "https://github.com/",
-      file: resolve(__dirname, "../src/main.css"),
-      fetchOpts: {headers: {Cookie, "User-Agent": desktopUserAgent}},
-      strict: true,
-    },
-    {
       name: "github-mobile",
       url: "https://github.com/StylishThemes/GitHub-Dark/pull/1",
       prefix: `body[class="page-responsive"]`,
