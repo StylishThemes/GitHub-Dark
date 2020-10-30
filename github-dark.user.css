@@ -471,6 +471,7 @@
     --color-border-primary: #343434;
     --color-border-secondary: #2c2c2c;
     --color-border-tertiary: #343434;
+    --color-border-overlay: #343434;
     --color-border-inverse: #181818;
     --color-border-info: /*[[base-color]]*/;
     --color-border-danger: #d82828;
@@ -484,6 +485,7 @@
     --color-bg-secondary: #181818;
     --color-bg-tertiary: #202020;
     --color-bg-overlay: #181818;
+    --color-bg-backdrop: rgba(220, 220, 220, .5);
     --color-bg-info: #182030;
     --color-bg-info-inverse: /*[[base-color]]*/;
     --color-bg-danger: #300;
@@ -644,6 +646,8 @@
     --color-box-row-blue-bg: #182030;
     --color-box-header-blue-bg: #182030;
     --color-box-header-blue-border: #246;
+    --color-box-bg-info: #182030;
+    --color-box-bg-warning: #261d08;
     --color-popover-border: rgba(220, 220, 220, .15);
     --color-branch-name-text: rgba(220, 220, 220, .6);
     --color-branch-name-icon: #767676;
@@ -943,6 +947,7 @@
       --color-border-primary: #343434;
       --color-border-secondary: #2c2c2c;
       --color-border-tertiary: #343434;
+      --color-border-overlay: #343434;
       --color-border-inverse: #181818;
       --color-border-info: /*[[base-color]]*/;
       --color-border-danger: #d82828;
@@ -956,6 +961,7 @@
       --color-bg-secondary: #181818;
       --color-bg-tertiary: #202020;
       --color-bg-overlay: #181818;
+      --color-bg-backdrop: rgba(220, 220, 220, .5);
       --color-bg-info: #182030;
       --color-bg-info-inverse: /*[[base-color]]*/;
       --color-bg-danger: #300;
@@ -1116,6 +1122,8 @@
       --color-box-row-blue-bg: #182030;
       --color-box-header-blue-bg: #182030;
       --color-box-header-blue-border: #246;
+      --color-box-bg-info: #182030;
+      --color-box-bg-warning: #261d08;
       --color-popover-border: rgba(220, 220, 220, .15);
       --color-branch-name-text: rgba(220, 220, 220, .6);
       --color-branch-name-icon: #767676;
@@ -2691,38 +2699,9 @@
   body[class="page-responsive"] button.discussion-sidebar-toggle {
     background: none;
   }
-  body[class="page-responsive"] .gh-header-meta {
+  body[class="page-responsive"] .gh-header-meta,
+  body[class="page-responsive"] .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
     border-bottom-color: var(--color-border-primary);
-  }
-  body[class="page-responsive"] .timeline-comment.current-user {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  body[class="page-responsive"] .timeline-comment.current-user .timeline-comment-header {
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  body[class="page-responsive"] .timeline-comment.current-user .timeline-comment-label {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  body[class="page-responsive"] .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-blue-2, #246);
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  body[class="page-responsive"] .timeline-comment.is-internal,
-  body[class="page-responsive"] .timeline-comment.unread-item {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  body[class="page-responsive"] .timeline-comment.is-internal .timeline-comment-header,
-  body[class="page-responsive"] .timeline-comment.unread-item .timeline-comment-header {
-    border-bottom-color: var(--color-auto-yellow-2, #542);
-  }
-  body[class="page-responsive"] .timeline-comment.is-internal .timeline-comment-label,
-  body[class="page-responsive"] .timeline-comment.unread-item .timeline-comment-label {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  body[class="page-responsive"] .timeline-comment.is-internal .previewable-comment-form .comment-form-head.tabnav,
-  body[class="page-responsive"] .timeline-comment.unread-item .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-yellow-2, #542);
-    border-bottom-color: var(--color-auto-yellow-2, #542);
   }
   body[class="page-responsive"] .timeline-comment .comment + .comment {
     border-top-color: var(--color-border-primary);
@@ -2960,6 +2939,11 @@
   body[class="page-responsive"] .branch-action-item + .branch-action-item,
   body[class="page-responsive"] .branch-action-item + .mergeability-details {
     border-top-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] .branch-action-state-closed-dirty .branch-action-body::before,
+  body[class="page-responsive"] .branch-action-state-dirty .branch-action-body::before,
+  body[class="page-responsive"] .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body::before {
+    border-right-color: var(--color-border-primary);
   }
   @media (min-width:768px) {
     body[class="page-responsive"] .merge-branch-form .commit-form::before,
@@ -4021,6 +4005,7 @@
     --color-border-primary: #343434;
     --color-border-secondary: #2c2c2c;
     --color-border-tertiary: #343434;
+    --color-border-overlay: #343434;
     --color-border-inverse: #181818;
     --color-border-info: /*[[base-color]]*/;
     --color-border-danger: #d82828;
@@ -4034,6 +4019,7 @@
     --color-bg-secondary: #181818;
     --color-bg-tertiary: #202020;
     --color-bg-overlay: #181818;
+    --color-bg-backdrop: rgba(220, 220, 220, .5);
     --color-bg-info: #182030;
     --color-bg-info-inverse: /*[[base-color]]*/;
     --color-bg-danger: #300;
@@ -4194,6 +4180,8 @@
     --color-box-row-blue-bg: #182030;
     --color-box-header-blue-bg: #182030;
     --color-box-header-blue-border: #246;
+    --color-box-bg-info: #182030;
+    --color-box-bg-warning: #261d08;
     --color-popover-border: rgba(220, 220, 220, .15);
     --color-branch-name-text: rgba(220, 220, 220, .6);
     --color-branch-name-icon: #767676;
@@ -4493,6 +4481,7 @@
       --color-border-primary: #343434;
       --color-border-secondary: #2c2c2c;
       --color-border-tertiary: #343434;
+      --color-border-overlay: #343434;
       --color-border-inverse: #181818;
       --color-border-info: /*[[base-color]]*/;
       --color-border-danger: #d82828;
@@ -4506,6 +4495,7 @@
       --color-bg-secondary: #181818;
       --color-bg-tertiary: #202020;
       --color-bg-overlay: #181818;
+      --color-bg-backdrop: rgba(220, 220, 220, .5);
       --color-bg-info: #182030;
       --color-bg-info-inverse: /*[[base-color]]*/;
       --color-bg-danger: #300;
@@ -4666,6 +4656,8 @@
       --color-box-row-blue-bg: #182030;
       --color-box-header-blue-bg: #182030;
       --color-box-header-blue-border: #246;
+      --color-box-bg-info: #182030;
+      --color-box-bg-warning: #261d08;
       --color-popover-border: rgba(220, 220, 220, .15);
       --color-branch-name-text: rgba(220, 220, 220, .6);
       --color-branch-name-icon: #767676;
@@ -5274,37 +5266,8 @@
   button.discussion-sidebar-toggle {
     background: none;
   }
-  .gh-header-meta {
+  .gh-header-meta, .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
     border-bottom-color: var(--color-border-primary);
-  }
-  .timeline-comment.current-user {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .timeline-comment-header {
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .timeline-comment-label {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-blue-2, #246);
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.is-internal, .timeline-comment.unread-item {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .timeline-comment-header,
-  .timeline-comment.unread-item .timeline-comment-header {
-    border-bottom-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .timeline-comment-label,
-  .timeline-comment.unread-item .timeline-comment-label {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .previewable-comment-form .comment-form-head.tabnav,
-  .timeline-comment.unread-item .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-yellow-2, #542);
-    border-bottom-color: var(--color-auto-yellow-2, #542);
   }
   .timeline-comment .comment + .comment {
     border-top-color: var(--color-border-primary);
@@ -5535,6 +5498,11 @@
   .branch-action-item + .branch-action-item,
   .branch-action-item + .mergeability-details {
     border-top-color: var(--color-border-primary);
+  }
+  .branch-action-state-closed-dirty .branch-action-body::before,
+  .branch-action-state-dirty .branch-action-body::before,
+  .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body::before {
+    border-right-color: var(--color-border-primary);
   }
   @media (min-width:768px) {
     .merge-branch-form .commit-form::before,
@@ -18178,6 +18146,7 @@
     --color-border-primary: #343434;
     --color-border-secondary: #2c2c2c;
     --color-border-tertiary: #343434;
+    --color-border-overlay: #343434;
     --color-border-inverse: #181818;
     --color-border-info: /*[[base-color]]*/;
     --color-border-danger: #d82828;
@@ -18191,6 +18160,7 @@
     --color-bg-secondary: #181818;
     --color-bg-tertiary: #202020;
     --color-bg-overlay: #181818;
+    --color-bg-backdrop: rgba(220, 220, 220, .5);
     --color-bg-info: #182030;
     --color-bg-info-inverse: /*[[base-color]]*/;
     --color-bg-danger: #300;
@@ -18351,6 +18321,8 @@
     --color-box-row-blue-bg: #182030;
     --color-box-header-blue-bg: #182030;
     --color-box-header-blue-border: #246;
+    --color-box-bg-info: #182030;
+    --color-box-bg-warning: #261d08;
     --color-popover-border: rgba(220, 220, 220, .15);
     --color-branch-name-text: rgba(220, 220, 220, .6);
     --color-branch-name-icon: #767676;
@@ -18650,6 +18622,7 @@
       --color-border-primary: #343434;
       --color-border-secondary: #2c2c2c;
       --color-border-tertiary: #343434;
+      --color-border-overlay: #343434;
       --color-border-inverse: #181818;
       --color-border-info: /*[[base-color]]*/;
       --color-border-danger: #d82828;
@@ -18663,6 +18636,7 @@
       --color-bg-secondary: #181818;
       --color-bg-tertiary: #202020;
       --color-bg-overlay: #181818;
+      --color-bg-backdrop: rgba(220, 220, 220, .5);
       --color-bg-info: #182030;
       --color-bg-info-inverse: /*[[base-color]]*/;
       --color-bg-danger: #300;
@@ -18823,6 +18797,8 @@
       --color-box-row-blue-bg: #182030;
       --color-box-header-blue-bg: #182030;
       --color-box-header-blue-border: #246;
+      --color-box-bg-info: #182030;
+      --color-box-bg-warning: #261d08;
       --color-popover-border: rgba(220, 220, 220, .15);
       --color-branch-name-text: rgba(220, 220, 220, .6);
       --color-branch-name-icon: #767676;
@@ -20317,37 +20293,8 @@
   button.discussion-sidebar-toggle {
     background: none;
   }
-  .gh-header-meta {
+  .gh-header-meta, .gh-header .gh-header-sticky.is-stuck + .gh-header-shadow {
     border-bottom-color: var(--color-border-primary);
-  }
-  .timeline-comment.current-user {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .timeline-comment-header {
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .timeline-comment-label {
-    border-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-blue-2, #246);
-    border-bottom-color: var(--color-auto-blue-2, #246);
-  }
-  .timeline-comment.is-internal, .timeline-comment.unread-item {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .timeline-comment-header,
-  .timeline-comment.unread-item .timeline-comment-header {
-    border-bottom-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .timeline-comment-label,
-  .timeline-comment.unread-item .timeline-comment-label {
-    border-color: var(--color-auto-yellow-2, #542);
-  }
-  .timeline-comment.is-internal .previewable-comment-form .comment-form-head.tabnav,
-  .timeline-comment.unread-item .previewable-comment-form .comment-form-head.tabnav {
-    color: var(--color-auto-yellow-2, #542);
-    border-bottom-color: var(--color-auto-yellow-2, #542);
   }
   .timeline-comment .comment + .comment {
     border-top-color: var(--color-border-primary);
@@ -20578,6 +20525,11 @@
   .branch-action-item + .branch-action-item,
   .branch-action-item + .mergeability-details {
     border-top-color: var(--color-border-primary);
+  }
+  .branch-action-state-closed-dirty .branch-action-body::before,
+  .branch-action-state-dirty .branch-action-body::before,
+  .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-body::before {
+    border-right-color: var(--color-border-primary);
   }
   @media (min-width:768px) {
     .merge-branch-form .commit-form::before,
