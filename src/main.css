@@ -1169,12 +1169,28 @@
     z-index: 100 !important;
   }
   /* GeoJSON maps */
-  /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson */
+  /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson 
+     https://github.com/colemanm/hurricanes/blob/master/fl_2004_hurricanes.geojson */
   .leaflet-tile-container img {
     filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
   }
   .leaflet-marker-pane img:not(.leaflet-marker-icon), .gundamcat {
     filter: brightness(.8) !important;
+  }
+  .leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
+    background: var(--color-bg-secondary);
+  }
+  .leaflet-container {
+    color: var(--color-text-secondary);
+  }
+  .leaflet-popup-tip {
+    border-top-color: var(--color-bg-secondary);
+  }
+  .marker-properties tr:nth-child(2n) th, .marker-properties tr:nth-child(2n) td {
+	  background-color: var(--color-bg-tertiary);
+  }
+  .marker-properties, .marker-properties th, .marker-properties td {
+	  border: 1px solid var(--color-border-primary);
   }
   /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
