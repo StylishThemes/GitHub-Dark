@@ -4,7 +4,7 @@ const fastGlob = require("fast-glob");
 const fetch = require("fetch-enhanced")(require("node-fetch"));
 const {platform} = require("os");
 const {resolve} = require("path");
-const {writeFile, truncate} = require("fs/promises");
+const {writeFile, truncate} = require('fs').promises;
 
 // special version of writeFile that preserves metadata on WSL and Cygwin platforms
 module.exports.writeFile = async (file, content) => {
