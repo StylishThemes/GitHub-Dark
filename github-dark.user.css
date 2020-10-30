@@ -8015,7 +8015,7 @@
   .border-right.border-bottom.border-left, .news .issues_labeled .border,
   table.pricing-table, .two-factor-steps, .project-column,
   .branch-action-item.js-transitionable, .prose-diff, .listgroup,
-  .js-repository-image-container {
+  .repository-og-image:not([style*='background-image']) {
     background: #181818;
   }
   /* Expandable review boxes, rendered and loading */
@@ -8403,12 +8403,28 @@
     z-index: 100 !important;
   }
   /* GeoJSON maps */
-  /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson */
+  /* https://github.com/benbalter/dc-maps/blob/master/maps/embassies.geojson
+     https://github.com/colemanm/hurricanes/blob/master/fl_2004_hurricanes.geojson */
   .leaflet-tile-container img {
     filter: invert(100%) hue-rotate(180deg) brightness(150%) !important;
   }
-  .leaflet-marker-pane img, .gundamcat {
+  .leaflet-marker-pane img:not(.leaflet-marker-icon), .gundamcat {
     filter: brightness(.8) !important;
+  }
+  .leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
+    background: var(--color-bg-secondary);
+  }
+  .leaflet-container {
+    color: var(--color-text-secondary);
+  }
+  .leaflet-popup-tip {
+    border-top-color: var(--color-bg-secondary);
+  }
+  .marker-properties tr:nth-child(2n) th, .marker-properties tr:nth-child(2n) td {
+    background-color: var(--color-bg-tertiary);
+  }
+  .marker-properties, .marker-properties th, .marker-properties td {
+    border: 1px solid var(--color-border-primary);
   }
   /* invert #fff to #181818 */
   /* https://github.com/sujitpal/statlearning-notebooks/blob/master/src/chapter2.ipynb */
@@ -24815,11 +24831,15 @@
     background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAABoaGgAAACwAAAAACgAKAAACEYQdmYcaDNxjEspKndVZbc8UADs=") !important;
   }
   /* https://github.com/StylishThemes/GitHub-Dark/issues/1209 */
-  .render-shell img:not([src$=".svg" i]):not(.leaflet-tile) {
+  .render-shell img:not([src$=".svg" i]):not(.leaflet-tile):not(.leaflet-marker-icon) {
     width: 100% !important;
     height: 100% !important;
   }
-  .render-shell img:not(.leaflet-tile):hover, .render-shell canvas:hover {
+  img.leaflet-marker-icon, img.leaflet-marker-icon:hover {
+    background: none !important;
+  }
+  .render-shell img:not(.leaflet-tile):not(.leaflet-marker-icon):hover,
+  .render-shell canvas:hover {
     background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAAOXl5f///yH5BAAAAAAALAAAAAAKAAoAAAIRhB2ZhxoM3GMSykqd1VltzxQAOw==") !important;
   }
 }
