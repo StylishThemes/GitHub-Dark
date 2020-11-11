@@ -717,12 +717,21 @@
     --color-diffstat-deletion-border: #d82828;
     --color-diffstat-addition-bg: #484;
     --color-diffstat-addition-border: #484;
-    --color-icon-folder: /*[[base-color]]*/;
+    --color-files-explorer-icon: /*[[base-color]]*/;
     --color-hl-author-bg: #182030;
     --color-hl-author-border: #246;
     --color-logo-subdued: #343434;
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
+    --color-diff-addition-text: #6cc644;
+    --color-diff-addition-bg: #002800;
+    --color-diff-addition-border: #373;
+    --color-diff-deletion-text: #d82828;
+    --color-diff-deletion-bg: #300;
+    --color-diff-deletion-border: #d82828;
+    --color-diff-change-text: #cb4;
+    --color-diff-change-bg: #651;
+    --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
@@ -784,6 +793,8 @@
     --color-project-sidebar-bg: #181818;
     --color-project-gradient-in: #181818;
     --color-project-gradient-out: transparent;
+    --color-marketing-icon-primary: #4f8cc9;
+    --color-marketing-icon-secondary: /*[[base-color]]*/;
   }
   @media (prefers-color-scheme:light) {
     body[class="page-responsive"] [data-color-mode=auto] {
@@ -1213,12 +1224,21 @@
       --color-diffstat-deletion-border: #d82828;
       --color-diffstat-addition-bg: #484;
       --color-diffstat-addition-border: #484;
-      --color-icon-folder: /*[[base-color]]*/;
+      --color-files-explorer-icon: /*[[base-color]]*/;
       --color-hl-author-bg: #182030;
       --color-hl-author-border: #246;
       --color-logo-subdued: #343434;
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
+      --color-diff-addition-text: #6cc644;
+      --color-diff-addition-bg: #002800;
+      --color-diff-addition-border: #373;
+      --color-diff-deletion-text: #d82828;
+      --color-diff-deletion-bg: #300;
+      --color-diff-deletion-border: #d82828;
+      --color-diff-change-text: #cb4;
+      --color-diff-change-bg: #651;
+      --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
@@ -1280,6 +1300,8 @@
       --color-project-sidebar-bg: #181818;
       --color-project-gradient-in: #181818;
       --color-project-gradient-out: transparent;
+      --color-marketing-icon-primary: #4f8cc9;
+      --color-marketing-icon-secondary: /*[[base-color]]*/;
     }
   }
   body[class="page-responsive"] .rule, body[class="page-responsive"] hr {
@@ -2800,35 +2822,11 @@
     color: #767676;
     border-left-color: #343434;
   }
-  body[class="page-responsive"] .prose-diff .markdown-body > ins,
-  body[class="page-responsive"] .prose-diff .rich-diff-level-zero.added {
-    box-shadow: inset 4px 0 0 #373;
-  }
-  body[class="page-responsive"] .prose-diff .changed .added,
-  body[class="page-responsive"] .prose-diff .changed ins,
-  body[class="page-responsive"] .prose-diff .changed ins code,
-  body[class="page-responsive"] .prose-diff .changed ins pre {
-    background-color: #002800;
-    border-bottom-color: #373;
-  }
-  body[class="page-responsive"] .prose-diff > .markdown-body li ul.added {
-    background-color: #002800;
-  }
-  body[class="page-responsive"] .prose-diff > .markdown-body td.changed,
-  body[class="page-responsive"] .prose-diff > .markdown-body th.changed {
-    border-left-color: #343434;
-  }
-  body[class="page-responsive"] .prose-diff > .markdown-body li:not(.moved).added {
-    background-color: #002800;
-  }
   body[class="page-responsive"] .comment-reactions.has-reactions {
     border-top-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .reaction-summary-item {
     border-right-color: var(--color-border-primary);
-  }
-  body[class="page-responsive"] .render-container {
-    background-color: #343434;
   }
   body[class="page-responsive"] .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
     background: none;
@@ -3284,7 +3282,7 @@
     color: #9b9b9b;
   }
   body[class="page-responsive"] .thread-subscription-status {
-    border-color: #2c2c2c;
+    border-color: var(--color-border-primary);
   }
   @media (max-width:767px) {
     body[class="page-responsive"] .notifications-v2 .AvatarStack-body .avatar {
@@ -4313,12 +4311,21 @@
     --color-diffstat-deletion-border: #d82828;
     --color-diffstat-addition-bg: #484;
     --color-diffstat-addition-border: #484;
-    --color-icon-folder: /*[[base-color]]*/;
+    --color-files-explorer-icon: /*[[base-color]]*/;
     --color-hl-author-bg: #182030;
     --color-hl-author-border: #246;
     --color-logo-subdued: #343434;
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
+    --color-diff-addition-text: #6cc644;
+    --color-diff-addition-bg: #002800;
+    --color-diff-addition-border: #373;
+    --color-diff-deletion-text: #d82828;
+    --color-diff-deletion-bg: #300;
+    --color-diff-deletion-border: #d82828;
+    --color-diff-change-text: #cb4;
+    --color-diff-change-bg: #651;
+    --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
@@ -4380,6 +4387,8 @@
     --color-project-sidebar-bg: #181818;
     --color-project-gradient-in: #181818;
     --color-project-gradient-out: transparent;
+    --color-marketing-icon-primary: #4f8cc9;
+    --color-marketing-icon-secondary: /*[[base-color]]*/;
   }
   @media (prefers-color-scheme:light) {
     [data-color-mode=auto] {
@@ -4809,12 +4818,21 @@
       --color-diffstat-deletion-border: #d82828;
       --color-diffstat-addition-bg: #484;
       --color-diffstat-addition-border: #484;
-      --color-icon-folder: /*[[base-color]]*/;
+      --color-files-explorer-icon: /*[[base-color]]*/;
       --color-hl-author-bg: #182030;
       --color-hl-author-border: #246;
       --color-logo-subdued: #343434;
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
+      --color-diff-addition-text: #6cc644;
+      --color-diff-addition-bg: #002800;
+      --color-diff-addition-border: #373;
+      --color-diff-deletion-text: #d82828;
+      --color-diff-deletion-bg: #300;
+      --color-diff-deletion-border: #d82828;
+      --color-diff-change-text: #cb4;
+      --color-diff-change-bg: #651;
+      --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
@@ -4876,6 +4894,8 @@
       --color-project-sidebar-bg: #181818;
       --color-project-gradient-in: #181818;
       --color-project-gradient-out: transparent;
+      --color-marketing-icon-primary: #4f8cc9;
+      --color-marketing-icon-secondary: /*[[base-color]]*/;
     }
   }
   .rule, hr {
@@ -5418,32 +5438,11 @@
     color: #767676;
     border-left-color: #343434;
   }
-  .prose-diff .markdown-body > ins, .prose-diff .rich-diff-level-zero.added {
-    box-shadow: inset 4px 0 0 #373;
-  }
-  .prose-diff .changed .added, .prose-diff .changed ins,
-  .prose-diff .changed ins code, .prose-diff .changed ins pre {
-    background-color: #002800;
-    border-bottom-color: #373;
-  }
-  .prose-diff > .markdown-body li ul.added {
-    background-color: #002800;
-  }
-  .prose-diff > .markdown-body td.changed,
-  .prose-diff > .markdown-body th.changed {
-    border-left-color: #343434;
-  }
-  .prose-diff > .markdown-body li:not(.moved).added {
-    background-color: #002800;
-  }
   .comment-reactions.has-reactions {
     border-top-color: var(--color-border-primary);
   }
   .reaction-summary-item {
     border-right-color: var(--color-border-primary);
-  }
-  .render-container {
-    background-color: #343434;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
     background: none;
@@ -5893,7 +5892,7 @@
     color: #9b9b9b;
   }
   .thread-subscription-status {
-    border-color: #2c2c2c;
+    border-color: var(--color-border-primary);
   }
   @media (max-width:767px) {
     .notifications-v2 .AvatarStack-body .avatar {
@@ -18392,12 +18391,21 @@
     --color-diffstat-deletion-border: #d82828;
     --color-diffstat-addition-bg: #484;
     --color-diffstat-addition-border: #484;
-    --color-icon-folder: /*[[base-color]]*/;
+    --color-files-explorer-icon: /*[[base-color]]*/;
     --color-hl-author-bg: #182030;
     --color-hl-author-border: #246;
     --color-logo-subdued: #343434;
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
+    --color-diff-addition-text: #6cc644;
+    --color-diff-addition-bg: #002800;
+    --color-diff-addition-border: #373;
+    --color-diff-deletion-text: #d82828;
+    --color-diff-deletion-bg: #300;
+    --color-diff-deletion-border: #d82828;
+    --color-diff-change-text: #cb4;
+    --color-diff-change-bg: #651;
+    --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
@@ -18459,6 +18467,8 @@
     --color-project-sidebar-bg: #181818;
     --color-project-gradient-in: #181818;
     --color-project-gradient-out: transparent;
+    --color-marketing-icon-primary: #4f8cc9;
+    --color-marketing-icon-secondary: /*[[base-color]]*/;
   }
   @media (prefers-color-scheme:light) {
     [data-color-mode=auto] {
@@ -18888,12 +18898,21 @@
       --color-diffstat-deletion-border: #d82828;
       --color-diffstat-addition-bg: #484;
       --color-diffstat-addition-border: #484;
-      --color-icon-folder: /*[[base-color]]*/;
+      --color-files-explorer-icon: /*[[base-color]]*/;
       --color-hl-author-bg: #182030;
       --color-hl-author-border: #246;
       --color-logo-subdued: #343434;
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
+      --color-diff-addition-text: #6cc644;
+      --color-diff-addition-bg: #002800;
+      --color-diff-addition-border: #373;
+      --color-diff-deletion-text: #d82828;
+      --color-diff-deletion-bg: #300;
+      --color-diff-deletion-border: #d82828;
+      --color-diff-change-text: #cb4;
+      --color-diff-change-bg: #651;
+      --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
@@ -18955,6 +18974,8 @@
       --color-project-sidebar-bg: #181818;
       --color-project-gradient-in: #181818;
       --color-project-gradient-out: transparent;
+      --color-marketing-icon-primary: #4f8cc9;
+      --color-marketing-icon-secondary: /*[[base-color]]*/;
     }
   }
   .rule, hr {
@@ -20392,32 +20413,11 @@
     color: #767676;
     border-left-color: #343434;
   }
-  .prose-diff .markdown-body > ins, .prose-diff .rich-diff-level-zero.added {
-    box-shadow: inset 4px 0 0 #373;
-  }
-  .prose-diff .changed .added, .prose-diff .changed ins,
-  .prose-diff .changed ins code, .prose-diff .changed ins pre {
-    background-color: #002800;
-    border-bottom-color: #373;
-  }
-  .prose-diff > .markdown-body li ul.added {
-    background-color: #002800;
-  }
-  .prose-diff > .markdown-body td.changed,
-  .prose-diff > .markdown-body th.changed {
-    border-left-color: #343434;
-  }
-  .prose-diff > .markdown-body li:not(.moved).added {
-    background-color: #002800;
-  }
   .comment-reactions.has-reactions {
     border-top-color: var(--color-border-primary);
   }
   .reaction-summary-item {
     border-right-color: var(--color-border-primary);
-  }
-  .render-container {
-    background-color: #343434;
   }
   .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
     background: none;
@@ -20867,7 +20867,7 @@
     color: #9b9b9b;
   }
   .thread-subscription-status {
-    border-color: #2c2c2c;
+    border-color: var(--color-border-primary);
   }
   @media (max-width:767px) {
     .notifications-v2 .AvatarStack-body .avatar {
