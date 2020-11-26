@@ -726,6 +726,8 @@
     --color-verified-badge-bg: #181818;
     --color-verified-badge-border: #343434;
     --color-social-count-bg: #181818;
+    --color-tooltip-text: #181818;
+    --color-tooltip-bg: #c6c6c6;
     --color-header-search-bg: #c6c6c6;
     --color-header-search-border: #afafaf;
     --color-diffstat-neutral-bg: #343434;
@@ -741,6 +743,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
     --color-diff-addition-border: #373;
@@ -1297,6 +1300,8 @@
       --color-verified-badge-bg: #181818;
       --color-verified-badge-border: #343434;
       --color-social-count-bg: #181818;
+      --color-tooltip-text: #181818;
+      --color-tooltip-bg: #c6c6c6;
       --color-header-search-bg: #c6c6c6;
       --color-header-search-border: #afafaf;
       --color-diffstat-neutral-bg: #343434;
@@ -1312,6 +1317,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
       --color-diff-addition-border: #373;
@@ -2786,8 +2792,18 @@
   body[class="page-responsive"] .select-menu.label-select-menu .select-menu-item:active {
     background-color: initial !important;
   }
-  body[class="page-responsive"] .table-list {
+  body[class="page-responsive"] .table-list,
+  body[class="page-responsive"] .table-list-bordered {
     border-bottom-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] .table-list-bordered .table-list-cell:first-child {
+    border-left-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] .table-list-bordered .table-list-cell:last-child {
+    border-right-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] .table-list-cell {
+    border-top-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .table-list-header {
     border-color: var(--color-border-primary);
@@ -2804,13 +2820,7 @@
   }
   body[class="page-responsive"] .email-format .email-quoted-reply,
   body[class="page-responsive"] .email-format .email-signature-reply {
-    border-left-color: #343434;
-  }
-  body[class="page-responsive"] .email-format .email-hidden-toggle a {
-    background-color: #343434;
-  }
-  body[class="page-responsive"] .email-format .email-hidden-toggle a:hover {
-    background-color: #767676;
+    border-left-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .locked-conversation .preview-tab,
   body[class="page-responsive"] .locked-conversation .write-tab {
@@ -3180,6 +3190,9 @@
   body[class="page-responsive"] .dashboard-rollup-items > .dashboard-rollup-item {
     border-top-color: var(--color-border-primary);
   }
+  body[class="page-responsive"] .dashboard-notice {
+    border-color: var(--color-border-primary);
+  }
   body[class="page-responsive"] .dashboards-overview-cards .blankslate {
     box-shadow: none;
   }
@@ -3264,8 +3277,13 @@
   body[class="page-responsive"] .topic-input-container .tag-input .tag-input-inner {
     background-image: none;
   }
-  body[class="page-responsive"] .discussion-post .reply-comment:first-child,
   body[class="page-responsive"] .topic-list .topic-list-item + .topic-list-item {
+    border-top-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] .team-discussions .previewable-comment-form .toolbar-commenting.toolbar-commenting.toolbar-commenting {
+    background-color: transparent;
+  }
+  body[class="page-responsive"] .discussion-post .reply-comment:first-child {
     border-top-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .discussion-post .reaction-summary-item:not(.add-reaction-btn) {
@@ -3359,7 +3377,7 @@
   }
   body[class="page-responsive"] .merge-branch-manually {
     background-color: initial;
-    border-top-color: #343434;
+    border-top-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .news .alert {
     border-top-color: #242424;
@@ -3397,9 +3415,6 @@
   body[class="page-responsive"] .oauth-org-access-details .oauth-org-item:hover {
     background-color: #181818;
   }
-  body[class="page-responsive"] .oauth-border {
-    border-bottom-color: #343434;
-  }
   body[class="page-responsive"] .org-insights-graph-canvas .axis line {
     stroke: rgba(220, 220, 220, .1);
   }
@@ -3427,9 +3442,6 @@
   body[class="page-responsive"] .org-list .list-item {
     border-bottom-color: #2c2c2c;
   }
-  body[class="page-responsive"] .org-repos-mini .org-repo-name .octicon-lock {
-    color: rgba(204, 187, 68, .5);
-  }
   body[class="page-responsive"] .reinstate-org-member .reinstate-title {
     color: #c6c6c6;
   }
@@ -3451,12 +3463,6 @@
   }
   body[class="page-responsive"] .confirm-removal-list-item {
     border-top-color: #343434;
-  }
-  body[class="page-responsive"] .org-user-notice-content strong {
-    color: #c6c6c6;
-  }
-  body[class="page-responsive"] .org-user-notice-icon {
-    color: #5a5a5a;
   }
   body[class="page-responsive"] .manage-repo-access-group {
     border-color: #343434;
@@ -3659,9 +3665,6 @@
   }
   body[class="page-responsive"] .saved-reply-form .comment-body {
     background-color: initial;
-  }
-  body[class="page-responsive"] .access-token {
-    border-bottom-color: #343434;
   }
   body[class="page-responsive"] .access-token.new-token {
     background-color: #6cc64450;
@@ -3896,6 +3899,12 @@
   }
   body[class="page-responsive"] .hx_color-repo-private-icon {
     color: rgba(204, 187, 68, .5);
+  }
+  body[class="page-responsive"] .promo-color-modes {
+    border-color: var(--color-border-primary);
+  }
+  body[class="page-responsive"] [data-color-mode-unset=true] .promo-color-modes {
+    background-color: initial;
   }
   body[class="page-responsive"] .hx_breadcrumb-header .feature-preview-indicator,
   body[class="page-responsive"] .hx_breadcrumb-header .notification-indicator .mail-status {
@@ -4399,6 +4408,8 @@
     --color-verified-badge-bg: #181818;
     --color-verified-badge-border: #343434;
     --color-social-count-bg: #181818;
+    --color-tooltip-text: #181818;
+    --color-tooltip-bg: #c6c6c6;
     --color-header-search-bg: #c6c6c6;
     --color-header-search-border: #afafaf;
     --color-diffstat-neutral-bg: #343434;
@@ -4414,6 +4425,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
     --color-diff-addition-border: #373;
@@ -4970,6 +4982,8 @@
       --color-verified-badge-bg: #181818;
       --color-verified-badge-border: #343434;
       --color-social-count-bg: #181818;
+      --color-tooltip-text: #181818;
+      --color-tooltip-bg: #c6c6c6;
       --color-header-search-bg: #c6c6c6;
       --color-header-search-border: #afafaf;
       --color-diffstat-neutral-bg: #343434;
@@ -4985,6 +4999,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
       --color-diff-addition-border: #373;
@@ -5480,8 +5495,17 @@
   .select-menu.label-select-menu .select-menu-item:active {
     background-color: initial !important;
   }
-  .table-list {
+  .table-list, .table-list-bordered {
     border-bottom-color: var(--color-border-primary);
+  }
+  .table-list-bordered .table-list-cell:first-child {
+    border-left-color: var(--color-border-primary);
+  }
+  .table-list-bordered .table-list-cell:last-child {
+    border-right-color: var(--color-border-primary);
+  }
+  .table-list-cell {
+    border-top-color: var(--color-border-primary);
   }
   .Box--overlay, .table-list-header {
     border-color: var(--color-border-primary);
@@ -5496,13 +5520,7 @@
     background-color: initial;
   }
   .email-format .email-quoted-reply, .email-format .email-signature-reply {
-    border-left-color: #343434;
-  }
-  .email-format .email-hidden-toggle a {
-    background-color: #343434;
-  }
-  .email-format .email-hidden-toggle a:hover {
-    background-color: #767676;
+    border-left-color: var(--color-border-primary);
   }
   .locked-conversation .preview-tab, .locked-conversation .write-tab {
     color: #767676;
@@ -5865,6 +5883,9 @@
   .dashboard-rollup-items > .dashboard-rollup-item {
     border-top-color: var(--color-border-primary);
   }
+  .dashboard-notice {
+    border-color: var(--color-border-primary);
+  }
   .dashboards-overview-cards .blankslate {
     box-shadow: none;
   }
@@ -5947,8 +5968,13 @@
   .topic-input-container .tag-input .tag-input-inner {
     background-image: none;
   }
-  .discussion-post .reply-comment:first-child,
   .topic-list .topic-list-item + .topic-list-item {
+    border-top-color: var(--color-border-primary);
+  }
+  .team-discussions .previewable-comment-form .toolbar-commenting.toolbar-commenting.toolbar-commenting {
+    background-color: transparent;
+  }
+  .discussion-post .reply-comment:first-child {
     border-top-color: var(--color-border-primary);
   }
   .discussion-post .reaction-summary-item:not(.add-reaction-btn) {
@@ -6042,7 +6068,7 @@
   }
   .merge-branch-manually {
     background-color: initial;
-    border-top-color: #343434;
+    border-top-color: var(--color-border-primary);
   }
   .news .alert {
     border-top-color: #242424;
@@ -6080,9 +6106,6 @@
   .oauth-org-access-details .oauth-org-item:hover {
     background-color: #181818;
   }
-  .oauth-border {
-    border-bottom-color: #343434;
-  }
   .org-insights-graph-canvas .axis line {
     stroke: rgba(220, 220, 220, .1);
   }
@@ -6110,9 +6133,6 @@
   .org-list .list-item {
     border-bottom-color: #2c2c2c;
   }
-  .org-repos-mini .org-repo-name .octicon-lock {
-    color: rgba(204, 187, 68, .5);
-  }
   .reinstate-org-member .reinstate-title {
     color: #c6c6c6;
   }
@@ -6133,12 +6153,6 @@
   }
   .confirm-removal-list-item {
     border-top-color: #343434;
-  }
-  .org-user-notice-content strong {
-    color: #c6c6c6;
-  }
-  .org-user-notice-icon {
-    color: #5a5a5a;
   }
   .manage-repo-access-group {
     border-color: #343434;
@@ -6337,9 +6351,6 @@
   }
   .saved-reply-form .comment-body {
     background-color: initial;
-  }
-  .access-token {
-    border-bottom-color: #343434;
   }
   .access-token.new-token {
     background-color: #6cc64450;
@@ -6566,6 +6577,12 @@
   }
   .hx_color-repo-private-icon {
     color: rgba(204, 187, 68, .5);
+  }
+  .promo-color-modes {
+    border-color: var(--color-border-primary);
+  }
+  [data-color-mode-unset=true] .promo-color-modes {
+    background-color: initial;
   }
   .hx_breadcrumb-header .feature-preview-indicator,
   .hx_breadcrumb-header .notification-indicator .mail-status {
@@ -18733,6 +18750,8 @@
     --color-verified-badge-bg: #181818;
     --color-verified-badge-border: #343434;
     --color-social-count-bg: #181818;
+    --color-tooltip-text: #181818;
+    --color-tooltip-bg: #c6c6c6;
     --color-header-search-bg: #c6c6c6;
     --color-header-search-border: #afafaf;
     --color-diffstat-neutral-bg: #343434;
@@ -18748,6 +18767,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
     --color-diff-addition-border: #373;
@@ -19304,6 +19324,8 @@
       --color-verified-badge-bg: #181818;
       --color-verified-badge-border: #343434;
       --color-social-count-bg: #181818;
+      --color-tooltip-text: #181818;
+      --color-tooltip-bg: #c6c6c6;
       --color-header-search-bg: #c6c6c6;
       --color-header-search-border: #afafaf;
       --color-diffstat-neutral-bg: #343434;
@@ -19319,6 +19341,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
       --color-diff-addition-border: #373;
@@ -20714,8 +20737,17 @@
   .select-menu.label-select-menu .select-menu-item:active {
     background-color: initial !important;
   }
-  .table-list {
+  .table-list, .table-list-bordered {
     border-bottom-color: var(--color-border-primary);
+  }
+  .table-list-bordered .table-list-cell:first-child {
+    border-left-color: var(--color-border-primary);
+  }
+  .table-list-bordered .table-list-cell:last-child {
+    border-right-color: var(--color-border-primary);
+  }
+  .table-list-cell {
+    border-top-color: var(--color-border-primary);
   }
   .Box--overlay, .table-list-header {
     border-color: var(--color-border-primary);
@@ -20730,13 +20762,7 @@
     background-color: initial;
   }
   .email-format .email-quoted-reply, .email-format .email-signature-reply {
-    border-left-color: #343434;
-  }
-  .email-format .email-hidden-toggle a {
-    background-color: #343434;
-  }
-  .email-format .email-hidden-toggle a:hover {
-    background-color: #767676;
+    border-left-color: var(--color-border-primary);
   }
   .locked-conversation .preview-tab, .locked-conversation .write-tab {
     color: #767676;
@@ -21099,6 +21125,9 @@
   .dashboard-rollup-items > .dashboard-rollup-item {
     border-top-color: var(--color-border-primary);
   }
+  .dashboard-notice {
+    border-color: var(--color-border-primary);
+  }
   .dashboards-overview-cards .blankslate {
     box-shadow: none;
   }
@@ -21181,8 +21210,13 @@
   .topic-input-container .tag-input .tag-input-inner {
     background-image: none;
   }
-  .discussion-post .reply-comment:first-child,
   .topic-list .topic-list-item + .topic-list-item {
+    border-top-color: var(--color-border-primary);
+  }
+  .team-discussions .previewable-comment-form .toolbar-commenting.toolbar-commenting.toolbar-commenting {
+    background-color: transparent;
+  }
+  .discussion-post .reply-comment:first-child {
     border-top-color: var(--color-border-primary);
   }
   .discussion-post .reaction-summary-item:not(.add-reaction-btn) {
@@ -21276,7 +21310,7 @@
   }
   .merge-branch-manually {
     background-color: initial;
-    border-top-color: #343434;
+    border-top-color: var(--color-border-primary);
   }
   .news .alert {
     border-top-color: #242424;
@@ -21314,9 +21348,6 @@
   .oauth-org-access-details .oauth-org-item:hover {
     background-color: #181818;
   }
-  .oauth-border {
-    border-bottom-color: #343434;
-  }
   .org-insights-graph-canvas .axis line {
     stroke: rgba(220, 220, 220, .1);
   }
@@ -21344,9 +21375,6 @@
   .org-list .list-item {
     border-bottom-color: #2c2c2c;
   }
-  .org-repos-mini .org-repo-name .octicon-lock {
-    color: rgba(204, 187, 68, .5);
-  }
   .reinstate-org-member .reinstate-title {
     color: #c6c6c6;
   }
@@ -21367,12 +21395,6 @@
   }
   .confirm-removal-list-item {
     border-top-color: #343434;
-  }
-  .org-user-notice-content strong {
-    color: #c6c6c6;
-  }
-  .org-user-notice-icon {
-    color: #5a5a5a;
   }
   .manage-repo-access-group {
     border-color: #343434;
@@ -21571,9 +21593,6 @@
   }
   .saved-reply-form .comment-body {
     background-color: initial;
-  }
-  .access-token {
-    border-bottom-color: #343434;
   }
   .access-token.new-token {
     background-color: #6cc64450;
@@ -21800,6 +21819,12 @@
   }
   .hx_color-repo-private-icon {
     color: rgba(204, 187, 68, .5);
+  }
+  .promo-color-modes {
+    border-color: var(--color-border-primary);
+  }
+  [data-color-mode-unset=true] .promo-color-modes {
+    background-color: initial;
   }
   .hx_breadcrumb-header .feature-preview-indicator,
   .hx_breadcrumb-header .notification-indicator .mail-status {
