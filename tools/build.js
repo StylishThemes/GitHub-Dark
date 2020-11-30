@@ -12,10 +12,12 @@ const {version} = require("../package.json");
 const {writeFile, exit, glob} = require("./utils");
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
-  if (a.endsWith("vars.css")) return -1;
-  if (b.endsWith("vars.css")) return 1;
+  // main first
   if (a.endsWith("main.css")) return -1;
   if (b.endsWith("main.css")) return 1;
+  // vars last
+  if (a.endsWith("vars.css")) return 1;
+  if (b.endsWith("vars.css")) return -1;
 }).filter(file => basename(file) !== "template.css");
 
 const minify = async css => (await cssnano.process(css, {from: undefined})).css;
