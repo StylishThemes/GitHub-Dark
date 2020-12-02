@@ -435,6 +435,12 @@
     --color-state-selected-primary-icon: #181818;
     --color-state-focus-border: /*[[base-color]]*/;
     --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+    --color-fade-fg-10: rgba(220, 220, 220, .1);
+    --color-fade-fg-15: rgba(220, 220, 220, .15);
+    --color-fade-fg-30: rgba(220, 220, 220, .4);
+    --color-fade-fg-50: rgba(220, 220, 220, .5);
+    --color-fade-fg-70: rgba(220, 220, 220, .7);
+    --color-fade-fg-85: rgba(220, 220, 220, .85);
     --color-fade-black-10: rgba(220, 220, 220, .1);
     --color-fade-black-15: rgba(220, 220, 220, .15);
     --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -551,6 +557,7 @@
     --color-input-tooltip-error-text: #f84848;
     --color-input-tooltip-error-bg: #300;
     --color-input-tooltip-error-border: #d82828;
+    --color-avatar-bg: #181818;
     --color-avatar-stack-fade: #343434;
     --color-avatar-stack-fade-more: #343434;
     --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -647,6 +654,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-code-selection-bg: #246;
     --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
@@ -659,7 +667,11 @@
     --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+    --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
+    --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-deletion-num-bg: #300;
     --color-diff-blob-deletion-line-bg: #300;
     --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -757,6 +769,7 @@
     --color-codemirror-guttermarker-subtle-text: #343434;
     --color-codemirror-linenumber-text: #767676;
     --color-codemirror-cursor: #c6c6c6;
+    --color-codemirror-selection-bg: #246;
     --color-codemirror-activeline-bg: #181818;
     --color-codemirror-matchingbracket-text: #c6c6c6;
     --color-codemirror-lines-bg: #181818;
@@ -1009,6 +1022,12 @@
       --color-state-selected-primary-icon: #181818;
       --color-state-focus-border: /*[[base-color]]*/;
       --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+      --color-fade-fg-10: rgba(220, 220, 220, .1);
+      --color-fade-fg-15: rgba(220, 220, 220, .15);
+      --color-fade-fg-30: rgba(220, 220, 220, .4);
+      --color-fade-fg-50: rgba(220, 220, 220, .5);
+      --color-fade-fg-70: rgba(220, 220, 220, .7);
+      --color-fade-fg-85: rgba(220, 220, 220, .85);
       --color-fade-black-10: rgba(220, 220, 220, .1);
       --color-fade-black-15: rgba(220, 220, 220, .15);
       --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -1125,6 +1144,7 @@
       --color-input-tooltip-error-text: #f84848;
       --color-input-tooltip-error-bg: #300;
       --color-input-tooltip-error-border: #d82828;
+      --color-avatar-bg: #181818;
       --color-avatar-stack-fade: #343434;
       --color-avatar-stack-fade-more: #343434;
       --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -1221,6 +1241,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-code-selection-bg: #246;
       --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
@@ -1233,7 +1254,11 @@
       --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+      --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
+      --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-deletion-num-bg: #300;
       --color-diff-blob-deletion-line-bg: #300;
       --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -1331,6 +1356,7 @@
       --color-codemirror-guttermarker-subtle-text: #343434;
       --color-codemirror-linenumber-text: #767676;
       --color-codemirror-cursor: #c6c6c6;
+      --color-codemirror-selection-bg: #246;
       --color-codemirror-activeline-bg: #181818;
       --color-codemirror-matchingbracket-text: #c6c6c6;
       --color-codemirror-lines-bg: #181818;
@@ -2980,7 +3006,7 @@
     color: #9b9b9b;
   }
   body[class="page-responsive"] .blob-interaction-bar {
-    border-bottom-color: #343434;
+    border-bottom-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .commit-form::after {
     border-right-color: var(--color-bg-primary, var(--ghd-bg-color));
@@ -3449,9 +3475,6 @@
       box-shadow: none;
     }
   }
-  body[class="page-responsive"] .project-header {
-    background-color: #242424;
-  }
   body[class="page-responsive"] .pending-cards-status {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
@@ -3514,7 +3537,7 @@
     }
   }
   body[class="page-responsive"] .repo-file-upload-target.dragover .repo-file-upload-outline {
-    border-color: #343434;
+    border-color: var(--color-border-primary);
   }
   body[class="page-responsive"] .is-bad-file .repo-file-upload-errors,
   body[class="page-responsive"] .is-empty .repo-file-upload-errors,
@@ -3673,11 +3696,8 @@
   body[class="page-responsive"] .user-identification-questions.redesign .topic-input-container .tag-input {
     border-bottom-color: #f0f0f0;
   }
-  body[class="page-responsive"] .shelf {
-    border-bottom-color: #242424;
-  }
   body[class="page-responsive"] .intro-shelf {
-    background-image: linear-gradient(180deg, transparent 60%, #181818), linear-gradient(70deg, var(--color-auto-blue-1) 32%, #ebfff0);
+    background-image: linear-gradient(180deg, transparent 60%, var(--color-bg-primary)), linear-gradient(70deg, var(--color-bg-info) 32%, var(--color-bg-success));
   }
   body[class="page-responsive"] .orgs-help-item-octicon {
     border-color: var(--color-border-primary);
@@ -4115,6 +4135,12 @@
     --color-state-selected-primary-icon: #181818;
     --color-state-focus-border: /*[[base-color]]*/;
     --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+    --color-fade-fg-10: rgba(220, 220, 220, .1);
+    --color-fade-fg-15: rgba(220, 220, 220, .15);
+    --color-fade-fg-30: rgba(220, 220, 220, .4);
+    --color-fade-fg-50: rgba(220, 220, 220, .5);
+    --color-fade-fg-70: rgba(220, 220, 220, .7);
+    --color-fade-fg-85: rgba(220, 220, 220, .85);
     --color-fade-black-10: rgba(220, 220, 220, .1);
     --color-fade-black-15: rgba(220, 220, 220, .15);
     --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -4231,6 +4257,7 @@
     --color-input-tooltip-error-text: #f84848;
     --color-input-tooltip-error-bg: #300;
     --color-input-tooltip-error-border: #d82828;
+    --color-avatar-bg: #181818;
     --color-avatar-stack-fade: #343434;
     --color-avatar-stack-fade-more: #343434;
     --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -4327,6 +4354,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-code-selection-bg: #246;
     --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
@@ -4339,7 +4367,11 @@
     --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+    --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
+    --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-deletion-num-bg: #300;
     --color-diff-blob-deletion-line-bg: #300;
     --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -4437,6 +4469,7 @@
     --color-codemirror-guttermarker-subtle-text: #343434;
     --color-codemirror-linenumber-text: #767676;
     --color-codemirror-cursor: #c6c6c6;
+    --color-codemirror-selection-bg: #246;
     --color-codemirror-activeline-bg: #181818;
     --color-codemirror-matchingbracket-text: #c6c6c6;
     --color-codemirror-lines-bg: #181818;
@@ -4689,6 +4722,12 @@
       --color-state-selected-primary-icon: #181818;
       --color-state-focus-border: /*[[base-color]]*/;
       --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+      --color-fade-fg-10: rgba(220, 220, 220, .1);
+      --color-fade-fg-15: rgba(220, 220, 220, .15);
+      --color-fade-fg-30: rgba(220, 220, 220, .4);
+      --color-fade-fg-50: rgba(220, 220, 220, .5);
+      --color-fade-fg-70: rgba(220, 220, 220, .7);
+      --color-fade-fg-85: rgba(220, 220, 220, .85);
       --color-fade-black-10: rgba(220, 220, 220, .1);
       --color-fade-black-15: rgba(220, 220, 220, .15);
       --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -4805,6 +4844,7 @@
       --color-input-tooltip-error-text: #f84848;
       --color-input-tooltip-error-bg: #300;
       --color-input-tooltip-error-border: #d82828;
+      --color-avatar-bg: #181818;
       --color-avatar-stack-fade: #343434;
       --color-avatar-stack-fade-more: #343434;
       --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -4901,6 +4941,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-code-selection-bg: #246;
       --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
@@ -4913,7 +4954,11 @@
       --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+      --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
+      --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-deletion-num-bg: #300;
       --color-diff-blob-deletion-line-bg: #300;
       --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -5011,6 +5056,7 @@
       --color-codemirror-guttermarker-subtle-text: #343434;
       --color-codemirror-linenumber-text: #767676;
       --color-codemirror-cursor: #c6c6c6;
+      --color-codemirror-selection-bg: #246;
       --color-codemirror-activeline-bg: #181818;
       --color-codemirror-matchingbracket-text: #c6c6c6;
       --color-codemirror-lines-bg: #181818;
@@ -5669,7 +5715,7 @@
     color: #9b9b9b;
   }
   .blob-interaction-bar {
-    border-bottom-color: #343434;
+    border-bottom-color: var(--color-border-primary);
   }
   .commit-form::after {
     border-right-color: var(--color-bg-primary, var(--ghd-bg-color));
@@ -6132,9 +6178,6 @@
       box-shadow: none;
     }
   }
-  .project-header {
-    background-color: #242424;
-  }
   .pending-cards-status {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
@@ -6197,7 +6240,7 @@
     }
   }
   .repo-file-upload-target.dragover .repo-file-upload-outline {
-    border-color: #343434;
+    border-color: var(--color-border-primary);
   }
   .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .is-failed .repo-file-upload-errors,
@@ -6352,11 +6395,8 @@
   .user-identification-questions.redesign .topic-input-container .tag-input {
     border-bottom-color: #f0f0f0;
   }
-  .shelf {
-    border-bottom-color: #242424;
-  }
   .intro-shelf {
-    background-image: linear-gradient(180deg, transparent 60%, #181818), linear-gradient(70deg, var(--color-auto-blue-1) 32%, #ebfff0);
+    background-image: linear-gradient(180deg, transparent 60%, var(--color-bg-primary)), linear-gradient(70deg, var(--color-bg-info) 32%, var(--color-bg-success));
   }
   .orgs-help-item-octicon {
     border-color: var(--color-border-primary);
@@ -18481,6 +18521,12 @@
     --color-state-selected-primary-icon: #181818;
     --color-state-focus-border: /*[[base-color]]*/;
     --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+    --color-fade-fg-10: rgba(220, 220, 220, .1);
+    --color-fade-fg-15: rgba(220, 220, 220, .15);
+    --color-fade-fg-30: rgba(220, 220, 220, .4);
+    --color-fade-fg-50: rgba(220, 220, 220, .5);
+    --color-fade-fg-70: rgba(220, 220, 220, .7);
+    --color-fade-fg-85: rgba(220, 220, 220, .85);
     --color-fade-black-10: rgba(220, 220, 220, .1);
     --color-fade-black-15: rgba(220, 220, 220, .15);
     --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -18597,6 +18643,7 @@
     --color-input-tooltip-error-text: #f84848;
     --color-input-tooltip-error-bg: #300;
     --color-input-tooltip-error-border: #d82828;
+    --color-avatar-bg: #181818;
     --color-avatar-stack-fade: #343434;
     --color-avatar-stack-fade-more: #343434;
     --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -18693,6 +18740,7 @@
     --color-discussion-border: #040;
     --color-discussion-bg-success: #484;
     --color-repo-language-color-border: rgba(220, 220, 220, .1);
+    --color-code-selection-bg: #246;
     --color-blob-line-highlight-bg: #261d08;
     --color-diff-addition-text: #6cc644;
     --color-diff-addition-bg: #002800;
@@ -18705,7 +18753,11 @@
     --color-diff-change-border: #cb4;
     --color-diff-blob-num-text: rgba(220, 220, 220, .4);
     --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+    --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-addition-line-bg: #002800;
+    --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+    --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
     --color-diff-blob-deletion-num-bg: #300;
     --color-diff-blob-deletion-line-bg: #300;
     --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -18803,6 +18855,7 @@
     --color-codemirror-guttermarker-subtle-text: #343434;
     --color-codemirror-linenumber-text: #767676;
     --color-codemirror-cursor: #c6c6c6;
+    --color-codemirror-selection-bg: #246;
     --color-codemirror-activeline-bg: #181818;
     --color-codemirror-matchingbracket-text: #c6c6c6;
     --color-codemirror-lines-bg: #181818;
@@ -19055,6 +19108,12 @@
       --color-state-selected-primary-icon: #181818;
       --color-state-focus-border: /*[[base-color]]*/;
       --color-state-focus-shadow: 0 0 0 3px rgba(/*[[base-color-rgb]]*/, .3);
+      --color-fade-fg-10: rgba(220, 220, 220, .1);
+      --color-fade-fg-15: rgba(220, 220, 220, .15);
+      --color-fade-fg-30: rgba(220, 220, 220, .4);
+      --color-fade-fg-50: rgba(220, 220, 220, .5);
+      --color-fade-fg-70: rgba(220, 220, 220, .7);
+      --color-fade-fg-85: rgba(220, 220, 220, .85);
       --color-fade-black-10: rgba(220, 220, 220, .1);
       --color-fade-black-15: rgba(220, 220, 220, .15);
       --color-fade-black-30: rgba(220, 220, 220, .4);
@@ -19171,6 +19230,7 @@
       --color-input-tooltip-error-text: #f84848;
       --color-input-tooltip-error-bg: #300;
       --color-input-tooltip-error-border: #d82828;
+      --color-avatar-bg: #181818;
       --color-avatar-stack-fade: #343434;
       --color-avatar-stack-fade-more: #343434;
       --color-avatar-child-shadow: -2px -2px 0 hsla(0, 0%, 0%, .8);
@@ -19267,6 +19327,7 @@
       --color-discussion-border: #040;
       --color-discussion-bg-success: #484;
       --color-repo-language-color-border: rgba(220, 220, 220, .1);
+      --color-code-selection-bg: #246;
       --color-blob-line-highlight-bg: #261d08;
       --color-diff-addition-text: #6cc644;
       --color-diff-addition-bg: #002800;
@@ -19279,7 +19340,11 @@
       --color-diff-change-border: #cb4;
       --color-diff-blob-num-text: rgba(220, 220, 220, .4);
       --color-diff-blob-num-hover-text: rgba(220, 220, 220, .6);
+      --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-addition-line-bg: #002800;
+      --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
       --color-diff-blob-deletion-num-bg: #300;
       --color-diff-blob-deletion-line-bg: #300;
       --color-diff-blob-hunk-text: rgba(220, 220, 220, .7);
@@ -19377,6 +19442,7 @@
       --color-codemirror-guttermarker-subtle-text: #343434;
       --color-codemirror-linenumber-text: #767676;
       --color-codemirror-cursor: #c6c6c6;
+      --color-codemirror-selection-bg: #246;
       --color-codemirror-activeline-bg: #181818;
       --color-codemirror-matchingbracket-text: #c6c6c6;
       --color-codemirror-lines-bg: #181818;
@@ -20939,7 +21005,7 @@
     color: #9b9b9b;
   }
   .blob-interaction-bar {
-    border-bottom-color: #343434;
+    border-bottom-color: var(--color-border-primary);
   }
   .commit-form::after {
     border-right-color: var(--color-bg-primary, var(--ghd-bg-color));
@@ -21402,9 +21468,6 @@
       box-shadow: none;
     }
   }
-  .project-header {
-    background-color: #242424;
-  }
   .pending-cards-status {
     background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
@@ -21467,7 +21530,7 @@
     }
   }
   .repo-file-upload-target.dragover .repo-file-upload-outline {
-    border-color: #343434;
+    border-color: var(--color-border-primary);
   }
   .is-bad-file .repo-file-upload-errors, .is-empty .repo-file-upload-errors,
   .is-failed .repo-file-upload-errors,
@@ -21622,11 +21685,8 @@
   .user-identification-questions.redesign .topic-input-container .tag-input {
     border-bottom-color: #f0f0f0;
   }
-  .shelf {
-    border-bottom-color: #242424;
-  }
   .intro-shelf {
-    background-image: linear-gradient(180deg, transparent 60%, #181818), linear-gradient(70deg, var(--color-auto-blue-1) 32%, #ebfff0);
+    background-image: linear-gradient(180deg, transparent 60%, var(--color-bg-primary)), linear-gradient(70deg, var(--color-bg-info) 32%, var(--color-bg-success));
   }
   .orgs-help-item-octicon {
     border-color: var(--color-border-primary);
