@@ -6850,6 +6850,15 @@
   .issue-card-label[style*=" color: #0"] {
     color: #181818 !important;
   }
+  /* Fix GitHub's weird dark mode labels by reverting them to light mode values */
+  [data-color-mode="dark"] .hx_IssueLabel {
+    --lightness-threshold: .453;
+    --border-threshold: .96;
+    --border-alpha: clamp(0, calc((var(--perceived-lightness) - var(--border-threshold)) * 100), 1);
+    background: rgb(var(--label-r), var(--label-g), var(--label-b));
+    color: hsl(0, 0%, calc(var(--lightness-switch) * 100%));
+    border-color: hsla(var(--label-h), calc(var(--label-s) * 1%), calc((var(--label-l) - 25) * 1%), var(--border-alpha));
+  }
   /* Tooltip on contribution calendar */
   .svg-tip {
     color: #949494;
