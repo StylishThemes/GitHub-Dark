@@ -146,7 +146,7 @@ module.exports = async () => ({
   "$value: #2a65a0": "/*[[base-color]]*/",
   "$value: #3072b3": "/*[[base-color]]*/",
   "$value: #327fc7": "/*[[base-color]]*/",
-  "$value: #6cb5fe": "/*[[base-color]]*/",  // octotreeS
+  "$value: #6cb5fe": "/*[[base-color]]*/",  // octotree
   "$value: #3b5998": "/*[[base-color]]*/",
   "$value: #4183c4": "/*[[base-color]]*/",
   "$value: #04a9ff": "/*[[base-color]]*/", // octotree
