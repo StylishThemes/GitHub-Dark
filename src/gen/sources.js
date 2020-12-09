@@ -139,6 +139,5 @@ module.exports = async (Cookie) => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
-
   ];
 };
