@@ -33,7 +33,7 @@ module.exports = async (Cookie) => {
       name: "docs.github.com",
       url: "https://docs.github.com/",
       file: resolve(__dirname, "../src/docs.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+      fetchOpts: {headers: {"User-Agent": desktopUserAgent}, compress: false},
       strict: true,
     },
     {
@@ -130,5 +130,15 @@ module.exports = async (Cookie) => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
+    {
+      name: "octotree",
+      crx: "bkhaagjahfmjljalopjnoealnfndnagc",
+      contentScriptsOnly: true,
+      prefix: `html`,
+      match: ["html"],
+      file: resolve(__dirname, "../src/extensions.css"),
+      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+    },
+
   ];
 };

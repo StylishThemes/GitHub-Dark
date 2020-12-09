@@ -94,6 +94,7 @@ module.exports = async () => ({
   "$value: #dddddd": "#343434",
   "$value: #dfe2e5": "#343434",
   "$value: #e0e0e0": "#343434", // graphql explorer
+  "$value: #e0e4e7": "#343434", // octotree
   "$value: #e1e4e8": "#343434",
   "$value: #e5e5e5": "#343434",
   "$value: #e6ebf1": "#343434",
@@ -108,6 +109,7 @@ module.exports = async () => ({
   "$value: #eff3f6": "#242424",
   "$value: #f0f3f6": "#242424",
   "$value: #f0f5fa": "#202020",
+  "$value: #f2f5f7": "#202020", // octotree
   "$value: #f3f4f6": "#242424",
   "$value: #f4f4f4": "#242424",
   "$value: #f4f5f5": "#242424", // zenhub
@@ -127,6 +129,9 @@ module.exports = async () => ({
   "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
   "$value: rgba(3,102,214,.3)": "rgba(/*[[base-color-rgb]]*/, .3)",
   "$value: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
+  "$value: #0f2e47": "/*[[base-color]]*/", // octotree
+  "$value: #234766": "/*[[base-color]]*/", // gist logged out banner
+  "$value: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
   "$value: #0058a2": "/*[[base-color]]*/",
   "$value: #005b9e": "/*[[base-color]]*/",
   "$value: #005cc2": "/*[[base-color]]*/",
@@ -135,16 +140,16 @@ module.exports = async () => ({
   "$value: #0361cc": "/*[[base-color]]*/",
   "$value: #0366d6": "/*[[base-color]]*/", // gitako
   "$value: #0366d6d0": "/*[[base-color]]*/", // gitako
-  "$value: #044289": "rgba(/*[[base-color-rgb]]*/, .5)", // help sidebar
   "$value: #0679fc": "/*[[base-color]]*/",
   "$value: #1074e7": "/*[[base-color]]*/",
   "$value: #1f61a0": "/*[[base-color]]*/",
   "$value: #2a65a0": "/*[[base-color]]*/",
-  "$value: #234766": "/*[[base-color]]*/", // gist logged out banner
   "$value: #3072b3": "/*[[base-color]]*/",
   "$value: #327fc7": "/*[[base-color]]*/",
+  "$value: #6cb5fe": "/*[[base-color]]*/",  // octotreeS
   "$value: #3b5998": "/*[[base-color]]*/",
   "$value: #4183c4": "/*[[base-color]]*/",
+  "$value: #04a9ff": "/*[[base-color]]*/", // octotree
   "$value: #4a9eff": "/*[[base-color]]*/",
   "$value: #54a3ff": "/*[[base-color]]*/", // notification icon
   "$value: #599bcd": "/*[[base-color]]*/",
