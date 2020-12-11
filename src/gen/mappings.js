@@ -220,10 +220,10 @@ module.exports = async () => ({
   "$value: #dca874": "#cb4",
   "$value: #f9c513": "#cb4",
   "$value: #ffd33d": "#cb4",
-  "$value: #ffdf5d": "#542",
-  "$value: #ffea7f": "#542",
-  "$value: #e5d999": "#542",
-  "$value: #d9d0a5": "#542",
+  "$value: #ffdf5d": "#cb4",
+  "$value: #ffea7f": "#cb4",
+  "$value: #e5d999": "#cb4",
+  "$value: #d9d0a5": "#cb4",
   "$value: #ffe3c8": "#261d08",
   "$value: #faebcc": "#261d08", // zenhub
   "$value: #fcf9e4": "#261d08", // zenhub blocked banner
