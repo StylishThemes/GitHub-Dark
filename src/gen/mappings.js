@@ -141,7 +141,6 @@ module.exports = async () => ({
   "$value: #0366d6": "/*[[base-color]]*/", // gitako
   "$value: #0366d6d0": "/*[[base-color]]*/", // gitako
   "$value: #0679fc": "/*[[base-color]]*/",
-  "$value: #388bfd": "/*[[base-color]]*/", // notification preview
   "$value: #1074e7": "/*[[base-color]]*/",
   "$value: #1f61a0": "/*[[base-color]]*/",
   "$value: #2a65a0": "/*[[base-color]]*/",
