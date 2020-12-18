@@ -40,6 +40,7 @@
 
 1. Install [Stylus for Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea for Safari](https://cascadea.app/).
 2. [Click here to install the](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css) github-dark.user.css.
+3. Set GitHub itself to [dark mode](https://github.com/settings/appearance).
 
 ## Additional Userstyles
 
