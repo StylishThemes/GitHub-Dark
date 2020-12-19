@@ -12665,22 +12665,11 @@
 @-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!(sponsors)).)*$"), domain("gist.github.com") {
   /* begin refined-github rules */
   html.refined-github {
-    --github-green: #484;
-    --github-red: #d82828;
-    --github-gray-background: #181818;
-    --github-gray-text: #9b9b9b;
-    --github-faint-yellow: #261d08;
-    --github-border-color: #343434;
+    --github-green: var(--color-text-success, #484);
+    --github-red: var(--color-text-danger, #d82828);
+    --github-border-color: var(--color-border-primary, #343434);
   }
-  html.refined-github .markdown-body del {
-    color: #9b9b9b;
-  }
-  html.refined-github .dashboard .js-all-activity-header + div {
-    background-color: var(--color-bg-canvas, #181818);
-  }
-  html.refined-github .dashboard .js-all-activity-header + div .Box {
-    background: none;
-  }
+  html.refined-github .markdown-body del,
   html.refined-github body > .footer li .btn-link,
   html.refined-github body > .footer li a {
     color: #9b9b9b;
@@ -12689,8 +12678,14 @@
     background-color: transparent !important;
   }
   html.refined-github .js-issue-row [aria-label="Open draft pull request"] svg {
-    stroke: #afafaf;
-    color: #fff !important;
+    stroke: var(--color-text-secondary, #afafaf);
+    color: var(--color-bg-canvas, #181818) !important;
+  }
+  html.refined-github .rgh-clean-dashboard .dashboard .js-all-activity-header + div {
+    background-color: var(--color-bg-canvas, #181818);
+  }
+  html.refined-github .rgh-clean-dashboard .dashboard .js-all-activity-header + div .Box {
+    background: none;
   }
   html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
@@ -12700,13 +12695,9 @@
   html.refined-github .rgh-useless-comments-note {
     color: #afafaf;
   }
-  html.refined-github button.reaction-summary-item {
-    border-top-color: var(--color-border-primary, #343434);
-    border-bottom-color: var(--color-border-primary, #343434);
-  }
   html.refined-github .reaction-summary-item a {
-    background-color: #202020;
-    box-shadow: 0 0 0 2px var(--background, var(--ghd-bg-color));
+    background-color: var(--color-bg-canvas-inset, #202020);
+    box-shadow: 0 0 0 2px var(--background, var(--color-bg-primary, var(--ghd-bg-color)));
   }
   html.refined-github .js-expandable-line:hover .blob-num:not(:hover) + .blob-code,
   html.refined-github .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child {
@@ -12718,14 +12709,17 @@
     fill: #c6c6c6;
     stroke: #181818;
   }
-  html.refined-github .rgh-split-issue-pr-combined.selected:hover {
-    background-color: #222;
+  html.refined-github .menu-item.selected.rgh-split-issue-pr-combined {
+    background-color: initial;
+  }
+  html.refined-github .menu-item.selected.rgh-split-issue-pr-combined:hover {
+    background-color: var(--color-menu-bg-active, #222);
   }
   html.refined-github a.rgh-highest-rated-comment {
     border-color: #373 !important;
   }
   html.refined-github .rgh-collaborator {
-    border-color: #246;
+    border-color: var(--color-border-tertiary, #246);
   }
   html.refined-github .rgh-clean-conversation-headers-non-default-branch {
     background-color: /*[[base-color]]*/;
@@ -12735,7 +12729,7 @@
   }
   html.refined-github .rgh-table-input:hover .selected div {
     border-color: /*[[base-color]]*/;
-    background-color: #182030;
+    background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
   /* end refined-github rules */
   /* begin zenhub rules */
