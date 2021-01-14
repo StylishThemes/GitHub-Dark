@@ -2299,4 +2299,16 @@
   .project-card code {
     background: #333 !important;
   }
+  /* fix gh circlebadge bg e.g. https://github.com/marketplace/dependabot-preview */
+  .CircleBadge--github::after {
+    background-color: var(--color-icon-primary);
+  }
+  .CircleBadge-icon[alt*="workflow logo"] {
+    filter: invert(.95) brightness(1.5) grayscale(1);
+    mix-blend-mode: lighten;
+  }
+  /* fix GH circlebadge https://github.com/login/oauth/authorize?client_id=c602a8bd54b1e774f864&scope=repo */
+  .CircleBadge[style*="background-color: #fff; overflow"] {
+    background-color: var(--color-bg-tertiary);
+  }
 }
