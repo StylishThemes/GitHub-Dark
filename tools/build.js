@@ -36,8 +36,8 @@ function replaceCSSMatches(css) {
 }
 
 function sortThemes(a, b) {
-  if (/twilight/i.exec(a)) return -1;
-  if (/twilight/i.exec(b)) return 1;
+  if (/twilight/i.test(a)) return -1;
+  if (/twilight/i.test(b)) return 1;
   return a.localeCompare(b);
 }
 
