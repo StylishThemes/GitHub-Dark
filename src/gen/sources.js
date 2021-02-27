@@ -115,12 +115,13 @@ module.exports = async (Cookie) => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
-    {
-      name: "npmhub",
-      crx: "kbbbjimdjbjclaebffknlabpogocablj",
-      file: resolve(__dirname, "../src/extensions.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-    },
+    // disabled because of crx errors
+    // {
+    //   name: "npmhub",
+    //   crx: "kbbbjimdjbjclaebffknlabpogocablj",
+    //   file: resolve(__dirname, "../src/extensions.css"),
+    //   fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+    // },
     {
       name: "notifications-preview",
       crx: "kgilejfahkjidpaclkepbdoeioeohfmj",
