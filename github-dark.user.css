@@ -21294,7 +21294,12 @@
   html.octotree .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view {
     color: /*[[base-color]]*/;
   }
-  html.octotree .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view .octotree-view-header,
+  html.octotree .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view .octotree-view-header {
+    color: #fff;
+  }
+  html.octotree .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    --toggler-color-bg: #181818;
+  }
   html.octotree .octotree-sidebar.octotree-github-sidebar a.octotree-pin .octotree-icon-pin:hover::before,
   html.octotree .octotree-sidebar.octotree-github-sidebar a.octotree-settings .octotree-icon-settings:hover::before,
   html.octotree .octotree-sidebar.octotree-github-sidebar a.octotree-settings.selected .octotree-icon-settings::before {
@@ -21312,9 +21317,9 @@
   html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
     box-shadow: 0 1px 1px hsla(0, 0%, 0%, .5) !important;
   }
-  html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar .octotree-toggle i::before,
-  html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar .octotree-toggle span {
-    color: #343434;
+  html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    --toggler-color-text: #181818;
+    box-shadow: none;
   }
   html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar .octotree-footer-user-profile i:hover::before {
     color: /*[[base-color]]*/;
@@ -21344,6 +21349,10 @@
     color: #2c2c2c;
     border-color: #afafaf;
   }
+  html.octotree .apply-sidebar-theme-for-github-dark .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    --toggler-color-text: #181818;
+    box-shadow: none;
+  }
   html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
     box-shadow: none !important;
   }
@@ -21359,6 +21368,10 @@
   html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled {
     color: #2c2c2c;
     border-color: #afafaf;
+  }
+  html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    --toggler-color-text: #181818;
+    box-shadow: none;
   }
   @media (prefers-color-scheme:dark) {
     html:not([data-octotree-theme])[data-color-mode=auto] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
@@ -21376,6 +21389,10 @@
     html:not([data-octotree-theme])[data-color-mode=auto] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled {
       color: #2c2c2c;
       border-color: #afafaf;
+    }
+    html:not([data-octotree-theme])[data-color-mode=auto] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+      --toggler-color-text: #181818;
+      box-shadow: none;
     }
   }
   html.octotree .octotree-icon-file-directory::before,
@@ -33073,6 +33090,7 @@
     --color-bg-canvas-mobile: var(--ghd-bg-color);
     --color-bg-canvas: var(--ghd-bg-color);
     --color-bg-info: #182030;
+    --color-bg-info-inverse: /*[[base-color]]*/;
     --color-bg-overlay: #181818;
     --color-bg-primary: #181818;
     --color-bg-secondary: #1c1c1c;
