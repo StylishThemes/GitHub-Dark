@@ -28,9 +28,10 @@ function replaceCSSMatches(css) {
     const last = parts.length - 1;
 
     let result = "";
-    parts.forEach((match, index) => {
+    for (const [index, match] of Object.entries(parts)) {
       result += `${match} ${selector.trim()}${index >= last && separator === "{" ? " {" : ", "}`;
-    });
+    }
+
     return result;
   });
 }
