@@ -28,7 +28,7 @@ function replaceCSSMatches(css) {
     const last = parts.length - 1;
 
     let result = "";
-    for (const [index, match] of Object.entries(parts)) {
+    for (const [index, match] of parts.entries()) {
       result += `${match} ${selector.trim()}${index >= last && separator === "{" ? " {" : ", "}`;
     }
 
