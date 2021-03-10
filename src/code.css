@@ -20,4 +20,26 @@
   .blob-code, .blob-code-inner {
     color: var(--ghd-code-color) !important;
   }
+  /* inline code*/
+  .markdown-body code::before, .markdown-body code::after,
+  .markdown-body tt::before, .markdown-body tt::after,
+  .markdown-body pre code::before, .markdown-body pre code::after,
+  .markdown-body pre tt::before, .markdown-body pre tt::after {
+    display: none !important;
+  }
+  /* GitHub Bug: Center color preview in inline code tags  */
+  .markdown-body code .v-align-middle {
+    position: relative;
+    top: -1px;
+  }
+  .markdown-body code, .markdown-body tt, .markdown-format p > code,
+  .markdown-format pre, .markdown-body pre, .markdown-format .highlight pre,
+  .markdown-body .highlight pre, #user-content-toc td, .copyable-terminal,
+  .project-card .highlight pre, .project-card code, .rgh-parse-backticks,
+  .protip code, .content dl code, .content ul code,
+  .content .sectionbody .dlist dt, .content p > tt, .commit-sha,
+  .commit-preview .message pre, .rendered_html pre, .rendered_html code, p code {
+    background: #222 !important;
+    border: 1px solid rgba(255, 255, 255, .1) !important;
+  }
 }
