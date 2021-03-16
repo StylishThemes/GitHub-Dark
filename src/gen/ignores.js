@@ -9,4 +9,5 @@ module.exports = async () => [
   /&\[open\]/, // invalid css from gitako
   /^.Header$/,
   /^.bg-gray-dark$/,
+  /^hr$/,
 ];
