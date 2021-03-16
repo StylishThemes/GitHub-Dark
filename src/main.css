@@ -714,12 +714,12 @@
   .file-header {
     background: #202020 !important;
   }
-  .pagehead-tabs-item.selected, .reponav-item.selected, .tabnav-tab.selected {
+  .pagehead-tabs-item.selected, .reponav-item.selected {
     background: #202020;
     border-bottom-color: #202020 !important;
   }
-  .timeline-comment .tabnav-tab.selected,
-  .comment-form-head .tabnav-tab.selected {
+  .tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current="false"]),
+  .tabnav-tab[aria-selected="true"] {
     background: #181818 !important;
     border-bottom-color: #181818 !important;
   }
@@ -795,11 +795,11 @@
     background: #181818;
     border-color: #484848 !important;
   }
-  .Box-row--hover-blue, .dashboard-sidebar, .tint-box, .capped-card-content,
-  .table-list-item, .pinned-issue-item, .line-comments,
-  .js-notice > .border:not(.bg-blue-light), .js-notice.border, #projects-results,
-  .pr-toolbar.is-stuck, .pinned-issue-item, .pinned-item-list-item,
-  article.border.rounded-1, #search-member, .sidebar-progress-bar > .d-flex,
+  .dashboard-sidebar, .tint-box, .capped-card-content, .table-list-item,
+  .pinned-issue-item, .line-comments, .js-notice > .border:not(.bg-blue-light),
+  .js-notice.border, #projects-results, .pr-toolbar.is-stuck, .pinned-issue-item,
+  .pinned-item-list-item, article.border.rounded-1, #search-member,
+  .sidebar-progress-bar > .d-flex,
   .pagination-loader-container .discussion-item-header .border,
   #wiki-footer .border-dashed, #wiki-rightbar .border-dashed,
   .profile-timeline-card, .avatar-before-user-status,
@@ -1822,14 +1822,6 @@
   .repo-list-item p, .repo-list-item .repo-list-stats {
     position: relative !important;
     z-index: 1 !important;
-  }
-  /* Comment Form Preview */
-  .previewable-comment-form,
-  .previewable-comment-form .tabnav-tab[aria-selected="true"] {
-    background: var(--ghd-main-background) !important;
-  }
-  .previewable-comment-form .comment-form-head.tabnav {
-    background: var(--ghd-bg-color) !important;
   }
   /* GitHub Enterprise (GHE) stuff */
   body.enterprise .repohead.experiment-repo-nav {
