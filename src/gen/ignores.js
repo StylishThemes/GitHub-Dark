@@ -10,4 +10,5 @@ module.exports = async () => [
   /^.Header$/,
   /^.bg-gray-dark$/,
   /^hr$/,
+  /^\.stars[0-9]*(::after)?$/, // seems to change a lot
 ];
