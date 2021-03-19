@@ -549,6 +549,11 @@
   .btn-primary .octicon {
     color: inherit;
   }
+  .btn-primary.disabled, .btn-primary:disabled,
+  .btn-primary[aria-disabled="true"], .btn.disabled, .btn:disabled,
+  .btn[aria-disabled="true"] {
+    color: var(--color-icon-tertiary);
+  }
   /* topic tags */
   .topic-tag {
     box-shadow: inset 0 0 0 1px #246 !important;
@@ -726,11 +731,11 @@
   .timeline-new-comment .timeline-comment,
   .timeline-new-comment .tabnav-tab.selected,
   .timeline-new-comment .tabnav-tab[aria-current]:not([aria-current="false"]),
-  .timeline-new-comment .tabnav-tab[aria-selected="true"] {
-    background: #1b1b1b !important;
-  }
+  .timeline-new-comment .tabnav-tab[aria-selected="true"],
+  .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting,
+  .timeline-comment.current-user.is-comment-editing,
   .new-discussion-timeline .composer .comment-form-head.tabnav {
-    background: #202020 !important;
+    background: #1b1b1b !important;
   }
   .pagehead-tabs-item.selected, .reponav-item.selected, .tabnav-tab.selected {
     background: #202020;
@@ -1486,7 +1491,8 @@
   .timeline-comment.current-user:not(.is-internal) .timeline-comment-header .link-gray,
   .timeline-comment.current-user:not(.is-internal) .timeline-comment-header .text-gray,
   .timeline-comment.current-user:not(.is-internal) .timeline-comment-header .Link--secondary,
-  .timeline-comment.current-user:not(.is-internal) .timeline-comment-header-text code a {
+  .timeline-comment.current-user:not(.is-internal) .timeline-comment-header-text code a,
+  .timeline-comment.current-user:not(.is-internal) .color-text-secondary {
     color: #9daccc !important;
   }
   .timeline-comment.current-user:not(.is-internal) .timeline-comment-header,
