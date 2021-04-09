@@ -1,10 +1,7 @@
-#!/usr/bin/env node
-"use strict";
-
-const perfectionist = require("perfectionist");
-const {readFile} = require("fs").promises;
-const {basename} = require("path");
-const {writeFile, exit, glob} = require("./utils");
+import perfectionist from "perfectionist";
+import {readFile} from "fs/promises";
+import {basename} from "path";
+import {writeFile, exit, glob} from "./utils.js";
 
 const replacements = [
   {from: /\{\/\*!/g, to: "{\n /*!"},
@@ -18,7 +15,7 @@ const replacements = [
   {from: /\s+regexp\(/g, to: " regexp("},
 ];
 
-module.exports = async function main() {
+async function main() {
   for (const file of glob("src/*.css")) {
     if (basename(file) === "template.css") continue;
 
@@ -35,6 +32,6 @@ module.exports = async function main() {
 
     await writeFile(file, css);
   }
-};
+}
 
-module.exports().then(exit).catch(exit);
+main().then(exit).catch(exit);

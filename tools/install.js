@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-"use strict";
+import open from "open";
+import {createServer} from "http";
+import {dirname, resolve} from "path";
+import {readFileSync} from "fs";
+import {fileURLToPath} from "url";
 
-const open = require("open");
-const {createServer} = require("http");
-const {resolve} = require("path");
-const {readFileSync} = require("fs");
-
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const file = readFileSync(resolve(__dirname, "../github-dark.user.css"));
 
 const server = createServer((_, res) => {

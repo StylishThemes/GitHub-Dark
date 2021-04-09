@@ -1,15 +1,16 @@
-#!/usr/bin/env node
-"use strict";
+import esc from "escape-string-regexp";
+import fetchCss from "fetch-css";
+import remapCss from "remap-css";
+import {readFile} from "fs/promises";
+import {resolve, basename, dirname} from "path";
+import cssnano from "cssnano";
+import {fileURLToPath} from "url";
+import {writeFile, exit, glob} from "./utils.js";
+import mappingsFn from "../src/gen/mappings.js";
+import ignoresFn from "../src/gen/ignores.js";
+import sourcesFn from "../src/gen/sources.js";
 
-const esc = require("escape-string-regexp");
-const fetchCss = require("fetch-css");
-const remapCss = require("remap-css");
-const {readFile} = require("fs").promises;
-const {resolve, basename} = require("path");
-const cssnano = require("cssnano");
-
-const {version} = require("../package.json");
-const {writeFile, exit, glob} = require("./utils");
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   // main first
@@ -68,9 +69,9 @@ async function getThemes() {
 
 async function main() {
   const [mappings, ignores, sources] = await Promise.all([
-    require("../src/gen/mappings")(),
-    require("../src/gen/ignores")(),
-    require("../src/gen/sources")(),
+    mappingsFn(),
+    ignoresFn(),
+    sourcesFn(),
   ]);
 
   const remapOpts = {
@@ -81,6 +82,8 @@ async function main() {
     stylistic: true,
     validate: true,
   };
+
+  const {version} = JSON.parse(await readFile(resolve(__dirname, "../package.json"), "utf8"));
 
   let css = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;

@@ -1,7 +1,10 @@
-const {userAgent} = require("../../tools/utils");
-const {resolve} = require("path");
+import {userAgent} from "../../tools/utils.js";
+import {resolve, dirname} from "path";
+import {fileURLToPath} from "url";
 
-module.exports = async (Cookie) => {
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default async (Cookie) => {
   const desktopUserAgent = await userAgent();
   const mobileUserAgent = await userAgent(true);
 

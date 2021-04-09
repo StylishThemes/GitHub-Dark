@@ -1,4 +1,4 @@
-module.exports = async () => ({
+export default async () => ({
   // ==========================================================================
   //                         Short How-to
   // `$border: value`: Any occurance of `value` in a `border` property.

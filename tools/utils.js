@@ -1,36 +1,41 @@
-"use strict";
+import fastGlob from "fast-glob";
+import fetchEnhanced from "fetch-enhanced";
+import nodeFetch from "node-fetch";
+import {platform} from "os";
+import {resolve, dirname} from "path";
+import {writeFile as wf, truncate} from "fs/promises";
+import {fileURLToPath} from "url";
 
-const fastGlob = require("fast-glob");
-const fetch = require("fetch-enhanced")(require("node-fetch"));
-const {platform} = require("os");
-const {resolve} = require("path");
-const {writeFile, truncate} = require("fs").promises;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// special version of writeFile that preserves metadata on WSL and Cygwin platforms
-module.exports.writeFile = async (file, content) => {
+const fetch = fetchEnhanced(nodeFetch);
+
+// version of writeFile that preserves metadata on WSL and Cygwin platforms
+export async function writeFile(file, content) {
   if (platform() === "win32") {
     try {
       await truncate(file);
-      await writeFile(file, content, {flag: "r+"});
+      await wf(file, content, {flag: "r+"});
     } catch {
-      await writeFile(file, content);
+      await wf(file, content);
     }
   } else {
-    await writeFile(file, content);
+    await wf(file, content);
   }
-};
+}
 
-module.exports.exit = (err) => {
+export function exit(err) {
   if (err) console.error(err);
   process.exit(err ? 1 : 0);
-};
+}
 
-module.exports.glob = (pattern) => {
+export function glob(pattern) {
   return fastGlob.sync(pattern, {cwd: resolve(__dirname, ".."), absolute: true});
-};
+}
 
 let chromeVersion;
-module.exports.userAgent = async (mobile) => {
+
+export async function userAgent(mobile) {
   if (!chromeVersion) {
     const res = await fetch(`https://chromedriver.storage.googleapis.com/LATEST_RELEASE`);
     if (!res.ok) throw new Error(res.statusText);
@@ -38,4 +43,4 @@ module.exports.userAgent = async (mobile) => {
   }
 
   return `Mozilla/5.0 (${mobile ? "Linux; Android 10; Pixel" : "Windows NT 10.0; Win64; x64"}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Safari/537.36`;
-};
+}
