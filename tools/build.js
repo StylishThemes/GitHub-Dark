@@ -21,7 +21,7 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   if (b.endsWith("vars.css")) return -1;
 }).filter(file => basename(file) !== "template.css");
 
-const minify = async css => (await cssnano.process(css, {from: undefined})).css;
+const minify = async css => (await cssnano().process(css, {from: undefined})).css;
 
 function replaceCSSMatches(css) {
   return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/gm, (_, matches, selector, separator) => {
