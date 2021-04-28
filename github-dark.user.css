@@ -10328,22 +10328,13 @@
   .label, .Label {
     background-color: transparent !important;
   }
-  .underline-dashed {
-    background-image: linear-gradient(to right, var(--color-auto-gray-3) 50%, transparent 0%);
+  .extended-markdown.note pre {
+    background: none;
   }
   @media (min-width: 768px) {
     details.close-when-clicked-outside[open] > summary::before {
       background-color: transparent;
     }
-  }
-  .ais-Highlight-highlighted, .extended-markdown.note pre, mark {
-    background: none;
-  }
-  .markdown-body table pre > code {
-    background-color: transparent;
-  }
-  .markdown-body table tr:nth-child(2n) {
-    background: none;
   }
   .bg-guides-gradient {
     background: linear-gradient(0deg, var(--color-auto-blue-0) 0%, transparent 100%);
@@ -10356,6 +10347,18 @@
   }
   .fade-background-bottom {
     background: linear-gradient(to top, var(--color-bg-tertiary), transparent);
+  }
+  .ais-Highlight-highlighted, mark {
+    background: none;
+  }
+  .markdown-body table pre > code {
+    background-color: transparent;
+  }
+  .markdown-body table tr:nth-child(2n) {
+    background: none;
+  }
+  .underline-dashed {
+    background-image: linear-gradient(to right, var(--color-auto-gray-3) 50%, transparent 0%);
   }
   /* end developer.github.com rules */
   table {
@@ -12589,22 +12592,13 @@
   .label, .Label {
     background-color: transparent !important;
   }
-  .underline-dashed {
-    background-image: linear-gradient(to right, var(--color-auto-gray-3) 50%, transparent 0%);
+  .extended-markdown.note pre {
+    background: none;
   }
   @media (min-width: 768px) {
     details.close-when-clicked-outside[open] > summary::before {
       background-color: transparent;
     }
-  }
-  .ais-Highlight-highlighted, .extended-markdown.note pre, mark {
-    background: none;
-  }
-  .markdown-body table pre > code {
-    background-color: transparent;
-  }
-  .markdown-body table tr:nth-child(2n) {
-    background: none;
   }
   .bg-guides-gradient {
     background: linear-gradient(0deg, var(--color-auto-blue-0) 0%, transparent 100%);
@@ -12617,6 +12611,18 @@
   }
   .fade-background-bottom {
     background: linear-gradient(to top, var(--color-bg-tertiary), transparent);
+  }
+  .ais-Highlight-highlighted, mark {
+    background: none;
+  }
+  .markdown-body table pre > code {
+    background-color: transparent;
+  }
+  .markdown-body table tr:nth-child(2n) {
+    background: none;
+  }
+  .underline-dashed {
+    background-image: linear-gradient(to right, var(--color-auto-gray-3) 50%, transparent 0%);
   }
   /* end docs.github.com rules */
   h4 a > strong code {
@@ -12777,6 +12783,9 @@
   /* begin zenhub rules */
   body.zh_logged_in #new_issue .discussion-sidebar h3 {
     border-top-color: #2c2c2c;
+  }
+  body.zh_logged_in .zh-app--fixed-layout .zh-app__content {
+    background-color: #202020;
   }
   body.zh_logged_in .zh-app--dark.zh-app--visible .zh-app::after,
   body.zh_logged_in .zh-app--fixed-layout .zh-app--is-fullscreen {
@@ -15755,9 +15764,11 @@
       background-image: none;
     }
   }
-  body.zh_logged_in .zhc-pipeline {
-    background-color: #242424;
-    border-color: #343434;
+  body.zh_logged_in .zhc-pipeline .zhc-pipeline--header-wrapper:not(.zhc-pipeline--header-wrapper--is-closed):not(.zhc-pipeline--header-wrapper--is-locked):not(.zhc-pipeline--header-wrapper--no-hover):hover,
+  body.zh_logged_in .zhc-pipeline .zhc-pipeline--header-wrapper:not(.zhc-pipeline--header-wrapper--is-closed):not(.zhc-pipeline--header-wrapper--is-locked):not(.zhc-pipeline--header-wrapper--no-hover):hover + .zhc-pipeline-body,
+  body.zh_logged_in .zhc-pipeline .zhc-pipeline--header-wrapper:not(.zhc-pipeline--header-wrapper--is-closed):not(.zhc-pipeline--header-wrapper--is-locked):not(.zhc-pipeline--header-wrapper--no-hover):hover + .zhc-pipeline-body .zhc-pipeline-header__main,
+  body.zh_logged_in .zhc-pipeline .zhc-pipeline--header-wrapper:not(.zhc-pipeline--header-wrapper--is-closed):not(.zhc-pipeline--header-wrapper--is-locked):not(.zhc-pipeline--header-wrapper--no-hover):hover .zhc-pipeline-header__main {
+    background-color: #343434;
   }
   body.zh_logged_in .zhc-pipeline--add__input {
     border-color: #343434;
@@ -15771,11 +15782,14 @@
   body.zh_logged_in .zhc-pipeline__title {
     color: #767676;
   }
+  body.zh_logged_in .zhc-pipeline--is-collapsed .zhc-pipeline--header-wrapper:not(.zhc-pipeline--header-wrapper--is-locked):hover {
+    background-color: #343434;
+  }
+  body.zh_logged_in .zhc-pipeline--is-collapsed .zhc-pipeline-header__info:hover {
+    background: none;
+  }
   body.zh_logged_in .zhc-pipeline--is-collapsed .zhc-pipeline-header__collapsed-actions {
     border-bottom-color: #343434;
-  }
-  body.zh_logged_in .zhc-pipeline__load-more {
-    color: /*[[base-color]]*/;
   }
   body.zh_logged_in .zhc-pipeline__load-more--is-loading {
     color: #767676;
@@ -15783,11 +15797,8 @@
   body.zh_logged_in .zhc-pipeline__button {
     background-color: transparent;
   }
-  body.zh_logged_in .zhc-pipeline-body {
-    border-top-color: #343434;
-  }
   body.zh_logged_in .zhc-pipeline-sorted-placeholder {
-    background-color: #242424;
+    background-color: #202020;
   }
   body.zh_logged_in .zhc-pipeline-sorted-placeholder__content {
     border-color: #5a5a5a;
@@ -15796,24 +15807,26 @@
     color: #767676;
   }
   body.zh_logged_in .zhc-pipeline-form {
-    border-bottom-color: #343434;
+    border-color: #343434;
+    background-color: #242424;
   }
   body.zh_logged_in .zhc-pipeline-form__input,
   body.zh_logged_in .zhc-pipeline-form__text-area {
     border-color: #343434;
     color: #c6c6c6;
   }
-  body.zh_logged_in .zhc-pipeline-header {
-    background-color: #242424;
+  body.zh_logged_in .zhc-pipeline-header--interactive .zhc-pipeline-header__info:hover {
+    background-color: #181818;
+  }
+  body.zh_logged_in .zhc-pipeline-header--is-closed .zhc-pipeline-header__info:hover,
+  body.zh_logged_in .zhc-pipeline-header--is-collapsed .zhc-pipeline-header__info:hover {
+    background: none;
   }
   body.zh_logged_in .zhc-pipeline-header__view .zhc-svg-icon--issue-closed-red {
     color: #d82828;
   }
   body.zh_logged_in .zhc-pipeline-header__form__edit {
     box-shadow: none;
-  }
-  body.zh_logged_in .zhc-pipeline-header__actions .zhc-svg-icon--gear:hover {
-    color: #9b9b9b;
   }
   body.zh_logged_in .zhc-pipeline-header__info--is-disabled {
     color: #767676;
@@ -15824,8 +15837,21 @@
   body.zh_logged_in .zhc-pipeline-header__story-points {
     color: #767676;
   }
-  body.zh_logged_in .zhc-pipeline-sort-status {
-    border-top-color: #343434;
+  body.zh_logged_in .zhc-pipeline-header__selection-btn {
+    background: none;
+  }
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--collapse-left-arrow,
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--expand-right-arrow {
+    border-color: #343434;
+    background-color: #181818;
+    color: #767676;
+  }
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--collapse-left-arrow:focus:not(.zhc-svg-icon--expand-right-arrow__disabled),
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--collapse-left-arrow:hover:not(.zhc-svg-icon--expand-right-arrow__disabled),
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--expand-right-arrow:focus:not(.zhc-svg-icon--expand-right-arrow__disabled),
+  body.zh_logged_in .zhc-pipeline-header__expand-collapse-btn-container .zhc-svg-icon--expand-right-arrow:hover:not(.zhc-svg-icon--expand-right-arrow__disabled) {
+    color: #c6c6c6;
+    border-color: #767676;
   }
   body.zh_logged_in .zhc-pipeline-item .zhc-svg-icon {
     color: #d82828;
@@ -17553,366 +17579,18 @@
     background-color: #242424;
     border-color: #343434;
   }
-  body.zh_logged_in ._16iMYDvEo7_GWkmrvtfs_2,
-  body.zh_logged_in .tooltipOverflow,
   body.zh_logged_in .zh-menu-content__item--disabled:hover {
     background-color: transparent;
   }
+  body.zh_logged_in ._2sN8M1gLZSw7nd3xLr3N_G, body.zh_logged_in .main {
+    --zh-issue-card-bg: #181818;
+  }
+  body.zh_logged_in ._16iMYDvEo7_GWkmrvtfs_2,
+  body.zh_logged_in .tooltipOverflow {
+    background-color: transparent;
+  }
   /* end zenhub rules */
-  /* begin github-hovercard rules */
-  html[class*="ghh-"] .tooltipster-box,
-  html[class*="ghh-"] .tooltipster-content {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh a {
-    color: /*[[base-color]]*/;
-  }
-  html[class*="ghh-"] .windows .ghh ::-webkit-scrollbar {
-    background-color: transparent;
-  }
-  html[class*="ghh-"] .windows .ghh ::-webkit-scrollbar-thumb {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .windows .ghh ::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
-  html[class*="ghh-"] .ghh-issue-body, html[class*="ghh-"] .ghh-readme {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .ghh-issue-body blockquote,
-  html[class*="ghh-"] .ghh-readme blockquote {
-    border-left-color: #343434;
-    color: #9b9b9b;
-  }
-  html[class*="ghh-"] .ghh-issue-body code,
-  html[class*="ghh-"] .ghh-issue-body tt, html[class*="ghh-"] .ghh-readme code,
-  html[class*="ghh-"] .ghh-readme tt {
-    background-color: rgba(220, 220, 220, .05);
-  }
-  html[class*="ghh-"] .ghh-issue-body pre, html[class*="ghh-"] .ghh-readme pre {
-    background-color: #222;
-  }
-  html[class*="ghh-"] .ghh-issue-body pre code,
-  html[class*="ghh-"] .ghh-issue-body pre tt,
-  html[class*="ghh-"] .ghh-readme pre code,
-  html[class*="ghh-"] .ghh-readme pre tt {
-    background-color: transparent;
-  }
-  html[class*="ghh-"] .ghh-issue-body a[href^="https://saucelabs.com/"] img,
-  html[class*="ghh-"] .ghh-readme a[href^="https://saucelabs.com/"] img {
-    background-color: #181818;
-  }
-  .ghh-theme-github .ghh-issue-body h1, .ghh-theme-github .ghh-issue-body h2,
-  .ghh-theme-github .ghh-readme h1, .ghh-theme-github .ghh-readme h2 {
-    border-bottom-color: #2c2c2c;
-  }
-  .ghh-theme-github .ghh-issue-body tr, .ghh-theme-github .ghh-readme tr {
-    background-color: #181818;
-    border-top-color: #767676;
-  }
-  .ghh-theme-github .ghh-issue-body tr:nth-child(2n),
-  .ghh-theme-github .ghh-readme tr:nth-child(2n) {
-    background-color: #222;
-  }
-  .ghh-theme-github .ghh-issue-body td, .ghh-theme-github .ghh-issue-body th,
-  .ghh-theme-github .ghh-readme td, .ghh-theme-github .ghh-readme th {
-    border-color: #343434;
-  }
-  .ghh-theme-github .ghh .ghh-issue-body a,
-  .ghh-theme-github .ghh .ghh-readme a {
-    color: /*[[base-color]]*/;
-  }
-  .ghh-theme-github .ghh .ghh-issue-body .user-mention,
-  .ghh-theme-github .ghh .ghh-readme .user-mention {
-    color: #c6c6c6;
-  }
-  .ghh-theme-classic .ghh-issue-body hr, .ghh-theme-classic .ghh-readme hr {
-    border-bottom-color: hsla(0, 0%, 0%, .2);
-  }
-  .ghh-theme-classic .ghh-issue-body blockquote,
-  .ghh-theme-classic .ghh-readme blockquote {
-    border-left-color: #5a5a5a;
-  }
-  .ghh-theme-classic .ghh-issue-body code,
-  .ghh-theme-classic .ghh-issue-body tt, .ghh-theme-classic .ghh-readme code,
-  .ghh-theme-classic .ghh-readme tt {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  .ghh-theme-classic .ghh-issue-body pre code,
-  .ghh-theme-classic .ghh-issue-body pre tt,
-  .ghh-theme-classic .ghh-readme pre code,
-  .ghh-theme-classic .ghh-readme pre tt {
-    background-color: transparent;
-  }
-  .ghh-theme-classic .ghh-issue-body .border,
-  .ghh-theme-classic .ghh-readme .border {
-    border-color: hsla(0, 0%, 0%, .2) !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .border-bottom,
-  .ghh-theme-classic .ghh-readme .border-bottom {
-    border-bottom-color: hsla(0, 0%, 0%, .1) !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .text-gray-light,
-  .ghh-theme-classic .ghh-readme .text-gray-light {
-    color: #fff !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .bg-gray-light,
-  .ghh-theme-classic .ghh-readme .bg-gray-light {
-    background-color: hsla(0, 0%, 0%, .15) !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .bg-white,
-  .ghh-theme-classic .ghh-readme .bg-white {
-    background-color: transparent !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .blob-num,
-  .ghh-theme-classic .ghh-readme .blob-num {
-    color: hsla(0, 0%, 0%, .5) !important;
-  }
-  .ghh-theme-classic .ghh-issue-body .blob-code-inner,
-  .ghh-theme-classic .ghh-readme .blob-code-inner {
-    color: #fff !important;
-  }
-  html[class*="ghh-"] .ghh-commit-meta .commit-ref,
-  html[class*="ghh-"] .ghh-pull-meta .commit-ref {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .ghh button {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh button.ghh-primary:hover {
-    background-color: /*[[base-color]]*/;
-  }
-  html[class*="ghh-"] .ghh button.ghh-aux {
-    background-color: hsla(0, 0%, 0%, .2);
-    color: hsla(0, 0%, 100%, .2);
-  }
-  html[class*="ghh-"] .ghh button.ghh-aux:hover {
-    background-color: hsla(0, 0%, 0%, .3);
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh .ghh-state {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-open {
-    background-color: #373;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-closed {
-    background-color: #d82828;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-merged {
-    background-color: #73589a;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-draft {
-    background-color: #444;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-warning {
-    color: #cb4;
-  }
-  html[class*="ghh-"] .ghh .ghh-state-verified {
-    background-color: #484;
-  }
-  html[class*="ghh-"] .ghh-more-separator {
-    border-bottom-color: hsla(0, 0%, 0%, .2);
-  }
-  html[class*="ghh-"] .ghh-avatar {
-    border-color: hsla(0, 0%, 0%, .1);
-    background-color: #181818;
-  }
-  html[class*="ghh-"] .ghh-topic {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh-stats, html[class*="ghh-"] .ghh-topic {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .ghh-stats span {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh-pull-meta .ghh-reviews li {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .ghh-pull-meta .ghh-reviews .ghh-state-icon {
-    color: #fff;
-  }
-  html[class*="ghh-"] .ghh-pull-meta .ghh-reviews .ghh-state-icon-warning {
-    background-color: #cb4;
-  }
-  html[class*="ghh-"] .ghh-pull-meta .ghh-reviews .ghh-state-icon-problem {
-    background-color: #444;
-  }
-  html[class*="ghh-"] .ghh-commit-body {
-    background-color: hsla(0, 0%, 0%, .15);
-  }
-  html[class*="ghh-"] .ghh-overlay form {
-    background-color: #181818;
-  }
-  html[class*="ghh-"] .ghh-overlay form h3 {
-    border-bottom-color: #2c2c2c;
-  }
-  .ghh-theme-github .tooltipster-box .tooltipster-content {
-    box-shadow: 0 1px 15px #000;
-    background-color: #181818;
-    border-color: #343434;
-    color: #afafaf;
-  }
-  .ghh-theme-github .tooltipster-right .tooltipster-arrow-background {
-    border-right-color: var(--ghd-bg-color);
-  }
-  .ghh-theme-github .tooltipster-right .tooltipster-arrow-border {
-    border-right-color: #343434;
-  }
-  .ghh-theme-github .tooltipster-left .tooltipster-arrow-background {
-    border-left-color: var(--ghd-bg-color);
-  }
-  .ghh-theme-github .tooltipster-left .tooltipster-arrow-border {
-    border-left-color: #343434;
-  }
-  .ghh-theme-github .tooltipster-top .tooltipster-arrow-background {
-    border-top-color: var(--ghd-bg-color);
-  }
-  .ghh-theme-github .tooltipster-top .tooltipster-arrow-border {
-    border-top-color: #343434;
-  }
-  .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-background {
-    border-bottom-color: var(--ghd-bg-color);
-  }
-  .ghh-theme-github .tooltipster-bottom .tooltipster-arrow-border {
-    border-bottom-color: #343434;
-  }
-  .ghh-theme-github .ghh a {
-    color: #c6c6c6;
-  }
-  .ghh-theme-github .ghh a:hover {
-    color: /*[[base-color]]*/;
-  }
-  .ghh-theme-github .ghh button.ghh-aux, .ghh-theme-github .ghh button:hover {
-    color: #fff;
-  }
-  .ghh-theme-github .ghh-markdown-separator {
-    border-bottom-color: #343434;
-  }
-  .ghh-theme-github .ghh .ghh-stats > a + a {
-    border-left-color: #343434;
-  }
-  .ghh-theme-github .ghh .ghh-stats span {
-    color: #c6c6c6;
-  }
-  .ghh-theme-github .ghh .ghh-more-separator {
-    border-bottom-color: #343434;
-  }
-  .ghh-theme-github .ghh .ghh-state-verified {
-    color: #6cc644;
-    border-color: #343434;
-    background-color: #181818;
-  }
-  .ghh-theme-github .ghh-commit-meta .text-diff-added,
-  .ghh-theme-github .ghh-pull-meta .text-diff-added {
-    color: #373 !important;
-  }
-  .ghh-theme-github .ghh-commit-meta .text-diff-deleted,
-  .ghh-theme-github .ghh-pull-meta .text-diff-deleted {
-    color: #d82828 !important;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-alert {
-    color: #d82828;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-success {
-    color: #373;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-warning {
-    color: #cb4;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-icon-alert {
-    background-color: #d82828;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-icon-success {
-    background-color: #373;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-icon-warning {
-    background-color: #cb4;
-  }
-  .ghh-theme-github .ghh-reviews .ghh-state-icon-problem {
-    background-color: #444;
-  }
-  .ghh-theme-one-dark .tooltipster-box .tooltipster-content {
-    box-shadow: 0 1px 15px #000;
-  }
-  .ghh-theme-one-dark .ghh a:hover {
-    color: /*[[base-color]]*/;
-  }
-  .ghh-theme-one-dark .ghh button.ghh-aux,
-  .ghh-theme-one-dark .ghh button:hover {
-    color: #fff;
-  }
-  .ghh-theme-one-dark .ghh .ghh-state-verified {
-    color: #6cc644;
-    background-color: transparent;
-  }
-  .ghh-theme-one-dark .ghh-commit-meta .text-diff-added,
-  .ghh-theme-one-dark .ghh-pull-meta .text-diff-added {
-    color: #373 !important;
-  }
-  .ghh-theme-one-dark .ghh-commit-meta .text-diff-deleted,
-  .ghh-theme-one-dark .ghh-pull-meta .text-diff-deleted {
-    color: #d82828 !important;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-alert {
-    color: #d82828;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-success {
-    color: #373;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-warning {
-    color: #cb4;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-icon-alert {
-    background-color: #d82828;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-icon-success {
-    background-color: #373;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-icon-warning {
-    background-color: #cb4;
-  }
-  .ghh-theme-one-dark .ghh-reviews .ghh-state-icon-problem {
-    background-color: #444;
-  }
-  .ghh-theme-github-dark .tooltipster-box .tooltipster-content {
-    box-shadow: 0 1px 15px #000;
-  }
-  .ghh-theme-github-dark .ghh .ghh-state-verified {
-    color: #6cc644;
-    background-color: transparent;
-  }
-  .ghh-theme-github-dark .ghh-commit-meta .text-diff-added,
-  .ghh-theme-github-dark .ghh-pull-meta .text-diff-added {
-    color: #373 !important;
-  }
-  .ghh-theme-github-dark .ghh-commit-meta .text-diff-deleted,
-  .ghh-theme-github-dark .ghh-pull-meta .text-diff-deleted {
-    color: #d82828 !important;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-alert {
-    color: #d82828;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-success {
-    color: #373;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-warning {
-    color: #cb4;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-icon-alert {
-    background-color: #d82828;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-icon-success {
-    background-color: #373;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-icon-warning {
-    background-color: #cb4;
-  }
-  .ghh-theme-github-dark .ghh-reviews .ghh-state-icon-problem {
-    background-color: #444;
-  }
-  /* end github-hovercard rules */
+  /* generated github-hovercard rules */
   /* begin gitako rules */
   body.gitako-ready :root,
   body.gitako-ready :root[data-color-mode=dark][data-dark-theme=light],

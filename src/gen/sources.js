@@ -102,14 +102,15 @@ export default async (Cookie) => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
-    {
-      name: "github-hovercard",
-      crx: "mmoahbbnojgkclgceahhakhnccimnplk",
-      prefix: `html[class*="ghh-"]`,
-      match: ["html", ".ghh-theme-"],
-      file: resolve(__dirname, "../src/extensions.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-    },
+    // disabled because extension was taken down by Google
+    // {
+    //   name: "github-hovercard",
+    //   crx: "mmoahbbnojgkclgceahhakhnccimnplk",
+    //   prefix: `html[class*="ghh-"]`,
+    //   match: ["html", ".ghh-theme-"],
+    //   file: resolve(__dirname, "../src/extensions.css"),
+    //   fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+    // },
     {
       name: "gitako",
       crx: "giljefjcheohhamkjphiebfjnlphnokk",

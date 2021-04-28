@@ -67,12 +67,10 @@
 ## Supported GitHub Extensions
 
 💾 [Gitako](https://github.com/EnixCoda/Gitako)<br>
-💾 [GitHub Hovercard](https://github.com/Justineo/github-hovercard)<br>
 💾 [GitHub Notifications Dropdown](https://openuserjs.org/scripts/joeytwiddle/Github_Notifications_Dropdown)<br>
 💾 [GitHub Polls](https://github.com/apex/gh-polls)<br>
 💾 [Lovely forks](https://github.com/musically-ut/lovely-forks#lovely-forks)<br>
 💾 [Notifications Preview for GitHub](https://github.com/tanmayrajani/notifications-preview-github)<br>
-💾 [npm-hub](https://github.com/npmhub/npmhub)<br>
 💾 [OctoLinker](https://github.com/OctoLinker/OctoLinker)<br>
 💾 [Octotree](https://github.com/buunguyen/octotree/#octotree)<br>
 💾 [Refined GitHub](https://github.com/sindresorhus/refined-github)<br>
