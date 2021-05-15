@@ -1,7 +1,7 @@
 import esc from "escape-string-regexp";
 import fetchCss from "fetch-css";
 import remapCss from "remap-css";
-import {readFile} from "fs/promises";
+import {readFileSync} from "fs";
 import {resolve, basename, dirname} from "path";
 import cssnano from "cssnano";
 import {fileURLToPath} from "url";
@@ -53,15 +53,15 @@ async function getThemes() {
   const themes = {codemirror: [], github: [], jupyter: []};
 
   for (const path of glob("src/themes/codemirror/*.css").sort(sortThemes)) {
-    themes.codemirror[basename(path)] = await minify(await readFile(path, "utf8"));
+    themes.codemirror[basename(path)] = await minify(readFileSync(path, "utf8"));
   }
 
   for (const path of glob("src/themes/github/*.css").sort(sortThemes)) {
-    themes.github[basename(path)] = await minify(await readFile(path, "utf8"));
+    themes.github[basename(path)] = await minify(readFileSync(path, "utf8"));
   }
 
   for (const path of glob("src/themes/jupyter/*.css").sort(sortThemes)) {
-    themes.jupyter[basename(path)] = replaceCSSMatches(await minify(await readFile(path, "utf8")));
+    themes.jupyter[basename(path)] = replaceCSSMatches(await minify(readFileSync(path, "utf8")));
   }
 
   return themes;
@@ -83,9 +83,9 @@ async function main() {
     validate: true,
   };
 
-  const {version} = JSON.parse(await readFile(resolve(__dirname, "../package.json"), "utf8"));
+  const {version} = JSON.parse(readFileSync(resolve(__dirname, "../package.json"), "utf8"));
 
-  let css = await readFile(resolve(__dirname, "../src/template.css"), "utf8");
+  let css = readFileSync(resolve(__dirname, "../src/template.css"), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;
 
   for (const [type, themes] of Object.entries(await getThemes())) {
@@ -102,7 +102,7 @@ async function main() {
   }));
 
   for (const sourceFile of sourceFiles) {
-    let sourceCss = await readFile(sourceFile, "utf8");
+    let sourceCss = readFileSync(sourceFile, "utf8");
     for (let [index, section] of Object.entries(sections)) {
       const source = sources[Number(index)];
       if (basename(source.file) === basename(sourceFile)) {
@@ -117,7 +117,7 @@ async function main() {
     css += `${sourceCss.trim()}\n`;
   }
 
-  await writeFile(resolve(__dirname, "../github-dark.user.css"), css);
+  writeFile(resolve(__dirname, "../github-dark.user.css"), css);
 }
 
 main().then(exit).catch(exit);

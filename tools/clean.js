@@ -1,5 +1,5 @@
 import perfectionist from "perfectionist";
-import {readFile} from "fs/promises";
+import {readFileSync} from "fs";
 import {basename} from "path";
 import {writeFile, exit, glob} from "./utils.js";
 
@@ -19,7 +19,7 @@ async function main() {
   for (const file of glob("src/*.css")) {
     if (basename(file) === "template.css") continue;
 
-    let css = await readFile(file, "utf8");
+    let css = readFileSync(file, "utf8");
 
     // run perfectionist
     const result = await perfectionist.process(css, {indentSize: 2, maxAtRuleLength: 250});
@@ -30,7 +30,7 @@ async function main() {
       css = css.replace(replacement.from, replacement.to);
     }
 
-    await writeFile(file, css);
+    writeFile(file, css);
   }
 }
 

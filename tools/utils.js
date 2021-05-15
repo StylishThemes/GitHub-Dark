@@ -3,7 +3,7 @@ import fetchEnhanced from "fetch-enhanced";
 import nodeFetch from "node-fetch";
 import {platform} from "os";
 import {resolve, dirname} from "path";
-import {writeFile as wf, truncate} from "fs/promises";
+import {writeFileSync, truncateSync} from "fs";
 import {fileURLToPath} from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -11,16 +11,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const fetch = fetchEnhanced(nodeFetch);
 
 // version of writeFile that preserves metadata on WSL and Cygwin platforms
-export async function writeFile(file, content) {
+export function writeFile(file, content) {
   if (platform() === "win32") {
     try {
-      await truncate(file);
-      await wf(file, content, {flag: "r+"});
+      truncateSync(file);
+      writeFileSync(file, content, {flag: "r+"});
     } catch {
-      await wf(file, content);
+      writeFileSync(file, content);
     }
   } else {
-    await wf(file, content);
+    writeFileSync(file, content);
   }
 }
 
