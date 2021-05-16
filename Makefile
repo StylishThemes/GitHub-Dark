@@ -8,13 +8,13 @@ build: node_modules
 
 deps: node_modules
 
-node_modules: yarn.lock
-	@yarn -s --pure-lockfile
+node_modules: package-lock.json
+	npm install --no-save
 	@touch node_modules
 
 lint: node_modules
-	yarn -s run eslint --color src/gen tools
-	yarn -s run stylelint --color src
+	npx eslint --color src/gen tools
+	npx stylelint --color src
 
 authors:
 	bash tools/authors.sh
@@ -26,21 +26,21 @@ install: node_modules
 	node tools/install.js
 
 update: node_modules
-	yarn -s run updates -cu
-	yarn -s run rimraf node_modules
-	yarn -s
-	@touch yarn.lock
+	npx updates -cu
+	npx rimraf node_modules
+	npm install
+	@touch package-lock.json
 
 patch: node_modules lint
-	yarn -s run versions -pdC patch $(wildcard *.user.css)
+	npx versions -pdC patch $(wildcard *.user.css)
 	git push --tags origin master
 
 minor: node_modules lint
-	yarn -s run versions -pdC minor $(wildcard *.user.css)
+	npx versions -pdC minor $(wildcard *.user.css)
 	git push --tags origin master
 
 major: node_modules lint
-	yarn -s run versions -pdC major $(wildcard *.user.css)
+	npx versions -pdC major $(wildcard *.user.css)
 	git push --tags origin master
 
 .PHONY: all test build deps lint authors clean install update patch minor major

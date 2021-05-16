@@ -123,8 +123,7 @@ If you would like to contribute to this repository, please...
 1. [![fork](https://user-images.githubusercontent.com/136959/42383736-c4cb0db8-80fd-11e8-91ca-12bae108bccc.png) Fork](https://github.com/StylishThemes/GitHub-Dark/fork)
 2. Make sure you have these installed:
 
-- [`node`](https://nodejs.org): version 12 or greater
-- [`yarn`](https://classic.yarnpkg.com/en/docs/install/): version 1
+- [`node`](https://nodejs.org): version 14 or greater with npm
 - `make`: available with UNIX-like OS, on Windows you can use [this](https://stackoverflow.com/a/54086635/808699)
 
 3. run `make build install` to rebuild the style and install in the default browser.
