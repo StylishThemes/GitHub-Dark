@@ -4,9 +4,8 @@ import {fileURLToPath} from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-export default async (Cookie) => {
+export default async () => {
   const desktopUserAgent = await userAgent();
-  const mobileUserAgent = await userAgent(true);
 
   return [
     {
@@ -20,13 +19,6 @@ export default async (Cookie) => {
       name: "gist.github.com",
       url: "https://gist.github.com/",
       file: resolve(__dirname, "../src/gist.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-      strict: true,
-    },
-    {
-      name: "docs.github.com",
-      url: "https://docs.github.com/",
-      file: resolve(__dirname, "../src/docs.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
       strict: true,
     },
