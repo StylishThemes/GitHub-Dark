@@ -29,7 +29,7 @@ update: node_modules
 	npx updates -cu
 	npx rimraf node_modules
 	npm install
-	@touch package-lock.json
+	@touch node_modules package-lock.json
 
 patch: node_modules lint
 	npx versions -pdC patch $(wildcard *.user.css)
