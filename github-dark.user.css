@@ -23194,6 +23194,10 @@
     --color-checks-input-placeholder-text: #767676;
     --color-checks-input-focus-text: #767676;
     --color-checks-input-bg: #c6c6c6;
+    --color-checks-donut-error: #d82828;
+    --color-checks-donut-pending: #cb4;
+    --color-checks-donut-success: #484;
+    --color-checks-donut-neutral: #767676;
     --color-checks-dropdown-text: #343434;
     --color-checks-dropdown-bg: #c6c6c6;
     --color-checks-dropdown-border: #afafaf;
@@ -23831,6 +23835,10 @@
       --color-checks-input-placeholder-text: #767676;
       --color-checks-input-focus-text: #767676;
       --color-checks-input-bg: #c6c6c6;
+      --color-checks-donut-error: #d82828;
+      --color-checks-donut-pending: #cb4;
+      --color-checks-donut-success: #484;
+      --color-checks-donut-neutral: #767676;
       --color-checks-dropdown-text: #343434;
       --color-checks-dropdown-bg: #c6c6c6;
       --color-checks-dropdown-border: #afafaf;
@@ -24469,6 +24477,10 @@
       --color-checks-input-placeholder-text: #767676;
       --color-checks-input-focus-text: #767676;
       --color-checks-input-bg: #c6c6c6;
+      --color-checks-donut-error: #d82828;
+      --color-checks-donut-pending: #cb4;
+      --color-checks-donut-success: #484;
+      --color-checks-donut-neutral: #767676;
       --color-checks-dropdown-text: #343434;
       --color-checks-dropdown-bg: #c6c6c6;
       --color-checks-dropdown-border: #afafaf;
@@ -24671,12 +24683,14 @@
   .btn-invisible {
     box-shadow: none;
   }
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
-  .btn-invisible:focus, .btn-invisible:hover,
-  .btn-invisible[aria-selected=true] {
+  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
     background: none;
     box-shadow: none;
+  }
+  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible:active, .btn-invisible:focus,
+  .btn-invisible[aria-selected=true] {
+    background: none;
   }
   .btn-invisible.disabled, .btn-invisible:disabled,
   .btn-invisible[aria-disabled=true], .btn-octicon {
@@ -24695,13 +24709,17 @@
   .tabnav-tab, .UnderlineNav-item {
     background-color: transparent;
   }
-  .UnderlineNav-item.selected,
-  .UnderlineNav-item[aria-current]:not([aria-current=false]),
-  .UnderlineNav-item[role=tab][aria-selected=true] {
-    border-bottom-color: #fff;
-  }
-  .dropdown-signout, .flash-close {
+  .flash-close {
     background: none;
+  }
+  .dropdown-item:focus > .Label, .dropdown-item:hover > .Label {
+    border-color: currentcolor;
+  }
+  .dropdown-signout {
+    background: none;
+  }
+  .Header-input {
+    box-shadow: none;
   }
   .label, .Label {
     background-color: transparent !important;
