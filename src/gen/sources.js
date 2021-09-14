@@ -23,13 +23,6 @@ export default async () => {
       strict: true,
     },
     {
-      name: "developer.github.com",
-      url: "https://developer.github.com/",
-      file: resolve(__dirname, "../src/developer.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-      strict: true,
-    },
-    {
       name: "graphql.github.com",
       url: "https://graphql.github.com/", // https://developer.github.com/v4/explorer
       file: resolve(__dirname, "../src/graphql.css"),
