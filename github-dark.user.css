@@ -2417,10 +2417,6 @@
     background: #182030;
     border-color: #246;
   }
-  /* Reduce border radius on tracked issue element */
-  tracked-issues-progress div[style*="border-radius"] {
-    border-radius: 8px !important;
-  }
   /* Monochrome Issue progress icon */
   tracked-issues-progress circle[stroke] {
     --color-accent-fg: #ccc;
@@ -3113,18 +3109,6 @@
   /* change foreground color of yellow boxes */
   .Toast--warning .Toast-icon {
     color: #222;
-  }
-  /* reduce border radius */
-  .btn {
-    border-radius: var(--ghd-border-radius);
-  }
-  .social-count {
-    border-top-right-radius: var(--ghd-border-radius);
-    border-bottom-right-radius: var(--ghd-border-radius);
-  }
-  .SelectMenu-tab {
-    border-top-left-radius: var(--ghd-border-radius);
-    border-top-right-radius: var(--ghd-border-radius);
   }
   /* change forground color of disabled things */
   .btn-primary.disabled, .btn-primary:disabled,
@@ -3932,7 +3916,7 @@
   .new-discussion-timeline .composer .timeline-comment::after {
     border-right-color: var(--ghd-bg-color);
   }
-  /* toc in markdown, reset border-collaps so border-radius works   */
+  /* toc in markdown, reset border-collapse so border-radius works  */
   /* https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki */
   #user-content-toc {
     border-collapse: separate !important;
@@ -21345,7 +21329,6 @@
     --ghd-code-background: #141414;
     --ghd-main-background: #181818;
     --ghd-border-color: #343434;
-    --ghd-border-radius: 4px;
     --ghd-code-color: #ccc;
     --ghd-body-color: #ccc;
   /* github vars */
@@ -21413,6 +21396,7 @@
     --color-bg-tertiary: #282828;
     --color-blankslate-icon: #afafaf;
     --color-border-default: #343434;
+    --color-border-info: /*[[base-color]]*/;
     --color-border-inverse: #343434;
     --color-border-muted: #343434;
     --color-border-overlay: #343434;
@@ -21515,10 +21499,14 @@
     --color-current-user-tip-border: #246;
     --color-diff-blob-addition-line-bg: #002800;
     --color-diff-blob-addition-num-bg: #0a320a;
+    --color-diff-blob-addition-num-hover-text: #e6e6e6;
+    --color-diff-blob-addition-num-text: #939393;
     --color-diff-blob-addition-word-bg: #252;
     --color-diff-blob-comment-button-icon: #fff;
     --color-diff-blob-deletion-line-bg: #380000;
     --color-diff-blob-deletion-num-bg: #420a0a;
+    --color-diff-blob-deletion-num-hover-text: #e6e6e6;
+    --color-diff-blob-deletion-num-text: #939393;
     --color-diff-blob-deletion-word-bg: #622;
     --color-diff-blob-empty-block-bg: #282828;
     --color-diff-blob-expander-hover-bg: /*[[base-color]]*/;
