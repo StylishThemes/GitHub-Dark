@@ -179,7 +179,7 @@
   } EOT;
 }
 ==/UserStyle== */
-@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com/((?!(sponsors|readme)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   button {
     color: #b5b5b5;
   }
@@ -3700,7 +3700,7 @@
     padding-top: 0 !important;
   }
 }
-@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com/((?!(sponsors|readme)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   /*[[syntax-theme]]*//*[[syntax-jupyter]]*/
   /* inline code - big blocks */
   .highlight {
@@ -3750,7 +3750,7 @@
     border: 1px solid rgba(255, 255, 255, .1) !important;
   }
 }
-@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com/((?!(sponsors|readme)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
+@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
   .CodeMirror {
     background-color: var(--ghd-code-background) !important;
     color: var(--ghd-code-color) !important;
@@ -3797,7 +3797,7 @@
   }
   /*[[syntax-codemirror]]*/
 }
-@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com/((?!(sponsors|readme)).)*$"), domain("gist.github.com") {
+@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("gist.github.com") {
   /* begin refined-github rules */
   html.refined-github {
     --github-green: var(--color-text-success, #484);
@@ -7004,1191 +7004,6 @@
   }
   /* end notifications-preview rules */
   /* begin octotree rules */
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] a[href^="https://apps.apple.com"] svg {
-    fill: #f0f0f0;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme].refined-github .repository-content #readme:not(.blob) .Box-header {
-    background-color: transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme].refined-github .js-issue-row [aria-label="Open draft pull request"] svg {
-    color: #fff !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger[aria-disabled=true],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline[aria-disabled=true],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .input-dark,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .upload-enabled.focused .form-control {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme].refined-github .js-expandable-line:hover .blob-num:not(:hover) + .blob-code,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme].refined-github .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme].refined-github .rgh-clean-conversation-headers-non-default-branch a {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] a {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme]:root {
-    --color-scale-gray-4: #767676;
-    --color-scale-orange-4: #fb8532;
-    --color-scale-orange-5: #fb8532;
-    --color-scale-orange-6: #fb8532;
-    --color-auto-gray-4: #767676;
-    --color-auto-orange-4: #fb8532;
-    --color-auto-orange-5: #fb8532;
-    --color-auto-orange-6: #fb8532;
-    --color-icon-tertiary: #767676;
-    --color-blankslate-icon: #767676;
-    --color-label-orange-border: #fb8532;
-    --color-branch-name-icon: #767676;
-    --color-branch-name-link-icon: #767676;
-    --color-markdown-table-tr-border: #767676;
-    --color-menu-border-active: #181818;
-    --color-sidenav-border-active: #181818;
-    --color-hidden-text-expander-bg-hover: #767676;
-    --color-drag-and-drop-border: #767676;
-    --color-previewable-comment-form-border: #767676;
-    --color-underlinenav-border-active: #181818;
-    --color-underlinenav-icon: #767676;
-    --color-underlinenav-icon-hover: #767676;
-    --color-global-nav-input-placeholder: #767676;
-    --color-prettylights-syntax-variable: #fb8532;
-    --color-prettylights-syntax-markup-changed-text: #fb8532;
-    --color-prettylights-syntax-sublimelinter-gutter-mark: #767676;
-    --color-codemirror-linenumber-text: #767676;
-    --color-codemirror-syntax-variable: #fb8532;
-    --ghd-code-color: #5a5a5a;
-    --ghd-body-color: #5a5a5a;
-    --color-ansi-blue-bright: #246;
-    --color-ansi-blue: /*[[base-color]]*/;
-    --color-ansi-gray: #767676;
-    --color-ansi-green-bright: #040;
-    --color-ansi-green: #040;
-    --color-ansi-magenta-bright: #53387a;
-    --color-ansi-magenta: #53387a;
-    --color-ansi-red-bright: #d82828;
-    --color-ansi-red: #d82828;
-    --color-ansi-white-bright: #343434;
-    --color-ansi-white: #343434;
-    --color-ansi-yellow-bright: #651;
-    --color-ansi-yellow: #cb4;
-    --color-border-tertiary: #afafaf;
-    --color-btn-danger-hover-text: #181818;
-    --color-btn-danger-selected-text: #181818;
-    --color-btn-outline-hover-text: #181818;
-    --color-btn-primary-text: #181818;
-    --color-diff-blob-comment-button-icon: #181818;
-    --color-diff-blob-expander-hover-icon: #181818;
-    --color-merge-box-error-icon-text: #181818;
-    --color-merge-box-merged-icon-text: #181818;
-    --color-merge-box-neutral-icon-text: #181818;
-    --color-merge-box-neutral-indicator-bg: #afafaf;
-    --color-merge-box-success-icon-text: #181818;
-    --color-merge-box-warning-icon-text: #181818;
-    --color-pr-state-closed-text: #181818;
-    --color-pr-state-draft-text: #181818;
-    --color-pr-state-merged-text: #181818;
-    --color-pr-state-open-text: #181818;
-    --color-state-hover-primary-icon: #181818;
-    --color-state-hover-primary-text: #181818;
-    --color-state-selected-primary-icon: #181818;
-    --color-state-selected-primary-text: #181818;
-    --color-text-inverse: #181818;
-    --color-text-white: #181818;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .rule,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] hr {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-link {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible.selected,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible.zeroclipboard-is-active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible.zeroclipboard-is-hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible[aria-selected=true] {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible[aria-disabled=true] {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .close-button {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .filter-list.pjax-active .filter-item,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .inline-form .btn-plain,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .SideNav-item,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .SideNav-subItem,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .tabnav-tab,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .UnderlineNav-item {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .UnderlineNav-item.selected,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .UnderlineNav-item[aria-current]:not([aria-current=false]),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .UnderlineNav-item[role=tab][aria-selected=true] {
-    border-bottom-color: var(--ghd-bg-color);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .box-shadow-none {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .details-overlay[open] > summary::before {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] image-crop .handle::before {
-    border-color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.intent-mouse [role=button]:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.intent-mouse [role=tabpanel][tabindex="0"]:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.intent-mouse a:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.intent-mouse button:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.intent-mouse summary:focus {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .session-authentication .auth-form-header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .session-authentication.enterprise .header-logged-out,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .session-authentication .header-logged-out,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .session-authentication.hosted .header-logged-out {
-    background-color: initial;
-  }
-  @media (min-width:1012px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-responsive .HeaderMenu--logged-out {
-      background-color: initial;
-      box-shadow: none;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .HeaderMenu-link,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-responsive .HeaderMenu-link {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-responsive .HeaderMenu--logged-out .dropdown-menu {
-    box-shadow: none;
-  }
-  @media (min-width:1012px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-responsive .HeaderMenu-link .icon-chevon-down-mktg {
-      background-color: transparent;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-search-input,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-search-input:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-search-wrapper,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-search-wrapper.focus {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .jump-to-suggestions-path mark {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Label,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .label {
-    background-color: initial !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body .emoji,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body table img {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body pre > code {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body pre code,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body pre tt,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-closeButton,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-tab,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Toast-dismissButton {
-    background-color: initial;
-  }
-  @media (min-width:544px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-tab[aria-selected=true] {
-      box-shadow: none;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-button::after {
-    border-top-color: currentcolor;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-header .close-button,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-header .octicon {
-    color: var(--color-icon-tertiary, #767676);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-text-filter input:-ms-input-placeholder {
-    color: var(--color-text-placeholder, #767676);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-text-filter input::-ms-input-placeholder {
-    color: var(--color-text-placeholder, #767676);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .locked-conversation .preview-tab,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .locked-conversation .write-tab,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .table-of-contents .toc-diff-stats .octicon {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-tabs .select-menu-tab-nav,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-tabs a {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu.label-select-menu .select-menu-item:active {
-    background-color: initial !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Box--overlay {
-    box-shadow: 0 0 18px #f0f0f0;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .comment-body .highlight {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .full-commit .sha-block > a {
-    border-bottom-color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branches-tag-list li .ellipsis-expander:hover {
-    background-color: #afafaf;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .signed-commit-badge:hover {
-    border-color: #767676;
-  }
-  @media (min-width:1012px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-responsive .previewable-comment-form .comment-form-head.tabnav .toolbar-commenting {
-      background-color: transparent;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .previewable-comment-form .comment-body {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .notifications-component-dialog:not([hidden]) + .notifications-component-dialog-overlay {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .reponav-wrapper .reponav-item.selected {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .steps li {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .max--md .content-attachment-content--gradient {
-    background: linear-gradient(180deg, transparent, #181818 calc(100% - 28px));
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .subtasks-add {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .integrations-install-target .flash,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .integrations-install-target .flash-error {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .credit-card.normal .signature,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .link-small {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .blame-commit[data-heat="1"] {
-    border-right-color: #fb8532;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .heat[data-heat="1"] {
-    background-color: #fb8532;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-a-b-count .meter {
-    background-color: var(--color-auto-gray-3, #767676);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-a-b-count .meter.zero {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep-header-dropdown-menu {
-    box-shadow: 0 8px 24px #000 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-search .btn {
-    background-color: rgba(220, 220, 220, .125);
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-search .btn[disabled] {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn-link:hover:not([disabled]),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn.btn-link:hover:not([disabled]) .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-search-input {
-    background-color: rgba(220, 220, 220, .125);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [data-color-mode=dark] .CheckRun-header-counter {
-    background-color: initial;
-  }
-  @media (prefers-color-scheme:dark) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] [data-color-mode=auto] .CheckRun-header-counter {
-      background-color: initial;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .search-form-fluid .search-page-input {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .community-checklist .progress-bar,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .emoji-picker-tab .btn-outline:not(:hover) {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .dashboards-overview-cards .blankslate,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .search-form-fluid .search-page-input:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] :target .discussion-nested-comment-group .timeline-comment,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] :target .nested-discussion-timeline-comment {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .topic-input-container .tag-input .tag-input-inner {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .team-discussions .previewable-comment-form .toolbar-commenting.toolbar-commenting.toolbar-commenting {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .team-discussion-new-post .review-thread-reply-button:disabled {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .team-project-suggestion-number {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hook-deliveries-list .hook-delivery-item:hover {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .integrations-select-repos::-webkit-scrollbar-track-piece {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .task-progress .octicon {
-    color: var(--color-icon-tertiary, #767676);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .label-select-menu .selected:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .label-select-menu [aria-checked=mixed]:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .label-select-menu [aria-checked=true]:active {
-    background-color: initial !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repository-lang-stats ol.repository-lang-stats-numbers li a:hover {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceEdit-body .CircleIcon {
-    background-color: #afafaf;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceAnnouncement .btn-outline-mktg {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .merge-branch-manually {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .notifications-v2 .thread-subscription-status {
-    background-color: initial !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .oauth-permissions-details.open a.btn-sm {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .reinstate-org-member .reinstate-title .octicon {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .progress-pjax-loader {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .avatar-upload .flash,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .user-profile-nav {
-    box-shadow: none;
-  }
-  @media (min-width:544px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .project-full-screen .card-filter-input {
-      background-color: rgba(220, 220, 220, .125);
-      box-shadow: none;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .application-show-group .drag-and-drop,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .saved-reply-form .comment-body,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .timeout {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .session-device .session-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .two-factor-recovery-code-mark {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_badge-search-container .hx_badge-input,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_flex-avatar-stack-item .avatar,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .tag-input input:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .team-label-ldap,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .tree-finder-input,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .tree-finder-input:focus {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repository-merge-features .form-group.errored .error {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .setup-header h1 .octicon {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .intro-shelf {
-    background-image: linear-gradient(180deg, transparent 60%, var(--color-bg-primary)), linear-gradient(70deg, var(--color-bg-info) 32%, var(--color-bg-success));
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .tag-input input {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .actions-workflow-navigation .row-section {
-    background-color: transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .actions-workflow-navigation .row-parent {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .actions-workflow-navigation .row-parent:hover {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .ActionsApprovalOverlay-environment .AvatarStack-body {
-    background-color: transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .AvatarStack-body:not(:hover),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [data-color-mode-unset=true] .promo-color-modes {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_badge-search-container .hx_badge-input:focus {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Box--responsive .Box-row--unread,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:active .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:focus .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header-button:hover .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .notification-list-item-actions .btn {
-    box-shadow: none;
-  }
-  @media (prefers-color-scheme:light) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] [data-color-mode=auto] {
-      --color-scale-gray-4: #767676;
-      --color-scale-orange-4: #fb8532;
-      --color-scale-orange-5: #fb8532;
-      --color-scale-orange-6: #fb8532;
-      --color-auto-gray-4: #767676;
-      --color-auto-orange-4: #fb8532;
-      --color-auto-orange-5: #fb8532;
-      --color-auto-orange-6: #fb8532;
-      --color-icon-tertiary: #767676;
-      --color-blankslate-icon: #767676;
-      --color-label-orange-border: #fb8532;
-      --color-branch-name-icon: #767676;
-      --color-branch-name-link-icon: #767676;
-      --color-markdown-table-tr-border: #767676;
-      --color-menu-border-active: #181818;
-      --color-sidenav-border-active: #181818;
-      --color-hidden-text-expander-bg-hover: #767676;
-      --color-drag-and-drop-border: #767676;
-      --color-previewable-comment-form-border: #767676;
-      --color-underlinenav-border-active: #181818;
-      --color-underlinenav-icon: #767676;
-      --color-underlinenav-icon-hover: #767676;
-      --color-global-nav-input-placeholder: #767676;
-      --color-prettylights-syntax-variable: #fb8532;
-      --color-prettylights-syntax-markup-changed-text: #fb8532;
-      --color-prettylights-syntax-sublimelinter-gutter-mark: #767676;
-      --color-codemirror-linenumber-text: #767676;
-      --color-codemirror-syntax-variable: #fb8532;
-      --color-ansi-gray: #767676;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_breadcrumb-header .feature-preview-indicator,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_breadcrumb-header .notification-indicator .mail-status {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hx_button-transparent {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .autocomplete-item {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-item:hover .Label {
-    border-color: currentcolor;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pagehead-tabs-item.selected,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .reponav-item.selected {
-    border-top-color: var(--ghd-bg-color);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-mktg {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline-mktg,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline-mktg:hover {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-transparent {
-    color: #fff;
-    background-color: initial;
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-transparent:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-transparent:hover {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-black-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-green-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-lg-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-purple-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid.hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid.selected,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-white-outline-mktg-fluid[aria-selected=true],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [open] > .btn-white-outline-mktg-fluid {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible-mktg-fluid.focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible-mktg-fluid:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-lg-invisible-mktg-fluid.focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-lg-invisible-mktg-fluid:focus {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-invisible-mktg-fluid.text-underline,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-lg-invisible-mktg-fluid.text-underline {
-    background-color: initial !important;
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .customer-story-overlay {
-    background-image: linear-gradient(180deg, #f0f0f0 -5%, transparent 50%);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .bg-orange {
-    background-color: #fb8532 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .text-gray-light-ultra {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .underline-dashed {
-    background-image: linear-gradient(90deg, #343434 50%, transparent 0);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .link-white-mktg {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .particle-circle-orange,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .particle-circle-orange-2 {
-    background-color: #fb8532;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .subnav-btn {
-    background-color: transparent;
-  }
-  @media (min-width:768px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .subnav-btn {
-      color: #fff;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .subnav-btn:hover {
-    background-color: transparent;
-  }
-  @media (min-width:768px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .subnav-btn:hover {
-      color: #fff;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .fade-img-to-white-bg::before {
-    background: linear-gradient(180deg, #181818 0, transparent);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .fade-img-to-white-bg::after {
-    background: linear-gradient(0deg, #181818 0, transparent);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pricing-plan-tab {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pricing-matrix-row-button,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pricing-testimonial-logo {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .codespaces-subtitle {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .section-codespaces-develop-night .codespaces-develop-header {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .section-codespaces-develop-night .codespaces-develop-text {
-    color: hsla(0, 0%, 0%, .2) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .section-codespaces-develop-night .codespaces-sun {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .jumbotron-link {
-    border-bottom-color: rgba(220, 220, 220, .125);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .home-hero-signup .form-control-note .notice-highlight {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .customer-story-card {
-    box-shadow: 0 2px 4px #f0f0f0;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .card-mktg {
-    box-shadow: 0 1px 15px #f0f0f0, 0 0 1px rgba(106, 115, 125, .35);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .border-orange {
-    border-color: #fb8532 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .actions-event-token,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .actions-template-repo {
-    color: #767676;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .insights-hero-text::after {
-    background-image: linear-gradient(rgba(0, 0, 0, .85), transparent);
-  }
-  @media (min-width:1012px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .insights-hero-text {
-      background-color: initial;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-white .Header-old .HeaderMenu-link.border,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-white .Header-old a.border,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-white .header-search-wrapper .text-white,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-white .Header .HeaderMenu-link.border,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-white .Header a.border {
-    color: #fff !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .features-btn-clear-bg,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .features-btn-clear-bg::before {
-    background-image: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .features-category--dark .features--color-title {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .features-category--apps-illo1-inner2 {
-    background: linear-gradient(167.44deg, rgba(0, 0, 0, .7) 38.78%, transparent 125.06%);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project #js-flash-container .flash,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project #js-flash-container .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--blue,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--blue:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--blue:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--green,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--green:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--green:hover {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .gpr-cli-tab {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--blue span {
-    background-image: linear-gradient(180deg, transparent 98.5%, #4f80f9 0);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-underline--green span {
-    background-image: linear-gradient(180deg, transparent 98.5%, #6ddb90 0);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project .Header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project .Header-old {
-    background-color: initial !important;
-    background-image: linear-gradient(0deg, transparent, rgba(0, 0, 0, .7)) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-btn-outline {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project-content--editorial h3,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-project-content--editorial strong,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-social-link:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-social-link:hover {
-    color: #fff !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [name=user-content-code-link]::after {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-input,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .readme-textarea {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .mobile-particle-circle-orange,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .mobile-particle-square-orange {
-    background-color: #fb8532;
-  }
-  @media (min-width:544px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .summarylink:active .summarylink-btn,
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .summarylink:hover .summarylink-btn {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .communitystats .summary-circle.bg-orange {
-    background-color: #fb8532 !important;
-  }
-  @media (min-width:768px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .DeveloperVideo-data {
-      background-image: linear-gradient(transparent, rgba(27, 31, 35, .95));
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .signup-prompt-bg {
-    background-image: linear-gradient(180deg, transparent 50%, #181818), linear-gradient(70deg, #182030 32%, #f6fff8);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .SegmentedNav .subnav-item.selected {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-overlay .Header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .header-overlay .header-logged-out {
-    background-color: initial;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .choose-team-lp .hero-form .tooltipped {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .choose-team-lp .customer-quote {
-    box-shadow: 0 4px 12px #f0f0f0;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::selection {
-    color: #fff !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::-moz-selection {
-    color: #fff !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::-webkit-input-placeholder {
-    color: #9b9b9b !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::-moz-placeholder {
-    color: #9b9b9b !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::placeholder {
-    color: #9b9b9b !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-text-filter input::-webkit-input-placeholder {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-text-filter input::-moz-placeholder {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-text-filter input::placeholder {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ::-webkit-calendar-picker-indicator:hover {
-    color: #9b9b9b;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:hover:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:hover:active:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:hover:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=radio],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=radio]:focus,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=radio]:hover:active {
-    border-color: #afafaf;
-    color: #2c2c2c;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:hover:active:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=checkbox]:hover:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input[type=radio]:disabled {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Label--gray-darker {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CircleBadge--github::after {
-    background-color: #181818;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input.tree-finder-input,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] input.tree-finder-input:focus {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .dropdown-menu,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .select-menu-modal,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .word-upload-callout {
-    box-shadow: 0 3px 12px #000;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .exploregrid-item:hover {
-    border-color: hsla(0, 0%, 0%, .15) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .box-shadow-large,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] html[class*=ghh-] .tooltipster-box {
-    box-shadow: 0 1px 15px #f0f0f0 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] img[src*="images/modules/checks"].box-shadow-large {
-    box-shadow: 0 1px 15px var(--ghd-bg-color) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .js-current .standalone a,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .section-nav .active a,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .sidebar-module .disable > a {
-    border-left-color: #2c2c2c !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .dropdown-arrow {
-    border-top-color: #2c2c2c !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #com #header .top-nav .dropdown-caret {
-    border-top-color: #5a5a5a !important;
-  }
-  @media screen and (min-width:1024px) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .site-subnav .subnav-primary.selected,
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .site-subnav .subnav-primary:hover {
-      border-bottom-color: #2c2c2c !important;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .filter-item.selected .Label--outline-white {
-    border-color: var(--ghd-bg-color);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .filter-tab.selected {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-action-state-closed-dirty .branch-action-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-action-state-dirty .branch-action-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .State[title*=drafti] {
-    background-color: #afafaf;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #org-members .member-listing,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .listings div.listing {
-    border-left-color: #c6c6c6 !important;
-    border-right-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceSideNav,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .plans-card-text:first-child {
-    border-right-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repo-filterer .repo-filter:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .review-summary::before {
-    border-bottom-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .context-button:hover::after,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .switcher > span::before {
-    border-color: #2c2c2c transparent transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branches .branch-summary + .branch-summary {
-    border-top-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .linkable-line-number {
-    border-right-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] div.container-lg > div.float-left.px-md-2 > .border.rounded-1.d-none.d-md-block {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repository-content > .bg-white:not(.card-filter-autocomplete-dropdown),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] button.bg-white.subnav-link,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] main [style="background-color: #fcfdfd;"] {
-    background-color: transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .action-card::after,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .action-card::before {
-    box-shadow: 0 0 0 1px #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .search-result-group {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .shelf {
-    background-image: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body[class=page-responsive] .repo-list .private {
-    background-color: initial;
-  }
-  @media (hover:hover) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-item[aria-checked=true]:active,
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-item[aria-checked=true]:hover,
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] body:not(.intent-mouse) .SelectMenu-item[aria-checked=true]:focus {
-      color: #343434;
-    }
-  }
-  @media (hover:none) {
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-item:active,
-    .octotree-sidebar html.octotree-gh[data-octotree-theme] .SelectMenu-item:focus {
-      color: #fff;
-    }
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .contrib-legend .legend li {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .calendar-graph .days-selected rect.day.active {
-    stroke: #343434 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .calendar-graph rect.day:hover {
-    stroke: #181818 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] img[src*="//render.githubusercontent.com/render/math"] {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .box-title-count {
-    background-color: #afafaf !important;
-    color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body > .container > p {
-    color: #5a5a5a;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-primary.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-primary:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-primary[aria-disabled=true],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn[aria-disabled=true] {
-    color: hsla(0, 0%, 0%, .3);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] :not(img) text,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] circle.day {
-    fill: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] circle.day:hover {
-    fill: #181818 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .traffic-graph g.axis:not(.views):not(.unique) g.tick:not(:nth-child(15)):not(:first-of-type) line,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] g.axis path,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] line.axis,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] svg:not(.vis) g.axis line {
-    stroke: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] svg.tick {
-    fill: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .community-checklist .progress-bar .progress {
-    background-color: #c6c6c6;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .labels .label-neutral,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] li.ssh-key .ssh-key-state-indicator.not-recent {
-    background-color: #9b9b9b !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Counter--gray {
-    background-color: #767676;
-    color: #f0f0f0;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .diverge-widget .separator {
-    background-color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .menu-item.selected::before {
-    background-color: #2c2c2c !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #network canvas {
-    background-color: #181818 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline-mktg,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline-mktg:hover {
-    background-color: transparent;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceAnnouncement .btn-outline-mktg {
-    border-color: #2c2c2c;
-    color: #2c2c2c;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceAnnouncement .btn-outline-mktg:hover {
-    color: #fff;
-    border-color: var(--ghd-bg-color);
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .MarketplaceAnnouncement {
-    color: #fff;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repo-file-upload-tree-target {
-    background: radial-gradient(ellipse at center, #f0f0f0 0, rgba(0, 0, 0, .6) 65%, rgba(0, 0, 0, .6) 100%) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .TimelineItem-break {
-    background: linear-gradient(to bottom, rgba(25, 25, 25, .8) 1%, transparent 80%) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .box-action:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .clone-url-button.selected > .clone-url-link:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hero .screenographic,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .hero .textographic,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .signup-button:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] a.signin:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] ul#bootcamp li a:hover h4 {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] main [style="background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));"] {
-    background: linear-gradient(to top, #181818, transparent) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [style*="background: #DBEDFF"] {
-    background-color: hsla(0, 0%, 0%, .1) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .ScreenshotCarousel-navitem.selected {
-    box-shadow: inset 0 0 10px hsla(0, 0%, 0%, .05) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .commits-list-item .committer-avatar {
-    box-shadow: -2px -2px 0 #000 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .box-shadow,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Header .header-search-wrapper.focus {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-blue:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-outline[aria-disabled=true],
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn:active,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .social-count,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .upload-progress {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #inbox .list .item .title span,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .metabox .editable-text:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Subhead.border-bottom-0,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [href="#organizations"][style*="background-color: #fff"] {
-    background-color: transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger.disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger:disabled,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-danger[aria-disabled=true] {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] [style*="border: 1px solid #f9b3dd"] .text-gray-dark {
-    color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #feedHeaderContainer,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #issues_search .results em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #message.minor,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #message .sent,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #missing-readme,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .blob-code .bg-yellow-light,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .bootcamp-help ul li,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-status.status-pending .discussion-item-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .btn-download,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .callout,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .chzn-results li em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .code-list-item-private .blob-num,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .code-list em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .codesearch-results #code_search_results .bg-yellow-light,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .commits-list-item em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .compare-cutoff,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .compare-pr-placeholder,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .deprecation-warning,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .diff-cutoff,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .discussion-event-status-renamed .discussion-item-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .discussion-item-review.is-pending .comment-form-head.tabnav,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .discussion-item-review.is-pending .file-header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .discussion-topic .branch-status.status-pending,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .ejector,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .facebox-alert,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .feature-tabs .tab-button,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .feedBackground,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .form-actions .tip,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .infotip,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .issue-list em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .label-private,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .Label.bg-yellow,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body li.added.moved,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .mini-callout,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .notification,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .page-notice,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .plan.free,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .prereceive-feedback,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repo-owner-tag .tag,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .repo-private-label,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .signed-out-comment,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .snippet em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .timeline-comment.unread-item .timeline-comment-header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .unsupported-browser,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .user-list em,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .wiki-list em {
-    color: #343434 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .release-label.prerelease,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .release .Label--prerelease {
-    border-color: #fb8532 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .avatar-bubble::before,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .discussion-bubble-content::before {
-    border-color: transparent #c6c6c6 transparent transparent !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .form-select:disabled {
-    color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .coupons .coupon-form-body {
-    background-image: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .js-details-container.navigation-focus .gobutton {
-    background: linear-gradient(#afafaf, #222) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .api pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-infobar,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .coupon-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .issues-list,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pagehead.repohead h1 .repo-label span,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pulls-list-group {
-    border-color: #afafaf;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .branch-link,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .milestone-list .progress-bar,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pull-info {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .more-repos {
-    border-top-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .capped-box,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .pull-head {
-    border-bottom-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #user-content-toc td,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .copyable-terminal,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body .highlight pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body code,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-body tt,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-format .highlight pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-format p > code,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .markdown-format pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .project-card .highlight pre,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .project-card code,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .rgh-parse-backticks {
-    border-color: hsla(0, 0%, 0%, .1) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .diff-line-pre {
-    color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .diff-table .line-comments {
-    border-top-color: #c6c6c6 !important;
-    border-bottom-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] #header-wrapper,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .menu li + li {
-    border-bottom-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .diff-table > tbody > tr[data-hunk]:hover > td.selected-line::after,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .highlight > tbody > tr:hover > td.blob-code-inner.highlighted::after {
-    background-color: hsla(0, 0%, 0%, .15) !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .blob-code-addition .x,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .blob-code-deletion .x,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .highlight .blob-code-addition .x,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .highlight .blob-code-deletion .x {
-    color: #2c2c2c !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header-counter,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn-link:hover:not([disabled]),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn-link:not([disabled]),
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn-link:not([disabled]) .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn.btn-link:hover:not([disabled]) .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .btn.btn-link:not([disabled]) .octicon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-search-icon,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep-header-label,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep-line:hover,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep .log-download-error,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep .log-line-error-next .CheckStep-line-content,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep .log-line-error .CheckStep-line-content,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep[open] .CheckStep-header,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep[open] .CheckStep-header-label {
-    color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckStep-header {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header .CheckRun-search-input {
-    color: #2c2c2c;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .CheckRun-header-counter {
-    background-color: #c6c6c6;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .project-card code {
-    background-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .refined-github .reaction-summary-item a {
-    box-shadow: none;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.zh_logged_in .zh-login-status {
-    border-color: #afafaf !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] body.zh_logged_in .zhc-workspace-switcher__header {
-    box-shadow: none !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme] .notifications-dropdown-arrow {
-    border-bottom-color: #c6c6c6 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=cobalt]:root,
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=idle-fingers]:root {
-    --ghd-code-color: #181818 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=monokai-spacegray-eighties]:root {
-    --ghd-code-color: #1d1d1d !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=terminal]:root {
-    --ghd-code-background: #f0f0f0 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=tomorrow-night-blue]:root {
-    --ghd-code-color: #181818 !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=tomorrow-night-eighties]:root {
-    --ghd-code-background: #f0f0f0 !important;
-    --ghd-code-color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=twilight]:root {
-    --ghd-code-color: #5a5a5a !important;
-  }
-  .octotree-sidebar html.octotree-gh[data-octotree-theme=vibrant-ink]:root {
-    --ghd-code-color: #181818 !important;
-  }
   .octotree-sidebar html.octotree-gh-legacy[data-octotree-theme]:not([data-octotree-theme=sidebar]):root {
     --ghd-code-color: #5a5a5a;
   }
@@ -10228,6 +9043,7 @@
   .octotree-sidebar .searchGitHubDarkStyles .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
   .octotree-sidebar html[data-octotree-theme] .octotree-sidebar li[role].jstree-node .jstree-anchor .octotree-search-match,
   .octotree-sidebar html[data-octotree-theme] .octotree-views .octotree-tree-view .jstree-default .jstree-search {
@@ -10236,7 +9052,8 @@
   @media (prefers-color-scheme:dark) {
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .octotree-search-match {
       color: #343434 !important;
     }
   }
@@ -10334,6 +9151,7 @@
   }
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
     box-shadow: none !important;
   }
@@ -10341,6 +9159,8 @@
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark] .octotree-sidebar.octotree-github-sidebar select,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=text],
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar select,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=text],
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar select,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar input[type=text],
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar select {
     box-shadow: none !important;
@@ -10357,6 +9177,12 @@
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active:disabled,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox],
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:disabled,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:focus,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active:disabled,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar input[type=checkbox],
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:disabled,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:focus,
@@ -10368,6 +9194,7 @@
   }
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
     --toggler-color-text: #181818;
     box-shadow: none;
@@ -10375,7 +9202,8 @@
   @media (prefers-color-scheme:dark) {
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar ::-webkit-scrollbar-thumb {
       box-shadow: none !important;
     }
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar input[type=text],
@@ -10383,7 +9211,9 @@
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar input[type=text],
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar select,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=text],
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar select {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar select,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=text],
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar select {
       box-shadow: none !important;
     }
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar input[type=checkbox],
@@ -10403,13 +9233,20 @@
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:focus,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active:disabled,
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox],
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:disabled,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:focus,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:active:disabled,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar input[type=checkbox]:hover:disabled {
       color: #2c2c2c;
       border-color: #afafaf;
     }
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-toggle,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-toggle {
       --toggler-color-text: #181818;
       box-shadow: none;
     }
@@ -10454,6 +9291,7 @@
   .octotree-sidebar .treeViewGitHubDarkStyles .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
+  .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-light-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
   .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
   .octotree-sidebar html[data-octotree-theme] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view li[role].jstree-node .jstree-anchor .jstree-ocl::before {
     color: #343434 !important;
@@ -10461,7 +9299,8 @@
   @media (prefers-color-scheme:dark) {
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto]:not([data-dark-theme]) .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
     .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
-    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before {
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_dimmed] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before,
+    .octotree-sidebar html:not([data-octotree-theme])[data-color-mode=auto][data-dark-theme=dark_high_contrast] .octotree-sidebar.octotree-github-sidebar .octotree-views .octotree-view.octotree-tree-view .jstree-ocl::before {
       color: #343434 !important;
     }
   }
@@ -20559,7 +19398,7 @@
     border-color: #343434;
   }
 }
-@-moz-document regexp("^https?://((education|graphql|gist|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com/((?!(sponsors|readme)).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
+@-moz-document regexp("^https?://((education|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
   :root:root {
   /* github dark vars */
     --ghd-bg-custom: /*[[bg-custom]]*/;
