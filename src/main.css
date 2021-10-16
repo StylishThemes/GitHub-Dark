@@ -37,18 +37,16 @@
     background: transparent !important;
   }
   /* Base link colors */
-  table.files .octicon-file-directory,
-  table.files .octicon-file-symlink-directory,
-  table.files .octicon-file-submodule, .header-logo-invertocat:hover,
   .markdown-body a strong, .markdown-format a strong,
   .notifications.list-group a:hover, a.octolinker-link[href], .commit-id:hover,
-  body[class="page-responsive"] .files-list .octicon,
   .timeline-comment-action:hover, .Header-link[data-ga-click]:focus,
   .Header-link[data-ga-click]:hover, .btn-link .octicon-kebab-horizontal:hover,
   .Header-link:hover, .Header-link:focus {
     color: /*[[base-color]]*/;
   }
-  .text-gray-light.btn-octicon:hover .octicon-kebab-horizontal {
+  .text-gray-light.btn-octicon:hover .octicon-kebab-horizontal,
+  [aria-labelledby="files"] .Link--primary,
+  [aria-labelledby="files"] .Link--secondary {
     color: /*[[base-color]]*/ !important;
   }
   #notebook a:hover, #notebook a:focus {
@@ -762,10 +760,6 @@
   /* code */
   .linkable-line-number {
     border-right: 1px solid #484848 !important;
-  }
-  /* File listings - fix date truncation */
-  table.files td.age .css-truncate {
-    max-width: none !important;
   }
   /* https://github.com/StylishThemes/GitHub-Dark/issues/620 */
   .timeline-comment-header .css-truncate-target {
@@ -2027,11 +2021,6 @@
   }
   .js-details-container.navigation-focus .gobutton {
     background: linear-gradient(#444, #222) !important;
-  }
-  /* no top border radius */
-  table.files {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
   }
   /* add border */
   .issues-list, .pulls-list-group, .branch-infobar,
