@@ -27,7 +27,6 @@ install: node_modules
 
 update: node_modules
 	npx updates -cu
-	npx rimraf node_modules
 	npm install
 	@touch node_modules package-lock.json
 
