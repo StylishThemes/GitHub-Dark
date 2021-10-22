@@ -2,9 +2,9 @@ all: build
 
 test: lint
 
-build: node_modules
-	node tools/clean.js
-	node tools/build.js
+build: node_modules clean
+# avoid 'stream/web is an experimental feature' warning
+	node --no-warnings tools/build.js
 
 deps: node_modules
 
