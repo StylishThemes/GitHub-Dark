@@ -3571,8 +3571,11 @@
 }
 @-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("gist.github.com") {
   /* begin refined-github rules */
+  html.refined-github {
+    --rgh-background: var(--color-canvas-default, var(--color-bg-canvas, #181818));
+  }
   html.refined-github .markdown-body del {
-    color: var(--color-text-tertiary, #9b9b9b);
+    color: var(--color-fg-subtle, var(--color-text-tertiary, #9b9b9b));
   }
   html.refined-github body > .footer li .btn-link,
   html.refined-github body > .footer li a {
@@ -3580,15 +3583,14 @@
   }
   @media (-webkit-min-device-pixel-ratio: 2) {
     html.refined-github .js-issue-row [aria-label="Open draft pull request"] svg {
-      stroke: var(--color-text-secondary, #afafaf);
-      color: var(--color-bg-canvas, #181818) !important;
+      stroke: var(--color-fg-muted, var(--color-text-secondary, #afafaf));
     }
   }
   html.refined-github .rgh-clean-dashboard .news > .f4 + div .Box {
     background: none;
   }
   html.refined-github .rgh-low-quality-comments-note {
-    color: var(--color-text-secondary, #afafaf);
+    color: var(--color-fg-muted, var(--color-text-secondary, #afafaf));
   }
   html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
   html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
@@ -3612,10 +3614,10 @@
     background-color: var(--color-menu-bg-active, #222);
   }
   html.refined-github .rgh-collaborator {
-    border-color: var(--color-border-tertiary, #246);
+    border: 1px solid var(--color-border-default, var(--color-border-tertiary, #246));
   }
-  html.refined-github .rgh-conflict-marker svg {
-    color: var(--color-icon-tertiary, #5a5a5a);
+  html.refined-github [data-color-mode="light"] .rgh-conflict-marker svg {
+    color: #5a5a5a;
   }
   html.refined-github .rgh-clean-conversation-headers-non-default-branch {
     background-color: var(--color-state-hover-primary-bg, /*[[base-color]]*/);
