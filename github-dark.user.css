@@ -411,17 +411,8 @@
   .btn-invisible, .btn-link {
     background-color: transparent;
   }
-  .btn-invisible {
+  .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
     box-shadow: none;
-  }
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
-    background: none;
-    box-shadow: none;
-  }
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible:active, .btn-invisible:focus,
-  .btn-invisible[aria-selected=true] {
-    background: none;
   }
   .btn-invisible.disabled, .btn-invisible:disabled,
   .btn-invisible[aria-disabled=true], .btn-octicon {
@@ -1129,20 +1120,6 @@
   .text-gradient-pink-blue {
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #4f8cc9 100%);
   }
-  .link-mktg {
-    color: /*[[base-color]]*/;
-    box-shadow: 0 1px 0 0 rgba(/*[[base-color-rgb]]*/, .5);
-  }
-  .link-mktg:hover {
-    box-shadow: 0 1px 0 0 /*[[base-color]]*/;
-  }
-  .link-white-mktg {
-    color: #fff;
-    box-shadow: 0 1px 0 0 hsla(0, 0%, 0%, .5);
-  }
-  .link-white-mktg:hover {
-    box-shadow: 0 1px 0 0 var(--ghd-bg-color);
-  }
   :root .font-mktg [data-color-mode=dark] {
     --color-fg-default: #181818 !important;
   }
@@ -1379,6 +1356,9 @@
   /* remove background on frontpage */
   .application-main > .color-bg-inset {
     background: none !important;
+  }
+  .starred .starred-button-icon {
+    color: var(--color-fg-muted);
   }
   /* below style is workaround for Firefox. */
   /* see: https://bugzilla.mozilla.org/show_bug.cgi?id=1394491 */
@@ -8326,17 +8306,8 @@
   .btn-invisible, .btn-link {
     background-color: transparent;
   }
-  .btn-invisible {
+  .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
     box-shadow: none;
-  }
-  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
-    background: none;
-    box-shadow: none;
-  }
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible:active, .btn-invisible:focus,
-  .btn-invisible[aria-selected=true] {
-    background: none;
   }
   .btn-invisible.disabled, .btn-invisible:disabled,
   .btn-invisible[aria-disabled=true], .btn-octicon {
@@ -17872,6 +17843,7 @@
     --color-btn-bg-hover: #222;
     --color-btn-bg: #181818;
     --color-btn-border: #343434;
+    --color-btn-counter-bg: transparent;
     --color-btn-danger-hover-text: #fff;
     --color-btn-danger-selected-text: #fff;
     --color-btn-danger-shadow: none;
