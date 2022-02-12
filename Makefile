@@ -14,7 +14,7 @@ node_modules: package-lock.json
 
 lint: node_modules
 	npx eslint --color src/gen tools
-	npx stylelint --color src
+	npx stylelint --color src/**/*.css
 
 authors:
 	bash tools/authors.sh
