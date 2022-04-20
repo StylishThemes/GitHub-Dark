@@ -2008,7 +2008,9 @@
   .new-discussion-timeline .composer .comment-form-head.tabnav {
     background: #202020;
   }
-  .pagehead-tabs-item.selected, .reponav-item.selected, .tabnav-tab.selected {
+  .pagehead-tabs-item.selected, .reponav-item.selected, .tabnav-tab.selected,
+  .tabnav-tab.selected, .tabnav-tab[aria-selected="true"],
+  .tabnav-tab[aria-current]:not([aria-current="false"]) {
     background: #202020;
     border-bottom-color: #202020 !important;
   }
@@ -2022,10 +2024,6 @@
   /* https://github.com/StylishThemes/GitHub-Dark/issues/620 */
   .timeline-comment-header .css-truncate-target {
     max-width: 250px !important;
-  }
-  /* override wrong gen bg color and assign var */
-  .timeline-comment-header {
-    background-color: var(--ghd-bg-color);
   }
   /* fix background on "new issue" form */
   .timeline-comment > div.p-0.mb-md-0 {
@@ -14959,6 +14957,7 @@
     --color-autocomplete-row-border: #181818;
     --color-avatar-bg: none;
     --color-avatar-border: none;
+    --color-bg-canvas-default: var(--ghd-bg-color);
     --color-bg-canvas-inset: #181818;
     --color-bg-canvas-inverse: #c6c6c6;
     --color-bg-canvas-mobile: var(--ghd-bg-color);
