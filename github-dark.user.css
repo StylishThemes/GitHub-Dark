@@ -437,6 +437,12 @@
   .ActionList-content, .ActionList-item {
     background-color: transparent;
   }
+  .ActionList-content:focus {
+    box-shadow: none;
+  }
+  .ActionList-content:focus-visible {
+    box-shadow: none;
+  }
   @media (hover: hover) {
     .ActionList-content[aria-disabled=true]:hover {
       background-color: transparent;
@@ -445,8 +451,27 @@
   .rule, a {
     background-color: transparent;
   }
+  [role=button]:focus, a:focus, button:focus, input[type=checkbox]:focus,
+  input[type=radio]:focus {
+    box-shadow: none;
+  }
+  [role=button]:focus-visible, a:focus-visible, button:focus-visible,
+  input[type=checkbox]:focus-visible, input[type=radio]:focus-visible {
+    box-shadow: none;
+  }
   .Box--overlay {
     box-shadow: 0 0 18px #000;
+  }
+  .btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  a.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-outline.selected:focus:not(:focus-visible),
+  .btn-outline:active:focus:not(:focus-visible),
+  .btn-outline[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
   }
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true],
   .btn-outline.disabled, .btn-outline:disabled,
@@ -459,6 +484,11 @@
   .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
     box-shadow: none;
   }
+  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible:active, .btn-invisible[aria-selected=true] {
+    background: none;
+    box-shadow: none;
+  }
   .btn-invisible.disabled, .btn-invisible:disabled,
   .btn-invisible[aria-disabled=true], .btn-octicon {
     background-color: transparent;
@@ -466,14 +496,35 @@
   .btn-octicon {
     box-shadow: none;
   }
-  .close-button, .inline-form .btn-plain {
+  .close-button {
+    background-color: transparent;
+  }
+  .close-button:active {
+    box-shadow: none;
+  }
+  .inline-form .btn-plain {
     background-color: transparent;
   }
   .upload-enabled.focused .form-control {
     box-shadow: none;
   }
-  .filter-list.pjax-active .filter-item, .SideNav-item, .SideNav-subItem,
-  .tabnav-tab, .UnderlineNav-item {
+  .filter-list.pjax-active .filter-item, .tabnav-tab {
+    background-color: transparent;
+  }
+  .filter-item.selected:focus:not(:focus-visible),
+  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .SideNav-item, .SideNav-subItem {
+    background-color: transparent;
+  }
+  .subnav-item.selected:focus:not(:focus-visible),
+  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .subnav-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .UnderlineNav-item {
     background-color: transparent;
   }
   .box-shadow-none {
@@ -484,6 +535,24 @@
   }
   .details-overlay[open] > summary::before {
     background-color: transparent;
+  }
+  .details-reset > summary:focus {
+    box-shadow: none;
+  }
+  .details-reset > summary:focus-visible {
+    box-shadow: none;
+  }
+  .details-reset > summary.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .details-overlay > summary:focus {
+    box-shadow: none;
+  }
+  .details-overlay > summary:focus-visible {
+    box-shadow: none;
+  }
+  .details-overlay > summary.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
   }
   .border-white-fade {
     border-color: hsla(0, 0%, 0%, .15) !important;
@@ -577,11 +646,16 @@
     background: none;
   }
   .autocomplete-embedded-icon-wrap .form-control,
-  .autocomplete-embedded-icon-wrap .form-control:focus,
+  .autocomplete-embedded-icon-wrap .form-control:focus {
+    box-shadow: none;
+  }
+  .autocomplete-embedded-icon-wrap .form-control:focus-visible {
+    box-shadow: none;
+  }
   .AvatarStack-body .avatar {
     box-shadow: none;
   }
-  .dropdown-item:focus > .Label, .dropdown-item:hover > .Label {
+  .dropdown-item:hover > .Label {
     border-color: currentcolor;
   }
   .dropdown-signout {
@@ -639,8 +713,13 @@
       background-color: transparent;
     }
   }
+  .previewable-comment-form .comment-body {
+    background-color: transparent;
+  }
+  :target .timeline-comment-group .timeline-comment .timeline-comment-group .timeline-comment {
+    box-shadow: none !important;
+  }
   .notifications-component-dialog:not([hidden]) + .notifications-component-dialog-overlay,
-  .previewable-comment-form .comment-body,
   .reponav-wrapper .reponav-item.selected {
     background-color: transparent;
   }
@@ -706,48 +785,6 @@
   }
   .Overlay-closeButton {
     background-color: transparent;
-  }
-  .global-focus-styles [role=button]:focus, .global-focus-styles a:focus,
-  .global-focus-styles button:focus,
-  .global-focus-styles input[type=checkbox]:focus,
-  .global-focus-styles input[type=radio]:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles [role=button]:focus-visible,
-  .global-focus-styles a:focus-visible,
-  .global-focus-styles button:focus-visible,
-  .global-focus-styles input[type=checkbox]:focus-visible,
-  .global-focus-styles input[type=radio]:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .details-overlay > summary:focus,
-  .global-focus-styles .details-reset > summary:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles .details-overlay > summary:focus-visible,
-  .global-focus-styles .details-reset > summary:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .ActionList-content:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles .ActionList-content:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles .btn-primary:focus:not(:focus-visible),
-  .global-focus-styles .btn-signup-mktg:focus:not(:focus-visible),
-  .global-focus-styles a.btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles a.btn-primary:focus:not(:focus-visible),
-  .global-focus-styles summary.btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles summary.btn-primary:focus:not(:focus-visible) {
-    box-shadow: none;
-  }
-  .global-focus-styles .upload-enabled.focused .form-control {
-    box-shadow: none;
-  }
-  .global-focus-styles .autocomplete-embedded-icon-wrap .form-control:focus-visible {
-    box-shadow: none;
   }
   .hx_flex-avatar-stack-item .avatar {
     box-shadow: none;
@@ -934,7 +971,7 @@
   }
   :target .discussion-nested-comment-group .timeline-comment,
   :target .nested-discussion-timeline-comment {
-    box-shadow: none;
+    box-shadow: none !important;
   }
   .discussion-spotlights-sortable .sortable-drag {
     background-color: transparent;
@@ -1156,8 +1193,14 @@
   .btn-mktg::before {
     background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
   }
-  .btn-mktg.focus:disabled, .btn-mktg:focus:disabled, .btn-mktg:hover:disabled {
-    box-shadow: none !important;
+  .btn-mktg:focus {
+    box-shadow: none;
+  }
+  .btn-mktg:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-mktg:focus-visible {
+    box-shadow: none;
   }
   .btn-muted-mktg, .btn-subtle-mktg {
     background: none !important;
@@ -1171,6 +1214,15 @@
   .btn-signup-mktg {
     color: #fff;
     background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
+  }
+  .btn-signup-mktg:focus {
+    box-shadow: none;
+  }
+  .btn-signup-mktg:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-signup-mktg:focus-visible {
+    box-shadow: none;
   }
   .box-shadow-active-border-light-mktg {
     box-shadow: 0 0 0 1px hsla(0, 0%, 0%, .1), 0 2px 2px rgba(0, 0, 0, .03), 0 4px 4px rgba(0, 0, 0, .04), 0 10px 8px rgba(0, 0, 0, .05), 0 15px 15px rgba(0, 0, 0, .06), 0 30px 30px rgba(0, 0, 0, .07), 0 70px 65px rgba(0, 0, 0, .09) !important;
@@ -8667,6 +8719,12 @@
   .ActionList-content, .ActionList-item {
     background-color: transparent;
   }
+  .ActionList-content:focus {
+    box-shadow: none;
+  }
+  .ActionList-content:focus-visible {
+    box-shadow: none;
+  }
   @media (hover: hover) {
     .ActionList-content[aria-disabled=true]:hover {
       background-color: transparent;
@@ -8675,8 +8733,27 @@
   .rule, a {
     background-color: transparent;
   }
+  [role=button]:focus, a:focus, button:focus, input[type=checkbox]:focus,
+  input[type=radio]:focus {
+    box-shadow: none;
+  }
+  [role=button]:focus-visible, a:focus-visible, button:focus-visible,
+  input[type=checkbox]:focus-visible, input[type=radio]:focus-visible {
+    box-shadow: none;
+  }
   .Box--overlay {
     box-shadow: 0 0 18px #000;
+  }
+  .btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  a.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-outline.selected:focus:not(:focus-visible),
+  .btn-outline:active:focus:not(:focus-visible),
+  .btn-outline[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
   }
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true],
   .btn-outline.disabled, .btn-outline:disabled,
@@ -8689,6 +8766,11 @@
   .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover {
     box-shadow: none;
   }
+  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible:active, .btn-invisible[aria-selected=true] {
+    background: none;
+    box-shadow: none;
+  }
   .btn-invisible.disabled, .btn-invisible:disabled,
   .btn-invisible[aria-disabled=true], .btn-octicon {
     background-color: transparent;
@@ -8696,14 +8778,35 @@
   .btn-octicon {
     box-shadow: none;
   }
-  .close-button, .inline-form .btn-plain {
+  .close-button {
+    background-color: transparent;
+  }
+  .close-button:active {
+    box-shadow: none;
+  }
+  .inline-form .btn-plain {
     background-color: transparent;
   }
   .upload-enabled.focused .form-control {
     box-shadow: none;
   }
-  .filter-list.pjax-active .filter-item, .SideNav-item, .SideNav-subItem,
-  .tabnav-tab, .UnderlineNav-item {
+  .filter-list.pjax-active .filter-item, .tabnav-tab {
+    background-color: transparent;
+  }
+  .filter-item.selected:focus:not(:focus-visible),
+  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .SideNav-item, .SideNav-subItem {
+    background-color: transparent;
+  }
+  .subnav-item.selected:focus:not(:focus-visible),
+  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .subnav-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .UnderlineNav-item {
     background-color: transparent;
   }
   .box-shadow-none {
@@ -8714,6 +8817,24 @@
   }
   .details-overlay[open] > summary::before {
     background-color: transparent;
+  }
+  .details-reset > summary:focus {
+    box-shadow: none;
+  }
+  .details-reset > summary:focus-visible {
+    box-shadow: none;
+  }
+  .details-reset > summary.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .details-overlay > summary:focus {
+    box-shadow: none;
+  }
+  .details-overlay > summary:focus-visible {
+    box-shadow: none;
+  }
+  .details-overlay > summary.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
   }
   .border-white-fade {
     border-color: hsla(0, 0%, 0%, .15) !important;
@@ -8807,11 +8928,16 @@
     background: none;
   }
   .autocomplete-embedded-icon-wrap .form-control,
-  .autocomplete-embedded-icon-wrap .form-control:focus,
+  .autocomplete-embedded-icon-wrap .form-control:focus {
+    box-shadow: none;
+  }
+  .autocomplete-embedded-icon-wrap .form-control:focus-visible {
+    box-shadow: none;
+  }
   .AvatarStack-body .avatar {
     box-shadow: none;
   }
-  .dropdown-item:focus > .Label, .dropdown-item:hover > .Label {
+  .dropdown-item:hover > .Label {
     border-color: currentcolor;
   }
   .dropdown-signout {
@@ -8869,8 +8995,13 @@
       background-color: transparent;
     }
   }
+  .previewable-comment-form .comment-body {
+    background-color: transparent;
+  }
+  :target .timeline-comment-group .timeline-comment .timeline-comment-group .timeline-comment {
+    box-shadow: none !important;
+  }
   .notifications-component-dialog:not([hidden]) + .notifications-component-dialog-overlay,
-  .previewable-comment-form .comment-body,
   .reponav-wrapper .reponav-item.selected {
     background-color: transparent;
   }
@@ -8936,48 +9067,6 @@
   }
   .Overlay-closeButton {
     background-color: transparent;
-  }
-  .global-focus-styles [role=button]:focus, .global-focus-styles a:focus,
-  .global-focus-styles button:focus,
-  .global-focus-styles input[type=checkbox]:focus,
-  .global-focus-styles input[type=radio]:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles [role=button]:focus-visible,
-  .global-focus-styles a:focus-visible,
-  .global-focus-styles button:focus-visible,
-  .global-focus-styles input[type=checkbox]:focus-visible,
-  .global-focus-styles input[type=radio]:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .details-overlay > summary:focus,
-  .global-focus-styles .details-reset > summary:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles .details-overlay > summary:focus-visible,
-  .global-focus-styles .details-reset > summary:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .ActionList-content:focus {
-    box-shadow: none;
-  }
-  .global-focus-styles .ActionList-content:focus-visible {
-    box-shadow: none;
-  }
-  .global-focus-styles .btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles .btn-primary:focus:not(:focus-visible),
-  .global-focus-styles .btn-signup-mktg:focus:not(:focus-visible),
-  .global-focus-styles a.btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles a.btn-primary:focus:not(:focus-visible),
-  .global-focus-styles summary.btn-mktg:focus:not(:focus-visible),
-  .global-focus-styles summary.btn-primary:focus:not(:focus-visible) {
-    box-shadow: none;
-  }
-  .global-focus-styles .upload-enabled.focused .form-control {
-    box-shadow: none;
-  }
-  .global-focus-styles .autocomplete-embedded-icon-wrap .form-control:focus-visible {
-    box-shadow: none;
   }
   .hx_flex-avatar-stack-item .avatar {
     box-shadow: none;
@@ -9164,7 +9253,7 @@
   }
   :target .discussion-nested-comment-group .timeline-comment,
   :target .nested-discussion-timeline-comment {
-    box-shadow: none;
+    box-shadow: none !important;
   }
   .discussion-spotlights-sortable .sortable-drag {
     background-color: transparent;
