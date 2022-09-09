@@ -645,21 +645,21 @@
     color: #fff;
   }
   .HeaderMenu--logged-out {
-    box-shadow: 0 10px 50px #000;
+    --header-menu-shadow: 0 5px 30px rgba(220, 220, 220, .1), 0 0 1px rgba(27, 31, 35, .4), 0 1px 2px rgba(220, 220, 220, .15);
+  }
+  @media (prefers-color-scheme: dark) {
+    .HeaderMenu--logged-out {
+      --header-menu-shadow: 0 0 1px #767676;
+    }
   }
   @media (min-width: 1012px) {
-    .HeaderMenu--logged-out {
+    .HeaderMenu--logged-out .header-menu-wrapper {
       background-color: transparent;
       box-shadow: none;
     }
   }
   .HeaderMenu--logged-out .dropdown-menu {
     box-shadow: none;
-  }
-  @media (min-width: 1012px) {
-    .HeaderMenu--logged-out .dropdown-menu {
-      box-shadow: 0 3px 12px #000, 0 0 1px rgba(220, 220, 220, .2);
-    }
   }
   .HeaderMenu-link {
     background-color: transparent;
@@ -668,17 +668,11 @@
     .HeaderMenu-link, .HeaderMenu-link:hover {
       color: #fff;
     }
-    .HeaderMenu-link .icon-chevon-down-mktg {
-      stroke: hsla(0, 0%, 0%, .5);
+  }
+  @media (max-width: 1011px) {
+    .HeaderMenu-item .HeaderMenu-dropdown {
       background-color: transparent;
     }
-    .HeaderMenu-details[open] .icon-chevon-down-mktg {
-      stroke: #181818;
-    }
-  }
-  @media (min-width: 1012px) {
-  }
-  @media (min-width: 1012px) {
   }
   .header-logo-invertocat, .header-logo-invertocat:hover {
     color: #fff;
@@ -1245,21 +1239,14 @@
   .font-mktg [data-color-mode=dark] {
     --color-fg-default: #181818 !important;
   }
-  .header-white .Header, .header-white .Header-old {
+  .header-white .Header, .header-white .header-logged-out {
     background-color: #181818 !important;
-  }
-  .header-white .Header-old .HeaderMenu-link.border,
-  .header-white .Header-old a.border,
-  .header-white .Header .HeaderMenu-link.border,
-  .header-white .Header a.border {
-    color: #fff !important;
-    background-color: #181818 !important;
-    border-color: #c6c6c6 !important;
   }
   .header-white .notification-indicator .mail-status {
     border-color: var(--ghd-bg-color) !important;
   }
-  .header-white-transparent .Header, .header-white-transparent .Header-old {
+  .header-white-transparent .Header,
+  .header-white-transparent .header-logged-out {
     background-color: transparent !important;
   }
   .header-overlay .Header, .header-overlay .header-logged-out {
@@ -9027,21 +9014,21 @@
     color: #fff;
   }
   .HeaderMenu--logged-out {
-    box-shadow: 0 10px 50px #000;
+    --header-menu-shadow: 0 5px 30px rgba(220, 220, 220, .1), 0 0 1px rgba(27, 31, 35, .4), 0 1px 2px rgba(220, 220, 220, .15);
+  }
+  @media (prefers-color-scheme: dark) {
+    .HeaderMenu--logged-out {
+      --header-menu-shadow: 0 0 1px #767676;
+    }
   }
   @media (min-width: 1012px) {
-    .HeaderMenu--logged-out {
+    .HeaderMenu--logged-out .header-menu-wrapper {
       background-color: transparent;
       box-shadow: none;
     }
   }
   .HeaderMenu--logged-out .dropdown-menu {
     box-shadow: none;
-  }
-  @media (min-width: 1012px) {
-    .HeaderMenu--logged-out .dropdown-menu {
-      box-shadow: 0 3px 12px #000, 0 0 1px rgba(220, 220, 220, .2);
-    }
   }
   .HeaderMenu-link {
     background-color: transparent;
@@ -9050,17 +9037,11 @@
     .HeaderMenu-link, .HeaderMenu-link:hover {
       color: #fff;
     }
-    .HeaderMenu-link .icon-chevon-down-mktg {
-      stroke: hsla(0, 0%, 0%, .5);
+  }
+  @media (max-width: 1011px) {
+    .HeaderMenu-item .HeaderMenu-dropdown {
       background-color: transparent;
     }
-    .HeaderMenu-details[open] .icon-chevon-down-mktg {
-      stroke: #181818;
-    }
-  }
-  @media (min-width: 1012px) {
-  }
-  @media (min-width: 1012px) {
   }
   .header-logo-invertocat, .header-logo-invertocat:hover {
     color: #fff;
