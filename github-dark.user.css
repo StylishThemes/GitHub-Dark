@@ -443,8 +443,24 @@
   .Button--primary:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .ActionList-item, .Button--link.Button--disabled, .Button--link:disabled,
+  .ActionListItem, .Button--link.Button--disabled, .Button--link:disabled,
   .Button--link[aria-disabled=true] {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionListItem[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionListContent {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionListContent[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionList-item {
     background-color: transparent;
   }
   @media (hover: hover) {
@@ -8819,8 +8835,24 @@
   .Button--primary:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .ActionList-item, .Button--link.Button--disabled, .Button--link:disabled,
+  .ActionListItem, .Button--link.Button--disabled, .Button--link:disabled,
   .Button--link[aria-disabled=true] {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionListItem[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionListContent {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionListContent[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionList-item {
     background-color: transparent;
   }
   @media (hover: hover) {
@@ -11401,10 +11433,12 @@
   }
   .updates-dropdown-container .updates-dropdown .updates-dropdown-section {
     border-color: rgba(255, 255, 255, .7);
-    background-color: #181818;
   }
   .updates-dropdown-container .updates-dropdown .updates-dropdown-section.phone .externalities-sms-container select {
     background-color: transparent;
+  }
+  .updates-dropdown-container .updates-dropdown .updates-dropdown-section.phone .externalities-sms-container .phone-country-wrapper {
+    background-color: #181818;
   }
   .updates-dropdown-container .updates-dropdown .updates-dropdown-section.phone .externalities-sms-container .phone-country-wrapper::before {
     border-right-color: #f0f0f0;
@@ -11487,6 +11521,9 @@
   }
   .modal-body .phone-country-dropdown {
     background-color: transparent;
+  }
+  .modal-body .phone-country-wrapper {
+    background-color: #181818;
   }
   .modal-body .phone-country-wrapper::before {
     border-right-color: #f0f0f0;
@@ -11740,7 +11777,8 @@
   #uptime-tooltip .tooltip-box, .grouped-items-selector,
   .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
   .layout-content.status.status-full-history .history-nav a.current, body,
-  div[id^="subscribe-modal"], div[id^="subscribe-modal"] .modal-footer {
+  div[id^="subscribe-modal"], div[id^="subscribe-modal"] .modal-footer,
+  div[id^="updates-dropdown"] .updates-dropdown-section {
     background-color: #181818;
   }
   #uptime-tooltip .pointer-container .pointer-smaller {
