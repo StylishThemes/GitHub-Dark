@@ -3649,6 +3649,12 @@
   html.refined-github .menu-item.selected.rgh-split-issue-pr-combined:hover {
     background-color: var(--color-menu-bg-active, #222);
   }
+  html.refined-github [data-rgh-heat="1"] {
+    color: #f3582c !important;
+  }
+  html.refined-github [data-rgh-heat="10"] {
+    color: #9b9b9b !important;
+  }
   html.refined-github [data-color-mode="light"] .rgh-conflict-marker svg {
     color: #5a5a5a;
   }
@@ -3659,6 +3665,15 @@
     color: var(--color-state-hover-primary-text, #181818);
   }
   html.refined-github .rgh-table-input:hover .selected div {
+    border-color: /*[[base-color]]*/;
+    background-color: var(--color-diff-blob-hunk-num-bg, #182030);
+  }
+  html.refined-github .rgh-tic:hover div,
+  html.refined-github .rgh-tic:is(:nth-child(5n + 1)):has( ~ :hover:nth-child(5n + 1)) div,
+  html.refined-github .rgh-tic:is(:nth-child(5n + 1), html.refined-github :nth-child(5n + 2)):has( ~ :hover:nth-child(5n + 2)) div,
+  html.refined-github .rgh-tic:is(:nth-child(5n + 1), html.refined-github :nth-child(5n + 2), html.refined-github :nth-child(5n + 3)):has( ~ :hover:nth-child(5n + 3)) div,
+  html.refined-github .rgh-tic:is(:nth-child(5n + 1), html.refined-github :nth-child(5n + 2), html.refined-github :nth-child(5n + 3), html.refined-github :nth-child(5n + 4)):has( ~ :hover:nth-child(5n + 4)) div,
+  html.refined-github .rgh-tic:is(:nth-child(5n + 1), html.refined-github :nth-child(5n + 2), html.refined-github :nth-child(5n + 3), html.refined-github :nth-child(5n + 4), html.refined-github :nth-child(5n + 5)):has( ~ :hover:nth-child(5n + 5)) div {
     border-color: /*[[base-color]]*/;
     background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
