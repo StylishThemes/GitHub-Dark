@@ -1,14 +1,13 @@
 import fastGlob from "fast-glob";
 import fetchEnhanced from "fetch-enhanced";
 import nodeFetch from "node-fetch";
-import {platform} from "os";
-import {resolve, dirname} from "path";
-import {writeFileSync, truncateSync} from "fs";
-import {fileURLToPath} from "url";
+import {platform} from "node:os";
+import {resolve, dirname} from "node:path";
+import {writeFileSync, truncateSync} from "node:fs";
+import {fileURLToPath} from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-const fetch = fetchEnhanced(nodeFetch);
+const fetch = fetchEnhanced(nodeFetch, {undici: false});
 
 // version of writeFile that preserves metadata on WSL and Cygwin platforms
 export function writeFile(file, content) {

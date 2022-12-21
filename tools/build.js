@@ -1,10 +1,10 @@
 import esc from "escape-string-regexp";
 import fetchCss from "fetch-css";
 import remapCss from "remap-css";
-import {readFileSync} from "fs";
-import {resolve, basename, dirname} from "path";
+import {readFileSync} from "node:fs";
+import {resolve, basename, dirname} from "node:path";
 import cssnano from "cssnano";
-import {fileURLToPath} from "url";
+import {fileURLToPath} from "node:url";
 import {writeFile, exit, glob} from "./utils.js";
 import mappingsFn from "../src/gen/mappings.js";
 import ignoresFn from "../src/gen/ignores.js";
@@ -19,6 +19,7 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   // vars last
   if (a.endsWith("vars.css")) return 1;
   if (b.endsWith("vars.css")) return -1;
+  return 0;
 }).filter(file => basename(file) !== "template.css");
 
 const minify = async css => (await cssnano().process(css, {from: undefined})).css;

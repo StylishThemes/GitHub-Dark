@@ -1,45 +1,51 @@
-all: build
-
-test: lint
-
-build: node_modules clean
-# avoid 'stream/web is an experimental feature' warning
-	node --no-warnings tools/build.js
-
-deps: node_modules
-
 node_modules: package-lock.json
 	npm install --no-save
 	@touch node_modules
 
+.PHONY: test
+test: lint
+
+.PHONY: build
+build: node_modules clean
+	node tools/build.js
+
+.PHONY: deps
+deps: node_modules
+
+.PHONY: lint
 lint: node_modules
 	npx eslint --color src/gen tools
 	npx stylelint --color src/**/*.css
 
+.PHONY: authors
 authors:
 	bash tools/authors.sh
 
+.PHONY: clean
 clean: node_modules
 	node tools/clean.js
 
+.PHONY: install
 install: node_modules
 	node tools/install.js
 
+.PHONY: update
 update: node_modules
 	npx updates -cu
 	npm install
 	@touch node_modules package-lock.json
 
+.PHONY: patch
 patch: node_modules lint
-	npx versions -pdC patch $(wildcard *.user.css)
+	npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
+.PHONY: minor
 minor: node_modules lint
-	npx versions -pdC minor $(wildcard *.user.css)
+	npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
+.PHONY: major
 major: node_modules lint
-	npx versions -pdC major $(wildcard *.user.css)
+	npx versions -pd major $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
-
-.PHONY: all test build deps lint authors clean install update patch minor major
