@@ -15,7 +15,7 @@ deps: node_modules
 .PHONY: lint
 lint: node_modules
 	npx eslint --color src/gen tools
-	npx stylelint --color src/**/*.css
+	npx stylelint --color src
 
 .PHONY: authors
 authors:
@@ -30,22 +30,23 @@ install: node_modules
 	node tools/install.js
 
 .PHONY: update
-update: node_modules
+update: node_modules build
 	npx updates -cu
+	rm package-lock.json
 	npm install
-	@touch node_modules package-lock.json
+	@touch node_modules
 
 .PHONY: patch
-patch: node_modules lint
+patch: node_modules test
 	npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
 .PHONY: minor
-minor: node_modules lint
+minor: node_modules test
 	npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
 .PHONY: major
-major: node_modules lint
+major: node_modules test
 	npx versions -pd major $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
