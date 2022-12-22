@@ -38,15 +38,15 @@ update: node_modules build
 
 .PHONY: patch
 patch: node_modules test
-	npx versions -pd patch $(wildcard *.user.css)
+	npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
 .PHONY: minor
 minor: node_modules test
-	npx versions -pd minor $(wildcard *.user.css)
+	npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
 
 .PHONY: major
 major: node_modules test
-	npx versions -pd major $(wildcard *.user.css)
+	npx versions -pd major $(wildcard *.user.css) package.json package-lock.json
 	git push --tags origin master
