@@ -15,7 +15,7 @@ deps: node_modules
 .PHONY: lint
 lint: node_modules
 	npx eslint --color src/gen tools
-	npx stylelint --color src
+	npx stylelint --color src/**/*.css
 
 .PHONY: authors
 authors:
