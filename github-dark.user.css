@@ -13207,16 +13207,7 @@
   .upload-enabled.focused .form-control {
     box-shadow: none;
   }
-  .FormControl-input-wrap .FormControl-input-trailingAction {
-    background-color: transparent;
-  }
-  input[type=checkbox].FormControl-checkbox:focus-visible {
-    box-shadow: none;
-  }
-  input[type=radio].FormControl-radio:focus-visible {
-    box-shadow: none;
-  }
-  .filter-list.pjax-active .filter-item, .tabnav-tab {
+  .filter-list.pjax-active .filter-item {
     background-color: transparent;
   }
   .filter-item.selected:focus:not(:focus-visible),
@@ -13231,14 +13222,6 @@
   .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
   .subnav-item[aria-selected=true]:focus:not(:focus-visible) {
     box-shadow: none;
-  }
-  .Overlay-backdrop--anchor, .Overlay-closeButton, .UnderlineNav-item {
-    background-color: transparent;
-  }
-  @media (max-width: 767.98px) {
-    .Overlay-backdrop--anchor-whenNarrow {
-      background-color: transparent;
-    }
   }
   .box-shadow-none {
     box-shadow: none !important;
@@ -13267,25 +13250,6 @@
   .details-overlay > summary.btn-primary:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .flash-close:not(.Banner-close) {
-    background: none;
-  }
-  .autocomplete-embedded-icon-wrap .form-control,
-  .autocomplete-embedded-icon-wrap .form-control:focus {
-    box-shadow: none;
-  }
-  .autocomplete-embedded-icon-wrap .form-control:focus-visible {
-    box-shadow: none;
-  }
-  .AvatarStack-body .avatar {
-    box-shadow: none;
-  }
-  .dropdown-item:hover > .Label {
-    border-color: currentcolor;
-  }
-  .dropdown-signout {
-    background: none;
-  }
   .Header-input {
     box-shadow: none;
   }
@@ -13300,14 +13264,72 @@
   .Toast-dismissButton {
     background-color: transparent;
   }
-  .ToggleSwitch-track[aria-disabled=true] .ToggleSwitch-knob {
-    box-shadow: none;
-  }
   .btn-mktg {
     background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
     background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
+  }
+  .btn-subtle-mktg, .btn-subtle-mktg::before {
+    background: none !important;
+  }
+  .btn-signup-mktg {
+    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
+  }
+  .ActionListItem {
+    background-color: initial;
+  }
+  @media (hover: hover) {
+    .ActionListItem[aria-disabled=true]:hover {
+      background-color: initial;
+    }
+  }
+  .ActionListContent {
+    background-color: initial;
+  }
+  @media (hover: hover) {
+    .ActionListContent[aria-disabled=true]:hover {
+      background-color: initial;
+    }
+  }
+  .autocomplete-embedded-icon-wrap .form-control,
+  .autocomplete-embedded-icon-wrap .form-control:focus {
+    box-shadow: none;
+  }
+  .autocomplete-embedded-icon-wrap .form-control:focus-visible {
+    box-shadow: none;
+  }
+  .Overlay-backdrop--anchor, .Overlay-closeButton {
+    background-color: initial;
+  }
+  @media (max-width: 767px) {
+    .Overlay-backdrop--anchor-whenNarrow {
+      background-color: initial;
+    }
+  }
+  .dropdown-item:hover > .Label {
+    border-color: currentcolor;
+  }
+  .dropdown-signout {
+    background: none;
+  }
+  .tabnav-tab {
+    background-color: initial;
+  }
+  .FormControl-input-wrap .FormControl-input-trailingAction {
+    background-color: transparent;
+  }
+  input.FormControl-checkbox[type=checkbox]:focus-visible {
+    box-shadow: none;
+  }
+  input.FormControl-radio[type=radio]:focus-visible {
+    box-shadow: none;
+  }
+  .btn-mktg {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
+  }
+  .btn-mktg::before {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15), transparent) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -13318,18 +13340,21 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg, .btn-subtle-mktg {
+  .btn-muted-mktg {
     background: none !important;
   }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg::before {
+  .btn-subtle-mktg, .btn-subtle-mktg::before {
     background: none !important;
   }
   .btn-signup-mktg {
+    background: linear-gradient(180deg, #34b75926, transparent), #373 !important;
     color: #fff;
-    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
+  }
+  .btn-signup-mktg::before {
+    background: linear-gradient(180deg, #34b75926, transparent) !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -13339,6 +13364,31 @@
   }
   .btn-signup-mktg:focus-visible {
     box-shadow: none;
+  }
+  .ToggleSwitch-track[aria-disabled=true] .ToggleSwitch-knob {
+    box-shadow: none;
+  }
+  .SegmentedControl-item.SegmentedControl-item--selected .Button:hover,
+  .UnderlineNav-item {
+    background-color: initial;
+  }
+  .AvatarStack-body .avatar {
+    box-shadow: none;
+  }
+  .Button {
+    background-color: initial;
+  }
+  .Button:disabled, .Button[aria-disabled=true] {
+    box-shadow: none;
+  }
+  .Button--primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .Button--link:disabled, .Button--link[aria-disabled=true] {
+    background-color: initial;
+  }
+  .flash-close:not(.Banner-close) {
+    background: none;
   }
   .markdown-body .emoji, .markdown-body pre > code, .markdown-body pre code,
   .markdown-body pre tt, .markdown-body table img {
