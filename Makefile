@@ -30,7 +30,7 @@ install: node_modules
 	node tools/install.js
 
 .PHONY: update
-update: node_modules build
+update: node_modules
 	npx updates -cu
 	rm package-lock.json
 	npm install
