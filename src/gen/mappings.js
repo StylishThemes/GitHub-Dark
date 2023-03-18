@@ -427,7 +427,6 @@ export default async () => ({
   // various noop rules to support rules overridden in the original styles
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
-  "$background: initial": "initial",
   "$background: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
 });
