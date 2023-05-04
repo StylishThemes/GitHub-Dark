@@ -6,9 +6,9 @@ import {writeFile, exit, glob} from "./utils.js";
 const replacements = [
   {from: /\{\/\*!/g, to: "{\n /*!"},
   {from: /\/\* /g, to: "\n  /* "},
-  {from: /(\s+)?\n(\s+)?\n/gm, to: "\n"},
-  {from: / {2}}\/\*/gm, to: "  }\n  /*"},
-  {from: /,\s+\n/gm, to: ",\n"},
+  {from: /(\s+)?\n(\s+)?\n/g, to: "\n"},
+  {from: / {2}}\/\*/g, to: "  }\n  /*"},
+  {from: /,\s+\n/g, to: ",\n"},
   {from: /\/\*\[\[code-wrap/, to: "/*[[code-wrap"},
   {from: /,\u0020{2,}/g, to: ", "},
   {from: /\s+domain\(/g, to: " domain("},
