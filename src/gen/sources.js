@@ -44,6 +44,20 @@ export default async () => {
       strict: true,
     },
     {
+      name: "code-view",
+      url: "https://github.com/StylishThemes/GitHub-Dark/blob/master/.gitattributes",
+      file: resolve(__dirname, "../src/code-view.css"),
+      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+      strict: true,
+    },
+    {
+      name: "code-search",
+      url: "https://github.com/search?q=repo%3AStylishThemes%2FGitHub-Dark%20auto&type=code",
+      file: resolve(__dirname, "../src/code-search.css"),
+      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
+      strict: true,
+    },
+    {
       name: "githubstatus.com",
       url: "https://www.githubstatus.com/",
       file: resolve(__dirname, "../src/status.css"),
