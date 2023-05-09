@@ -127,6 +127,7 @@ export default async () => ({
 
   // blue (base color)
   "$value: rgba(3, 47, 98, 0.55)": "/*[[base-color]]*/", // gitako
+  "$value: rgb(47, 129, 247)": "/*[[base-color]]*/", // new code view
   "$value: rgba(3,102,214,.3)": "rgba(/*[[base-color-rgb]]*/, .3)",
   "$value: rgba(3,102,214,.5)": "rgba(/*[[base-color-rgb]]*/, .5)",
   "$value: #0f2e47": "/*[[base-color]]*/", // octotree
