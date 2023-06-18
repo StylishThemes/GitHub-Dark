@@ -5910,6 +5910,11 @@
     border-color: /*[[base-color]]*/;
     background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
+  @media (max-width: 767px) {
+    html.refined-github .rgh-mobile-tabs .UnderlineNav-item .Counter {
+      background: none;
+    }
+  }
   /* end refined-github rules */
   /* begin zenhub rules */
   html[class*="zh-"] #new_issue .discussion-sidebar h3 {
@@ -6738,6 +6743,7 @@
   html[class*="zh-"] ._qFX7jk8g1Nd_4fNzR3v:hover,
   html[class*="zh-"] .cU7Q3NuoSDMr2S7Cdt7v.LF1f2vQ0SmgPtu37hydu,
   html[class*="zh-"] .cU7Q3NuoSDMr2S7Cdt7v:hover,
+  html[class*="zh-"] .fvnFwLZoYK_8ue38imBU,
   html[class*="zh-"] .kr_3dYyp6wnzyODJ8NeU,
   html[class*="zh-"] .s3VCwwl5v134Y6bs7UAw,
   html[class*="zh-"] .s3VCwwl5v134Y6bs7UAw:hover {
@@ -6745,9 +6751,6 @@
   }
   html[class*="zh-"] .otQblQZLqaiR2IX5HTUA {
     background: none;
-  }
-  html[class*="zh-"] .fvnFwLZoYK_8ue38imBU {
-    background-color: transparent;
   }
   html[class*="zh-"] .I30DzHLyHQRQlgMHH2a4:focus:not(:focus-visible) + .sSIwGxNPcd2CmX4uSTZg {
     box-shadow: none;
@@ -6871,6 +6874,7 @@
     background-color: transparent;
     box-shadow: none;
   }
+  html[class*="zh-"] .MJL_WMeQJv6G8T_Lew9u,
   html[class*="zh-"] .VXaBYOQeXBxxkEwDlhr3,
   html[class*="zh-"] .dZXtvsHWAdvRcMtj48cJ:active,
   html[class*="zh-"] .dZXtvsHWAdvRcMtj48cJ:focus,
@@ -16615,7 +16619,9 @@
   }
 }
 @-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
-  :root:root, :root:root body {
+  :root:root, :root:root body,
+  [data-color-mode="light"][data-light-theme="light"],
+  [data-color-mode="dark"][data-dark-theme="light"] {
   /* github dark vars */
     --ghd-bg-custom: /*[[bg-custom]]*/;
     --ghd-bg-img: /*[[bg-choice]]*/;
