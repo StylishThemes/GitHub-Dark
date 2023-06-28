@@ -12,4 +12,5 @@ export default async () => [
   /^hr$/,
   /^\.stars[0-9]*(::after)?$/, // seems to change a lot
   /.qr-code/, // must not invert qr codes
+  /^.Button$/, // weird transparent background
 ];
