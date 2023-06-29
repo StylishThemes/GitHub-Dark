@@ -233,14 +233,14 @@ export default async () => ({
   "$value: #fffdef": "#261d08",
 
   // green
-  "$value: rgba(108,198,68,.1)": "#3c962450",
-  "$value: rgba(23,111,44,0.2)": "#3c962450",
+  "$value: rgba(108,198,68,.1)": "#44884450",
+  "$value: rgba(23,111,44,0.2)": "#44884450",
   "$value: rgba(23,111,44,.8)": "#3737",
   "$value: rgba(52,208,88,.4)": "#3737",
-  "$value: #144620": "#3c9624",
-  "$value: #165c26": "#3c9624",
-  "$value: #176f2c": "#3c9624",
-  "$value: #22863a": "#3c9624",
+  "$value: #144620": "#448844",
+  "$value: #165c26": "#448844",
+  "$value: #176f2c": "#448844",
+  "$value: #22863a": "#448844",
   "$value: #269f42": "#595", // .btn-primary :hover
   "$value: #279f43": "#595", // new/old .btn-primary:active
   "$value: #28a745": "#484", // green labels, issue icons
