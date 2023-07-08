@@ -10,7 +10,11 @@ export default async () => {
   return [
     {
       name: "github.com",
-      url: "https://github.com/",
+      url: [
+        "https://github.com/",
+        "https://github.com/StylishThemes/GitHub-Dark/tree/master/src",
+        "https://github.com/StylishThemes/GitHub-Dark/blob/master/README.md",
+      ],
       file: resolve(__dirname, "../src/main.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
       strict: true,
