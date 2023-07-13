@@ -7,7 +7,7 @@ test: lint
 
 .PHONY: build
 build: node_modules clean
-	node tools/build.js
+	node --trace-deprecation tools/build.js
 
 .PHONY: deps
 deps: node_modules
@@ -23,11 +23,11 @@ authors:
 
 .PHONY: clean
 clean: node_modules
-	node tools/clean.js
+	node --trace-deprecation tools/clean.js
 
 .PHONY: install
 install: node_modules
-	node tools/install.js
+	node --trace-deprecation tools/install.js
 
 .PHONY: update
 update: node_modules
