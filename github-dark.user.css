@@ -3813,10 +3813,14 @@
   html.refined-github .footer > div:nth-last-child(2) a {
     color: var(--color-text-disabled, #9b9b9b);
   }
-  html.refined-github .rgh-no-navigation-highlight .Box-row.navigation-focus,
-  html.refined-github .rgh-no-navigation-highlight .list-group-item.navigation-focus,
-  html.refined-github .rgh-no-navigation-highlight .navigation-focus td {
+  html.refined-github [rgh-no-navigation-highlight] .Box-row.navigation-focus,
+  html.refined-github [rgh-no-navigation-highlight] .navigation-focus td,
+  html.refined-github [rgh-no-navigation-highlight] .react-directory-row:hover {
     background: none !important;
+  }
+  html.refined-github [rgh-no-navigation-highlight] .notifications-list-item:hover {
+    background: none !important;
+    box-shadow: none !important;
   }
   html.refined-github .rgh-extend-diff-expander .js-expandable-line:hover .blob-num:not(:hover) + .blob-code,
   html.refined-github .rgh-extend-diff-expander .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child {
@@ -3851,7 +3855,7 @@
     background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
   @media (max-width: 767px) {
-    html.refined-github .rgh-mobile-tabs .UnderlineNav-item .Counter {
+    html.refined-github [rgh-mobile-tabs] .UnderlineNav-item .Counter {
       background: none;
     }
   }
