@@ -13,7 +13,7 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - run: make deps
       - run: make build
         env:
