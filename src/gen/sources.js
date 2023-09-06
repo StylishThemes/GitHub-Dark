@@ -48,20 +48,6 @@ export default async () => {
       strict: true,
     },
     {
-      name: "code-view",
-      url: "https://github.com/StylishThemes/GitHub-Dark/blob/master/.gitattributes",
-      file: resolve(__dirname, "../src/code-view.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-      strict: true,
-    },
-    {
-      name: "code-search",
-      url: "https://github.com/search?q=repo%3AStylishThemes%2FGitHub-Dark%20auto&type=code",
-      file: resolve(__dirname, "../src/code-search.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-      strict: true,
-    },
-    {
       name: "githubstatus.com",
       url: "https://www.githubstatus.com/",
       file: resolve(__dirname, "../src/status.css"),
@@ -101,15 +87,6 @@ export default async () => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
-    // disabled because extension was taken down by Google
-    // {
-    //   name: "github-hovercard",
-    //   crx: "mmoahbbnojgkclgceahhakhnccimnplk",
-    //   prefix: `html[class*="ghh-"]`,
-    //   match: ["html", ".ghh-theme-"],
-    //   file: resolve(__dirname, "../src/extensions.css"),
-    //   fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-    // },
     {
       name: "gitako",
       crx: "giljefjcheohhamkjphiebfjnlphnokk",
@@ -118,13 +95,6 @@ export default async () => {
       file: resolve(__dirname, "../src/extensions.css"),
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
-    // disabled because of crx errors
-    // {
-    //   name: "npmhub",
-    //   crx: "kbbbjimdjbjclaebffknlabpogocablj",
-    //   file: resolve(__dirname, "../src/extensions.css"),
-    //   fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-    // },
     {
       name: "notifications-preview",
       crx: "kgilejfahkjidpaclkepbdoeioeohfmj",
