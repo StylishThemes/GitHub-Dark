@@ -3831,8 +3831,11 @@
     background: none !important;
     box-shadow: none !important;
   }
-  html.refined-github .rgh-extend-diff-expander .js-expandable-line:hover .blob-num:not(:hover) + .blob-code,
-  html.refined-github .rgh-extend-diff-expander .js-expandable-line:hover .blob-num:not(:hover) .directional-expander:first-child {
+  html.refined-github .rgh-extend-diff-expander
+  	.js-expandable-line:hover
+  	:is(
+  		.blob-num:not(:hover) .directional-expander:first-child, html.refined-github .blob-num:not(:hover) + .blob-code
+  ) {
     color: var(--color-state-hover-primary-text, #181818);
     background: var(--color-state-hover-primary-bg, /*[[base-color]]*/);
     border-color: var(--color-state-hover-primary-border, /*[[base-color]]*/);
@@ -3854,12 +3857,19 @@
     border-color: /*[[base-color]]*/;
     background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
-  html.refined-github .rgh-tic:hover div,
-  html.refined-github .rgh-tic:is(:nth-of-type(5n + 1)):has( ~ :hover:nth-of-type(5n + 1)) div,
-  html.refined-github .rgh-tic:is(:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2)):has( ~ :hover:nth-of-type(5n + 2)) div,
-  html.refined-github .rgh-tic:is(:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3)):has( ~ :hover:nth-of-type(5n + 3)) div,
-  html.refined-github .rgh-tic:is(:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3), html.refined-github :nth-of-type(5n + 4)):has( ~ :hover:nth-of-type(5n + 4)) div,
-  html.refined-github .rgh-tic:is(:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3), html.refined-github :nth-of-type(5n + 4), html.refined-github :nth-of-type(5n + 5)):has( ~ :hover:nth-of-type(5n + 5)) div {
+  html.refined-github .rgh-tic:hover div, html.refined-github .rgh-tic:is(
+  		:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3)
+  	):has( ~ :hover:nth-of-type(5n + 3))
+  	div, html.refined-github .rgh-tic:is(
+  		:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3), html.refined-github :nth-of-type(5n + 4)
+  	):has( ~ :hover:nth-of-type(5n + 4))
+  	div, html.refined-github .rgh-tic:is(
+  		:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2), html.refined-github :nth-of-type(5n + 3), html.refined-github :nth-of-type(5n + 4), html.refined-github :nth-of-type(5n + 5)
+  	):has( ~ :hover:nth-of-type(5n + 5))
+  	div, html.refined-github .rgh-tic:is(:nth-of-type(5n + 1)):has( ~ :hover:nth-of-type(5n + 1)) div, html.refined-github .rgh-tic:is(:nth-of-type(5n + 1), html.refined-github :nth-of-type(5n + 2)):has(
+  		 ~ :hover:nth-of-type(5n + 2)
+  	)
+  div {
     border-color: /*[[base-color]]*/;
     background-color: var(--color-diff-blob-hunk-num-bg, #182030);
   }
