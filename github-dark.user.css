@@ -3729,7 +3729,8 @@
     color: var(--ghd-code-color) !important;
   }
   /* inline code */
-  .markdown-body code, .markdown-body tt {
+  .markdown-body code, .markdown-body tt,
+  .markdown-body .snippet-clipboard-content {
     border-radius: 4px;
   }
   .markdown-body code::before, .markdown-body code::after,
@@ -3748,8 +3749,7 @@
   .project-card code, .rgh-parse-backticks, .protip code, .content dl code,
   .content ul code, .content .sectionbody .dlist dt, .content p > tt,
   .commit-sha, .commit-preview .message pre, .rendered_html pre,
-  .rendered_html code, .markdown-body .highlight,
-  .markdown-body .snippet-clipboard-content pre {
+  .rendered_html code, .markdown-body .highlight {
     border: 1px solid rgba(255, 255, 255, .1) !important;
   }
   .markdown-title code, p code {
@@ -3757,6 +3757,15 @@
   }
   .js-commits-list-item p code {
     padding: 1px 2px;
+  }
+  .js-snippet-clipboard-copy-unpositioned .markdown-body .snippet-clipboard-content,
+  .js-snippet-clipboard-copy-unpositioned .markdown-body .highlight {
+    background: var(--ghd-code-background) !important;
+    border: 1px solid rgba(255, 255, 255, .1) !important;
+  }
+  .js-snippet-clipboard-copy-unpositioned .markdown-body .snippet-clipboard-content pre,
+  .js-snippet-clipboard-copy-unpositioned .markdown-body .highlight pre {
+    background: transparent !important;
   }
 }
 @-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|support|vscode-auth)\\.)?github\\.com((?!(/(sponsors|readme)$)).)*$"), domain("githubusercontent.com"), domain("www.githubstatus.com") {
