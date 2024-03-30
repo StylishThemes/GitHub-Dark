@@ -17,6 +17,11 @@ lint: node_modules
 	npx eslint --color src/gen tools
 	npx stylelint --color src/**/*.css
 
+.PHONY: lint-fix
+lint-fix: node_modules
+	npx eslint --color src/gen tools --fix
+	npx stylelint --color src/**/*.css --fix
+
 .PHONY: authors
 authors:
 	bash tools/authors.sh
