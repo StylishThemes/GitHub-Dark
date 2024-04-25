@@ -98,7 +98,6 @@ export default async () => ({
   "$value: #e1e4e8": "#343434",
   "$value: #e5e5e5": "#343434",
   "$value: #e6ebf1": "#343434",
-  "$value: #e9e9e9": "#343434", // zenhub
   "$value: #e9ecef": "#343434",
   "$value: #eaeaea": "#2c2c2c",
   "$value: #eaecef": "#2c2c2c",
@@ -112,7 +111,6 @@ export default async () => ({
   "$value: #f2f5f7": "#202020", // octotree
   "$value: #f3f4f6": "#242424",
   "$value: #f4f4f4": "#242424",
-  "$value: #f4f5f5": "#242424", // zenhub
   "$value: #f5f5f5": "#222222", // gitako
   "$value: #f6f8fa": "#202020",
   "$value: #f7f7f7": "#202020",
@@ -226,8 +224,6 @@ export default async () => ({
   "$value: #e5d999": "#cb4",
   "$value: #d9d0a5": "#cb4",
   "$value: #ffe3c8": "#261d08",
-  "$value: #faebcc": "#261d08", // zenhub
-  "$value: #fcf9e4": "#261d08", // zenhub blocked banner
   "$value: #fff5b1": "#651",
   "$value: #fffbdd": "#261d08",
   "$value: #fffdef": "#261d08",
@@ -278,7 +274,6 @@ export default async () => ({
 
   // blurple
   "$value: #3b41af": "#6570e2",
-  "$value: #5e60ba": "#5560d2", // zenhub
   "$value: #6570e2": "#4550c2",
 
   // pink
@@ -301,15 +296,12 @@ export default async () => ({
   "$background: #fafafb": "#181818",
   "$background: #fafbfc": "#181818", // .bg-gray-light
   "$background: #f9f9f9": "#181818",
-  "$background: #f8f8f8": "#202020", // zenhub
   "$background: #efefef": "#202020",
   "$background: #f6f8fa": "#222",
   "$background: #f5f5f5": "#222", // gitako
-  "$background: #f4f5f5": "#242424", // zenhub
   "$background: #f4f4f4": "#242424",
   "$background: #eff3f6": "#242424",
   "$background: #e9ecef": "#404040",
-  "$background: #e9e9e9": "#343434", // zenhub
   "$background: #e6ebf1": "#444",
   "$background: #d6e2f1": "#444",
   "$background: #d3e2f4": "#383838",
@@ -345,7 +337,6 @@ export default async () => ({
   "$border: #e0e0e0": "#343434", // graphql explorer
   "$border: #e5e5e5": "#343434",
   "$border: #e6ebf1": "#343434",
-  "$border: #e9e9e9": "#343434", // zenhub
   "$border: #eaeaea": "#343434",
   "$border: #f6f8fa": "#202020",
   "$border: #f8f8f8": "#343434",

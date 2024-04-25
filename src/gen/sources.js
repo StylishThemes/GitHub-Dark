@@ -73,21 +73,6 @@ export default async () => {
       fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
     },
     {
-      name: "zenhub",
-      crx: "ogcgkffhplmphkaahpmffcafajaocjbd",
-      prefix: `html[class*="zh-"]`,
-      match: [
-        "html",
-        `[class*="zh-"]`,
-        ".zh-app--dark",
-        ".zh-app--light",
-        ".zh-app--visible",
-        ".zh-app--fixed-layout",
-      ],
-      file: resolve(__dirname, "../src/extensions.css"),
-      fetchOpts: {headers: {"User-Agent": desktopUserAgent}},
-    },
-    {
       name: "gitako",
       crx: "giljefjcheohhamkjphiebfjnlphnokk",
       prefix: `body.gitako-ready`,
