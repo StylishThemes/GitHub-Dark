@@ -419,46 +419,6 @@
     -webkit-mask-image: linear-gradient(to bottom, #f0f0f0 60%, transparent 75%);
     mask-image: linear-gradient(to bottom, #f0f0f0 60%, transparent 75%);
   }
-  [data-color-mode="auto"][data-light-theme="dark"],
-  [data-color-mode="auto"][data-light-theme="dark"] ::backdrop,
-  [data-color-mode="dark"][data-dark-theme="dark"],
-  [data-color-mode="dark"][data-dark-theme="dark"] ::backdrop {
-    --borderColor-translucent: hsla(0, 0%, 0%, .15);
-  }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode="auto"][data-dark-theme="dark"],
-    [data-color-mode="auto"][data-dark-theme="dark"] ::backdrop {
-      --avatar-borderColor: hsla(0, 0%, 0%, .15);
-      --control-checked-fgColor-rest: #181818;
-      --controlTrack-fgColor-disabled: #181818;
-      --controlKnob-bgColor-checked: #181818;
-      --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
-      --button-primary-fgColor-rest: #181818;
-      --button-primary-iconColor-rest: #181818;
-      --button-primary-shadow-selected: 0 0 0 0 #f0f0f0;
-      --button-outline-fgColor-active: #181818;
-      --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
-      --button-danger-fgColor-hover: #181818;
-      --button-danger-fgColor-active: #181818;
-      --button-danger-iconColor-hover: #181818;
-      --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
-      --buttonCounter-danger-bgColor-hover: hsla(0, 0%, 0%, .2);
-      --buttonCounter-danger-fgColor-hover: #181818;
-      --fgColor-onEmphasis: #181818;
-      --fgColor-white: #181818;
-      --bgColor-inverse: #181818;
-      --bgColor-white: #181818;
-      --bgColor-done-emphasis: #53387a;
-      --bgColor-upsell-emphasis: #53387a;
-      --borderColor-translucent: hsla(0, 0%, 0%, .15);
-      --borderColor-done-emphasis: #53387a;
-      --borderColor-upsell-emphasis: #53387a;
-      --color-ansi-white-bright: #181818;
-    }
-  }
-  tab-container.UnderlineNav {
-    box-shadow: none;
-  }
   .gXEGvh, .jmggSN th, .jpIAs:hover {
     background-color: var(--bgColor-muted, var(--color-canvas-subtle, #222));
   }
@@ -592,6 +552,7 @@
     --bgColor-white: #181818;
     --bgColor-done-emphasis: #53387a;
     --bgColor-upsell-emphasis: #53387a;
+    --borderColor-translucent: hsla(0, 0%, 0%, .15);
     --borderColor-done-emphasis: #53387a;
     --borderColor-upsell-emphasis: #53387a;
     --color-ansi-white-bright: #181818;
@@ -621,6 +582,7 @@
       --bgColor-white: #181818;
       --bgColor-done-emphasis: #53387a;
       --bgColor-upsell-emphasis: #53387a;
+      --borderColor-translucent: hsla(0, 0%, 0%, .15);
       --borderColor-done-emphasis: #53387a;
       --borderColor-upsell-emphasis: #53387a;
       --color-ansi-white-bright: #181818;
@@ -811,7 +773,8 @@
   .btn-signup-mktg:focus-visible {
     box-shadow: none;
   }
-  .AvatarStack-body .avatar, .ToggleSwitch-track[disabled] .ToggleSwitch-knob {
+  .AvatarStack-body .avatar, .ToggleSwitch-track[disabled] .ToggleSwitch-knob,
+  tab-container.UnderlineNav {
     box-shadow: none;
   }
   anchored-position:not(.Overlay) {
