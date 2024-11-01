@@ -407,10 +407,8 @@
     background: none;
   }
   @media screen and (max-width: 768px) {
-    .Primer_Brand__RiverStoryScroll-module__RiverStoryScroll___GKo1Z {
-      .Primer_Brand__RiverStoryScroll-module__RiverStoryScroll__visual--below___gJyav {
-        background-image: linear-gradient(180deg, var(--brand-RiverStoryScroll-content-inactive-bgColor) calc(var(--topOffset) + var(--visualHeight) + 3px), transparent calc(var(--topOffset) + var(--visualHeight) + var(--textToVisualPadding)), transparent 93%, var(--brand-RiverStoryScroll-content-inactive-bgColor) 99%);
-      }
+    .Primer_Brand__RiverStoryScroll-module__RiverStoryScroll__visual--below___gJyav {
+      background-image: linear-gradient(180deg, var(--brand-RiverStoryScroll-content-inactive-bgColor) calc(var(--topOffset) + var(--visualHeight) + 3px), transparent calc(var(--topOffset) + var(--visualHeight) + var(--textToVisualPadding)), transparent 93%, var(--brand-RiverStoryScroll-content-inactive-bgColor) 99%);
     }
   }
   @media screen and (min-width: 48rem) {
@@ -537,6 +535,15 @@
   }
   .GlowCircleBackground-module__backgroundContainer--Lnepi {
     background-color: #f0f0f0;
+  }
+  .cgFZpq:hover, .gjQlJX, .jdgHnn th {
+    background-color: var(--bgColor-muted, var(--color-canvas-subtle, #222));
+  }
+  .dIlPa:is(button) {
+    background-color: transparent;
+  }
+  .iuTGUw:is(button) {
+    background-color: transparent;
   }
   [data-color-mode="auto"][data-light-theme="light"],
   [data-color-mode="auto"][data-light-theme="light"] ::backdrop,
@@ -7973,8 +7980,12 @@
   .inline-form .btn-plain {
     background-color: transparent;
   }
-  .FormControl-input[disabled], .FormControl-select[disabled],
-  .FormControl-textarea[disabled], .upload-enabled.focused .form-control,
+  .upload-enabled.focused .form-control {
+    box-shadow: none;
+  }
+  [disabled]:is(.FormControl-input, .FormControl-select, .FormControl-textarea) {
+    box-shadow: none;
+  }
   input.FormControl-checkbox[type=checkbox][disabled],
   input.FormControl-radio[type=radio][disabled] {
     box-shadow: none;
@@ -8020,6 +8031,12 @@
     box-shadow: none;
   }
   .details-overlay > summary.btn-primary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
+    box-shadow: none;
+  }
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .Header-input {
