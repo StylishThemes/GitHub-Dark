@@ -566,9 +566,6 @@
   .lp-SectionTemplate-grid-column:has(.lp-SectionTemplate-customer) > div > div {
     background: none;
   }
-  .ConsentExperience-module__FormConsent--tY15x input:focus-visible {
-    box-shadow: none;
-  }
   .Form-module__FormErrorsItem--rPm5V {
     background: none;
   }
@@ -1560,6 +1557,13 @@
     }
   }
   @layer primer-react {
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-ProgressBar-ProgressBarItem-stL6O[data-animated=true] {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      }
+    }
+  }
+  @layer primer-react {
     .prc-components-Input-Ic-y8 {
       background-color: transparent;
     }
@@ -1567,13 +1571,6 @@
   @layer primer-react {
     .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
       box-shadow: none;
-    }
-  }
-  @layer primer-react {
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-ProgressBar-ProgressBarItem-stL6O[data-animated=true] {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
-      }
     }
   }
   @layer primer-react {
@@ -1592,17 +1589,7 @@
     }
   }
   @layer primer-react {
-    .prc-Textarea-TextArea-13q4j, .prc-Token-TokenButton-F4Y8h,
-    .prc-Token-TokenTextContainer--rlDJ {
-      background-color: transparent;
-    }
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-    :where(.prc-Label-Label--LG6X) {
+    .prc-Token-TokenButton-F4Y8h {
       background-color: transparent;
     }
   }
@@ -1616,16 +1603,31 @@
     }
   }
   @layer primer-react {
+    .prc-Textarea-TextArea-13q4j, .prc-Token-TokenTextContainer--rlDJ {
+      background-color: transparent;
+    }
+  }
+  @layer primer-react {
+  }
+  @layer primer-react {
+    :where(.prc-Label-Label--LG6X) {
+      background-color: transparent;
+    }
+  }
+  @layer primer-react {
     .prc-Radio-Radio-Ly4MR:focus, .prc-Radio-Radio-Ly4MR:focus-within {
       box-shadow: none;
     }
   }
   @layer primer-react {
-    :is(.prc-SelectPanel2-Overlay-ZMksW:where([data-variant=anchored]), .prc-SelectPanel2-Overlay-ZMksW:where([data-variant=full-screen]))::backdrop {
+    .prc-components-UnderlineItem-lJsg- {
       background-color: transparent;
     }
-    .prc-SelectPanel2-ClearAction-AQbaB {
-      background: none;
+    .prc-components-UnderlineItem-lJsg-:focus:not(:focus-visible) {
+      box-shadow: none;
+    }
+    .prc-components-UnderlineItem-lJsg-::after {
+      background-color: transparent;
     }
   }
   @layer primer-react {
@@ -1647,6 +1649,14 @@
   @layer primer-react {
   }
   @layer primer-react {
+  }
+  @layer primer-react {
+    :is(.prc-SelectPanel2-Overlay-ZMksW:where([data-variant=anchored]), .prc-SelectPanel2-Overlay-ZMksW:where([data-variant=full-screen]))::backdrop {
+      background-color: transparent;
+    }
+    .prc-SelectPanel2-ClearAction-AQbaB {
+      background: none;
+    }
   }
   @layer primer-react {
     .prc-SegmentedControl-Item-7Aq6h:not(:last-child):has( + [data-selected])::after,
@@ -5007,156 +5017,6 @@
   .convert-to-issue-button {
     background-color: transparent;
   }
-  .table-section-heading td {
-    color: #fff;
-    background-color: #9b9b9b;
-  }
-  table.formatted-data td, table.formatted-data th {
-    color: #9b9b9b;
-  }
-  table.formatted-data th {
-    color: #c6c6c6;
-  }
-  p.welcome {
-    color: #9b9b9b;
-  }
-  .audit-log-title .octicon {
-    color: #5a5a5a;
-  }
-  .ip-dot {
-    color: #fff;
-  }
-  li.fuzzy-match-header {
-    color: #fff;
-  }
-  li.fuzzy-match-header, li.fuzzy-match-header:hover {
-    background-color: #9b9b9b;
-  }
-  .status-check-list {
-    border-color: var(--borderWidth-thin);
-  }
-  .status-check-list li {
-    border-bottom-color: var(--borderWidth-thin);
-  }
-  .ability {
-    background-color: #2c2c2c;
-  }
-  .ability > .ability {
-    background-color: #343434;
-  }
-  .stafftools-group .es-repair-progress .progress-bar .percent {
-    color: #fff;
-  }
-  .performance-pane {
-    border-bottom-color: var(--borderWidth-thin);
-  }
-  .performance-pane h1 {
-    color: #afafaf;
-    text-shadow: 1px 1px 1px #f0f0f0;
-  }
-  .performance-pane ul.big-nums > li strong {
-    color: #5a5a5a;
-    text-shadow: 1px 1px 4px #f0f0f0;
-  }
-  .performance-pane h2 {
-    color: #5a5a5a;
-    background-color: #f0f0f0;
-  }
-  .performance-pane table.queries th {
-    background-color: #5a5a5a;
-  }
-  .performance-pane .sql {
-    color: #5a5a5a;
-  }
-  .performance-pane .dimmed-row td {
-    color: #afafaf;
-  }
-  .graphql-query-trace-node-row:hover {
-    background-color: hsla(0, 0%, 0%, .1);
-  }
-  .server-stats {
-    background-color: #dcdcdc;
-  }
-  .server-stats .rails-version, .server-stats .switcher {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .server-stats .switcher a, .server-stats .switcher button {
-    color: #fff;
-  }
-  .server-stats .stats .stat-toggle {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .server-stats .stats .stat-toggle a,
-  .server-stats .stats .stat-toggle button,
-  .server-stats .stats .stat-toggle strong {
-    color: #fff;
-  }
-  .server-stats .dot {
-    border: var(--borderWidth-thin) solid var(--ghd-bg-color);
-  }
-  .stats-show-more-stats {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .stats-show-more-stats:hover {
-    color: #fff;
-  }
-  .stafftools-icon {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .stafftools-icon:hover {
-    color: #fff;
-  }
-  .biztools-briefcase {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .biztools-briefcase:hover {
-    color: #fff;
-  }
-  .serverstats-branch {
-    color: hsla(0, 0%, 0%, .5);
-  }
-  .serverstats-bones g-emoji, .serverstats-service g-emoji {
-    color: #fff;
-  }
-  .render-trace ul li:hover {
-    outline: 2px solid #5a5a5a;
-  }
-  .allocation-trace tr:not(:first-child) {
-    border-bottom-color: var(--borderWidth-thin);
-  }
-  .site-admin-head h1 {
-    color: #9b9b9b;
-  }
-  .site-admin-blankstate {
-    color: #767676;
-    border-color: var(--borderWidth-thin);
-  }
-  .site-admin-table {
-    color: #9b9b9b;
-  }
-  .site-admin-table tr {
-    border-color: var(--borderWidth-thin);
-  }
-  .site-admin-subhead,
-  .stafftools-group ul.boxed-group-list.bottom-border > li:last-child {
-    border-bottom-color: var(--borderWidth-thin);
-  }
-  .stafftools-group .boxed-group > h3::after {
-    background-image: linear-gradient(-45deg, rgba(192, 192, 192, .1) 25%, transparent 25%, transparent 50%, rgba(192, 192, 192, .1) 50%, rgba(192, 192, 192, .1) 75%, transparent 75%, transparent);
-  }
-  .stafftools-group .boxed-group.dangerzone > h3::after {
-    background-image: linear-gradient(-45deg, hsla(0, 0%, 0%, .1) 25%, transparent 25%, transparent 50%, hsla(0, 0%, 0%, .1) 50%, hsla(0, 0%, 0%, .1) 75%, transparent 75%, transparent);
-  }
-  .score-meta.grid .col {
-    color: #c6c6c6;
-    border-left-color: var(--borderWidth-thin);
-  }
-  .fakelogin, .fakelogin .cancel-impersonation {
-    color: #fff;
-  }
-  .spamurai .spamurai-group-table {
-    border-color: var(--borderWidth-thin);
-  }
   .page-gist-edit .octicon-gist {
     color: #767676;
   }
@@ -5216,6 +5076,13 @@
     }
   }
   @layer primer-react {
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-ProgressBar-ProgressBarItem-stL6O[data-animated=true] {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      }
+    }
+  }
+  @layer primer-react {
     .prc-components-Input-Ic-y8 {
       background-color: transparent;
     }
@@ -5223,13 +5090,6 @@
   @layer primer-react {
     .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
       box-shadow: none;
-    }
-  }
-  @layer primer-react {
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-ProgressBar-ProgressBarItem-stL6O[data-animated=true] {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
-      }
     }
   }
   @layer primer-react {
@@ -5248,17 +5108,7 @@
     }
   }
   @layer primer-react {
-    .prc-Textarea-TextArea-13q4j, .prc-Token-TokenButton-F4Y8h,
-    .prc-Token-TokenTextContainer--rlDJ {
-      background-color: transparent;
-    }
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-    :where(.prc-Label-Label--LG6X) {
+    .prc-Token-TokenButton-F4Y8h {
       background-color: transparent;
     }
   }
@@ -5272,16 +5122,31 @@
     }
   }
   @layer primer-react {
+    .prc-Textarea-TextArea-13q4j, .prc-Token-TokenTextContainer--rlDJ {
+      background-color: transparent;
+    }
+  }
+  @layer primer-react {
+  }
+  @layer primer-react {
+    :where(.prc-Label-Label--LG6X) {
+      background-color: transparent;
+    }
+  }
+  @layer primer-react {
     .prc-Radio-Radio-Ly4MR:focus, .prc-Radio-Radio-Ly4MR:focus-within {
       box-shadow: none;
     }
   }
   @layer primer-react {
-    :is(.prc-SelectPanel2-Overlay-ZMksW:where([data-variant=anchored]), .prc-SelectPanel2-Overlay-ZMksW:where([data-variant=full-screen]))::backdrop {
+    .prc-components-UnderlineItem-lJsg- {
       background-color: transparent;
     }
-    .prc-SelectPanel2-ClearAction-AQbaB {
-      background: none;
+    .prc-components-UnderlineItem-lJsg-:focus:not(:focus-visible) {
+      box-shadow: none;
+    }
+    .prc-components-UnderlineItem-lJsg-::after {
+      background-color: transparent;
     }
   }
   @layer primer-react {
@@ -5303,6 +5168,14 @@
   @layer primer-react {
   }
   @layer primer-react {
+  }
+  @layer primer-react {
+    :is(.prc-SelectPanel2-Overlay-ZMksW:where([data-variant=anchored]), .prc-SelectPanel2-Overlay-ZMksW:where([data-variant=full-screen]))::backdrop {
+      background-color: transparent;
+    }
+    .prc-SelectPanel2-ClearAction-AQbaB {
+      background: none;
+    }
   }
   @layer primer-react {
     .prc-SegmentedControl-Item-7Aq6h:not(:last-child):has( + [data-selected])::after,
