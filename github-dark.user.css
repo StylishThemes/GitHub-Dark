@@ -292,18 +292,6 @@
   }
   /* generated github-mobile rules */
   /* begin github.com rules */
-  .btn-mktg {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
-  }
-  .btn-mktg::before {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
-  }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
-    background: none !important;
-  }
-  .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
-  }
   [data-color-mode=dark][data-dark-theme*=dark],
   [data-color-mode=light][data-light-theme*=dark] {
     --color-mktg-btn-bg: #202020;
@@ -916,15 +904,17 @@
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
+    box-shadow: none;
+  }
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -935,18 +925,18 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg {
+  .btn-muted-mktg, .btn-subtle-mktg {
     background: none !important;
   }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
+  .btn-subtle-mktg::before {
     background: none !important;
   }
   .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
+    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -983,11 +973,8 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
-  }
-  .AvatarStack-body .avatar {
-    box-shadow: none;
   }
   anchored-position:not(.Overlay) {
     background: none;
@@ -1528,9 +1515,14 @@
     .prc-components-ButtonReset-9kafa {
       background: none;
     }
+    .prc-TabNav-TabNavLink-jXRq9:focus {
+      box-shadow: none;
+    }
     .prc-ToggleSwitch-LineIconContainer-7sQm8 {
       color: var(--control-checked-fgColor-rest, var(--color-switch-track-checked-fg, #181818));
     }
+  }
+  @layer primer-react {
   }
   @layer primer-react {
     .prc-ToggleSwitch-LineIconContainer-7sQm8:where([data-disabled=true]) {
@@ -1542,11 +1534,6 @@
     .prc-ToggleSwitch-ToggleKnob-2e7Rm {
       background-color: var(--controlKnob-bgColor-rest, var(--color-switch-knob-bg, #181818));
     }
-    .prc-TabNav-TabNavLink-jXRq9:focus {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
   }
   @layer primer-react {
     @media (prefers-reduced-motion:no-preference) {
@@ -4237,15 +4224,17 @@
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
+    box-shadow: none;
+  }
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -4256,18 +4245,18 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg {
+  .btn-muted-mktg, .btn-subtle-mktg {
     background: none !important;
   }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
+  .btn-subtle-mktg::before {
     background: none !important;
   }
   .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
+    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -4304,11 +4293,8 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
-  }
-  .AvatarStack-body .avatar {
-    box-shadow: none;
   }
   anchored-position:not(.Overlay) {
     background: none;
@@ -4819,9 +4805,14 @@
     .prc-components-ButtonReset-9kafa {
       background: none;
     }
+    .prc-TabNav-TabNavLink-jXRq9:focus {
+      box-shadow: none;
+    }
     .prc-ToggleSwitch-LineIconContainer-7sQm8 {
       color: var(--control-checked-fgColor-rest, var(--color-switch-track-checked-fg, #181818));
     }
+  }
+  @layer primer-react {
   }
   @layer primer-react {
     .prc-ToggleSwitch-LineIconContainer-7sQm8:where([data-disabled=true]) {
@@ -4833,11 +4824,6 @@
     .prc-ToggleSwitch-ToggleKnob-2e7Rm {
       background-color: var(--controlKnob-bgColor-rest, var(--color-switch-knob-bg, #181818));
     }
-    .prc-TabNav-TabNavLink-jXRq9:focus {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
   }
   @layer primer-react {
     @media (prefers-reduced-motion:no-preference) {
