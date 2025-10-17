@@ -292,6 +292,18 @@
   }
   /* generated github-mobile rules */
   /* begin github.com rules */
+  .btn-mktg {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
+  }
+  .btn-mktg::before {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
+  }
+  .btn-subtle-mktg, .btn-subtle-mktg::before {
+    background: none !important;
+  }
+  .btn-signup-mktg {
+    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
+  }
   [data-color-mode=dark][data-dark-theme*=dark],
   [data-color-mode=light][data-light-theme*=dark] {
     --color-mktg-btn-bg: #202020;
@@ -924,17 +936,15 @@
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
-    box-shadow: none;
-  }
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -945,18 +955,18 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg, .btn-subtle-mktg {
+  .btn-muted-mktg {
     background: none !important;
   }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg::before {
+  .btn-subtle-mktg, .btn-subtle-mktg::before {
     background: none !important;
   }
   .btn-signup-mktg {
+    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
-    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -993,7 +1003,7 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
     }
   }
   anchored-position:not(.Overlay) {
@@ -1416,6 +1426,18 @@
     background: repeating-linear-gradient(to right bottom, hsla(0, 0%, 0%, .6), hsla(0, 0%, 0%, .6) .11rem, var(--bgColor-danger-emphasis) .11rem, var(--bgColor-danger-emphasis) .22rem);
   }
   @layer primer-react {
+    .prc-components-Chord-vlqS5 {
+      box-shadow: none;
+    }
+    .prc-components-ChordNormal-6rvP6 {
+      background-color: var(--bgColor-transparent, transparent);
+    }
+    .prc-KeybindingHint-KeybindingHint-0pyit {
+      background: none;
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
     .prc-Button-ButtonBase-c50BI:focus-visible {
       box-shadow: none;
     }
@@ -1452,28 +1474,11 @@
     .prc-TooltipV2-Tooltip-cYMVY[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
-    .prc-components-Chord-vlqS5 {
-      box-shadow: none;
-    }
-    .prc-components-ChordNormal-6rvP6 {
-      background-color: var(--bgColor-transparent, transparent);
-    }
-    .prc-KeybindingHint-KeybindingHint-0pyit {
-      background: none;
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-    .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
     .prc-ActionList-ActionListItem-uq6I7 {
       background-color: var(--control-transparent-bgColor-rest, transparent);
     }
+  }
+  @layer primer-react {
     .prc-ActionList-ActionListItem-uq6I7:not(:has([aria-disabled], [disabled]), [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -1485,15 +1490,13 @@
     }
   }
   @layer primer-react {
-    .prc-Radio-Radio-Ly4MR:focus-visible {
+    .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
       box-shadow: none;
     }
   }
   @layer primer-react {
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-nSZk3 {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Radio-Radio-Ly4MR:focus-visible {
+      box-shadow: none;
     }
   }
   @layer primer-react {
@@ -1521,15 +1524,22 @@
     }
   }
   @layer primer-react {
-    .prc-SegmentedControl-Button-ojWXD:focus:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-SegmentedControl-Button-ojWXD:focus-visible:not(:disabled) {
-      box-shadow: none;
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-nSZk3 {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
   }
   @layer primer-react {
     .prc-components-UnderlineItem-lJsg-:focus:not(:focus-visible) {
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
+    .prc-SegmentedControl-Button-ojWXD:focus:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-SegmentedControl-Button-ojWXD:focus-visible:not(:disabled) {
       box-shadow: none;
     }
   }
@@ -4263,17 +4273,15 @@
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
-    box-shadow: none;
-  }
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -4284,18 +4292,18 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg, .btn-subtle-mktg {
+  .btn-muted-mktg {
     background: none !important;
   }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg::before {
+  .btn-subtle-mktg, .btn-subtle-mktg::before {
     background: none !important;
   }
   .btn-signup-mktg {
+    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
-    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -4332,7 +4340,7 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
     }
   }
   anchored-position:not(.Overlay) {
@@ -4725,6 +4733,18 @@
     border-bottom-color: var(--ghd-bg-color);
   }
   @layer primer-react {
+    .prc-components-Chord-vlqS5 {
+      box-shadow: none;
+    }
+    .prc-components-ChordNormal-6rvP6 {
+      background-color: var(--bgColor-transparent, transparent);
+    }
+    .prc-KeybindingHint-KeybindingHint-0pyit {
+      background: none;
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
     .prc-Button-ButtonBase-c50BI:focus-visible {
       box-shadow: none;
     }
@@ -4761,28 +4781,11 @@
     .prc-TooltipV2-Tooltip-cYMVY[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
-    .prc-components-Chord-vlqS5 {
-      box-shadow: none;
-    }
-    .prc-components-ChordNormal-6rvP6 {
-      background-color: var(--bgColor-transparent, transparent);
-    }
-    .prc-KeybindingHint-KeybindingHint-0pyit {
-      background: none;
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
-  }
-  @layer primer-react {
-    .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
     .prc-ActionList-ActionListItem-uq6I7 {
       background-color: var(--control-transparent-bgColor-rest, transparent);
     }
+  }
+  @layer primer-react {
     .prc-ActionList-ActionListItem-uq6I7:not(:has([aria-disabled], [disabled]), [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -4794,15 +4797,13 @@
     }
   }
   @layer primer-react {
-    .prc-Radio-Radio-Ly4MR:focus-visible {
+    .prc-components-TextInputBaseWrapper-ueK9q:where([data-disabled]) {
       box-shadow: none;
     }
   }
   @layer primer-react {
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-nSZk3 {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Radio-Radio-Ly4MR:focus-visible {
+      box-shadow: none;
     }
   }
   @layer primer-react {
@@ -4830,15 +4831,22 @@
     }
   }
   @layer primer-react {
-    .prc-SegmentedControl-Button-ojWXD:focus:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-SegmentedControl-Button-ojWXD:focus-visible:not(:disabled) {
-      box-shadow: none;
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-nSZk3 {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
   }
   @layer primer-react {
     .prc-components-UnderlineItem-lJsg-:focus:not(:focus-visible) {
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
+    .prc-SegmentedControl-Button-ojWXD:focus:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-SegmentedControl-Button-ojWXD:focus-visible:not(:disabled) {
       box-shadow: none;
     }
   }
