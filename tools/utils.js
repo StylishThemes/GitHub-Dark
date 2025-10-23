@@ -1,9 +1,5 @@
-import fetchEnhanced from "fetch-enhanced";
-import nodeFetch from "node-fetch";
 import {platform} from "node:os";
 import {writeFileSync, truncateSync, globSync} from "node:fs";
-
-const fetch = fetchEnhanced(nodeFetch, {undici: false});
 
 // version of writeFile that preserves metadata on WSL and Cygwin platforms
 export function writeFile(file, content) {
