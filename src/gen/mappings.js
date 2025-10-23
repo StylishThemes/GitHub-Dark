@@ -1,4 +1,4 @@
-export default async () => ({
+export default () => ({
   // ==========================================================================
   //                         Short How-to
   // `$border: value`: Any occurance of `value` in a `border` property.

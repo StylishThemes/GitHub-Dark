@@ -2,15 +2,12 @@ import esc from "escape-string-regexp";
 import fetchCss from "fetch-css";
 import remapCss from "remap-css";
 import {readFileSync} from "node:fs";
-import {resolve, basename, dirname} from "node:path";
+import {basename} from "node:path";
 import cssnano from "cssnano";
-import {fileURLToPath} from "node:url";
 import {writeFile, exit, glob} from "./utils.js";
 import mappingsFn from "../src/gen/mappings.js";
 import ignoresFn from "../src/gen/ignores.js";
 import sourcesFn from "../src/gen/sources.js";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const sourceFiles = glob("src/*.css").sort((a, b) => {
   // main first
@@ -69,11 +66,9 @@ async function getThemes() {
 }
 
 async function main() {
-  const [mappings, ignores, sources] = await Promise.all([
-    mappingsFn(),
-    ignoresFn(),
-    sourcesFn(),
-  ]);
+  const mappings = mappingsFn();
+  const ignores = ignoresFn();
+  const sources = await sourcesFn();
 
   const remapOpts = {
     ignoreSelectors: ignores,
@@ -84,9 +79,9 @@ async function main() {
     validate: true,
   };
 
-  const {version} = JSON.parse(readFileSync(resolve(__dirname, "../package.json"), "utf8"));
+  const {version} = JSON.parse(readFileSync(new URL("../package.json", import.meta.url)), "utf8");
 
-  let css = readFileSync(resolve(__dirname, "../src/template.css"), "utf8");
+  let css = readFileSync(new URL("../src/template.css", import.meta.url), "utf8");
   css = `${css.trim().replace("{{version}}", version)}\n`;
 
   for (const [type, themes] of Object.entries(await getThemes())) {
@@ -118,7 +113,7 @@ async function main() {
     css += `${sourceCss.trim()}\n`;
   }
 
-  writeFile(resolve(__dirname, "../github-dark.user.css"), css);
+  writeFile(new URL("../github-dark.user.css", import.meta.url), css);
 }
 
 main().then(exit).catch(exit);

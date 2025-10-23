@@ -1,4 +1,4 @@
-export default async () => [
+export default () => [
   /\.CodeMirror/,
   /\.cm-/, // CodeMirror
   /\.pl-/, // GitHub Pretty Lights Syntax highlighter

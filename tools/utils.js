@@ -1,12 +1,8 @@
-import fastGlob from "fast-glob";
 import fetchEnhanced from "fetch-enhanced";
 import nodeFetch from "node-fetch";
 import {platform} from "node:os";
-import {resolve, dirname} from "node:path";
-import {writeFileSync, truncateSync} from "node:fs";
-import {fileURLToPath} from "node:url";
+import {writeFileSync, truncateSync, globSync} from "node:fs";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const fetch = fetchEnhanced(nodeFetch, {undici: false});
 
 // version of writeFile that preserves metadata on WSL and Cygwin platforms
@@ -29,7 +25,7 @@ export function exit(err) {
 }
 
 export function glob(pattern) {
-  return fastGlob.sync(pattern, {cwd: resolve(__dirname, ".."), absolute: true});
+  return globSync(pattern, {cwd: new URL("..", import.meta.url)});
 }
 
 let chromeVersion;
