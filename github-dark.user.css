@@ -219,8 +219,7 @@
   .highcharts-background {
     fill: none !important;
   }
-  /* commits list */
-  .listviewitem {
+  .listviewitem, [class*="LatestCommit-module__Box"] {
     background: #181818;
   }
   .cPEOjV {
@@ -1344,74 +1343,52 @@
       color: #fff;
     }
   }
-  .universe-promo-container-design-2 {
-    background-color: #181818;
-  }
   .universe-promo-container-design-2 .universe-cta-design-2 {
-    color: #f0f0f0;
-    background-color: #181818;
-  }
-  [data-color-mode=dark] .universe-promo-container-design-2 {
-    background-color: #181818;
-  }
-  [data-color-mode=dark] .universe-cta-design-2 {
     color: #fff;
     background-color: #f0f0f0;
   }
-  [data-color-mode=light] .universe-cta-design-2 {
+  [data-color-mode=dark] .universe-cta-design-2 {
     color: #f0f0f0;
     background-color: #181818;
   }
+  [data-color-mode=light] .universe-cta-design-2 {
+    color: #fff;
+    background-color: #f0f0f0;
+  }
   @media (prefers-color-scheme: dark) {
-    [data-color-mode=auto][data-dark-theme=dark] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_dimmed_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_tritanopia] .universe-promo-container-design-2 {
-      background-color: #181818;
-    }
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_tritanopia] .universe-cta-design-2 {
-      color: #fff;
-      background-color: #f0f0f0;
+      color: #f0f0f0;
+      background-color: #181818;
     }
     [data-color-mode=auto][data-dark-theme=light] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_tritanopia] .universe-cta-design-2 {
-      color: #f0f0f0;
-      background-color: #181818;
+      color: #fff;
+      background-color: #f0f0f0;
     }
   }
   @media (prefers-color-scheme: light) {
-    [data-color-mode=auto][data-light-theme=dark] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_dimmed_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_tritanopia] .universe-promo-container-design-2 {
-      background-color: #181818;
-    }
     [data-color-mode=auto][data-light-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_tritanopia] .universe-cta-design-2 {
-      color: #fff;
-      background-color: #f0f0f0;
+      color: #f0f0f0;
+      background-color: #181818;
     }
     [data-color-mode=auto][data-light-theme=light] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_tritanopia] .universe-cta-design-2 {
-      color: #f0f0f0;
-      background-color: #181818;
+      color: #fff;
+      background-color: #f0f0f0;
     }
   }
   .suggest-icon path, .suggest-icon svg {
@@ -1561,6 +1538,9 @@
   .DiffSquares-module__deletion--vyEtU {
     background: repeating-linear-gradient(to right bottom, hsla(0, 0%, 0%, .6), hsla(0, 0%, 0%, .6) .11rem, var(--bgColor-danger-emphasis) .11rem, var(--bgColor-danger-emphasis) .22rem);
   }
+  .NavDropdown-module__button--Hq9UR {
+    background-color: transparent;
+  }
   @layer primer-react {
     .prc-components-Chord-vlqS5 {
       box-shadow: none;
@@ -1646,15 +1626,6 @@
     }
   }
   @layer primer-react {
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
     .prc-Token-TokenTextContainer--rlDJ {
       background-color: transparent;
     }
@@ -1691,6 +1662,15 @@
     }
   }
   @layer primer-react {
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
     @media (hover:hover) and (pointer:fine) {
       .prc-ActionList-Item--disabled-vmKZN:hover {
         background-color: transparent;
@@ -1701,9 +1681,16 @@
     .prc-TabNav-TabNavLink-jXRq9:focus {
       box-shadow: none;
     }
+    .prc-SelectPanel2-ClearAction-AQbaB, .prc-components-ButtonReset-9kafa {
+      background: none;
+    }
     .prc-ToggleSwitch-LineIconContainer-7sQm8 {
       color: var(--control-checked-fgColor-rest, var(--color-switch-track-checked-fg, #181818));
     }
+  }
+  @layer primer-react {
+  }
+  @layer primer-react {
   }
   @layer primer-react {
     .prc-ToggleSwitch-LineIconContainer-7sQm8:where([data-disabled=true]) {
@@ -1715,11 +1702,6 @@
     .prc-ToggleSwitch-ToggleKnob-2e7Rm {
       background-color: var(--controlKnob-bgColor-rest, var(--color-switch-knob-bg, #181818));
     }
-    .prc-components-ButtonReset-9kafa {
-      background: none;
-    }
-  }
-  @layer primer-react {
   }
   @layer primer-react {
     @media (prefers-reduced-motion:no-preference) {
@@ -1746,11 +1728,6 @@
     }
     .prc-UnderlineNav-UnderlineNavLink-7BXiO:focus-visible:not(:disabled) {
       box-shadow: none;
-    }
-  }
-  @layer primer-react {
-    .prc-SelectPanel2-ClearAction-AQbaB {
-      background: none;
     }
   }
   /* end github.com rules */
@@ -4672,74 +4649,52 @@
       color: #fff;
     }
   }
-  .universe-promo-container-design-2 {
-    background-color: #181818;
-  }
   .universe-promo-container-design-2 .universe-cta-design-2 {
-    color: #f0f0f0;
-    background-color: #181818;
-  }
-  [data-color-mode=dark] .universe-promo-container-design-2 {
-    background-color: #181818;
-  }
-  [data-color-mode=dark] .universe-cta-design-2 {
     color: #fff;
     background-color: #f0f0f0;
   }
-  [data-color-mode=light] .universe-cta-design-2 {
+  [data-color-mode=dark] .universe-cta-design-2 {
     color: #f0f0f0;
     background-color: #181818;
   }
+  [data-color-mode=light] .universe-cta-design-2 {
+    color: #fff;
+    background-color: #f0f0f0;
+  }
   @media (prefers-color-scheme: dark) {
-    [data-color-mode=auto][data-dark-theme=dark] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_dimmed_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-dark-theme=dark_tritanopia] .universe-promo-container-design-2 {
-      background-color: #181818;
-    }
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_tritanopia] .universe-cta-design-2 {
-      color: #fff;
-      background-color: #f0f0f0;
+      color: #f0f0f0;
+      background-color: #181818;
     }
     [data-color-mode=auto][data-dark-theme=light] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=light_tritanopia] .universe-cta-design-2 {
-      color: #f0f0f0;
-      background-color: #181818;
+      color: #fff;
+      background-color: #f0f0f0;
     }
   }
   @media (prefers-color-scheme: light) {
-    [data-color-mode=auto][data-light-theme=dark] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_dimmed_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_high_contrast] .universe-promo-container-design-2,
-    [data-color-mode=auto][data-light-theme=dark_tritanopia] .universe-promo-container-design-2 {
-      background-color: #181818;
-    }
     [data-color-mode=auto][data-light-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_tritanopia] .universe-cta-design-2 {
-      color: #fff;
-      background-color: #f0f0f0;
+      color: #f0f0f0;
+      background-color: #181818;
     }
     [data-color-mode=auto][data-light-theme=light] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_high_contrast] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=light_tritanopia] .universe-cta-design-2 {
-      color: #f0f0f0;
-      background-color: #181818;
+      color: #fff;
+      background-color: #f0f0f0;
     }
   }
   .suggest-icon path, .suggest-icon svg {
@@ -4944,15 +4899,6 @@
     }
   }
   @layer primer-react {
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
-    }
-  }
-  @layer primer-react {
     .prc-Token-TokenTextContainer--rlDJ {
       background-color: transparent;
     }
@@ -4989,6 +4935,15 @@
     }
   }
   @layer primer-react {
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
+  }
+  @layer primer-react {
     @media (hover:hover) and (pointer:fine) {
       .prc-ActionList-Item--disabled-vmKZN:hover {
         background-color: transparent;
@@ -4999,9 +4954,16 @@
     .prc-TabNav-TabNavLink-jXRq9:focus {
       box-shadow: none;
     }
+    .prc-SelectPanel2-ClearAction-AQbaB, .prc-components-ButtonReset-9kafa {
+      background: none;
+    }
     .prc-ToggleSwitch-LineIconContainer-7sQm8 {
       color: var(--control-checked-fgColor-rest, var(--color-switch-track-checked-fg, #181818));
     }
+  }
+  @layer primer-react {
+  }
+  @layer primer-react {
   }
   @layer primer-react {
     .prc-ToggleSwitch-LineIconContainer-7sQm8:where([data-disabled=true]) {
@@ -5013,11 +4975,6 @@
     .prc-ToggleSwitch-ToggleKnob-2e7Rm {
       background-color: var(--controlKnob-bgColor-rest, var(--color-switch-knob-bg, #181818));
     }
-    .prc-components-ButtonReset-9kafa {
-      background: none;
-    }
-  }
-  @layer primer-react {
   }
   @layer primer-react {
     @media (prefers-reduced-motion:no-preference) {
@@ -5044,11 +5001,6 @@
     }
     .prc-UnderlineNav-UnderlineNavLink-7BXiO:focus-visible:not(:disabled) {
       box-shadow: none;
-    }
-  }
-  @layer primer-react {
-    .prc-SelectPanel2-ClearAction-AQbaB {
-      background: none;
     }
   }
   /* end gist.github.com rules */
