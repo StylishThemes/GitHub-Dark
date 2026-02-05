@@ -304,26 +304,23 @@
     background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
-  }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
-    background: none !important;
+    background: linear-gradient(hsla(0, 0%, 0%, .15) 0%, transparent 100%) !important;
   }
   .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
+    background: linear-gradient(rgba(52, 183, 89, .15) 0%, rgba(46, 164, 79, 0) 100%), #373 !important;
   }
   [data-color-mode=dark][data-dark-theme*=dark],
   [data-color-mode=light][data-light-theme*=dark] {
     --color-mktg-btn-bg: #202020;
     --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme*=dark] {
       --color-mktg-btn-bg: #202020;
       --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme*=dark] {
       --color-mktg-btn-bg: #202020;
       --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
@@ -333,12 +330,12 @@
   [data-color-mode=light][data-light-theme*=light] {
     --color-mktg-btn-bg: #dcdcdc;
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme*=light] {
       --color-mktg-btn-bg: #dcdcdc;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme*=light] {
       --color-mktg-btn-bg: #dcdcdc;
     }
@@ -364,9 +361,17 @@
   .font-mktg [data-color-mode=dark] {
     --color-fg-default: #181818 !important;
   }
-  .header-white .HeaderMktg a:focus-visible,
+  .header-white .HeaderMktg a:focus-visible {
+    box-shadow: none;
+  }
   .header-white .HeaderMktg button:focus-visible {
     box-shadow: none;
+  }
+  .header-dark .AppHeader, .header-dark .Header, .header-dark .HeaderMktg {
+    --AppHeader-bg: #f0f0f0;
+  }
+  .header-overlay .Header:not(.open), .header-overlay .header-logged-out {
+    background-color: transparent;
   }
   .header-dark .AppHeader, .header-dark .AppHeader .AppHeader-button,
   .header-dark .AppHeader .form-control, .header-overlay .AppHeader,
@@ -376,18 +381,21 @@
     box-shadow: none;
   }
   footer.footer .btn-mktg.btn-muted-mktg:not(:hover) {
-    box-shadow: transparent 0 0 0 1px inset;
+    box-shadow: inset 0 0 0 1px transparent;
   }
   .testimonial-avatar {
-    border: var(--borderWidth-thicker) solid var(--ghd-bg-color);
+    border: var(--borderWidth-thicker)solid var(--ghd-bg-color);
   }
   .subnav-link.selected {
     border-bottom-color: /*[[base-color]]*/;
   }
-  @media (min-width: 768px) {
+  @media (min-width:768px) {
     .subnav-primary.selected {
       border-bottom-color: /*[[base-color]]*/;
     }
+  }
+  .animation-pause-toggle {
+    background-color: transparent;
   }
   .btn-link-reset {
     box-shadow: none !important;
@@ -398,29 +406,24 @@
   .password-validity-summary.password-validity-summary-close {
     color: #cb4;
   }
-  :root, [data-color-mode="light"] {
+  :root, [data-color-mode=light] {
     --base-color-scale-transparent: transparent;
     --base-color-scale-white-0: #181818;
     --base-color-scale-gray-0: #202020;
   }
-  [data-color-mode="dark"] {
+  [data-color-mode=dark] {
     --base-color-scale-black-0: #f0f0f0;
     --base-color-scale-white-0: #181818;
     --base-color-scale-purple-5: #53387a;
     --base-color-scale-purple-6: #8348af;
     --brand-button-subtle-bgColor-hover: hsla(0, 0%, 0%, .05);
   }
-  .Primer_Brand__Button-module__Button___lDruK,
-  .Primer_Brand__Label-module__Label___TW0HL,
-  .Primer_Brand__RiverAccordion-module__RiverAccordion__trigger___x_yLq {
-    background: none;
-  }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width:768px) {
     .Primer_Brand__RiverStoryScroll-module__RiverStoryScroll__visual--below___gJyav {
-      background-image: linear-gradient(180deg, var(--brand-RiverStoryScroll-content-inactive-bgColor) calc(var(--topOffset) + var(--visualHeight) + 3px), transparent calc(var(--topOffset) + var(--visualHeight) + var(--textToVisualPadding)), transparent 93%, var(--brand-RiverStoryScroll-content-inactive-bgColor) 99%);
+      background-image: linear-gradient(180deg, var(--brand-RiverStoryScroll-content-inactive-bgColor)calc(var(--topOffset) + var(--visualHeight) + 3px), transparent calc(var(--topOffset) + var(--visualHeight) + var(--textToVisualPadding)), transparent 93%, var(--brand-RiverStoryScroll-content-inactive-bgColor)99%);
     }
   }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width:48rem) {
     .Primer_Brand__SubdomainNavBar-module__SubdomainNavBar-more-link___GR7D2 {
       background-color: transparent;
     }
@@ -429,14 +432,11 @@
   .Primer_Brand__SubdomainNavBar-module__SubdomainNavBar-search-button___Nzz4R {
     background-color: transparent;
   }
-  :root, [data-color-mode="light"] {
+  :root, [data-color-mode=light] {
     --brand-SubdomainNavBar-canvas-default: hsla(0, 0%, 0%, .5);
   }
   .Primer_Brand__Link-module__Link___lvKjM::after {
-    border-color: var(--brand-borderWidth-thin);
-  }
-  .Primer_Brand__FAQ-module__FAQ___R3vLU.Primer_Brand__FAQ-module__details__summary___zIBcp {
-    background: none;
+    border: var(--brand-borderWidth-thin)solid currentcolor;
   }
   .Primer_Brand__FAQGroup-module__FAQGroup__tablist-button___EgyrC {
     background-color: transparent;
@@ -444,43 +444,31 @@
   .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___P15pl:focus-visible {
     box-shadow: none;
   }
-  @media screen and (max-width: 47.99rem) {
+  @media screen and (max-width:47.99rem) {
     .Primer_Brand__Prose-module__Prose___X2BXE table:has(td[data-label]) {
-      background: none;
       box-shadow: none;
     }
   }
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__playButtonOverlay___J7kgz {
-    background-color: rgba(255, 255, 255, .7);
-  }
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__playButtonOverlay___J7kgz.Primer_Brand__VideoPlayer-module__VideoPlayer__playButtonOverlay--transparent___Nc60m {
-    background-color: transparent;
-  }
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__iconControl___Tw7A4 {
-    background: none;
-  }
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__ccOff___svmJL,
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__rangeInput____wivl {
-    background-color: transparent;
-  }
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__rangeInput____wivl::-moz-range-track,
-  .Primer_Brand__VideoPlayer-module__VideoPlayer__rangeInput____wivl::-webkit-slider-runnable-track {
+  .Primer_Brand__VideoPlayer-module__VideoPlayer__ccOff___svmJL {
     background-color: transparent;
   }
   .Primer_Brand__VideoPlayer-module__VideoPlayer__tooltipContent___BoAqV {
     background-color: #181818;
   }
   .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee___Q0YOr {
-    -webkit-mask-image: linear-gradient(to right, hsla(0, 0%, 0%, 0), #f0f0f0 20%, #f0f0f0 80%, hsla(0, 0%, 0%, 0));
-    mask-image: linear-gradient(to right, hsla(0, 0%, 0%, 0), #f0f0f0 20%, #f0f0f0 80%, hsla(0, 0%, 0%, 0));
+    -webkit-mask-image: linear-gradient(90deg, transparent, #f0f0f0 20%, #f0f0f0 80%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #f0f0f0 20%, #f0f0f0 80%, transparent);
   }
-  :root, [data-color-mode="light"] {
+  :root, [data-color-mode=light] {
     --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+  }
+  [data-color-mode=dark] {
+    --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, rgba(0, 0, 0, .4));
   }
   .Primer_Brand__SubNav-module__SubNav__anchor-menu-container___TNidG {
     background-color: transparent;
   }
-  @media screen and (max-width: 63.24rem) {
+  @media screen and (max-width:63.24rem) {
     .Primer_Brand__SubNav-module__SubNav__overlay-toggle___GY93X {
       background-color: transparent;
     }
@@ -488,79 +476,72 @@
       background: linear-gradient(to left, var(--brand-color-canvas-default), transparent);
     }
   }
-  @media screen and (min-width: 63.25rem) {
-    .Primer_Brand__SubNav-module__SubNav__link--has-sub-menu___IrziW::after {
-      background-color: transparent;
-    }
-    .Primer_Brand__SubNav-module__SubNav__sub-menu-toggle___FvvL9 {
-      background: none;
-    }
-  }
-  :root, [data-color-mode="light"] {
+  :root, [data-color-mode=light] {
     --brand-IDE-glass-bgColor-rest: hsla(0, 0%, 0%, .85);
     --brand-IDE-glass-editor-tab-bgColor-rest: hsla(0, 0%, 0%, .1);
   }
-  .Primer_Brand__IDE-module__IDE--glass___uVNlv .Primer_Brand__IDE-module__IDE__Editor-tab___lY6lZ,
   .Primer_Brand__Pagination-module__Pagination__item___PmxA5[aria-disabled],
   .Primer_Brand__Pagination-module__Pagination__item___PmxA5[aria-disabled]:hover,
-  .Primer_Brand__Pagination-module__Pagination__item___PmxA5[role="presentation"],
-  .Primer_Brand__Pagination-module__Pagination__item___PmxA5[role="presentation"]:hover {
+  .Primer_Brand__Pagination-module__Pagination__item___PmxA5[role=presentation],
+  .Primer_Brand__Pagination-module__Pagination__item___PmxA5[role=presentation]:hover {
     background-color: transparent;
   }
-  :root, [data-color-mode="light"] {
+  :root, [data-color-mode=light] {
     --brand-FrostedGlassVFX-bgColor: hsla(0, 0%, 0%, .7);
   }
-  [data-color-mode="dark"] {
-    --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+  [data-color-mode=dark] {
+    --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0)exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0)content-box;
   }
-  @supports (background: linear-gradient(red 0%, red 0% 1%, red 2%)) {
-    [data-color-mode="dark"] {
-      --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+  @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+    [data-color-mode=dark] {
+      --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0)exclude, linear-gradient(#f0f0f0 0 0)content-box;
     }
   }
   .Primer_Brand__FrostedGlassVFX-module__FrostedGlassVFX___DrCGZ > * {
     background-color: transparent;
   }
-  @media screen and (max-width: 48rem) {
+  @media screen and (max-width:48rem) {
     .Primer_Brand__Tabs-module__Tablist__wrapper___Bz69R::after {
-      background: linear-gradient(to left, var(--brand-color-canvas-default) 30%, transparent);
+      background: linear-gradient(to left, var(--brand-color-canvas-default)30%, transparent);
     }
   }
-  .Primer_Brand__Tabs-module__Tabs__control___crCR5,
-  .Primer_Brand__Tabs-module__Tabs__item___rPI4n {
+  .Primer_Brand__Tabs-module__Tabs__control___crCR5 {
     background-color: transparent;
   }
+  .lp-CustomerStories-button:focus, .lp-CustomerStories-button:hover {
+    background-color: transparent !important;
+  }
   .lp-CustomerStories-backgroundContainer {
-    border-color: var(--borderWidth-thin);
+    border: solid var(--borderWidth-thin)hsla(0, 0%, 0%, .3);
   }
   #hero {
-    background: linear-gradient(to bottom, #000240, transparent);
+    background: linear-gradient(#000240, transparent);
   }
   #hero.hero-universe .lp-Intro {
-    background: linear-gradient(180deg, #010336 20.95%, #f0f0f0 139.69%);
+    background: linear-gradient(#010336 20.95%, #f0f0f0 139.69%);
   }
   .lp-Intro::after {
-    background: linear-gradient(to right, transparent, #181818, #181818, transparent);
+    background: linear-gradient(90deg, transparent, #181818, #181818, transparent);
   }
   .lp-Intro-gradient {
-    background: linear-gradient(180deg, transparent -8.14%, hsla(0, 0%, 0%, .1) 62.09%);
+    background: linear-gradient(transparent -8.14%, hsla(0, 0%, 0%, .1) 62.09%);
   }
-  .lp-AccordionDisclosure {
-    background: none;
-  }
-  .afterAnimation.wing:nth-child(1) .defaultWhiteColor,
+  .afterAnimation.wing:first-child .defaultWhiteColor,
   .afterAnimation.wing:nth-child(2) .defaultWhiteColor,
-  .noAnimation.wing:nth-child(1) .defaultWhiteColor,
+  .noAnimation.wing:first-child .defaultWhiteColor,
   .noAnimation.wing:nth-child(2) .defaultWhiteColor,
-  .wing:nth-child(1) .defaultColor, .wingBlurMask {
+  .wing:first-child .defaultColor, .wingBlurMask {
     background-color: #181818;
   }
   .BackToTop a {
     color: hsla(0, 0%, 100%, .4);
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid hsla(0, 0%, 0%, .15);
   }
   .CtaFormControl-container {
-    border: var(--functional-borderWidth-thin, 1px) solid var(--ghd-bg-color);
+    border: var(--functional-borderWidth-thin, 1px)solid var(--ghd-bg-color);
+  }
+  .CtaFormControl-input {
+    background-color: transparent;
   }
   .CtaForm-primaryAction {
     --brand-button-primary-fgColor-rest: #181818;
@@ -569,35 +550,36 @@
     --brand-button-secondary-borderColor-rest: #181818;
     border-color: var(--ghd-bg-color);
   }
-  .lp-FootnoteLink {
-    background: none;
-  }
   .lp-HeroCarousel-background {
-    mask-image: linear-gradient(180deg, transparent, #181818 25%);
+    -webkit-mask-image: linear-gradient(transparent, #181818 25%);
+    mask-image: linear-gradient(transparent, #181818 25%);
+  }
+  .lp-HeroCarousel-background > div:nth-child(2) {
+    background: linear-gradient(transparent 47.42%, rgba(14, 10, 162, .5) 104.56%);
+  }
+  .hero-universe .lp-HeroCarousel-background > div:nth-child(2) {
+    background: linear-gradient(transparent 47.42%, rgba(14, 10, 162, .2) 104.56%);
   }
   .lp-HeroCarousel-content {
     background-color: hsla(0, 0%, 0%, .15);
   }
-  .PlayButton {
-    background: none;
-  }
   .lp-SectionHero-background {
-    border-top-color: var(--borderWidth-thin);
+    border-top: var(--borderWidth-thin)solid hsla(0, 0%, 0%, .6);
   }
-  @media (min-width: 1012px) {
+  @media (min-width:1012px) {
     .lp-SectionHero-background {
-      border-color: var(--borderWidth-thin);
+      border: var(--borderWidth-thin)solid hsla(0, 0%, 0%, .6);
     }
   }
   .lp-SectionHero-visual-frame {
+    border: var(--borderWidth-thin)solid hsla(0, 0%, 0%, .1);
     background-color: hsla(0, 0%, 0%, .2);
-    border-color: var(--borderWidth-thin);
   }
   .lp-SectionIntro-description {
     color: hsla(0, 0%, 0%, .85);
   }
-  .lp-SectionTemplate-grid-column:has(.lp-SectionTemplate-customer) > div > div {
-    background: none;
+  .Toggle-button {
+    background-color: transparent;
   }
   .GlowCircleBackground-module__backgroundContainer__b8ljkAn,
   .Mascot-module__Shadow__kMCg0fB {
@@ -670,15 +652,49 @@
   .global-module__root__z0SBuPK {
     --colors-black: #f0f0f0;
   }
-  [data-color-mode="auto"][data-light-theme="light"],
-  [data-color-mode="light"][data-light-theme="light"] {
+  [data-color-mode=auto][data-light-theme=light],
+  [data-color-mode=light][data-light-theme=light] {
     --bgColor-muted: #202020;
+    --bgColor-transparent: transparent;
+    --borderColor-transparent: transparent;
+    --button-invisible-bgColor-disabled: transparent;
+    --button-invisible-borderColor-disabled: transparent;
+    --buttonKeybindingHint-invisible-borderColor-rest: transparent;
     --color-prettylights-syntax-carriage-return-text: #202020;
     --control-bgColor-rest: #202020;
+    --control-transparent-bgColor-rest: transparent;
+    --control-transparent-borderColor-active: transparent;
+    --control-transparent-borderColor-hover: transparent;
+    --control-transparent-borderColor-rest: transparent;
+    --counter-borderColor: transparent;
+    --label-auburn-borderColor: transparent;
+    --label-blue-borderColor: transparent;
+    --label-brown-borderColor: transparent;
+    --label-coral-borderColor: transparent;
+    --label-cyan-borderColor: transparent;
+    --label-gray-borderColor: transparent;
+    --label-green-borderColor: transparent;
+    --label-indigo-borderColor: transparent;
+    --label-lemon-borderColor: transparent;
+    --label-lime-borderColor: transparent;
+    --label-olive-borderColor: transparent;
+    --label-orange-borderColor: transparent;
+    --label-pine-borderColor: transparent;
+    --label-pink-borderColor: transparent;
+    --label-plum-borderColor: transparent;
+    --label-purple-borderColor: transparent;
+    --label-red-borderColor: transparent;
+    --label-teal-borderColor: transparent;
+    --label-yellow-borderColor: transparent;
+    --menu-bgColor-active: transparent;
+    --progressBar-track-borderColor: transparent;
+    --selectMenu-borderColor: transparent;
+    --topicTag-borderColor: transparent;
     --avatar-bgColor: #181818;
     --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
     --bgColor-default: #181818;
     --bgColor-white: #181818;
+    --border-transparent: .0625rem solid transparent;
     --button-danger-fgColor-active: #181818;
     --button-danger-fgColor-hover: #181818;
     --button-danger-iconColor-hover: #181818;
@@ -694,20 +710,55 @@
     --fgColor-onEmphasis: #181818;
     --fgColor-onInverse: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --header-fgColor-logo: #181818;
     --overlay-bgColor: #181818;
     --sideNav-bgColor-selected: #181818;
     --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="light"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=light] {
       --bgColor-muted: #202020;
+      --bgColor-transparent: transparent;
+      --borderColor-transparent: transparent;
+      --button-invisible-bgColor-disabled: transparent;
+      --button-invisible-borderColor-disabled: transparent;
+      --buttonKeybindingHint-invisible-borderColor-rest: transparent;
       --color-prettylights-syntax-carriage-return-text: #202020;
       --control-bgColor-rest: #202020;
+      --control-transparent-bgColor-rest: transparent;
+      --control-transparent-borderColor-active: transparent;
+      --control-transparent-borderColor-hover: transparent;
+      --control-transparent-borderColor-rest: transparent;
+      --counter-borderColor: transparent;
+      --label-auburn-borderColor: transparent;
+      --label-blue-borderColor: transparent;
+      --label-brown-borderColor: transparent;
+      --label-coral-borderColor: transparent;
+      --label-cyan-borderColor: transparent;
+      --label-gray-borderColor: transparent;
+      --label-green-borderColor: transparent;
+      --label-indigo-borderColor: transparent;
+      --label-lemon-borderColor: transparent;
+      --label-lime-borderColor: transparent;
+      --label-olive-borderColor: transparent;
+      --label-orange-borderColor: transparent;
+      --label-pine-borderColor: transparent;
+      --label-pink-borderColor: transparent;
+      --label-plum-borderColor: transparent;
+      --label-purple-borderColor: transparent;
+      --label-red-borderColor: transparent;
+      --label-teal-borderColor: transparent;
+      --label-yellow-borderColor: transparent;
+      --menu-bgColor-active: transparent;
+      --progressBar-track-borderColor: transparent;
+      --selectMenu-borderColor: transparent;
+      --topicTag-borderColor: transparent;
       --avatar-bgColor: #181818;
       --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
       --bgColor-default: #181818;
       --bgColor-white: #181818;
+      --border-transparent: .0625rem solid transparent;
       --button-danger-fgColor-active: #181818;
       --button-danger-fgColor-hover: #181818;
       --button-danger-iconColor-hover: #181818;
@@ -723,21 +774,31 @@
       --fgColor-onEmphasis: #181818;
       --fgColor-onInverse: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --header-fgColor-logo: #181818;
       --overlay-bgColor: #181818;
       --sideNav-bgColor-selected: #181818;
       --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
     }
   }
-  [data-color-mode="auto"][data-light-theme="light_high_contrast"],
-  [data-color-mode="light"][data-light-theme="light_high_contrast"] {
+  [data-color-mode=auto][data-light-theme=light_high_contrast],
+  [data-color-mode=light][data-light-theme=light_high_contrast] {
+    --bgColor-transparent: transparent;
+    --borderColor-transparent: transparent;
+    --button-invisible-bgColor-disabled: transparent;
+    --button-invisible-borderColor-disabled: transparent;
     --buttonKeybindingHint-danger-borderColor-hover: #181818;
     --buttonKeybindingHint-primary-borderColor-rest: #181818;
     --color-prettylights-syntax-carriage-return-text: #202020;
+    --control-transparent-bgColor-rest: transparent;
+    --control-transparent-borderColor-rest: transparent;
+    --menu-bgColor-active: transparent;
+    --selectMenu-borderColor: transparent;
     --avatar-bgColor: #181818;
     --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
     --bgColor-default: #181818;
     --bgColor-white: #181818;
+    --border-transparent: .0625rem solid transparent;
     --button-danger-fgColor-active: #181818;
     --button-danger-fgColor-hover: #181818;
     --button-danger-iconColor-hover: #181818;
@@ -754,20 +815,30 @@
     --fgColor-onEmphasis: #181818;
     --fgColor-onInverse: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --header-fgColor-logo: #181818;
     --overlay-bgColor: #181818;
     --sideNav-bgColor-selected: #181818;
     --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="light_high_contrast"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=light_high_contrast] {
+      --bgColor-transparent: transparent;
+      --borderColor-transparent: transparent;
+      --button-invisible-bgColor-disabled: transparent;
+      --button-invisible-borderColor-disabled: transparent;
       --buttonKeybindingHint-danger-borderColor-hover: #181818;
       --buttonKeybindingHint-primary-borderColor-rest: #181818;
       --color-prettylights-syntax-carriage-return-text: #202020;
+      --control-transparent-bgColor-rest: transparent;
+      --control-transparent-borderColor-rest: transparent;
+      --menu-bgColor-active: transparent;
+      --selectMenu-borderColor: transparent;
       --avatar-bgColor: #181818;
       --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
       --bgColor-default: #181818;
       --bgColor-white: #181818;
+      --border-transparent: .0625rem solid transparent;
       --button-danger-fgColor-active: #181818;
       --button-danger-fgColor-hover: #181818;
       --button-danger-iconColor-hover: #181818;
@@ -784,20 +855,22 @@
       --fgColor-onEmphasis: #181818;
       --fgColor-onInverse: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --header-fgColor-logo: #181818;
       --overlay-bgColor: #181818;
       --sideNav-bgColor-selected: #181818;
       --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
     }
   }
-  [data-color-mode="auto"][data-light-theme="dark"],
-  [data-color-mode="dark"][data-dark-theme="dark"] {
+  [data-color-mode=auto][data-light-theme=dark],
+  [data-color-mode=dark][data-dark-theme=dark] {
     --bgColor-done-emphasis: #53387a;
     --borderColor-done-emphasis: #53387a;
     --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
     --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-primary-shadow-selected: 0 0 0 0 #f0f0f0;
+    --avatar-bgColor: hsla(0, 0%, 0%, .1);
     --bgColor-inverse: #181818;
     --bgColor-white: #181818;
     --border-done-emphasis: .0625rem solid #53387a;
@@ -812,16 +885,18 @@
     --controlKnob-bgColor-checked: #181818;
     --fgColor-onEmphasis: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --border-upsell-emphasis: .0625rem solid #53387a;
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="dark"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=dark] {
       --bgColor-done-emphasis: #53387a;
       --borderColor-done-emphasis: #53387a;
       --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
       --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-primary-shadow-selected: 0 0 0 0 #f0f0f0;
+      --avatar-bgColor: hsla(0, 0%, 0%, .1);
       --bgColor-inverse: #181818;
       --bgColor-white: #181818;
       --border-done-emphasis: .0625rem solid #53387a;
@@ -836,11 +911,12 @@
       --controlKnob-bgColor-checked: #181818;
       --fgColor-onEmphasis: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --border-upsell-emphasis: .0625rem solid #53387a;
     }
   }
-  [data-color-mode="auto"][data-light-theme="dark_high_contrast"],
-  [data-color-mode="dark"][data-dark-theme="dark_high_contrast"] {
+  [data-color-mode=auto][data-light-theme=dark_high_contrast],
+  [data-color-mode=dark][data-dark-theme=dark_high_contrast] {
     --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
     --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
@@ -848,6 +924,7 @@
     --buttonKeybindingHint-danger-borderColor-hover: #181818;
     --buttonKeybindingHint-primary-borderColor-rest: #181818;
     --contribution-default-borderColor-0: #181818;
+    --avatar-bgColor: hsla(0, 0%, 0%, .1);
     --bgColor-inverse: #181818;
     --bgColor-white: #181818;
     --button-danger-fgColor-active: #181818;
@@ -860,9 +937,10 @@
     --fgColor-default: #181818;
     --fgColor-onEmphasis: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="dark_high_contrast"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=dark_high_contrast] {
       --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
       --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
@@ -870,6 +948,7 @@
       --buttonKeybindingHint-danger-borderColor-hover: #181818;
       --buttonKeybindingHint-primary-borderColor-rest: #181818;
       --contribution-default-borderColor-0: #181818;
+      --avatar-bgColor: hsla(0, 0%, 0%, .1);
       --bgColor-inverse: #181818;
       --bgColor-white: #181818;
       --button-danger-fgColor-active: #181818;
@@ -882,15 +961,30 @@
       --fgColor-default: #181818;
       --fgColor-onEmphasis: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
     }
   }
   @layer primer-css-base {
+    a {
+      background-color: transparent;
+    }
     [role=button]:focus, a:focus, button:focus, input[type=checkbox]:focus,
     input[type=radio]:focus {
       box-shadow: none;
     }
-    [role=button]:focus-visible, a:focus-visible, button:focus-visible,
-    input[type=checkbox]:focus-visible, input[type=radio]:focus-visible {
+    a:focus-visible {
+      box-shadow: none;
+    }
+    button:focus-visible {
+      box-shadow: none;
+    }
+    [role=button]:focus-visible {
+      box-shadow: none;
+    }
+    input[type=radio]:focus-visible {
+      box-shadow: none;
+    }
+    input[type=checkbox]:focus-visible {
       box-shadow: none;
     }
   }
@@ -903,37 +997,65 @@
   a.btn-primary:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .btn-outline.selected:focus:not(:focus-visible),
-  .btn-outline:active:focus:not(:focus-visible),
+  .btn-outline:active:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-outline.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .btn-outline[aria-selected=true]:focus:not(:focus-visible) {
     box-shadow: none;
   }
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true],
-  .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover,
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled=true] {
     box-shadow: none;
   }
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible:active, .btn-invisible[aria-selected=true] {
-    background: none;
+  .btn-invisible, .btn-link {
+    background-color: transparent;
+  }
+  .btn-invisible, .btn-invisible.selected,
+  .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
+  .btn-invisible:hover, .btn-invisible[aria-selected=true] {
     box-shadow: none;
+  }
+  .btn-invisible.disabled, .btn-invisible:disabled,
+  .btn-invisible[aria-disabled=true] {
+    background-color: transparent;
   }
   .btn-octicon, .close-button:active {
     box-shadow: none;
   }
-  .filter-item.selected:focus:not(:focus-visible),
-  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-list.pjax-active .filter-item {
+    background-color: transparent;
+  }
+  .filter-item.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .filter-item[aria-selected=true]:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .subnav-item.selected:focus:not(:focus-visible),
-  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .SideNav-item, .SideNav-subItem {
+    background-color: transparent;
+  }
+  .subnav-item.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .subnav-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible) {
     box-shadow: none;
   }
   .box-shadow-none {
     box-shadow: none !important;
+  }
+  .bgColor-transparent, .color-bg-transparent {
+    background-color: transparent !important;
   }
   .details-reset > summary:focus {
     box-shadow: none;
@@ -956,23 +1078,32 @@
   .Header-input {
     box-shadow: none;
   }
-  @media (min-width: 544px) {
+  .SelectMenu-closeButton, .SelectMenu-tab, .markdown-body .emoji,
+  .markdown-body pre code, .markdown-body pre tt, .markdown-body table img {
+    background-color: transparent;
+  }
+  @media (min-width:544px) {
     .SelectMenu-tab[aria-selected=true] {
       box-shadow: none;
     }
   }
+  .Toast-dismissButton {
+    background-color: transparent;
+  }
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
+    box-shadow: none;
+  }
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
+    background: linear-gradient(hsla(0, 0%, 0%, .15), transparent) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -983,18 +1114,12 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg {
-    background: none !important;
-  }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
-    background: none !important;
-  }
   .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
+    background: linear-gradient(rgba(52, 183, 89, .15), rgba(46, 164, 79, 0)), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -1008,8 +1133,11 @@
   .dropdown-item:hover > .Label {
     border-color: currentcolor;
   }
-  .dropdown-signout {
-    background: none;
+  [disabled]:-webkit-any(.FormControl-input, .FormControl-select, .FormControl-textarea) {
+    box-shadow: none;
+  }
+  [disabled]:-moz-any(.FormControl-input, .FormControl-select, .FormControl-textarea) {
+    box-shadow: none;
   }
   [disabled]:is(.FormControl-input, .FormControl-select, .FormControl-textarea) {
     box-shadow: none;
@@ -1029,22 +1157,17 @@
   .ToggleSwitch-track[disabled] .ToggleSwitch-knob {
     box-shadow: none;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
+      -webkit-mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
-  }
-  anchored-position:not(.Overlay) {
-    background: none;
   }
   .Button:disabled, .Button[aria-disabled=true] {
     box-shadow: none;
   }
   .Button--primary:focus:not(:focus-visible) {
     box-shadow: none;
-  }
-  .flash-close:not(.Banner-close) {
-    background: none;
   }
   .border-white-fade {
     border-color: hsla(0, 0%, 0%, .15) !important;
@@ -1054,53 +1177,92 @@
       background-color: transparent;
     }
   }
-  body [role=button]:focus:not(:focus-visible),
-  body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible),
-  body a:focus:not(:focus-visible), body button:focus:not(:focus-visible),
+  body [role=button]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body button:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   body summary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body a:focus:not(:focus-visible) {
     box-shadow: none;
   }
   .auth-form-header, .auth-form-header h1 a {
     color: #fff;
   }
   .auth-form-header .octicon {
-    text-shadow: 0 1px 0 hsla(0, 0%, 0%, .1);
+    text-shadow: 0 1px hsla(0, 0%, 0%, .1);
   }
-  .HeaderMktg a:focus-visible, .HeaderMktg button:focus-visible {
+  .session-authentication .auth-form-header,
+  .session-authentication .header-logged-out {
+    background-color: transparent;
+  }
+  .HeaderMktg a:focus-visible {
     box-shadow: none;
   }
-  @media (min-width: 1012px) {
+  .HeaderMktg button:focus-visible {
+    box-shadow: none;
+  }
+  @media (min-width:1012px) {
     .HeaderMenu .HeaderMenu-wrapper {
       box-shadow: none;
+      background-color: transparent;
     }
   }
-  .HeaderMenu .dropdown-menu, .HeaderMenu .search-input .Overlay {
+  .HeaderMenu .dropdown-menu {
+    box-shadow: none;
+  }
+  .AppHeader-appearanceSettings .HeaderMenu-link:active,
+  .AppHeader-appearanceSettings .HeaderMenu-link:hover {
+    background-color: transparent !important;
+  }
+  @media (max-width:1011.98px) {
+    .HeaderMenu-item .HeaderMenu-dropdown, .HeaderMenu-trailing-link {
+      background-color: transparent;
+    }
+  }
+  @media (max-width:1011.98px) {
+  }
+  .HeaderMenu .search-input .Overlay {
     box-shadow: none;
   }
   .HeaderMktg.Details--on .HeaderMenu .HeaderMenu-link:focus-visible {
     box-shadow: none;
   }
   .notification-indicator .mail-status, .unread-indicator {
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
-  .header-search-wrapper, .header-search-wrapper.focus {
+  .header-search-input, .header-search-input:focus, .header-search-wrapper,
+  .header-search-wrapper.focus {
     box-shadow: none;
-  }
-  .header-search-input {
-    background: none;
-    box-shadow: none;
-  }
-  .header-search-input:focus {
-    box-shadow: none;
-  }
-  .header-search-button {
-    background: none;
   }
   .header-search-button.input-button:focus-visible {
     box-shadow: none;
   }
+  .jump-to-suggestions-path mark {
+    background-color: transparent;
+  }
   .app-banner-icon {
     color: #fff;
+  }
+  .ActionList-item, .html-auth .header-logged-out,
+  .session-authentication.enterprise .header-logged-out,
+  .session-authentication.hosted .header-logged-out,
+  .switch-account-popover-row {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionList-item[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionList-content {
+    background-color: transparent;
   }
   .ActionList-content:focus {
     box-shadow: none;
@@ -1108,34 +1270,53 @@
   .ActionList-content:focus-visible {
     box-shadow: none;
   }
+  @media (hover:hover) {
+    .ActionList-content[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .select-menu.label-select-menu .select-menu-item:active {
+    background-color: transparent !important;
+  }
   .select-menu-item:focus .Label, .select-menu-item:hover .Label {
     border-color: currentcolor;
+  }
+  .collapsible-sidebar-widget-button, .comment-body .highlight {
+    background-color: transparent;
   }
   .locked-conversation .preview-tab, .locked-conversation .write-tab {
     color: #767676;
   }
-  .signed-commit-badge {
-    background: none;
+  .blob-wrapper table tr:nth-child(2n) {
+    background-color: transparent;
   }
   .add-line-comment.octicon-check {
     background-color: #c6c6c6;
   }
   .inline-comment-form {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
   }
-  button.discussion-sidebar-toggle {
-    background: none;
+  .previewable-comment-form .comment-body {
+    background-color: transparent;
   }
   :target .timeline-comment-group .timeline-comment .timeline-comment-group .timeline-comment {
     box-shadow: none !important;
   }
+  .reponav-wrapper .reponav-item.selected {
+    background-color: transparent;
+  }
+  @media (max-width:768px) {
+    .PageLayout--responsive-separateRegions.PageLayout--responsive-primary-pane .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
+      background-color: transparent;
+    }
+  }
   .steps {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
     box-shadow: 0 1px 3px rgba(220, 220, 220, .05);
   }
   .steps li {
     color: #767676;
-    border-left-color: var(--borderWidth-thin);
+    border-left: var(--borderWidth-thin)solid #343434;
   }
   .prose-diff.no-level-zero-box-shadow .rich-diff-level-zero.added,
   .prose-diff.no-level-zero-box-shadow .rich-diff-level-zero.changed,
@@ -1143,13 +1324,16 @@
     box-shadow: none;
   }
   .social-reaction-summary-item {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #246));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #246));
+    background-color: transparent;
   }
-  .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
-    background: none;
+  .new-reactions-dropdown .dropdown-menu-reactions::after,
+  .new-reactions-dropdown .dropdown-menu-reactions::before {
+    background-color: transparent;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .Skeleton {
+      -webkit-mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
       mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
   }
@@ -1157,13 +1341,16 @@
   .GlobalNav .AppHeader-search .AppHeader-search-kbd {
     box-shadow: none;
   }
-  .AnimatedImagePlayer-images {
-    background: none;
-  }
-  @media (max-width: 767px) {
+  @media (max-width:767px) {
     .notifications-v2 .AvatarStack-body .avatar {
-      border-right: var(--borderWidth-thin) solid var(--ghd-bg-color) !important;
+      border-right: var(--borderWidth-thin)solid var(--ghd-bg-color) !important;
     }
+  }
+  .notifications-v2 .thread-subscription-status {
+    background-color: transparent !important;
+  }
+  .inline-form .btn-plain {
+    background-color: transparent;
   }
   .upload-enabled.focused .form-control {
     box-shadow: none;
@@ -1174,11 +1361,7 @@
   .tag-input-container .focus {
     box-shadow: none !important;
   }
-  .tag-input input {
-    background: none;
-    box-shadow: none;
-  }
-  .tag-input input:focus {
+  .tag-input input, .tag-input input:focus {
     box-shadow: none;
   }
   .topic-tag-outline {
@@ -1191,23 +1374,25 @@
   .CommentBox-container.CommentBox-container:focus-within {
     box-shadow: none;
   }
-  .CommentBox-input {
-    background: none;
+  .CommentBox-input.CommentBox-input:focus {
+    box-shadow: none;
   }
-  .CommentBox-input.CommentBox-input:focus,
   .CommentBox-input.CommentBox-input:focus-visible {
     box-shadow: none;
   }
   .CommentBox .dragover .CommentBox-input,
-  .CommentBox .dragover .CommentBox-input:focus {
+  .CommentBox .dragover .CommentBox-input:focus,
+  .CommentBox-comment.CommentBox-comment:focus {
     box-shadow: none;
   }
-  .CommentBox-comment.CommentBox-comment:focus,
   .CommentBox-comment.CommentBox-comment:focus-visible {
     box-shadow: none;
   }
   .QueryBuilder-Input:focus {
     box-shadow: none !important;
+  }
+  .AvatarStack-body:not(:hover) {
+    background-color: transparent;
   }
   .hx_badge-search-container .hx_badge-input {
     box-shadow: none;
@@ -1215,35 +1400,37 @@
   .hx_badge-search-container .hx_badge-input:focus {
     box-shadow: none !important;
   }
+  .dropdown-item.btn-link:disabled, .dropdown-item.btn-link:disabled:hover,
+  .dropdown-item.btn-link[aria-disabled=true],
+  .dropdown-item.btn-link[aria-disabled=true]:hover {
+    background-color: transparent;
+  }
   :root, [data-color-mode=dark][data-dark-theme*=light],
   [data-color-mode=light][data-light-theme*=light] {
     --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
     --color-project-gradient-out: transparent;
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme*=light] {
       --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
       --color-project-gradient-out: transparent;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme*=light] {
       --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
       --color-project-gradient-out: transparent;
     }
   }
-  .hx_kbd {
-    box-shadow: none;
-  }
-  select-panel dialog::backdrop {
-    background: none;
-  }
-  .Box--responsive .Box-row--unread {
+  .Box--responsive .Box-row--unread, .hx_kbd {
     box-shadow: none;
   }
   .Box--responsive .Box-row--unread::before {
     color: #fff;
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
+  .autocomplete-item {
+    background-color: transparent;
   }
   .pagehead-tabs-item.selected, .reponav-item.selected {
     border-top-color: #fff;
@@ -1259,6 +1446,10 @@
   .RoleAvatarSpread > .RoleAvatarSpread-avatar > [data-component=Avatar] {
     box-shadow: none;
   }
+  .integrations-install-target .flash,
+  .integrations-install-target .flash-error {
+    background-color: transparent;
+  }
   .usage-bar {
     background-color: #2c2c2c;
   }
@@ -1269,10 +1460,7 @@
   .code-frequency .addition {
     fill: #373;
   }
-  .search-form-fluid .search-page-input {
-    background: none;
-    box-shadow: none;
-  }
+  .search-form-fluid .search-page-input,
   .search-form-fluid .search-page-input:focus {
     box-shadow: none;
   }
@@ -1282,7 +1470,7 @@
   [data-color-mode=light] .universe-cta {
     color: #fff;
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta,
@@ -1297,7 +1485,7 @@
       color: #fff;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme=dark] .universe-cta,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta,
@@ -1324,7 +1512,7 @@
     color: #fff;
     background-color: #f0f0f0;
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta-design-2,
@@ -1342,7 +1530,7 @@
       background-color: #f0f0f0;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta-design-2,
@@ -1364,20 +1552,17 @@
     fill: #181818;
   }
   .file {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .file .image {
     background-color: #343434;
   }
   .file .image canvas, .file .image img {
+    border: var(--borderWidth-thin)solid var(--ghd-bg-color);
     background-color: #2c2c2c;
-    border: var(--borderWidth-thin) solid var(--ghd-bg-color);
   }
   .file .image .view canvas, .file .image .view img {
     background-color: #2c2c2c;
-  }
-  .file .empty {
-    background: none;
   }
   .integrations-select-repos::-webkit-scrollbar-thumb {
     box-shadow: 0 0 1px hsla(0, 0%, 0%, .5);
@@ -1387,6 +1572,11 @@
   }
   .issue-meta-section .octicon {
     color: var(--fgColor-muted, #5a5a5a);
+  }
+  .label-select-menu .selected:active,
+  .label-select-menu [aria-checked=mixed]:active,
+  .label-select-menu [aria-checked=true]:active {
+    background-color: transparent !important;
   }
   .map-background {
     fill: /*[[base-color]]*/;
@@ -1411,24 +1601,24 @@
     box-shadow: 0 0 0 .2em #3737;
   }
   .news .alert {
-    border-top-color: var(--borderWidth-thin);
+    border-top: var(--borderWidth-thin)solid #242424;
   }
   .trial-banner-notice {
-    background-image: linear-gradient(180deg, /*[[base-color]]*/ 0%, #4f8cc9 100%);
+    background-image: linear-gradient(/*[[base-color]]*/ 0%, #4f8cc9 100%);
   }
   @media print {
-    .State {
-      background: none;
-    }
     .State--open {
-      border-color: var(--borderWidth-thin);
+      border: var(--borderWidth-thin)solid #373;
     }
   }
   .pending-cards-status {
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
+  .timeout {
+    background-color: transparent;
   }
   .prereceive-feedback, .revert-error {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
   }
   .access-token.new-token {
     background-color: #44884450;
@@ -1437,13 +1627,13 @@
     border-bottom-color: var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-item + .listgroup-item {
-    border-top: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border-top: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-header {
-    border-bottom: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border-bottom: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-overflow {
     background-color: var(--bgColor-muted, var(--color-canvas-subtle, #222));
@@ -1452,27 +1642,35 @@
     color: #2c2c2c;
   }
   .showcase-page-pattern::after {
-    background-image: linear-gradient(180deg, hsla(0, 0%, 0%, .85), #181818);
+    background-image: linear-gradient(hsla(0, 0%, 0%, .85), #181818);
   }
   .sponsors-goal-progress-bar {
     background-color: #c49;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .sponsors-goal-progress-bar:hover {
-      background: linear-gradient(90deg, #cb4 0%, #c49 17%, #b34bff 34%, #01feff 51%, #cb4 68%, #c49 85%, #b34bff 100%);
+      background: linear-gradient(90deg, #cb4 0%, #c49 17%, #b34bff 34%, #01feff 51%, #cb4 68%, #c49 85%, #b34bff 100%) 0 0/300% 100%;
     }
   }
   .hx_status-indicator.status-indicator-loading {
     background-image: none;
   }
-  .team-label-ldap {
+  .hx_flex-avatar-stack-item .avatar, .team-label-ldap {
     box-shadow: none;
   }
-  .WorkflowJob-deployment-progress .Progress {
-    background: none;
+  .hx_merge_queue_entry_status_icon {
+    background-color: transparent;
   }
-  .hx_flex-avatar-stack-item .avatar {
-    box-shadow: none;
+  @keyframes toggle-color {
+    0% {
+      background-color: transparent;
+    }
+    to {
+      background-color: transparent;
+    }
+  }
+  .merge-branch-manually {
+    background-color: transparent;
   }
   .status-meta-file-name {
     background-color: rgba(220, 220, 220, .05);
@@ -1483,18 +1681,17 @@
   .table-of-contents .toc-diff-stats .octicon {
     color: #767676;
   }
-  @media (forced-colors: active) {
+  .branch-a-b-count .meter.zero, .expand-row-ellipsis,
+  .react-code-line-contents .expand-row-ellipsis {
+    background-color: transparent;
+  }
+  @media (forced-colors:active) {
     .code-navigation-cursor {
       background-color: #181818 !important;
     }
   }
-  .tree-finder-input, .tree-finder-input:focus {
-    box-shadow: none;
-  }
-  .tree-browser-result mark {
-    background: none;
-  }
-  .FileResultsList-module__PrimerLink__Ef_8NuZ {
+  .FileResultsList-module__PrimerLink__Ef_8NuZ, .tree-finder-input,
+  .tree-finder-input:focus {
     box-shadow: none;
   }
   .CodeownersValidationBanner-module__Box_3__GFAxgeQ::before {
@@ -4099,15 +4296,49 @@
 }
 @-moz-document domain("gist.github.com") {
   /* begin gist.github.com rules */
-  [data-color-mode="auto"][data-light-theme="light"],
-  [data-color-mode="light"][data-light-theme="light"] {
+  [data-color-mode=auto][data-light-theme=light],
+  [data-color-mode=light][data-light-theme=light] {
     --bgColor-muted: #202020;
+    --bgColor-transparent: transparent;
+    --borderColor-transparent: transparent;
+    --button-invisible-bgColor-disabled: transparent;
+    --button-invisible-borderColor-disabled: transparent;
+    --buttonKeybindingHint-invisible-borderColor-rest: transparent;
     --color-prettylights-syntax-carriage-return-text: #202020;
     --control-bgColor-rest: #202020;
+    --control-transparent-bgColor-rest: transparent;
+    --control-transparent-borderColor-active: transparent;
+    --control-transparent-borderColor-hover: transparent;
+    --control-transparent-borderColor-rest: transparent;
+    --counter-borderColor: transparent;
+    --label-auburn-borderColor: transparent;
+    --label-blue-borderColor: transparent;
+    --label-brown-borderColor: transparent;
+    --label-coral-borderColor: transparent;
+    --label-cyan-borderColor: transparent;
+    --label-gray-borderColor: transparent;
+    --label-green-borderColor: transparent;
+    --label-indigo-borderColor: transparent;
+    --label-lemon-borderColor: transparent;
+    --label-lime-borderColor: transparent;
+    --label-olive-borderColor: transparent;
+    --label-orange-borderColor: transparent;
+    --label-pine-borderColor: transparent;
+    --label-pink-borderColor: transparent;
+    --label-plum-borderColor: transparent;
+    --label-purple-borderColor: transparent;
+    --label-red-borderColor: transparent;
+    --label-teal-borderColor: transparent;
+    --label-yellow-borderColor: transparent;
+    --menu-bgColor-active: transparent;
+    --progressBar-track-borderColor: transparent;
+    --selectMenu-borderColor: transparent;
+    --topicTag-borderColor: transparent;
     --avatar-bgColor: #181818;
     --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
     --bgColor-default: #181818;
     --bgColor-white: #181818;
+    --border-transparent: .0625rem solid transparent;
     --button-danger-fgColor-active: #181818;
     --button-danger-fgColor-hover: #181818;
     --button-danger-iconColor-hover: #181818;
@@ -4123,20 +4354,55 @@
     --fgColor-onEmphasis: #181818;
     --fgColor-onInverse: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --header-fgColor-logo: #181818;
     --overlay-bgColor: #181818;
     --sideNav-bgColor-selected: #181818;
     --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="light"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=light] {
       --bgColor-muted: #202020;
+      --bgColor-transparent: transparent;
+      --borderColor-transparent: transparent;
+      --button-invisible-bgColor-disabled: transparent;
+      --button-invisible-borderColor-disabled: transparent;
+      --buttonKeybindingHint-invisible-borderColor-rest: transparent;
       --color-prettylights-syntax-carriage-return-text: #202020;
       --control-bgColor-rest: #202020;
+      --control-transparent-bgColor-rest: transparent;
+      --control-transparent-borderColor-active: transparent;
+      --control-transparent-borderColor-hover: transparent;
+      --control-transparent-borderColor-rest: transparent;
+      --counter-borderColor: transparent;
+      --label-auburn-borderColor: transparent;
+      --label-blue-borderColor: transparent;
+      --label-brown-borderColor: transparent;
+      --label-coral-borderColor: transparent;
+      --label-cyan-borderColor: transparent;
+      --label-gray-borderColor: transparent;
+      --label-green-borderColor: transparent;
+      --label-indigo-borderColor: transparent;
+      --label-lemon-borderColor: transparent;
+      --label-lime-borderColor: transparent;
+      --label-olive-borderColor: transparent;
+      --label-orange-borderColor: transparent;
+      --label-pine-borderColor: transparent;
+      --label-pink-borderColor: transparent;
+      --label-plum-borderColor: transparent;
+      --label-purple-borderColor: transparent;
+      --label-red-borderColor: transparent;
+      --label-teal-borderColor: transparent;
+      --label-yellow-borderColor: transparent;
+      --menu-bgColor-active: transparent;
+      --progressBar-track-borderColor: transparent;
+      --selectMenu-borderColor: transparent;
+      --topicTag-borderColor: transparent;
       --avatar-bgColor: #181818;
       --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
       --bgColor-default: #181818;
       --bgColor-white: #181818;
+      --border-transparent: .0625rem solid transparent;
       --button-danger-fgColor-active: #181818;
       --button-danger-fgColor-hover: #181818;
       --button-danger-iconColor-hover: #181818;
@@ -4152,21 +4418,31 @@
       --fgColor-onEmphasis: #181818;
       --fgColor-onInverse: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --header-fgColor-logo: #181818;
       --overlay-bgColor: #181818;
       --sideNav-bgColor-selected: #181818;
       --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
     }
   }
-  [data-color-mode="auto"][data-light-theme="light_high_contrast"],
-  [data-color-mode="light"][data-light-theme="light_high_contrast"] {
+  [data-color-mode=auto][data-light-theme=light_high_contrast],
+  [data-color-mode=light][data-light-theme=light_high_contrast] {
+    --bgColor-transparent: transparent;
+    --borderColor-transparent: transparent;
+    --button-invisible-bgColor-disabled: transparent;
+    --button-invisible-borderColor-disabled: transparent;
     --buttonKeybindingHint-danger-borderColor-hover: #181818;
     --buttonKeybindingHint-primary-borderColor-rest: #181818;
     --color-prettylights-syntax-carriage-return-text: #202020;
+    --control-transparent-bgColor-rest: transparent;
+    --control-transparent-borderColor-rest: transparent;
+    --menu-bgColor-active: transparent;
+    --selectMenu-borderColor: transparent;
     --avatar-bgColor: #181818;
     --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
     --bgColor-default: #181818;
     --bgColor-white: #181818;
+    --border-transparent: .0625rem solid transparent;
     --button-danger-fgColor-active: #181818;
     --button-danger-fgColor-hover: #181818;
     --button-danger-iconColor-hover: #181818;
@@ -4183,20 +4459,30 @@
     --fgColor-onEmphasis: #181818;
     --fgColor-onInverse: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --header-fgColor-logo: #181818;
     --overlay-bgColor: #181818;
     --sideNav-bgColor-selected: #181818;
     --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="light_high_contrast"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=light_high_contrast] {
+      --bgColor-transparent: transparent;
+      --borderColor-transparent: transparent;
+      --button-invisible-bgColor-disabled: transparent;
+      --button-invisible-borderColor-disabled: transparent;
       --buttonKeybindingHint-danger-borderColor-hover: #181818;
       --buttonKeybindingHint-primary-borderColor-rest: #181818;
       --color-prettylights-syntax-carriage-return-text: #202020;
+      --control-transparent-bgColor-rest: transparent;
+      --control-transparent-borderColor-rest: transparent;
+      --menu-bgColor-active: transparent;
+      --selectMenu-borderColor: transparent;
       --avatar-bgColor: #181818;
       --avatar-shadow: 0 0 0 2px hsla(0, 0%, 0%, .8);
       --bgColor-default: #181818;
       --bgColor-white: #181818;
+      --border-transparent: .0625rem solid transparent;
       --button-danger-fgColor-active: #181818;
       --button-danger-fgColor-hover: #181818;
       --button-danger-iconColor-hover: #181818;
@@ -4213,20 +4499,22 @@
       --fgColor-onEmphasis: #181818;
       --fgColor-onInverse: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --header-fgColor-logo: #181818;
       --overlay-bgColor: #181818;
       --sideNav-bgColor-selected: #181818;
       --button-primary-iconColor-rest: hsla(0, 0%, 0%, .8);
     }
   }
-  [data-color-mode="auto"][data-light-theme="dark"],
-  [data-color-mode="dark"][data-dark-theme="dark"] {
+  [data-color-mode=auto][data-light-theme=dark],
+  [data-color-mode=dark][data-dark-theme=dark] {
     --bgColor-done-emphasis: #53387a;
     --borderColor-done-emphasis: #53387a;
     --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
     --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-primary-shadow-selected: 0 0 0 0 #f0f0f0;
+    --avatar-bgColor: hsla(0, 0%, 0%, .1);
     --bgColor-inverse: #181818;
     --bgColor-white: #181818;
     --border-done-emphasis: .0625rem solid #53387a;
@@ -4241,16 +4529,18 @@
     --controlKnob-bgColor-checked: #181818;
     --fgColor-onEmphasis: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
     --border-upsell-emphasis: .0625rem solid #53387a;
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="dark"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=dark] {
       --bgColor-done-emphasis: #53387a;
       --borderColor-done-emphasis: #53387a;
       --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
       --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-primary-shadow-selected: 0 0 0 0 #f0f0f0;
+      --avatar-bgColor: hsla(0, 0%, 0%, .1);
       --bgColor-inverse: #181818;
       --bgColor-white: #181818;
       --border-done-emphasis: .0625rem solid #53387a;
@@ -4265,11 +4555,12 @@
       --controlKnob-bgColor-checked: #181818;
       --fgColor-onEmphasis: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
       --border-upsell-emphasis: .0625rem solid #53387a;
     }
   }
-  [data-color-mode="auto"][data-light-theme="dark_high_contrast"],
-  [data-color-mode="dark"][data-dark-theme="dark_high_contrast"] {
+  [data-color-mode=auto][data-light-theme=dark_high_contrast],
+  [data-color-mode=dark][data-dark-theme=dark_high_contrast] {
     --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
     --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
     --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
@@ -4277,6 +4568,7 @@
     --buttonKeybindingHint-danger-borderColor-hover: #181818;
     --buttonKeybindingHint-primary-borderColor-rest: #181818;
     --contribution-default-borderColor-0: #181818;
+    --avatar-bgColor: hsla(0, 0%, 0%, .1);
     --bgColor-inverse: #181818;
     --bgColor-white: #181818;
     --button-danger-fgColor-active: #181818;
@@ -4289,9 +4581,10 @@
     --fgColor-default: #181818;
     --fgColor-onEmphasis: #181818;
     --fgColor-white: #181818;
+    --header-fgColor-default: hsla(0, 0%, 0%, .7);
   }
-  @media (prefers-color-scheme: dark) {
-    [data-color-mode][data-color-mode="auto"][data-dark-theme="dark_high_contrast"] {
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode][data-color-mode=auto][data-dark-theme=dark_high_contrast] {
       --button-danger-shadow-selected: 0 0 0 0 #f0f0f0;
       --button-default-shadow-resting: 0 0 0 0 #f0f0f0;
       --button-outline-shadow-selected: 0 0 0 0 #f0f0f0;
@@ -4299,6 +4592,7 @@
       --buttonKeybindingHint-danger-borderColor-hover: #181818;
       --buttonKeybindingHint-primary-borderColor-rest: #181818;
       --contribution-default-borderColor-0: #181818;
+      --avatar-bgColor: hsla(0, 0%, 0%, .1);
       --bgColor-inverse: #181818;
       --bgColor-white: #181818;
       --button-danger-fgColor-active: #181818;
@@ -4311,15 +4605,30 @@
       --fgColor-default: #181818;
       --fgColor-onEmphasis: #181818;
       --fgColor-white: #181818;
+      --header-fgColor-default: hsla(0, 0%, 0%, .7);
     }
   }
   @layer primer-css-base {
+    a {
+      background-color: transparent;
+    }
     [role=button]:focus, a:focus, button:focus, input[type=checkbox]:focus,
     input[type=radio]:focus {
       box-shadow: none;
     }
-    [role=button]:focus-visible, a:focus-visible, button:focus-visible,
-    input[type=checkbox]:focus-visible, input[type=radio]:focus-visible {
+    a:focus-visible {
+      box-shadow: none;
+    }
+    button:focus-visible {
+      box-shadow: none;
+    }
+    [role=button]:focus-visible {
+      box-shadow: none;
+    }
+    input[type=radio]:focus-visible {
+      box-shadow: none;
+    }
+    input[type=checkbox]:focus-visible {
       box-shadow: none;
     }
   }
@@ -4332,37 +4641,65 @@
   a.btn-primary:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .btn-outline.selected:focus:not(:focus-visible),
-  .btn-outline:active:focus:not(:focus-visible),
+  .btn-outline:active:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .btn-outline.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .btn-outline[aria-selected=true]:focus:not(:focus-visible) {
     box-shadow: none;
   }
   .btn-danger.disabled, .btn-danger:disabled, .btn-danger[aria-disabled=true],
-  .btn-invisible, .btn-invisible.zeroclipboard-is-hover, .btn-invisible:hover,
   .btn-outline.disabled, .btn-outline:disabled,
   .btn-outline[aria-disabled=true] {
     box-shadow: none;
   }
-  .btn-invisible.selected, .btn-invisible.zeroclipboard-is-active,
-  .btn-invisible:active, .btn-invisible[aria-selected=true] {
-    background: none;
+  .btn-invisible, .btn-link {
+    background-color: transparent;
+  }
+  .btn-invisible, .btn-invisible.selected,
+  .btn-invisible.zeroclipboard-is-active,
+  .btn-invisible.zeroclipboard-is-hover, .btn-invisible:active,
+  .btn-invisible:hover, .btn-invisible[aria-selected=true] {
     box-shadow: none;
+  }
+  .btn-invisible.disabled, .btn-invisible:disabled,
+  .btn-invisible[aria-disabled=true] {
+    background-color: transparent;
   }
   .btn-octicon, .close-button:active {
     box-shadow: none;
   }
-  .filter-item.selected:focus:not(:focus-visible),
-  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-list.pjax-active .filter-item {
+    background-color: transparent;
+  }
+  .filter-item.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .filter-item[aria-selected=true]:focus:not(:focus-visible) {
     box-shadow: none;
   }
-  .subnav-item.selected:focus:not(:focus-visible),
-  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible),
+  .filter-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .SideNav-item, .SideNav-subItem {
+    background-color: transparent;
+  }
+  .subnav-item.selected:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   .subnav-item[aria-selected=true]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  .subnav-item[aria-current]:not([aria-current=false]):focus:not(:focus-visible) {
     box-shadow: none;
   }
   .box-shadow-none {
     box-shadow: none !important;
+  }
+  .bgColor-transparent, .color-bg-transparent {
+    background-color: transparent !important;
   }
   .details-reset > summary:focus {
     box-shadow: none;
@@ -4385,23 +4722,32 @@
   .Header-input {
     box-shadow: none;
   }
-  @media (min-width: 544px) {
+  .SelectMenu-closeButton, .SelectMenu-tab, .markdown-body .emoji,
+  .markdown-body pre code, .markdown-body pre tt, .markdown-body table img {
+    background-color: transparent;
+  }
+  @media (min-width:544px) {
     .SelectMenu-tab[aria-selected=true] {
       box-shadow: none;
     }
   }
+  .Toast-dismissButton {
+    background-color: transparent;
+  }
   .autocomplete-embedded-icon-wrap .form-control {
     box-shadow: none;
   }
-  :is(.autocomplete-embedded-icon-wrap .form-control):focus,
+  :is(.autocomplete-embedded-icon-wrap .form-control):focus {
+    box-shadow: none;
+  }
   :is(.autocomplete-embedded-icon-wrap .form-control):focus-visible {
     box-shadow: none;
   }
   .btn-mktg {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0, transparent 100%), var(--color-mktg-btn-bg) !important;
   }
   .btn-mktg::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, .1490196078), transparent) !important;
+    background: linear-gradient(hsla(0, 0%, 0%, .15), transparent) !important;
   }
   .btn-mktg:focus {
     box-shadow: none;
@@ -4412,18 +4758,12 @@
   .btn-mktg:focus-visible {
     box-shadow: none;
   }
-  .btn-muted-mktg {
-    background: none !important;
-  }
   .btn-subtle-mktg {
     box-shadow: none !important;
   }
-  .btn-subtle-mktg, .btn-subtle-mktg::before {
-    background: none !important;
-  }
   .btn-signup-mktg {
-    background: linear-gradient(180deg, rgba(52, 183, 89, .1490196078), rgba(46, 164, 79, 0)), #373 !important;
     color: #fff;
+    background: linear-gradient(rgba(52, 183, 89, .15), rgba(46, 164, 79, 0)), #373 !important;
   }
   .btn-signup-mktg:focus {
     box-shadow: none;
@@ -4437,8 +4777,11 @@
   .dropdown-item:hover > .Label {
     border-color: currentcolor;
   }
-  .dropdown-signout {
-    background: none;
+  [disabled]:-webkit-any(.FormControl-input, .FormControl-select, .FormControl-textarea) {
+    box-shadow: none;
+  }
+  [disabled]:-moz-any(.FormControl-input, .FormControl-select, .FormControl-textarea) {
+    box-shadow: none;
   }
   [disabled]:is(.FormControl-input, .FormControl-select, .FormControl-textarea) {
     box-shadow: none;
@@ -4458,22 +4801,17 @@
   .ToggleSwitch-track[disabled] .ToggleSwitch-knob {
     box-shadow: none;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .SkeletonBox {
-      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .6509803922) 80%);
+      -webkit-mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
+      mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
-  }
-  anchored-position:not(.Overlay) {
-    background: none;
   }
   .Button:disabled, .Button[aria-disabled=true] {
     box-shadow: none;
   }
   .Button--primary:focus:not(:focus-visible) {
     box-shadow: none;
-  }
-  .flash-close:not(.Banner-close) {
-    background: none;
   }
   .border-white-fade {
     border-color: hsla(0, 0%, 0%, .15) !important;
@@ -4483,53 +4821,92 @@
       background-color: transparent;
     }
   }
-  body [role=button]:focus:not(:focus-visible),
-  body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible),
-  body a:focus:not(:focus-visible), body button:focus:not(:focus-visible),
+  body [role=button]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body [role=tabpanel][tabindex="0"]:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body button:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
   body summary:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  body a:focus:not(:focus-visible) {
     box-shadow: none;
   }
   .auth-form-header, .auth-form-header h1 a {
     color: #fff;
   }
   .auth-form-header .octicon {
-    text-shadow: 0 1px 0 hsla(0, 0%, 0%, .1);
+    text-shadow: 0 1px hsla(0, 0%, 0%, .1);
   }
-  .HeaderMktg a:focus-visible, .HeaderMktg button:focus-visible {
+  .session-authentication .auth-form-header,
+  .session-authentication .header-logged-out {
+    background-color: transparent;
+  }
+  .HeaderMktg a:focus-visible {
     box-shadow: none;
   }
-  @media (min-width: 1012px) {
+  .HeaderMktg button:focus-visible {
+    box-shadow: none;
+  }
+  @media (min-width:1012px) {
     .HeaderMenu .HeaderMenu-wrapper {
       box-shadow: none;
+      background-color: transparent;
     }
   }
-  .HeaderMenu .dropdown-menu, .HeaderMenu .search-input .Overlay {
+  .HeaderMenu .dropdown-menu {
+    box-shadow: none;
+  }
+  .AppHeader-appearanceSettings .HeaderMenu-link:active,
+  .AppHeader-appearanceSettings .HeaderMenu-link:hover {
+    background-color: transparent !important;
+  }
+  @media (max-width:1011.98px) {
+    .HeaderMenu-item .HeaderMenu-dropdown, .HeaderMenu-trailing-link {
+      background-color: transparent;
+    }
+  }
+  @media (max-width:1011.98px) {
+  }
+  .HeaderMenu .search-input .Overlay {
     box-shadow: none;
   }
   .HeaderMktg.Details--on .HeaderMenu .HeaderMenu-link:focus-visible {
     box-shadow: none;
   }
   .notification-indicator .mail-status, .unread-indicator {
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
   }
-  .header-search-wrapper, .header-search-wrapper.focus {
+  .header-search-input, .header-search-input:focus, .header-search-wrapper,
+  .header-search-wrapper.focus {
     box-shadow: none;
-  }
-  .header-search-input {
-    background: none;
-    box-shadow: none;
-  }
-  .header-search-input:focus {
-    box-shadow: none;
-  }
-  .header-search-button {
-    background: none;
   }
   .header-search-button.input-button:focus-visible {
     box-shadow: none;
   }
+  .jump-to-suggestions-path mark {
+    background-color: transparent;
+  }
   .app-banner-icon {
     color: #fff;
+  }
+  .ActionList-item, .html-auth .header-logged-out,
+  .session-authentication.enterprise .header-logged-out,
+  .session-authentication.hosted .header-logged-out,
+  .switch-account-popover-row {
+    background-color: transparent;
+  }
+  @media (hover:hover) {
+    .ActionList-item[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .ActionList-content {
+    background-color: transparent;
   }
   .ActionList-content:focus {
     box-shadow: none;
@@ -4537,34 +4914,53 @@
   .ActionList-content:focus-visible {
     box-shadow: none;
   }
+  @media (hover:hover) {
+    .ActionList-content[aria-disabled=true]:hover {
+      background-color: transparent;
+    }
+  }
+  .select-menu.label-select-menu .select-menu-item:active {
+    background-color: transparent !important;
+  }
   .select-menu-item:focus .Label, .select-menu-item:hover .Label {
     border-color: currentcolor;
+  }
+  .collapsible-sidebar-widget-button, .comment-body .highlight {
+    background-color: transparent;
   }
   .locked-conversation .preview-tab, .locked-conversation .write-tab {
     color: #767676;
   }
-  .signed-commit-badge {
-    background: none;
+  .blob-wrapper table tr:nth-child(2n) {
+    background-color: transparent;
   }
   .add-line-comment.octicon-check {
     background-color: #c6c6c6;
   }
   .inline-comment-form {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
   }
-  button.discussion-sidebar-toggle {
-    background: none;
+  .previewable-comment-form .comment-body {
+    background-color: transparent;
   }
   :target .timeline-comment-group .timeline-comment .timeline-comment-group .timeline-comment {
     box-shadow: none !important;
   }
+  .reponav-wrapper .reponav-item.selected {
+    background-color: transparent;
+  }
+  @media (max-width:768px) {
+    .PageLayout--responsive-separateRegions.PageLayout--responsive-primary-pane .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
+      background-color: transparent;
+    }
+  }
   .steps {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
     box-shadow: 0 1px 3px rgba(220, 220, 220, .05);
   }
   .steps li {
     color: #767676;
-    border-left-color: var(--borderWidth-thin);
+    border-left: var(--borderWidth-thin)solid #343434;
   }
   .prose-diff.no-level-zero-box-shadow .rich-diff-level-zero.added,
   .prose-diff.no-level-zero-box-shadow .rich-diff-level-zero.changed,
@@ -4572,13 +4968,16 @@
     box-shadow: none;
   }
   .social-reaction-summary-item {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #246));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #246));
+    background-color: transparent;
   }
-  .render-container.is-render-ready.is-render-requested:not(.is-render-failed) {
-    background: none;
+  .new-reactions-dropdown .dropdown-menu-reactions::after,
+  .new-reactions-dropdown .dropdown-menu-reactions::before {
+    background-color: transparent;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .Skeleton {
+      -webkit-mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
       mask-image: linear-gradient(75deg, #f0f0f0 30%, rgba(0, 0, 0, .65) 80%);
     }
   }
@@ -4586,13 +4985,16 @@
   .GlobalNav .AppHeader-search .AppHeader-search-kbd {
     box-shadow: none;
   }
-  .AnimatedImagePlayer-images {
-    background: none;
-  }
-  @media (max-width: 767px) {
+  @media (max-width:767px) {
     .notifications-v2 .AvatarStack-body .avatar {
-      border-right: var(--borderWidth-thin) solid var(--ghd-bg-color) !important;
+      border-right: var(--borderWidth-thin)solid var(--ghd-bg-color) !important;
     }
+  }
+  .notifications-v2 .thread-subscription-status {
+    background-color: transparent !important;
+  }
+  .inline-form .btn-plain {
+    background-color: transparent;
   }
   .upload-enabled.focused .form-control {
     box-shadow: none;
@@ -4603,11 +5005,7 @@
   .tag-input-container .focus {
     box-shadow: none !important;
   }
-  .tag-input input {
-    background: none;
-    box-shadow: none;
-  }
-  .tag-input input:focus {
+  .tag-input input, .tag-input input:focus {
     box-shadow: none;
   }
   .topic-tag-outline {
@@ -4620,23 +5018,25 @@
   .CommentBox-container.CommentBox-container:focus-within {
     box-shadow: none;
   }
-  .CommentBox-input {
-    background: none;
+  .CommentBox-input.CommentBox-input:focus {
+    box-shadow: none;
   }
-  .CommentBox-input.CommentBox-input:focus,
   .CommentBox-input.CommentBox-input:focus-visible {
     box-shadow: none;
   }
   .CommentBox .dragover .CommentBox-input,
-  .CommentBox .dragover .CommentBox-input:focus {
+  .CommentBox .dragover .CommentBox-input:focus,
+  .CommentBox-comment.CommentBox-comment:focus {
     box-shadow: none;
   }
-  .CommentBox-comment.CommentBox-comment:focus,
   .CommentBox-comment.CommentBox-comment:focus-visible {
     box-shadow: none;
   }
   .QueryBuilder-Input:focus {
     box-shadow: none !important;
+  }
+  .AvatarStack-body:not(:hover) {
+    background-color: transparent;
   }
   .hx_badge-search-container .hx_badge-input {
     box-shadow: none;
@@ -4644,35 +5044,37 @@
   .hx_badge-search-container .hx_badge-input:focus {
     box-shadow: none !important;
   }
+  .dropdown-item.btn-link:disabled, .dropdown-item.btn-link:disabled:hover,
+  .dropdown-item.btn-link[aria-disabled=true],
+  .dropdown-item.btn-link[aria-disabled=true]:hover {
+    background-color: transparent;
+  }
   :root, [data-color-mode=dark][data-dark-theme*=light],
   [data-color-mode=light][data-light-theme*=light] {
     --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
     --color-project-gradient-out: transparent;
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme*=light] {
       --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
       --color-project-gradient-out: transparent;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme*=light] {
       --color-bg-discussions-row-emoji-box: rgba(90, 90, 90, .5);
       --color-project-gradient-out: transparent;
     }
   }
-  .hx_kbd {
-    box-shadow: none;
-  }
-  select-panel dialog::backdrop {
-    background: none;
-  }
-  .Box--responsive .Box-row--unread {
+  .Box--responsive .Box-row--unread, .hx_kbd {
     box-shadow: none;
   }
   .Box--responsive .Box-row--unread::before {
     color: #fff;
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
+  .autocomplete-item {
+    background-color: transparent;
   }
   .pagehead-tabs-item.selected, .reponav-item.selected {
     border-top-color: #fff;
@@ -4688,6 +5090,10 @@
   .RoleAvatarSpread > .RoleAvatarSpread-avatar > [data-component=Avatar] {
     box-shadow: none;
   }
+  .integrations-install-target .flash,
+  .integrations-install-target .flash-error {
+    background-color: transparent;
+  }
   .usage-bar {
     background-color: #2c2c2c;
   }
@@ -4698,10 +5104,7 @@
   .code-frequency .addition {
     fill: #373;
   }
-  .search-form-fluid .search-page-input {
-    background: none;
-    box-shadow: none;
-  }
+  .search-form-fluid .search-page-input,
   .search-form-fluid .search-page-input:focus {
     box-shadow: none;
   }
@@ -4711,7 +5114,7 @@
   [data-color-mode=light] .universe-cta {
     color: #fff;
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta,
@@ -4726,7 +5129,7 @@
       color: #fff;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme=dark] .universe-cta,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta,
@@ -4753,7 +5156,7 @@
     color: #fff;
     background-color: #f0f0f0;
   }
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme:dark) {
     [data-color-mode=auto][data-dark-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-dark-theme=dark_dimmed] .universe-cta-design-2,
@@ -4771,7 +5174,7 @@
       background-color: #f0f0f0;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme:light) {
     [data-color-mode=auto][data-light-theme=dark] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_colorblind] .universe-cta-design-2,
     [data-color-mode=auto][data-light-theme=dark_dimmed] .universe-cta-design-2,
@@ -4793,20 +5196,17 @@
     fill: #181818;
   }
   .file {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .file .image {
     background-color: #343434;
   }
   .file .image canvas, .file .image img {
+    border: var(--borderWidth-thin)solid var(--ghd-bg-color);
     background-color: #2c2c2c;
-    border: var(--borderWidth-thin) solid var(--ghd-bg-color);
   }
   .file .image .view canvas, .file .image .view img {
     background-color: #2c2c2c;
-  }
-  .file .empty {
-    background: none;
   }
   .integrations-select-repos::-webkit-scrollbar-thumb {
     box-shadow: 0 0 1px hsla(0, 0%, 0%, .5);
@@ -4816,6 +5216,11 @@
   }
   .issue-meta-section .octicon {
     color: var(--fgColor-muted, #5a5a5a);
+  }
+  .label-select-menu .selected:active,
+  .label-select-menu [aria-checked=mixed]:active,
+  .label-select-menu [aria-checked=true]:active {
+    background-color: transparent !important;
   }
   .map-background {
     fill: /*[[base-color]]*/;
@@ -4840,24 +5245,24 @@
     box-shadow: 0 0 0 .2em #3737;
   }
   .news .alert {
-    border-top-color: var(--borderWidth-thin);
+    border-top: var(--borderWidth-thin)solid #242424;
   }
   .trial-banner-notice {
-    background-image: linear-gradient(180deg, /*[[base-color]]*/ 0%, #4f8cc9 100%);
+    background-image: linear-gradient(/*[[base-color]]*/ 0%, #4f8cc9 100%);
   }
   @media print {
-    .State {
-      background: none;
-    }
     .State--open {
-      border-color: var(--borderWidth-thin);
+      border: var(--borderWidth-thin)solid #373;
     }
   }
   .pending-cards-status {
-    background-image: linear-gradient(/*[[base-color]]*/, rgb(0, 109.9594594595, 237));
+    background-image: linear-gradient(/*[[base-color]]*/, /*[[base-color]]*/);
+  }
+  .timeout {
+    background-color: transparent;
   }
   .prereceive-feedback, .revert-error {
-    border-color: var(--borderWidth-thin);
+    border: var(--borderWidth-thin)solid #343434;
   }
   .access-token.new-token {
     background-color: #44884450;
@@ -4866,13 +5271,13 @@
     border-bottom-color: var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup {
-    border: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-item + .listgroup-item {
-    border-top: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border-top: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-header {
-    border-bottom: var(--borderWidth-thin) solid var(--borderColor-default, var(--color-border-default, #343434));
+    border-bottom: var(--borderWidth-thin)solid var(--borderColor-default, var(--color-border-default, #343434));
   }
   .listgroup-overflow {
     background-color: var(--bgColor-muted, var(--color-canvas-subtle, #222));
@@ -4881,14 +5286,14 @@
     color: #2c2c2c;
   }
   .showcase-page-pattern::after {
-    background-image: linear-gradient(180deg, hsla(0, 0%, 0%, .85), #181818);
+    background-image: linear-gradient(hsla(0, 0%, 0%, .85), #181818);
   }
   .sponsors-goal-progress-bar {
     background-color: #c49;
   }
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion:no-preference) {
     .sponsors-goal-progress-bar:hover {
-      background: linear-gradient(90deg, #cb4 0%, #c49 17%, #b34bff 34%, #01feff 51%, #cb4 68%, #c49 85%, #b34bff 100%);
+      background: linear-gradient(90deg, #cb4 0%, #c49 17%, #b34bff 34%, #01feff 51%, #cb4 68%, #c49 85%, #b34bff 100%) 0 0/300% 100%;
     }
   }
   .hx_status-indicator.status-indicator-loading {
