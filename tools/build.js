@@ -3,7 +3,7 @@ import fetchCss from "fetch-css";
 import remapCss from "remap-css";
 import {readFileSync} from "node:fs";
 import {basename} from "node:path";
-import cssnano from "cssnano";
+import {transform} from "esbuild";
 import {writeFile, exit, glob} from "./utils.js";
 import mappingsFn from "../src/gen/mappings.js";
 import ignoresFn from "../src/gen/ignores.js";
@@ -19,7 +19,12 @@ const sourceFiles = glob("src/*.css").sort((a, b) => {
   return 0;
 }).filter(file => basename(file) !== "template.css");
 
-const minify = async css => (await cssnano().process(css, {from: undefined})).css;
+async function minify(css) {
+  return (await transform(css, {
+    loader: "css",
+    minify: true,
+  })).code;
+}
 
 function replaceCSSMatches(css) {
   return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/g, (_, matches, selector, separator) => {
