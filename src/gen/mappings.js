@@ -419,6 +419,5 @@ export default () => ({
   // various noop rules to support rules overridden in the original styles
   "box-shadow: none": "box-shadow: none",
   "$background: none": "none",
-  "$background: transparent": "transparent",
   "$border: currentcolor": "currentcolor",
 });
