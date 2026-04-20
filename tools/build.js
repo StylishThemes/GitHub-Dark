@@ -27,7 +27,7 @@ async function minify(css) {
 }
 
 function replaceCSSMatches(css) {
-  return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|{)/g, (_, matches, selector, separator) => {
+  return css.replace(/:is\(([^)]+)\)\s([^,{]+)(,|\{)/g, (_, matches, selector, separator) => {
     const parts = matches.split(/\s*,\s*/);
     const last = parts.length - 1;
 

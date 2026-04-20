@@ -8,11 +8,13 @@ jobs:
   regenerate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - uses: actions/setup-node@v5
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
         with:
+          cache: pnpm
           node-version: 24
       - run: make deps
       - run: make build

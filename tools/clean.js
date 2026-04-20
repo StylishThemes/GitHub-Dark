@@ -6,8 +6,8 @@ import {writeFile, exit, glob} from "./utils.js";
 const replacements = [
   {from: /\{\/\*!/g, to: "{\n /*!"},
   {from: /\/\* /g, to: "\n  /* "},
-  {from: /(\s+)?\n(\s+)?\n/g, to: "\n"},
-  {from: / {2}}\/\*/g, to: "  }\n  /*"},
+  {from: /[^\S\n]*\n[^\S\n]*\n/g, to: "\n"},
+  {from: / {2}\}\/\*/g, to: "  }\n  /*"},
   {from: /,\s+\n/g, to: ",\n"},
   {from: /\/\*\[\[code-wrap/, to: "/*[[code-wrap"},
   {from: /,\u0020{2,}/g, to: ", "},

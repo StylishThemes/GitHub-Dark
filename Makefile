@@ -1,9 +1,10 @@
-node_modules: package-lock.json
-	npm install --no-save
+node_modules: pnpm-lock.yaml
+	pnpm install
 	@touch node_modules
 
 .PHONY: test
 test: lint
+	@:
 
 .PHONY: build
 build: node_modules clean
@@ -14,13 +15,15 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules
-	npx eslint --color src/gen tools
-	npx stylelint --color src/**/*.css
+	pnpm exec eslint-silverwind --color src/gen tools
+	pnpm exec stylelint --color src/**/*.css
+	pnpm exec tsgo
 
 .PHONY: lint-fix
 lint-fix: node_modules
-	npx eslint --color src/gen tools --fix
-	npx stylelint --color src/**/*.css --fix
+	pnpm exec eslint-silverwind --color src/gen tools --fix
+	pnpm exec stylelint --color src/**/*.css --fix
+	pnpm exec tsgo
 
 .PHONY: authors
 authors:
@@ -36,22 +39,22 @@ install: node_modules
 
 .PHONY: update
 update: node_modules
-	npx updates -cu
-	rm package-lock.json
-	npm install
+	pnpm exec updates -cu
+	rm -rf node_modules pnpm-lock.yaml
+	pnpm install
 	@touch node_modules
 
 .PHONY: patch
 patch: node_modules test
-	npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json
+	pnpm exec versions -pd patch $(wildcard *.user.css) package.json pnpm-lock.yaml
 	git push --tags origin master
 
 .PHONY: minor
 minor: node_modules test
-	npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json
+	pnpm exec versions -pd minor $(wildcard *.user.css) package.json pnpm-lock.yaml
 	git push --tags origin master
 
 .PHONY: major
 major: node_modules test
-	npx versions -pd major $(wildcard *.user.css) package.json package-lock.json
+	pnpm exec versions -pd major $(wildcard *.user.css) package.json pnpm-lock.yaml
 	git push --tags origin master
