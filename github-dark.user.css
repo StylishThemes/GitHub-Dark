@@ -536,7 +536,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -594,10 +595,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -621,9 +622,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -635,13 +633,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -673,12 +674,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -733,7 +730,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -748,11 +746,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -771,8 +769,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -784,19 +782,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -868,10 +879,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -970,7 +981,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -1028,10 +1040,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -1055,9 +1067,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -1069,13 +1078,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -1107,12 +1119,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -1167,7 +1175,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -1182,11 +1191,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -1205,8 +1214,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -1218,19 +1227,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -1302,10 +1324,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -1395,7 +1417,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -1453,10 +1476,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -1480,9 +1503,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -1494,13 +1514,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -1532,12 +1555,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -1592,7 +1611,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -1607,11 +1627,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -1630,8 +1650,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -1643,19 +1663,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -1727,10 +1760,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -1820,7 +1853,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -1878,10 +1912,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -1905,9 +1939,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -1919,13 +1950,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -1957,12 +1991,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2017,7 +2047,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -2032,11 +2063,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -2055,8 +2086,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -2068,19 +2099,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -2152,10 +2196,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -2255,7 +2299,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -2313,10 +2358,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -2340,9 +2385,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -2354,13 +2396,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -2392,12 +2437,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2452,7 +2493,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -2467,11 +2509,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -2490,8 +2532,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -2503,19 +2545,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -2587,10 +2642,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -2680,7 +2735,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -2738,10 +2794,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -2765,9 +2821,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -2779,13 +2832,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -2817,12 +2873,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2877,7 +2929,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -2892,11 +2945,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -2915,8 +2968,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -2928,19 +2981,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -3012,10 +3078,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -3105,7 +3171,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -3163,10 +3230,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -3190,9 +3257,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -3204,13 +3268,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -3242,12 +3309,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -3302,7 +3365,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -3317,11 +3381,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -3340,8 +3404,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -3353,19 +3417,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -3437,10 +3514,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -3530,7 +3607,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -3588,10 +3666,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -3615,9 +3693,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -3629,13 +3704,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -3667,12 +3745,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -3727,7 +3801,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -3742,11 +3817,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -3765,8 +3840,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -3778,19 +3853,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -3862,10 +3950,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -3955,7 +4043,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -4013,10 +4102,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -4040,9 +4129,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -4054,13 +4140,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -4092,12 +4181,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -4152,7 +4237,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -4167,11 +4253,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -4190,8 +4276,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -4203,19 +4289,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -4287,10 +4386,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -4380,7 +4479,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -4438,10 +4538,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -4465,9 +4565,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -4479,13 +4576,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -4517,12 +4617,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -4577,7 +4673,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -4592,11 +4689,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -4615,8 +4712,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -4628,19 +4725,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -4712,10 +4822,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -5412,7 +5522,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -5470,10 +5581,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -5497,9 +5608,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -5511,13 +5619,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -5549,12 +5660,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -5609,7 +5716,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -5624,11 +5732,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -5647,8 +5755,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -5660,19 +5768,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -5744,10 +5865,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -5856,7 +5977,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -5914,10 +6036,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -5941,9 +6063,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -5955,13 +6074,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -5993,12 +6115,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6053,7 +6171,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -6068,11 +6187,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -6091,8 +6210,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -6104,19 +6223,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -6188,10 +6320,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -6281,7 +6413,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -6339,10 +6472,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -6366,9 +6499,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -6380,13 +6510,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -6418,12 +6551,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6478,7 +6607,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -6493,11 +6623,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -6516,8 +6646,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -6529,19 +6659,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -6613,10 +6756,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -6706,7 +6849,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -6764,10 +6908,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -6791,9 +6935,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -6805,13 +6946,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -6843,12 +6987,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6903,7 +7043,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -6918,11 +7059,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -6941,8 +7082,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -6954,19 +7095,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -7038,10 +7192,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -7131,7 +7285,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -7189,10 +7344,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -7216,9 +7371,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -7230,13 +7382,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -7268,12 +7423,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -7328,7 +7479,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -7343,11 +7495,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -7366,8 +7518,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -7379,19 +7531,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -7463,10 +7628,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -7556,7 +7721,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -7614,10 +7780,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -7641,9 +7807,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -7655,13 +7818,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -7693,12 +7859,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -7753,7 +7915,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -7768,11 +7931,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -7791,8 +7954,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -7804,19 +7967,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -7888,10 +8064,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
@@ -10838,7 +11014,8 @@
       box-shadow: none;
       color: var(--button-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
-    :is(.prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled, .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true])) [data-kbd-chord] {
+    .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]):disabled:not(.prc-Button-does-not-exist-3ns8K) [data-kbd-chord],
+    .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=primary]):not([data-loading=true]) [data-kbd-chord] {
       color: var(--buttonKeybindingHint-primary-fgColor-disabled, hsla(0, 0%, 0%, .8));
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-variant=primary]) .prc-Button-CounterLabel-5hAs4 {
@@ -10896,10 +11073,10 @@
     .prc-Button-ButtonBase-9n-Xk[aria-disabled=true]:where([data-variant=invisible]):not([data-loading=true]) {
       box-shadow: none;
     }
-    [data-no-visuals]:is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk[data-no-visuals]:where([data-variant=link]) {
       background-image: none;
     }
-    :is([data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link])):not([data-no-visuals]) {
+    [data-a11y-link-underlines=false] .prc-Button-ButtonBase-9n-Xk:where([data-variant=link]):not([data-no-visuals]) {
       background-image: none;
     }
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]),
@@ -10923,9 +11100,6 @@
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
     }
-    .prc-Tooltip-Tooltip-JLsri::after {
-      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
-    }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
     }
@@ -10937,13 +11111,16 @@
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):where([data-variant=danger]):active [data-kbd-chord] {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(:is([aria-checked=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled]), [aria-selected=true]:is(.prc-ActionList-ActionListItem-So4vC[aria-disabled=true], .prc-ActionList-ActionListItem-So4vC[data-is-disabled])) .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-checked=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][aria-disabled=true] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before,
+    .prc-ActionList-ActionListItem-So4vC[aria-selected=true][data-is-disabled] .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ {
       background-color: var(--bgColor-default, #181818);
     }
-    :is(.prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ)::before {
+    .prc-ActionList-ActionListItem-So4vC .prc-ActionList-MultiSelectCheckbox-2OqxZ::before {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
@@ -10975,12 +11152,8 @@
         mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
       }
     }
-    [role=button]:focus:not(:focus-visible):not(.focus-visible),
-    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
-    a:focus:not(:focus-visible):not(.focus-visible),
-    button:focus:not(:focus-visible):not(.focus-visible),
-    summary:focus:not(:focus-visible):not(.focus-visible) {
-      box-shadow: none;
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -11035,7 +11208,8 @@
     .prc-Checkbox-Checkbox-jjOgT::before {
       background-color: var(--fgColor-onEmphasis, #181818);
     }
-    :is(.prc-Checkbox-Checkbox-jjOgT:checked, .prc-Checkbox-Checkbox-jjOgT:indeterminate):disabled::before {
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
       background-color: var(--control-checked-fgColor-disabled, #181818);
     }
     .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
@@ -11050,11 +11224,11 @@
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
     }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
-    }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-ActionList-Header-585kg:where([data-filled]) {
       background-color: var(--bgColor-muted, #222);
@@ -11073,8 +11247,8 @@
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Tooltip-Tooltip-JLsri::after {
+      color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
     }
     .prc-TabNav-TabNavLink-u3umI:focus {
       box-shadow: none;
@@ -11086,19 +11260,32 @@
     .prc-DialogV1-Header-r20Rf {
       background-color: var(--bgColor-muted, #222);
     }
+    [role=button]:focus:not(:focus-visible):not(.focus-visible),
+    [role=tabpanel][tabindex="0"]:focus:not(:focus-visible):not(.focus-visible),
+    a:focus:not(:focus-visible):not(.focus-visible),
+    button:focus:not(:focus-visible):not(.focus-visible),
+    summary:focus:not(:focus-visible):not(.focus-visible) {
+      box-shadow: none;
+    }
     .prc-Popover-PopoverContent-2x-Aj {
       background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Popover-PopoverContent-2x-Aj::after {
       border-bottom: 7px solid var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=bottom-left]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom-right]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=bottom]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-top-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=right-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=right]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-left-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
-    :is(:where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj, :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj)::after {
+    :where([data-caret=left-bottom]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left-top]) .prc-Popover-PopoverContent-2x-Aj::after,
+    :where([data-caret=left]) .prc-Popover-PopoverContent-2x-Aj::after {
       border-right-color: var(--overlay-bgColor, var(--ghd-bg-color));
     }
     .prc-Header-HeaderLink-NpVNI {
@@ -11170,10 +11357,10 @@
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-avatar-count="1"][data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 #f0f0f0;
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: 1px 0 var(--ghd-bg-color);
     }
-    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) .prc-AvatarStack-AvatarItem-70eW3:is(img) {
+    .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=square][data-align-right]) img.prc-AvatarStack-AvatarItem-70eW3 {
       box-shadow: -1px 0 var(--ghd-bg-color);
     }
     .prc-AvatarStack-AvatarStack-vkIK2:where([data-shape=circle]) .prc-AvatarStack-AvatarItem-70eW3:nth-child(n + 2) {
