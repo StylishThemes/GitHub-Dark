@@ -506,6 +506,9 @@
     background: linear-gradient(hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -601,9 +604,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -616,6 +616,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -643,9 +646,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -654,6 +654,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -664,13 +672,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -713,9 +726,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -730,19 +740,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -763,6 +760,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -948,6 +948,9 @@
     border-color: currentcolor;
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -1043,9 +1046,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -1058,6 +1058,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -1085,9 +1088,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -1096,6 +1096,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -1106,13 +1114,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -1155,9 +1168,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -1172,19 +1182,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -1205,6 +1202,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -1381,6 +1381,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -1476,9 +1479,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -1491,6 +1491,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -1518,9 +1521,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -1529,6 +1529,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -1539,13 +1547,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -1588,9 +1601,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -1605,19 +1615,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -1638,6 +1635,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -1814,6 +1814,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -1909,9 +1912,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -1924,6 +1924,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -1951,9 +1954,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -1962,6 +1962,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -1972,13 +1980,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2021,9 +2034,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -2038,19 +2048,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -2071,6 +2068,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -2257,6 +2257,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -2352,9 +2355,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -2367,6 +2367,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -2394,9 +2397,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -2405,6 +2405,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -2415,13 +2423,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2464,9 +2477,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -2481,19 +2491,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -2514,6 +2511,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -2690,6 +2690,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -2785,9 +2788,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -2800,6 +2800,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -2827,9 +2830,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -2838,6 +2838,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -2848,13 +2856,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -2897,9 +2910,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -2914,19 +2924,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -2947,6 +2944,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -3123,6 +3123,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -3218,9 +3221,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -3233,6 +3233,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -3260,9 +3263,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -3271,6 +3271,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -3281,13 +3289,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -3330,9 +3343,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -3347,19 +3357,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -3380,6 +3377,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -3556,6 +3556,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -3651,9 +3654,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -3666,6 +3666,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -3693,9 +3696,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -3704,6 +3704,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -3714,13 +3722,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -3763,9 +3776,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -3780,19 +3790,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -3813,6 +3810,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -3989,6 +3989,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -4084,9 +4087,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -4099,6 +4099,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -4126,9 +4129,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -4137,6 +4137,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -4147,13 +4155,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -4196,9 +4209,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -4213,19 +4223,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -4246,6 +4243,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -4422,6 +4422,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -4517,9 +4520,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -4532,6 +4532,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -4559,9 +4562,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -4570,6 +4570,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -4580,13 +4588,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -4629,9 +4642,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -4646,19 +4656,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -4679,6 +4676,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -5454,6 +5454,9 @@
     box-shadow: none;
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -5549,9 +5552,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -5564,6 +5564,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -5591,9 +5594,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -5602,6 +5602,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -5612,13 +5620,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -5661,9 +5674,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -5678,19 +5688,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -5711,6 +5708,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -5916,6 +5916,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -6011,9 +6014,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -6026,6 +6026,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -6053,9 +6056,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -6064,6 +6064,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -6074,13 +6082,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6123,9 +6136,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -6140,19 +6150,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -6173,6 +6170,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -6349,6 +6349,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -6444,9 +6447,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -6459,6 +6459,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -6486,9 +6489,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -6497,6 +6497,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -6507,13 +6515,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6556,9 +6569,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -6573,19 +6583,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -6606,6 +6603,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -6782,6 +6782,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -6877,9 +6880,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -6892,6 +6892,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -6919,9 +6922,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -6930,6 +6930,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -6940,13 +6948,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -6989,9 +7002,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -7006,19 +7016,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -7039,6 +7036,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -7215,6 +7215,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -7310,9 +7313,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -7325,6 +7325,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -7352,9 +7355,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -7363,6 +7363,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -7373,13 +7381,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -7422,9 +7435,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -7439,19 +7449,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -7472,6 +7469,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -7648,6 +7648,9 @@
     }
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -7743,9 +7746,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -7758,6 +7758,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -7785,9 +7788,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -7796,6 +7796,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -7806,13 +7814,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -7855,9 +7868,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -7872,19 +7882,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -7905,6 +7902,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
@@ -10935,6 +10935,9 @@
     border-bottom-color: var(--ghd-bg-color);
   }
   @layer primer-react {
+    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
+      color: var(--fgColor-onEmphasis, #181818);
+    }
     .prc-Button-ButtonBase-9n-Xk:focus-visible {
       box-shadow: none;
     }
@@ -11030,9 +11033,6 @@
     .prc-Button-ButtonBase-9n-Xk:where([data-inactive]):hover {
       box-shadow: none;
     }
-    .prc-CounterLabel-CounterLabel-X-kRU:where([data-variant=primary]) {
-      color: var(--fgColor-onEmphasis, #181818);
-    }
     .prc-TooltipV2-Tooltip-tLeuB[popover] {
       color: var(--tooltip-fgColor, #181818);
     }
@@ -11045,6 +11045,9 @@
     }
     .prc-KeybindingHint-KeybindingHint-qpYIs {
       box-shadow: none;
+    }
+    .prc-Checkbox-Input-lWIkv {
+      background-color: var(--bgColor-default, #181818);
     }
     .prc-ActionList-ActionListItem-So4vC:not([data-is-disabled], [data-has-subitem=true]):focus-visible {
       box-shadow: none;
@@ -11072,9 +11075,6 @@
     .prc-ActionList-GroupHeadingWrap-laXcX:where([data-variant=filled]) {
       background-color: var(--bgColor-muted, #222);
     }
-    .prc-Checkbox-Input-lWIkv {
-      background-color: var(--bgColor-default, #181818);
-    }
     .prc-Radio-Radio-h1gb9:where(:checked) {
       background-color: var(--control-checked-fgColor-rest, #181818);
     }
@@ -11083,6 +11083,14 @@
     }
     .prc-Radio-Radio-h1gb9:focus-visible {
       box-shadow: none;
+    }
+    .prc-Overlay-Overlay-jfs-T {
+      background-color: var(--overlay-bgColor, #181818);
+    }
+    @media (prefers-reduced-motion:no-preference) {
+      .prc-Skeleton-SkeletonBox-e93nW {
+        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
+      }
     }
     .prc-components-TextInputBaseWrapper-wY-n0 {
       background-color: var(--bgColor-default, #181818);
@@ -11093,13 +11101,18 @@
     .prc-components-TextInputBaseWrapper-wY-n0:where([data-disabled]) {
       box-shadow: none;
     }
-    @media (prefers-reduced-motion:no-preference) {
-      .prc-Skeleton-SkeletonBox-e93nW {
-        mask-image: linear-gradient(75deg, #f0f0f0 30%, #000000a6 80%);
-      }
+    .prc-Checkbox-Checkbox-jjOgT::before {
+      background-color: var(--fgColor-onEmphasis, #181818);
     }
-    .prc-Dialog-Dialog-G8cDF {
-      background-color: var(--overlay-bgColor, #181818);
+    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
+    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
+      background-color: var(--control-checked-fgColor-disabled, #181818);
+    }
+    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
+      box-shadow: none;
+    }
+    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
+      background-color: var(--bgColor-muted, #222);
     }
     .prc-PageLayout-HorizontalDivider-JLVqp:where([data-variant=filled]) {
       background-color: var(--bgColor-inset, #222);
@@ -11142,9 +11155,6 @@
         background-color: var(--bgColor-default, #181818);
       }
     }
-    .prc-Overlay-Overlay-jfs-T {
-      background-color: var(--overlay-bgColor, #181818);
-    }
     .prc-Breadcrumbs-Item-jcraJ:focus-visible {
       box-shadow: none;
     }
@@ -11159,19 +11169,6 @@
     }
     .prc-SegmentedControl-Button-E48xz[aria-current=true] .prc-SegmentedControl-Content-1COlk {
       background-color: var(--controlKnob-bgColor-rest, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT::before {
-      background-color: var(--fgColor-onEmphasis, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:checked:disabled::before,
-    .prc-Checkbox-Checkbox-jjOgT:indeterminate:disabled::before {
-      background-color: var(--control-checked-fgColor-disabled, #181818);
-    }
-    .prc-Checkbox-Checkbox-jjOgT:focus-visible:not(:disabled) {
-      box-shadow: none;
-    }
-    .prc-FilteredActionList-SelectAllContainer-X2ij0 {
-      background-color: var(--bgColor-muted, #222);
     }
     .prc-CircleBadge-CircleBadge-tNGX1 {
       background-color: var(--bgColor-default, #181818);
@@ -11192,6 +11189,9 @@
     }
     .prc-ActionList-MultiSelectIcon-XFUmo path {
       fill: var(--fgColor-onEmphasis, #181818);
+    }
+    .prc-Dialog-Dialog-G8cDF {
+      background-color: var(--overlay-bgColor, #181818);
     }
     .prc-Tooltip-Tooltip-JLsri::after {
       color: var(--tooltip-fgColor, var(--fgColor-onEmphasis, #181818));
