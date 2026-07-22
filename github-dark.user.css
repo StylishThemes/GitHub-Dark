@@ -325,6 +325,116 @@
       box-shadow: none;
     }
   }
+  @layer primer-brand-legacy {
+    :root, [data-color-mode=dark], [data-color-mode=light] {
+      --base-color-scale-black-0: #f0f0f0;
+      --base-color-scale-white-0: #181818;
+    }
+    :root, [data-color-mode=light] {
+      --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
+    }
+    [data-color-mode=dark] {
+      --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+      --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+      --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+      --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+      --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+      --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+    }
+    .Primer_Brand__Link-module__Link___lvKjM::after {
+      border-color: var(--brand-borderWidth-thin);
+    }
+    :root, [data-color-mode=light] {
+      --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
+      --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
+      --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
+      --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
+      --brand-control-radio-dot-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
+    }
+    [data-color-mode=dark] {
+      --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+      --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___P15pl:focus-visible {
+      box-shadow: none;
+    }
+    @media screen and (max-width:47.99rem) {
+      .Primer_Brand__Prose-module__Prose___X2BXE table:has(td[data-label]) {
+        box-shadow: none;
+      }
+    }
+    .Primer_Brand__VideoPlayer-module__VideoPlayer__tooltipContent___BoAqV {
+      background-color: #181818;
+    }
+    .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee___Q0YOr {
+      mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
+    }
+    :root, [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
+    [data-color-mode=dark] {
+      --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+    }
+    @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+      [data-color-mode=dark] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+      }
+    }
+    :root, [data-color-mode=dark], [data-color-mode=light] {
+      --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+  }
+  .btn-mktg {
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, .15) 0%, #fff0 100%), var(--color-mktg-btn-bg) !important;
+  }
+  .btn-mktg::before {
+    background: linear-gradient(hsla(0, 0%, 0%, .15) 0%, #fff0 100%) !important;
+  }
+  .btn-signup-mktg {
+    background: linear-gradient(#34b75926 0%, #2ea44f00 100%), #373 !important;
+  }
+  [data-color-mode=dark][data-dark-theme*=dark],
+  [data-color-mode=light][data-light-theme*=dark] {
+    --color-mktg-btn-bg: #202020;
+    --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
+  }
+  @media (prefers-color-scheme:light) {
+    [data-color-mode=auto][data-light-theme*=dark] {
+      --color-mktg-btn-bg: #202020;
+      --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
+    }
+  }
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode=auto][data-dark-theme*=dark] {
+      --color-mktg-btn-bg: #202020;
+      --color-mktg-btn-shadow-hover-muted: #181818 0 0 0 2px inset;
+    }
+  }
+  :root, [data-color-mode=dark][data-dark-theme*=light],
+  [data-color-mode=light][data-light-theme*=light] {
+    --color-mktg-btn-bg: #dcdcdc;
+  }
+  @media (prefers-color-scheme:light) {
+    [data-color-mode=auto][data-light-theme*=light] {
+      --color-mktg-btn-bg: #dcdcdc;
+    }
+  }
+  @media (prefers-color-scheme:dark) {
+    [data-color-mode=auto][data-dark-theme*=light] {
+      --color-mktg-btn-bg: #dcdcdc;
+    }
+  }
+  .box-shadow-card-dark-mktg {
+    box-shadow: 0 0 0 1px #f0f0f0, 0 30px 30px #00000012, 0 15px 15px #0000000f, 0 10px 8px #0000000d, 0 4px 4px #0000000a, 0 2px 2px #00000008;
+  }
+  .text-gradient-blue-purple {
+    background: -webkit-linear-gradient(-70deg, #4f8cc9 0%, #804eda 100%);
+  }
+  .font-mktg [data-color-mode=dark] {
+    --color-fg-default: #181818 !important;
+  }
   .header-white .HeaderMktg a:focus-visible,
   .header-white .HeaderMktg button:focus-visible {
     box-shadow: none;
@@ -338,6 +448,30 @@
   .header-overlay .AppHeader .form-control,
   .header-overlay .sub-nav-mktg:not(.position-sticky) {
     box-shadow: none;
+  }
+  .testimonial-avatar {
+    border: var(--borderWidth-thicker) solid var(--ghd-bg-color);
+  }
+  .subnav-link.selected {
+    border-bottom-color: /*[[base-color]]*/;
+  }
+  @media (min-width:768px) {
+    .subnav-primary.selected {
+      border-bottom-color: /*[[base-color]]*/;
+    }
+  }
+  .btn-link-reset {
+    box-shadow: none !important;
+  }
+  .global-banner--universe_26,
+  .global-banner--universe_26 .global-banner--close button {
+    color: #f0f0f0 !important;
+  }
+  .password-validity-pill.password-validity-pill-close {
+    background-color: #cb4;
+  }
+  .password-validity-summary.password-validity-summary-close {
+    color: #cb4;
   }
   .lp-Intro::after {
     background: linear-gradient(90deg, #fff0, #181818, #181818, #fff0);
