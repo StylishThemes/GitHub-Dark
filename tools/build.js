@@ -111,6 +111,10 @@ async function main() {
         const suffix = `  /* end ${source.name} rules */`;
         section = `${prefix}\n${section}\n${suffix}`;
         const re = new RegExp(`.*generated ${esc(source.name)} rules.*`, "gm");
+        const matches = Array.from(sourceCss.matchAll(re));
+        if (matches.length !== 1) {
+          throw new Error(`Expected one generated ${source.name} rules marker in ${sourceFile}, found ${matches.length}`);
+        }
         sourceCss = sourceCss.replace(re, section);
       }
     }
