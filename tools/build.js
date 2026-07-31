@@ -91,7 +91,7 @@ async function main() {
 
   for (const [type, themes] of Object.entries(await getThemes())) {
     const parts = [];
-    for (const [_filename, themeCss] of Object.entries(themes)) {
+    for (const themeCss of Object.values(themes)) {
       const name = extractThemeName(themeCss);
       parts.push(`  ${name.replace(/\s*/, "")} "${name}" <<<EOT\n  ${themeCss.replace(/\*\//g, "*\\/").replace(/\n/, "")} EOT;`);
     }
@@ -125,4 +125,9 @@ async function main() {
   writeFile(new URL("../github-dark.user.css", import.meta.url), css);
 }
 
-main().then(exit).catch(exit);
+try {
+  await main();
+  exit();
+} catch (err) {
+  exit(err);
+}

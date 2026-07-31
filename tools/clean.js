@@ -34,4 +34,9 @@ async function main() {
   }
 }
 
-main().then(exit).catch(exit);
+try {
+  await main();
+  exit();
+} catch (err) {
+  exit(err);
+}

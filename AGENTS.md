@@ -1,0 +1,3 @@
+- Use `make` to run development tasks
+- Before committing files, ensure that related `lint` tasks in `make` pass
+- Never force-push to pull request branches

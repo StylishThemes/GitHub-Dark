@@ -44,17 +44,6 @@ update: node_modules
 	pnpm install
 	@touch node_modules
 
-.PHONY: patch
-patch: node_modules test
-	pnpm exec versions -pd patch $(wildcard *.user.css) package.json pnpm-lock.yaml
-	git push --tags origin master
-
-.PHONY: minor
-minor: node_modules test
-	pnpm exec versions -pd minor $(wildcard *.user.css) package.json pnpm-lock.yaml
-	git push --tags origin master
-
-.PHONY: major
-major: node_modules test
-	pnpm exec versions -pd major $(wildcard *.user.css) package.json pnpm-lock.yaml
-	git push --tags origin master
+.PHONY: patch minor major
+patch minor major: node_modules test
+	pnpm exec versions -pd $@ $(wildcard *.user.css) package.json pnpm-lock.yaml
