@@ -1,0 +1,65 @@
+name: stale
+
+# Marks issues and pull requests that have had no activity for a long time as
+# stale, and closes them after an additional grace period. Helps the
+# StylishThemes/GitHub-Dark maintainers keep the issue tracker focused on
+# active reports instead of accumulating decade-old entries.
+
+on:
+  schedule:
+    # Run once per day at 03:00 UTC. Stale-bot does not need higher frequency.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    # Allow maintainers to trigger a sweep manually after a release or triage.
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: Mark stale and close
+    runs-on: ubuntu-latest
+    # Cancel any previous run if a new scheduled/manual run starts while the
+    # previous one is still in progress.
+    concurrency:
+      group: stale-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Mark/close stale issues and PRs
+        uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Only operate on issues that look actionable (not pinned, not labeled
+          # `keep-open` / `in-progress` / `pinned` / `security`).
+          exempt-issue-labels: "keep-open,in-progress,pinned,security,enhancement"
+          exempt-pr-labels: "keep-open,in-progress,pinned,security,work-in-progress"
+          # Issue lifecycle: warn after 120 days of inactivity, close 30 days later.
+          days-before-issue-stale: 120
+          days-before-issue-close: 30
+          # PR lifecycle: warn after 90 days, close 30 days later. PRs are closed
+          # rather than left to rot because the base CSS changes often.
+          days-before-pr-stale: 90
+          days-before-pr-close: 30
+          stale-issue-message: >
+            This issue has not had any activity for ${{ github.event.inputs.days || 120 }} days.
+            It will be closed in 30 days if no further activity occurs.
+            Please reply if you would like to keep it open.
+          close-issue-message: >
+            This issue was closed because it has been stale for 30 days since the
+            last update. If this is still relevant, please open a new issue with
+            up-to-date reproduction details and a current screenshot.
+          stale-pr-message: >
+            This pull request has not had any activity for ${{ github.event.inputs.days || 90 }} days.
+            It will be closed in 30 days if no further activity occurs.
+            Feel free to reopen once the conflicts are resolved.
+          close-pr-message: >
+            This pull request was closed because it has been stale for 30 days
+            since the last update. Please rebase against the current master and
+            reopen if you would like to continue.
+          # Limit per run so we do not hammer the API.
+          operations-per-run: 100
+          # Only count comments + commits toward "activity"; label edits and
+          # title edits are ignored so drive-by label churn does not reset the
+          # stale timer.
+          only: comments, commits
