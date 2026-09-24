@@ -11,6 +11,10 @@ permissions:
 
 jobs:
   test:
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [24, 26]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -18,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           cache: pnpm
-          node-version: 24
+          node-version: ${{matrix.node}}
       - uses: xt0rted/stylelint-problem-matcher@v1
       - run: make deps
       - run: make test
