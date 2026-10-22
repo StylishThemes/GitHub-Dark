@@ -1,49 +1,7 @@
-node_modules: pnpm-lock.yaml
-	pnpm install
-	@touch node_modules
-
-.PHONY: test
-test: lint
-	@:
-
-.PHONY: build
-build: node_modules clean
-	node tools/build.js
-
-.PHONY: deps
-deps: node_modules
-
-.PHONY: lint
-lint: node_modules
-	pnpm exec eslint-silverwind --color src/gen tools
-	pnpm exec stylelint --color src/**/*.css
-	pnpm exec tsgo
-
-.PHONY: lint-fix
-lint-fix: node_modules
-	pnpm exec eslint-silverwind --color src/gen tools --fix
-	pnpm exec stylelint --color src/**/*.css --fix
-	pnpm exec tsgo
-
-.PHONY: authors
-authors:
-	bash tools/authors.sh
-
-.PHONY: clean
-clean: node_modules
-	node tools/clean.js
-
 .PHONY: install
-install: node_modules
-	node tools/install.js
-
-.PHONY: update
-update: node_modules
-	pnpm exec updates -cu
-	rm -rf node_modules pnpm-lock.yaml
-	pnpm install
-	@touch node_modules
+install:
+	node -e 'const server = require("node:http").createServer((_, res) => { res.setHeader("content-type", "text/css"); res.on("close", () => setTimeout(() => process.exit(), 4000)); res.end(require("node:fs").readFileSync("github-dark.user.css")); }); server.listen(() => require("node:child_process").spawn({darwin: "open", win32: "explorer"}[process.platform] ?? "xdg-open", [`http://localhost:$${server.address().port}/github-dark.user.css`]))'
 
 .PHONY: patch minor major
-patch minor major: node_modules test
-	pnpm exec versions -pd $@ $(wildcard *.user.css) package.json pnpm-lock.yaml
+patch minor major:
+	pnpm dlx versions -p $@ github-dark.user.css
