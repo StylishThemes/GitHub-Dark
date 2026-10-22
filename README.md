@@ -23,6 +23,16 @@
 
 The options, like base color, background image and syntax themes, are described in the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). For GitHub Enterprise, add `domain("github.example.com")` to both GitHub `@-moz-document` rules in the installed style. Extensions that use GitHub's CSS variables, like [Refined GitHub](https://github.com/refined-github/refined-github), follow the theme automatically.
 
+## Styled Sites
+
+- [github.com](https://github.com)
+- [gist.github.com](https://gist.github.com)
+- [support.github.com](https://support.github.com)
+- [vscode-auth.github.com](https://vscode-auth.github.com)
+- [githubstatus.com](https://www.githubstatus.com)
+- Raw files on [raw.githubusercontent.com](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/README.md) and gist.githubusercontent.com
+- Rendered Jupyter notebooks on notebooks.githubusercontent.com
+
 ## Additional Userstyles
 
 ⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css)<br>
