@@ -843,11 +843,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -858,8 +865,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -867,7 +881,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -878,6 +892,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -890,8 +928,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -904,9 +950,36 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
     }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
+    }
+  }
+  .Cell__TqfqAY::after {
+    background-image: var(--gradient-image, none);
   }
   .Nav__9jtboE nav {
     box-shadow: none;
@@ -1841,11 +1914,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -1856,8 +1936,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -1865,7 +1952,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -1876,6 +1963,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -1888,8 +1999,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -1902,8 +2021,32 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
     }
   }
   .button__1uQE7N {
@@ -2849,11 +2992,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -2864,8 +3014,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -2873,7 +3030,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -2884,6 +3041,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -2896,8 +3077,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -2910,8 +3099,32 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
     }
   }
   @layer primer-react {
@@ -3378,11 +3591,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -3393,8 +3613,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -3402,7 +3629,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -3413,6 +3640,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -3425,8 +3676,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -3439,8 +3698,32 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
     }
   }
   @layer primer-css-base {
@@ -5306,11 +5589,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -5321,8 +5611,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -5330,7 +5627,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -5341,6 +5638,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -5353,8 +5674,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -5367,8 +5696,32 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
     }
   }
   @layer primer-react {
@@ -8308,11 +8661,18 @@
     }
   }
   @layer primer-brand {
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --base-color-scale-black-0: #f0f0f0;
       --base-color-scale-white-0: #181818;
     }
-    :root, [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --base-color-scale-black-0: #f0f0f0;
+        --base-color-scale-white-0: #181818;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 16%);
     }
     [data-color-mode=dark] {
@@ -8323,8 +8683,15 @@
       --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
       --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
     }
-    .Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC.Primer_Brand__IconButton-module__IconButton__loadingIndicator___RXZPC {
-      border-color: var(--brand-borderWidth-thin);
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-button-primary-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 16%);
+        --brand-button-secondary-bgColor-rest: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-secondary-borderColor-active: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-hover: hsla(0, 0%, 0%, .125);
+        --brand-button-subtle-borderColor-active: hsla(0, 0%, 0%, .125);
+      }
     }
     .Primer_Brand__ActionMenu-module__ActionMenu__item-anchor___dX7CI:focus-visible {
       box-shadow: none;
@@ -8332,7 +8699,7 @@
     .Primer_Brand__Link-module__Link___lF11y::after {
       border-color: var(--brand-borderWidth-thin);
     }
-    :root, [data-color-mode=light] {
+    :root, [data-color-mode=auto], [data-color-mode=light] {
       --brand-control-checkbox-bg-checked-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-indeterminate-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 26%);
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #181818 65%);
@@ -8343,6 +8710,30 @@
       --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
       --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
       --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-control-checkbox-bg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+        --brand-control-checkbox-fg-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-5), #f0f0f0 20%);
+        --brand-control-checkbox-border-checked-disabled: color-mix(in srgb, var(--base-color-scale-green-6), #f0f0f0 35%);
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--brand-color-text-emphasized), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-6), #f0f0f0 8%);
+    }
+    [data-color-mode=dark] {
+      --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+      --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+      --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-ToggleSwitch-thumb-on-bgColor-hover: color-mix(in srgb, var(--base-color-scale-green-2), #f0f0f0 16%);
+        --brand-ToggleSwitch-thumb-off-bgColor-rest: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 4%);
+        --brand-ToggleSwitch-thumb-off-bgColor-hover: color-mix(in srgb, var(--base-color-scale-gray-3), #181818 8%);
+      }
     }
     @media screen and (width<=47.99rem) {
       .Primer_Brand__Prose-module__Prose___8WnSE table:has(td[data-label]) {
@@ -8355,8 +8746,16 @@
     .Primer_Brand__LogoSuite-module__LogoSuite__logobar-marquee____s6pK {
       mask-image: linear-gradient(90deg, #0000, #f0f0f0 20% 80%, #0000);
     }
+    :root, [data-color-mode=auto], [data-color-mode=light] {
+      --brand-Eyebrowbanner-bgColor-rest: hsla(0, 0%, 0%, .6);
+    }
     [data-color-mode=dark] {
       --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-PricingOptions-borderMask: linear-gradient(180deg, #f0f0f0, #0006);
+      }
     }
     .Primer_Brand__SubNav-module__SubNav__overflow-menu___A8m3D {
       box-shadow: none;
@@ -8369,8 +8768,32 @@
         --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
       }
     }
-    :root, [data-color-mode=dark], [data-color-mode=light] {
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0, #f0f0f0 0) exclude, linear-gradient(#f0f0f0 0, #f0f0f0 0) content-box;
+      }
+      @supports (background:linear-gradient(red 0%, red 0% 1%, red 2%)) {
+        [data-color-mode=auto] {
+          --brand-FrostedGlassVFX-borderMask: linear-gradient(#f0f0f0 0 0) exclude, linear-gradient(#f0f0f0 0 0) content-box;
+        }
+      }
+    }
+    .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton___yQphd {
+      box-shadow: none;
+    }
+    @media (hover:hover) and (pointer:fine) {
+      .Primer_Brand__CarouselPagination-module__CarouselPagination___PH90q .Primer_Brand__CarouselPagination-module__CarouselPagination__arrowButton--available___fw1dN:hover {
+        box-shadow: none;
+      }
+    }
+    :root, [data-color-mode=auto], [data-color-mode=dark],
+    [data-color-mode=light] {
       --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+    }
+    @media (prefers-color-scheme:dark) {
+      [data-color-mode=auto] {
+        --brand-Tabs-item-default-bgColor-active: linear-gradient(180deg, hsla(0, 0%, 0%, .125) 0%, #9999991f 100%);
+      }
     }
   }
   .root__q6pgdo a:focus-visible, .root__q6pgdo button:focus-visible {
