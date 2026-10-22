@@ -36,7 +36,7 @@ Change these in the style's settings, in Stylus via the gear icon next to the st
 - **CodeMirror syntax theme**: colors the file and gist editors.
 - **Jupyter syntax theme**: colors notebook previews.
 - **Code Tab size**: width of tabs in code, 2, 4 or 8.
-- **Unrounded labels and avatars**: enabled by default, gives labels, counters, state badges, topics and avatars slightly rounded corners instead of pill and circle shapes, like [GitHub Unrounded](https://github.com/StylishThemes/GitHub-Unrounded).
+- **Unrounded labels and avatars**: enabled by default, gives labels, counters, state badges, topics and avatars slightly rounded corners instead of pill and circle shapes.
 
 ### Custom Background
 
