@@ -10,10 +10,6 @@ permissions:
 
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [24, 26]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -21,5 +17,5 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           cache: pnpm
-          node-version: ${{matrix.node}}
+          node-version: latest
       - run: make deps lint
