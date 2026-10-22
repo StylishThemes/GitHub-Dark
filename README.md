@@ -54,6 +54,8 @@ The options, like base color, background image and syntax themes, are described 
 
 The GitHub themes color code views, diffs and markdown, the CodeMirror themes color the file and gist editors and the Jupyter themes color notebook previews.
 
+![GitHub syntax themes](./themes.png)
+
 | Theme                      |   GitHub    |  CodeMirror  |    Jupyter   |
 |----------------------------|:-----------:|:------------:|:------------:|
 | Ayu Mirage                 |      ✔️     |      ❌     |      ❌      |
