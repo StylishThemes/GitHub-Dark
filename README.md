@@ -13,18 +13,6 @@
 </p>
 <h2 align="center">Your eyes will&nbsp;:heart:&nbsp;you.</h2>
 
-# TOC
-  * [Preview](#preview)
-  * [Installation](#installation)
-    * [Additional Userstyles](#additional-userstyles)
-    * [GitHub Extensions](#github-extensions)
-    * [Available Syntax Highlighting Themes](#available-syntax-highlighting-themes)
-  * [Contributions and Development](#contributions-and-development)
-  * [Notes](#notes)
-
-
-## Preview
-
 ![Preview of GitHub Dark](./screenshot.png)
 
 ## Installation
@@ -33,7 +21,7 @@
 2. Install [github-dark.user.css](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css).
 3. Set GitHub itself to [dark mode](https://github.com/settings/appearance), the style builds on GitHub's dark theme.
 
-The style's options, like base color, background image and syntax themes, are described in the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Install).
+The options, like base color, background image and syntax themes, are described in the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). For GitHub Enterprise, add `domain("github.example.com")` to both GitHub `@-moz-document` rules in the installed style. Extensions that use GitHub's CSS variables, like [Refined GitHub](https://github.com/refined-github/refined-github), follow the theme automatically.
 
 ## Additional Userstyles
 
@@ -41,7 +29,6 @@ The style's options, like base color, background image and syntax themes, are de
 ⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
 ⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
-⚙️ [GitHub Community Dark](https://github.com/StylishThemes/Discourse-Dark) - Now part of Discourse Dark<br>
 ⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
 ⚙️ [GitHub Dark Diff Color Customizer](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-diff-color-customizer.user.css)<br>
 ⚙️ [GitHub Dark Element Borders](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-element-borders.user.css)<br>
@@ -53,11 +40,9 @@ The style's options, like base color, background image and syntax themes, are de
 ⚙️ [GitHub Custom Border Radii](https://github.com/StylishThemes/Feature-Override-Styles/blob/master/github-custom-border-radii.user.css)<br>
 ⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
 
-## GitHub Extensions
+## Syntax Themes
 
-The style recolors GitHub through its own CSS variables. Extensions that use those variables, like [Refined GitHub](https://github.com/refined-github/refined-github), [Octotree](https://github.com/ovity/octotree) and [Lovely forks](https://github.com/musically-ut/lovely-forks), follow the theme automatically.
-
-## Available Syntax Highlighting Themes
+The GitHub themes color code views, diffs and markdown, the CodeMirror themes color the file and gist editors and the Jupyter themes color notebook previews.
 
 | Theme                      |   GitHub    |  CodeMirror  |    Jupyter   |
 |----------------------------|:-----------:|:------------:|:------------:|
@@ -91,24 +76,8 @@ The style recolors GitHub through its own CSS variables. Extensions that use tho
 | Twilight (**default**)     |      ✔️     |      ✔️     |      ✔️      |
 | Vibrant Ink                |      ✔️     |      ✔️     |      ❌      |
 
-- The GitHub themes color code views, diffs and markdown, the CodeMirror themes color the file and gist editors and the Jupyter themes color notebook previews.
-- Please provide a pull request if you want to add a missing theme.
+## Development
 
-## Contributions and Development
+Edit [`github-dark.user.css`](./github-dark.user.css), there is no build step. It overrides GitHub's [Primer](https://primer.style) CSS variables, plus a few rules with stable selectors for things variables can't reach. Prefer a variable over a rule and never use GitHub's hashed class names.
 
-The whole style is [`github-dark.user.css`](./github-dark.user.css), there is no build step. It recolors GitHub by overriding its [Primer](https://primer.style) CSS variables, plus a few rules with stable selectors for things variables can't reach, like the page background.
-
-1. [Fork](https://github.com/StylishThemes/GitHub-Dark/fork) the repository.
-2. Edit `github-dark.user.css` and run `make install` to install it in your browser's Stylus to test your changes.
-3. Prefer overriding a GitHub variable over adding a rule. Never use GitHub's hashed class names.
-4. Send a pull request.
-
-Releases are made with `make patch`, `make minor` or `make major`, which bump `@version` so Stylus detects the update, then commit, tag and push.
-
-## Notes
-
-- For a custom GitHub Enterprise domain, add `domain("github.example.com")` to both GitHub `@-moz-document` rules in the installed style.
-
-Thanks to all our [contributors](https://github.com/StylishThemes/GitHub-Dark/graphs/contributors) so far! And thanks for the shoutout on the [JS Party](https://changelog.com/jsparty/20#transcript-71) podcast!
-
-[⬆️ UP](#toc)
+Run `make install` to test it in Stylus and `make lint` to lint it. Release with `make patch`, `make minor` or `make major`, which bump the version of both styles, then commit, tag and push.

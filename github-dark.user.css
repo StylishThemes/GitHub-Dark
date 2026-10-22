@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Dark
 @namespace   StylishThemes
-@version     6.5.58
+@version     6.5.59
 @homepageURL https://github.com/StylishThemes/GitHub-Dark
 @updateURL   https://stylishthemes.github.io/GitHub-Dark/github-dark.user.css
 @license     BSD-2-Clause
@@ -1623,7 +1623,7 @@
     /*[[syntax-codemirror]]*/
   }
   :root:not([data-color-mode="light"]) ::selection {
-    color: #fff !important;
+    color: var(--fgColor-white) !important;
     background-color: var(--selection-bgColor);
   }
   :root:not([data-color-mode="light"]) :is(pre, code, .tab-size, [data-tab-size], .react-code-text) {
@@ -1688,9 +1688,10 @@
 }
 @-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|support|vscode-auth)\\.)?github\\.com(?!(/(sponsors|readme)|/open-source/sponsors)/?([?#]|$))([/?#].*)?$"), domain("raw.githubusercontent.com"), domain("gist.githubusercontent.com") {
   :root:not([data-color-mode="light"]) {
+    --ghd-bg-color: /*[[bg-color]]*/;
     --ghd-bg-custom: /*[[bg-custom]]*/;
     color: var(--fgColor-default);
-    background-color: /*[[bg-color]]*/;
+    background-color: var(--ghd-bg-color);
     background-image: /*[[bg-choice]]*/;
     background-attachment: /*[[bg-attachment]]*/;
     /*[[bg-options]]*/
