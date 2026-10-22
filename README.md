@@ -21,7 +21,36 @@
 2. Install [github-dark.user.css](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark.user.css).
 3. Set GitHub itself to [dark mode](https://github.com/settings/appearance), the style builds on GitHub's dark theme.
 
-The options, like base color, background image and syntax themes, are described in the [wiki](https://github.com/StylishThemes/GitHub-Dark/wiki/Install). For GitHub Enterprise, add `domain("github.example.com")` to both GitHub `@-moz-document` rules in the installed style. Extensions that use GitHub's CSS variables, like [Refined GitHub](https://github.com/refined-github/refined-github), follow the theme automatically.
+For GitHub Enterprise, add `domain("github.example.com")` to both GitHub `@-moz-document` rules in the installed style. Extensions that use GitHub's CSS variables, like [Refined GitHub](https://github.com/refined-github/refined-github), follow the theme automatically.
+
+## Options
+
+Change these in the style's settings, in Stylus via the gear icon next to the style.
+
+- **Base color**: color of links and highlights.
+- **Background color**: page color behind the background image.
+- **Background**: Cross-Hatch, Uniform Tile, Random Tile, None, or Custom to use the image from **Custom Background**.
+- **Background image type**: tile the image, or scale it to fit the window.
+- **Background image attachment**: scroll the image with the page, or keep it fixed.
+- **GitHub syntax theme**: colors code views, diffs and markdown.
+- **CodeMirror syntax theme**: colors the file and gist editors.
+- **Jupyter syntax theme**: colors notebook previews.
+- **Code Tab size**: width of tabs in code, 2, 4 or 8.
+- **Unrounded labels and avatars**: enabled by default, gives labels, counters, state badges, topics and avatars slightly rounded corners instead of pill and circle shapes, like [GitHub Unrounded](https://github.com/StylishThemes/GitHub-Unrounded).
+
+### Custom Background
+
+Set **Background** to Custom and **Custom Background** to an image wrapped in `url()`, like `url(https://github.com/user-attachments/assets/…)`, a bare URL won't work. GitHub's Content Security Policy only allows images from `github.com`, `*.githubusercontent.com` and `data:` URIs, so use one of these:
+
+1. Drag the image into any GitHub comment box and copy the uploaded URL, there's no need to submit the comment.
+2. Commit it to a public repository and use its `raw.githubusercontent.com` URL.
+3. Inline a small image as a base64 `data:` URI.
+
+## Syntax Themes
+
+Every theme is available for all three syntax theme options. The preview shows the GitHub syntax themes.
+
+![GitHub syntax themes](./themes.png)
 
 ## Styled Sites
 
@@ -35,7 +64,7 @@ The options, like base color, background image and syntax themes, are described 
 
 ## Additional Userstyles
 
-⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css)<br>
+⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css) - code font family and size, the font must be installed locally<br>
 ⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
 ⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
 ⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
@@ -49,45 +78,6 @@ The options, like base color, background image and syntax themes, are described 
 ⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
 ⚙️ [GitHub Custom Border Radii](https://github.com/StylishThemes/Feature-Override-Styles/blob/master/github-custom-border-radii.user.css)<br>
 ⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
-
-## Syntax Themes
-
-The GitHub themes color code views, diffs and markdown, the CodeMirror themes color the file and gist editors and the Jupyter themes color notebook previews.
-
-![GitHub syntax themes](./themes.png)
-
-| Theme                      |   GitHub    |  CodeMirror  |    Jupyter   |
-|----------------------------|:-----------:|:------------:|:------------:|
-| Ayu Mirage                 |      ✔️     |      ❌     |      ❌      |
-| Ambiance                   |      ✔️     |      ✔️     |      ❌      |
-| Base16 Ocean Dark          |      ❌     |      ✔️     |      ✔️      |
-| Chaos                      |      ✔️     |      ❌     |      ❌      |
-| Clouds Midnight            |      ✔️     |      ❌     |      ❌      |
-| Cobalt                     |      ✔️     |      ✔️     |      ❌      |
-| Dracula                    |      ✔️     |      ✔️     |      ✔️      |
-| GitHub Dark                |      ✔️     |      ❌     |      ✔️      |
-| Idle Fingers               |      ✔️     |      ❌     |      ✔️      |
-| Kr Theme                   |      ✔️     |      ❌     |      ❌      |
-| Material                   |      ❌     |      ✔️     |      ❌      |
-| Merbivore                  |      ✔️     |      ❌     |      ❌      |
-| Merbivore Soft             |      ✔️     |      ❌     |      ❌      |
-| Mono Industrial            |      ✔️     |      ❌     |      ❌      |
-| Mono Industrial Clear      |      ✔️     |      ❌     |      ❌      |
-| Monokai                    |      ✔️     |      ✔️     |      ✔️      |
-| Monokai Spacegray Eighties |      ✔️     |      ✔️     |      ✔️      |
-| Obsidian                   |      ✔️     |      ❌     |      ✔️      |
-| One Dark                   |      ✔️     |      ✔️     |      ❌      |
-| Pastel on Dark             |      ✔️     |      ✔️     |      ✔️      |
-| Railscasts                 |      ✔️     |      ✔️     |      ✔️      |
-| Solarized Dark             |      ✔️     |      ✔️     |      ✔️      |
-| Terminal                   |      ✔️     |      ❌     |      ❌      |
-| Tomorrow Night             |      ✔️     |      ❌     |      ✔️      |
-| Tomorrow Night Blue        |      ✔️     |      ❌     |      ✔️      |
-| Tomorrow Night Bright      |      ✔️     |      ✔️     |      ✔️      |
-| Tomorrow Night Eighties    |      ✔️     |      ✔️     |      ✔️      |
-| Twilight (**default**)     |      ✔️     |      ✔️     |      ✔️      |
-| Vibrant Ink                |      ✔️     |      ✔️     |      ❌      |
-| VS Code Dark Modern        |      ✔️     |      ❌     |      ❌      |
 
 ## Development
 
