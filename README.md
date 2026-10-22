@@ -85,6 +85,7 @@ The GitHub themes color code views, diffs and markdown, the CodeMirror themes co
 | Tomorrow Night Eighties    |      ✔️     |      ✔️     |      ✔️      |
 | Twilight (**default**)     |      ✔️     |      ✔️     |      ✔️      |
 | Vibrant Ink                |      ✔️     |      ✔️     |      ❌      |
+| VS Code Dark Modern        |      ✔️     |      ❌     |      ❌      |
 
 ## Development
 
