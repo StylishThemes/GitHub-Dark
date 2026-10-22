@@ -64,23 +64,12 @@ Every theme is available for all three syntax theme options. The preview shows t
 
 ## Additional Userstyles
 
-⚙️ [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css) - code font family and size, the font must be installed locally<br>
-⚙️ [GitHub Blog Dark](https://github.com/StylishThemes/GitHub-Blog-Dark)<br>
-⚙️ [GitHub Code Wrap](https://github.com/StylishThemes/GitHub-code-wrap)<br>
-⚙️ [GitHub Commit Limit](https://github.com/StylishThemes/GitHub-Commit-Limit)<br>
-⚙️ [GitHub Compact Feed](https://github.com/StylishThemes/GitHub-Compact-Feed)<br>
-⚙️ [GitHub Dark Diff Color Customizer](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-diff-color-customizer.user.css)<br>
-⚙️ [GitHub Dark Element Borders](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-element-borders.user.css)<br>
-⚙️ [GitHub Dark IMG Background Color](https://raw.githubusercontent.com/StylishThemes/Feature-Override-Styles/master/github-dark-img-bg-clr.user.css)<br>
-⚙️ [GitHub Feed Icons](https://github.com/StylishThemes/GitHub-Feed-Icons)<br>
-⚙️ [GitHub FixedHeader](https://github.com/StylishThemes/GitHub-FixedHeader)<br>
-⚙️ [GitHub Selected Tab Color](https://github.com/StylishThemes/GitHub-Selected-Tab-Color)<br>
-⚙️ [GitHub Sticky Sidebar](https://github.com/StylishThemes/GitHub-Sticky-Sidebar)<br>
-⚙️ [GitHub Custom Border Radii](https://github.com/StylishThemes/Feature-Override-Styles/blob/master/github-custom-border-radii.user.css)<br>
-⚙️ [Overlay Scrollbars](https://github.com/StylishThemes/Overlay-Scrollbars)<br>
+- [GitHub Custom Fonts](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-custom-fonts.user.css): code font family and size, the font must be installed locally.
+- [GitHub Code Wrap](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-code-wrap.user.css): wrap long code lines in diffs, gists and markdown.
+- [GitHub Dark Diff Color Customizer](https://raw.githubusercontent.com/StylishThemes/GitHub-Dark/master/github-dark-diff-color-customizer.user.css): custom diff colors, colorblind friendly by default.
 
 ## Development
 
 Edit [`github-dark.user.css`](./github-dark.user.css), there is no build step. It overrides GitHub's [Primer](https://primer.style) CSS variables, plus a few rules with stable selectors for things variables can't reach. Prefer a variable over a rule and never use GitHub's hashed class names.
 
-Run `make install` to test it in Stylus and `make lint` to lint it. Release with `make patch`, `make minor` or `make major`, which bump the version of both styles, then commit, tag and push.
+Run `make install` to test it in Stylus and `make lint` to lint it. Release with `make patch`, `make minor` or `make major`, which bump the version of all styles, then commit, tag and push.
