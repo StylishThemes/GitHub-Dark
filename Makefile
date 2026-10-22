@@ -1,45 +1,29 @@
-all: build
-
-test: lint
-
-build: node_modules clean
-# avoid 'stream/web is an experimental feature' warning
-	node --no-warnings tools/build.js
-
-deps: node_modules
-
-node_modules: package-lock.json
-	npm install --no-save
+node_modules: pnpm-lock.yaml
+	pnpm install
 	@touch node_modules
 
+.PHONY: deps
+deps: node_modules
+
+.PHONY: lint
 lint: node_modules
-	npx eslint --color src/gen tools
-	npx stylelint --color src/**/*.css
+	pnpm exec stylelint --color *.user.css
 
-authors:
-	bash tools/authors.sh
+.PHONY: lint-fix
+lint-fix: node_modules
+	pnpm exec stylelint --color *.user.css --fix
 
-clean: node_modules
-	node tools/clean.js
+.PHONY: install
+install:
+	node -e 'const server = require("node:http").createServer((_, res) => { res.setHeader("content-type", "text/css"); res.on("close", () => setTimeout(() => process.exit(), 4000)); res.end(require("node:fs").readFileSync("github-dark.user.css")); }); server.listen(() => require("node:child_process").spawn({darwin: "open", win32: "explorer"}[process.platform] ?? "xdg-open", [`http://localhost:$${server.address().port}/github-dark.user.css`]))'
 
-install: node_modules
-	node tools/install.js
-
+.PHONY: update
 update: node_modules
-	npx updates -cu
-	npm install
-	@touch node_modules package-lock.json
+	pnpm exec updates -u
+	rm -rf node_modules pnpm-lock.yaml
+	pnpm install
+	@touch node_modules
 
-patch: node_modules lint
-	npx versions -pdC patch $(wildcard *.user.css)
-	git push --tags origin master
-
-minor: node_modules lint
-	npx versions -pdC minor $(wildcard *.user.css)
-	git push --tags origin master
-
-major: node_modules lint
-	npx versions -pdC major $(wildcard *.user.css)
-	git push --tags origin master
-
-.PHONY: all test build deps lint authors clean install update patch minor major
+.PHONY: patch minor major
+patch minor major: node_modules lint
+	pnpm exec versions -p $@ *.user.css package.json

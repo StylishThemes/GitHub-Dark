@@ -1,0 +1,7 @@
+- `github-dark.user.css` is the source, edit it directly, there is no build step
+- Prefer overriding GitHub's CSS variables over adding rules, never use GitHub's hashed class names
+- Bordered boxes get `--bgColor-default` via the `:where(...)` list, everything outside boxes is cleared via the `background: none` list so the page background shows
+- Fixes for a single site other than github.com go in that site's own `@-moz-document domain(...)` section
+- Use `make` to run development tasks, ensure `make lint` passes before committing
+- Release with `make patch`, `make minor` or `make major`, test locally with `make install`
+- Never force-push to pull request branches

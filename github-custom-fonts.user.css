@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GitHub Custom Fonts
 @namespace    StylishThemes
-@version      5.1.135
+@version      7.0.1
 @homepageURL  https://github.com/StylishThemes/GitHub-Dark
 @updateURL    https://stylishthemes.github.io/GitHub-Dark/github-custom-fonts.user.css
 @license      BSD-2-Clause
@@ -9,13 +9,16 @@
 @preprocessor default
 @advanced text ghd-font-family "Code font" Menlo
 @advanced text ghd-font-feature-settings "Code font feature Settings" normal
+@advanced text ghd-font-variant-ligatures "Code font ligature Settings" normal
 @advanced text ghd-font-size "Code font size" 12px
 ==/UserStyle== */
-@-moz-document regexp("^https?://((education|gist|graphql|guides|raw|resources|status|developer|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("www.githubstatus.com"), domain("stylishthemes.github.io") {
+@-moz-document regexp("^https?://((gist|support|vscode-auth)\\.)?github\\.com/((?!generated_pages/preview).)*$"), regexp("^https?://www\.zuora\.com.*github\.com.*"), domain("githubusercontent.com"), domain("stylishthemes.github.io") {
   pre, code, tt, kbd:not(.badmono), samp, .blob-code, .file-data pre, .line-data,
-  #gist-form .file .input textarea, .blob-code-inner {
-    font-family: var(--ghd-font-family), Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
-    font-feature-settings: var(--ghd-font-feature-settings) !important;
-    font-size: var(--ghd-font-size) !important;
+  #gist-form .file .input textarea, .blob-code-inner, .react-code-text, .jujkut,
+  #read-only-cursor-text-area {
+    font-family: var(--ghd-font-family), Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-feature-settings: var(--ghd-font-feature-settings);
+    font-variant-ligatures: var(--ghd-font-variant-ligatures);
+    font-size: var(--ghd-font-size);
   }
 }
