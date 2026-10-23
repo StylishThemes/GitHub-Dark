@@ -2184,6 +2184,8 @@
     --controlTrack-bgColor-rest: #222;
     --controlTrack-borderColor-rest: var(--borderColor-default);
     --dashboard-bgColor: transparent;
+    --data-blue-color-emphasis: /*[[base-color]]*/;
+    --data-blue-color-muted: rgba(/*[[base-color-rgb]]*/, .2);
     --data-gray-color-emphasis: #606060;
     --diffBlob-hunkLine-bgColor: #222;
     --diffBlob-hunkNum-bgColor-hover: var(--bgColor-accent-emphasis);
@@ -2237,9 +2239,9 @@
     --shadow-floating-small: 0 0 0 1px #343434, 0 6px 12px -3px #00000066, 0 6px 18px 0 #00000066;
     --shadow-floating-xlarge: 0 0 0 1px #343434, 0 32px 64px 0 #000;
     --shadow-inset: inset 0 1px 0 0 #0000003d;
-    --shadow-resting-medium: 0 1px 1px 0 #00000066, 0 3px 6px 0 #000000cc;
-    --shadow-resting-small: 0 1px 1px 0 #00000099, 0 1px 3px 0 #00000099;
-    --shadow-resting-xsmall: 0 1px 1px 0 #000000cc;
+    --shadow-resting-medium: 0 0 transparent;
+    --shadow-resting-small: 0 0 transparent;
+    --shadow-resting-xsmall: 0 0 transparent;
     --sideNav-bgColor-selected: #282828;
     --skeletonLoader-bgColor: #60606033;
     --timelineBadge-bgColor: #383838;
@@ -2308,6 +2310,9 @@
   ) {
     background-color: var(--bgColor-default);
   }
+  button[data-testid^="icebreaker-"] {
+    background-color: var(--bgColor-default);
+  }
   @media (min-width: 768px) {
     :where(.business-global-sidebar) {
       background-color: var(--bgColor-default);
@@ -2356,6 +2361,12 @@
     div:has(> [data-testid="issue-viewer-issue-container"])
   ) {
     background: none !important;
+  }
+  :root:not([data-color-mode="light"]) :is(.TimelineItem-break, .pagination-loader-container) {
+    background-color: transparent;
+  }
+  :root:not([data-color-mode="light"]) div:has(> div > [data-testid="expand-file-tree-button"]) {
+    background-color: var(--ghd-bg-color) !important;
   }
 }
 @-moz-document domain("gist.github.com") {
