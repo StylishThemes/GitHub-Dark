@@ -2267,8 +2267,11 @@
   :root:not([data-color-mode="light"]) :is(pre, code, .tab-size, [data-tab-size], .react-code-text) {
     tab-size: var(--tab-size-preference) !important;
   }
-  :root:not([data-color-mode="light"]) :is(.markdown-body :is(pre, .highlight), #highlighted-line-menu-positioner, .blob-code-content, .diff-table, .diff-line-row) {
+  :root:not([data-color-mode="light"]) :is(.markdown-body :is(pre, .highlight, .snippet-clipboard-content), #highlighted-line-menu-positioner, .blob-code-content, .diff-table, .diff-line-row) {
     background-color: var(--ghd-code-background);
+  }
+  :root:not([data-color-mode="light"]) :is(.render-shell img, img.asset) {
+    background: repeating-conic-gradient(#666 0 25%, #555 0 50%) 0 0 / 10px 10px;
   }
   :where(
     :is(.border, .border-sm, .border-md):is(.rounded, .rounded-1, .rounded-2, .rounded-3, .rounded-bottom-2):not(img),
