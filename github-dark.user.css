@@ -2267,8 +2267,16 @@
   :root:not([data-color-mode="light"]) :is(pre, code, .tab-size, [data-tab-size], .react-code-text) {
     tab-size: var(--tab-size-preference) !important;
   }
-  :root:not([data-color-mode="light"]) :is(.markdown-body :is(pre, .highlight, .snippet-clipboard-content), #highlighted-line-menu-positioner, .blob-code-content, .diff-table, .diff-line-row) {
+  :root:not([data-color-mode="light"]) :is(.markdown-body :is(pre, .highlight, .snippet-clipboard-content), #highlighted-line-menu-positioner, .blob-code-content, .diff-table, .diff-line-row, [data-testid="blob-wrapper"]) {
     background-color: var(--ghd-code-background);
+  }
+  :root:not([data-color-mode="light"]) div:has(> div > input[aria-label^="Select finding"]) {
+    overflow: hidden;
+    border: 1px solid var(--borderColor-default);
+    border-radius: var(--borderRadius-medium);
+  }
+  :root:not([data-color-mode="light"]) div:has(> [data-testid="blob-wrapper"]) {
+    border-bottom: 0;
   }
   :root:not([data-color-mode="light"]) :is(.render-shell img, img.asset) {
     background: repeating-conic-gradient(#666 0 25%, #555 0 50%) 0 0 / 10px 10px;
@@ -2284,6 +2292,7 @@
     .TablePagination,
     .tree-browser,
     #org-members-table > ul,
+    #readme,
     [data-component="Blankslate"][data-border],
     [data-component="Table.Container"] + div,
     [data-listview-component="items-list"],
